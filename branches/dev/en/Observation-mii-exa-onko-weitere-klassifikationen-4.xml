@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-onko-weitere-klassifikationen-4"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-weitere-klassifikationen|2026.0.3"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Observation mii-exa-onko-weitere-klassifikationen-4</b></p><a name="mii-exa-onko-weitere-klassifikationen-4"> </a><a name="hcmii-exa-onko-weitere-klassifikationen-4"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-weitere-klassifikationen.html">MII PR Onkologie Weitere Klassifikationen</a> version: 2026.0.3</p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:">BINET Klassifikation für chronische lymphatische Leukämie</span></p><p><b>subject</b>: <a href="Patient-example.html">Erika Beispiel  Female, DoB: 1965-04-12</a></p><p><b>focus</b>: <a href="Condition-primaertumor-example.html">Condition Bösartige Neubildung: Brustdrüse, nicht näher bezeichnet</a></p><p><b>effective</b>: 2024-01-13</p><p><b>value</b>: <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds binet-b}">BINET B - Intermediäres Stadium mit Lymphknotenvergrößerung oder Organomegalie</span></p><p><b>note</b>: </p><blockquote><div><p>BINET-Klassifikation wird spezifisch für chronische lymphatische Leukämie (CLL, ICD-10: C91.1) verwendet. Stadium B indiziert Lymphknotenvergrößerung in ≥3 Regionen oder Splenomegalie/Hepatomegalie ohne Anämie oder Thrombozytopenie.</p>
+</div></blockquote></div>
+  </text>
+  <status value="final"/>
+  <code>
+    <text value="BINET Klassifikation für chronische lymphatische Leukämie"/>
+  </code>
+  <subject>
+    <reference value="Patient/example"/>
+  </subject>
+  <focus>
+    <reference value="Condition/primaertumor-example"/>
+  </focus>
+  <effectiveDateTime value="2024-01-13"/>
+  <valueCodeableConcept>
+    <coding>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds"/>
+      <code value="binet-b"/>
+    </coding>
+    <text value="BINET B - Intermediäres Stadium mit Lymphknotenvergrößerung oder Organomegalie"/>
+  </valueCodeableConcept>
+  <note>
+    <text value="BINET-Klassifikation wird spezifisch für chronische lymphatische Leukämie (CLL, ICD-10: C91.1) verwendet. Stadium B indiziert Lymphknotenvergrößerung in ≥3 Regionen oder Splenomegalie/Hepatomegalie ohne Anämie oder Thrombozytopenie."/>
+  </note>
+</Observation>

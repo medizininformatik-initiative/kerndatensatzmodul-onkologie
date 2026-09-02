@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-onko-kim-klass3"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation|2026.0.3"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Observation mii-exa-onko-kim-klass3</b></p><a name="mii-exa-onko-kim-klass3"> </a><a name="hcmii-exa-onko-kim-klass3"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-tnm-klassifikation.html">MII PR Onkologie TNM-Klassifikation</a> version: 2026.0.3</p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 399588009}">Pathologic TNM stage grouping</span></p><p><b>subject</b>: <a href="Patient-mii-exa-onko-kim-synth-patient.html">Kim Musterperson  Female, DoB: 1956-03-14</a></p><p><b>focus</b>: <a href="Condition-mii-exa-onko-kim-synth-diagnose.html">Condition Bösartige Neubildung: Peritoneum, nicht näher bezeichnet</a></p><p><b>effective</b>: 2021-10-15</p><p><b>value</b>: <span title="Codes:{https://www.uicc.org/resources/tnm IV}">Stadium IV</span></p><p><b>method</b>: <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version 8}">8. Auflage</span></p><p><b>hasMember</b>: </p><ul><li><a href="Observation-mii-exa-onko-kim-klass3-ypT3c.html">Observation pT category (observable entity)</a></li><li><a href="Observation-mii-exa-onko-kim-klass3-ypM1b.html">Observation pM category (observable entity)</a></li><li><a href="Observation-mii-exa-onko-kim-klass3-L1.html">Observation Status of lymphatic (small vessel) invasion by tumor (observable entity)</a></li><li><a href="Observation-mii-exa-onko-kim-klass3-V0.html">Observation Status of venous (large vessel) invasion by tumor (observable entity)</a></li><li><a href="Observation-mii-exa-onko-kim-klass3-Pn0.html">Observation Presence of direct invasion by primary malignant neoplasm to nerve (observable entity)</a></li><li><a href="Observation-mii-exa-onko-kim-klass3-ysym.html">Observation Cancer staging after multimodality therapy</a></li></ul></div>
+  </text>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="399588009"/>
+      <display value="Pathologic TNM stage grouping"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/mii-exa-onko-kim-synth-patient"/>
+  </subject>
+  <focus>
+    <reference value="Condition/mii-exa-onko-kim-synth-diagnose"/>
+  </focus>
+  <effectiveDateTime value="2021-10-15"/>
+  <valueCodeableConcept>
+    <coding>
+      <system value="https://www.uicc.org/resources/tnm"/>
+      <code value="IV"/>
+      <display value="Stadium IV"/>
+    </coding>
+  </valueCodeableConcept>
+  <method>
+    <coding>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version"/>
+      <code value="8"/>
+      <display value="8. Auflage"/>
+    </coding>
+  </method>
+  <hasMember>
+    <reference value="Observation/mii-exa-onko-kim-klass3-ypT3c"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/mii-exa-onko-kim-klass3-ypM1b"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/mii-exa-onko-kim-klass3-L1"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/mii-exa-onko-kim-klass3-V0"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/mii-exa-onko-kim-klass3-Pn0"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/mii-exa-onko-kim-klass3-ysym"/>
+  </hasMember>
+</Observation>

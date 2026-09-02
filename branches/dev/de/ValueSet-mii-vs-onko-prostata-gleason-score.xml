@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="mii-vs-onko-prostata-gleason-score"/>
+  <meta>
+    <extension url="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-license">
+      <valueCode value="CC-BY-4.0"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/package-source">
+      <extension url="packageId">
+        <valueId value="de.medizininformatikinitiative.kerndatensatz.onkologie"/>
+      </extension>
+      <extension url="version">
+        <valueString value="2026.0.3"/>
+      </extension>
+      <extension url="uri">
+        <valueUri value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko"/>
+      </extension>
+    </extension>
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-computablevalueset"/>
+  </meta>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-onko-prostata-gleason-score</b></p><a name="de-mii-vs-onko-prostata-gleason-score"> </a><a name="de-hcmii-vs-onko-prostata-gleason-score"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profiles: <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-shareablevalueset.html">Shareable ValueSet</a>, <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-shareablevalueset.html">CRMI Shareable ValueSet</a>, <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-publishablevalueset.html">CRMI Publishable ValueSet</a>, <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-computablevalueset.html">CRMI Computable ValueSet</a></p></div><ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/1279715000">1279715000</a></td><td>International Society of Urological Pathology grade group 1 (Gleason score 3 + 3 = 6) (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/1279714001">1279714001</a></td><td>International Society of Urological Pathology grade group 2 (Gleason score 3 + 4 = 7) (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/1279716004">1279716004</a></td><td>International Society of Urological Pathology grade group 3 (Gleason score 4 + 3 = 7) (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/1279718003">1279718003</a></td><td>International Society of Urological Pathology grade group 4 (Gleason score 3 + 5 = 8) (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/1279717008">1279717008</a></td><td>International Society of Urological Pathology grade group 4 (Gleason score 4 + 4 = 8) (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/1279719006">1279719006</a></td><td>International Society of Urological Pathology grade group 4 (Gleason score 5 + 3 = 8) (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/1279720000">1279720000</a></td><td>International Society of Urological Pathology grade group 5 (Gleason score 4 + 5 = 9) (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/1279721001">1279721001</a></td><td>International Society of Urological Pathology grade group 5 (Gleason score 5 + 4 = 9) (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/1279722008">1279722008</a></td><td>International Society of Urological Pathology grade group 5 (Gleason score 5 + 5 = 10) (qualifier value)</td></tr></table></li></ul></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability">
+    <valueCode value="shareable"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability">
+    <valueCode value="publishable"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability">
+    <valueCode value="computable"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes"/>
+        <code value="package"/>
+        <display value="Package"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/resource-approvalDate">
+    <valueDate value="2026-01-03"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-topic">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"/>
+        <code value="C3262"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-author">
+    <valueContactDetail>
+      <telecom>
+        <system value="email"/>
+        <value value="thomas.debertshaeuser@charite.de"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-editor">
+    <valueContactDetail>
+      <name value="Taskforce Core Data Set"/>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-reviewer">
+    <valueContactDetail>
+      <name value="Interoperability Working Group"/>
+      <telecom>
+        <system value="url"/>
+        <value value="https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-reviewer">
+    <valueContactDetail>
+      <name value="National Steering Committee"/>
+      <telecom>
+        <system value="url"/>
+        <value value="https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-endorser">
+    <valueContactDetail>
+      <name value="Interoperability Working Group"/>
+      <telecom>
+        <system value="url"/>
+        <value value="https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-endorser">
+    <valueContactDetail>
+      <name value="National Steering Committee"/>
+      <telecom>
+        <system value="url"/>
+        <value value="https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm">
+    <valueCoding>
+      <system value="http://hl7.org/fhir/version-algorithm"/>
+      <code value="semver"/>
+      <display value="SemVer"/>
+    </valueCoding>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+    <valuePeriod>
+      <start value="2026"/>
+    </valuePeriod>
+  </extension>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-gleason-score"/>
+  <version value="2026.0.3"/>
+  <name value="MII_VS_Onko_Prostata_Gleason_Score"/>
+  <title value="MII VS Onkologie Prostata Gleason Score"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-09-02T02:28:56+00:00"/>
+  <publisher value="Medizininformatik Initiative"/>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de/"/>
+    </telecom>
+  </contact>
+  <description value="Value Set für den Gleason Score in Kombination mit der ISUP Grade Group. Da ISUP Grade Groups erst ab einem Gleason-Gesamtscore von 6 definiert sind, deckt dieses Value Set nur Scores &gt;= 6 ab. Liegt nur das Score-Ergebnis ohne Grade Group vor oder ein Gesamtscore &lt; 6, ist MII_VS_Onko_Prostata_Gleason_Score_Gesamt zu verwenden."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license."/>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <concept>
+        <code value="1279715000"/>
+        <display value="International Society of Urological Pathology grade group 1 (Gleason score 3 + 3 = 6) (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="1279714001"/>
+        <display value="International Society of Urological Pathology grade group 2 (Gleason score 3 + 4 = 7) (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="1279716004"/>
+        <display value="International Society of Urological Pathology grade group 3 (Gleason score 4 + 3 = 7) (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="1279718003"/>
+        <display value="International Society of Urological Pathology grade group 4 (Gleason score 3 + 5 = 8) (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="1279717008"/>
+        <display value="International Society of Urological Pathology grade group 4 (Gleason score 4 + 4 = 8) (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="1279719006"/>
+        <display value="International Society of Urological Pathology grade group 4 (Gleason score 5 + 3 = 8) (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="1279720000"/>
+        <display value="International Society of Urological Pathology grade group 5 (Gleason score 4 + 5 = 9) (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="1279721001"/>
+        <display value="International Society of Urological Pathology grade group 5 (Gleason score 5 + 4 = 9) (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="1279722008"/>
+        <display value="International Society of Urological Pathology grade group 5 (Gleason score 5 + 5 = 10) (qualifier value)"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

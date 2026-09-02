@@ -1,0 +1,47 @@
+{
+  "resourceType" : "CarePlan",
+  "id" : "mii-exa-onko-tumorkonferenz-pure-molecular",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz|2026.0.3"]
+  },
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CarePlan mii-exa-onko-tumorkonferenz-pure-molecular</b></p><a name=\"mii-exa-onko-tumorkonferenz-pure-molecular\"> </a><a name=\"hcmii-exa-onko-tumorkonferenz-pure-molecular\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-tumorkonferenz.html\">MII PR Onkologie Tumorkonferenz</a> version: 2026.0.3</p></div><p><b>identifier</b>: Tumorkonferenz_Molecular_002</p><p><b>status</b>: Active</p><p><b>intent</b>: Plan</p><p><b>category</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ praeth}\">Molekulares Tumorboard - Precision Medicine</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-molecular-board-patient.html\">Maria Müller  Female, DoB: 1968-07-22 ( https://www.medizininformatik-initiative.de/fhir/sid/patienten#MTB-2024-001)</a></p><p><b>created</b>: 2024-01-16</p><p><b>addresses</b>: <a href=\"Condition-primaertumor-example.html\">Condition Bösartige Neubildung: Brustdrüse, nicht näher bezeichnet</a></p><blockquote><p><b>activity</b></p><p><b>progress</b>: </p><blockquote><div><p>HER2+ with T790M mutation and brain metastases - specific agent sequence based on resistance profile</p>\n</div></blockquote><p><b>reference</b>: <a href=\"RequestGroup-mii-exa-onko-molecular-her2-alternatives.html\">RequestGroup zielgerichtete Substanzen</a></p></blockquote><blockquote><p><b>activity</b></p><p><b>progress</b>: </p><blockquote><div><p>Neurosurgical consultation recommended for brain metastases management</p>\n</div></blockquote><p><b>reference</b>: <a href=\"ServiceRequest-mii-exa-onko-molecular-surgery-request.html\">ServiceRequest Consultation</a></p></blockquote></div>"
+  },
+  "identifier" : [{
+    "value" : "Tumorkonferenz_Molecular_002"
+  }],
+  "status" : "active",
+  "intent" : "plan",
+  "category" : [{
+    "coding" : [{
+      "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ",
+      "code" : "praeth"
+    }],
+    "text" : "Molekulares Tumorboard - Precision Medicine"
+  }],
+  "subject" : {
+    "reference" : "Patient/mii-exa-onko-molecular-board-patient"
+  },
+  "created" : "2024-01-16",
+  "addresses" : [{
+    "reference" : "Condition/primaertumor-example"
+  }],
+  "activity" : [{
+    "progress" : [{
+      "text" : "HER2+ with T790M mutation and brain metastases - specific agent sequence based on resistance profile"
+    }],
+    "reference" : {
+      "reference" : "RequestGroup/mii-exa-onko-molecular-her2-alternatives"
+    }
+  },
+  {
+    "progress" : [{
+      "text" : "Neurosurgical consultation recommended for brain metastases management"
+    }],
+    "reference" : {
+      "reference" : "ServiceRequest/mii-exa-onko-molecular-surgery-request"
+    }
+  }]
+}

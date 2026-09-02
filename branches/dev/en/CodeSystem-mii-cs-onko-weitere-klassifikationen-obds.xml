@@ -1,0 +1,1234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="mii-cs-onko-weitere-klassifikationen-obds"/>
+  <meta>
+    <extension url="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-license">
+      <valueCode value="CC-BY-4.0"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/package-source">
+      <extension url="packageId">
+        <valueId value="de.medizininformatikinitiative.kerndatensatz.onkologie"/>
+      </extension>
+      <extension url="version">
+        <valueString value="2026.0.3"/>
+      </extension>
+      <extension url="uri">
+        <valueUri value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko"/>
+      </extension>
+    </extension>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablecodesystem"/>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablecodesystem"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: CodeSystem mii-cs-onko-weitere-klassifikationen-obds</b></p><a name="mii-cs-onko-weitere-klassifikationen-obds"> </a><a name="hcmii-cs-onko-weitere-klassifikationen-obds"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profiles: <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-shareablecodesystem.html">CRMI Shareable CodeSystem</a>, <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-publishablecodesystem.html">CRMI Publishable CodeSystem</a></p></div><p>This  code system <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds</code> defines the following codes in an undefined hierarchy:</p><table class="codes"><tr><td><b>Lvl</b></td><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>1</td><td style="white-space:nowrap">binet<a name="mii-cs-onko-weitere-klassifikationen-obds-binet"> </a></td><td>BINET Staging System</td><td>Staging system for chronic lymphocytic leukemia based on lymph node involvement and organ enlargement.</td></tr><tr><td>2</td><td style="white-space:nowrap">  binet-a<a name="mii-cs-onko-weitere-klassifikationen-obds-binet-a"> </a></td><td>BINET A</td><td>Early stage CLL: lymphocytosis in blood and bone marrow only</td></tr><tr><td>2</td><td style="white-space:nowrap">  binet-b<a name="mii-cs-onko-weitere-klassifikationen-obds-binet-b"> </a></td><td>BINET B</td><td>Intermediate stage CLL: lymphocytosis with enlarged lymph nodes or spleen/liver</td></tr><tr><td>2</td><td style="white-space:nowrap">  binet-c<a name="mii-cs-onko-weitere-klassifikationen-obds-binet-c"> </a></td><td>BINET C</td><td>Advanced stage CLL: lymphocytosis with anemia or thrombocytopenia</td></tr><tr><td>1</td><td style="white-space:nowrap">ann-arbor-stadium<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-stadium"> </a></td><td>Ann-Arbor Stadium</td><td>Staging system for Hodgkin and Non-Hodgkin lymphomas based on anatomical extent of disease.</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-i<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-i"> </a></td><td>I</td><td>Single lymph node region or single extralymphatic organ</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-ia<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ia"> </a></td><td>IA</td><td>Single lymph node region, asymptomatic</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-iae<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iae"> </a></td><td>IAE</td><td>Single lymph node region with extranodal extension, asymptomatic</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-ib<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ib"> </a></td><td>IB</td><td>Single lymph node region with B symptoms</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-ibe<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ibe"> </a></td><td>IBE</td><td>Single lymph node region with extranodal extension and B symptoms</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-ie<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ie"> </a></td><td>IE</td><td>Single extralymphatic organ involvement</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-ix<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ix"> </a></td><td>IX</td><td>Single lymph node region, symptoms unclear</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-ixa<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ixa"> </a></td><td>IXA</td><td>Single lymph node region, symptoms unclear, asymptomatic features</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-ixae<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ixae"> </a></td><td>IXAE</td><td>Single lymph node region with extranodal extension, symptoms unclear, asymptomatic features</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-ixb<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ixb"> </a></td><td>IXB</td><td>Single lymph node region, symptoms unclear, B symptom features</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-ixbe<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ixbe"> </a></td><td>IXBE</td><td>Single lymph node region with extranodal extension, symptoms unclear, B symptom features</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-ixe<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ixe"> </a></td><td>IXE</td><td>Single extralymphatic organ, symptoms unclear</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-ii<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii"> </a></td><td>II</td><td>Two or more lymph node regions on same side of diaphragm</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-ii1<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii1"> </a></td><td>II1</td><td>Two lymph node regions on same side of diaphragm</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-ii1a<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii1a"> </a></td><td>II1A</td><td>Two lymph node regions on same side of diaphragm, asymptomatic</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-ii1ae<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii1ae"> </a></td><td>II1AE</td><td>Two lymph node regions on same side of diaphragm with extranodal extension, asymptomatic</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-ii1b<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii1b"> </a></td><td>II1B</td><td>Two lymph node regions on same side of diaphragm with B symptoms</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-ii1be<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii1be"> </a></td><td>II1BE</td><td>Two lymph node regions on same side of diaphragm with extranodal extension and B symptoms</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-ii1e<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii1e"> </a></td><td>II1E</td><td>Two lymph node regions on same side of diaphragm with extranodal extension</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-ii1x<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii1x"> </a></td><td>II1X</td><td>Two lymph node regions on same side of diaphragm, symptoms unclear</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-ii1xa<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii1xa"> </a></td><td>II1XA</td><td>Two lymph node regions on same side of diaphragm, symptoms unclear, asymptomatic features</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-ii1xae<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii1xae"> </a></td><td>II1XAE</td><td>Two lymph node regions on same side of diaphragm with extranodal extension, symptoms unclear, asymptomatic features</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-ii1xb<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii1xb"> </a></td><td>II1XB</td><td>Two lymph node regions on same side of diaphragm, symptoms unclear, B symptom features</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-ii1xbe<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii1xbe"> </a></td><td>II1XBE</td><td>Two lymph node regions on same side of diaphragm with extranodal extension, symptoms unclear, B symptom features</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-ii1xe<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii1xe"> </a></td><td>II1XE</td><td>Two lymph node regions on same side of diaphragm with extranodal extension, symptoms unclear</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-ii2<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii2"> </a></td><td>II2</td><td>Multiple lymph node regions on same side of diaphragm</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-ii2a<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii2a"> </a></td><td>II2A</td><td>Multiple lymph node regions on same side of diaphragm, asymptomatic</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-ii2ae<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii2ae"> </a></td><td>II2AE</td><td>Multiple lymph node regions on same side of diaphragm with extranodal extension, asymptomatic</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-ii2b<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii2b"> </a></td><td>II2B</td><td>Multiple lymph node regions on same side of diaphragm with B symptoms</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-ii2be<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii2be"> </a></td><td>II2BE</td><td>Multiple lymph node regions on same side of diaphragm with extranodal extension and B symptoms</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-ii2e<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii2e"> </a></td><td>II2E</td><td>Multiple lymph node regions on same side of diaphragm with extranodal extension</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-ii2x<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii2x"> </a></td><td>II2X</td><td>Multiple lymph node regions on same side of diaphragm, symptoms unclear</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-ii2xa<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii2xa"> </a></td><td>II2XA</td><td>Multiple lymph node regions on same side of diaphragm, symptoms unclear, asymptomatic features</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-ii2xae<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii2xae"> </a></td><td>II2XAE</td><td>Multiple lymph node regions on same side of diaphragm with extranodal extension, symptoms unclear, asymptomatic features</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-ii2xb<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii2xb"> </a></td><td>II2XB</td><td>Multiple lymph node regions on same side of diaphragm, symptoms unclear, B symptom features</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-ii2xbe<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii2xbe"> </a></td><td>II2XBE</td><td>Multiple lymph node regions on same side of diaphragm with extranodal extension, symptoms unclear, B symptom features</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-ii2xe<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ii2xe"> </a></td><td>II2XE</td><td>Multiple lymph node regions on same side of diaphragm with extranodal extension, symptoms unclear</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-iia<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iia"> </a></td><td>IIA</td><td>Two or more lymph node regions on same side of diaphragm, asymptomatic</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-iiae<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiae"> </a></td><td>IIAE</td><td>Two or more lymph node regions on same side of diaphragm with extranodal extension, asymptomatic</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-iib<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iib"> </a></td><td>IIB</td><td>Two or more lymph node regions on same side of diaphragm with B symptoms</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-iibe<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iibe"> </a></td><td>IIBE</td><td>Two or more lymph node regions on same side of diaphragm with extranodal extension and B symptoms</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-iie<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iie"> </a></td><td>IIE</td><td>Two or more lymph node regions on same side of diaphragm with extranodal extension</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-iix<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iix"> </a></td><td>IIX</td><td>Two or more lymph node regions on same side of diaphragm, symptoms unclear</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-iixa<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iixa"> </a></td><td>IIXA</td><td>Two or more lymph node regions on same side of diaphragm, symptoms unclear, asymptomatic features</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-iixae<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iixae"> </a></td><td>IIXAE</td><td>Two or more lymph node regions on same side of diaphragm with extranodal extension, symptoms unclear, asymptomatic features</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-iixb<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iixb"> </a></td><td>IIXB</td><td>Two or more lymph node regions on same side of diaphragm, symptoms unclear, B symptom features</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-iixbe<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iixbe"> </a></td><td>IIXBE</td><td>Two or more lymph node regions on same side of diaphragm with extranodal extension, symptoms unclear, B symptom features</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-iixe<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iixe"> </a></td><td>IIXE</td><td>Two or more lymph node regions on same side of diaphragm with extranodal extension, symptoms unclear</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-iii<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iii"> </a></td><td>III</td><td>Lymph node regions on both sides of diaphragm</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-iiia<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiia"> </a></td><td>IIIA</td><td>Lymph node regions on both sides of diaphragm, asymptomatic</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-iiiae<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiiae"> </a></td><td>IIIAE</td><td>Lymph node regions on both sides of diaphragm with extranodal extension, asymptomatic</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-iiiaes<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiiaes"> </a></td><td>IIIAES</td><td>Lymph node regions on both sides of diaphragm with extranodal extension and spleen involvement, asymptomatic</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-iiias<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiias"> </a></td><td>IIIAS</td><td>Lymph node regions on both sides of diaphragm with spleen involvement, asymptomatic</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-iiib<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiib"> </a></td><td>IIIB</td><td>Lymph node regions on both sides of diaphragm with B symptoms</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-iiibe<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiibe"> </a></td><td>IIIBE</td><td>Lymph node regions on both sides of diaphragm with extranodal extension and B symptoms</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-iiibes<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiibes"> </a></td><td>IIIBES</td><td>Lymph node regions on both sides of diaphragm with extranodal extension, spleen involvement, and B symptoms</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-iiibs<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiibs"> </a></td><td>IIIBS</td><td>Lymph node regions on both sides of diaphragm with spleen involvement and B symptoms</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-iiie<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiie"> </a></td><td>IIIE</td><td>Lymph node regions on both sides of diaphragm with extranodal extension</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-iiies<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiies"> </a></td><td>IIIES</td><td>Lymph node regions on both sides of diaphragm with extranodal extension and spleen involvement</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-iiis<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiis"> </a></td><td>IIIS</td><td>Lymph node regions on both sides of diaphragm with spleen involvement</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-iiix<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiix"> </a></td><td>IIIX</td><td>Lymph node regions on both sides of diaphragm, symptoms unclear</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-iiixa<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiixa"> </a></td><td>IIIXA</td><td>Lymph node regions on both sides of diaphragm, symptoms unclear, asymptomatic features</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-iiixae<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiixae"> </a></td><td>IIIXAE</td><td>Lymph node regions on both sides of diaphragm with extranodal extension, symptoms unclear, asymptomatic features</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-iiixaes<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiixaes"> </a></td><td>IIIXAES</td><td>Lymph node regions on both sides of diaphragm with extranodal extension and spleen involvement, symptoms unclear, asymptomatic features</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-iiixas<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiixas"> </a></td><td>IIIXAS</td><td>Lymph node regions on both sides of diaphragm with spleen involvement, symptoms unclear, asymptomatic features</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-iiixb<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiixb"> </a></td><td>IIIXB</td><td>Lymph node regions on both sides of diaphragm, symptoms unclear, B symptom features</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-iiixbe<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiixbe"> </a></td><td>IIIXBE</td><td>Lymph node regions on both sides of diaphragm with extranodal extension, symptoms unclear, B symptom features</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-iiixbes<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiixbes"> </a></td><td>IIIXBES</td><td>Lymph node regions on both sides of diaphragm with extranodal extension and spleen involvement, symptoms unclear, B symptom features</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-iiixbs<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiixbs"> </a></td><td>IIIXBS</td><td>Lymph node regions on both sides of diaphragm with spleen involvement, symptoms unclear, B symptom features</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-iiixe<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiixe"> </a></td><td>IIIXE</td><td>Lymph node regions on both sides of diaphragm with extranodal extension, symptoms unclear</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-iiixes<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiixes"> </a></td><td>IIIXES</td><td>Lymph node regions on both sides of diaphragm with extranodal extension and spleen involvement, symptoms unclear</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-iiixs<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iiixs"> </a></td><td>IIIXS</td><td>Lymph node regions on both sides of diaphragm with spleen involvement, symptoms unclear</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-iii1<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iii1"> </a></td><td>III1</td><td>Limited lymph node regions on both sides of diaphragm</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-iii1a<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iii1a"> </a></td><td>III1A</td><td>Limited lymph node regions on both sides of diaphragm, asymptomatic</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-iii1b<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iii1b"> </a></td><td>III1B</td><td>Limited lymph node regions on both sides of diaphragm with B symptoms</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-iii2<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iii2"> </a></td><td>III2</td><td>Multiple lymph node regions on both sides of diaphragm</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-iii2a<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iii2a"> </a></td><td>III2A</td><td>Multiple lymph node regions on both sides of diaphragm, asymptomatic</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-iii2b<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iii2b"> </a></td><td>III2B</td><td>Multiple lymph node regions on both sides of diaphragm with B symptoms</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-iv<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iv"> </a></td><td>IV</td><td>Disseminated involvement of one or more extralymphatic organs</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-iva<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-iva"> </a></td><td>IVA</td><td>Disseminated involvement of extralymphatic organs, asymptomatic</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-ivae<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ivae"> </a></td><td>IVAE</td><td>Disseminated involvement of extralymphatic organs with additional extranodal extension, asymptomatic</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-ivb<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ivb"> </a></td><td>IVB</td><td>Disseminated involvement of extralymphatic organs with B symptoms</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-ivbe<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ivbe"> </a></td><td>IVBE</td><td>Disseminated involvement of extralymphatic organs with additional extranodal extension and B symptoms</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-ive<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ive"> </a></td><td>IVE</td><td>Disseminated involvement of extralymphatic organs with extranodal extension</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-ivx<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ivx"> </a></td><td>IVX</td><td>Disseminated involvement of extralymphatic organs, symptoms unclear</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-ivxa<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ivxa"> </a></td><td>IVXA</td><td>Disseminated involvement of extralymphatic organs, symptoms unclear, asymptomatic features</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-ivxae<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ivxae"> </a></td><td>IVXAE</td><td>Disseminated involvement of extralymphatic organs with additional extranodal extension, symptoms unclear, asymptomatic features</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-ivxb<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ivxb"> </a></td><td>IVXB</td><td>Disseminated involvement of extralymphatic organs, symptoms unclear, B symptom features</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-ivxbe<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ivxbe"> </a></td><td>IVXBE</td><td>Disseminated involvement of extralymphatic organs with additional extranodal extension, symptoms unclear, B symptom features</td></tr><tr><td>2</td><td style="white-space:nowrap">  ann-arbor-ivxe<a name="mii-cs-onko-weitere-klassifikationen-obds-ann-arbor-ivxe"> </a></td><td>IVXE</td><td>Disseminated involvement of extralymphatic organs with extranodal extension, symptoms unclear</td></tr><tr><td>1</td><td style="white-space:nowrap">iss<a name="mii-cs-onko-weitere-klassifikationen-obds-iss"> </a></td><td>International Staging System</td><td>Staging system for multiple myeloma based on serum beta-2 microglobulin and albumin levels.</td></tr><tr><td>2</td><td style="white-space:nowrap">  iss-i<a name="mii-cs-onko-weitere-klassifikationen-obds-iss-i"> </a></td><td>ISS I</td><td>Beta-2 microglobulin &lt;3.5 mg/L and albumin ≥3.5 g/dL</td></tr><tr><td>2</td><td style="white-space:nowrap">  iss-ii<a name="mii-cs-onko-weitere-klassifikationen-obds-iss-ii"> </a></td><td>ISS II</td><td>Not ISS I or ISS III</td></tr><tr><td>2</td><td style="white-space:nowrap">  iss-iii<a name="mii-cs-onko-weitere-klassifikationen-obds-iss-iii"> </a></td><td>ISS III</td><td>Beta-2 microglobulin ≥5.5 mg/L</td></tr><tr><td>1</td><td style="white-space:nowrap">isswm<a name="mii-cs-onko-weitere-klassifikationen-obds-isswm"> </a></td><td>International Scoring System for Waldenström's Macroglobulinemia</td><td>Prognostic scoring system for Waldenström's macroglobulinemia based on age, beta-2 microglobulin, and albumin levels.</td></tr><tr><td>2</td><td style="white-space:nowrap">  isswm-n<a name="mii-cs-onko-weitere-klassifikationen-obds-isswm-n"> </a></td><td>ISSWM Niedrig</td><td>Low risk: age ≤65 years, beta-2 microglobulin ≤3 mg/L, albumin &gt;3.5 g/dL</td></tr><tr><td>2</td><td style="white-space:nowrap">  isswm-i<a name="mii-cs-onko-weitere-klassifikationen-obds-isswm-i"> </a></td><td>ISSWM Intermediär</td><td>Intermediate risk: one adverse factor</td></tr><tr><td>2</td><td style="white-space:nowrap">  isswm-h<a name="mii-cs-onko-weitere-klassifikationen-obds-isswm-h"> </a></td><td>ISSWM Hoch</td><td>High risk: age &gt;65 years or beta-2 microglobulin &gt;3 mg/L, or albumin ≤3.5 g/dL (≥2 factors)</td></tr><tr><td>1</td><td style="white-space:nowrap">who-grad<a name="mii-cs-onko-weitere-klassifikationen-obds-who-grad"> </a></td><td>WHO Grade</td><td>World Health Organization grading system for central nervous system tumors based on histological features.</td></tr><tr><td>2</td><td style="white-space:nowrap">  who-grad-i<a name="mii-cs-onko-weitere-klassifikationen-obds-who-grad-i"> </a></td><td>WHO Grad I</td><td>Well-differentiated, slow-growing, low proliferative potential</td></tr><tr><td>2</td><td style="white-space:nowrap">  who-grad-ii<a name="mii-cs-onko-weitere-klassifikationen-obds-who-grad-ii"> </a></td><td>WHO Grad II</td><td>Moderately differentiated, infiltrative, low proliferative potential</td></tr><tr><td>2</td><td style="white-space:nowrap">  who-grad-iii<a name="mii-cs-onko-weitere-klassifikationen-obds-who-grad-iii"> </a></td><td>WHO Grad III</td><td>Poorly differentiated, anaplastic, high proliferative potential</td></tr><tr><td>2</td><td style="white-space:nowrap">  who-grad-iv<a name="mii-cs-onko-weitere-klassifikationen-obds-who-grad-iv"> </a></td><td>WHO Grad IV</td><td>Poorly differentiated, high mitotic activity, necrosis, microvascular proliferation</td></tr><tr><td>1</td><td style="white-space:nowrap">formen<a name="mii-cs-onko-weitere-klassifikationen-obds-formen"> </a></td><td>Formen</td><td>Classification of lymphoma forms distinguishing classical and variant presentations.</td></tr><tr><td>2</td><td style="white-space:nowrap">  formen-k<a name="mii-cs-onko-weitere-klassifikationen-obds-formen-k"> </a></td><td>Klassisch</td><td>Classical form of lymphoma presentation</td></tr><tr><td>2</td><td style="white-space:nowrap">  formen-v<a name="mii-cs-onko-weitere-klassifikationen-obds-formen-v"> </a></td><td>Variante</td><td>Variant form of lymphoma presentation</td></tr><tr><td>1</td><td style="white-space:nowrap">eln-klassifikation<a name="mii-cs-onko-weitere-klassifikationen-obds-eln-klassifikation"> </a></td><td>ELN-Klassifikation</td><td>European LeukemiaNet risk stratification for acute myeloid leukemia based on cytogenetic and molecular genetic abnormalities.</td></tr><tr><td>2</td><td style="white-space:nowrap">  eln-g<a name="mii-cs-onko-weitere-klassifikationen-obds-eln-g"> </a></td><td>ELN Günstig</td><td>Favorable risk: good prognosis cytogenetic/molecular markers</td></tr><tr><td>2</td><td style="white-space:nowrap">  eln-i1<a name="mii-cs-onko-weitere-klassifikationen-obds-eln-i1"> </a></td><td>ELN Intermediär I</td><td>Intermediate risk I: intermediate prognosis markers</td></tr><tr><td>2</td><td style="white-space:nowrap">  eln-i2<a name="mii-cs-onko-weitere-klassifikationen-obds-eln-i2"> </a></td><td>ELN Intermediär II</td><td>Intermediate risk II: intermediate prognosis markers</td></tr><tr><td>2</td><td style="white-space:nowrap">  eln-u<a name="mii-cs-onko-weitere-klassifikationen-obds-eln-u"> </a></td><td>ELN Ungünstig</td><td>Unfavorable risk: poor prognosis cytogenetic/molecular markers</td></tr><tr><td>2</td><td style="white-space:nowrap">  eln-cp<a name="mii-cs-onko-weitere-klassifikationen-obds-eln-cp"> </a></td><td>ELN Chronische Phase</td><td>Chronic phase (CML context)</td></tr><tr><td>2</td><td style="white-space:nowrap">  eln-ap<a name="mii-cs-onko-weitere-klassifikationen-obds-eln-ap"> </a></td><td>ELN Akzelierte Phase</td><td>Accelerated phase (CML context)</td></tr><tr><td>2</td><td style="white-space:nowrap">  eln-bk<a name="mii-cs-onko-weitere-klassifikationen-obds-eln-bk"> </a></td><td>ELN Blastenkrise</td><td>Blast crisis phase (CML context)</td></tr><tr><td>1</td><td style="white-space:nowrap">durie-salmon-stadium<a name="mii-cs-onko-weitere-klassifikationen-obds-durie-salmon-stadium"> </a></td><td>Durie-Salmon Stadium</td><td>Multiple myeloma staging system based on tumor burden and organ function.</td></tr><tr><td>2</td><td style="white-space:nowrap">  durie-salmon-i<a name="mii-cs-onko-weitere-klassifikationen-obds-durie-salmon-i"> </a></td><td>Durie-Salmon I</td><td>Low tumor burden: hemoglobin &gt;10 g/dL, calcium normal, no bone lesions</td></tr><tr><td>2</td><td style="white-space:nowrap">  durie-salmon-ia<a name="mii-cs-onko-weitere-klassifikationen-obds-durie-salmon-ia"> </a></td><td>Durie-Salmon IA</td><td>Low tumor burden with normal renal function</td></tr><tr><td>2</td><td style="white-space:nowrap">  durie-salmon-ib<a name="mii-cs-onko-weitere-klassifikationen-obds-durie-salmon-ib"> </a></td><td>Durie-Salmon IB</td><td>Low tumor burden with abnormal renal function</td></tr><tr><td>2</td><td style="white-space:nowrap">  durie-salmon-ii<a name="mii-cs-onko-weitere-klassifikationen-obds-durie-salmon-ii"> </a></td><td>Durie-Salmon II</td><td>Intermediate tumor burden: neither stage I nor III criteria</td></tr><tr><td>2</td><td style="white-space:nowrap">  durie-salmon-iia<a name="mii-cs-onko-weitere-klassifikationen-obds-durie-salmon-iia"> </a></td><td>Durie-Salmon IIA</td><td>Intermediate tumor burden with normal renal function</td></tr><tr><td>2</td><td style="white-space:nowrap">  durie-salmon-iib<a name="mii-cs-onko-weitere-klassifikationen-obds-durie-salmon-iib"> </a></td><td>Durie-Salmon IIB</td><td>Intermediate tumor burden with abnormal renal function</td></tr><tr><td>2</td><td style="white-space:nowrap">  durie-salmon-iii<a name="mii-cs-onko-weitere-klassifikationen-obds-durie-salmon-iii"> </a></td><td>Durie-Salmon III</td><td>High tumor burden: hemoglobin &lt;8.5 g/dL, calcium elevated, extensive bone lesions</td></tr><tr><td>2</td><td style="white-space:nowrap">  durie-salmon-iiia<a name="mii-cs-onko-weitere-klassifikationen-obds-durie-salmon-iiia"> </a></td><td>Durie-Salmon IIIA</td><td>High tumor burden with normal renal function</td></tr><tr><td>2</td><td style="white-space:nowrap">  durie-salmon-iiib<a name="mii-cs-onko-weitere-klassifikationen-obds-durie-salmon-iiib"> </a></td><td>Durie-Salmon IIIB</td><td>High tumor burden with abnormal renal function</td></tr><tr><td>1</td><td style="white-space:nowrap">figo<a name="mii-cs-onko-weitere-klassifikationen-obds-figo"> </a></td><td>FIGO</td><td>Staging system of the International Federation of Gynecology and Obstetrics (FIGO) for gynecological malignancies.</td></tr><tr><td>2</td><td style="white-space:nowrap">  figo-i<a name="mii-cs-onko-weitere-klassifikationen-obds-figo-i"> </a></td><td>FIGO I</td><td>Tumor confined to the organ of origin</td></tr><tr><td>2</td><td style="white-space:nowrap">  figo-ia<a name="mii-cs-onko-weitere-klassifikationen-obds-figo-ia"> </a></td><td>FIGO IA</td><td>Stage I with limited local extent (entity-specific definition)</td></tr><tr><td>2</td><td style="white-space:nowrap">  figo-ia1<a name="mii-cs-onko-weitere-klassifikationen-obds-figo-ia1"> </a></td><td>FIGO IA1</td><td>Stage IA, subgroup 1 (e.g. cervix: measured stromal invasion &lt;3 mm)</td></tr><tr><td>2</td><td style="white-space:nowrap">  figo-ia2<a name="mii-cs-onko-weitere-klassifikationen-obds-figo-ia2"> </a></td><td>FIGO IA2</td><td>Stage IA, subgroup 2 (e.g. cervix: measured stromal invasion 3 to &lt;5 mm)</td></tr><tr><td>2</td><td style="white-space:nowrap">  figo-ia3<a name="mii-cs-onko-weitere-klassifikationen-obds-figo-ia3"> </a></td><td>FIGO IA3</td><td>Stage IA, subgroup 3 (entity-specific definition)</td></tr><tr><td>2</td><td style="white-space:nowrap">  figo-ib<a name="mii-cs-onko-weitere-klassifikationen-obds-figo-ib"> </a></td><td>FIGO IB</td><td>Stage I with extended local extent (entity-specific definition)</td></tr><tr><td>2</td><td style="white-space:nowrap">  figo-ib1<a name="mii-cs-onko-weitere-klassifikationen-obds-figo-ib1"> </a></td><td>FIGO IB1</td><td>Stage IB, subgroup 1 (e.g. cervix: invasive carcinoma &lt;2 cm)</td></tr><tr><td>2</td><td style="white-space:nowrap">  figo-ib2<a name="mii-cs-onko-weitere-klassifikationen-obds-figo-ib2"> </a></td><td>FIGO IB2</td><td>Stage IB, subgroup 2 (e.g. cervix: invasive carcinoma 2 to &lt;4 cm)</td></tr><tr><td>2</td><td style="white-space:nowrap">  figo-ib3<a name="mii-cs-onko-weitere-klassifikationen-obds-figo-ib3"> </a></td><td>FIGO IB3</td><td>Stage IB, subgroup 3 (e.g. cervix: invasive carcinoma 4 cm or larger)</td></tr><tr><td>2</td><td style="white-space:nowrap">  figo-ic<a name="mii-cs-onko-weitere-klassifikationen-obds-figo-ic"> </a></td><td>FIGO IC</td><td>Stage I with capsule rupture, surface involvement or malignant ascites</td></tr><tr><td>2</td><td style="white-space:nowrap">  figo-ic1<a name="mii-cs-onko-weitere-klassifikationen-obds-figo-ic1"> </a></td><td>FIGO IC1</td><td>Stage IC due to intraoperative surgical spill</td></tr><tr><td>2</td><td style="white-space:nowrap">  figo-ic2<a name="mii-cs-onko-weitere-klassifikationen-obds-figo-ic2"> </a></td><td>FIGO IC2</td><td>Stage IC due to preoperative capsule rupture or surface tumor</td></tr><tr><td>2</td><td style="white-space:nowrap">  figo-ic3<a name="mii-cs-onko-weitere-klassifikationen-obds-figo-ic3"> </a></td><td>FIGO IC3</td><td>Stage IC due to malignant cells in ascites or peritoneal washings</td></tr><tr><td>2</td><td style="white-space:nowrap">  figo-ii<a name="mii-cs-onko-weitere-klassifikationen-obds-figo-ii"> </a></td><td>FIGO II</td><td>Tumor extending beyond the organ of origin within the pelvis</td></tr><tr><td>2</td><td style="white-space:nowrap">  figo-iia<a name="mii-cs-onko-weitere-klassifikationen-obds-figo-iia"> </a></td><td>FIGO IIA</td><td>Stage II with limited extension (entity-specific definition)</td></tr><tr><td>2</td><td style="white-space:nowrap">  figo-iia1<a name="mii-cs-onko-weitere-klassifikationen-obds-figo-iia1"> </a></td><td>FIGO IIA1</td><td>Stage IIA, subgroup 1 (e.g. cervix: lesion &lt;4 cm)</td></tr><tr><td>2</td><td style="white-space:nowrap">  figo-iia2<a name="mii-cs-onko-weitere-klassifikationen-obds-figo-iia2"> </a></td><td>FIGO IIA2</td><td>Stage IIA, subgroup 2 (e.g. cervix: lesion 4 cm or larger)</td></tr><tr><td>2</td><td style="white-space:nowrap">  figo-iib<a name="mii-cs-onko-weitere-klassifikationen-obds-figo-iib"> </a></td><td>FIGO IIB</td><td>Stage II with extended extension (entity-specific definition)</td></tr><tr><td>2</td><td style="white-space:nowrap">  figo-iic<a name="mii-cs-onko-weitere-klassifikationen-obds-figo-iic"> </a></td><td>FIGO IIC</td><td>Stage II with capsule rupture, surface involvement or malignant ascites (historical FIGO revisions)</td></tr><tr><td>2</td><td style="white-space:nowrap">  figo-iii<a name="mii-cs-onko-weitere-klassifikationen-obds-figo-iii"> </a></td><td>FIGO III</td><td>Tumor with extrapelvic peritoneal spread and/or regional lymph node involvement</td></tr><tr><td>2</td><td style="white-space:nowrap">  figo-iiia<a name="mii-cs-onko-weitere-klassifikationen-obds-figo-iiia"> </a></td><td>FIGO IIIA</td><td>Stage III with microscopic or limited extrapelvic spread (entity-specific definition)</td></tr><tr><td>2</td><td style="white-space:nowrap">  figo-iiia1<a name="mii-cs-onko-weitere-klassifikationen-obds-figo-iiia1"> </a></td><td>FIGO IIIA1</td><td>Stage III with retroperitoneal lymph node metastasis only</td></tr><tr><td>2</td><td style="white-space:nowrap">  figo-iiia1i<a name="mii-cs-onko-weitere-klassifikationen-obds-figo-iiia1i"> </a></td><td>FIGO IIIA1(i)</td><td>Stage IIIA1 with lymph node metastasis 10 mm or smaller</td></tr><tr><td>2</td><td style="white-space:nowrap">  figo-iiia1ii<a name="mii-cs-onko-weitere-klassifikationen-obds-figo-iiia1ii"> </a></td><td>FIGO IIIA1(ii)</td><td>Stage IIIA1 with lymph node metastasis larger than 10 mm</td></tr><tr><td>2</td><td style="white-space:nowrap">  figo-iiia2<a name="mii-cs-onko-weitere-klassifikationen-obds-figo-iiia2"> </a></td><td>FIGO IIIA2</td><td>Stage III with microscopic extrapelvic peritoneal involvement</td></tr><tr><td>2</td><td style="white-space:nowrap">  figo-iiib<a name="mii-cs-onko-weitere-klassifikationen-obds-figo-iiib"> </a></td><td>FIGO IIIB</td><td>Stage III with macroscopic extrapelvic peritoneal metastasis 2 cm or smaller</td></tr><tr><td>2</td><td style="white-space:nowrap">  figo-iiic<a name="mii-cs-onko-weitere-klassifikationen-obds-figo-iiic"> </a></td><td>FIGO IIIC</td><td>Stage III with macroscopic extrapelvic peritoneal metastasis larger than 2 cm and/or regional lymph node metastasis</td></tr><tr><td>2</td><td style="white-space:nowrap">  figo-iiic1<a name="mii-cs-onko-weitere-klassifikationen-obds-figo-iiic1"> </a></td><td>FIGO IIIC1</td><td>Stage III with pelvic lymph node metastasis</td></tr><tr><td>2</td><td style="white-space:nowrap">  figo-iiic1r<a name="mii-cs-onko-weitere-klassifikationen-obds-figo-iiic1r"> </a></td><td>FIGO IIIC1r</td><td>Stage IIIC1 established by imaging</td></tr><tr><td>2</td><td style="white-space:nowrap">  figo-iiic1p<a name="mii-cs-onko-weitere-klassifikationen-obds-figo-iiic1p"> </a></td><td>FIGO IIIC1p</td><td>Stage IIIC1 established by pathology</td></tr><tr><td>2</td><td style="white-space:nowrap">  figo-iiic2<a name="mii-cs-onko-weitere-klassifikationen-obds-figo-iiic2"> </a></td><td>FIGO IIIC2</td><td>Stage III with para-aortic lymph node metastasis</td></tr><tr><td>2</td><td style="white-space:nowrap">  figo-iiic2r<a name="mii-cs-onko-weitere-klassifikationen-obds-figo-iiic2r"> </a></td><td>FIGO IIIC2r</td><td>Stage IIIC2 established by imaging</td></tr><tr><td>2</td><td style="white-space:nowrap">  figo-iiic2p<a name="mii-cs-onko-weitere-klassifikationen-obds-figo-iiic2p"> </a></td><td>FIGO IIIC2p</td><td>Stage IIIC2 established by pathology</td></tr><tr><td>2</td><td style="white-space:nowrap">  figo-iv<a name="mii-cs-onko-weitere-klassifikationen-obds-figo-iv"> </a></td><td>FIGO IV</td><td>Distant metastasis beyond the peritoneal cavity</td></tr><tr><td>2</td><td style="white-space:nowrap">  figo-iva<a name="mii-cs-onko-weitere-klassifikationen-obds-figo-iva"> </a></td><td>FIGO IVA</td><td>Stage IV with spread to adjacent pelvic organs or pleural effusion with positive cytology (entity-specific definition)</td></tr><tr><td>2</td><td style="white-space:nowrap">  figo-ivb<a name="mii-cs-onko-weitere-klassifikationen-obds-figo-ivb"> </a></td><td>FIGO IVB</td><td>Stage IV with distant metastasis including extra-abdominal organs and lymph nodes</td></tr><tr><td>2</td><td style="white-space:nowrap">  figo-ivc<a name="mii-cs-onko-weitere-klassifikationen-obds-figo-ivc"> </a></td><td>FIGO IVC</td><td>Stage IV with distant metastasis (entity-specific definition)</td></tr><tr><td>1</td><td style="white-space:nowrap">bismuth<a name="mii-cs-onko-weitere-klassifikationen-obds-bismuth"> </a></td><td>Bismuth</td><td>Classification system for hilar cholangiocarcinoma based on the extent of biliary involvement and resectability.</td></tr><tr><td>2</td><td style="white-space:nowrap">  bismuth-i<a name="mii-cs-onko-weitere-klassifikationen-obds-bismuth-i"> </a></td><td>Bismuth I</td><td>Tumor below confluence of left and right hepatic ducts</td></tr><tr><td>2</td><td style="white-space:nowrap">  bismuth-ii<a name="mii-cs-onko-weitere-klassifikationen-obds-bismuth-ii"> </a></td><td>Bismuth II</td><td>Tumor reaching confluence but not involving secondary ducts</td></tr><tr><td>2</td><td style="white-space:nowrap">  bismuth-iii<a name="mii-cs-onko-weitere-klassifikationen-obds-bismuth-iii"> </a></td><td>Bismuth III</td><td>Tumor involving confluence and either right or left secondary ducts</td></tr><tr><td>2</td><td style="white-space:nowrap">  bismuth-iiia<a name="mii-cs-onko-weitere-klassifikationen-obds-bismuth-iiia"> </a></td><td>Bismuth IIIA</td><td>Tumor involving confluence and right secondary ducts</td></tr><tr><td>2</td><td style="white-space:nowrap">  bismuth-iiib<a name="mii-cs-onko-weitere-klassifikationen-obds-bismuth-iiib"> </a></td><td>Bismuth IIIB</td><td>Tumor involving confluence and left secondary ducts</td></tr><tr><td>2</td><td style="white-space:nowrap">  bismuth-iv<a name="mii-cs-onko-weitere-klassifikationen-obds-bismuth-iv"> </a></td><td>Bismuth IV</td><td>Tumor involving confluence and both right and left secondary ducts</td></tr><tr><td>1</td><td style="white-space:nowrap">masaoka<a name="mii-cs-onko-weitere-klassifikationen-obds-masaoka"> </a></td><td>Masaoka</td><td>Staging system for thymomas based on invasiveness and extent of disease.</td></tr><tr><td>2</td><td style="white-space:nowrap">  masaoka-i<a name="mii-cs-onko-weitere-klassifikationen-obds-masaoka-i"> </a></td><td>Masaoka I</td><td>Encapsulated tumor without invasion</td></tr><tr><td>2</td><td style="white-space:nowrap">  masaoka-ii<a name="mii-cs-onko-weitere-klassifikationen-obds-masaoka-ii"> </a></td><td>Masaoka II</td><td>Invasion into surrounding fatty tissue or mediastinal pleura</td></tr><tr><td>2</td><td style="white-space:nowrap">  masaoka-iii<a name="mii-cs-onko-weitere-klassifikationen-obds-masaoka-iii"> </a></td><td>Masaoka III</td><td>Invasion into neighboring organs</td></tr><tr><td>2</td><td style="white-space:nowrap">  masaoka-iv<a name="mii-cs-onko-weitere-klassifikationen-obds-masaoka-iv"> </a></td><td>Masaoka IV</td><td>Pleural or pericardial dissemination</td></tr><tr><td>2</td><td style="white-space:nowrap">  masaoka-iva<a name="mii-cs-onko-weitere-klassifikationen-obds-masaoka-iva"> </a></td><td>Masaoka IVA</td><td>Pleural or pericardial implants</td></tr><tr><td>2</td><td style="white-space:nowrap">  masaoka-ivb<a name="mii-cs-onko-weitere-klassifikationen-obds-masaoka-ivb"> </a></td><td>Masaoka IVB</td><td>Lymphogenous or hematogenous metastasis</td></tr><tr><td>1</td><td style="white-space:nowrap">mitoserate-gist<a name="mii-cs-onko-weitere-klassifikationen-obds-mitoserate-gist"> </a></td><td>Mitoserate-GIST</td><td>Mitotic rate assessment for gastrointestinal stromal tumors.</td></tr><tr><td>2</td><td style="white-space:nowrap">  mitoserate-gist-n<a name="mii-cs-onko-weitere-klassifikationen-obds-mitoserate-gist-n"> </a></td><td>Mitoserate-GIST Niedrig</td><td>Low mitotic rate: ≤5 mitoses per 50 HPF</td></tr><tr><td>2</td><td style="white-space:nowrap">  mitoserate-gist-h<a name="mii-cs-onko-weitere-klassifikationen-obds-mitoserate-gist-h"> </a></td><td>Mitoserate-GIST Hoch</td><td>High mitotic rate: &gt;5 mitoses per 50 HPF</td></tr><tr><td>1</td><td style="white-space:nowrap">p16<a name="mii-cs-onko-weitere-klassifikationen-obds-p16"> </a></td><td>p16</td><td>p16 protein expression status assessment.</td></tr><tr><td>2</td><td style="white-space:nowrap">  p16-p<a name="mii-cs-onko-weitere-klassifikationen-obds-p16-p"> </a></td><td>p16 Positiv</td><td>Positive p16 protein expression</td></tr><tr><td>2</td><td style="white-space:nowrap">  p16-n<a name="mii-cs-onko-weitere-klassifikationen-obds-p16-n"> </a></td><td>p16 Negativ</td><td>Negative p16 protein expression</td></tr><tr><td>1</td><td style="white-space:nowrap">eutos-score<a name="mii-cs-onko-weitere-klassifikationen-obds-eutos-score"> </a></td><td>EUTOS-Score</td><td>European Treatment and Outcome Study prognostic score for chronic myeloid leukemia.</td></tr><tr><td>2</td><td style="white-space:nowrap">  eutos-score-n<a name="mii-cs-onko-weitere-klassifikationen-obds-eutos-score-n"> </a></td><td>EUTOS-Score Niedrigrisiko</td><td>Low risk EUTOS score: ≤87</td></tr><tr><td>2</td><td style="white-space:nowrap">  eutos-score-h<a name="mii-cs-onko-weitere-klassifikationen-obds-eutos-score-h"> </a></td><td>EUTOS-Score Hochrisiko</td><td>High risk EUTOS score: &gt;87</td></tr><tr><td>1</td><td style="white-space:nowrap">sanz-score<a name="mii-cs-onko-weitere-klassifikationen-obds-sanz-score"> </a></td><td>Sanz-Score</td><td>Risk assessment score for acute promyelocytic leukemia.</td></tr><tr><td>2</td><td style="white-space:nowrap">  sanz-score-n<a name="mii-cs-onko-weitere-klassifikationen-obds-sanz-score-n"> </a></td><td>Sanz-Score Niedrig</td><td>Low risk: WBC &lt;10x10⁹/L and platelets &gt;40x10⁹/L</td></tr><tr><td>2</td><td style="white-space:nowrap">  sanz-score-i<a name="mii-cs-onko-weitere-klassifikationen-obds-sanz-score-i"> </a></td><td>Sanz-Score Intermediär</td><td>Intermediate risk: WBC &lt;10x10⁹/L and platelets ≤40x10⁹/L</td></tr><tr><td>2</td><td style="white-space:nowrap">  sanz-score-h<a name="mii-cs-onko-weitere-klassifikationen-obds-sanz-score-h"> </a></td><td>Sanz-Score Hoch</td><td>High risk: WBC ≥10x10⁹/L</td></tr><tr><td>1</td><td style="white-space:nowrap">ipi<a name="mii-cs-onko-weitere-klassifikationen-obds-ipi"> </a></td><td>IPI</td><td>International Prognostic Index for aggressive non-Hodgkin lymphoma.</td></tr><tr><td>2</td><td style="white-space:nowrap">  ipi-n<a name="mii-cs-onko-weitere-klassifikationen-obds-ipi-n"> </a></td><td>IPI Niedrig</td><td>Low risk: 0-1 risk factors</td></tr><tr><td>2</td><td style="white-space:nowrap">  ipi-ni<a name="mii-cs-onko-weitere-klassifikationen-obds-ipi-ni"> </a></td><td>IPI Niedrig-Intermediär</td><td>Low-intermediate risk: 2 risk factors</td></tr><tr><td>2</td><td style="white-space:nowrap">  ipi-hi<a name="mii-cs-onko-weitere-klassifikationen-obds-ipi-hi"> </a></td><td>IPI Hoch-Intermediär</td><td>High-intermediate risk: 3 risk factors</td></tr><tr><td>2</td><td style="white-space:nowrap">  ipi-h<a name="mii-cs-onko-weitere-klassifikationen-obds-ipi-h"> </a></td><td>IPI Hoch</td><td>High risk: 4-5 risk factors</td></tr><tr><td>1</td><td style="white-space:nowrap">flipi<a name="mii-cs-onko-weitere-klassifikationen-obds-flipi"> </a></td><td>FLIPI</td><td>Follicular Lymphoma International Prognostic Index.</td></tr><tr><td>2</td><td style="white-space:nowrap">  flipi-l<a name="mii-cs-onko-weitere-klassifikationen-obds-flipi-l"> </a></td><td>FLIPI Low risk</td><td>Low risk: 0-1 risk factors</td></tr><tr><td>2</td><td style="white-space:nowrap">  flipi-i<a name="mii-cs-onko-weitere-klassifikationen-obds-flipi-i"> </a></td><td>FLIPI Intermediate risk</td><td>Intermediate risk: 2 risk factors</td></tr><tr><td>2</td><td style="white-space:nowrap">  flipi-h<a name="mii-cs-onko-weitere-klassifikationen-obds-flipi-h"> </a></td><td>FLIPI High risk</td><td>High risk: ≥3 risk factors</td></tr><tr><td>1</td><td style="white-space:nowrap">mipi<a name="mii-cs-onko-weitere-klassifikationen-obds-mipi"> </a></td><td>MIPI</td><td>Mantle Cell Lymphoma International Prognostic Index.</td></tr><tr><td>2</td><td style="white-space:nowrap">  mipi-n<a name="mii-cs-onko-weitere-klassifikationen-obds-mipi-n"> </a></td><td>MIPI Niedrig</td><td>Low risk MIPI score</td></tr><tr><td>2</td><td style="white-space:nowrap">  mipi-i<a name="mii-cs-onko-weitere-klassifikationen-obds-mipi-i"> </a></td><td>MIPI Intermediär</td><td>Intermediate risk MIPI score</td></tr><tr><td>2</td><td style="white-space:nowrap">  mipi-h<a name="mii-cs-onko-weitere-klassifikationen-obds-mipi-h"> </a></td><td>MIPI Hoch</td><td>High risk MIPI score</td></tr><tr><td>1</td><td style="white-space:nowrap">risikogruppen-ghsg<a name="mii-cs-onko-weitere-klassifikationen-obds-risikogruppen-ghsg"> </a></td><td>Risikogruppen GHSG</td><td>German Hodgkin Study Group risk stratification.</td></tr><tr><td>2</td><td style="white-space:nowrap">  risikogruppen-ghsg-fr<a name="mii-cs-onko-weitere-klassifikationen-obds-risikogruppen-ghsg-fr"> </a></td><td>GHSG Frühe</td><td>Early favorable risk group</td></tr><tr><td>2</td><td style="white-space:nowrap">  risikogruppen-ghsg-i<a name="mii-cs-onko-weitere-klassifikationen-obds-risikogruppen-ghsg-i"> </a></td><td>GHSG Intermediär</td><td>Intermediate risk group</td></tr><tr><td>2</td><td style="white-space:nowrap">  risikogruppen-ghsg-fo<a name="mii-cs-onko-weitere-klassifikationen-obds-risikogruppen-ghsg-fo"> </a></td><td>GHSG Fortgeschritten</td><td>Advanced risk group</td></tr><tr><td>1</td><td style="white-space:nowrap">ipss<a name="mii-cs-onko-weitere-klassifikationen-obds-ipss"> </a></td><td>IPSS</td><td>International Prognostic Scoring System for myelodysplastic syndromes.</td></tr><tr><td>2</td><td style="white-space:nowrap">  ipss-l<a name="mii-cs-onko-weitere-klassifikationen-obds-ipss-l"> </a></td><td>IPSS Low</td><td>Low risk: score 0</td></tr><tr><td>2</td><td style="white-space:nowrap">  ipss-i1<a name="mii-cs-onko-weitere-klassifikationen-obds-ipss-i1"> </a></td><td>IPSS Intermediate-I</td><td>Intermediate-1 risk: score 0.5-1.0</td></tr><tr><td>2</td><td style="white-space:nowrap">  ipss-i2<a name="mii-cs-onko-weitere-klassifikationen-obds-ipss-i2"> </a></td><td>IPSS Intermediate-II</td><td>Intermediate-2 risk: score 1.5-2.0</td></tr><tr><td>2</td><td style="white-space:nowrap">  ipss-h<a name="mii-cs-onko-weitere-klassifikationen-obds-ipss-h"> </a></td><td>IPSS High risk</td><td>High risk: score ≥2.5</td></tr><tr><td>1</td><td style="white-space:nowrap">her2-neu<a name="mii-cs-onko-weitere-klassifikationen-obds-her2-neu"> </a></td><td>HER2-neu</td><td>HER2-neu protein expression and gene amplification status.</td></tr><tr><td>2</td><td style="white-space:nowrap">  her2-neu-p<a name="mii-cs-onko-weitere-klassifikationen-obds-her2-neu-p"> </a></td><td>HER2-neu Positiv</td><td>Positive HER2-neu status (IHC 3+ or FISH amplified)</td></tr><tr><td>2</td><td style="white-space:nowrap">  her2-neu-n<a name="mii-cs-onko-weitere-klassifikationen-obds-her2-neu-n"> </a></td><td>HER2-neu Negativ</td><td>Negative HER2-neu status (IHC 0-1+ or FISH not amplified)</td></tr></table></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability">
+    <valueCode value="shareable"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability">
+    <valueCode value="publishable"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes"/>
+        <code value="package"/>
+        <display value="Package"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/resource-approvalDate">
+    <valueDate value="2026-01-03"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-topic">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"/>
+        <code value="C3262"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-author">
+    <valueContactDetail>
+      <telecom>
+        <system value="email"/>
+        <value value="thomas.debertshaeuser@charite.de"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-editor">
+    <valueContactDetail>
+      <name value="Taskforce Core Data Set"/>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-reviewer">
+    <valueContactDetail>
+      <name value="Interoperability Working Group"/>
+      <telecom>
+        <system value="url"/>
+        <value value="https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-reviewer">
+    <valueContactDetail>
+      <name value="National Steering Committee"/>
+      <telecom>
+        <system value="url"/>
+        <value value="https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-endorser">
+    <valueContactDetail>
+      <name value="Interoperability Working Group"/>
+      <telecom>
+        <system value="url"/>
+        <value value="https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-endorser">
+    <valueContactDetail>
+      <name value="National Steering Committee"/>
+      <telecom>
+        <system value="url"/>
+        <value value="https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm">
+    <valueCoding>
+      <system value="http://hl7.org/fhir/version-algorithm"/>
+      <code value="semver"/>
+      <display value="SemVer"/>
+    </valueCoding>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+    <valuePeriod>
+      <start value="2026"/>
+    </valuePeriod>
+  </extension>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds"/>
+  <version value="2026.0.3"/>
+  <name value="MII_CS_Onko_Weitere_Klassifikationen_OBDS"/>
+  <title value="MII CodeSystem Onkologie - Weitere Klassifikationen oBDS"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-09-02T02:28:56+00:00"/>
+  <publisher value="Medizininformatik Initiative"/>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de/"/>
+    </telecom>
+  </contact>
+  <description value="oBDS-specific classification systems and scoring systems not yet covered by international terminologies (SNOMED CT, NCI Thesaurus). These codes supplement the existing ValueSet for additional classifications. Research required: Check if SNOMED CT or LOINC codes exist for these scoring systems before using oBDS-specific codes."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <content value="complete"/>
+  <count value="219"/>
+  <concept>
+    <code value="binet"/>
+    <display value="BINET Staging System"/>
+    <definition value="Staging system for chronic lymphocytic leukemia based on lymph node involvement and organ enlargement."/>
+    <concept>
+      <code value="binet-a"/>
+      <display value="BINET A"/>
+      <definition value="Early stage CLL: lymphocytosis in blood and bone marrow only"/>
+    </concept>
+    <concept>
+      <code value="binet-b"/>
+      <display value="BINET B"/>
+      <definition value="Intermediate stage CLL: lymphocytosis with enlarged lymph nodes or spleen/liver"/>
+    </concept>
+    <concept>
+      <code value="binet-c"/>
+      <display value="BINET C"/>
+      <definition value="Advanced stage CLL: lymphocytosis with anemia or thrombocytopenia"/>
+    </concept>
+  </concept>
+  <concept>
+    <code value="ann-arbor-stadium"/>
+    <display value="Ann-Arbor Stadium"/>
+    <definition value="Staging system for Hodgkin and Non-Hodgkin lymphomas based on anatomical extent of disease."/>
+    <concept>
+      <code value="ann-arbor-i"/>
+      <display value="I"/>
+      <definition value="Single lymph node region or single extralymphatic organ"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-ia"/>
+      <display value="IA"/>
+      <definition value="Single lymph node region, asymptomatic"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-iae"/>
+      <display value="IAE"/>
+      <definition value="Single lymph node region with extranodal extension, asymptomatic"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-ib"/>
+      <display value="IB"/>
+      <definition value="Single lymph node region with B symptoms"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-ibe"/>
+      <display value="IBE"/>
+      <definition value="Single lymph node region with extranodal extension and B symptoms"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-ie"/>
+      <display value="IE"/>
+      <definition value="Single extralymphatic organ involvement"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-ix"/>
+      <display value="IX"/>
+      <definition value="Single lymph node region, symptoms unclear"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-ixa"/>
+      <display value="IXA"/>
+      <definition value="Single lymph node region, symptoms unclear, asymptomatic features"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-ixae"/>
+      <display value="IXAE"/>
+      <definition value="Single lymph node region with extranodal extension, symptoms unclear, asymptomatic features"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-ixb"/>
+      <display value="IXB"/>
+      <definition value="Single lymph node region, symptoms unclear, B symptom features"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-ixbe"/>
+      <display value="IXBE"/>
+      <definition value="Single lymph node region with extranodal extension, symptoms unclear, B symptom features"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-ixe"/>
+      <display value="IXE"/>
+      <definition value="Single extralymphatic organ, symptoms unclear"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-ii"/>
+      <display value="II"/>
+      <definition value="Two or more lymph node regions on same side of diaphragm"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-ii1"/>
+      <display value="II1"/>
+      <definition value="Two lymph node regions on same side of diaphragm"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-ii1a"/>
+      <display value="II1A"/>
+      <definition value="Two lymph node regions on same side of diaphragm, asymptomatic"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-ii1ae"/>
+      <display value="II1AE"/>
+      <definition value="Two lymph node regions on same side of diaphragm with extranodal extension, asymptomatic"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-ii1b"/>
+      <display value="II1B"/>
+      <definition value="Two lymph node regions on same side of diaphragm with B symptoms"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-ii1be"/>
+      <display value="II1BE"/>
+      <definition value="Two lymph node regions on same side of diaphragm with extranodal extension and B symptoms"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-ii1e"/>
+      <display value="II1E"/>
+      <definition value="Two lymph node regions on same side of diaphragm with extranodal extension"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-ii1x"/>
+      <display value="II1X"/>
+      <definition value="Two lymph node regions on same side of diaphragm, symptoms unclear"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-ii1xa"/>
+      <display value="II1XA"/>
+      <definition value="Two lymph node regions on same side of diaphragm, symptoms unclear, asymptomatic features"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-ii1xae"/>
+      <display value="II1XAE"/>
+      <definition value="Two lymph node regions on same side of diaphragm with extranodal extension, symptoms unclear, asymptomatic features"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-ii1xb"/>
+      <display value="II1XB"/>
+      <definition value="Two lymph node regions on same side of diaphragm, symptoms unclear, B symptom features"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-ii1xbe"/>
+      <display value="II1XBE"/>
+      <definition value="Two lymph node regions on same side of diaphragm with extranodal extension, symptoms unclear, B symptom features"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-ii1xe"/>
+      <display value="II1XE"/>
+      <definition value="Two lymph node regions on same side of diaphragm with extranodal extension, symptoms unclear"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-ii2"/>
+      <display value="II2"/>
+      <definition value="Multiple lymph node regions on same side of diaphragm"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-ii2a"/>
+      <display value="II2A"/>
+      <definition value="Multiple lymph node regions on same side of diaphragm, asymptomatic"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-ii2ae"/>
+      <display value="II2AE"/>
+      <definition value="Multiple lymph node regions on same side of diaphragm with extranodal extension, asymptomatic"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-ii2b"/>
+      <display value="II2B"/>
+      <definition value="Multiple lymph node regions on same side of diaphragm with B symptoms"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-ii2be"/>
+      <display value="II2BE"/>
+      <definition value="Multiple lymph node regions on same side of diaphragm with extranodal extension and B symptoms"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-ii2e"/>
+      <display value="II2E"/>
+      <definition value="Multiple lymph node regions on same side of diaphragm with extranodal extension"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-ii2x"/>
+      <display value="II2X"/>
+      <definition value="Multiple lymph node regions on same side of diaphragm, symptoms unclear"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-ii2xa"/>
+      <display value="II2XA"/>
+      <definition value="Multiple lymph node regions on same side of diaphragm, symptoms unclear, asymptomatic features"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-ii2xae"/>
+      <display value="II2XAE"/>
+      <definition value="Multiple lymph node regions on same side of diaphragm with extranodal extension, symptoms unclear, asymptomatic features"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-ii2xb"/>
+      <display value="II2XB"/>
+      <definition value="Multiple lymph node regions on same side of diaphragm, symptoms unclear, B symptom features"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-ii2xbe"/>
+      <display value="II2XBE"/>
+      <definition value="Multiple lymph node regions on same side of diaphragm with extranodal extension, symptoms unclear, B symptom features"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-ii2xe"/>
+      <display value="II2XE"/>
+      <definition value="Multiple lymph node regions on same side of diaphragm with extranodal extension, symptoms unclear"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-iia"/>
+      <display value="IIA"/>
+      <definition value="Two or more lymph node regions on same side of diaphragm, asymptomatic"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-iiae"/>
+      <display value="IIAE"/>
+      <definition value="Two or more lymph node regions on same side of diaphragm with extranodal extension, asymptomatic"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-iib"/>
+      <display value="IIB"/>
+      <definition value="Two or more lymph node regions on same side of diaphragm with B symptoms"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-iibe"/>
+      <display value="IIBE"/>
+      <definition value="Two or more lymph node regions on same side of diaphragm with extranodal extension and B symptoms"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-iie"/>
+      <display value="IIE"/>
+      <definition value="Two or more lymph node regions on same side of diaphragm with extranodal extension"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-iix"/>
+      <display value="IIX"/>
+      <definition value="Two or more lymph node regions on same side of diaphragm, symptoms unclear"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-iixa"/>
+      <display value="IIXA"/>
+      <definition value="Two or more lymph node regions on same side of diaphragm, symptoms unclear, asymptomatic features"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-iixae"/>
+      <display value="IIXAE"/>
+      <definition value="Two or more lymph node regions on same side of diaphragm with extranodal extension, symptoms unclear, asymptomatic features"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-iixb"/>
+      <display value="IIXB"/>
+      <definition value="Two or more lymph node regions on same side of diaphragm, symptoms unclear, B symptom features"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-iixbe"/>
+      <display value="IIXBE"/>
+      <definition value="Two or more lymph node regions on same side of diaphragm with extranodal extension, symptoms unclear, B symptom features"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-iixe"/>
+      <display value="IIXE"/>
+      <definition value="Two or more lymph node regions on same side of diaphragm with extranodal extension, symptoms unclear"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-iii"/>
+      <display value="III"/>
+      <definition value="Lymph node regions on both sides of diaphragm"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-iiia"/>
+      <display value="IIIA"/>
+      <definition value="Lymph node regions on both sides of diaphragm, asymptomatic"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-iiiae"/>
+      <display value="IIIAE"/>
+      <definition value="Lymph node regions on both sides of diaphragm with extranodal extension, asymptomatic"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-iiiaes"/>
+      <display value="IIIAES"/>
+      <definition value="Lymph node regions on both sides of diaphragm with extranodal extension and spleen involvement, asymptomatic"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-iiias"/>
+      <display value="IIIAS"/>
+      <definition value="Lymph node regions on both sides of diaphragm with spleen involvement, asymptomatic"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-iiib"/>
+      <display value="IIIB"/>
+      <definition value="Lymph node regions on both sides of diaphragm with B symptoms"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-iiibe"/>
+      <display value="IIIBE"/>
+      <definition value="Lymph node regions on both sides of diaphragm with extranodal extension and B symptoms"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-iiibes"/>
+      <display value="IIIBES"/>
+      <definition value="Lymph node regions on both sides of diaphragm with extranodal extension, spleen involvement, and B symptoms"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-iiibs"/>
+      <display value="IIIBS"/>
+      <definition value="Lymph node regions on both sides of diaphragm with spleen involvement and B symptoms"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-iiie"/>
+      <display value="IIIE"/>
+      <definition value="Lymph node regions on both sides of diaphragm with extranodal extension"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-iiies"/>
+      <display value="IIIES"/>
+      <definition value="Lymph node regions on both sides of diaphragm with extranodal extension and spleen involvement"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-iiis"/>
+      <display value="IIIS"/>
+      <definition value="Lymph node regions on both sides of diaphragm with spleen involvement"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-iiix"/>
+      <display value="IIIX"/>
+      <definition value="Lymph node regions on both sides of diaphragm, symptoms unclear"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-iiixa"/>
+      <display value="IIIXA"/>
+      <definition value="Lymph node regions on both sides of diaphragm, symptoms unclear, asymptomatic features"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-iiixae"/>
+      <display value="IIIXAE"/>
+      <definition value="Lymph node regions on both sides of diaphragm with extranodal extension, symptoms unclear, asymptomatic features"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-iiixaes"/>
+      <display value="IIIXAES"/>
+      <definition value="Lymph node regions on both sides of diaphragm with extranodal extension and spleen involvement, symptoms unclear, asymptomatic features"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-iiixas"/>
+      <display value="IIIXAS"/>
+      <definition value="Lymph node regions on both sides of diaphragm with spleen involvement, symptoms unclear, asymptomatic features"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-iiixb"/>
+      <display value="IIIXB"/>
+      <definition value="Lymph node regions on both sides of diaphragm, symptoms unclear, B symptom features"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-iiixbe"/>
+      <display value="IIIXBE"/>
+      <definition value="Lymph node regions on both sides of diaphragm with extranodal extension, symptoms unclear, B symptom features"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-iiixbes"/>
+      <display value="IIIXBES"/>
+      <definition value="Lymph node regions on both sides of diaphragm with extranodal extension and spleen involvement, symptoms unclear, B symptom features"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-iiixbs"/>
+      <display value="IIIXBS"/>
+      <definition value="Lymph node regions on both sides of diaphragm with spleen involvement, symptoms unclear, B symptom features"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-iiixe"/>
+      <display value="IIIXE"/>
+      <definition value="Lymph node regions on both sides of diaphragm with extranodal extension, symptoms unclear"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-iiixes"/>
+      <display value="IIIXES"/>
+      <definition value="Lymph node regions on both sides of diaphragm with extranodal extension and spleen involvement, symptoms unclear"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-iiixs"/>
+      <display value="IIIXS"/>
+      <definition value="Lymph node regions on both sides of diaphragm with spleen involvement, symptoms unclear"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-iii1"/>
+      <display value="III1"/>
+      <definition value="Limited lymph node regions on both sides of diaphragm"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-iii1a"/>
+      <display value="III1A"/>
+      <definition value="Limited lymph node regions on both sides of diaphragm, asymptomatic"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-iii1b"/>
+      <display value="III1B"/>
+      <definition value="Limited lymph node regions on both sides of diaphragm with B symptoms"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-iii2"/>
+      <display value="III2"/>
+      <definition value="Multiple lymph node regions on both sides of diaphragm"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-iii2a"/>
+      <display value="III2A"/>
+      <definition value="Multiple lymph node regions on both sides of diaphragm, asymptomatic"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-iii2b"/>
+      <display value="III2B"/>
+      <definition value="Multiple lymph node regions on both sides of diaphragm with B symptoms"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-iv"/>
+      <display value="IV"/>
+      <definition value="Disseminated involvement of one or more extralymphatic organs"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-iva"/>
+      <display value="IVA"/>
+      <definition value="Disseminated involvement of extralymphatic organs, asymptomatic"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-ivae"/>
+      <display value="IVAE"/>
+      <definition value="Disseminated involvement of extralymphatic organs with additional extranodal extension, asymptomatic"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-ivb"/>
+      <display value="IVB"/>
+      <definition value="Disseminated involvement of extralymphatic organs with B symptoms"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-ivbe"/>
+      <display value="IVBE"/>
+      <definition value="Disseminated involvement of extralymphatic organs with additional extranodal extension and B symptoms"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-ive"/>
+      <display value="IVE"/>
+      <definition value="Disseminated involvement of extralymphatic organs with extranodal extension"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-ivx"/>
+      <display value="IVX"/>
+      <definition value="Disseminated involvement of extralymphatic organs, symptoms unclear"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-ivxa"/>
+      <display value="IVXA"/>
+      <definition value="Disseminated involvement of extralymphatic organs, symptoms unclear, asymptomatic features"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-ivxae"/>
+      <display value="IVXAE"/>
+      <definition value="Disseminated involvement of extralymphatic organs with additional extranodal extension, symptoms unclear, asymptomatic features"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-ivxb"/>
+      <display value="IVXB"/>
+      <definition value="Disseminated involvement of extralymphatic organs, symptoms unclear, B symptom features"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-ivxbe"/>
+      <display value="IVXBE"/>
+      <definition value="Disseminated involvement of extralymphatic organs with additional extranodal extension, symptoms unclear, B symptom features"/>
+    </concept>
+    <concept>
+      <code value="ann-arbor-ivxe"/>
+      <display value="IVXE"/>
+      <definition value="Disseminated involvement of extralymphatic organs with extranodal extension, symptoms unclear"/>
+    </concept>
+  </concept>
+  <concept>
+    <code value="iss"/>
+    <display value="International Staging System"/>
+    <definition value="Staging system for multiple myeloma based on serum beta-2 microglobulin and albumin levels."/>
+    <concept>
+      <code value="iss-i"/>
+      <display value="ISS I"/>
+      <definition value="Beta-2 microglobulin &lt;3.5 mg/L and albumin ≥3.5 g/dL"/>
+    </concept>
+    <concept>
+      <code value="iss-ii"/>
+      <display value="ISS II"/>
+      <definition value="Not ISS I or ISS III"/>
+    </concept>
+    <concept>
+      <code value="iss-iii"/>
+      <display value="ISS III"/>
+      <definition value="Beta-2 microglobulin ≥5.5 mg/L"/>
+    </concept>
+  </concept>
+  <concept>
+    <code value="isswm"/>
+    <display value="International Scoring System for Waldenström's Macroglobulinemia"/>
+    <definition value="Prognostic scoring system for Waldenström's macroglobulinemia based on age, beta-2 microglobulin, and albumin levels."/>
+    <concept>
+      <code value="isswm-n"/>
+      <display value="ISSWM Niedrig"/>
+      <definition value="Low risk: age ≤65 years, beta-2 microglobulin ≤3 mg/L, albumin &gt;3.5 g/dL"/>
+    </concept>
+    <concept>
+      <code value="isswm-i"/>
+      <display value="ISSWM Intermediär"/>
+      <definition value="Intermediate risk: one adverse factor"/>
+    </concept>
+    <concept>
+      <code value="isswm-h"/>
+      <display value="ISSWM Hoch"/>
+      <definition value="High risk: age &gt;65 years or beta-2 microglobulin &gt;3 mg/L, or albumin ≤3.5 g/dL (≥2 factors)"/>
+    </concept>
+  </concept>
+  <concept>
+    <code value="who-grad"/>
+    <display value="WHO Grade"/>
+    <definition value="World Health Organization grading system for central nervous system tumors based on histological features."/>
+    <concept>
+      <code value="who-grad-i"/>
+      <display value="WHO Grad I"/>
+      <definition value="Well-differentiated, slow-growing, low proliferative potential"/>
+    </concept>
+    <concept>
+      <code value="who-grad-ii"/>
+      <display value="WHO Grad II"/>
+      <definition value="Moderately differentiated, infiltrative, low proliferative potential"/>
+    </concept>
+    <concept>
+      <code value="who-grad-iii"/>
+      <display value="WHO Grad III"/>
+      <definition value="Poorly differentiated, anaplastic, high proliferative potential"/>
+    </concept>
+    <concept>
+      <code value="who-grad-iv"/>
+      <display value="WHO Grad IV"/>
+      <definition value="Poorly differentiated, high mitotic activity, necrosis, microvascular proliferation"/>
+    </concept>
+  </concept>
+  <concept>
+    <code value="formen"/>
+    <display value="Formen"/>
+    <definition value="Classification of lymphoma forms distinguishing classical and variant presentations."/>
+    <concept>
+      <code value="formen-k"/>
+      <display value="Klassisch"/>
+      <definition value="Classical form of lymphoma presentation"/>
+    </concept>
+    <concept>
+      <code value="formen-v"/>
+      <display value="Variante"/>
+      <definition value="Variant form of lymphoma presentation"/>
+    </concept>
+  </concept>
+  <concept>
+    <code value="eln-klassifikation"/>
+    <display value="ELN-Klassifikation"/>
+    <definition value="European LeukemiaNet risk stratification for acute myeloid leukemia based on cytogenetic and molecular genetic abnormalities."/>
+    <concept>
+      <code value="eln-g"/>
+      <display value="ELN Günstig"/>
+      <definition value="Favorable risk: good prognosis cytogenetic/molecular markers"/>
+    </concept>
+    <concept>
+      <code value="eln-i1"/>
+      <display value="ELN Intermediär I"/>
+      <definition value="Intermediate risk I: intermediate prognosis markers"/>
+    </concept>
+    <concept>
+      <code value="eln-i2"/>
+      <display value="ELN Intermediär II"/>
+      <definition value="Intermediate risk II: intermediate prognosis markers"/>
+    </concept>
+    <concept>
+      <code value="eln-u"/>
+      <display value="ELN Ungünstig"/>
+      <definition value="Unfavorable risk: poor prognosis cytogenetic/molecular markers"/>
+    </concept>
+    <concept>
+      <code value="eln-cp"/>
+      <display value="ELN Chronische Phase"/>
+      <definition value="Chronic phase (CML context)"/>
+    </concept>
+    <concept>
+      <code value="eln-ap"/>
+      <display value="ELN Akzelierte Phase"/>
+      <definition value="Accelerated phase (CML context)"/>
+    </concept>
+    <concept>
+      <code value="eln-bk"/>
+      <display value="ELN Blastenkrise"/>
+      <definition value="Blast crisis phase (CML context)"/>
+    </concept>
+  </concept>
+  <concept>
+    <code value="durie-salmon-stadium"/>
+    <display value="Durie-Salmon Stadium"/>
+    <definition value="Multiple myeloma staging system based on tumor burden and organ function."/>
+    <concept>
+      <code value="durie-salmon-i"/>
+      <display value="Durie-Salmon I"/>
+      <definition value="Low tumor burden: hemoglobin &gt;10 g/dL, calcium normal, no bone lesions"/>
+    </concept>
+    <concept>
+      <code value="durie-salmon-ia"/>
+      <display value="Durie-Salmon IA"/>
+      <definition value="Low tumor burden with normal renal function"/>
+    </concept>
+    <concept>
+      <code value="durie-salmon-ib"/>
+      <display value="Durie-Salmon IB"/>
+      <definition value="Low tumor burden with abnormal renal function"/>
+    </concept>
+    <concept>
+      <code value="durie-salmon-ii"/>
+      <display value="Durie-Salmon II"/>
+      <definition value="Intermediate tumor burden: neither stage I nor III criteria"/>
+    </concept>
+    <concept>
+      <code value="durie-salmon-iia"/>
+      <display value="Durie-Salmon IIA"/>
+      <definition value="Intermediate tumor burden with normal renal function"/>
+    </concept>
+    <concept>
+      <code value="durie-salmon-iib"/>
+      <display value="Durie-Salmon IIB"/>
+      <definition value="Intermediate tumor burden with abnormal renal function"/>
+    </concept>
+    <concept>
+      <code value="durie-salmon-iii"/>
+      <display value="Durie-Salmon III"/>
+      <definition value="High tumor burden: hemoglobin &lt;8.5 g/dL, calcium elevated, extensive bone lesions"/>
+    </concept>
+    <concept>
+      <code value="durie-salmon-iiia"/>
+      <display value="Durie-Salmon IIIA"/>
+      <definition value="High tumor burden with normal renal function"/>
+    </concept>
+    <concept>
+      <code value="durie-salmon-iiib"/>
+      <display value="Durie-Salmon IIIB"/>
+      <definition value="High tumor burden with abnormal renal function"/>
+    </concept>
+  </concept>
+  <concept>
+    <code value="figo"/>
+    <display value="FIGO"/>
+    <definition value="Staging system of the International Federation of Gynecology and Obstetrics (FIGO) for gynecological malignancies."/>
+    <concept>
+      <code value="figo-i"/>
+      <display value="FIGO I"/>
+      <definition value="Tumor confined to the organ of origin"/>
+    </concept>
+    <concept>
+      <code value="figo-ia"/>
+      <display value="FIGO IA"/>
+      <definition value="Stage I with limited local extent (entity-specific definition)"/>
+    </concept>
+    <concept>
+      <code value="figo-ia1"/>
+      <display value="FIGO IA1"/>
+      <definition value="Stage IA, subgroup 1 (e.g. cervix: measured stromal invasion &lt;3 mm)"/>
+    </concept>
+    <concept>
+      <code value="figo-ia2"/>
+      <display value="FIGO IA2"/>
+      <definition value="Stage IA, subgroup 2 (e.g. cervix: measured stromal invasion 3 to &lt;5 mm)"/>
+    </concept>
+    <concept>
+      <code value="figo-ia3"/>
+      <display value="FIGO IA3"/>
+      <definition value="Stage IA, subgroup 3 (entity-specific definition)"/>
+    </concept>
+    <concept>
+      <code value="figo-ib"/>
+      <display value="FIGO IB"/>
+      <definition value="Stage I with extended local extent (entity-specific definition)"/>
+    </concept>
+    <concept>
+      <code value="figo-ib1"/>
+      <display value="FIGO IB1"/>
+      <definition value="Stage IB, subgroup 1 (e.g. cervix: invasive carcinoma &lt;2 cm)"/>
+    </concept>
+    <concept>
+      <code value="figo-ib2"/>
+      <display value="FIGO IB2"/>
+      <definition value="Stage IB, subgroup 2 (e.g. cervix: invasive carcinoma 2 to &lt;4 cm)"/>
+    </concept>
+    <concept>
+      <code value="figo-ib3"/>
+      <display value="FIGO IB3"/>
+      <definition value="Stage IB, subgroup 3 (e.g. cervix: invasive carcinoma 4 cm or larger)"/>
+    </concept>
+    <concept>
+      <code value="figo-ic"/>
+      <display value="FIGO IC"/>
+      <definition value="Stage I with capsule rupture, surface involvement or malignant ascites"/>
+    </concept>
+    <concept>
+      <code value="figo-ic1"/>
+      <display value="FIGO IC1"/>
+      <definition value="Stage IC due to intraoperative surgical spill"/>
+    </concept>
+    <concept>
+      <code value="figo-ic2"/>
+      <display value="FIGO IC2"/>
+      <definition value="Stage IC due to preoperative capsule rupture or surface tumor"/>
+    </concept>
+    <concept>
+      <code value="figo-ic3"/>
+      <display value="FIGO IC3"/>
+      <definition value="Stage IC due to malignant cells in ascites or peritoneal washings"/>
+    </concept>
+    <concept>
+      <code value="figo-ii"/>
+      <display value="FIGO II"/>
+      <definition value="Tumor extending beyond the organ of origin within the pelvis"/>
+    </concept>
+    <concept>
+      <code value="figo-iia"/>
+      <display value="FIGO IIA"/>
+      <definition value="Stage II with limited extension (entity-specific definition)"/>
+    </concept>
+    <concept>
+      <code value="figo-iia1"/>
+      <display value="FIGO IIA1"/>
+      <definition value="Stage IIA, subgroup 1 (e.g. cervix: lesion &lt;4 cm)"/>
+    </concept>
+    <concept>
+      <code value="figo-iia2"/>
+      <display value="FIGO IIA2"/>
+      <definition value="Stage IIA, subgroup 2 (e.g. cervix: lesion 4 cm or larger)"/>
+    </concept>
+    <concept>
+      <code value="figo-iib"/>
+      <display value="FIGO IIB"/>
+      <definition value="Stage II with extended extension (entity-specific definition)"/>
+    </concept>
+    <concept>
+      <code value="figo-iic"/>
+      <display value="FIGO IIC"/>
+      <definition value="Stage II with capsule rupture, surface involvement or malignant ascites (historical FIGO revisions)"/>
+    </concept>
+    <concept>
+      <code value="figo-iii"/>
+      <display value="FIGO III"/>
+      <definition value="Tumor with extrapelvic peritoneal spread and/or regional lymph node involvement"/>
+    </concept>
+    <concept>
+      <code value="figo-iiia"/>
+      <display value="FIGO IIIA"/>
+      <definition value="Stage III with microscopic or limited extrapelvic spread (entity-specific definition)"/>
+    </concept>
+    <concept>
+      <code value="figo-iiia1"/>
+      <display value="FIGO IIIA1"/>
+      <definition value="Stage III with retroperitoneal lymph node metastasis only"/>
+    </concept>
+    <concept>
+      <code value="figo-iiia1i"/>
+      <display value="FIGO IIIA1(i)"/>
+      <definition value="Stage IIIA1 with lymph node metastasis 10 mm or smaller"/>
+    </concept>
+    <concept>
+      <code value="figo-iiia1ii"/>
+      <display value="FIGO IIIA1(ii)"/>
+      <definition value="Stage IIIA1 with lymph node metastasis larger than 10 mm"/>
+    </concept>
+    <concept>
+      <code value="figo-iiia2"/>
+      <display value="FIGO IIIA2"/>
+      <definition value="Stage III with microscopic extrapelvic peritoneal involvement"/>
+    </concept>
+    <concept>
+      <code value="figo-iiib"/>
+      <display value="FIGO IIIB"/>
+      <definition value="Stage III with macroscopic extrapelvic peritoneal metastasis 2 cm or smaller"/>
+    </concept>
+    <concept>
+      <code value="figo-iiic"/>
+      <display value="FIGO IIIC"/>
+      <definition value="Stage III with macroscopic extrapelvic peritoneal metastasis larger than 2 cm and/or regional lymph node metastasis"/>
+    </concept>
+    <concept>
+      <code value="figo-iiic1"/>
+      <display value="FIGO IIIC1"/>
+      <definition value="Stage III with pelvic lymph node metastasis"/>
+    </concept>
+    <concept>
+      <code value="figo-iiic1r"/>
+      <display value="FIGO IIIC1r"/>
+      <definition value="Stage IIIC1 established by imaging"/>
+    </concept>
+    <concept>
+      <code value="figo-iiic1p"/>
+      <display value="FIGO IIIC1p"/>
+      <definition value="Stage IIIC1 established by pathology"/>
+    </concept>
+    <concept>
+      <code value="figo-iiic2"/>
+      <display value="FIGO IIIC2"/>
+      <definition value="Stage III with para-aortic lymph node metastasis"/>
+    </concept>
+    <concept>
+      <code value="figo-iiic2r"/>
+      <display value="FIGO IIIC2r"/>
+      <definition value="Stage IIIC2 established by imaging"/>
+    </concept>
+    <concept>
+      <code value="figo-iiic2p"/>
+      <display value="FIGO IIIC2p"/>
+      <definition value="Stage IIIC2 established by pathology"/>
+    </concept>
+    <concept>
+      <code value="figo-iv"/>
+      <display value="FIGO IV"/>
+      <definition value="Distant metastasis beyond the peritoneal cavity"/>
+    </concept>
+    <concept>
+      <code value="figo-iva"/>
+      <display value="FIGO IVA"/>
+      <definition value="Stage IV with spread to adjacent pelvic organs or pleural effusion with positive cytology (entity-specific definition)"/>
+    </concept>
+    <concept>
+      <code value="figo-ivb"/>
+      <display value="FIGO IVB"/>
+      <definition value="Stage IV with distant metastasis including extra-abdominal organs and lymph nodes"/>
+    </concept>
+    <concept>
+      <code value="figo-ivc"/>
+      <display value="FIGO IVC"/>
+      <definition value="Stage IV with distant metastasis (entity-specific definition)"/>
+    </concept>
+  </concept>
+  <concept>
+    <code value="bismuth"/>
+    <display value="Bismuth"/>
+    <definition value="Classification system for hilar cholangiocarcinoma based on the extent of biliary involvement and resectability."/>
+    <concept>
+      <code value="bismuth-i"/>
+      <display value="Bismuth I"/>
+      <definition value="Tumor below confluence of left and right hepatic ducts"/>
+    </concept>
+    <concept>
+      <code value="bismuth-ii"/>
+      <display value="Bismuth II"/>
+      <definition value="Tumor reaching confluence but not involving secondary ducts"/>
+    </concept>
+    <concept>
+      <code value="bismuth-iii"/>
+      <display value="Bismuth III"/>
+      <definition value="Tumor involving confluence and either right or left secondary ducts"/>
+    </concept>
+    <concept>
+      <code value="bismuth-iiia"/>
+      <display value="Bismuth IIIA"/>
+      <definition value="Tumor involving confluence and right secondary ducts"/>
+    </concept>
+    <concept>
+      <code value="bismuth-iiib"/>
+      <display value="Bismuth IIIB"/>
+      <definition value="Tumor involving confluence and left secondary ducts"/>
+    </concept>
+    <concept>
+      <code value="bismuth-iv"/>
+      <display value="Bismuth IV"/>
+      <definition value="Tumor involving confluence and both right and left secondary ducts"/>
+    </concept>
+  </concept>
+  <concept>
+    <code value="masaoka"/>
+    <display value="Masaoka"/>
+    <definition value="Staging system for thymomas based on invasiveness and extent of disease."/>
+    <concept>
+      <code value="masaoka-i"/>
+      <display value="Masaoka I"/>
+      <definition value="Encapsulated tumor without invasion"/>
+    </concept>
+    <concept>
+      <code value="masaoka-ii"/>
+      <display value="Masaoka II"/>
+      <definition value="Invasion into surrounding fatty tissue or mediastinal pleura"/>
+    </concept>
+    <concept>
+      <code value="masaoka-iii"/>
+      <display value="Masaoka III"/>
+      <definition value="Invasion into neighboring organs"/>
+    </concept>
+    <concept>
+      <code value="masaoka-iv"/>
+      <display value="Masaoka IV"/>
+      <definition value="Pleural or pericardial dissemination"/>
+    </concept>
+    <concept>
+      <code value="masaoka-iva"/>
+      <display value="Masaoka IVA"/>
+      <definition value="Pleural or pericardial implants"/>
+    </concept>
+    <concept>
+      <code value="masaoka-ivb"/>
+      <display value="Masaoka IVB"/>
+      <definition value="Lymphogenous or hematogenous metastasis"/>
+    </concept>
+  </concept>
+  <concept>
+    <code value="mitoserate-gist"/>
+    <display value="Mitoserate-GIST"/>
+    <definition value="Mitotic rate assessment for gastrointestinal stromal tumors."/>
+    <concept>
+      <code value="mitoserate-gist-n"/>
+      <display value="Mitoserate-GIST Niedrig"/>
+      <definition value="Low mitotic rate: ≤5 mitoses per 50 HPF"/>
+    </concept>
+    <concept>
+      <code value="mitoserate-gist-h"/>
+      <display value="Mitoserate-GIST Hoch"/>
+      <definition value="High mitotic rate: &gt;5 mitoses per 50 HPF"/>
+    </concept>
+  </concept>
+  <concept>
+    <code value="p16"/>
+    <display value="p16"/>
+    <definition value="p16 protein expression status assessment."/>
+    <concept>
+      <code value="p16-p"/>
+      <display value="p16 Positiv"/>
+      <definition value="Positive p16 protein expression"/>
+    </concept>
+    <concept>
+      <code value="p16-n"/>
+      <display value="p16 Negativ"/>
+      <definition value="Negative p16 protein expression"/>
+    </concept>
+  </concept>
+  <concept>
+    <code value="eutos-score"/>
+    <display value="EUTOS-Score"/>
+    <definition value="European Treatment and Outcome Study prognostic score for chronic myeloid leukemia."/>
+    <concept>
+      <code value="eutos-score-n"/>
+      <display value="EUTOS-Score Niedrigrisiko"/>
+      <definition value="Low risk EUTOS score: ≤87"/>
+    </concept>
+    <concept>
+      <code value="eutos-score-h"/>
+      <display value="EUTOS-Score Hochrisiko"/>
+      <definition value="High risk EUTOS score: &gt;87"/>
+    </concept>
+  </concept>
+  <concept>
+    <code value="sanz-score"/>
+    <display value="Sanz-Score"/>
+    <definition value="Risk assessment score for acute promyelocytic leukemia."/>
+    <concept>
+      <code value="sanz-score-n"/>
+      <display value="Sanz-Score Niedrig"/>
+      <definition value="Low risk: WBC &lt;10x10⁹/L and platelets &gt;40x10⁹/L"/>
+    </concept>
+    <concept>
+      <code value="sanz-score-i"/>
+      <display value="Sanz-Score Intermediär"/>
+      <definition value="Intermediate risk: WBC &lt;10x10⁹/L and platelets ≤40x10⁹/L"/>
+    </concept>
+    <concept>
+      <code value="sanz-score-h"/>
+      <display value="Sanz-Score Hoch"/>
+      <definition value="High risk: WBC ≥10x10⁹/L"/>
+    </concept>
+  </concept>
+  <concept>
+    <code value="ipi"/>
+    <display value="IPI"/>
+    <definition value="International Prognostic Index for aggressive non-Hodgkin lymphoma."/>
+    <concept>
+      <code value="ipi-n"/>
+      <display value="IPI Niedrig"/>
+      <definition value="Low risk: 0-1 risk factors"/>
+    </concept>
+    <concept>
+      <code value="ipi-ni"/>
+      <display value="IPI Niedrig-Intermediär"/>
+      <definition value="Low-intermediate risk: 2 risk factors"/>
+    </concept>
+    <concept>
+      <code value="ipi-hi"/>
+      <display value="IPI Hoch-Intermediär"/>
+      <definition value="High-intermediate risk: 3 risk factors"/>
+    </concept>
+    <concept>
+      <code value="ipi-h"/>
+      <display value="IPI Hoch"/>
+      <definition value="High risk: 4-5 risk factors"/>
+    </concept>
+  </concept>
+  <concept>
+    <code value="flipi"/>
+    <display value="FLIPI"/>
+    <definition value="Follicular Lymphoma International Prognostic Index."/>
+    <concept>
+      <code value="flipi-l"/>
+      <display value="FLIPI Low risk"/>
+      <definition value="Low risk: 0-1 risk factors"/>
+    </concept>
+    <concept>
+      <code value="flipi-i"/>
+      <display value="FLIPI Intermediate risk"/>
+      <definition value="Intermediate risk: 2 risk factors"/>
+    </concept>
+    <concept>
+      <code value="flipi-h"/>
+      <display value="FLIPI High risk"/>
+      <definition value="High risk: ≥3 risk factors"/>
+    </concept>
+  </concept>
+  <concept>
+    <code value="mipi"/>
+    <display value="MIPI"/>
+    <definition value="Mantle Cell Lymphoma International Prognostic Index."/>
+    <concept>
+      <code value="mipi-n"/>
+      <display value="MIPI Niedrig"/>
+      <definition value="Low risk MIPI score"/>
+    </concept>
+    <concept>
+      <code value="mipi-i"/>
+      <display value="MIPI Intermediär"/>
+      <definition value="Intermediate risk MIPI score"/>
+    </concept>
+    <concept>
+      <code value="mipi-h"/>
+      <display value="MIPI Hoch"/>
+      <definition value="High risk MIPI score"/>
+    </concept>
+  </concept>
+  <concept>
+    <code value="risikogruppen-ghsg"/>
+    <display value="Risikogruppen GHSG"/>
+    <definition value="German Hodgkin Study Group risk stratification."/>
+    <concept>
+      <code value="risikogruppen-ghsg-fr"/>
+      <display value="GHSG Frühe"/>
+      <definition value="Early favorable risk group"/>
+    </concept>
+    <concept>
+      <code value="risikogruppen-ghsg-i"/>
+      <display value="GHSG Intermediär"/>
+      <definition value="Intermediate risk group"/>
+    </concept>
+    <concept>
+      <code value="risikogruppen-ghsg-fo"/>
+      <display value="GHSG Fortgeschritten"/>
+      <definition value="Advanced risk group"/>
+    </concept>
+  </concept>
+  <concept>
+    <code value="ipss"/>
+    <display value="IPSS"/>
+    <definition value="International Prognostic Scoring System for myelodysplastic syndromes."/>
+    <concept>
+      <code value="ipss-l"/>
+      <display value="IPSS Low"/>
+      <definition value="Low risk: score 0"/>
+    </concept>
+    <concept>
+      <code value="ipss-i1"/>
+      <display value="IPSS Intermediate-I"/>
+      <definition value="Intermediate-1 risk: score 0.5-1.0"/>
+    </concept>
+    <concept>
+      <code value="ipss-i2"/>
+      <display value="IPSS Intermediate-II"/>
+      <definition value="Intermediate-2 risk: score 1.5-2.0"/>
+    </concept>
+    <concept>
+      <code value="ipss-h"/>
+      <display value="IPSS High risk"/>
+      <definition value="High risk: score ≥2.5"/>
+    </concept>
+  </concept>
+  <concept>
+    <code value="her2-neu"/>
+    <display value="HER2-neu"/>
+    <definition value="HER2-neu protein expression and gene amplification status."/>
+    <concept>
+      <code value="her2-neu-p"/>
+      <display value="HER2-neu Positiv"/>
+      <definition value="Positive HER2-neu status (IHC 3+ or FISH amplified)"/>
+    </concept>
+    <concept>
+      <code value="her2-neu-n"/>
+      <display value="HER2-neu Negativ"/>
+      <definition value="Negative HER2-neu status (IHC 0-1+ or FISH not amplified)"/>
+    </concept>
+  </concept>
+</CodeSystem>

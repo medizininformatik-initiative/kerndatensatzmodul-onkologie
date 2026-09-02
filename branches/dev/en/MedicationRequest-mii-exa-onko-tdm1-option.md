@@ -1,0 +1,69 @@
+# mii-exa-onko-tdm1-option - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **mii-exa-onko-tdm1-option**
+
+## Example MedicationRequest: mii-exa-onko-tdm1-option
+
+-------
+
+**English**
+
+-------
+
+Profile: [MII PR Onkologie Therapieempfehlung Medikation](StructureDefinition-mii-pr-onko-therapieempfehlung-medikation.md) version: 2026.0.3
+
+**status**: Active
+
+**intent**: Option
+
+**medication**: Trastuzumab Emtansine (T-DM1)
+
+**subject**: [Maria Müller Female, DoB: 1968-07-22 ( https://www.medizininformatik-initiative.de/fhir/sid/patienten#MTB-2024-001)](Patient-mii-exa-onko-molecular-board-patient.md)
+
+**authoredOn**: 2024-01-16
+
+**reasonReference**: [Condition Bösartige Neubildung: Brustdrüse, nicht näher bezeichnet](Condition-primaertumor-example.md)
+
+**note**: 
+
+> 
+
+Zweitlinien-Option, empfohlen bei Progression unter Trastuzumab-basierter Therapie
+
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "MedicationRequest",
+  "id" : "mii-exa-onko-tdm1-option",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation|2026.0.3"]
+  },
+  "status" : "active",
+  "intent" : "option",
+  "medicationCodeableConcept" : {
+    "coding" : [{
+      "system" : "http://fhir.de/CodeSystem/bfarm/atc",
+      "code" : "L01FD03",
+      "display" : "Trastuzumab emtansin"
+    }],
+    "text" : "Trastuzumab Emtansine (T-DM1)"
+  },
+  "subject" : {
+    "reference" : "Patient/mii-exa-onko-molecular-board-patient"
+  },
+  "authoredOn" : "2024-01-16",
+  "reasonReference" : [{
+    "reference" : "Condition/primaertumor-example"
+  }],
+  "note" : [{
+    "text" : "Zweitlinien-Option, empfohlen bei Progression unter Trastuzumab-basierter Therapie"
+  }]
+}
+
+```

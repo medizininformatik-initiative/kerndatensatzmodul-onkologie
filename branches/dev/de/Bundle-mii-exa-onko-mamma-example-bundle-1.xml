@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-onko-mamma-example-bundle-1"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/Bundle"/>
+  </meta>
+  <language value="de"/>
+  <identifier>
+    <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko"/>
+    <value value="mamma-example-bundle-2024-001"/>
+  </identifier>
+  <type value="transaction"/>
+  <timestamp value="2024-03-25T10:00:00+01:00"/>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-mamma-bundle-patient"/>
+    <resource>
+      <Patient>
+        <id value="mii-exa-onko-mamma-bundle-patient"/>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <name>
+          <family value="MammaCa"/>
+          <given value="Martha"/>
+        </name>
+      </Patient>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Patient"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-mamma-diagnose"/>
+    <resource>
+      <Condition>
+        <id value="mii-exa-onko-mamma-diagnose"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="extensions"/>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/condition-assertedDate">
+          <valueDateTime value="2020-03-07"/>
+        </extension>
+        <clinicalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+            <code value="active"/>
+          </coding>
+        </clinicalStatus>
+        <verificationStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+            <code value="confirmed"/>
+          </coding>
+        </verificationStatus>
+        <category>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="55342001"/>
+            <display value="Neoplastic disease"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://fhir.de/CodeSystem/bfarm/icd-10-gm"/>
+            <version value="2024"/>
+            <code value="C50.3"/>
+            <display value="Bösartige Neubildung: Unterer innerer Quadrant der Brustdrüse"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-mamma-bundle-patient"/>
+        </subject>
+        <recordedDate value="2024-01-02"/>
+      </Condition>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Condition"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Encounter/mii-exa-onko-mamma-bundle-encounter"/>
+    <resource>
+      <Encounter>
+        <id value="mii-exa-onko-mamma-bundle-encounter"/>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="finished"/>
+        <class>
+          <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+          <code value="IMP"/>
+          <display value="inpatient encounter"/>
+        </class>
+        <subject>
+          <reference value="Patient/mii-exa-onko-mamma-bundle-patient"/>
+        </subject>
+      </Encounter>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Encounter"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-mamma-menopause-status-1"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-onko-mamma-menopause-status-1"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-menopause-status|2026.0.3"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="161712005"/>
+            <display value="Menopause, function (observable entity)"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-mamma-bundle-patient"/>
+        </subject>
+        <focus>
+          <reference value="Condition/mii-exa-onko-mamma-diagnose"/>
+        </focus>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="22636003"/>
+            <display value="Premenopausal state (finding)"/>
+          </coding>
+        </valueCodeableConcept>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-mamma-rezeptorstatus-estrogen-1"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-onko-mamma-rezeptorstatus-estrogen-1"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-rezeptorstatus-estrogen|2026.0.3"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="40556-3"/>
+            <display value="Estrogen receptor Ag [Presence] in Tissue by Immune stain"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-mamma-bundle-patient"/>
+        </subject>
+        <focus>
+          <reference value="Condition/mii-exa-onko-mamma-diagnose"/>
+        </focus>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="LA6576-8"/>
+            <display value="Positive"/>
+          </coding>
+        </valueCodeableConcept>
+        <component>
+          <code>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="1234804006"/>
+              <display value="Percent of cells with estrogen receptor in primary malignant neoplasm of breast by immunohistochemistry (observable entity)"/>
+            </coding>
+          </code>
+          <valueQuantity>
+            <value value="5"/>
+            <unit value="%"/>
+            <system value="http://unitsofmeasure.org"/>
+          </valueQuantity>
+        </component>
+        <component>
+          <code>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="1236874005"/>
+              <display value="Intensity of stain of estrogen receptor in primary malignant neoplasm of breast by immunohistochemistry (observable entity)"/>
+            </coding>
+          </code>
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="LA13034-6"/>
+              <display value="Weak"/>
+            </coding>
+          </valueCodeableConcept>
+        </component>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-mamma-rezeptorstatus-progesteron-1"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-onko-mamma-rezeptorstatus-progesteron-1"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-rezeptorstatus-progesteron|2026.0.3"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="85339-0"/>
+            <display value="Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-mamma-bundle-patient"/>
+        </subject>
+        <focus>
+          <reference value="Condition/mii-exa-onko-mamma-diagnose"/>
+        </focus>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="LA6576-8"/>
+            <display value="Positive"/>
+          </coding>
+        </valueCodeableConcept>
+        <component>
+          <code>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="1234803000"/>
+              <display value="Percent of cells with progesterone receptor in primary malignant neoplasm of breast by immunohistochemistry"/>
+            </coding>
+          </code>
+          <valueQuantity>
+            <value value="25"/>
+            <unit value="%"/>
+            <system value="http://unitsofmeasure.org"/>
+          </valueQuantity>
+        </component>
+        <component>
+          <code>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="1237278006"/>
+              <display value="Intensity of stain of progesterone receptor in primary malignant neoplasm of breast by immunohistochemistry (observable entity)"/>
+            </coding>
+          </code>
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="LA13034-6"/>
+              <display value="Weak"/>
+            </coding>
+          </valueCodeableConcept>
+        </component>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-mamma-tumorgroesse-1"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-onko-mamma-tumorgroesse-1"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorgroesse|2026.0.3"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="21889-1"/>
+            <display value="Size Tumor"/>
+          </coding>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="371479009"/>
+            <display value="Tumor size, largest dimension (observable entity)"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-mamma-bundle-patient"/>
+        </subject>
+        <focus>
+          <reference value="Condition/mii-exa-onko-mamma-diagnose"/>
+        </focus>
+        <effectiveDateTime value="2024-01-02T10:00:00Z"/>
+        <valueQuantity>
+          <value value="25"/>
+          <unit value="mm"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="mm"/>
+        </valueQuantity>
+        <bodySite>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="110494001"/>
+            <display value="Structure of upper inner quadrant of right breast (body structure)"/>
+          </coding>
+        </bodySite>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-mamma-praeoperative-markierung-1"/>
+    <resource>
+      <Procedure>
+        <id value="mii-exa-onko-mamma-praeoperative-markierung-1"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-praeoperative-markierung|2026.0.3"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="completed"/>
+        <category>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="103693007"/>
+            <display value="Diagnostic procedure (procedure)"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="433222002"/>
+            <display value="Insertion of guide wire into breast using ultrasound guidance (procedure)"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-mamma-bundle-patient"/>
+        </subject>
+        <performedDateTime value="2024-01-15T09:00:00+01:00"/>
+        <reasonReference>
+          <reference value="Condition/mii-exa-onko-mamma-diagnose"/>
+        </reasonReference>
+      </Procedure>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Procedure"/>
+    </request>
+  </entry>
+</Bundle>

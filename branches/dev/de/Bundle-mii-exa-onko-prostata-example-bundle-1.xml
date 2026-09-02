@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-onko-prostata-example-bundle-1"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/Bundle"/>
+  </meta>
+  <language value="de"/>
+  <identifier>
+    <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko"/>
+    <value value="prostata-example-bundle-2024-001"/>
+  </identifier>
+  <type value="transaction"/>
+  <timestamp value="2024-03-25T10:00:00+01:00"/>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-prostata-bundle-patient"/>
+    <resource>
+      <Patient>
+        <id value="mii-exa-onko-prostata-bundle-patient"/>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <name>
+          <family value="ProstataCa"/>
+          <given value="Peter"/>
+        </name>
+      </Patient>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Patient"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-prostata-diagnose"/>
+    <resource>
+      <Condition>
+        <id value="mii-exa-onko-prostata-diagnose"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor|2026.0.3"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="extensions"/>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/condition-assertedDate">
+          <valueDateTime value="2020-03-07"/>
+        </extension>
+        <clinicalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+            <code value="active"/>
+          </coding>
+        </clinicalStatus>
+        <verificationStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+            <code value="confirmed"/>
+          </coding>
+        </verificationStatus>
+        <category>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="55342001"/>
+            <display value="Neoplastic disease"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://fhir.de/CodeSystem/bfarm/icd-10-gm"/>
+            <version value="2024"/>
+            <code value="C61"/>
+            <display value="Bösartige Neubildung der Prostata"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-prostata-bundle-patient"/>
+        </subject>
+        <recordedDate value="2024-01-02"/>
+      </Condition>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Condition"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Encounter/mii-exa-onko-prostata-bundle-encounter"/>
+    <resource>
+      <Encounter>
+        <id value="mii-exa-onko-prostata-bundle-encounter"/>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="finished"/>
+        <class>
+          <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+          <code value="IMP"/>
+          <display value="inpatient encounter"/>
+        </class>
+        <subject>
+          <reference value="Patient/mii-exa-onko-prostata-bundle-patient"/>
+        </subject>
+      </Encounter>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Encounter"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-psa-diagnose-1"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-onko-prostata-psa-diagnose-1"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-psa|2026.0.3"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="2857-1"/>
+            <display value="Prostate specific Ag [Mass/volume] in Serum or Plasma"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-prostata-bundle-patient"/>
+        </subject>
+        <focus>
+          <reference value="Condition/mii-exa-onko-prostata-diagnose"/>
+        </focus>
+        <effectiveDateTime value="2024-01-02"/>
+        <valueQuantity>
+          <value value="12"/>
+          <unit value="ng/ml"/>
+        </valueQuantity>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-anzahl-stanzen-1"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-onko-prostata-anzahl-stanzen-1"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-anzahl-stanzen|2026.0.3"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="44652-6"/>
+            <display value="Total number of cores in Tissue core"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-prostata-bundle-patient"/>
+        </subject>
+        <focus>
+          <reference value="Condition/mii-exa-onko-prostata-diagnose"/>
+        </focus>
+        <effectiveDateTime value="2024-01-02"/>
+        <valueInteger value="12"/>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-anzahl-positiver-stanzen-1"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-onko-prostata-anzahl-positiver-stanzen-1"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-anzahl-positive-stanzen|2026.0.3"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="44651-8"/>
+            <display value="Tissue cores.positive.carcinoma in Tissue core"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-prostata-bundle-patient"/>
+        </subject>
+        <focus>
+          <reference value="Condition/mii-exa-onko-prostata-diagnose"/>
+        </focus>
+        <effectiveDateTime value="2024-01-02"/>
+        <valueInteger value="8"/>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-ca-befall-stanze-1"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-onko-prostata-ca-befall-stanze-1"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-ca-befall-stanze|2026.0.3"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="44654-2"/>
+            <display value="Tissue involved by tumor in Prostate tumor"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-prostata-bundle-patient"/>
+        </subject>
+        <focus>
+          <reference value="Condition/mii-exa-onko-prostata-diagnose"/>
+        </focus>
+        <effectiveDateTime value="2024-01-02"/>
+        <valueQuantity>
+          <value value="80"/>
+          <unit value="%"/>
+        </valueQuantity>
+        <specimen>
+          <reference value="Specimen/mii-exa-onko-prostata-specimen-stanze"/>
+        </specimen>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-gleason-pattern-grade-group-1"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-onko-prostata-gleason-pattern-grade-group-1"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-grade-group|2026.0.3"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="1812491000004107"/>
+            <display value="Histologic grade of primary malignant neoplasm of prostate by International Society of Urological Pathology technique (observable entity)"/>
+          </coding>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="94734-1"/>
+            <display value="Prostate cancer grade group [Score] in Prostate tumor Qualitative"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-prostata-bundle-patient"/>
+        </subject>
+        <focus>
+          <reference value="Condition/mii-exa-onko-prostata-diagnose"/>
+        </focus>
+        <effectiveDateTime value="2024-01-02"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="1279714001"/>
+            <display value="International Society of Urological Pathology grade group 2 (Gleason score 3 + 4 = 7) (qualifier value)"/>
+          </coding>
+        </valueCodeableConcept>
+        <derivedFrom>
+          <reference value="Observation/mii-exa-onko-prostata-gleason-pattern-primary-1"/>
+        </derivedFrom>
+        <derivedFrom>
+          <reference value="Observation/mii-exa-onko-prostata-gleason-pattern-secondary-1"/>
+        </derivedFrom>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-gleason-pattern-primary-1"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-onko-prostata-gleason-pattern-primary-1"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-patterns|2026.0.3"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="384994009"/>
+            <display value="Primary Gleason pattern (observable entity)"/>
+          </coding>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="44641-9"/>
+            <display value="Gleason pattern.primary in Prostate tumor"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-prostata-bundle-patient"/>
+        </subject>
+        <focus>
+          <reference value="Condition/mii-exa-onko-prostata-diagnose"/>
+        </focus>
+        <effectiveDateTime value="2024-01-02"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="369772003"/>
+            <display value="Gleason Pattern 3"/>
+          </coding>
+        </valueCodeableConcept>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-gleason-pattern-secondary-1"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-onko-prostata-gleason-pattern-secondary-1"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-patterns|2026.0.3"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="384995005"/>
+            <display value="Secondary Gleason pattern (observable entity)"/>
+          </coding>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="44642-7"/>
+            <display value="Gleason pattern.secondary in Prostate tumor"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-prostata-bundle-patient"/>
+        </subject>
+        <focus>
+          <reference value="Condition/mii-exa-onko-prostata-diagnose"/>
+        </focus>
+        <effectiveDateTime value="2024-01-02"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="369773008"/>
+            <display value="Gleason Pattern 4"/>
+          </coding>
+        </valueCodeableConcept>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-prostata-surgical-complication-1"/>
+    <resource>
+      <Observation>
+        <id value="mii-exa-onko-prostata-surgical-complication-1"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-clavien-dindo|2026.0.3"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="final"/>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="789279006"/>
+            <display value="Clavien-Dindo classification grade (observable entity)"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-prostata-bundle-patient"/>
+        </subject>
+        <focus>
+          <reference value="Condition/mii-exa-onko-prostata-diagnose"/>
+        </focus>
+        <focus>
+          <reference value="Procedure/mii-exa-onko-prostata-surgery-1"/>
+        </focus>
+        <effectiveDateTime value="2024-06-24"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="1367522003"/>
+            <display value="Clavien-Dindo classification grade IIIa (finding)"/>
+          </coding>
+          <coding>
+            <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-prostata-postsurgical-complications"/>
+            <code value="J"/>
+            <display value="Ja"/>
+          </coding>
+        </valueCodeableConcept>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-prostata-surgery-1"/>
+    <resource>
+      <Procedure>
+        <id value="mii-exa-onko-prostata-surgery-1"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation|2026.0.3"/>
+        </meta>
+        <language value="de"/>
+        <text>
+          <status value="extensions"/>
+        </text>
+        <extension url="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention">
+          <valueCodeableConcept>
+            <coding>
+              <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention"/>
+              <code value="K"/>
+              <display value="Kurativ"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <status value="completed"/>
+        <category>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="387713003"/>
+            <display value="Surgical procedure"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://fhir.de/CodeSystem/bfarm/ops"/>
+            <version value="2024"/>
+            <code value="5-604"/>
+            <display value="Radikale Prostatovesikulektomie"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/mii-exa-onko-prostata-bundle-patient"/>
+        </subject>
+        <performedDateTime value="2024-06-24"/>
+        <reasonReference>
+          <reference value="Condition/mii-exa-onko-prostata-diagnose"/>
+        </reasonReference>
+      </Procedure>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Procedure"/>
+    </request>
+  </entry>
+</Bundle>

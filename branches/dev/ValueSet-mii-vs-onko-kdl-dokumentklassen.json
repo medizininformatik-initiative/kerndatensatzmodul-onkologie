@@ -1,0 +1,345 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "mii-vs-onko-kdl-dokumentklassen",
+  "meta" : {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-license",
+      "valueCode" : "CC-BY-4.0"
+    },
+    {
+      "extension" : [{
+        "url" : "packageId",
+        "valueId" : "de.medizininformatikinitiative.kerndatensatz.onkologie"
+      },
+      {
+        "url" : "version",
+        "valueString" : "2026.0.3"
+      },
+      {
+        "url" : "uri",
+        "valueUri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/package-source"
+    }],
+    "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablevalueset",
+    "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset",
+    "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset",
+    "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-computablevalueset"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-onko-kdl-dokumentklassen</b></p><a name=\"mii-vs-onko-kdl-dokumentklassen\"> </a><a name=\"hcmii-vs-onko-kdl-dokumentklassen\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-shareablevalueset.html\">Shareable ValueSet</a>, <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-shareablevalueset.html\">CRMI Shareable ValueSet</a>, <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-publishablevalueset.html\">CRMI Publishable ValueSet</a>, <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-computablevalueset.html\">CRMI Computable ValueSet</a></p></div><ul><li>Include these codes as defined in <code>http://dvmd.de/fhir/CodeSystem/kdl</code><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>PT080102</td><td>Histologiebefund</td></tr><tr><td>PT260102</td><td>Zytologiebefund</td></tr><tr><td>PT130102</td><td>Molekularpathologiebefund</td></tr><tr><td>SD150102</td><td>Meldebogen Krebsregister</td></tr><tr><td>SD150104</td><td>Tumorlokalisationsbogen</td></tr><tr><td>DG020103</td><td>CT-Befund</td></tr><tr><td>DG020105</td><td>Endoskopiebefund</td></tr><tr><td>DG020107</td><td>MRT-Befund</td></tr><tr><td>DG020109</td><td>PET-Befund</td></tr><tr><td>DG020110</td><td>Röntgenbefund</td></tr><tr><td>DG020111</td><td>Sonographiebefund</td></tr><tr><td>DG020112</td><td>SPECT-Befund</td></tr><tr><td>DG020113</td><td>Szintigraphiebefund</td></tr><tr><td>DG020114</td><td>Mammographiebefund</td></tr><tr><td>DG020199</td><td>Sonstige Dokumentation bildgebende Diagnostik</td></tr><tr><td>SD150103</td><td>Tumorkonferenzprotokoll</td></tr><tr><td>AD060103</td><td>Konsilbericht intern</td></tr><tr><td>AD060104</td><td>Konsilbericht extern</td></tr><tr><td>AD060110</td><td>Konsilbericht</td></tr><tr><td>OP150103</td><td>OP-Bericht</td></tr><tr><td>OP150104</td><td>OP-Bilddokumentation</td></tr><tr><td>OP150106</td><td>OP-Protokoll</td></tr><tr><td>AM010303</td><td>Operationsaufklärungsbogen</td></tr><tr><td>TH020101</td><td>Bestrahlungsplan</td></tr><tr><td>TH020102</td><td>Bestrahlungsprotokoll</td></tr><tr><td>TH020103</td><td>Bestrahlungsverordnung</td></tr><tr><td>TH020104</td><td>Radiojodtherapieprotokoll</td></tr><tr><td>TH020105</td><td>Therapieprotokoll mit Radionukliden</td></tr><tr><td>TH130102</td><td>Arzneiadministration</td></tr><tr><td>TH130103</td><td>Chemotherapieprotokoll</td></tr><tr><td>TH130104</td><td>Hormontherapieprotokoll</td></tr><tr><td>TH130107</td><td>Medikationsplan</td></tr><tr><td>AM010304</td><td>Aufklärungsbogen Therapie</td></tr><tr><td>SD150101</td><td>Follow up-Bogen</td></tr><tr><td>LB120102</td><td>Laborbefund extern</td></tr><tr><td>LB120103</td><td>Laborbefund intern</td></tr><tr><td>LB120106</td><td>Hämatologisches Speziallabor</td></tr><tr><td>LB120107</td><td>Laborbefund</td></tr><tr><td>AD020103</td><td>Todesbescheinigung</td></tr><tr><td>SF190101</td><td>CRF-Bogen</td></tr><tr><td>SF190102</td><td>Einwilligung Studie</td></tr><tr><td>SF190106</td><td>Studienbericht</td></tr><tr><td>AD010103</td><td>Entlassungsbericht intern</td></tr><tr><td>AD010104</td><td>Entlassungsbericht extern</td></tr><tr><td>SD150199</td><td>Sonstiger onkologischer Dokumentationsbogen</td></tr></table></li></ul></div><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-onko-kdl-dokumentklassen</b></p><a name=\"de-mii-vs-onko-kdl-dokumentklassen\"> </a><a name=\"de-hcmii-vs-onko-kdl-dokumentklassen\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-shareablevalueset.html\">Shareable ValueSet</a>, <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-shareablevalueset.html\">CRMI Shareable ValueSet</a>, <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-publishablevalueset.html\">CRMI Publishable ValueSet</a>, <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-computablevalueset.html\">CRMI Computable ValueSet</a></p></div><ul><li>Include these codes as defined in <code>http://dvmd.de/fhir/CodeSystem/kdl</code><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>PT080102</td><td>Histologiebefund</td></tr><tr><td>PT260102</td><td>Zytologiebefund</td></tr><tr><td>PT130102</td><td>Molekularpathologiebefund</td></tr><tr><td>SD150102</td><td>Meldebogen Krebsregister</td></tr><tr><td>SD150104</td><td>Tumorlokalisationsbogen</td></tr><tr><td>DG020103</td><td>CT-Befund</td></tr><tr><td>DG020105</td><td>Endoskopiebefund</td></tr><tr><td>DG020107</td><td>MRT-Befund</td></tr><tr><td>DG020109</td><td>PET-Befund</td></tr><tr><td>DG020110</td><td>Röntgenbefund</td></tr><tr><td>DG020111</td><td>Sonographiebefund</td></tr><tr><td>DG020112</td><td>SPECT-Befund</td></tr><tr><td>DG020113</td><td>Szintigraphiebefund</td></tr><tr><td>DG020114</td><td>Mammographiebefund</td></tr><tr><td>DG020199</td><td>Sonstige Dokumentation bildgebende Diagnostik</td></tr><tr><td>SD150103</td><td>Tumorkonferenzprotokoll</td></tr><tr><td>AD060103</td><td>Konsilbericht intern</td></tr><tr><td>AD060104</td><td>Konsilbericht extern</td></tr><tr><td>AD060110</td><td>Konsilbericht</td></tr><tr><td>OP150103</td><td>OP-Bericht</td></tr><tr><td>OP150104</td><td>OP-Bilddokumentation</td></tr><tr><td>OP150106</td><td>OP-Protokoll</td></tr><tr><td>AM010303</td><td>Operationsaufklärungsbogen</td></tr><tr><td>TH020101</td><td>Bestrahlungsplan</td></tr><tr><td>TH020102</td><td>Bestrahlungsprotokoll</td></tr><tr><td>TH020103</td><td>Bestrahlungsverordnung</td></tr><tr><td>TH020104</td><td>Radiojodtherapieprotokoll</td></tr><tr><td>TH020105</td><td>Therapieprotokoll mit Radionukliden</td></tr><tr><td>TH130102</td><td>Arzneiadministration</td></tr><tr><td>TH130103</td><td>Chemotherapieprotokoll</td></tr><tr><td>TH130104</td><td>Hormontherapieprotokoll</td></tr><tr><td>TH130107</td><td>Medikationsplan</td></tr><tr><td>AM010304</td><td>Aufklärungsbogen Therapie</td></tr><tr><td>SD150101</td><td>Follow up-Bogen</td></tr><tr><td>LB120102</td><td>Laborbefund extern</td></tr><tr><td>LB120103</td><td>Laborbefund intern</td></tr><tr><td>LB120106</td><td>Hämatologisches Speziallabor</td></tr><tr><td>LB120107</td><td>Laborbefund</td></tr><tr><td>AD020103</td><td>Todesbescheinigung</td></tr><tr><td>SF190101</td><td>CRF-Bogen</td></tr><tr><td>SF190102</td><td>Einwilligung Studie</td></tr><tr><td>SF190106</td><td>Studienbericht</td></tr><tr><td>AD010103</td><td>Entlassungsbericht intern</td></tr><tr><td>AD010104</td><td>Entlassungsbericht extern</td></tr><tr><td>SD150199</td><td>Sonstiger onkologischer Dokumentationsbogen</td></tr></table></li></ul></div></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+    "valueCode" : "shareable"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+    "valueCode" : "publishable"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+    "valueCode" : "computable"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes",
+        "code" : "package",
+        "display" : "Package"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
+    "valueDate" : "2026-01-03"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-topic",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+        "code" : "C3262"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-author",
+    "valueContactDetail" : {
+      "telecom" : [{
+        "system" : "email",
+        "value" : "thomas.debertshaeuser@charite.de"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-editor",
+    "valueContactDetail" : {
+      "name" : "Taskforce Core Data Set"
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
+    "valueContactDetail" : {
+      "name" : "Interoperability Working Group",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
+    "valueContactDetail" : {
+      "name" : "National Steering Committee",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
+    "valueContactDetail" : {
+      "name" : "Interoperability Working Group",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
+    "valueContactDetail" : {
+      "name" : "National Steering Committee",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
+    "valueCoding" : {
+      "system" : "http://hl7.org/fhir/version-algorithm",
+      "code" : "semver",
+      "display" : "SemVer"
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+    "valuePeriod" : {
+      "start" : "2026"
+    }
+  }],
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-kdl-dokumentklassen",
+  "version" : "2026.0.3",
+  "name" : "MII_VS_Onko_KDL_Dokumentklassen",
+  "title" : "MII VS Onkologie KDL Dokumentklassen",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-09-02T02:28:56+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "Kuratierte Auswahl der KDL-Dokumentklassen (KDL 2025) entlang des onkologischen Behandlungspfads (oBDS-Kapitel: Diagnose/Pathologie, Staging-Bildgebung, Tumorkonferenz, Operation, Strahlentherapie, Systemische Therapie, Verlauf/Labor, Tod, Studien, übergreifende Dokumente) als Begleitartefakt für DocumentReference.type. Teilmenge des KDL-Bindings im MII-KDS-Modul Dokument; deprecated-Klassen sind ausgeschlossen.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://dvmd.de/fhir/CodeSystem/kdl",
+      "concept" : [{
+        "code" : "PT080102",
+        "display" : "Histologiebefund"
+      },
+      {
+        "code" : "PT260102",
+        "display" : "Zytologiebefund"
+      },
+      {
+        "code" : "PT130102",
+        "display" : "Molekularpathologiebefund"
+      },
+      {
+        "code" : "SD150102",
+        "display" : "Meldebogen Krebsregister"
+      },
+      {
+        "code" : "SD150104",
+        "display" : "Tumorlokalisationsbogen"
+      },
+      {
+        "code" : "DG020103",
+        "display" : "CT-Befund"
+      },
+      {
+        "code" : "DG020105",
+        "display" : "Endoskopiebefund"
+      },
+      {
+        "code" : "DG020107",
+        "display" : "MRT-Befund"
+      },
+      {
+        "code" : "DG020109",
+        "display" : "PET-Befund"
+      },
+      {
+        "code" : "DG020110",
+        "display" : "Röntgenbefund"
+      },
+      {
+        "code" : "DG020111",
+        "display" : "Sonographiebefund"
+      },
+      {
+        "code" : "DG020112",
+        "display" : "SPECT-Befund"
+      },
+      {
+        "code" : "DG020113",
+        "display" : "Szintigraphiebefund"
+      },
+      {
+        "code" : "DG020114",
+        "display" : "Mammographiebefund"
+      },
+      {
+        "code" : "DG020199",
+        "display" : "Sonstige Dokumentation bildgebende Diagnostik"
+      },
+      {
+        "code" : "SD150103",
+        "display" : "Tumorkonferenzprotokoll"
+      },
+      {
+        "code" : "AD060103",
+        "display" : "Konsilbericht intern"
+      },
+      {
+        "code" : "AD060104",
+        "display" : "Konsilbericht extern"
+      },
+      {
+        "code" : "AD060110",
+        "display" : "Konsilbericht"
+      },
+      {
+        "code" : "OP150103",
+        "display" : "OP-Bericht"
+      },
+      {
+        "code" : "OP150104",
+        "display" : "OP-Bilddokumentation"
+      },
+      {
+        "code" : "OP150106",
+        "display" : "OP-Protokoll"
+      },
+      {
+        "code" : "AM010303",
+        "display" : "Operationsaufklärungsbogen"
+      },
+      {
+        "code" : "TH020101",
+        "display" : "Bestrahlungsplan"
+      },
+      {
+        "code" : "TH020102",
+        "display" : "Bestrahlungsprotokoll"
+      },
+      {
+        "code" : "TH020103",
+        "display" : "Bestrahlungsverordnung"
+      },
+      {
+        "code" : "TH020104",
+        "display" : "Radiojodtherapieprotokoll"
+      },
+      {
+        "code" : "TH020105",
+        "display" : "Therapieprotokoll mit Radionukliden"
+      },
+      {
+        "code" : "TH130102",
+        "display" : "Arzneiadministration"
+      },
+      {
+        "code" : "TH130103",
+        "display" : "Chemotherapieprotokoll"
+      },
+      {
+        "code" : "TH130104",
+        "display" : "Hormontherapieprotokoll"
+      },
+      {
+        "code" : "TH130107",
+        "display" : "Medikationsplan"
+      },
+      {
+        "code" : "AM010304",
+        "display" : "Aufklärungsbogen Therapie"
+      },
+      {
+        "code" : "SD150101",
+        "display" : "Follow up-Bogen"
+      },
+      {
+        "code" : "LB120102",
+        "display" : "Laborbefund extern"
+      },
+      {
+        "code" : "LB120103",
+        "display" : "Laborbefund intern"
+      },
+      {
+        "code" : "LB120106",
+        "display" : "Hämatologisches Speziallabor"
+      },
+      {
+        "code" : "LB120107",
+        "display" : "Laborbefund"
+      },
+      {
+        "code" : "AD020103",
+        "display" : "Todesbescheinigung"
+      },
+      {
+        "code" : "SF190101",
+        "display" : "CRF-Bogen"
+      },
+      {
+        "code" : "SF190102",
+        "display" : "Einwilligung Studie"
+      },
+      {
+        "code" : "SF190106",
+        "display" : "Studienbericht"
+      },
+      {
+        "code" : "AD010103",
+        "display" : "Entlassungsbericht intern"
+      },
+      {
+        "code" : "AD010104",
+        "display" : "Entlassungsbericht extern"
+      },
+      {
+        "code" : "SD150199",
+        "display" : "Sonstiger onkologischer Dokumentationsbogen"
+      }]
+    }]
+  }
+}

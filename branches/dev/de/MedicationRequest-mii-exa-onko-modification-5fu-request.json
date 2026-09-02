@@ -1,0 +1,32 @@
+{
+  "resourceType" : "MedicationRequest",
+  "id" : "mii-exa-onko-modification-5fu-request",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation|2026.0.3"]
+  },
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: MedicationRequest mii-exa-onko-modification-5fu-request</b></p><a name=\"de-mii-exa-onko-modification-5fu-request\"> </a><a name=\"de-hcmii-exa-onko-modification-5fu-request\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-therapieempfehlung-medikation.html\">MII PR Onkologie Therapieempfehlung Medikation</a> version: 2026.0.3</p></div><p><b>status</b>: Completed</p><p><b>intent</b>: Proposal</p><p><b>medication</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/atc L01BC02}\">5-Fluorouracil (5-FU)</span></p><p><b>subject</b>: <a href=\"Patient-example-modification.html\">Martin Beispiel  Male, DoB: 1958-11-03</a></p><p><b>authoredOn</b>: 2024-03-05</p><p><b>reasonReference</b>: <a href=\"Condition-mii-exa-onko-ascending-colon-cancer-diagnosis.html\">Condition Bösartige Neubildung: Colon ascendens</a></p><p><b>note</b>: </p><blockquote><div><p>Completed as planned for all 12 cycles</p>\n</div></blockquote></div>"
+  },
+  "status" : "completed",
+  "intent" : "proposal",
+  "medicationCodeableConcept" : {
+    "coding" : [{
+      "system" : "http://fhir.de/CodeSystem/bfarm/atc",
+      "code" : "L01BC02",
+      "display" : "Fluorouracil"
+    }],
+    "text" : "5-Fluorouracil (5-FU)"
+  },
+  "subject" : {
+    "reference" : "Patient/example-modification"
+  },
+  "authoredOn" : "2024-03-05",
+  "reasonReference" : [{
+    "reference" : "Condition/mii-exa-onko-ascending-colon-cancer-diagnosis"
+  }],
+  "note" : [{
+    "text" : "Completed as planned for all 12 cycles"
+  }]
+}

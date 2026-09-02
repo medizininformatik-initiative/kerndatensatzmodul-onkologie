@@ -1,0 +1,815 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="mii-vs-onko-ighv-gensegmente-hgnc"/>
+  <meta>
+    <extension url="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-license">
+      <valueCode value="CC-BY-4.0"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/package-source">
+      <extension url="packageId">
+        <valueId value="de.medizininformatikinitiative.kerndatensatz.onkologie"/>
+      </extension>
+      <extension url="version">
+        <valueString value="2026.0.3"/>
+      </extension>
+      <extension url="uri">
+        <valueUri value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko"/>
+      </extension>
+    </extension>
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-computablevalueset"/>
+  </meta>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-onko-ighv-gensegmente-hgnc</b></p><a name="de-mii-vs-onko-ighv-gensegmente-hgnc"> </a><a name="de-hcmii-vs-onko-ighv-gensegmente-hgnc"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profiles: <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-shareablevalueset.html">Shareable ValueSet</a>, <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-shareablevalueset.html">CRMI Shareable ValueSet</a>, <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-publishablevalueset.html">CRMI Publishable ValueSet</a>, <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-computablevalueset.html">CRMI Computable ValueSet</a></p></div><ul><li>Include these codes as defined in <code>http://www.genenames.org/geneId</code><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>HGNC:5563</td><td>IGHV1OR15-1</td></tr><tr><td>HGNC:5564</td><td>IGHV1OR15-2</td></tr><tr><td>HGNC:5565</td><td>IGHV1OR15-3</td></tr><tr><td>HGNC:5566</td><td>IGHV1OR15-4</td></tr><tr><td>HGNC:5567</td><td>IGHV1OR15-5</td></tr><tr><td>HGNC:5568</td><td>IGHV1OR15-6</td></tr><tr><td>HGNC:5569</td><td>IGHV1OR15-9</td></tr><tr><td>HGNC:5570</td><td>IGHV1OR16-1</td></tr><tr><td>HGNC:5571</td><td>IGHV1OR16-2</td></tr><tr><td>HGNC:5572</td><td>IGHV1OR16-3</td></tr><tr><td>HGNC:5573</td><td>IGHV1OR16-4</td></tr><tr><td>HGNC:38040</td><td>IGHV1OR21-1</td></tr><tr><td>HGNC:5550</td><td>IGHV1-2</td></tr><tr><td>HGNC:5552</td><td>IGHV1-3</td></tr><tr><td>HGNC:5559</td><td>IGHV1-8</td></tr><tr><td>HGNC:5546</td><td>IGHV1-12</td></tr><tr><td>HGNC:5547</td><td>IGHV1-14</td></tr><tr><td>HGNC:5548</td><td>IGHV1-17</td></tr><tr><td>HGNC:5549</td><td>IGHV1-18</td></tr><tr><td>HGNC:5551</td><td>IGHV1-24</td></tr><tr><td>HGNC:5560</td><td>IGHV1-38-4</td></tr><tr><td>HGNC:5553</td><td>IGHV1-45</td></tr><tr><td>HGNC:5554</td><td>IGHV1-46</td></tr><tr><td>HGNC:5555</td><td>IGHV1-58</td></tr><tr><td>HGNC:5556</td><td>IGHV1-67</td></tr><tr><td>HGNC:5557</td><td>IGHV1-68</td></tr><tr><td>HGNC:5558</td><td>IGHV1-69</td></tr><tr><td>HGNC:5562</td><td>IGHV1-69-2</td></tr><tr><td>HGNC:49601</td><td>IGHV1-69D</td></tr><tr><td>HGNC:5579</td><td>IGHV2OR16-5</td></tr><tr><td>HGNC:5576</td><td>IGHV2-5</td></tr><tr><td>HGNC:5574</td><td>IGHV2-10</td></tr><tr><td>HGNC:5575</td><td>IGHV2-26</td></tr><tr><td>HGNC:5577</td><td>IGHV2-70</td></tr><tr><td>HGNC:49602</td><td>IGHV2-70D</td></tr><tr><td>HGNC:5633</td><td>IGHV3OR15-7</td></tr><tr><td>HGNC:5634</td><td>IGHV3OR16-10</td></tr><tr><td>HGNC:5635</td><td>IGHV3OR16-11</td></tr><tr><td>HGNC:5636</td><td>IGHV3OR16-12</td></tr><tr><td>HGNC:5637</td><td>IGHV3OR16-13</td></tr><tr><td>HGNC:5638</td><td>IGHV3OR16-14</td></tr><tr><td>HGNC:5639</td><td>IGHV3OR16-15</td></tr><tr><td>HGNC:5640</td><td>IGHV3OR16-16</td></tr><tr><td>HGNC:55105</td><td>IGHV3OR16-17</td></tr><tr><td>HGNC:5641</td><td>IGHV3OR16-6</td></tr><tr><td>HGNC:5642</td><td>IGHV3OR16-7</td></tr><tr><td>HGNC:5643</td><td>IGHV3OR16-8</td></tr><tr><td>HGNC:5644</td><td>IGHV3OR16-9</td></tr><tr><td>HGNC:5613</td><td>IGHV3-6</td></tr><tr><td>HGNC:5620</td><td>IGHV3-7</td></tr><tr><td>HGNC:5628</td><td>IGHV3-9</td></tr><tr><td>HGNC:5580</td><td>IGHV3-11</td></tr><tr><td>HGNC:5581</td><td>IGHV3-13</td></tr><tr><td>HGNC:5582</td><td>IGHV3-15</td></tr><tr><td>HGNC:5583</td><td>IGHV3-16</td></tr><tr><td>HGNC:5584</td><td>IGHV3-19</td></tr><tr><td>HGNC:5585</td><td>IGHV3-20</td></tr><tr><td>HGNC:5586</td><td>IGHV3-21</td></tr><tr><td>HGNC:5587</td><td>IGHV3-22</td></tr><tr><td>HGNC:5588</td><td>IGHV3-23</td></tr><tr><td>HGNC:5589</td><td>IGHV3-25</td></tr><tr><td>HGNC:5590</td><td>IGHV3-29</td></tr><tr><td>HGNC:5591</td><td>IGHV3-30</td></tr><tr><td>HGNC:5592</td><td>IGHV3-30-2</td></tr><tr><td>HGNC:5593</td><td>IGHV3-30-3</td></tr><tr><td>HGNC:5594</td><td>IGHV3-30-5</td></tr><tr><td>HGNC:5595</td><td>IGHV3-32</td></tr><tr><td>HGNC:5596</td><td>IGHV3-33</td></tr><tr><td>HGNC:5597</td><td>IGHV3-33-2</td></tr><tr><td>HGNC:5598</td><td>IGHV3-35</td></tr><tr><td>HGNC:5599</td><td>IGHV3-36</td></tr><tr><td>HGNC:5600</td><td>IGHV3-37</td></tr><tr><td>HGNC:5601</td><td>IGHV3-38</td></tr><tr><td>HGNC:5629</td><td>IGHV3-38-3</td></tr><tr><td>HGNC:5602</td><td>IGHV3-41</td></tr><tr><td>HGNC:5603</td><td>IGHV3-42</td></tr><tr><td>HGNC:5604</td><td>IGHV3-43</td></tr><tr><td>HGNC:50322</td><td>IGHV3-43D</td></tr><tr><td>HGNC:5605</td><td>IGHV3-47</td></tr><tr><td>HGNC:5606</td><td>IGHV3-48</td></tr><tr><td>HGNC:5607</td><td>IGHV3-49</td></tr><tr><td>HGNC:5608</td><td>IGHV3-50</td></tr><tr><td>HGNC:5609</td><td>IGHV3-52</td></tr><tr><td>HGNC:5610</td><td>IGHV3-53</td></tr><tr><td>HGNC:5611</td><td>IGHV3-54</td></tr><tr><td>HGNC:5612</td><td>IGHV3-57</td></tr><tr><td>HGNC:5614</td><td>IGHV3-60</td></tr><tr><td>HGNC:5615</td><td>IGHV3-62</td></tr><tr><td>HGNC:5616</td><td>IGHV3-63</td></tr><tr><td>HGNC:5617</td><td>IGHV3-64</td></tr><tr><td>HGNC:49603</td><td>IGHV3-64D</td></tr><tr><td>HGNC:5618</td><td>IGHV3-65</td></tr><tr><td>HGNC:5619</td><td>IGHV3-66</td></tr><tr><td>HGNC:5631</td><td>IGHV3-69-1</td></tr><tr><td>HGNC:5621</td><td>IGHV3-71</td></tr><tr><td>HGNC:5622</td><td>IGHV3-72</td></tr><tr><td>HGNC:5623</td><td>IGHV3-73</td></tr><tr><td>HGNC:5624</td><td>IGHV3-74</td></tr><tr><td>HGNC:5625</td><td>IGHV3-75</td></tr><tr><td>HGNC:5626</td><td>IGHV3-76</td></tr><tr><td>HGNC:5627</td><td>IGHV3-79</td></tr><tr><td>HGNC:5658</td><td>IGHV4OR15-8</td></tr><tr><td>HGNC:5652</td><td>IGHV4-4</td></tr><tr><td>HGNC:5645</td><td>IGHV4-28</td></tr><tr><td>HGNC:5646</td><td>IGHV4-30-1</td></tr><tr><td>HGNC:5647</td><td>IGHV4-30-2</td></tr><tr><td>HGNC:5648</td><td>IGHV4-30-4</td></tr><tr><td>HGNC:5649</td><td>IGHV4-31</td></tr><tr><td>HGNC:5650</td><td>IGHV4-34</td></tr><tr><td>HGNC:5657</td><td>IGHV4-38-2</td></tr><tr><td>HGNC:5651</td><td>IGHV4-39</td></tr><tr><td>HGNC:5653</td><td>IGHV4-55</td></tr><tr><td>HGNC:5654</td><td>IGHV4-59</td></tr><tr><td>HGNC:5655</td><td>IGHV4-61</td></tr><tr><td>HGNC:5656</td><td>IGHV4-80</td></tr><tr><td>HGNC:5661</td><td>IGHV5-10-1</td></tr><tr><td>HGNC:5659</td><td>IGHV5-51</td></tr><tr><td>HGNC:5660</td><td>IGHV5-78</td></tr><tr><td>HGNC:5662</td><td>IGHV6-1</td></tr><tr><td>HGNC:5665</td><td>IGHV7-4-1</td></tr><tr><td>HGNC:5663</td><td>IGHV7-27</td></tr><tr><td>HGNC:5664</td><td>IGHV7-34-1</td></tr><tr><td>HGNC:5666</td><td>IGHV7-40</td></tr><tr><td>HGNC:5667</td><td>IGHV7-56</td></tr><tr><td>HGNC:5669</td><td>IGHV7-81</td></tr><tr><td>HGNC:5704</td><td>IGHV8-51-1</td></tr><tr><td>HGNC:5670</td><td>IGHVII-1-1</td></tr><tr><td>HGNC:5695</td><td>IGHVIII-2-1</td></tr><tr><td>HGNC:5702</td><td>IGHVIII-5-1</td></tr><tr><td>HGNC:5703</td><td>IGHVIII-5-2</td></tr><tr><td>HGNC:5692</td><td>IGHVIII-11-1</td></tr><tr><td>HGNC:5693</td><td>IGHVIII-13-1</td></tr><tr><td>HGNC:5671</td><td>IGHVII-15-1</td></tr><tr><td>HGNC:5694</td><td>IGHVIII-16-1</td></tr><tr><td>HGNC:5672</td><td>IGHVII-20-1</td></tr><tr><td>HGNC:5673</td><td>IGHVII-22-1</td></tr><tr><td>HGNC:5696</td><td>IGHVIII-22-2</td></tr><tr><td>HGNC:5697</td><td>IGHVIII-25-1</td></tr><tr><td>HGNC:5674</td><td>IGHVII-26-2</td></tr><tr><td>HGNC:5698</td><td>IGHVIII-26-1</td></tr><tr><td>HGNC:5675</td><td>IGHVII-28-1</td></tr><tr><td>HGNC:5676</td><td>IGHVII-30-1</td></tr><tr><td>HGNC:52400</td><td>IGHVII-30-21</td></tr><tr><td>HGNC:5677</td><td>IGHVII-31-1</td></tr><tr><td>HGNC:5678</td><td>IGHVII-33-1</td></tr><tr><td>HGNC:5699</td><td>IGHVIII-38-1</td></tr><tr><td>HGNC:5679</td><td>IGHVII-40-1</td></tr><tr><td>HGNC:5680</td><td>IGHVII-43-1</td></tr><tr><td>HGNC:5681</td><td>IGHVII-44-2</td></tr><tr><td>HGNC:5700</td><td>IGHVIII-44</td></tr><tr><td>HGNC:5710</td><td>IGHVIV-44-1</td></tr><tr><td>HGNC:5682</td><td>IGHVII-46-1</td></tr><tr><td>HGNC:5701</td><td>IGHVIII-47-1</td></tr><tr><td>HGNC:5683</td><td>IGHVII-49-1</td></tr><tr><td>HGNC:5684</td><td>IGHVII-51-2</td></tr><tr><td>HGNC:5685</td><td>IGHVII-53-1</td></tr><tr><td>HGNC:5686</td><td>IGHVII-60-1</td></tr><tr><td>HGNC:5687</td><td>IGHVII-62-1</td></tr><tr><td>HGNC:5688</td><td>IGHVII-65-1</td></tr><tr><td>HGNC:5689</td><td>IGHVII-67-1</td></tr><tr><td>HGNC:5705</td><td>IGHVIII-67-2</td></tr><tr><td>HGNC:5706</td><td>IGHVIII-67-3</td></tr><tr><td>HGNC:5707</td><td>IGHVIII-67-4</td></tr><tr><td>HGNC:5690</td><td>IGHVII-74-1</td></tr><tr><td>HGNC:5708</td><td>IGHVIII-76-1</td></tr><tr><td>HGNC:5691</td><td>IGHVII-78-1</td></tr><tr><td>HGNC:5709</td><td>IGHVIII-82</td></tr></table></li></ul></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability">
+    <valueCode value="shareable"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability">
+    <valueCode value="publishable"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability">
+    <valueCode value="computable"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes"/>
+        <code value="package"/>
+        <display value="Package"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/resource-approvalDate">
+    <valueDate value="2026-01-03"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-topic">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"/>
+        <code value="C3262"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-author">
+    <valueContactDetail>
+      <telecom>
+        <system value="email"/>
+        <value value="thomas.debertshaeuser@charite.de"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-editor">
+    <valueContactDetail>
+      <name value="Taskforce Core Data Set"/>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-reviewer">
+    <valueContactDetail>
+      <name value="Interoperability Working Group"/>
+      <telecom>
+        <system value="url"/>
+        <value value="https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-reviewer">
+    <valueContactDetail>
+      <name value="National Steering Committee"/>
+      <telecom>
+        <system value="url"/>
+        <value value="https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-endorser">
+    <valueContactDetail>
+      <name value="Interoperability Working Group"/>
+      <telecom>
+        <system value="url"/>
+        <value value="https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-endorser">
+    <valueContactDetail>
+      <name value="National Steering Committee"/>
+      <telecom>
+        <system value="url"/>
+        <value value="https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm">
+    <valueCoding>
+      <system value="http://hl7.org/fhir/version-algorithm"/>
+      <code value="semver"/>
+      <display value="SemVer"/>
+    </valueCoding>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+    <valuePeriod>
+      <start value="2026"/>
+    </valuePeriod>
+  </extension>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-ighv-gensegmente-hgnc"/>
+  <version value="2026.0.3"/>
+  <name value="MII_VS_Onko_IGHV_Gensegmente_HGNC"/>
+  <title value="MII VS Onkologie IGHV-Gensegmente HGNC"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-09-02T02:28:56+00:00"/>
+  <publisher value="Medizininformatik Initiative"/>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de/"/>
+    </telecom>
+  </contact>
+  <description value="Alle IGHV-Gensegmente (Immunglobulin-Schwerketten-V-Region) als HGNC-Gen-IDs. Auswahlunterstuetzung fuer die Angabe des rearrangierten V-Segments in Observation.component:gene-studied — insbesondere bei der chronischen lymphatischen Leukaemie, wo einzelne Segmente wie IGHV3-21 eigene prognostische Bedeutung haben. Ob das Segment mutiert oder unmutiert ist, wird nicht hier, sondern ueber die Auspraegung der Varianten-Observation abgebildet (oBDS M = Mutation, W = Wildtyp)."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://www.genenames.org/geneId"/>
+      <concept>
+        <code value="HGNC:5563"/>
+        <display value="IGHV1OR15-1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5564"/>
+        <display value="IGHV1OR15-2"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5565"/>
+        <display value="IGHV1OR15-3"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5566"/>
+        <display value="IGHV1OR15-4"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5567"/>
+        <display value="IGHV1OR15-5"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5568"/>
+        <display value="IGHV1OR15-6"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5569"/>
+        <display value="IGHV1OR15-9"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5570"/>
+        <display value="IGHV1OR16-1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5571"/>
+        <display value="IGHV1OR16-2"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5572"/>
+        <display value="IGHV1OR16-3"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5573"/>
+        <display value="IGHV1OR16-4"/>
+      </concept>
+      <concept>
+        <code value="HGNC:38040"/>
+        <display value="IGHV1OR21-1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5550"/>
+        <display value="IGHV1-2"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5552"/>
+        <display value="IGHV1-3"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5559"/>
+        <display value="IGHV1-8"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5546"/>
+        <display value="IGHV1-12"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5547"/>
+        <display value="IGHV1-14"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5548"/>
+        <display value="IGHV1-17"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5549"/>
+        <display value="IGHV1-18"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5551"/>
+        <display value="IGHV1-24"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5560"/>
+        <display value="IGHV1-38-4"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5553"/>
+        <display value="IGHV1-45"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5554"/>
+        <display value="IGHV1-46"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5555"/>
+        <display value="IGHV1-58"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5556"/>
+        <display value="IGHV1-67"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5557"/>
+        <display value="IGHV1-68"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5558"/>
+        <display value="IGHV1-69"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5562"/>
+        <display value="IGHV1-69-2"/>
+      </concept>
+      <concept>
+        <code value="HGNC:49601"/>
+        <display value="IGHV1-69D"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5579"/>
+        <display value="IGHV2OR16-5"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5576"/>
+        <display value="IGHV2-5"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5574"/>
+        <display value="IGHV2-10"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5575"/>
+        <display value="IGHV2-26"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5577"/>
+        <display value="IGHV2-70"/>
+      </concept>
+      <concept>
+        <code value="HGNC:49602"/>
+        <display value="IGHV2-70D"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5633"/>
+        <display value="IGHV3OR15-7"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5634"/>
+        <display value="IGHV3OR16-10"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5635"/>
+        <display value="IGHV3OR16-11"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5636"/>
+        <display value="IGHV3OR16-12"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5637"/>
+        <display value="IGHV3OR16-13"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5638"/>
+        <display value="IGHV3OR16-14"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5639"/>
+        <display value="IGHV3OR16-15"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5640"/>
+        <display value="IGHV3OR16-16"/>
+      </concept>
+      <concept>
+        <code value="HGNC:55105"/>
+        <display value="IGHV3OR16-17"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5641"/>
+        <display value="IGHV3OR16-6"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5642"/>
+        <display value="IGHV3OR16-7"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5643"/>
+        <display value="IGHV3OR16-8"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5644"/>
+        <display value="IGHV3OR16-9"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5613"/>
+        <display value="IGHV3-6"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5620"/>
+        <display value="IGHV3-7"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5628"/>
+        <display value="IGHV3-9"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5580"/>
+        <display value="IGHV3-11"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5581"/>
+        <display value="IGHV3-13"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5582"/>
+        <display value="IGHV3-15"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5583"/>
+        <display value="IGHV3-16"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5584"/>
+        <display value="IGHV3-19"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5585"/>
+        <display value="IGHV3-20"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5586"/>
+        <display value="IGHV3-21"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5587"/>
+        <display value="IGHV3-22"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5588"/>
+        <display value="IGHV3-23"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5589"/>
+        <display value="IGHV3-25"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5590"/>
+        <display value="IGHV3-29"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5591"/>
+        <display value="IGHV3-30"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5592"/>
+        <display value="IGHV3-30-2"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5593"/>
+        <display value="IGHV3-30-3"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5594"/>
+        <display value="IGHV3-30-5"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5595"/>
+        <display value="IGHV3-32"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5596"/>
+        <display value="IGHV3-33"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5597"/>
+        <display value="IGHV3-33-2"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5598"/>
+        <display value="IGHV3-35"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5599"/>
+        <display value="IGHV3-36"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5600"/>
+        <display value="IGHV3-37"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5601"/>
+        <display value="IGHV3-38"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5629"/>
+        <display value="IGHV3-38-3"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5602"/>
+        <display value="IGHV3-41"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5603"/>
+        <display value="IGHV3-42"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5604"/>
+        <display value="IGHV3-43"/>
+      </concept>
+      <concept>
+        <code value="HGNC:50322"/>
+        <display value="IGHV3-43D"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5605"/>
+        <display value="IGHV3-47"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5606"/>
+        <display value="IGHV3-48"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5607"/>
+        <display value="IGHV3-49"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5608"/>
+        <display value="IGHV3-50"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5609"/>
+        <display value="IGHV3-52"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5610"/>
+        <display value="IGHV3-53"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5611"/>
+        <display value="IGHV3-54"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5612"/>
+        <display value="IGHV3-57"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5614"/>
+        <display value="IGHV3-60"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5615"/>
+        <display value="IGHV3-62"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5616"/>
+        <display value="IGHV3-63"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5617"/>
+        <display value="IGHV3-64"/>
+      </concept>
+      <concept>
+        <code value="HGNC:49603"/>
+        <display value="IGHV3-64D"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5618"/>
+        <display value="IGHV3-65"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5619"/>
+        <display value="IGHV3-66"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5631"/>
+        <display value="IGHV3-69-1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5621"/>
+        <display value="IGHV3-71"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5622"/>
+        <display value="IGHV3-72"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5623"/>
+        <display value="IGHV3-73"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5624"/>
+        <display value="IGHV3-74"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5625"/>
+        <display value="IGHV3-75"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5626"/>
+        <display value="IGHV3-76"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5627"/>
+        <display value="IGHV3-79"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5658"/>
+        <display value="IGHV4OR15-8"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5652"/>
+        <display value="IGHV4-4"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5645"/>
+        <display value="IGHV4-28"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5646"/>
+        <display value="IGHV4-30-1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5647"/>
+        <display value="IGHV4-30-2"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5648"/>
+        <display value="IGHV4-30-4"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5649"/>
+        <display value="IGHV4-31"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5650"/>
+        <display value="IGHV4-34"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5657"/>
+        <display value="IGHV4-38-2"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5651"/>
+        <display value="IGHV4-39"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5653"/>
+        <display value="IGHV4-55"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5654"/>
+        <display value="IGHV4-59"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5655"/>
+        <display value="IGHV4-61"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5656"/>
+        <display value="IGHV4-80"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5661"/>
+        <display value="IGHV5-10-1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5659"/>
+        <display value="IGHV5-51"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5660"/>
+        <display value="IGHV5-78"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5662"/>
+        <display value="IGHV6-1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5665"/>
+        <display value="IGHV7-4-1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5663"/>
+        <display value="IGHV7-27"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5664"/>
+        <display value="IGHV7-34-1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5666"/>
+        <display value="IGHV7-40"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5667"/>
+        <display value="IGHV7-56"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5669"/>
+        <display value="IGHV7-81"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5704"/>
+        <display value="IGHV8-51-1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5670"/>
+        <display value="IGHVII-1-1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5695"/>
+        <display value="IGHVIII-2-1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5702"/>
+        <display value="IGHVIII-5-1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5703"/>
+        <display value="IGHVIII-5-2"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5692"/>
+        <display value="IGHVIII-11-1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5693"/>
+        <display value="IGHVIII-13-1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5671"/>
+        <display value="IGHVII-15-1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5694"/>
+        <display value="IGHVIII-16-1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5672"/>
+        <display value="IGHVII-20-1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5673"/>
+        <display value="IGHVII-22-1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5696"/>
+        <display value="IGHVIII-22-2"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5697"/>
+        <display value="IGHVIII-25-1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5674"/>
+        <display value="IGHVII-26-2"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5698"/>
+        <display value="IGHVIII-26-1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5675"/>
+        <display value="IGHVII-28-1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5676"/>
+        <display value="IGHVII-30-1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:52400"/>
+        <display value="IGHVII-30-21"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5677"/>
+        <display value="IGHVII-31-1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5678"/>
+        <display value="IGHVII-33-1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5699"/>
+        <display value="IGHVIII-38-1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5679"/>
+        <display value="IGHVII-40-1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5680"/>
+        <display value="IGHVII-43-1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5681"/>
+        <display value="IGHVII-44-2"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5700"/>
+        <display value="IGHVIII-44"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5710"/>
+        <display value="IGHVIV-44-1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5682"/>
+        <display value="IGHVII-46-1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5701"/>
+        <display value="IGHVIII-47-1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5683"/>
+        <display value="IGHVII-49-1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5684"/>
+        <display value="IGHVII-51-2"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5685"/>
+        <display value="IGHVII-53-1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5686"/>
+        <display value="IGHVII-60-1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5687"/>
+        <display value="IGHVII-62-1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5688"/>
+        <display value="IGHVII-65-1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5689"/>
+        <display value="IGHVII-67-1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5705"/>
+        <display value="IGHVIII-67-2"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5706"/>
+        <display value="IGHVIII-67-3"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5707"/>
+        <display value="IGHVIII-67-4"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5690"/>
+        <display value="IGHVII-74-1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5708"/>
+        <display value="IGHVIII-76-1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5691"/>
+        <display value="IGHVII-78-1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5709"/>
+        <display value="IGHVIII-82"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

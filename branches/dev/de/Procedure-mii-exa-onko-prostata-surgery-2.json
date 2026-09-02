@@ -1,0 +1,67 @@
+{
+  "resourceType" : "Procedure",
+  "id" : "mii-exa-onko-prostata-surgery-2",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation|2026.0.3"]
+  },
+  "language" : "de",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Procedure mii-exa-onko-prostata-surgery-2</b></p><a name=\"de-mii-exa-onko-prostata-surgery-2\"> </a><a name=\"de-hcmii-exa-onko-prostata-surgery-2\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-operation.html\">MII PR Onkologie Operation</a> version: 2026.0.3</p></div><p><b>MII EX Onko Operation Intention</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention K}\">kurativ</span></p><p><b>status</b>: Completed</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 387713003}\">Surgical procedure</span></p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/ops 5-604.02}, {http://snomed.info/sct 26294005}\">Radikale Prostatovesikulektomie: Retropubisch: Mit regionaler Lymphadenektomie</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-prostata-bundle-patient.html\">Peter ProstataCa  (no stated gender), DoB Unknown</a></p><p><b>encounter</b>: <a href=\"Encounter-mii-exa-onko-prostata-bundle-encounter.html\">Encounter: status = finished; class = inpatient encounter (ActCode#IMP)</a></p><p><b>performed</b>: 2024-02-15 10:00:00+0100</p><p><b>reasonReference</b>: <a href=\"Condition-mii-exa-onko-prostata-diagnose.html\">Condition Bösartige Neubildung der Prostata</a></p><p><b>outcome</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus R0}\">Kein Residualtumor</span></p><p><b>complication</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-komplikation N}\">nein</span></p></div>"
+  },
+  "extension" : [{
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention",
+        "code" : "K",
+        "display" : "kurativ"
+      }]
+    }
+  }],
+  "status" : "completed",
+  "category" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "387713003",
+      "display" : "Surgical procedure"
+    }]
+  },
+  "code" : {
+    "coding" : [{
+      "system" : "http://fhir.de/CodeSystem/bfarm/ops",
+      "version" : "2024",
+      "code" : "5-604.02",
+      "display" : "Radikale Prostatovesikulektomie: Retropubisch: Mit regionaler Lymphadenektomie"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "26294005",
+      "display" : "Radical prostatectomy (procedure)"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/mii-exa-onko-prostata-bundle-patient"
+  },
+  "encounter" : {
+    "reference" : "Encounter/mii-exa-onko-prostata-bundle-encounter"
+  },
+  "performedDateTime" : "2024-02-15T10:00:00+01:00",
+  "reasonReference" : [{
+    "reference" : "Condition/mii-exa-onko-prostata-diagnose"
+  }],
+  "outcome" : {
+    "coding" : [{
+      "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus",
+      "code" : "R0",
+      "display" : "Kein Residualtumor"
+    }]
+  },
+  "complication" : [{
+    "coding" : [{
+      "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-komplikation",
+      "code" : "N",
+      "display" : "nein"
+    }]
+  }]
+}

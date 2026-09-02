@@ -1,0 +1,2516 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="mii-vs-onko-nebenwirkung-art"/>
+  <meta>
+    <extension url="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-license">
+      <valueCode value="CC-BY-4.0"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/package-source">
+      <extension url="packageId">
+        <valueId value="de.medizininformatikinitiative.kerndatensatz.onkologie"/>
+      </extension>
+      <extension url="version">
+        <valueString value="2026.0.3"/>
+      </extension>
+      <extension url="uri">
+        <valueUri value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko"/>
+      </extension>
+    </extension>
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-computablevalueset"/>
+  </meta>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-onko-nebenwirkung-art</b></p><a name="de-mii-vs-onko-nebenwirkung-art"> </a><a name="de-hcmii-vs-onko-nebenwirkung-art"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profiles: <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-shareablevalueset.html">Shareable ValueSet</a>, <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-publishablevalueset.html">CRMI Publishable ValueSet</a>, <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-computablevalueset.html">CRMI Computable ValueSet</a></p></div><ul><li>Include these codes as defined in <a href="http://terminology.hl7.org/6.5.0/CodeSystem-mdr.html"><code>https://www.meddra.org</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b><a href="https://browser.ihtsdotools.org/">MII CM Onko Nebenwirkung MedDRA zu SNOMED CT (CTCAE v4.03)</a></b></td></tr><tr><td>10000060</td><td/><td><span title="EQUIVALENT">~</span>41931001</td></tr><tr><td>10000081</td><td/><td><span title="EQUIVALENT">~</span>21522001</td></tr><tr><td>10000486</td><td/><td><span title="EQUIVALENT">~</span>51387008</td></tr><tr><td>10000521</td><td/><td><span title="EQUIVALENT">~</span>77949003</td></tr><tr><td>10000636</td><td/><td><span title="SOURCEISNARROWERTHANTARGET">&lt;</span>409675001<i>(SNOMED unterscheidet nicht zwischen PTT und aktivierter PTT; das Konzept umfasst beide Assays.)</i></td></tr><tr><td>10001367</td><td/><td><span title="EQUIVALENT">~</span>386584007</td></tr><tr><td>10001409</td><td/><td><span title="EQUIVALENT">~</span>67782005</td></tr><tr><td>10001497</td><td/><td><span title="EQUIVALENT">~</span>24199005</td></tr><tr><td>10001540</td><td/><td><span title="EQUIVALENT">~</span>285145004</td></tr><tr><td>10001551</td><td/><td><span title="EQUIVALENT">~</span>409673008<i>(Laborwert-Muster 'increased' -&gt; 'above reference range'.)</i></td></tr><tr><td>10001598</td><td/><td><span title="EQUIVALENT">~</span>102612005</td></tr><tr><td>10001675</td><td/><td><span title="EQUIVALENT">~</span>274770006<i>(Laborwert-Muster 'increased' -&gt; 'above reference range'.)</i></td></tr><tr><td>10001680</td><td/><td><span title="EQUIVALENT">~</span>21420006</td></tr><tr><td>10001718</td><td/><td><span title="EQUIVALENT">~</span>419076005</td></tr><tr><td>10001723</td><td/><td><span title="EQUIVALENT">~</span>61582004</td></tr><tr><td>10001760</td><td/><td><span title="EQUIVALENT">~</span>56317004</td></tr><tr><td>10001949</td><td/><td><span title="EQUIVALENT">~</span>48167000</td></tr><tr><td>10002156</td><td/><td><span title="EQUIVALENT">~</span>786878009</td></tr><tr><td>10002167</td><td/><td><span title="EQUIVALENT">~</span>68653001</td></tr><tr><td>10002176</td><td/><td><span title="EQUIVALENT">~</span>64153009<i>(Kandidatenwechsel: CTCAE-Definition nennt explizit den Analkanal)</i></td></tr><tr><td>10002180</td><td/><td><span title="EQUIVALENT">~</span>20928004</td></tr><tr><td>10002218</td><td/><td><span title="EQUIVALENT">~</span>39579001</td></tr><tr><td>10002272</td><td/><td><span title="EQUIVALENT">~</span>271737000</td></tr><tr><td>10002544</td><td/><td><span title="EQUIVALENT">~</span>16114001</td></tr><tr><td>10002646</td><td/><td><span title="EQUIVALENT">~</span>79890006</td></tr><tr><td>10002652</td><td/><td><span title="EQUIVALENT">~</span>62607004</td></tr><tr><td>10002855</td><td/><td><span title="EQUIVALENT">~</span>48694002</td></tr><tr><td>10002899</td><td/><td><span title="EQUIVALENT">~</span>444036008<i>(Wortumstellung.)</i></td></tr><tr><td>10002953</td><td/><td><span title="EQUIVALENT">~</span>441913003</td></tr><tr><td>10002972</td><td/><td><span title="EQUIVALENT">~</span>1023001</td></tr><tr><td>10003011</td><td/><td><span title="EQUIVALENT">~</span>74400008</td></tr><tr><td>10003012</td><td/><td><span title="EQUIVALENT">~</span>286967008</td></tr><tr><td>10003074</td><td/><td><span title="EQUIVALENT">~</span>8217007</td></tr><tr><td>10003162</td><td/><td><span title="EQUIVALENT">~</span>63043004</td></tr><tr><td>10003239</td><td/><td><span title="EQUIVALENT">~</span>57676002</td></tr><tr><td>10003246</td><td/><td><span title="EQUIVALENT">~</span>3723001</td></tr><tr><td>10003445</td><td/><td><span title="EQUIVALENT">~</span>389026000</td></tr><tr><td>10003481</td><td/><td><span title="EQUIVALENT">~</span>166669000<i>(Laborwert-Muster 'increased' -&gt; 'above reference range'.)</i></td></tr><tr><td>10003504</td><td/><td><span title="EQUIVALENT">~</span>68052005</td></tr><tr><td>10003586</td><td/><td><span title="EQUIVALENT">~</span>397829000</td></tr><tr><td>10003591</td><td/><td><span title="EQUIVALENT">~</span>20262006</td></tr><tr><td>10003598</td><td/><td><span title="EQUIVALENT">~</span>46621007</td></tr><tr><td>10003658</td><td/><td><span title="EQUIVALENT">~</span>49436004</td></tr><tr><td>10003662</td><td/><td><span title="EQUIVALENT">~</span>5370000</td></tr><tr><td>10003673</td><td/><td><span title="EQUIVALENT">~</span>27885002</td></tr><tr><td>10003674</td><td/><td><span title="EQUIVALENT">~</span>270492004</td></tr><tr><td>10003883</td><td/><td><span title="EQUIVALENT">~</span>48188009</td></tr><tr><td>10003988</td><td/><td><span title="EQUIVALENT">~</span>161891005</td></tr><tr><td>10004665</td><td/><td><span title="EQUIVALENT">~</span>53206008</td></tr><tr><td>10005047</td><td/><td><span title="EQUIVALENT">~</span>38822007</td></tr><tr><td>10005265</td><td/><td><span title="EQUIVALENT">~</span>116289008<i>(Kandidatenwechsel: 'Swollen abdomen' ist ein anderer Befund)</i></td></tr><tr><td>10005329</td><td/><td><span title="SOURCEISNARROWERTHANTARGET">&lt;</span>414027002<i>(SOC-Restkategorie; der lymphatische Anteil ist nur ueber die haematopoetischen Strukturen mitabgedeckt.)</i></td></tr><tr><td>10005332</td><td/><td/></tr><tr><td>10005364</td><td/><td><span title="EQUIVALENT">~</span>166612004<i>(Laborwert-Muster 'increased' -&gt; 'above reference range'.)</i></td></tr><tr><td>10005452</td><td/><td/></tr><tr><td>10005561</td><td/><td><span title="SOURCEISBROADERTHANTARGET">&gt;</span>131024003<i>(SNOMED deckt nur die hypophysaeren Gonadotropine (LH/FSH) ab; hCG (131100008) ist ein separates Konzept.)</i></td></tr><tr><td>10005778</td><td/><td><span title="EQUIVALENT">~</span>131007009<i>(Woertliche Entsprechung.)</i></td></tr><tr><td>10005886</td><td/><td><span title="EQUIVALENT">~</span>111516008</td></tr><tr><td>10005901</td><td/><td><span title="EQUIVALENT">~</span>81917002</td></tr><tr><td>10006002</td><td/><td><span title="EQUIVALENT">~</span>12584003</td></tr><tr><td>10006179</td><td/><td><span title="EQUIVALENT">~</span>20897003</td></tr><tr><td>10006259</td><td/><td><span title="EQUIVALENT">~</span>198108005</td></tr><tr><td>10006298</td><td/><td><span title="EQUIVALENT">~</span>53430007</td></tr><tr><td>10006437</td><td/><td><span title="EQUIVALENT">~</span>233791001</td></tr><tr><td>10006440</td><td/><td><span title="EQUIVALENT">~</span>36925002</td></tr><tr><td>10006482</td><td/><td><span title="EQUIVALENT">~</span>4386001</td></tr><tr><td>10006504</td><td/><td><span title="EQUIVALENT">~</span>125667009</td></tr><tr><td>10006556</td><td/><td><span title="EQUIVALENT">~</span>7231009</td></tr><tr><td>10006634</td><td/><td><span title="EQUIVALENT">~</span>125666000</td></tr><tr><td>10007196</td><td/><td><span title="EQUIVALENT">~</span>87730004</td></tr><tr><td>10007515</td><td/><td><span title="EQUIVALENT">~</span>410429000</td></tr><tr><td>10007541</td><td/><td><span title="SOURCEISNARROWERTHANTARGET">&lt;</span>56265001<i>(SOC-Restkategorie; auf die SNOMED-Oberklasse des Organsystems abgebildet. Die 'Other, specify'-Semantik (Freitext) geht verloren.)</i></td></tr><tr><td>10007612</td><td/><td><span title="EQUIVALENT">~</span>444931001<i>(Isoform-spezifische Entsprechung (Troponin I).)</i></td></tr><tr><td>10007613</td><td/><td><span title="SOURCEISNARROWERTHANTARGET">&lt;</span>1363512008<i>(SNOMED hat kein Troponin-T-spezifisches Konzept (nur Troponin I, 444931001); das gewaehlte Konzept ist isoformunspezifisch.)</i></td></tr><tr><td>10007739</td><td/><td><span title="EQUIVALENT">~</span>193570009</td></tr><tr><td>10007810</td><td/><td><span title="EQUIVALENT">~</span>440653007<i>(Kandidatenwechsel: Blutstrominfektion war zu spezifisch)</i></td></tr><tr><td>10007839</td><td/><td/></tr><tr><td>10008164</td><td/><td><span title="EQUIVALENT">~</span>230744007<i>(Kandidatenwechsel: postoperative nasale Variante ersetzt)</i></td></tr><tr><td>10008330</td><td/><td><span title="EQUIVALENT">~</span>1340188003<i>(Woertliche Entsprechung.)</i></td></tr><tr><td>10008417</td><td/><td><span title="EQUIVALENT">~</span>7847004</td></tr><tr><td>10008481</td><td/><td><span title="EQUIVALENT">~</span>426396005<i>(Kandidatenwechsel: Top-Kandidat 'Non-cardiac chest pain' bezeichnet das Gegenteil)</i></td></tr><tr><td>10008496</td><td/><td><span title="EQUIVALENT">~</span>102588006</td></tr><tr><td>10008531</td><td/><td><span title="EQUIVALENT">~</span>43724002</td></tr><tr><td>10008612</td><td/><td><span title="EQUIVALENT">~</span>76581006</td></tr><tr><td>10008661</td><td/><td><span title="EQUIVALENT">~</span>13644009</td></tr><tr><td>10009845</td><td/><td><span title="EQUIVALENT">~</span>386806002</td></tr><tr><td>10009887</td><td/><td><span title="EQUIVALENT">~</span>64226004</td></tr><tr><td>10009995</td><td/><td><span title="EQUIVALENT">~</span>197250003</td></tr><tr><td>10009998</td><td/><td><span title="EQUIVALENT">~</span>95540002</td></tr><tr><td>10010000</td><td/><td><span title="EQUIVALENT">~</span>40650009<i>(Kandidatenwechsel: Kandidat enthielt Aetiologie (entzuendliche Polypen))</i></td></tr><tr><td>10010001</td><td/><td><span title="EQUIVALENT">~</span>50257008</td></tr><tr><td>10010004</td><td/><td><span title="EQUIVALENT">~</span>19132000<i>(Wortumstellung.)</i></td></tr><tr><td>10010006</td><td/><td><span title="EQUIVALENT">~</span>46040000</td></tr><tr><td>10010250</td><td/><td><span title="EQUIVALENT">~</span>26329005<i>(Kandidatenwechsel: 'Unable to concentrate' impliziert vollstaendige Unfaehigkeit)</i></td></tr><tr><td>10010276</td><td/><td><span title="EQUIVALENT">~</span>44808001</td></tr><tr><td>10010300</td><td/><td><span title="EQUIVALENT">~</span>40917007</td></tr><tr><td>10010331</td><td/><td><span title="SOURCEISNARROWERTHANTARGET">&lt;</span>66091009<i>(SOC-Restkategorie; SNOMED-Oberklasse deckt den kongenitalen Anteil ab, familiaer/genetisch nur teilweise.)</i></td></tr><tr><td>10010741</td><td/><td><span title="EQUIVALENT">~</span>9826008</td></tr><tr><td>10010742</td><td/><td><span title="EQUIVALENT">~</span>299699004</td></tr><tr><td>10010774</td><td/><td><span title="EQUIVALENT">~</span>14760008</td></tr><tr><td>10010783</td><td/><td><span title="EQUIVALENT">~</span>85598007</td></tr><tr><td>10011224</td><td/><td><span title="EQUIVALENT">~</span>49727002</td></tr><tr><td>10011268</td><td/><td><span title="EQUIVALENT">~</span>432352001<i>(CPK = Creatine (phospho)kinase; Laborwert-Muster 'increased' -&gt; 'above reference range'.)</i></td></tr><tr><td>10011368</td><td/><td><span title="EQUIVALENT">~</span>166717003<i>(Laborwert-Muster 'increased' -&gt; 'above reference range'.)</i></td></tr><tr><td>10011655</td><td/><td><span title="SOURCEISBROADERTHANTARGET">&gt;</span>67967009<i>(SNOMED erfasst nur den Gesichtsbefund; CTCAE meint das gesamte cushingoide Erscheinungsbild)</i></td></tr><tr><td>10011912</td><td/><td><span title="EQUIVALENT">~</span>276506001<i>(Kandidatenwechsel: Kandidat betraf muetterlichen Tod)</i></td></tr><tr><td>10011914</td><td/><td><span title="EQUIVALENT">~</span>419620001<i>(Kandidatenwechsel: Kandidat war ein Outcome-Bewertungskonzept)</i></td></tr><tr><td>10012174</td><td/><td><span title="EQUIVALENT">~</span>34095006</td></tr><tr><td>10012205</td><td/><td><span title="EQUIVALENT">~</span>400003000</td></tr><tr><td>10012218</td><td/><td><span title="EQUIVALENT">~</span>2776000</td></tr><tr><td>10012260</td><td/><td><span title="EQUIVALENT">~</span>2073000</td></tr><tr><td>10012318</td><td/><td><span title="EQUIVALENT">~</span>80967001</td></tr><tr><td>10012373</td><td/><td><span title="EQUIVALENT">~</span>443371007<i>(Woertliche Entsprechung.)</i></td></tr><tr><td>10012378</td><td/><td><span title="EQUIVALENT">~</span>35489007</td></tr><tr><td>10012727</td><td/><td><span title="EQUIVALENT">~</span>62315008</td></tr><tr><td>10013442</td><td/><td><span title="EQUIVALENT">~</span>67406007</td></tr><tr><td>10013573</td><td/><td><span title="EQUIVALENT">~</span>404640003</td></tr><tr><td>10013774</td><td/><td><span title="EQUIVALENT">~</span>162290004</td></tr><tr><td>10013781</td><td/><td><span title="EQUIVALENT">~</span>87715008</td></tr><tr><td>10013786</td><td/><td><span title="EQUIVALENT">~</span>52475004</td></tr><tr><td>10013828</td><td/><td><span title="EQUIVALENT">~</span>7780000</td></tr><tr><td>10013830</td><td/><td><span title="EQUIVALENT">~</span>95532008<i>(Kandidatenwechsel: kongenitale Variante ersetzt)</i></td></tr><tr><td>10013832</td><td/><td><span title="EQUIVALENT">~</span>270909006</td></tr><tr><td>10013836</td><td/><td><span title="EQUIVALENT">~</span>51868009</td></tr><tr><td>10013887</td><td/><td><span title="EQUIVALENT">~</span>8011004</td></tr><tr><td>10013911</td><td/><td><span title="EQUIVALENT">~</span>271801002</td></tr><tr><td>10013934</td><td/><td><span title="EQUIVALENT">~</span>266599000</td></tr><tr><td>10013941</td><td/><td><span title="EQUIVALENT">~</span>71315007</td></tr><tr><td>10013946</td><td/><td><span title="EQUIVALENT">~</span>162031009</td></tr><tr><td>10013950</td><td/><td><span title="EQUIVALENT">~</span>40739000</td></tr><tr><td>10013951</td><td/><td><span title="EQUIVALENT">~</span>20301004</td></tr><tr><td>10013963</td><td/><td><span title="EQUIVALENT">~</span>267036007</td></tr><tr><td>10013993</td><td/><td><span title="SOURCEISNARROWERTHANTARGET">&lt;</span>25906001<i>(SOC-Restkategorie; Labyrinth ist als Innenohr mitumfasst.)</i></td></tr><tr><td>10014020</td><td/><td><span title="EQUIVALENT">~</span>301354004</td></tr><tr><td>10014217</td><td/><td><span title="EQUIVALENT">~</span>2032001</td></tr><tr><td>10014222</td><td/><td><span title="EQUIVALENT">~</span>445088006</td></tr><tr><td>10014326</td><td/><td><span title="EQUIVALENT">~</span>386790008</td></tr><tr><td>10014383</td><td/><td><span title="SOURCEISNARROWERTHANTARGET">&lt;</span>111975006<i>(SNOMED unterscheidet nicht zwischen QT und frequenzkorrigiertem QTc.)</i></td></tr><tr><td>10014594</td><td/><td><span title="EQUIVALENT">~</span>312215006<i>(Kandidatenwechsel: erregerspezifisches Konzept ersetzt)</i></td></tr><tr><td>10014621</td><td/><td><span title="EQUIVALENT">~</span>721249007</td></tr><tr><td>10014625</td><td/><td><span title="EQUIVALENT">~</span>81308009</td></tr><tr><td>10014678</td><td/><td><span title="EQUIVALENT">~</span>233850007</td></tr><tr><td>10014698</td><td/><td><span title="SOURCEISNARROWERTHANTARGET">&lt;</span>362969004<i>(SOC-Restkategorie.)</i></td></tr><tr><td>10014801</td><td/><td><span title="EQUIVALENT">~</span>1847009</td></tr><tr><td>10014893</td><td/><td><span title="EQUIVALENT">~</span>43752006</td></tr><tr><td>10015090</td><td/><td><span title="EQUIVALENT">~</span>249366005</td></tr><tr><td>10015218</td><td/><td><span title="EQUIVALENT">~</span>36715001</td></tr><tr><td>10015277</td><td/><td><span title="EQUIVALENT">~</span>399992009</td></tr><tr><td>10015384</td><td/><td><span title="EQUIVALENT">~</span>15238002</td></tr><tr><td>10015387</td><td/><td><span title="EQUIVALENT">~</span>405247003<i>(Wortumstellung.)</i></td></tr><tr><td>10015388</td><td/><td><span title="EQUIVALENT">~</span>102619001</td></tr><tr><td>10015448</td><td/><td><span title="EQUIVALENT">~</span>63305008<i>(Kandidatenwechsel: kongenitale Variante ersetzt)</i></td></tr><tr><td>10015451</td><td/><td><span title="EQUIVALENT">~</span>30811009</td></tr><tr><td>10015453</td><td/><td><span title="EQUIVALENT">~</span>17709002</td></tr><tr><td>10015461</td><td/><td><span title="EQUIVALENT">~</span>16761005</td></tr><tr><td>10015533</td><td/><td><span title="EQUIVALENT">~</span>85949006</td></tr><tr><td>10015688</td><td/><td><span title="EQUIVALENT">~</span>416189003</td></tr><tr><td>10015829</td><td/><td><span title="EQUIVALENT">~</span>35158001</td></tr><tr><td>10015832</td><td/><td><span title="EQUIVALENT">~</span>76349003</td></tr><tr><td>10015919</td><td/><td><span title="SOURCEISNARROWERTHANTARGET">&lt;</span>371405004<i>(SOC-Restkategorie.)</i></td></tr><tr><td>10015929</td><td/><td><span title="EQUIVALENT">~</span>128351009</td></tr><tr><td>10015958</td><td/><td><span title="EQUIVALENT">~</span>41652007</td></tr><tr><td>10016059</td><td/><td><span title="EQUIVALENT">~</span>95668009</td></tr><tr><td>10016173</td><td/><td><span title="EQUIVALENT">~</span>161898004</td></tr><tr><td>10016241</td><td/><td><span title="EQUIVALENT">~</span>248315005<i>(Kandidatenwechsel: 'Atrophy of orbital fat' war zu eng)</i></td></tr><tr><td>10016256</td><td/><td><span title="EQUIVALENT">~</span>84229001</td></tr><tr><td>10016288</td><td/><td><span title="EQUIVALENT">~</span>409089005</td></tr><tr><td>10016296</td><td/><td><span title="EQUIVALENT">~</span>72042002<i>(Kandidatenwechsel: 'Complete fecal incontinence' war zu eng)</i></td></tr><tr><td>10016479</td><td/><td><span title="EQUIVALENT">~</span>276507005<i>(Kandidatenwechsel: 'Undelivered in utero fetal death' war zu eng)</i></td></tr><tr><td>10016558</td><td/><td><span title="EQUIVALENT">~</span>386661006</td></tr><tr><td>10016596</td><td/><td><span title="EQUIVALENT">~</span>131177005</td></tr><tr><td>10016750</td><td/><td><span title="EQUIVALENT">~</span>247355005</td></tr><tr><td>10016757</td><td/><td><span title="EQUIVALENT">~</span>162277006</td></tr><tr><td>10016766</td><td/><td><span title="EQUIVALENT">~</span>249504006</td></tr><tr><td>10016778</td><td/><td><span title="EQUIVALENT">~</span>162278001<i>(Kandidatenwechsel: CTCAE beschreibt das Symptom im Gesichtsfeld, nicht die Glaskoerperpathologie)</i></td></tr><tr><td>10016791</td><td/><td><span title="EQUIVALENT">~</span>95891005</td></tr><tr><td>10016825</td><td/><td><span title="EQUIVALENT">~</span>238810007</td></tr><tr><td>10016987</td><td/><td><span title="EQUIVALENT">~</span>46154005</td></tr><tr><td>10017076</td><td/><td><span title="EQUIVALENT">~</span>125605004</td></tr><tr><td>10017577</td><td/><td><span title="EQUIVALENT">~</span>22325002<i>(Kandidatenwechsel: Kandidat war eine dissoziative Stoerung)</i></td></tr><tr><td>10017631</td><td/><td><span title="EQUIVALENT">~</span>16957005</td></tr><tr><td>10017636</td><td/><td><span title="EQUIVALENT">~</span>75726005</td></tr><tr><td>10017638</td><td/><td><span title="EQUIVALENT">~</span>102628000</td></tr><tr><td>10017639</td><td/><td><span title="EQUIVALENT">~</span>25345001</td></tr><tr><td>10017789</td><td/><td><span title="EQUIVALENT">~</span>61401005</td></tr><tr><td>10017815</td><td/><td><span title="EQUIVALENT">~</span>235674005<i>(Kandidatenwechsel: kongenitale Variante ersetzt)</i></td></tr><tr><td>10017822</td><td/><td><span title="EQUIVALENT">~</span>397825006</td></tr><tr><td>10017853</td><td/><td><span title="EQUIVALENT">~</span>4556007</td></tr><tr><td>10017877</td><td/><td><span title="EQUIVALENT">~</span>37831005</td></tr><tr><td>10017947</td><td/><td><span title="SOURCEISNARROWERTHANTARGET">&lt;</span>53619000<i>(SOC-Restkategorie.)</i></td></tr><tr><td>10017999</td><td/><td><span title="EQUIVALENT">~</span>301362007<i>(Kandidatenwechsel: Kandidat war eine hereditaere Neuropathie)</i></td></tr><tr><td>10018043</td><td/><td><span title="EQUIVALENT">~</span>235675006</td></tr><tr><td>10018065</td><td/><td/></tr><tr><td>10018146</td><td/><td><span title="EQUIVALENT">~</span>300891008</td></tr><tr><td>10018286</td><td/><td><span title="EQUIVALENT">~</span>11114002</td></tr><tr><td>10018304</td><td/><td><span title="EQUIVALENT">~</span>23986001</td></tr><tr><td>10018746</td><td/><td/></tr><tr><td>10018748</td><td/><td><span title="EQUIVALENT">~</span>131004002</td></tr><tr><td>10018761</td><td/><td><span title="EQUIVALENT">~</span>444896005<i>(Korrektur aus adversarialer Verifikation)</i></td></tr><tr><td>10018784</td><td/><td/></tr><tr><td>10018801</td><td/><td><span title="EQUIVALENT">~</span>4754008</td></tr><tr><td>10019077</td><td/><td><span title="EQUIVALENT">~</span>7011001</td></tr><tr><td>10019150</td><td/><td/></tr><tr><td>10019211</td><td/><td><span title="EQUIVALENT">~</span>25064002</td></tr><tr><td>10019245</td><td/><td><span title="EQUIVALENT">~</span>15188001</td></tr><tr><td>10019279</td><td/><td><span title="EQUIVALENT">~</span>84114007</td></tr><tr><td>10019428</td><td/><td><span title="EQUIVALENT">~</span>385494008</td></tr><tr><td>10019450</td><td/><td><span title="EQUIVALENT">~</span>34436003</td></tr><tr><td>10019489</td><td/><td><span title="EQUIVALENT">~</span>68600005</td></tr><tr><td>10019491</td><td/><td><span title="EQUIVALENT">~</span>73320003</td></tr><tr><td>10019515</td><td/><td><span title="EQUIVALENT">~</span>111407006</td></tr><tr><td>10019611</td><td/><td><span title="EQUIVALENT">~</span>70153002</td></tr><tr><td>10019663</td><td/><td><span title="EQUIVALENT">~</span>59927004</td></tr><tr><td>10019678</td><td/><td><span title="EQUIVALENT">~</span>16763008</td></tr><tr><td>10019692</td><td/><td><span title="EQUIVALENT">~</span>87248009</td></tr><tr><td>10019705</td><td/><td><span title="EQUIVALENT">~</span>102626001<i>(Wortumstellung (hepatic -&gt; liver).)</i></td></tr><tr><td>10019799</td><td/><td><span title="EQUIVALENT">~</span>3738000</td></tr><tr><td>10019805</td><td/><td><span title="SOURCEISNARROWERTHANTARGET">&lt;</span>1290917001<i>(SOC-Restkategorie; deckt hepatisch und biliaer ab.)</i></td></tr><tr><td>10020039</td><td/><td><span title="EQUIVALENT">~</span>65958008</td></tr><tr><td>10020100</td><td/><td><span title="EQUIVALENT">~</span>263225007</td></tr><tr><td>10020112</td><td/><td><span title="EQUIVALENT">~</span>399939002</td></tr><tr><td>10020201</td><td/><td><span title="EQUIVALENT">~</span>50219008</td></tr><tr><td>10020407</td><td/><td><span title="SOURCEISNARROWERTHANTARGET">&lt;</span>238810007<i>(Kein generisches 'Hot flush'-Konzept in SNOMED; Ziel umfasst alle Flush-Formen. Kandidat 'Menopausal flushing' waere im onkologischen Kontext (u.a. Maenner unter ADT) falsch. Hinweis: 238810007 ist bereits Zielcode des CTCAE-Terms &quot;Flushing&quot;; ein ursachenneutrales Hot-flash-Konzept existiert in SNOMED nicht)</i></td></tr><tr><td>10020508</td><td/><td><span title="EQUIVALENT">~</span>230745008</td></tr><tr><td>10020587</td><td/><td><span title="EQUIVALENT">~</span>66931009</td></tr><tr><td>10020639</td><td/><td><span title="EQUIVALENT">~</span>80394007</td></tr><tr><td>10020642</td><td/><td><span title="EQUIVALENT">~</span>312230002</td></tr><tr><td>10020647</td><td/><td><span title="EQUIVALENT">~</span>14140009</td></tr><tr><td>10020670</td><td/><td><span title="EQUIVALENT">~</span>66978005</td></tr><tr><td>10020680</td><td/><td><span title="EQUIVALENT">~</span>771115008</td></tr><tr><td>10020705</td><td/><td><span title="EQUIVALENT">~</span>66999008</td></tr><tr><td>10020765</td><td/><td><span title="EQUIVALENT">~</span>77692006</td></tr><tr><td>10020772</td><td/><td><span title="EQUIVALENT">~</span>38341003</td></tr><tr><td>10020850</td><td/><td><span title="EQUIVALENT">~</span>34486009</td></tr><tr><td>10020864</td><td/><td><span title="EQUIVALENT">~</span>29966009</td></tr><tr><td>10020870</td><td/><td><span title="EQUIVALENT">~</span>302870006</td></tr><tr><td>10020907</td><td/><td><span title="EQUIVALENT">~</span>35885006</td></tr><tr><td>10020943</td><td/><td><span title="EQUIVALENT">~</span>119247004</td></tr><tr><td>10020949</td><td/><td><span title="EQUIVALENT">~</span>5291005</td></tr><tr><td>10021005</td><td/><td><span title="EQUIVALENT">~</span>302866003</td></tr><tr><td>10021013</td><td/><td><span title="EQUIVALENT">~</span>45004005</td></tr><tr><td>10021018</td><td/><td><span title="EQUIVALENT">~</span>43339004</td></tr><tr><td>10021028</td><td/><td><span title="EQUIVALENT">~</span>190855004</td></tr><tr><td>10021038</td><td/><td><span title="EQUIVALENT">~</span>89627008</td></tr><tr><td>10021041</td><td/><td><span title="EQUIVALENT">~</span>36976004</td></tr><tr><td>10021059</td><td/><td><span title="EQUIVALENT">~</span>4996001</td></tr><tr><td>10021097</td><td/><td><span title="EQUIVALENT">~</span>45007003</td></tr><tr><td>10021113</td><td/><td><span title="EQUIVALENT">~</span>386689009</td></tr><tr><td>10021114</td><td/><td><span title="EQUIVALENT">~</span>40930008</td></tr><tr><td>10021143</td><td/><td><span title="EQUIVALENT">~</span>389086002</td></tr><tr><td>10021305</td><td/><td><span title="EQUIVALENT">~</span>282068002<i>(Kandidatenwechsel: neonatale Variante ersetzt)</i></td></tr><tr><td>10021307</td><td/><td><span title="EQUIVALENT">~</span>355468491000132106</td></tr><tr><td>10021309</td><td/><td><span title="EQUIVALENT">~</span>50565005</td></tr><tr><td>10021328</td><td/><td><span title="EQUIVALENT">~</span>710572000</td></tr><tr><td>10021428</td><td/><td><span title="SOURCEISNARROWERTHANTARGET">&lt;</span>414029004<i>(SOC-Restkategorie.)</i></td></tr><tr><td>10021881</td><td/><td><span title="SOURCEISNARROWERTHANTARGET">&lt;</span>40733004<i>(SOC-Restkategorie.)</i></td></tr><tr><td>10021918</td><td/><td><span title="EQUIVALENT">~</span>29689003</td></tr><tr><td>10022095</td><td/><td/></tr><tr><td>10022117</td><td/><td/></tr><tr><td>10022161</td><td/><td><span title="EQUIVALENT">~</span>6956001<i>(Wortumstellung.)</i></td></tr><tr><td>10022213</td><td/><td><span title="EQUIVALENT">~</span>56515006<i>(Wortumstellung.)</i></td></tr><tr><td>10022356</td><td/><td><span title="EQUIVALENT">~</span>38261007<i>(Wortumstellung.)</i></td></tr><tr><td>10022402</td><td/><td><span title="EQUIVALENT">~</span>313341008<i>(INR ausgeschrieben; Laborwert-Muster 'increased' -&gt; 'above reference range'.)</i></td></tr><tr><td>10022437</td><td/><td><span title="EQUIVALENT">~</span>193462001</td></tr><tr><td>10022763</td><td/><td><span title="EQUIVALENT">~</span>1386000</td></tr><tr><td>10022891</td><td/><td/></tr><tr><td>10022992</td><td/><td><span title="EQUIVALENT">~</span>80182007</td></tr><tr><td>10022998</td><td/><td><span title="EQUIVALENT">~</span>55929007</td></tr><tr><td>10023030</td><td/><td><span title="EQUIVALENT">~</span>287731003<i>(Kandidatenwechsel: Kandidat war ein Anamnesekonzept)</i></td></tr><tr><td>10023174</td><td/><td><span title="EQUIVALENT">~</span>282060009<i>(Wortumstellung.)</i></td></tr><tr><td>10023176</td><td/><td><span title="EQUIVALENT">~</span>903952141000132105</td></tr><tr><td>10023177</td><td/><td><span title="EQUIVALENT">~</span>54822007</td></tr><tr><td>10023215</td><td/><td><span title="EQUIVALENT">~</span>387637008</td></tr><tr><td>10023216</td><td/><td><span title="EQUIVALENT">~</span>363162000</td></tr><tr><td>10023332</td><td/><td><span title="EQUIVALENT">~</span>5888003</td></tr><tr><td>10023424</td><td/><td><span title="EQUIVALENT">~</span>129128006</td></tr><tr><td>10023509</td><td/><td><span title="EQUIVALENT">~</span>414564002</td></tr><tr><td>10023838</td><td/><td><span title="EQUIVALENT">~</span>51599000</td></tr><tr><td>10023862</td><td/><td><span title="EQUIVALENT">~</span>75547007<i>(Kandidatenwechsel: erworbene Variante durch generisches Konzept ersetzt)</i></td></tr><tr><td>10023874</td><td/><td><span title="EQUIVALENT">~</span>45913009</td></tr><tr><td>10023891</td><td/><td><span title="EQUIVALENT">~</span>406444002</td></tr><tr><td>10024264</td><td/><td><span title="EQUIVALENT">~</span>214264003</td></tr><tr><td>10024378</td><td/><td><span title="EQUIVALENT">~</span>111583006</td></tr><tr><td>10024382</td><td/><td><span title="EQUIVALENT">~</span>22811006</td></tr><tr><td>10024419</td><td/><td><span title="EQUIVALENT">~</span>8357008</td></tr><tr><td>10024421</td><td/><td><span title="EQUIVALENT">~</span>58436003</td></tr><tr><td>10024561</td><td/><td><span title="EQUIVALENT">~</span>36269003<i>(Kandidatenwechsel: Cheilodynie = Lippenschmerz (Syn. 'Painful lips'))</i></td></tr><tr><td>10024574</td><td/><td><span title="EQUIVALENT">~</span>432034007</td></tr><tr><td>10024842</td><td/><td><span title="EQUIVALENT">~</span>61960001</td></tr><tr><td>10025182</td><td/><td><span title="EQUIVALENT">~</span>301360004</td></tr><tr><td>10025233</td><td/><td><span title="EQUIVALENT">~</span>234097001</td></tr><tr><td>10025256</td><td/><td><span title="EQUIVALENT">~</span>1156294003<i>(Laborwert-Muster 'decreased' -&gt; 'below reference range'.)</i></td></tr><tr><td>10025258</td><td/><td><span title="EQUIVALENT">~</span>418010004<i>(Laborwert-Muster 'increased' -&gt; 'above reference range'.)</i></td></tr><tr><td>10025476</td><td/><td><span title="EQUIVALENT">~</span>32230006</td></tr><tr><td>10025482</td><td/><td><span title="EQUIVALENT">~</span>367391008</td></tr><tr><td>10026749</td><td/><td><span title="EQUIVALENT">~</span>231494001</td></tr><tr><td>10027175</td><td/><td><span title="EQUIVALENT">~</span>386807006</td></tr><tr><td>10027198</td><td/><td><span title="EQUIVALENT">~</span>70784009</td></tr><tr><td>10027199</td><td/><td><span title="EQUIVALENT">~</span>7180009</td></tr><tr><td>10027308</td><td/><td><span title="EQUIVALENT">~</span>289903006</td></tr><tr><td>10027313</td><td/><td><span title="EQUIVALENT">~</span>386692008</td></tr><tr><td>10027433</td><td/><td><span title="SOURCEISNARROWERTHANTARGET">&lt;</span>75934005<i>(SOC-Restkategorie; der Ernaehrungsanteil ('nutrition disorders', 2492009) ist nicht mitabgedeckt.)</i></td></tr><tr><td>10027786</td><td/><td><span title="EQUIVALENT">~</span>28189009<i>(Woertliche Entsprechung. ACHTUNG: derselbe Code ist im REVIEW-Tier bereits dem CTCAE-Term 'Mobitz type I' (MedDRA 10027787) zugeordnet - das ist falsch; Mobitz I gehoert auf 54016002.)</i></td></tr><tr><td>10027787</td><td/><td><span title="EQUIVALENT">~</span>54016002<i>(Kandidatenwechsel: Top-Kandidat war Mobitz Typ II)</i></td></tr><tr><td>10028041</td><td/><td><span title="EQUIVALENT">~</span>267078001<i>(Kandidatenwechsel: 'Hemiballism' war zu spezifisch)</i></td></tr><tr><td>10028130</td><td/><td><span title="EQUIVALENT">~</span>61170000</td></tr><tr><td>10028154</td><td/><td><span title="EQUIVALENT">~</span>57653000</td></tr><tr><td>10028395</td><td/><td><span title="SOURCEISNARROWERTHANTARGET">&lt;</span>928000<i>(SOC-Restkategorie.)</i></td></tr><tr><td>10028411</td><td/><td><span title="EQUIVALENT">~</span>68962001</td></tr><tr><td>10028524</td><td/><td><span title="EQUIVALENT">~</span>41370002</td></tr><tr><td>10028533</td><td/><td><span title="EQUIVALENT">~</span>109995007</td></tr><tr><td>10028596</td><td/><td><span title="EQUIVALENT">~</span>22298006</td></tr><tr><td>10028606</td><td/><td><span title="EQUIVALENT">~</span>50920009</td></tr><tr><td>10028653</td><td/><td><span title="EQUIVALENT">~</span>26889001</td></tr><tr><td>10028691</td><td/><td><span title="EQUIVALENT">~</span>89077005</td></tr><tr><td>10028735</td><td/><td><span title="EQUIVALENT">~</span>68235000</td></tr><tr><td>10028813</td><td/><td><span title="EQUIVALENT">~</span>422587007</td></tr><tr><td>10028836</td><td/><td><span title="EQUIVALENT">~</span>81680005</td></tr><tr><td>10029104</td><td/><td><span title="SOURCEISNARROWERTHANTARGET">&lt;</span>55342001<i>(SOC-Restkategorie.)</i></td></tr><tr><td>10029205</td><td/><td><span title="SOURCEISNARROWERTHANTARGET">&lt;</span>118940003<i>(SOC-Restkategorie.)</i></td></tr><tr><td>10029223</td><td/><td><span title="EQUIVALENT">~</span>16269008</td></tr><tr><td>10029366</td><td/><td><span title="EQUIVALENT">~</span>165517008<i>(SNOMED fuehrt 'Neutrophil count below reference range' als Synonym dieses Konzepts.)</i></td></tr><tr><td>10029404</td><td/><td><span title="EQUIVALENT">~</span>65194006</td></tr><tr><td>10029864</td><td/><td><span title="EQUIVALENT">~</span>563001</td></tr><tr><td>10029883</td><td/><td><span title="EQUIVALENT">~</span>414916001</td></tr><tr><td>10029957</td><td/><td><span title="SOURCEISBROADERTHANTARGET">&gt;</span>244815007<i>(Kein generisches Konzept fuer Magenobstruktion; Ziel ist auf den Pylorus bezogen (Syn. 'Gastric outflow obstruction'))</i></td></tr><tr><td>10030300</td><td/><td><span title="EQUIVALENT">~</span>88311004</td></tr><tr><td>10030980</td><td/><td><span title="EQUIVALENT">~</span>22490002</td></tr><tr><td>10031009</td><td/><td><span title="EQUIVALENT">~</span>102616008</td></tr><tr><td>10031282</td><td/><td><span title="EQUIVALENT">~</span>64859006</td></tr><tr><td>10033072</td><td/><td><span title="EQUIVALENT">~</span>3135009</td></tr><tr><td>10033078</td><td/><td><span title="EQUIVALENT">~</span>65363002</td></tr><tr><td>10033279</td><td/><td><span title="EQUIVALENT">~</span>88294009<i>(Kandidatenwechsel: 'Ruptured cyst of ovary' war zu eng)</i></td></tr><tr><td>10033314</td><td/><td><span title="EQUIVALENT">~</span>43548008</td></tr><tr><td>10033371</td><td/><td><span title="EQUIVALENT">~</span>22253000</td></tr><tr><td>10033425</td><td/><td><span title="EQUIVALENT">~</span>90834002<i>(Extremitaet = Limb; deckungsgleich.)</i></td></tr><tr><td>10033474</td><td/><td><span title="EQUIVALENT">~</span>301364008</td></tr><tr><td>10033557</td><td/><td><span title="EQUIVALENT">~</span>80313002</td></tr><tr><td>10033626</td><td/><td><span title="EQUIVALENT">~</span>95562002<i>(Kandidatenwechsel: Blutung des Ductus pancreaticus ersetzt)</i></td></tr><tr><td>10033645</td><td/><td><span title="EQUIVALENT">~</span>75694006</td></tr><tr><td>10033703</td><td/><td><span title="EQUIVALENT">~</span>423488006</td></tr><tr><td>10033987</td><td/><td><span title="EQUIVALENT">~</span>91019004</td></tr><tr><td>10034016</td><td/><td><span title="EQUIVALENT">~</span>71906005</td></tr><tr><td>10034040</td><td/><td><span title="EQUIVALENT">~</span>195069001</td></tr><tr><td>10034263</td><td/><td><span title="EQUIVALENT">~</span>30473006</td></tr><tr><td>10034310</td><td/><td><span title="EQUIVALENT">~</span>285375003</td></tr><tr><td>10034405</td><td/><td><span title="EQUIVALENT">~</span>37439003</td></tr><tr><td>10034474</td><td/><td><span title="EQUIVALENT">~</span>373945007</td></tr><tr><td>10034484</td><td/><td><span title="EQUIVALENT">~</span>3238004</td></tr><tr><td>10034536</td><td/><td><span title="EQUIVALENT">~</span>2556008</td></tr><tr><td>10034578</td><td/><td><span title="EQUIVALENT">~</span>233958001</td></tr><tr><td>10034580</td><td/><td><span title="EQUIVALENT">~</span>95663000</td></tr><tr><td>10034620</td><td/><td><span title="EQUIVALENT">~</span>789588003</td></tr><tr><td>10034719</td><td/><td><span title="EQUIVALENT">~</span>102943000</td></tr><tr><td>10034825</td><td/><td><span title="EQUIVALENT">~</span>232413009</td></tr><tr><td>10034835</td><td/><td><span title="EQUIVALENT">~</span>405737000</td></tr><tr><td>10034844</td><td/><td><span title="EQUIVALENT">~</span>162397003<i>(Pharyngolaryngealer Schmerz = Halsschmerz.)</i></td></tr><tr><td>10034879</td><td/><td><span title="EQUIVALENT">~</span>61599003</td></tr><tr><td>10034960</td><td/><td><span title="EQUIVALENT">~</span>409668002</td></tr><tr><td>10034966</td><td/><td><span title="EQUIVALENT">~</span>90128006</td></tr><tr><td>10035528</td><td/><td><span title="EQUIVALENT">~</span>415116008<i>(Laborwert-Muster 'decreased' -&gt; 'below reference range'.)</i></td></tr><tr><td>10035598</td><td/><td><span title="EQUIVALENT">~</span>60046008</td></tr><tr><td>10035623</td><td/><td><span title="EQUIVALENT">~</span>2237002</td></tr><tr><td>10035742</td><td/><td><span title="EQUIVALENT">~</span>205237003</td></tr><tr><td>10035759</td><td/><td><span title="EQUIVALENT">~</span>36118008</td></tr><tr><td>10036200</td><td/><td><span title="EQUIVALENT">~</span>34742003</td></tr><tr><td>10036206</td><td/><td><span title="EQUIVALENT">~</span>17920008</td></tr><tr><td>10036402</td><td/><td><span title="EQUIVALENT">~</span>75803007</td></tr><tr><td>10036585</td><td/><td/></tr><tr><td>10036595</td><td/><td><span title="EQUIVALENT">~</span>282020008</td></tr><tr><td>10036601</td><td/><td><span title="EQUIVALENT">~</span>373717006</td></tr><tr><td>10036653</td><td/><td><span title="EQUIVALENT">~</span>427461000</td></tr><tr><td>10036774</td><td/><td><span title="EQUIVALENT">~</span>3951002</td></tr><tr><td>10036790</td><td/><td><span title="EQUIVALENT">~</span>28743005</td></tr><tr><td>10036968</td><td/><td><span title="EQUIVALENT">~</span>36729000</td></tr><tr><td>10037032</td><td/><td><span title="EQUIVALENT">~</span>29738008</td></tr><tr><td>10037087</td><td/><td><span title="EQUIVALENT">~</span>418363000</td></tr><tr><td>10037175</td><td/><td><span title="SOURCEISNARROWERTHANTARGET">&lt;</span>74732009<i>(SOC-Restkategorie.)</i></td></tr><tr><td>10037234</td><td/><td><span title="EQUIVALENT">~</span>69322001</td></tr><tr><td>10037375</td><td/><td><span title="EQUIVALENT">~</span>19242006</td></tr><tr><td>10037383</td><td/><td><span title="EQUIVALENT">~</span>51615001</td></tr><tr><td>10037400</td><td/><td><span title="EQUIVALENT">~</span>70995007</td></tr><tr><td>10037549</td><td/><td><span title="EQUIVALENT">~</span>387778001</td></tr><tr><td>10037767</td><td/><td><span title="EQUIVALENT">~</span>403644004<i>(Woertliche Entsprechung des Radiation-Recall-Phaenomens.)</i></td></tr><tr><td>10037847</td><td/><td><span title="EQUIVALENT">~</span>402644006<i>(Woertliche Entsprechung.)</i></td></tr><tr><td>10037868</td><td/><td><span title="EQUIVALENT">~</span>247471006<i>(Woertliche Entsprechung.)</i></td></tr><tr><td>10037888</td><td/><td><span title="SOURCEISBROADERTHANTARGET">&gt;</span>1251376007<i>(SNOMED-Konzept ist auf die akute Auspraegung eingeschraenkt)</i></td></tr><tr><td>10038062</td><td/><td><span title="EQUIVALENT">~</span>80736008</td></tr><tr><td>10038064</td><td/><td><span title="EQUIVALENT">~</span>12063002</td></tr><tr><td>10038072</td><td/><td><span title="EQUIVALENT">~</span>77880009</td></tr><tr><td>10038073</td><td/><td><span title="EQUIVALENT">~</span>10825001</td></tr><tr><td>10038079</td><td/><td><span title="EQUIVALENT">~</span>25730006<i>(Kandidatenwechsel: kongenitale Variante ersetzt)</i></td></tr><tr><td>10038080</td><td/><td><span title="EQUIVALENT">~</span>54609002</td></tr><tr><td>10038130</td><td/><td><span title="EQUIVALENT">~</span>42998008</td></tr><tr><td>10038359</td><td/><td><span title="SOURCEISNARROWERTHANTARGET">&lt;</span>128606002<i>(SOC-Restkategorie; der renale Anteil ist als Teil des Harnsystems mitumfasst.)</i></td></tr><tr><td>10038385</td><td/><td><span title="EQUIVALENT">~</span>95570007<i>(Renale Konkremente = Nierensteine.)</i></td></tr><tr><td>10038419</td><td/><td><span title="EQUIVALENT">~</span>7093002</td></tr><tr><td>10038463</td><td/><td><span title="EQUIVALENT">~</span>95571006</td></tr><tr><td>10038604</td><td/><td><span title="SOURCEISNARROWERTHANTARGET">&lt;</span>362968007<i>(SOC-Restkategorie; Brusterkrankungen sind nicht mitabgedeckt.)</i></td></tr><tr><td>10038695</td><td/><td><span title="EQUIVALENT">~</span>409622000</td></tr><tr><td>10038738</td><td/><td><span title="SOURCEISNARROWERTHANTARGET">&lt;</span>50043002<i>(SOC-Restkategorie; der mediastinale Anteil ist nicht mitabgedeckt.)</i></td></tr><tr><td>10038743</td><td/><td><span title="EQUIVALENT">~</span>162221009</td></tr><tr><td>10038748</td><td/><td><span title="EQUIVALENT">~</span>415295002</td></tr><tr><td>10038848</td><td/><td><span title="EQUIVALENT">~</span>42059000</td></tr><tr><td>10038897</td><td/><td><span title="EQUIVALENT">~</span>95690009</td></tr><tr><td>10038901</td><td/><td><span title="EQUIVALENT">~</span>57534004</td></tr><tr><td>10038921</td><td/><td><span title="EQUIVALENT">~</span>773537001</td></tr><tr><td>10038923</td><td/><td><span title="EQUIVALENT">~</span>29555009</td></tr><tr><td>10038981</td><td/><td><span title="EQUIVALENT">~</span>95549001</td></tr><tr><td>10039411</td><td/><td><span title="EQUIVALENT">~</span>75260002</td></tr><tr><td>10039413</td><td/><td><span title="SOURCEISNARROWERTHANTARGET">&lt;</span>42982001<i>(Sialadenitis umfasst auch nicht-infektioese Speicheldruesenentzuendungen; ein Infektionskonzept fehlt.)</i></td></tr><tr><td>10039722</td><td/><td><span title="EQUIVALENT">~</span>298382003</td></tr><tr><td>10039757</td><td/><td><span title="EQUIVALENT">~</span>20502007</td></tr><tr><td>10039906</td><td/><td><span title="EQUIVALENT">~</span>91175000</td></tr><tr><td>10040047</td><td/><td><span title="EQUIVALENT">~</span>91302008</td></tr><tr><td>10040102</td><td/><td><span title="EQUIVALENT">~</span>715068009</td></tr><tr><td>10040139</td><td/><td><span title="EQUIVALENT">~</span>275739007<i>(Laborwert-Muster 'increased' -&gt; 'above reference range'.)</i></td></tr><tr><td>10040400</td><td/><td><span title="SOURCEISBROADERTHANTARGET">&gt;</span>403608009<i>(Kein generisches 'Serum sickness' in SNOMED; im CTCAE-Kontext ist die Reaktion arzneimittelbedingt)</i></td></tr><tr><td>10040639</td><td/><td><span title="EQUIVALENT">~</span>36083008</td></tr><tr><td>10040741</td><td/><td><span title="EQUIVALENT">~</span>49710005</td></tr><tr><td>10040747</td><td/><td><span title="EQUIVALENT">~</span>4969004<i>(SNOMED-FSN lautet 'Sinus headache', Oberbegriff von Stirn- und Kieferhoehlenschmerz)</i></td></tr><tr><td>10040752</td><td/><td><span title="EQUIVALENT">~</span>11092001</td></tr><tr><td>10040753</td><td/><td><span title="EQUIVALENT">~</span>36971009</td></tr><tr><td>10040785</td><td/><td><span title="SOURCEISNARROWERTHANTARGET">&lt;</span>95320005<i>(SOC-Restkategorie; der subkutane Anteil ist nicht explizit mitabgedeckt.)</i></td></tr><tr><td>10040799</td><td/><td><span title="EQUIVALENT">~</span>400190005</td></tr><tr><td>10040865</td><td/><td><span title="EQUIVALENT">~</span>49765009</td></tr><tr><td>10040868</td><td/><td><span title="EQUIVALENT">~</span>23006000</td></tr><tr><td>10040872</td><td/><td><span title="EQUIVALENT">~</span>19824006</td></tr><tr><td>10040947</td><td/><td><span title="EQUIVALENT">~</span>46742003<i>(Kandidatenwechsel: 'Amebic ulcer of skin' war fachlich falsch)</i></td></tr><tr><td>10040975</td><td/><td><span title="EQUIVALENT">~</span>73430006</td></tr><tr><td>10041101</td><td/><td><span title="EQUIVALENT">~</span>281255004<i>(Kandidatenwechsel: Kandidat enthielt Aetiologie (Adhaesionen))</i></td></tr><tr><td>10041103</td><td/><td><span title="EQUIVALENT">~</span>235741002<i>(Wortumstellung.)</i></td></tr><tr><td>10041133</td><td/><td><span title="EQUIVALENT">~</span>235710003</td></tr><tr><td>10041232</td><td/><td><span title="EQUIVALENT">~</span>76067001</td></tr><tr><td>10041244</td><td/><td/></tr><tr><td>10041349</td><td/><td><span title="EQUIVALENT">~</span>271782001</td></tr><tr><td>10041367</td><td/><td><span title="EQUIVALENT">~</span>267102003</td></tr><tr><td>10041416</td><td/><td><span title="EQUIVALENT">~</span>221360009</td></tr><tr><td>10041569</td><td/><td><span title="EQUIVALENT">~</span>50448004</td></tr><tr><td>10041633</td><td/><td><span title="EQUIVALENT">~</span>51244008</td></tr><tr><td>10042033</td><td/><td><span title="EQUIVALENT">~</span>73442001</td></tr><tr><td>10042112</td><td/><td><span title="EQUIVALENT">~</span>271681002</td></tr><tr><td>10042127</td><td/><td><span title="EQUIVALENT">~</span>16121001</td></tr><tr><td>10042241</td><td/><td><span title="EQUIVALENT">~</span>70407001</td></tr><tr><td>10042244</td><td/><td><span title="EQUIVALENT">~</span>230690007</td></tr><tr><td>10042435</td><td/><td><span title="EQUIVALENT">~</span>26636000</td></tr><tr><td>10042458</td><td/><td><span title="EQUIVALENT">~</span>6471006</td></tr><tr><td>10042464</td><td/><td><span title="EQUIVALENT">~</span>82313006<i>(Kandidatenwechsel: 'Injury due to suicide attempt' setzt eine Verletzung voraus)</i></td></tr><tr><td>10042554</td><td/><td><span title="EQUIVALENT">~</span>2477008</td></tr><tr><td>10042569</td><td/><td><span title="EQUIVALENT">~</span>63363004</td></tr><tr><td>10042604</td><td/><td><span title="EQUIVALENT">~</span>6456007</td></tr><tr><td>10042613</td><td/><td/></tr><tr><td>10042772</td><td/><td><span title="EQUIVALENT">~</span>271594007</td></tr><tr><td>10043189</td><td/><td><span title="EQUIVALENT">~</span>247479008<i>(Kandidatenwechsel: 'Solar telangiectasia' war zu eng)</i></td></tr><tr><td>10043306</td><td/><td><span title="EQUIVALENT">~</span>64910008</td></tr><tr><td>10043345</td><td/><td><span title="EQUIVALENT">~</span>63901009</td></tr><tr><td>10043565</td><td/><td><span title="EQUIVALENT">~</span>371039008<i>(Thromboembolisches Ereignis; deckungsgleich.)</i></td></tr><tr><td>10043648</td><td/><td><span title="EQUIVALENT">~</span>78129009</td></tr><tr><td>10043882</td><td/><td><span title="EQUIVALENT">~</span>60862001</td></tr><tr><td>10044030</td><td/><td><span title="EQUIVALENT">~</span>371136004</td></tr><tr><td>10044031</td><td/><td><span title="EQUIVALENT">~</span>278679009<i>(Kandidatenwechsel: 'Staining of tooth' ist Unterbegriff von 'Tooth discolored')</i></td></tr><tr><td>10044055</td><td/><td><span title="EQUIVALENT">~</span>27355003</td></tr><tr><td>10044223</td><td/><td><span title="EQUIVALENT">~</span>768962006</td></tr><tr><td>10044291</td><td/><td><span title="EQUIVALENT">~</span>73342002</td></tr><tr><td>10044302</td><td/><td><span title="EQUIVALENT">~</span>62994001</td></tr><tr><td>10044391</td><td/><td><span title="EQUIVALENT">~</span>266257000<i>(TIA; deckungsgleich.)</i></td></tr><tr><td>10044565</td><td/><td><span title="EQUIVALENT">~</span>26079004</td></tr><tr><td>10044684</td><td/><td><span title="EQUIVALENT">~</span>87866006</td></tr><tr><td>10045152</td><td/><td><span title="EQUIVALENT">~</span>277605001</td></tr><tr><td>10045158</td><td/><td/></tr><tr><td>10045271</td><td/><td><span title="EQUIVALENT">~</span>61564002</td></tr><tr><td>10045542</td><td/><td><span title="EQUIVALENT">~</span>83074005</td></tr><tr><td>10046300</td><td/><td><span title="EQUIVALENT">~</span>54150009</td></tr><tr><td>10046539</td><td/><td><span title="EQUIVALENT">~</span>162116003</td></tr><tr><td>10046543</td><td/><td><span title="EQUIVALENT">~</span>165232002</td></tr><tr><td>10046555</td><td/><td><span title="EQUIVALENT">~</span>267064002</td></tr><tr><td>10046571</td><td/><td><span title="EQUIVALENT">~</span>68566005</td></tr><tr><td>10046593</td><td/><td><span title="EQUIVALENT">~</span>75088002</td></tr><tr><td>10046628</td><td/><td><span title="EQUIVALENT">~</span>167239007<i>(Verfaerbung des Urins; deckungsgleich.)</i></td></tr><tr><td>10046735</td><td/><td><span title="EQUIVALENT">~</span>126485001</td></tr><tr><td>10046789</td><td/><td><span title="EQUIVALENT">~</span>44991000119100<i>(Kandidatenwechsel: Syn. 'Abnormal uterine haemorrhage'; Kandidat 'Hematometra' war fachlich falsch)</i></td></tr><tr><td>10046809</td><td/><td><span title="EQUIVALENT">~</span>289669005<i>(Kandidatenwechsel: 'Painful uterine contractions' war geburtsbezogen)</i></td></tr><tr><td>10046810</td><td/><td><span title="EQUIVALENT">~</span>7395000</td></tr><tr><td>10046851</td><td/><td><span title="EQUIVALENT">~</span>128473001</td></tr><tr><td>10046901</td><td/><td><span title="EQUIVALENT">~</span>271939006</td></tr><tr><td>10046904</td><td/><td><span title="EQUIVALENT">~</span>31908003</td></tr><tr><td>10046912</td><td/><td><span title="EQUIVALENT">~</span>289530006<i>(Kandidatenwechsel: neonatale Variante ersetzt)</i></td></tr><tr><td>10046914</td><td/><td><span title="EQUIVALENT">~</span>237091009</td></tr><tr><td>10046916</td><td/><td><span title="EQUIVALENT">~</span>30800001<i>(Kandidatenwechsel: 'Inflammation of vaginal wall' war zu eng)</i></td></tr><tr><td>10046937</td><td/><td><span title="EQUIVALENT">~</span>38343000</td></tr><tr><td>10046947</td><td/><td><span title="EQUIVALENT">~</span>79012001</td></tr><tr><td>10047065</td><td/><td><span title="SOURCEISNARROWERTHANTARGET">&lt;</span>27550009<i>(SOC-Restkategorie.)</i></td></tr><tr><td>10047115</td><td/><td><span title="EQUIVALENT">~</span>31996006</td></tr><tr><td>10047166</td><td/><td><span title="SOURCEISBROADERTHANTARGET">&gt;</span>398665005<i>(SNOMED hat keine vasovagale Reaktion ohne Synkope; CTCAE schliesst Praesynkopen ein. 248229009 'Vasovagal symptom' waere ein Symptom-, kein Ereigniskonzept.)</i></td></tr><tr><td>10047228</td><td/><td><span title="EQUIVALENT">~</span>64583005</td></tr><tr><td>10047281</td><td/><td><span title="EQUIVALENT">~</span>44103008</td></tr><tr><td>10047290</td><td/><td><span title="EQUIVALENT">~</span>71908006</td></tr><tr><td>10047302</td><td/><td><span title="EQUIVALENT">~</span>25569003</td></tr><tr><td>10047340</td><td/><td><span title="EQUIVALENT">~</span>399153001</td></tr><tr><td>10047386</td><td/><td><span title="EQUIVALENT">~</span>20425006</td></tr><tr><td>10047488</td><td/><td><span title="EQUIVALENT">~</span>15160007</td></tr><tr><td>10047580</td><td/><td><span title="SOURCEISBROADERTHANTARGET">&gt;</span>165040003<i>(SNOMED bezieht sich auf die forcierte Vitalkapazitaet, CTCAE allgemein auf die Vitalkapazitaet)</i></td></tr><tr><td>10047656</td><td/><td><span title="EQUIVALENT">~</span>31341008</td></tr><tr><td>10047681</td><td/><td><span title="EQUIVALENT">~</span>16617009<i>(Dysphonie = Stimmstoerung/Stimmveraenderung.)</i></td></tr><tr><td>10047700</td><td/><td><span title="EQUIVALENT">~</span>422400008</td></tr><tr><td>10047848</td><td/><td><span title="EQUIVALENT">~</span>193982009<i>(Epiphora = uebermaessiger Traenenfluss, deckungsgleich mit CTCAE 'Watering eyes'.)</i></td></tr><tr><td>10047896</td><td/><td><span title="EQUIVALENT">~</span>262286000</td></tr><tr><td>10047900</td><td/><td><span title="EQUIVALENT">~</span>262285001</td></tr><tr><td>10047924</td><td/><td><span title="EQUIVALENT">~</span>56018004</td></tr><tr><td>10048015</td><td/><td><span title="EQUIVALENT">~</span>74390002</td></tr><tr><td>10048031</td><td/><td><span title="EQUIVALENT">~</span>225553008</td></tr><tr><td>10048038</td><td/><td><span title="EQUIVALENT">~</span>76844004</td></tr><tr><td>10048049</td><td/><td><span title="EQUIVALENT">~</span>1303397005<i>(Kandidatenwechsel: 'Fracture of carpal bone' deckt die Handgelenkregion nicht vollstaendig ab)</i></td></tr><tr><td>10048293</td><td/><td><span title="SOURCEISBROADERTHANTARGET">&gt;</span>762315004<i>(SNOMED kennt nur die therapieassoziierte AML; CTCAE umfasst jede chemotherapieinduzierte Leukaemie.)</i></td></tr><tr><td>10048492</td><td/><td><span title="EQUIVALENT">~</span>91514001</td></tr><tr><td>10048580</td><td/><td><span title="EQUIVALENT">~</span>416995001</td></tr><tr><td>10048642</td><td/><td><span title="EQUIVALENT">~</span>234109007</td></tr><tr><td>10048677</td><td/><td><span title="EQUIVALENT">~</span>279043006</td></tr><tr><td>10048706</td><td/><td><span title="EQUIVALENT">~</span>70733008<i>(Bewegungseinschraenkung des Gelenks; deckungsgleich.)</i></td></tr><tr><td>10048762</td><td/><td><span title="EQUIVALENT">~</span>427898007</td></tr><tr><td>10048994</td><td/><td><span title="EQUIVALENT">~</span>249297006</td></tr><tr><td>10049120</td><td/><td/></tr><tr><td>10049182</td><td/><td><span title="EQUIVALENT">~</span>419188005<i>(Laborwert-Muster 'decreased' -&gt; 'below reference range'.)</i></td></tr><tr><td>10049192</td><td/><td><span title="EQUIVALENT">~</span>25803005</td></tr><tr><td>10049281</td><td/><td><span title="EQUIVALENT">~</span>247492006<i>(Kandidatenwechsel: 'Onychomadesis' meint vollstaendigen Nagelverlust, CTCAE auch teilweisen)</i></td></tr><tr><td>10049468</td><td/><td><span title="SOURCEISBROADERTHANTARGET">&gt;</span>805616441000119104<i>(SNOMED hat nur stomatypspezifische Blutungskonzepte; die Ileostomie ist das haeufigste Darmstoma.)</i></td></tr><tr><td>10049737</td><td/><td/></tr><tr><td>10050028</td><td/><td><span title="EQUIVALENT">~</span>232408005</td></tr><tr><td>10050068</td><td/><td><span title="EQUIVALENT">~</span>424372002<i>(Kandidatenwechsel: seitenbezogenes Konzept durch generisches ersetzt)</i></td></tr><tr><td>10050094</td><td/><td><span title="EQUIVALENT">~</span>73120006</td></tr><tr><td>10050457</td><td/><td><span title="EQUIVALENT">~</span>235980000</td></tr><tr><td>10050458</td><td/><td><span title="EQUIVALENT">~</span>235940009</td></tr><tr><td>10050528</td><td/><td><span title="SOURCEISBROADERTHANTARGET">&gt;</span>863932003<i>(SNOMED nur linksventrikulaer; CTCAE-Term ist ventrikelunspezifisch)</i></td></tr><tr><td>10050662</td><td/><td><span title="EQUIVALENT">~</span>1371408008</td></tr><tr><td>10050816</td><td/><td><span title="EQUIVALENT">~</span>11296007</td></tr><tr><td>10050823</td><td/><td><span title="SOURCEISNARROWERTHANTARGET">&lt;</span>19471005<i>(Lymphadenitis umfasst auch nicht-infektioese Lymphknotenentzuendungen; ein spezifisches Infektionskonzept fehlt in SNOMED.)</i></td></tr><tr><td>10051228</td><td/><td><span title="EQUIVALENT">~</span>83035003</td></tr><tr><td>10051272</td><td/><td><span title="EQUIVALENT">~</span>95666008<i>(Kandidatenwechsel: seitenbezogenes Konzept ersetzt)</i></td></tr><tr><td>10051341</td><td/><td><span title="EQUIVALENT">~</span>43030007</td></tr><tr><td>10051472</td><td/><td><span title="SOURCEISBROADERTHANTARGET">&gt;</span>109245003<i>(SNOMED kennt nur die periorbitale Zellulitis als konkrete Manifestation; CTCAE meint jeden periorbitalen Infektionsprozess.)</i></td></tr><tr><td>10051592</td><td/><td><span title="EQUIVALENT">~</span>394659003</td></tr><tr><td>10051741</td><td/><td/></tr><tr><td>10051746</td><td/><td><span title="EQUIVALENT">~</span>87763006</td></tr><tr><td>10051792</td><td/><td/></tr><tr><td>10051837</td><td/><td><span title="EQUIVALENT">~</span>34319007</td></tr><tr><td>10051886</td><td/><td><span title="EQUIVALENT">~</span>235683000</td></tr><tr><td>10052015</td><td/><td><span title="EQUIVALENT">~</span>710027002<i>(Pin-Version 20250701: 710027002 ist hier aktiv (Inaktivierung erst in einem späteren Release; das Nachfolgekonzept Cytokine storm syndrome existiert im Pin noch nicht).)</i></td></tr><tr><td>10052298</td><td/><td><span title="EQUIVALENT">~</span>236681009<i>(Kandidatenwechsel: Kandidat war eine infektbedingte Striktur)</i></td></tr><tr><td>10052426</td><td/><td><span title="EQUIVALENT">~</span>9414007<i>(Kandidatenwechsel: 'Malabsorption of glucose' war fachlich falsch)</i></td></tr><tr><td>10053481</td><td/><td><span title="EQUIVALENT">~</span>233793003</td></tr><tr><td>10053496</td><td/><td><span title="EQUIVALENT">~</span>37914004<i>(Kandidatenwechsel: 'Tunica vaginalis stricture' war fachlich falsch (Hodenhuelle))</i></td></tr><tr><td>10053565</td><td/><td><span title="EQUIVALENT">~</span>35304003</td></tr><tr><td>10053661</td><td/><td><span title="EQUIVALENT">~</span>60750009</td></tr><tr><td>10053662</td><td/><td><span title="EQUIVALENT">~</span>398925009</td></tr><tr><td>10053692</td><td/><td/></tr><tr><td>10054382</td><td/><td><span title="SOURCEISNARROWERTHANTARGET">&lt;</span>473004000<i>(SNOMED unterscheidet nicht zwischen erworbener und angeborener Feminisierung.)</i></td></tr><tr><td>10054482</td><td/><td><span title="SOURCEISNARROWERTHANTARGET">&lt;</span>301777002<i>(SNOMED unterscheidet nicht zwischen Fluessigkeitseinlagerung und sonstiger Halsschwellung; 'Neck swelling' umfasst auch Raumforderungen.)</i></td></tr><tr><td>10054520</td><td/><td><span title="SOURCEISBROADERTHANTARGET">&gt;</span>1202021001<i>(SNOMED hat keine orale Dysaesthesie; der Brennschmerz ist die haeufigste, aber nicht die einzige Auspraegung (Kribbeln/Taubheit fehlen). 399165002 'Burning mouth syndrome' waere ein eigenstaendiges Krankheitsbild und daher unpassend.)</i></td></tr><tr><td>10054524</td><td/><td><span title="EQUIVALENT">~</span>403638003<i>(Akrales Erythem unter Zytostatika = Hand-Fuss-Syndrom / PPE.)</i></td></tr><tr><td>10054541</td><td/><td><span title="EQUIVALENT">~</span>49563000</td></tr><tr><td>10054692</td><td/><td><span title="SOURCEISNARROWERTHANTARGET">&lt;</span>153821000119103<i>(SNOMED unterscheidet nicht zwischen arterieller und venoeser viszeraler Ischaemie.)</i></td></tr><tr><td>10054746</td><td/><td><span title="EQUIVALENT">~</span>22033007</td></tr><tr><td>10055005</td><td/><td><span title="EQUIVALENT">~</span>280516007<i>(Wortumstellung.)</i></td></tr><tr><td>10055026</td><td/><td><span title="EQUIVALENT">~</span>4127004</td></tr><tr><td>10055078</td><td/><td><span title="EQUIVALENT">~</span>233795005</td></tr><tr><td>10055226</td><td/><td><span title="EQUIVALENT">~</span>6072007<i>(Wortumstellung; SNOMED-Term nennt die Blutung aus dem Anus.)</i></td></tr><tr><td>10055242</td><td/><td><span title="EQUIVALENT">~</span>95533003</td></tr><tr><td>10055287</td><td/><td><span title="EQUIVALENT">~</span>95535005</td></tr><tr><td>10055291</td><td/><td><span title="EQUIVALENT">~</span>443826006<i>(Kandidatenwechsel: Synonym 'Intraabdominal hemorrhage'; Kandidat war postprozedural)</i></td></tr><tr><td>10055298</td><td/><td><span title="EQUIVALENT">~</span>213261000</td></tr><tr><td>10055300</td><td/><td><span title="EQUIVALENT">~</span>712509002<i>(Kandidatenwechsel: anastomotische Variante ersetzt)</i></td></tr><tr><td>10055315</td><td/><td><span title="EQUIVALENT">~</span>324618004</td></tr><tr><td>10055319</td><td/><td><span title="EQUIVALENT">~</span>31892009</td></tr><tr><td>10055322</td><td/><td><span title="EQUIVALENT">~</span>110265006</td></tr><tr><td>10055325</td><td/><td><span title="EQUIVALENT">~</span>44843000</td></tr><tr><td>10055347</td><td/><td><span title="EQUIVALENT">~</span>77708008</td></tr><tr><td>10055356</td><td/><td><span title="EQUIVALENT">~</span>37372002</td></tr><tr><td>10055472</td><td/><td><span title="EQUIVALENT">~</span>23387001<i>(Kandidatenwechsel: 'Spontaneous rupture' ersetzt)</i></td></tr><tr><td>10055599</td><td/><td><span title="EQUIVALENT">~</span>131141003</td></tr><tr><td>10056238</td><td/><td><span title="EQUIVALENT">~</span>710110008</td></tr><tr><td>10056356</td><td/><td/></tr><tr><td>10056388</td><td/><td><span title="EQUIVALENT">~</span>68982002</td></tr><tr><td>10056519</td><td/><td><span title="EQUIVALENT">~</span>128070006</td></tr><tr><td>10056522</td><td/><td><span title="EQUIVALENT">~</span>235859005<i>(Kandidatenwechsel: Syn. 'Infectious disease of liver'; Kandidat war eine Leberegelinfektion)</i></td></tr><tr><td>10056627</td><td/><td><span title="SOURCEISBROADERTHANTARGET">&gt;</span>77910001<i>(In SNOMED unter 'Infectious disease of cardiovascular system' eingeordnet, also die infektioese Phlebitis - allerdings mit dem zusaetzlichen Merkmal 'eitrig'. 61599003 'Phlebitis' ist bereits dem CTCAE-Term 'Phlebitis' zugeordnet.)</i></td></tr><tr><td>10056681</td><td/><td><span title="EQUIVALENT">~</span>41569004<i>(Sialodochitis = Entzuendung des Speichelgangs (im Unterschied zur Sialadenitis der Druese).)</i></td></tr><tr><td>10056745</td><td/><td/></tr><tr><td>10056910</td><td/><td><span title="EQUIVALENT">~</span>274782002<i>(GGT ausgeschrieben; Laborwert-Muster 'increased' -&gt; 'above reference range'.)</i></td></tr><tr><td>10057066</td><td/><td><span title="SOURCEISNARROWERTHANTARGET">&lt;</span>40915004<i>(SNOMED hat keinen verzoegerten Orgasmus; 'Orgasm impairment' umfasst auch Anorgasmie und abgeschwaechten Orgasmus. 735633000 ff. (delayed ejaculation) waeren maennerspezifisch.)</i></td></tr><tr><td>10057262</td><td/><td><span title="EQUIVALENT">~</span>129129003<i>(Kandidatenwechsel: Peritonealdialyse-Katheterinfektion ersetzt)</i></td></tr><tr><td>10057483</td><td/><td><span title="EQUIVALENT">~</span>312157006<i>(Woertliche Entsprechung.)</i></td></tr><tr><td>10058084</td><td/><td><span title="EQUIVALENT">~</span>400179000</td></tr><tr><td>10058096</td><td/><td><span title="EQUIVALENT">~</span>1835003</td></tr><tr><td>10058597</td><td/><td><span title="EQUIVALENT">~</span>473365008<i>(Kandidatenwechsel: fetale Variante ersetzt)</i></td></tr><tr><td>10058674</td><td/><td><span title="EQUIVALENT">~</span>203230004<i>(Kandidatenwechsel: gonokokkenbedingte Variante ersetzt)</i></td></tr><tr><td>10058720</td><td/><td><span title="EQUIVALENT">~</span>301867009</td></tr><tr><td>10058804</td><td/><td><span title="EQUIVALENT">~</span>235600000<i>(Kandidatenwechsel: Herpes-spezifisches Konzept ersetzt)</i></td></tr><tr><td>10058838</td><td/><td/></tr><tr><td>10059094</td><td/><td><span title="SOURCEISNARROWERTHANTARGET">&lt;</span>236131001<i>(SNOMED-Konzept ist nicht auf Darmstomata eingeschraenkt.)</i></td></tr><tr><td>10059095</td><td/><td/></tr><tr><td>10059446</td><td/><td><span title="EQUIVALENT">~</span>111372003<i>(Gangraen = Nekrose der Gallenblase.)</i></td></tr><tr><td>10059639</td><td/><td><span title="EQUIVALENT">~</span>61169001<i>(Kandidatenwechsel: 'Inducible laryngeal obstruction' war zu eng)</i></td></tr><tr><td>10059827</td><td/><td><span title="EQUIVALENT">~</span>275496003<i>(Korrektur aus adversarialer Verifikation)</i></td></tr><tr><td>10059895</td><td/><td><span title="EQUIVALENT">~</span>718403007</td></tr><tr><td>10060602</td><td/><td><span title="EQUIVALENT">~</span>78095005</td></tr><tr><td>10060640</td><td/><td><span title="EQUIVALENT">~</span>51551000<i>(SNOMED formuliert als 'blutende Haemorrhoiden'; inhaltlich identisch.)</i></td></tr><tr><td>10060890</td><td/><td><span title="EQUIVALENT">~</span>64309007</td></tr><tr><td>10060929</td><td/><td><span title="EQUIVALENT">~</span>84759007</td></tr><tr><td>10061017</td><td/><td><span title="EQUIVALENT">~</span>111253001</td></tr><tr><td>10061103</td><td/><td><span title="EQUIVALENT">~</span>49084001</td></tr><tr><td>10061145</td><td/><td><span title="SOURCEISNARROWERTHANTARGET">&lt;</span>60113004<i>(SNOMED unterscheidet keine reine Funktionsstoerung des Lids; 'Disorder of eyelid' umfasst auch strukturelle Lidveraenderungen.)</i></td></tr><tr><td>10061149</td><td/><td><span title="EQUIVALENT">~</span>85059005<i>(Kandidatenwechsel: 'Female genital tract-skin fistula' war zu eng)</i></td></tr><tr><td>10061185</td><td/><td><span title="EQUIVALENT">~</span>80962007</td></tr><tr><td>10061212</td><td/><td><span title="EQUIVALENT">~</span>24777009</td></tr><tr><td>10061229</td><td/><td><span title="EQUIVALENT">~</span>128601007</td></tr><tr><td>10061261</td><td/><td><span title="EQUIVALENT">~</span>35046003</td></tr><tr><td>10061304</td><td/><td><span title="EQUIVALENT">~</span>238408000</td></tr><tr><td>10061322</td><td/><td><span title="EQUIVALENT">~</span>77157004</td></tr><tr><td>10061339</td><td/><td><span title="EQUIVALENT">~</span>225565007</td></tr><tr><td>10061351</td><td/><td><span title="SOURCEISBROADERTHANTARGET">&gt;</span>58554001<i>(Kein generisches Konzept fuer Pleurainfektion; Empyem ist die eitrige Auspraegung)</i></td></tr><tr><td>10061389</td><td/><td><span title="EQUIVALENT">~</span>20721001</td></tr><tr><td>10061403</td><td/><td><span title="EQUIVALENT">~</span>73765005</td></tr><tr><td>10061457</td><td/><td><span title="EQUIVALENT">~</span>422426003</td></tr><tr><td>10061461</td><td/><td><span title="EQUIVALENT">~</span>860914002</td></tr><tr><td>10061510</td><td/><td><span title="EQUIVALENT">~</span>33064008<i>(Kandidatenwechsel: 'Scleral melt' war zu spezifisch)</i></td></tr><tr><td>10061532</td><td/><td><span title="EQUIVALENT">~</span>11851006</td></tr><tr><td>10061541</td><td/><td><span title="EQUIVALENT">~</span>76267008</td></tr><tr><td>10061574</td><td/><td><span title="EQUIVALENT">~</span>7163005</td></tr><tr><td>10061589</td><td/><td><span title="EQUIVALENT">~</span>8722008</td></tr><tr><td>10061640</td><td/><td><span title="SOURCEISBROADERTHANTARGET">&gt;</span>371568002<i>(SNOMED hat kein anorektales Infektionskonzept; 'Anal infection' deckt nur den analen Anteil ab.)</i></td></tr><tr><td>10061664</td><td/><td><span title="EQUIVALENT">~</span>85828009</td></tr><tr><td>10061695</td><td/><td><span title="EQUIVALENT">~</span>846685008</td></tr><tr><td>10061788</td><td/><td><span title="EQUIVALENT">~</span>312428002</td></tr><tr><td>10061912</td><td/><td><span title="EQUIVALENT">~</span>309090002<i>(Kandidatenwechsel: Protheseninfektion ersetzt)</i></td></tr><tr><td>10061928</td><td/><td><span title="EQUIVALENT">~</span>82473003</td></tr><tr><td>10061970</td><td/><td><span title="EQUIVALENT">~</span>55860008<i>(Kandidatenwechsel: erworbene Pylorusstenose ersetzt)</i></td></tr><tr><td>10062112</td><td/><td><span title="EQUIVALENT">~</span>721239009<i>(Wortumstellung.)</i></td></tr><tr><td>10062156</td><td/><td><span title="EQUIVALENT">~</span>371413003<i>(Wortumstellung.)</i></td></tr><tr><td>10062169</td><td/><td><span title="SOURCEISBROADERTHANTARGET">&gt;</span>398158001<i>(SNOMED-Konzept beschraenkt sich auf intravasale Katheter/Verweilkanuelen; CTCAE 'Vascular access complication' schliesst auch andere Zugangsformen (z.B. Shunt) ein.)</i></td></tr><tr><td>10062225</td><td/><td><span title="EQUIVALENT">~</span>247382002</td></tr><tr><td>10062233</td><td/><td><span title="EQUIVALENT">~</span>301775005</td></tr><tr><td>10062244</td><td/><td><span title="EQUIVALENT">~</span>7393007<i>(Kandidatenwechsel: 'Sinusitis' war zu eng)</i></td></tr><tr><td>10062255</td><td/><td><span title="EQUIVALENT">~</span>95880003</td></tr><tr><td>10062263</td><td/><td><span title="EQUIVALENT">~</span>1162577003<i>(Striktur = Stenose; die uebrigen Treffer (204691002, 14430002) sind kongenital und daher unpassend.)</i></td></tr><tr><td>10062283</td><td/><td><span title="EQUIVALENT">~</span>271768001<i>(Kandidatenwechsel: 'Beaded ridging of nails' war zu eng)</i></td></tr><tr><td>10062315</td><td/><td><span title="EQUIVALENT">~</span>238893005<i>(Kandidatenwechsel: insulinbedingte Variante ersetzt)</i></td></tr><tr><td>10062466</td><td/><td><span title="EQUIVALENT">~</span>274724004</td></tr><tr><td>10062501</td><td/><td><span title="EQUIVALENT">~</span>274668005</td></tr><tr><td>10062548</td><td/><td><span title="EQUIVALENT">~</span>233783005</td></tr><tr><td>10062570</td><td/><td><span title="EQUIVALENT">~</span>40046003</td></tr><tr><td>10062572</td><td/><td><span title="EQUIVALENT">~</span>1137501002</td></tr><tr><td>10062632</td><td/><td/></tr><tr><td>10062646</td><td/><td/></tr><tr><td>10062667</td><td/><td/></tr><tr><td>10062872</td><td/><td><span title="EQUIVALENT">~</span>279079003</td></tr><tr><td>10063057</td><td/><td/></tr><tr><td>10063190</td><td/><td/></tr><tr><td>10063524</td><td/><td><span title="EQUIVALENT">~</span>79877004<i>(Kandidatenwechsel: anastomotische Variante ersetzt)</i></td></tr><tr><td>10063575</td><td/><td><span title="EQUIVALENT">~</span>262909002</td></tr><tr><td>10063636</td><td/><td><span title="EQUIVALENT">~</span>46251005<i>(Pyramidenbahn = Tractus corticospinalis; SNOMED fuehrt das Konzept unter 'Upper motor neuron disease'.)</i></td></tr><tr><td>10063761</td><td/><td><span title="EQUIVALENT">~</span>450886002</td></tr><tr><td>10064026</td><td/><td/></tr><tr><td>10064505</td><td/><td/></tr><tr><td>10064658</td><td/><td><span title="EQUIVALENT">~</span>1231151009</td></tr><tr><td>10064687</td><td/><td><span title="EQUIVALENT">~</span>473047000<i>(Woertliche Entsprechung.)</i></td></tr><tr><td>10064774</td><td/><td><span title="EQUIVALENT">~</span>95384003<i>(SNOMED fuehrt nur 'Injection site'-Konzepte; Injektions- und Infusionsort werden dort nicht unterschieden. Inhaltlich das Paravasat an der Applikationsstelle.)</i></td></tr><tr><td>10064848</td><td/><td><span title="EQUIVALENT">~</span>709044004</td></tr><tr><td>10065368</td><td/><td><span title="EQUIVALENT">~</span>57243009</td></tr><tr><td>10065417</td><td/><td><span title="EQUIVALENT">~</span>3548001<i>(Kandidatenwechsel: seitenbezogenes Konzept ersetzt; Syn. 'Brachial plexus neuropathy')</i></td></tr><tr><td>10065703</td><td/><td><span title="EQUIVALENT">~</span>235972007<i>(Striktur = Stenose des Ductus pancreaticus.)</i></td></tr><tr><td>10065704</td><td/><td/></tr><tr><td>10065705</td><td/><td/></tr><tr><td>10065706</td><td/><td/></tr><tr><td>10065707</td><td/><td/></tr><tr><td>10065709</td><td/><td/></tr><tr><td>10065710</td><td/><td/></tr><tr><td>10065712</td><td/><td><span title="SOURCEISNARROWERTHANTARGET">&lt;</span>236121008<i>(SNOMED-Konzept ist nicht auf gastrointestinale Stomata eingeschraenkt.)</i></td></tr><tr><td>10065713</td><td/><td><span title="EQUIVALENT">~</span>235671002</td></tr><tr><td>10065719</td><td/><td><span title="EQUIVALENT">~</span>304371002</td></tr><tr><td>10065720</td><td/><td><span title="EQUIVALENT">~</span>20674003<i>(Kandidatenwechsel: orokutane Variante ersetzt)</i></td></tr><tr><td>10065721</td><td/><td/></tr><tr><td>10065722</td><td/><td/></tr><tr><td>10065727</td><td/><td/></tr><tr><td>10065728</td><td/><td><span title="SOURCEISNARROWERTHANTARGET">&lt;</span>235734008<i>(Kein ileumspezifisches Fistelkonzept in SNOMED; Ziel umfasst den gesamten Duenndarm)</i></td></tr><tr><td>10065730</td><td/><td/></tr><tr><td>10065732</td><td/><td/></tr><tr><td>10065735</td><td/><td><span title="EQUIVALENT">~</span>45913009<i>(Laryngitis = Kehlkopfentzuendung. ACHTUNG: derselbe Code ist im HIGH-Tier bereits dem CTCAE-Term 'Laryngitis' (MedDRA 10023874, SOC Infections) zugeordnet; jener Term sollte auf 312423006 'Infective laryngitis' umgehaengt werden, da er die infektioese Form meint.)</i></td></tr><tr><td>10065738</td><td/><td><span title="SOURCEISBROADERTHANTARGET">&gt;</span>300261000119100<i>(SNOMED erfasst nur die erworbene Form)</i></td></tr><tr><td>10065744</td><td/><td><span title="SOURCEISNARROWERTHANTARGET">&lt;</span>52089001<i>(SNOMED hat keine infektioese Arteriitis; 'Arteritis' umfasst auch die (haeufigeren) nicht-infektioesen Formen.)</i></td></tr><tr><td>10065745</td><td/><td><span title="EQUIVALENT">~</span>45168341000119100<i>(Enterostoma = Darmstoma; woertliche Entsprechung.)</i></td></tr><tr><td>10065746</td><td/><td><span title="SOURCEISBROADERTHANTARGET">&gt;</span>78144005<i>(SNOMED deckt nur die Blutung aus dem Lungenparenchym ab; CTCAE schliesst die Bronchialwand ein. 95431003 'Respiratory tract hemorrhage' waere umgekehrt zu weit.)</i></td></tr><tr><td>10065747</td><td/><td><span title="EQUIVALENT">~</span>711441008<i>(Wortumstellung (cecal -&gt; caecum).)</i></td></tr><tr><td>10065748</td><td/><td><span title="SOURCEISBROADERTHANTARGET">&gt;</span>16751421000119105<i>(SNOMED trennt kontinentes und inkontinentes Urostoma; gewählt ist die inkontinente Variante als häufigerer Fall.)</i></td></tr><tr><td>10065749</td><td/><td><span title="EQUIVALENT">~</span>82872004<i>(Woertliche Entsprechung.)</i></td></tr><tr><td>10065752</td><td/><td/></tr><tr><td>10065755</td><td/><td><span title="EQUIVALENT">~</span>737187008</td></tr><tr><td>10065759</td><td/><td><span title="EQUIVALENT">~</span>249467000<i>(Wortumstellung.)</i></td></tr><tr><td>10065761</td><td/><td/></tr><tr><td>10065762</td><td/><td><span title="EQUIVALENT">~</span>33878005</td></tr><tr><td>10065763</td><td/><td/></tr><tr><td>10065764</td><td/><td/></tr><tr><td>10065765</td><td/><td><span title="EQUIVALENT">~</span>721254003</td></tr><tr><td>10065766</td><td/><td><span title="EQUIVALENT">~</span>1177010008</td></tr><tr><td>10065771</td><td/><td/></tr><tr><td>10065772</td><td/><td><span title="SOURCEISNARROWERTHANTARGET">&lt;</span>63144007<i>(SNOMED subsumiert die infektioesen Vulvitiden unter 'Vulvitis'; ein eigenes Infektionskonzept fehlt.)</i></td></tr><tr><td>10065773</td><td/><td><span title="EQUIVALENT">~</span>234104002</td></tr><tr><td>10065775</td><td/><td/></tr><tr><td>10065776</td><td/><td><span title="EQUIVALENT">~</span>1137412000</td></tr><tr><td>10065777</td><td/><td/></tr><tr><td>10065778</td><td/><td/></tr><tr><td>10065779</td><td/><td/></tr><tr><td>10065780</td><td/><td><span title="EQUIVALENT">~</span>278287000<i>(Hemiparese = linksseitige Muskelschwaeche.)</i></td></tr><tr><td>10065781</td><td/><td/></tr><tr><td>10065783</td><td/><td><span title="SOURCEISBROADERTHANTARGET">&gt;</span>40668007<i>(SNOMED erfasst nur erworbene Deformitaeten)</i></td></tr><tr><td>10065784</td><td/><td/></tr><tr><td>10065785</td><td/><td><span title="SOURCEISBROADERTHANTARGET">&gt;</span>792886009<i>(SNOMED kennt nur Schmerz der Ohrmuschel; CTCAE 'External ear pain' umfasst zusaetzlich den aeusseren Gehoergang. 301354004 'Pain of ear' ist bereits dem CTCAE-Term 'Ear pain' zugeordnet.)</i></td></tr><tr><td>10065786</td><td/><td/></tr><tr><td>10065787</td><td/><td><span title="EQUIVALENT">~</span>233778002</td></tr><tr><td>10065788</td><td/><td/></tr><tr><td>10065789</td><td/><td><span title="EQUIVALENT">~</span>237143006<i>(Kandidatenwechsel: seitenbezogenes Konzept ersetzt)</i></td></tr><tr><td>10065790</td><td/><td/></tr><tr><td>10065791</td><td/><td><span title="EQUIVALENT">~</span>280504001</td></tr><tr><td>10065793</td><td/><td/></tr><tr><td>10065794</td><td/><td><span title="EQUIVALENT">~</span>278286009<i>(Hemiparese = rechtsseitige Muskelschwaeche.)</i></td></tr><tr><td>10065795</td><td/><td><span title="EQUIVALENT">~</span>249937002<i>(Woertliche Entsprechung.)</i></td></tr><tr><td>10065796</td><td/><td><span title="EQUIVALENT">~</span>304344002<i>(Woertliche Entsprechung.)</i></td></tr><tr><td>10065798</td><td/><td><span title="EQUIVALENT">~</span>445156001<i>(Oberflaechliches Weichgewebe = Subkutangewebe.)</i></td></tr><tr><td>10065799</td><td/><td/></tr><tr><td>10065800</td><td/><td><span title="EQUIVALENT">~</span>304352004<i>(Woertliche Entsprechung.)</i></td></tr><tr><td>10065802</td><td/><td><span title="SOURCEISNARROWERTHANTARGET">&lt;</span>276869002<i>(SNOMED hat kein blasenspezifisches Anastomoseninsuffizienz-Konzept; das urologische Sammelkonzept ist die naechstliegende Oberklasse.)</i></td></tr><tr><td>10065803</td><td/><td><span title="SOURCEISNARROWERTHANTARGET">&lt;</span>276869002<i>(Kein nierenspezifisches Anastomosenleck in SNOMED; urologisches Sammelkonzept.)</i></td></tr><tr><td>10065805</td><td/><td><span title="SOURCEISBROADERTHANTARGET">&gt;</span>198065008<i>(SNOMED kennt nur die Striktur des Samenstrangs; CTCAE meint jede Obstruktion.)</i></td></tr><tr><td>10065811</td><td/><td><span title="EQUIVALENT">~</span>77408009<i>(Kandidatenwechsel: Kandidat war eine Prozedur (Fistelverschluss))</i></td></tr><tr><td>10065813</td><td/><td><span title="EQUIVALENT">~</span>45135002<i>(Kandidatenwechsel: Beobachtungskonzept durch Disorder-Konzept ersetzt)</i></td></tr><tr><td>10065814</td><td/><td><span title="SOURCEISNARROWERTHANTARGET">&lt;</span>276869002<i>(Kein ureterspezifisches Anastomosenleck in SNOMED; urologisches Sammelkonzept.)</i></td></tr><tr><td>10065815</td><td/><td><span title="SOURCEISNARROWERTHANTARGET">&lt;</span>276869002<i>(Kein urethraspezifisches Anastomosenleck in SNOMED; urologisches Sammelkonzept.)</i></td></tr><tr><td>10065817</td><td/><td><span title="SOURCEISBROADERTHANTARGET">&gt;</span>737178004<i>(Gynatresie = Verschluss der Vagina, in SNOMED unter 'Disorder of vagina'; enger als die CTCAE-Obstruktion, die auch partielle Blockaden umfasst.)</i></td></tr><tr><td>10065818</td><td/><td/></tr><tr><td>10065822</td><td/><td><span title="EQUIVALENT">~</span>298135000<i>(Woertliche Entsprechung.)</i></td></tr><tr><td>10065823</td><td/><td><span title="EQUIVALENT">~</span>237469008</td></tr><tr><td>10065825</td><td/><td><span title="SOURCEISBROADERTHANTARGET">&gt;</span>1290696007<i>(SNOMED deckt nur den Darm ab; CTCAE meint den gesamten Gastrointestinaltrakt (Oesophagus bis Anus).)</i></td></tr><tr><td>10065826</td><td/><td><span title="EQUIVALENT">~</span>1375944001<i>(Wörtliche Entsprechung des intraoperativen Arterienschadens.)</i></td></tr><tr><td>10065827</td><td/><td><span title="SOURCEISBROADERTHANTARGET">&gt;</span>713203006<i>(SNOMED trennt Leber (713203006) und Gallenblase (715212005); ein hepatobiliaeres Sammelkonzept fehlt. Die Leberverletzung ist der dominante Anteil.)</i></td></tr><tr><td>10065828</td><td/><td/></tr><tr><td>10065829</td><td/><td/></tr><tr><td>10065830</td><td/><td><span title="SOURCEISBROADERTHANTARGET">&gt;</span>213267001<i>(SNOMED deckt nur die Nervenverletzung ab; CTCAE schliesst ZNS-Schaeden ein.)</i></td></tr><tr><td>10065831</td><td/><td/></tr><tr><td>10065832</td><td/><td/></tr><tr><td>10065834</td><td/><td/></tr><tr><td>10065836</td><td/><td><span title="SOURCEISBROADERTHANTARGET">&gt;</span>20610004<i>(SNOMED hat kein 'Disorder of trochlear nerve'; die Trochlearisparese ist die klinische Manifestation, engt aber gegenueber 'Stoerung' ein. 106154007 'Fourth cranial nerve finding' waere zu weit (schliesst Normalbefunde ein).)</i></td></tr><tr><td>10065837</td><td/><td><span title="EQUIVALENT">~</span>3135009<i>(Kandidatenwechsel: Otitis externa ist die Entzuendung des aeusseren Ohres; Kandidat beschrieb eine Stenose. Hinweis: 3135009 ist in SNOMED ursachenneutral, wird aber bereits vom CTCAE-Term &quot;Otitis externa&quot; (SOC Infektionen) belegt)</i></td></tr><tr><td>10065838</td><td/><td><span title="EQUIVALENT">~</span>65363002<i>(Kandidatenwechsel: generisches Konzept statt bilateraler akuter Sonderform. Hinweis: 65363002 ist in SNOMED ursachenneutral, wird aber bereits vom CTCAE-Term &quot;Otitis media&quot; (SOC Infektionen) belegt)</i></td></tr><tr><td>10065840</td><td/><td/></tr><tr><td>10065841</td><td/><td/></tr><tr><td>10065842</td><td/><td/></tr><tr><td>10065843</td><td/><td/></tr><tr><td>10065844</td><td/><td/></tr><tr><td>10065845</td><td/><td><span title="EQUIVALENT">~</span>1375936001<i>(Wörtliche Entsprechung.)</i></td></tr><tr><td>10065846</td><td/><td/></tr><tr><td>10065847</td><td/><td><span title="EQUIVALENT">~</span>711366008<i>(Woertliche Entsprechung.)</i></td></tr><tr><td>10065848</td><td/><td><span title="EQUIVALENT">~</span>1375937005<i>(Wörtliche Entsprechung.)</i></td></tr><tr><td>10065849</td><td/><td><span title="SOURCEISBROADERTHANTARGET">&gt;</span>76019006<i>(SNOMED hat kein Konzept fuer die Vena jugularis allgemein, nur getrennt fuer V. jugularis interna (76019006) und externa (5166001). Gewaehlt wurde die interne als klinisch relevante (Katheteranlage).)</i></td></tr><tr><td>10065851</td><td/><td><span title="EQUIVALENT">~</span>30873000</td></tr><tr><td>10065873</td><td/><td/></tr><tr><td>10065879</td><td/><td><span title="EQUIVALENT">~</span>236085004</td></tr><tr><td>10065880</td><td/><td/></tr><tr><td>10065881</td><td/><td/></tr><tr><td>10065882</td><td/><td/></tr><tr><td>10065883</td><td/><td><span title="SOURCEISNARROWERTHANTARGET">&lt;</span>236131001<i>(SNOMED-Konzept ist nicht auf urologische Stomata eingeschraenkt.)</i></td></tr><tr><td>10065885</td><td/><td><span title="SOURCEISNARROWERTHANTARGET">&lt;</span>236119003<i>(SNOMED-Konzept ist nicht auf urologische Stomata eingeschraenkt; 1086781000119103 waere GI-spezifisch und daher falsch.)</i></td></tr><tr><td>10065886</td><td/><td/></tr><tr><td>10065887</td><td/><td/></tr><tr><td>10065888</td><td/><td/></tr><tr><td>10065891</td><td/><td><span title="EQUIVALENT">~</span>236091002<i>(Woertliche Entsprechung.)</i></td></tr><tr><td>10065892</td><td/><td><span title="EQUIVALENT">~</span>236090001<i>(Woertliche Entsprechung.)</i></td></tr><tr><td>10065893</td><td/><td><span title="EQUIVALENT">~</span>236087007</td></tr><tr><td>10065894</td><td/><td/></tr><tr><td>10065895</td><td/><td><span title="EQUIVALENT">~</span>713512009</td></tr><tr><td>10065897</td><td/><td/></tr><tr><td>10065898</td><td/><td><span title="EQUIVALENT">~</span>1086781000119103<i>(Enterostoma = gastrointestinales Stoma.)</i></td></tr><tr><td>10065900</td><td/><td/></tr><tr><td>10065906</td><td/><td/></tr><tr><td>10065928</td><td/><td/></tr><tr><td>10065961</td><td/><td><span title="EQUIVALENT">~</span>236086003</td></tr><tr><td>10065973</td><td/><td><span title="EQUIVALENT">~</span>60737008</td></tr><tr><td>10066480</td><td/><td><span title="EQUIVALENT">~</span>397758007<i>(Kandidatenwechsel: Syn. 'Avascular necrosis of bone'; Kandidat war hueftspezifisch)</i></td></tr><tr><td>10066874</td><td/><td><span title="EQUIVALENT">~</span>235595009</td></tr><tr><td>10069138</td><td/><td/></tr><tr><td>10069339</td><td/><td><span title="EQUIVALENT">~</span>14669001</td></tr><tr><td>10069501</td><td/><td><span title="EQUIVALENT">~</span>134401001</td></tr></table></li></ul></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability">
+    <valueCode value="shareable"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability">
+    <valueCode value="publishable"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability">
+    <valueCode value="computable"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes"/>
+        <code value="package"/>
+        <display value="Package"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/resource-approvalDate">
+    <valueDate value="2026-01-03"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-topic">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"/>
+        <code value="C3262"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-author">
+    <valueContactDetail>
+      <telecom>
+        <system value="email"/>
+        <value value="thomas.debertshaeuser@charite.de"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-editor">
+    <valueContactDetail>
+      <name value="Taskforce Core Data Set"/>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-reviewer">
+    <valueContactDetail>
+      <name value="Interoperability Working Group"/>
+      <telecom>
+        <system value="url"/>
+        <value value="https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-reviewer">
+    <valueContactDetail>
+      <name value="National Steering Committee"/>
+      <telecom>
+        <system value="url"/>
+        <value value="https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-endorser">
+    <valueContactDetail>
+      <name value="Interoperability Working Group"/>
+      <telecom>
+        <system value="url"/>
+        <value value="https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-endorser">
+    <valueContactDetail>
+      <name value="National Steering Committee"/>
+      <telecom>
+        <system value="url"/>
+        <value value="https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm">
+    <valueCoding>
+      <system value="http://hl7.org/fhir/version-algorithm"/>
+      <code value="semver"/>
+      <display value="SemVer"/>
+    </valueCoding>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+    <valuePeriod>
+      <start value="2026"/>
+    </valuePeriod>
+  </extension>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-nebenwirkung-art"/>
+  <version value="2026.0.3"/>
+  <name value="MII_VS_Onko_Nebenwirkung_Art"/>
+  <title value="MII VS Onkologie Nebenwirkung nach CTCAE Art"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-09-02T02:28:56+00:00"/>
+  <publisher value="Medizininformatik Initiative"/>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de/"/>
+    </telecom>
+  </contact>
+  <description value="Alle MedDRA-Codes der CTCAE v4.03 (Art der Nebenwirkung). Deutsche/englische Displays via CodeSystem-Supplements mii-cs-onko-nebenwirkung-meddra-de/-en."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="https://www.meddra.org"/>
+      <concept>
+        <code value="10000060"/>
+      </concept>
+      <concept>
+        <code value="10000081"/>
+      </concept>
+      <concept>
+        <code value="10000486"/>
+      </concept>
+      <concept>
+        <code value="10000521"/>
+      </concept>
+      <concept>
+        <code value="10000636"/>
+      </concept>
+      <concept>
+        <code value="10001367"/>
+      </concept>
+      <concept>
+        <code value="10001409"/>
+      </concept>
+      <concept>
+        <code value="10001497"/>
+      </concept>
+      <concept>
+        <code value="10001540"/>
+      </concept>
+      <concept>
+        <code value="10001551"/>
+      </concept>
+      <concept>
+        <code value="10001598"/>
+      </concept>
+      <concept>
+        <code value="10001675"/>
+      </concept>
+      <concept>
+        <code value="10001680"/>
+      </concept>
+      <concept>
+        <code value="10001718"/>
+      </concept>
+      <concept>
+        <code value="10001723"/>
+      </concept>
+      <concept>
+        <code value="10001760"/>
+      </concept>
+      <concept>
+        <code value="10001949"/>
+      </concept>
+      <concept>
+        <code value="10002156"/>
+      </concept>
+      <concept>
+        <code value="10002167"/>
+      </concept>
+      <concept>
+        <code value="10002176"/>
+      </concept>
+      <concept>
+        <code value="10002180"/>
+      </concept>
+      <concept>
+        <code value="10002218"/>
+      </concept>
+      <concept>
+        <code value="10002272"/>
+      </concept>
+      <concept>
+        <code value="10002544"/>
+      </concept>
+      <concept>
+        <code value="10002646"/>
+      </concept>
+      <concept>
+        <code value="10002652"/>
+      </concept>
+      <concept>
+        <code value="10002855"/>
+      </concept>
+      <concept>
+        <code value="10002899"/>
+      </concept>
+      <concept>
+        <code value="10002953"/>
+      </concept>
+      <concept>
+        <code value="10002972"/>
+      </concept>
+      <concept>
+        <code value="10003011"/>
+      </concept>
+      <concept>
+        <code value="10003012"/>
+      </concept>
+      <concept>
+        <code value="10003074"/>
+      </concept>
+      <concept>
+        <code value="10003162"/>
+      </concept>
+      <concept>
+        <code value="10003239"/>
+      </concept>
+      <concept>
+        <code value="10003246"/>
+      </concept>
+      <concept>
+        <code value="10003445"/>
+      </concept>
+      <concept>
+        <code value="10003481"/>
+      </concept>
+      <concept>
+        <code value="10003504"/>
+      </concept>
+      <concept>
+        <code value="10003586"/>
+      </concept>
+      <concept>
+        <code value="10003591"/>
+      </concept>
+      <concept>
+        <code value="10003598"/>
+      </concept>
+      <concept>
+        <code value="10003658"/>
+      </concept>
+      <concept>
+        <code value="10003662"/>
+      </concept>
+      <concept>
+        <code value="10003673"/>
+      </concept>
+      <concept>
+        <code value="10003674"/>
+      </concept>
+      <concept>
+        <code value="10003883"/>
+      </concept>
+      <concept>
+        <code value="10003988"/>
+      </concept>
+      <concept>
+        <code value="10004665"/>
+      </concept>
+      <concept>
+        <code value="10005047"/>
+      </concept>
+      <concept>
+        <code value="10005265"/>
+      </concept>
+      <concept>
+        <code value="10005329"/>
+      </concept>
+      <concept>
+        <code value="10005332"/>
+      </concept>
+      <concept>
+        <code value="10005364"/>
+      </concept>
+      <concept>
+        <code value="10005452"/>
+      </concept>
+      <concept>
+        <code value="10005561"/>
+      </concept>
+      <concept>
+        <code value="10005778"/>
+      </concept>
+      <concept>
+        <code value="10005886"/>
+      </concept>
+      <concept>
+        <code value="10005901"/>
+      </concept>
+      <concept>
+        <code value="10006002"/>
+      </concept>
+      <concept>
+        <code value="10006179"/>
+      </concept>
+      <concept>
+        <code value="10006259"/>
+      </concept>
+      <concept>
+        <code value="10006298"/>
+      </concept>
+      <concept>
+        <code value="10006437"/>
+      </concept>
+      <concept>
+        <code value="10006440"/>
+      </concept>
+      <concept>
+        <code value="10006482"/>
+      </concept>
+      <concept>
+        <code value="10006504"/>
+      </concept>
+      <concept>
+        <code value="10006556"/>
+      </concept>
+      <concept>
+        <code value="10006634"/>
+      </concept>
+      <concept>
+        <code value="10007196"/>
+      </concept>
+      <concept>
+        <code value="10007515"/>
+      </concept>
+      <concept>
+        <code value="10007541"/>
+      </concept>
+      <concept>
+        <code value="10007612"/>
+      </concept>
+      <concept>
+        <code value="10007613"/>
+      </concept>
+      <concept>
+        <code value="10007739"/>
+      </concept>
+      <concept>
+        <code value="10007810"/>
+      </concept>
+      <concept>
+        <code value="10007839"/>
+      </concept>
+      <concept>
+        <code value="10008164"/>
+      </concept>
+      <concept>
+        <code value="10008330"/>
+      </concept>
+      <concept>
+        <code value="10008417"/>
+      </concept>
+      <concept>
+        <code value="10008481"/>
+      </concept>
+      <concept>
+        <code value="10008496"/>
+      </concept>
+      <concept>
+        <code value="10008531"/>
+      </concept>
+      <concept>
+        <code value="10008612"/>
+      </concept>
+      <concept>
+        <code value="10008661"/>
+      </concept>
+      <concept>
+        <code value="10009845"/>
+      </concept>
+      <concept>
+        <code value="10009887"/>
+      </concept>
+      <concept>
+        <code value="10009995"/>
+      </concept>
+      <concept>
+        <code value="10009998"/>
+      </concept>
+      <concept>
+        <code value="10010000"/>
+      </concept>
+      <concept>
+        <code value="10010001"/>
+      </concept>
+      <concept>
+        <code value="10010004"/>
+      </concept>
+      <concept>
+        <code value="10010006"/>
+      </concept>
+      <concept>
+        <code value="10010250"/>
+      </concept>
+      <concept>
+        <code value="10010276"/>
+      </concept>
+      <concept>
+        <code value="10010300"/>
+      </concept>
+      <concept>
+        <code value="10010331"/>
+      </concept>
+      <concept>
+        <code value="10010741"/>
+      </concept>
+      <concept>
+        <code value="10010742"/>
+      </concept>
+      <concept>
+        <code value="10010774"/>
+      </concept>
+      <concept>
+        <code value="10010783"/>
+      </concept>
+      <concept>
+        <code value="10011224"/>
+      </concept>
+      <concept>
+        <code value="10011268"/>
+      </concept>
+      <concept>
+        <code value="10011368"/>
+      </concept>
+      <concept>
+        <code value="10011655"/>
+      </concept>
+      <concept>
+        <code value="10011912"/>
+      </concept>
+      <concept>
+        <code value="10011914"/>
+      </concept>
+      <concept>
+        <code value="10012174"/>
+      </concept>
+      <concept>
+        <code value="10012205"/>
+      </concept>
+      <concept>
+        <code value="10012218"/>
+      </concept>
+      <concept>
+        <code value="10012260"/>
+      </concept>
+      <concept>
+        <code value="10012318"/>
+      </concept>
+      <concept>
+        <code value="10012373"/>
+      </concept>
+      <concept>
+        <code value="10012378"/>
+      </concept>
+      <concept>
+        <code value="10012727"/>
+      </concept>
+      <concept>
+        <code value="10013442"/>
+      </concept>
+      <concept>
+        <code value="10013573"/>
+      </concept>
+      <concept>
+        <code value="10013774"/>
+      </concept>
+      <concept>
+        <code value="10013781"/>
+      </concept>
+      <concept>
+        <code value="10013786"/>
+      </concept>
+      <concept>
+        <code value="10013828"/>
+      </concept>
+      <concept>
+        <code value="10013830"/>
+      </concept>
+      <concept>
+        <code value="10013832"/>
+      </concept>
+      <concept>
+        <code value="10013836"/>
+      </concept>
+      <concept>
+        <code value="10013887"/>
+      </concept>
+      <concept>
+        <code value="10013911"/>
+      </concept>
+      <concept>
+        <code value="10013934"/>
+      </concept>
+      <concept>
+        <code value="10013941"/>
+      </concept>
+      <concept>
+        <code value="10013946"/>
+      </concept>
+      <concept>
+        <code value="10013950"/>
+      </concept>
+      <concept>
+        <code value="10013951"/>
+      </concept>
+      <concept>
+        <code value="10013963"/>
+      </concept>
+      <concept>
+        <code value="10013993"/>
+      </concept>
+      <concept>
+        <code value="10014020"/>
+      </concept>
+      <concept>
+        <code value="10014217"/>
+      </concept>
+      <concept>
+        <code value="10014222"/>
+      </concept>
+      <concept>
+        <code value="10014326"/>
+      </concept>
+      <concept>
+        <code value="10014383"/>
+      </concept>
+      <concept>
+        <code value="10014594"/>
+      </concept>
+      <concept>
+        <code value="10014621"/>
+      </concept>
+      <concept>
+        <code value="10014625"/>
+      </concept>
+      <concept>
+        <code value="10014678"/>
+      </concept>
+      <concept>
+        <code value="10014698"/>
+      </concept>
+      <concept>
+        <code value="10014801"/>
+      </concept>
+      <concept>
+        <code value="10014893"/>
+      </concept>
+      <concept>
+        <code value="10015090"/>
+      </concept>
+      <concept>
+        <code value="10015218"/>
+      </concept>
+      <concept>
+        <code value="10015277"/>
+      </concept>
+      <concept>
+        <code value="10015384"/>
+      </concept>
+      <concept>
+        <code value="10015387"/>
+      </concept>
+      <concept>
+        <code value="10015388"/>
+      </concept>
+      <concept>
+        <code value="10015448"/>
+      </concept>
+      <concept>
+        <code value="10015451"/>
+      </concept>
+      <concept>
+        <code value="10015453"/>
+      </concept>
+      <concept>
+        <code value="10015461"/>
+      </concept>
+      <concept>
+        <code value="10015533"/>
+      </concept>
+      <concept>
+        <code value="10015688"/>
+      </concept>
+      <concept>
+        <code value="10015829"/>
+      </concept>
+      <concept>
+        <code value="10015832"/>
+      </concept>
+      <concept>
+        <code value="10015919"/>
+      </concept>
+      <concept>
+        <code value="10015929"/>
+      </concept>
+      <concept>
+        <code value="10015958"/>
+      </concept>
+      <concept>
+        <code value="10016059"/>
+      </concept>
+      <concept>
+        <code value="10016173"/>
+      </concept>
+      <concept>
+        <code value="10016241"/>
+      </concept>
+      <concept>
+        <code value="10016256"/>
+      </concept>
+      <concept>
+        <code value="10016288"/>
+      </concept>
+      <concept>
+        <code value="10016296"/>
+      </concept>
+      <concept>
+        <code value="10016479"/>
+      </concept>
+      <concept>
+        <code value="10016558"/>
+      </concept>
+      <concept>
+        <code value="10016596"/>
+      </concept>
+      <concept>
+        <code value="10016750"/>
+      </concept>
+      <concept>
+        <code value="10016757"/>
+      </concept>
+      <concept>
+        <code value="10016766"/>
+      </concept>
+      <concept>
+        <code value="10016778"/>
+      </concept>
+      <concept>
+        <code value="10016791"/>
+      </concept>
+      <concept>
+        <code value="10016825"/>
+      </concept>
+      <concept>
+        <code value="10016987"/>
+      </concept>
+      <concept>
+        <code value="10017076"/>
+      </concept>
+      <concept>
+        <code value="10017577"/>
+      </concept>
+      <concept>
+        <code value="10017631"/>
+      </concept>
+      <concept>
+        <code value="10017636"/>
+      </concept>
+      <concept>
+        <code value="10017638"/>
+      </concept>
+      <concept>
+        <code value="10017639"/>
+      </concept>
+      <concept>
+        <code value="10017789"/>
+      </concept>
+      <concept>
+        <code value="10017815"/>
+      </concept>
+      <concept>
+        <code value="10017822"/>
+      </concept>
+      <concept>
+        <code value="10017853"/>
+      </concept>
+      <concept>
+        <code value="10017877"/>
+      </concept>
+      <concept>
+        <code value="10017947"/>
+      </concept>
+      <concept>
+        <code value="10017999"/>
+      </concept>
+      <concept>
+        <code value="10018043"/>
+      </concept>
+      <concept>
+        <code value="10018065"/>
+      </concept>
+      <concept>
+        <code value="10018146"/>
+      </concept>
+      <concept>
+        <code value="10018286"/>
+      </concept>
+      <concept>
+        <code value="10018304"/>
+      </concept>
+      <concept>
+        <code value="10018746"/>
+      </concept>
+      <concept>
+        <code value="10018748"/>
+      </concept>
+      <concept>
+        <code value="10018761"/>
+      </concept>
+      <concept>
+        <code value="10018784"/>
+      </concept>
+      <concept>
+        <code value="10018801"/>
+      </concept>
+      <concept>
+        <code value="10019077"/>
+      </concept>
+      <concept>
+        <code value="10019150"/>
+      </concept>
+      <concept>
+        <code value="10019211"/>
+      </concept>
+      <concept>
+        <code value="10019245"/>
+      </concept>
+      <concept>
+        <code value="10019279"/>
+      </concept>
+      <concept>
+        <code value="10019428"/>
+      </concept>
+      <concept>
+        <code value="10019450"/>
+      </concept>
+      <concept>
+        <code value="10019489"/>
+      </concept>
+      <concept>
+        <code value="10019491"/>
+      </concept>
+      <concept>
+        <code value="10019515"/>
+      </concept>
+      <concept>
+        <code value="10019611"/>
+      </concept>
+      <concept>
+        <code value="10019663"/>
+      </concept>
+      <concept>
+        <code value="10019678"/>
+      </concept>
+      <concept>
+        <code value="10019692"/>
+      </concept>
+      <concept>
+        <code value="10019705"/>
+      </concept>
+      <concept>
+        <code value="10019799"/>
+      </concept>
+      <concept>
+        <code value="10019805"/>
+      </concept>
+      <concept>
+        <code value="10020039"/>
+      </concept>
+      <concept>
+        <code value="10020100"/>
+      </concept>
+      <concept>
+        <code value="10020112"/>
+      </concept>
+      <concept>
+        <code value="10020201"/>
+      </concept>
+      <concept>
+        <code value="10020407"/>
+      </concept>
+      <concept>
+        <code value="10020508"/>
+      </concept>
+      <concept>
+        <code value="10020587"/>
+      </concept>
+      <concept>
+        <code value="10020639"/>
+      </concept>
+      <concept>
+        <code value="10020642"/>
+      </concept>
+      <concept>
+        <code value="10020647"/>
+      </concept>
+      <concept>
+        <code value="10020670"/>
+      </concept>
+      <concept>
+        <code value="10020680"/>
+      </concept>
+      <concept>
+        <code value="10020705"/>
+      </concept>
+      <concept>
+        <code value="10020765"/>
+      </concept>
+      <concept>
+        <code value="10020772"/>
+      </concept>
+      <concept>
+        <code value="10020850"/>
+      </concept>
+      <concept>
+        <code value="10020864"/>
+      </concept>
+      <concept>
+        <code value="10020870"/>
+      </concept>
+      <concept>
+        <code value="10020907"/>
+      </concept>
+      <concept>
+        <code value="10020943"/>
+      </concept>
+      <concept>
+        <code value="10020949"/>
+      </concept>
+      <concept>
+        <code value="10021005"/>
+      </concept>
+      <concept>
+        <code value="10021013"/>
+      </concept>
+      <concept>
+        <code value="10021018"/>
+      </concept>
+      <concept>
+        <code value="10021028"/>
+      </concept>
+      <concept>
+        <code value="10021038"/>
+      </concept>
+      <concept>
+        <code value="10021041"/>
+      </concept>
+      <concept>
+        <code value="10021059"/>
+      </concept>
+      <concept>
+        <code value="10021097"/>
+      </concept>
+      <concept>
+        <code value="10021113"/>
+      </concept>
+      <concept>
+        <code value="10021114"/>
+      </concept>
+      <concept>
+        <code value="10021143"/>
+      </concept>
+      <concept>
+        <code value="10021305"/>
+      </concept>
+      <concept>
+        <code value="10021307"/>
+      </concept>
+      <concept>
+        <code value="10021309"/>
+      </concept>
+      <concept>
+        <code value="10021328"/>
+      </concept>
+      <concept>
+        <code value="10021428"/>
+      </concept>
+      <concept>
+        <code value="10021881"/>
+      </concept>
+      <concept>
+        <code value="10021918"/>
+      </concept>
+      <concept>
+        <code value="10022095"/>
+      </concept>
+      <concept>
+        <code value="10022117"/>
+      </concept>
+      <concept>
+        <code value="10022161"/>
+      </concept>
+      <concept>
+        <code value="10022213"/>
+      </concept>
+      <concept>
+        <code value="10022356"/>
+      </concept>
+      <concept>
+        <code value="10022402"/>
+      </concept>
+      <concept>
+        <code value="10022437"/>
+      </concept>
+      <concept>
+        <code value="10022763"/>
+      </concept>
+      <concept>
+        <code value="10022891"/>
+      </concept>
+      <concept>
+        <code value="10022992"/>
+      </concept>
+      <concept>
+        <code value="10022998"/>
+      </concept>
+      <concept>
+        <code value="10023030"/>
+      </concept>
+      <concept>
+        <code value="10023174"/>
+      </concept>
+      <concept>
+        <code value="10023176"/>
+      </concept>
+      <concept>
+        <code value="10023177"/>
+      </concept>
+      <concept>
+        <code value="10023215"/>
+      </concept>
+      <concept>
+        <code value="10023216"/>
+      </concept>
+      <concept>
+        <code value="10023332"/>
+      </concept>
+      <concept>
+        <code value="10023424"/>
+      </concept>
+      <concept>
+        <code value="10023509"/>
+      </concept>
+      <concept>
+        <code value="10023838"/>
+      </concept>
+      <concept>
+        <code value="10023862"/>
+      </concept>
+      <concept>
+        <code value="10023874"/>
+      </concept>
+      <concept>
+        <code value="10023891"/>
+      </concept>
+      <concept>
+        <code value="10024264"/>
+      </concept>
+      <concept>
+        <code value="10024378"/>
+      </concept>
+      <concept>
+        <code value="10024382"/>
+      </concept>
+      <concept>
+        <code value="10024419"/>
+      </concept>
+      <concept>
+        <code value="10024421"/>
+      </concept>
+      <concept>
+        <code value="10024561"/>
+      </concept>
+      <concept>
+        <code value="10024574"/>
+      </concept>
+      <concept>
+        <code value="10024842"/>
+      </concept>
+      <concept>
+        <code value="10025182"/>
+      </concept>
+      <concept>
+        <code value="10025233"/>
+      </concept>
+      <concept>
+        <code value="10025256"/>
+      </concept>
+      <concept>
+        <code value="10025258"/>
+      </concept>
+      <concept>
+        <code value="10025476"/>
+      </concept>
+      <concept>
+        <code value="10025482"/>
+      </concept>
+      <concept>
+        <code value="10026749"/>
+      </concept>
+      <concept>
+        <code value="10027175"/>
+      </concept>
+      <concept>
+        <code value="10027198"/>
+      </concept>
+      <concept>
+        <code value="10027199"/>
+      </concept>
+      <concept>
+        <code value="10027308"/>
+      </concept>
+      <concept>
+        <code value="10027313"/>
+      </concept>
+      <concept>
+        <code value="10027433"/>
+      </concept>
+      <concept>
+        <code value="10027786"/>
+      </concept>
+      <concept>
+        <code value="10027787"/>
+      </concept>
+      <concept>
+        <code value="10028041"/>
+      </concept>
+      <concept>
+        <code value="10028130"/>
+      </concept>
+      <concept>
+        <code value="10028154"/>
+      </concept>
+      <concept>
+        <code value="10028395"/>
+      </concept>
+      <concept>
+        <code value="10028411"/>
+      </concept>
+      <concept>
+        <code value="10028524"/>
+      </concept>
+      <concept>
+        <code value="10028533"/>
+      </concept>
+      <concept>
+        <code value="10028596"/>
+      </concept>
+      <concept>
+        <code value="10028606"/>
+      </concept>
+      <concept>
+        <code value="10028653"/>
+      </concept>
+      <concept>
+        <code value="10028691"/>
+      </concept>
+      <concept>
+        <code value="10028735"/>
+      </concept>
+      <concept>
+        <code value="10028813"/>
+      </concept>
+      <concept>
+        <code value="10028836"/>
+      </concept>
+      <concept>
+        <code value="10029104"/>
+      </concept>
+      <concept>
+        <code value="10029205"/>
+      </concept>
+      <concept>
+        <code value="10029223"/>
+      </concept>
+      <concept>
+        <code value="10029366"/>
+      </concept>
+      <concept>
+        <code value="10029404"/>
+      </concept>
+      <concept>
+        <code value="10029864"/>
+      </concept>
+      <concept>
+        <code value="10029883"/>
+      </concept>
+      <concept>
+        <code value="10029957"/>
+      </concept>
+      <concept>
+        <code value="10030300"/>
+      </concept>
+      <concept>
+        <code value="10030980"/>
+      </concept>
+      <concept>
+        <code value="10031009"/>
+      </concept>
+      <concept>
+        <code value="10031282"/>
+      </concept>
+      <concept>
+        <code value="10033072"/>
+      </concept>
+      <concept>
+        <code value="10033078"/>
+      </concept>
+      <concept>
+        <code value="10033279"/>
+      </concept>
+      <concept>
+        <code value="10033314"/>
+      </concept>
+      <concept>
+        <code value="10033371"/>
+      </concept>
+      <concept>
+        <code value="10033425"/>
+      </concept>
+      <concept>
+        <code value="10033474"/>
+      </concept>
+      <concept>
+        <code value="10033557"/>
+      </concept>
+      <concept>
+        <code value="10033626"/>
+      </concept>
+      <concept>
+        <code value="10033645"/>
+      </concept>
+      <concept>
+        <code value="10033703"/>
+      </concept>
+      <concept>
+        <code value="10033987"/>
+      </concept>
+      <concept>
+        <code value="10034016"/>
+      </concept>
+      <concept>
+        <code value="10034040"/>
+      </concept>
+      <concept>
+        <code value="10034263"/>
+      </concept>
+      <concept>
+        <code value="10034310"/>
+      </concept>
+      <concept>
+        <code value="10034405"/>
+      </concept>
+      <concept>
+        <code value="10034474"/>
+      </concept>
+      <concept>
+        <code value="10034484"/>
+      </concept>
+      <concept>
+        <code value="10034536"/>
+      </concept>
+      <concept>
+        <code value="10034578"/>
+      </concept>
+      <concept>
+        <code value="10034580"/>
+      </concept>
+      <concept>
+        <code value="10034620"/>
+      </concept>
+      <concept>
+        <code value="10034719"/>
+      </concept>
+      <concept>
+        <code value="10034825"/>
+      </concept>
+      <concept>
+        <code value="10034835"/>
+      </concept>
+      <concept>
+        <code value="10034844"/>
+      </concept>
+      <concept>
+        <code value="10034879"/>
+      </concept>
+      <concept>
+        <code value="10034960"/>
+      </concept>
+      <concept>
+        <code value="10034966"/>
+      </concept>
+      <concept>
+        <code value="10035528"/>
+      </concept>
+      <concept>
+        <code value="10035598"/>
+      </concept>
+      <concept>
+        <code value="10035623"/>
+      </concept>
+      <concept>
+        <code value="10035742"/>
+      </concept>
+      <concept>
+        <code value="10035759"/>
+      </concept>
+      <concept>
+        <code value="10036200"/>
+      </concept>
+      <concept>
+        <code value="10036206"/>
+      </concept>
+      <concept>
+        <code value="10036402"/>
+      </concept>
+      <concept>
+        <code value="10036585"/>
+      </concept>
+      <concept>
+        <code value="10036595"/>
+      </concept>
+      <concept>
+        <code value="10036601"/>
+      </concept>
+      <concept>
+        <code value="10036653"/>
+      </concept>
+      <concept>
+        <code value="10036774"/>
+      </concept>
+      <concept>
+        <code value="10036790"/>
+      </concept>
+      <concept>
+        <code value="10036968"/>
+      </concept>
+      <concept>
+        <code value="10037032"/>
+      </concept>
+      <concept>
+        <code value="10037087"/>
+      </concept>
+      <concept>
+        <code value="10037175"/>
+      </concept>
+      <concept>
+        <code value="10037234"/>
+      </concept>
+      <concept>
+        <code value="10037375"/>
+      </concept>
+      <concept>
+        <code value="10037383"/>
+      </concept>
+      <concept>
+        <code value="10037400"/>
+      </concept>
+      <concept>
+        <code value="10037549"/>
+      </concept>
+      <concept>
+        <code value="10037767"/>
+      </concept>
+      <concept>
+        <code value="10037847"/>
+      </concept>
+      <concept>
+        <code value="10037868"/>
+      </concept>
+      <concept>
+        <code value="10037888"/>
+      </concept>
+      <concept>
+        <code value="10038062"/>
+      </concept>
+      <concept>
+        <code value="10038064"/>
+      </concept>
+      <concept>
+        <code value="10038072"/>
+      </concept>
+      <concept>
+        <code value="10038073"/>
+      </concept>
+      <concept>
+        <code value="10038079"/>
+      </concept>
+      <concept>
+        <code value="10038080"/>
+      </concept>
+      <concept>
+        <code value="10038130"/>
+      </concept>
+      <concept>
+        <code value="10038359"/>
+      </concept>
+      <concept>
+        <code value="10038385"/>
+      </concept>
+      <concept>
+        <code value="10038419"/>
+      </concept>
+      <concept>
+        <code value="10038463"/>
+      </concept>
+      <concept>
+        <code value="10038604"/>
+      </concept>
+      <concept>
+        <code value="10038695"/>
+      </concept>
+      <concept>
+        <code value="10038738"/>
+      </concept>
+      <concept>
+        <code value="10038743"/>
+      </concept>
+      <concept>
+        <code value="10038748"/>
+      </concept>
+      <concept>
+        <code value="10038848"/>
+      </concept>
+      <concept>
+        <code value="10038897"/>
+      </concept>
+      <concept>
+        <code value="10038901"/>
+      </concept>
+      <concept>
+        <code value="10038921"/>
+      </concept>
+      <concept>
+        <code value="10038923"/>
+      </concept>
+      <concept>
+        <code value="10038981"/>
+      </concept>
+      <concept>
+        <code value="10039411"/>
+      </concept>
+      <concept>
+        <code value="10039413"/>
+      </concept>
+      <concept>
+        <code value="10039722"/>
+      </concept>
+      <concept>
+        <code value="10039757"/>
+      </concept>
+      <concept>
+        <code value="10039906"/>
+      </concept>
+      <concept>
+        <code value="10040047"/>
+      </concept>
+      <concept>
+        <code value="10040102"/>
+      </concept>
+      <concept>
+        <code value="10040139"/>
+      </concept>
+      <concept>
+        <code value="10040400"/>
+      </concept>
+      <concept>
+        <code value="10040639"/>
+      </concept>
+      <concept>
+        <code value="10040741"/>
+      </concept>
+      <concept>
+        <code value="10040747"/>
+      </concept>
+      <concept>
+        <code value="10040752"/>
+      </concept>
+      <concept>
+        <code value="10040753"/>
+      </concept>
+      <concept>
+        <code value="10040785"/>
+      </concept>
+      <concept>
+        <code value="10040799"/>
+      </concept>
+      <concept>
+        <code value="10040865"/>
+      </concept>
+      <concept>
+        <code value="10040868"/>
+      </concept>
+      <concept>
+        <code value="10040872"/>
+      </concept>
+      <concept>
+        <code value="10040947"/>
+      </concept>
+      <concept>
+        <code value="10040975"/>
+      </concept>
+      <concept>
+        <code value="10041101"/>
+      </concept>
+      <concept>
+        <code value="10041103"/>
+      </concept>
+      <concept>
+        <code value="10041133"/>
+      </concept>
+      <concept>
+        <code value="10041232"/>
+      </concept>
+      <concept>
+        <code value="10041244"/>
+      </concept>
+      <concept>
+        <code value="10041349"/>
+      </concept>
+      <concept>
+        <code value="10041367"/>
+      </concept>
+      <concept>
+        <code value="10041416"/>
+      </concept>
+      <concept>
+        <code value="10041569"/>
+      </concept>
+      <concept>
+        <code value="10041633"/>
+      </concept>
+      <concept>
+        <code value="10042033"/>
+      </concept>
+      <concept>
+        <code value="10042112"/>
+      </concept>
+      <concept>
+        <code value="10042127"/>
+      </concept>
+      <concept>
+        <code value="10042241"/>
+      </concept>
+      <concept>
+        <code value="10042244"/>
+      </concept>
+      <concept>
+        <code value="10042435"/>
+      </concept>
+      <concept>
+        <code value="10042458"/>
+      </concept>
+      <concept>
+        <code value="10042464"/>
+      </concept>
+      <concept>
+        <code value="10042554"/>
+      </concept>
+      <concept>
+        <code value="10042569"/>
+      </concept>
+      <concept>
+        <code value="10042604"/>
+      </concept>
+      <concept>
+        <code value="10042613"/>
+      </concept>
+      <concept>
+        <code value="10042772"/>
+      </concept>
+      <concept>
+        <code value="10043189"/>
+      </concept>
+      <concept>
+        <code value="10043306"/>
+      </concept>
+      <concept>
+        <code value="10043345"/>
+      </concept>
+      <concept>
+        <code value="10043565"/>
+      </concept>
+      <concept>
+        <code value="10043648"/>
+      </concept>
+      <concept>
+        <code value="10043882"/>
+      </concept>
+      <concept>
+        <code value="10044030"/>
+      </concept>
+      <concept>
+        <code value="10044031"/>
+      </concept>
+      <concept>
+        <code value="10044055"/>
+      </concept>
+      <concept>
+        <code value="10044223"/>
+      </concept>
+      <concept>
+        <code value="10044291"/>
+      </concept>
+      <concept>
+        <code value="10044302"/>
+      </concept>
+      <concept>
+        <code value="10044391"/>
+      </concept>
+      <concept>
+        <code value="10044565"/>
+      </concept>
+      <concept>
+        <code value="10044684"/>
+      </concept>
+      <concept>
+        <code value="10045152"/>
+      </concept>
+      <concept>
+        <code value="10045158"/>
+      </concept>
+      <concept>
+        <code value="10045271"/>
+      </concept>
+      <concept>
+        <code value="10045542"/>
+      </concept>
+      <concept>
+        <code value="10046300"/>
+      </concept>
+      <concept>
+        <code value="10046539"/>
+      </concept>
+      <concept>
+        <code value="10046543"/>
+      </concept>
+      <concept>
+        <code value="10046555"/>
+      </concept>
+      <concept>
+        <code value="10046571"/>
+      </concept>
+      <concept>
+        <code value="10046593"/>
+      </concept>
+      <concept>
+        <code value="10046628"/>
+      </concept>
+      <concept>
+        <code value="10046735"/>
+      </concept>
+      <concept>
+        <code value="10046789"/>
+      </concept>
+      <concept>
+        <code value="10046809"/>
+      </concept>
+      <concept>
+        <code value="10046810"/>
+      </concept>
+      <concept>
+        <code value="10046851"/>
+      </concept>
+      <concept>
+        <code value="10046901"/>
+      </concept>
+      <concept>
+        <code value="10046904"/>
+      </concept>
+      <concept>
+        <code value="10046912"/>
+      </concept>
+      <concept>
+        <code value="10046914"/>
+      </concept>
+      <concept>
+        <code value="10046916"/>
+      </concept>
+      <concept>
+        <code value="10046937"/>
+      </concept>
+      <concept>
+        <code value="10046947"/>
+      </concept>
+      <concept>
+        <code value="10047065"/>
+      </concept>
+      <concept>
+        <code value="10047115"/>
+      </concept>
+      <concept>
+        <code value="10047166"/>
+      </concept>
+      <concept>
+        <code value="10047228"/>
+      </concept>
+      <concept>
+        <code value="10047281"/>
+      </concept>
+      <concept>
+        <code value="10047290"/>
+      </concept>
+      <concept>
+        <code value="10047302"/>
+      </concept>
+      <concept>
+        <code value="10047340"/>
+      </concept>
+      <concept>
+        <code value="10047386"/>
+      </concept>
+      <concept>
+        <code value="10047488"/>
+      </concept>
+      <concept>
+        <code value="10047580"/>
+      </concept>
+      <concept>
+        <code value="10047656"/>
+      </concept>
+      <concept>
+        <code value="10047681"/>
+      </concept>
+      <concept>
+        <code value="10047700"/>
+      </concept>
+      <concept>
+        <code value="10047848"/>
+      </concept>
+      <concept>
+        <code value="10047896"/>
+      </concept>
+      <concept>
+        <code value="10047900"/>
+      </concept>
+      <concept>
+        <code value="10047924"/>
+      </concept>
+      <concept>
+        <code value="10048015"/>
+      </concept>
+      <concept>
+        <code value="10048031"/>
+      </concept>
+      <concept>
+        <code value="10048038"/>
+      </concept>
+      <concept>
+        <code value="10048049"/>
+      </concept>
+      <concept>
+        <code value="10048293"/>
+      </concept>
+      <concept>
+        <code value="10048492"/>
+      </concept>
+      <concept>
+        <code value="10048580"/>
+      </concept>
+      <concept>
+        <code value="10048642"/>
+      </concept>
+      <concept>
+        <code value="10048677"/>
+      </concept>
+      <concept>
+        <code value="10048706"/>
+      </concept>
+      <concept>
+        <code value="10048762"/>
+      </concept>
+      <concept>
+        <code value="10048994"/>
+      </concept>
+      <concept>
+        <code value="10049120"/>
+      </concept>
+      <concept>
+        <code value="10049182"/>
+      </concept>
+      <concept>
+        <code value="10049192"/>
+      </concept>
+      <concept>
+        <code value="10049281"/>
+      </concept>
+      <concept>
+        <code value="10049468"/>
+      </concept>
+      <concept>
+        <code value="10049737"/>
+      </concept>
+      <concept>
+        <code value="10050028"/>
+      </concept>
+      <concept>
+        <code value="10050068"/>
+      </concept>
+      <concept>
+        <code value="10050094"/>
+      </concept>
+      <concept>
+        <code value="10050457"/>
+      </concept>
+      <concept>
+        <code value="10050458"/>
+      </concept>
+      <concept>
+        <code value="10050528"/>
+      </concept>
+      <concept>
+        <code value="10050662"/>
+      </concept>
+      <concept>
+        <code value="10050816"/>
+      </concept>
+      <concept>
+        <code value="10050823"/>
+      </concept>
+      <concept>
+        <code value="10051228"/>
+      </concept>
+      <concept>
+        <code value="10051272"/>
+      </concept>
+      <concept>
+        <code value="10051341"/>
+      </concept>
+      <concept>
+        <code value="10051472"/>
+      </concept>
+      <concept>
+        <code value="10051592"/>
+      </concept>
+      <concept>
+        <code value="10051741"/>
+      </concept>
+      <concept>
+        <code value="10051746"/>
+      </concept>
+      <concept>
+        <code value="10051792"/>
+      </concept>
+      <concept>
+        <code value="10051837"/>
+      </concept>
+      <concept>
+        <code value="10051886"/>
+      </concept>
+      <concept>
+        <code value="10052015"/>
+      </concept>
+      <concept>
+        <code value="10052298"/>
+      </concept>
+      <concept>
+        <code value="10052426"/>
+      </concept>
+      <concept>
+        <code value="10053481"/>
+      </concept>
+      <concept>
+        <code value="10053496"/>
+      </concept>
+      <concept>
+        <code value="10053565"/>
+      </concept>
+      <concept>
+        <code value="10053661"/>
+      </concept>
+      <concept>
+        <code value="10053662"/>
+      </concept>
+      <concept>
+        <code value="10053692"/>
+      </concept>
+      <concept>
+        <code value="10054382"/>
+      </concept>
+      <concept>
+        <code value="10054482"/>
+      </concept>
+      <concept>
+        <code value="10054520"/>
+      </concept>
+      <concept>
+        <code value="10054524"/>
+      </concept>
+      <concept>
+        <code value="10054541"/>
+      </concept>
+      <concept>
+        <code value="10054692"/>
+      </concept>
+      <concept>
+        <code value="10054746"/>
+      </concept>
+      <concept>
+        <code value="10055005"/>
+      </concept>
+      <concept>
+        <code value="10055026"/>
+      </concept>
+      <concept>
+        <code value="10055078"/>
+      </concept>
+      <concept>
+        <code value="10055226"/>
+      </concept>
+      <concept>
+        <code value="10055242"/>
+      </concept>
+      <concept>
+        <code value="10055287"/>
+      </concept>
+      <concept>
+        <code value="10055291"/>
+      </concept>
+      <concept>
+        <code value="10055298"/>
+      </concept>
+      <concept>
+        <code value="10055300"/>
+      </concept>
+      <concept>
+        <code value="10055315"/>
+      </concept>
+      <concept>
+        <code value="10055319"/>
+      </concept>
+      <concept>
+        <code value="10055322"/>
+      </concept>
+      <concept>
+        <code value="10055325"/>
+      </concept>
+      <concept>
+        <code value="10055347"/>
+      </concept>
+      <concept>
+        <code value="10055356"/>
+      </concept>
+      <concept>
+        <code value="10055472"/>
+      </concept>
+      <concept>
+        <code value="10055599"/>
+      </concept>
+      <concept>
+        <code value="10056238"/>
+      </concept>
+      <concept>
+        <code value="10056356"/>
+      </concept>
+      <concept>
+        <code value="10056388"/>
+      </concept>
+      <concept>
+        <code value="10056519"/>
+      </concept>
+      <concept>
+        <code value="10056522"/>
+      </concept>
+      <concept>
+        <code value="10056627"/>
+      </concept>
+      <concept>
+        <code value="10056681"/>
+      </concept>
+      <concept>
+        <code value="10056745"/>
+      </concept>
+      <concept>
+        <code value="10056910"/>
+      </concept>
+      <concept>
+        <code value="10057066"/>
+      </concept>
+      <concept>
+        <code value="10057262"/>
+      </concept>
+      <concept>
+        <code value="10057483"/>
+      </concept>
+      <concept>
+        <code value="10058084"/>
+      </concept>
+      <concept>
+        <code value="10058096"/>
+      </concept>
+      <concept>
+        <code value="10058597"/>
+      </concept>
+      <concept>
+        <code value="10058674"/>
+      </concept>
+      <concept>
+        <code value="10058720"/>
+      </concept>
+      <concept>
+        <code value="10058804"/>
+      </concept>
+      <concept>
+        <code value="10058838"/>
+      </concept>
+      <concept>
+        <code value="10059094"/>
+      </concept>
+      <concept>
+        <code value="10059095"/>
+      </concept>
+      <concept>
+        <code value="10059446"/>
+      </concept>
+      <concept>
+        <code value="10059639"/>
+      </concept>
+      <concept>
+        <code value="10059827"/>
+      </concept>
+      <concept>
+        <code value="10059895"/>
+      </concept>
+      <concept>
+        <code value="10060602"/>
+      </concept>
+      <concept>
+        <code value="10060640"/>
+      </concept>
+      <concept>
+        <code value="10060890"/>
+      </concept>
+      <concept>
+        <code value="10060929"/>
+      </concept>
+      <concept>
+        <code value="10061017"/>
+      </concept>
+      <concept>
+        <code value="10061103"/>
+      </concept>
+      <concept>
+        <code value="10061145"/>
+      </concept>
+      <concept>
+        <code value="10061149"/>
+      </concept>
+      <concept>
+        <code value="10061185"/>
+      </concept>
+      <concept>
+        <code value="10061212"/>
+      </concept>
+      <concept>
+        <code value="10061229"/>
+      </concept>
+      <concept>
+        <code value="10061261"/>
+      </concept>
+      <concept>
+        <code value="10061304"/>
+      </concept>
+      <concept>
+        <code value="10061322"/>
+      </concept>
+      <concept>
+        <code value="10061339"/>
+      </concept>
+      <concept>
+        <code value="10061351"/>
+      </concept>
+      <concept>
+        <code value="10061389"/>
+      </concept>
+      <concept>
+        <code value="10061403"/>
+      </concept>
+      <concept>
+        <code value="10061457"/>
+      </concept>
+      <concept>
+        <code value="10061461"/>
+      </concept>
+      <concept>
+        <code value="10061510"/>
+      </concept>
+      <concept>
+        <code value="10061532"/>
+      </concept>
+      <concept>
+        <code value="10061541"/>
+      </concept>
+      <concept>
+        <code value="10061574"/>
+      </concept>
+      <concept>
+        <code value="10061589"/>
+      </concept>
+      <concept>
+        <code value="10061640"/>
+      </concept>
+      <concept>
+        <code value="10061664"/>
+      </concept>
+      <concept>
+        <code value="10061695"/>
+      </concept>
+      <concept>
+        <code value="10061788"/>
+      </concept>
+      <concept>
+        <code value="10061912"/>
+      </concept>
+      <concept>
+        <code value="10061928"/>
+      </concept>
+      <concept>
+        <code value="10061970"/>
+      </concept>
+      <concept>
+        <code value="10062112"/>
+      </concept>
+      <concept>
+        <code value="10062156"/>
+      </concept>
+      <concept>
+        <code value="10062169"/>
+      </concept>
+      <concept>
+        <code value="10062225"/>
+      </concept>
+      <concept>
+        <code value="10062233"/>
+      </concept>
+      <concept>
+        <code value="10062244"/>
+      </concept>
+      <concept>
+        <code value="10062255"/>
+      </concept>
+      <concept>
+        <code value="10062263"/>
+      </concept>
+      <concept>
+        <code value="10062283"/>
+      </concept>
+      <concept>
+        <code value="10062315"/>
+      </concept>
+      <concept>
+        <code value="10062466"/>
+      </concept>
+      <concept>
+        <code value="10062501"/>
+      </concept>
+      <concept>
+        <code value="10062548"/>
+      </concept>
+      <concept>
+        <code value="10062570"/>
+      </concept>
+      <concept>
+        <code value="10062572"/>
+      </concept>
+      <concept>
+        <code value="10062632"/>
+      </concept>
+      <concept>
+        <code value="10062646"/>
+      </concept>
+      <concept>
+        <code value="10062667"/>
+      </concept>
+      <concept>
+        <code value="10062872"/>
+      </concept>
+      <concept>
+        <code value="10063057"/>
+      </concept>
+      <concept>
+        <code value="10063190"/>
+      </concept>
+      <concept>
+        <code value="10063524"/>
+      </concept>
+      <concept>
+        <code value="10063575"/>
+      </concept>
+      <concept>
+        <code value="10063636"/>
+      </concept>
+      <concept>
+        <code value="10063761"/>
+      </concept>
+      <concept>
+        <code value="10064026"/>
+      </concept>
+      <concept>
+        <code value="10064505"/>
+      </concept>
+      <concept>
+        <code value="10064658"/>
+      </concept>
+      <concept>
+        <code value="10064687"/>
+      </concept>
+      <concept>
+        <code value="10064774"/>
+      </concept>
+      <concept>
+        <code value="10064848"/>
+      </concept>
+      <concept>
+        <code value="10065368"/>
+      </concept>
+      <concept>
+        <code value="10065417"/>
+      </concept>
+      <concept>
+        <code value="10065703"/>
+      </concept>
+      <concept>
+        <code value="10065704"/>
+      </concept>
+      <concept>
+        <code value="10065705"/>
+      </concept>
+      <concept>
+        <code value="10065706"/>
+      </concept>
+      <concept>
+        <code value="10065707"/>
+      </concept>
+      <concept>
+        <code value="10065709"/>
+      </concept>
+      <concept>
+        <code value="10065710"/>
+      </concept>
+      <concept>
+        <code value="10065712"/>
+      </concept>
+      <concept>
+        <code value="10065713"/>
+      </concept>
+      <concept>
+        <code value="10065719"/>
+      </concept>
+      <concept>
+        <code value="10065720"/>
+      </concept>
+      <concept>
+        <code value="10065721"/>
+      </concept>
+      <concept>
+        <code value="10065722"/>
+      </concept>
+      <concept>
+        <code value="10065727"/>
+      </concept>
+      <concept>
+        <code value="10065728"/>
+      </concept>
+      <concept>
+        <code value="10065730"/>
+      </concept>
+      <concept>
+        <code value="10065732"/>
+      </concept>
+      <concept>
+        <code value="10065735"/>
+      </concept>
+      <concept>
+        <code value="10065738"/>
+      </concept>
+      <concept>
+        <code value="10065744"/>
+      </concept>
+      <concept>
+        <code value="10065745"/>
+      </concept>
+      <concept>
+        <code value="10065746"/>
+      </concept>
+      <concept>
+        <code value="10065747"/>
+      </concept>
+      <concept>
+        <code value="10065748"/>
+      </concept>
+      <concept>
+        <code value="10065749"/>
+      </concept>
+      <concept>
+        <code value="10065752"/>
+      </concept>
+      <concept>
+        <code value="10065755"/>
+      </concept>
+      <concept>
+        <code value="10065759"/>
+      </concept>
+      <concept>
+        <code value="10065761"/>
+      </concept>
+      <concept>
+        <code value="10065762"/>
+      </concept>
+      <concept>
+        <code value="10065763"/>
+      </concept>
+      <concept>
+        <code value="10065764"/>
+      </concept>
+      <concept>
+        <code value="10065765"/>
+      </concept>
+      <concept>
+        <code value="10065766"/>
+      </concept>
+      <concept>
+        <code value="10065771"/>
+      </concept>
+      <concept>
+        <code value="10065772"/>
+      </concept>
+      <concept>
+        <code value="10065773"/>
+      </concept>
+      <concept>
+        <code value="10065775"/>
+      </concept>
+      <concept>
+        <code value="10065776"/>
+      </concept>
+      <concept>
+        <code value="10065777"/>
+      </concept>
+      <concept>
+        <code value="10065778"/>
+      </concept>
+      <concept>
+        <code value="10065779"/>
+      </concept>
+      <concept>
+        <code value="10065780"/>
+      </concept>
+      <concept>
+        <code value="10065781"/>
+      </concept>
+      <concept>
+        <code value="10065783"/>
+      </concept>
+      <concept>
+        <code value="10065784"/>
+      </concept>
+      <concept>
+        <code value="10065785"/>
+      </concept>
+      <concept>
+        <code value="10065786"/>
+      </concept>
+      <concept>
+        <code value="10065787"/>
+      </concept>
+      <concept>
+        <code value="10065788"/>
+      </concept>
+      <concept>
+        <code value="10065789"/>
+      </concept>
+      <concept>
+        <code value="10065790"/>
+      </concept>
+      <concept>
+        <code value="10065791"/>
+      </concept>
+      <concept>
+        <code value="10065793"/>
+      </concept>
+      <concept>
+        <code value="10065794"/>
+      </concept>
+      <concept>
+        <code value="10065795"/>
+      </concept>
+      <concept>
+        <code value="10065796"/>
+      </concept>
+      <concept>
+        <code value="10065798"/>
+      </concept>
+      <concept>
+        <code value="10065799"/>
+      </concept>
+      <concept>
+        <code value="10065800"/>
+      </concept>
+      <concept>
+        <code value="10065802"/>
+      </concept>
+      <concept>
+        <code value="10065803"/>
+      </concept>
+      <concept>
+        <code value="10065805"/>
+      </concept>
+      <concept>
+        <code value="10065811"/>
+      </concept>
+      <concept>
+        <code value="10065813"/>
+      </concept>
+      <concept>
+        <code value="10065814"/>
+      </concept>
+      <concept>
+        <code value="10065815"/>
+      </concept>
+      <concept>
+        <code value="10065817"/>
+      </concept>
+      <concept>
+        <code value="10065818"/>
+      </concept>
+      <concept>
+        <code value="10065822"/>
+      </concept>
+      <concept>
+        <code value="10065823"/>
+      </concept>
+      <concept>
+        <code value="10065825"/>
+      </concept>
+      <concept>
+        <code value="10065826"/>
+      </concept>
+      <concept>
+        <code value="10065827"/>
+      </concept>
+      <concept>
+        <code value="10065828"/>
+      </concept>
+      <concept>
+        <code value="10065829"/>
+      </concept>
+      <concept>
+        <code value="10065830"/>
+      </concept>
+      <concept>
+        <code value="10065831"/>
+      </concept>
+      <concept>
+        <code value="10065832"/>
+      </concept>
+      <concept>
+        <code value="10065834"/>
+      </concept>
+      <concept>
+        <code value="10065836"/>
+      </concept>
+      <concept>
+        <code value="10065837"/>
+      </concept>
+      <concept>
+        <code value="10065838"/>
+      </concept>
+      <concept>
+        <code value="10065840"/>
+      </concept>
+      <concept>
+        <code value="10065841"/>
+      </concept>
+      <concept>
+        <code value="10065842"/>
+      </concept>
+      <concept>
+        <code value="10065843"/>
+      </concept>
+      <concept>
+        <code value="10065844"/>
+      </concept>
+      <concept>
+        <code value="10065845"/>
+      </concept>
+      <concept>
+        <code value="10065846"/>
+      </concept>
+      <concept>
+        <code value="10065847"/>
+      </concept>
+      <concept>
+        <code value="10065848"/>
+      </concept>
+      <concept>
+        <code value="10065849"/>
+      </concept>
+      <concept>
+        <code value="10065851"/>
+      </concept>
+      <concept>
+        <code value="10065873"/>
+      </concept>
+      <concept>
+        <code value="10065879"/>
+      </concept>
+      <concept>
+        <code value="10065880"/>
+      </concept>
+      <concept>
+        <code value="10065881"/>
+      </concept>
+      <concept>
+        <code value="10065882"/>
+      </concept>
+      <concept>
+        <code value="10065883"/>
+      </concept>
+      <concept>
+        <code value="10065885"/>
+      </concept>
+      <concept>
+        <code value="10065886"/>
+      </concept>
+      <concept>
+        <code value="10065887"/>
+      </concept>
+      <concept>
+        <code value="10065888"/>
+      </concept>
+      <concept>
+        <code value="10065891"/>
+      </concept>
+      <concept>
+        <code value="10065892"/>
+      </concept>
+      <concept>
+        <code value="10065893"/>
+      </concept>
+      <concept>
+        <code value="10065894"/>
+      </concept>
+      <concept>
+        <code value="10065895"/>
+      </concept>
+      <concept>
+        <code value="10065897"/>
+      </concept>
+      <concept>
+        <code value="10065898"/>
+      </concept>
+      <concept>
+        <code value="10065900"/>
+      </concept>
+      <concept>
+        <code value="10065906"/>
+      </concept>
+      <concept>
+        <code value="10065928"/>
+      </concept>
+      <concept>
+        <code value="10065961"/>
+      </concept>
+      <concept>
+        <code value="10065973"/>
+      </concept>
+      <concept>
+        <code value="10066480"/>
+      </concept>
+      <concept>
+        <code value="10066874"/>
+      </concept>
+      <concept>
+        <code value="10069138"/>
+      </concept>
+      <concept>
+        <code value="10069339"/>
+      </concept>
+      <concept>
+        <code value="10069501"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

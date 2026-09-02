@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CarePlan xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-onko-tumorkonferenz-folfox-modification"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz|2026.0.3"/>
+  </meta>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: CarePlan mii-exa-onko-tumorkonferenz-folfox-modification</b></p><a name="de-mii-exa-onko-tumorkonferenz-folfox-modification"> </a><a name="de-hcmii-exa-onko-tumorkonferenz-folfox-modification"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-tumorkonferenz.html">MII PR Onkologie Tumorkonferenz</a> version: 2026.0.3</p></div><p><b>identifier</b>: Tumorkonferenz_FOLFOX_Modification_001</p><p><b>status</b>: Active</p><p><b>intent</b>: Plan</p><p><b>category</b>: <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ praeth}">prätherapeutische Tumorkonferenz (Festlegung der Therapiestrategie)</span></p><p><b>subject</b>: <a href="Patient-example-modification.html">Martin Beispiel  Male, DoB: 1958-11-03</a></p><p><b>created</b>: 2024-03-05</p><p><b>addresses</b>: <a href="Condition-mii-exa-onko-ascending-colon-cancer-diagnosis.html">Condition Bösartige Neubildung: Colon ascendens</a></p><h3>Activities</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Progress</b></td><td><b>Reference</b></td></tr><tr><td style="display: none">*</td><td><blockquote><div><p>Tumor board recommends FOLFOX4 chemotherapy protocol for stage III colon cancer, adjuvant setting</p>
+</div></blockquote></td><td><a href="RequestGroup-mii-exa-onko-folfox-requestgroup-modification.html">RequestGroup Chemotherapie</a></td></tr></table></div>
+  </text>
+  <identifier>
+    <value value="Tumorkonferenz_FOLFOX_Modification_001"/>
+  </identifier>
+  <status value="active"/>
+  <intent value="plan"/>
+  <category>
+    <coding>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ"/>
+      <code value="praeth"/>
+      <display value="prätherapeutische Tumorkonferenz (Festlegung der Therapiestrategie)"/>
+    </coding>
+  </category>
+  <subject>
+    <reference value="Patient/example-modification"/>
+  </subject>
+  <created value="2024-03-05"/>
+  <addresses>
+    <reference value="Condition/mii-exa-onko-ascending-colon-cancer-diagnosis"/>
+  </addresses>
+  <activity>
+    <progress>
+      <text value="Tumor board recommends FOLFOX4 chemotherapy protocol for stage III colon cancer, adjuvant setting"/>
+    </progress>
+    <reference>
+      <reference value="RequestGroup/mii-exa-onko-folfox-requestgroup-modification"/>
+    </reference>
+  </activity>
+</CarePlan>
