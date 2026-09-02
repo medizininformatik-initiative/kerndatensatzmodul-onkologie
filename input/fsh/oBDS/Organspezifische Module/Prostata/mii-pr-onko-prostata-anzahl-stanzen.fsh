@@ -5,6 +5,7 @@ Title: "MII PR Onkologie Prostata Anzahl Stanzen"
 Description: "Dieses Profil beschreibt die Anzahl Stanzen einer Prostata-Biopsie oder eines Prostata-Exzisionspräparates in der Onkologie"
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert OnkoCRMIProfile
 * ^status = #active
 
 * meta.profile 0..* MS
@@ -41,13 +42,11 @@ Description: "Dieses Profil beschreibt die Anzahl Stanzen einer Prostata-Biopsie
 * insert Translation(effectiveDateTime ^definition, de-DE, Datum der Probenentnahme der Prostata-Biopise oder des Prostata-Exzisats)
 
 
-/*
-Mapping: FHIR-oBDS-Studienteilnahme
+
+Mapping: FHIR-oBDS-ProstataAnzahlStanzen
 Id: oBDS
 Title: "Mapping FHIR zu oBDS"
-Source: MII_PR_Onko_Studienteilnahme
-* -> "24" "Studienteilnahme"
-*  valueCodeableConcept.coding.code -> "24.1" "Studienteilnahme Status"
-*  effectiveDateTime -> "24.2" "Studienteilnahme Datum"
-
-*/
+Source: MII_PR_Onko_Prostata_Anzahl_Stanzen
+* -> "P4" "Anzahl der Stanzen"
+* valueInteger -> "P4" "Gesamtanzahl der entnommenen Stanzen"
+* effectiveDateTime -> "P3" "Datum der Stanzen"

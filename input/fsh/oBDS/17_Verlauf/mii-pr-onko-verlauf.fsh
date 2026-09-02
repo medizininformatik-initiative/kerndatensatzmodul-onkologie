@@ -5,6 +5,7 @@ Title: "MII PR Onkologie Verlauf"
 Description: "Dieses Profil beschreibt die Verlaufskontrolle und verweist ggfs. auf andere verlaufsrelevante diagnostische Maßnahmen"
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert OnkoCRMIProfile
 * ^status = #active
 * meta.profile 0..* MS
 * encounter 0..1 MS
@@ -22,7 +23,8 @@ Description: "Dieses Profil beschreibt die Verlaufskontrolle und verweist ggfs. 
 
 * hasMember MS
 * hasMember 0..*
-* hasMember only Reference(Observation)
+// agi: auf die 7 definierten Verlaufs-Mitglieder eingeschränkt (statt generisch Observation)
+* hasMember only Reference(MII_PR_Onko_Tod or MII_PR_Onko_TNM_Klassifikation or MII_PR_Onko_Anzahl_Untersuchte_Lymphknoten or MII_PR_Onko_Histologie_ICDO3 or MII_PR_Onko_Fernmetastasen or MII_PR_Onko_Residualstatus or https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-genetische-variante)
 
 
 * effective[x] MS

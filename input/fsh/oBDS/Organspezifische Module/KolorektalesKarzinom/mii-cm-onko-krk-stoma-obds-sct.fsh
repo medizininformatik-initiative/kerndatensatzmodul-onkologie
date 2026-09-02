@@ -3,7 +3,9 @@ InstanceOf: ConceptMap
 Usage: #definition
 Title: "Mapping oBDS Stoma-Anzeichnung zu SNOMED CT"
 Description: "Mapping der oBDS-Codes für präoperative Stoma-Anzeichnung zu SNOMED CT"
+* insert OnkoCRMIConceptMap
 * status = #active
+* insert SNOMEDCopyrightForInstance
 * experimental = true
 * insert Version
 

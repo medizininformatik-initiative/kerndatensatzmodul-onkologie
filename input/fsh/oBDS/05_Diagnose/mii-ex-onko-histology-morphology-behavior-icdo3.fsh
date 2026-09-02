@@ -5,6 +5,7 @@ Description: "Extension zur Erfassung von ICDO3 da Morphology nicht als Conditio
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-histology-morphology-behavior-icdo3"
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert OnkoCRMIExtension
 * ^context.type = #element
 * ^context.expression = "Condition"
 

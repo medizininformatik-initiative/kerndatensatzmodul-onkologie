@@ -5,6 +5,7 @@ Title: "MII PR Onkologie TNM-Klassifikation"
 Description: "TNM-Klassifikation: Grouper-Profil für Komponenten der TNM-Klassifikation."
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert OnkoCRMIProfile
 * ^status = #active
 * meta.profile 0..* MS
 * encounter 0..1 MS
@@ -26,10 +27,14 @@ Description: "TNM-Klassifikation: Grouper-Profil für Komponenten der TNM-Klassi
 * method ^short = "TNM Version"
 * method ^definition = "Gibt an, nach welcher Version des TNM klassifiziert wurde."
 * method from mii-vs-onko-tnm-version (required)
-* insert Label(method.coding, TNM-Version, TNM-Version nach 8.5 oBDS 2021)
+* insert Label(method.coding, TNM-Version, TNM-Version nach 8.2 oBDS 2021)
 * insert Translation(method.coding ^short, de-DE, TNM-Version)
-* insert Translation(method.coding ^definition, de-DE, TNM-Version nach 8.5 oBDS 2021 )
+* insert Translation(method.coding ^definition, de-DE, TNM-Version nach 8.2 oBDS 2021 )
 
+// hasMember nennt die Symbol-Profile y/r/a/m weiterhin, damit Bestandsdaten
+// (bis v2026 erzeugt) valide bleiben. Fuer Neuimplementierungen sind sie
+// deprecated: y/r/a laufen als modifierExtension an den Kategorien, das
+// m-Suffix als component[multipleTumoren] an der T-Kategorie.
 * hasMember MS
 * hasMember only Reference (MII_PR_Onko_TNM_L_Kategorie or MII_PR_Onko_TNM_M_Kategorie or MII_PR_Onko_TNM_m_Symbol or MII_PR_Onko_TNM_N_Kategorie or MII_PR_Onko_TNM_T_Kategorie or MII_PR_Onko_TNM_Pn_Kategorie or MII_PR_Onko_TNM_S_Kategorie or MII_PR_Onko_TNM_V_Kategorie or MII_PR_Onko_TNM_a_Symbol or MII_PR_Onko_TNM_r_Symbol or MII_PR_Onko_TNM_y_Symbol)
 

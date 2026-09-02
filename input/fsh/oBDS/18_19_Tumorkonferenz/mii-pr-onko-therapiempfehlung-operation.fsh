@@ -5,6 +5,7 @@ Title: "MII PR Onkologie Therapieempfehlung Operation"
 Description: "Dieses Profil beschreibt eine Empfehlung für eine Operation im Rahmen der Tumorkonferenz"
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert OnkoCRMIProfile
 * ^status = #active
 * meta.profile 0..* MS
 * encounter 0..1 MS

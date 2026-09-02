@@ -5,6 +5,7 @@ Title: "MII PR Onkologie Melanom LDH"
 Description: "Dieses Profil beschreibt die Laktatdehydrogenase (LDH) Laborwerte beim Malignen Melanom"
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert OnkoCRMIProfile
 * ^status = #active
 
 * meta.profile 0..* MS
@@ -61,8 +62,8 @@ Mapping: FHIR-oBDS-Melanom-LDH
 Id: oBDS
 Title: "Mapping FHIR zu oBDS"
 Source: MII_PR_Onko_Melanom_LDH
-* -> "LDH" "Laktatdehydrogenase"
-* valueQuantity.value -> "LDH" "LDH Wert"
-* valueQuantity.unit -> "LDH" "LDH Einheit (U/L)"
-* effectiveDateTime -> "LDH" "Datum der LDH Bestimmung"
-* interpretation -> "LDH" "Bewertung LDH (normal/erhöht)"
+* -> "MM3" "LDH"
+* valueQuantity.value -> "MM3" "LDH-Wert in U/L"
+* valueQuantity.unit -> "MM3" "LDH Einheit (U/L)"
+* effectiveDateTime -> "MM3" "Datum der LDH Bestimmung"
+* interpretation -> "MM3 (Komponente)" "Bewertung des LDH-Werts (normal/erhöht); keine eigene oBDS-Feldnummer"

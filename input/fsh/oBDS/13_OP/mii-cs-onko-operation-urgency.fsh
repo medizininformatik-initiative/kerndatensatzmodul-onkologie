@@ -1,11 +1,13 @@
 CodeSystem: MII_CS_Onko_Operation_Urgency
 Id: mii-cs-onko-operation-urgency
+Title: "MII CS Onkologie Operation Urgency"
 Description: "oBDS-basiertes Codesystem für die Modalität der Eingriffsdurchführung (Art des Eingriffs KR6)"
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
 * ^status = #active
-* ^experimental = true
+* ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert OnkoCRMICodeSystem
 * ^caseSensitive = true
 * ^valueSet = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-operation-urgency"
 * ^count = 3

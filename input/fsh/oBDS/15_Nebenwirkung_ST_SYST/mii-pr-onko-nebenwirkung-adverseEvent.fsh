@@ -5,7 +5,9 @@ Title: "MII PR Onkologie Nebenwirkung von Strahlentherapie und systemische Thera
 Description: "Dieses Profil beschreibt die Nebenwirkung von Strahlentherapie und systemische Therapie in der Onkologie."
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert OnkoCRMIProfile
 * ^status = #active
+* obeys nebenwirkung-grad3-art
 
 * meta.profile 0..* MS
 * subject 1..1 MS
@@ -15,15 +17,37 @@ Description: "Dieses Profil beschreibt die Nebenwirkung von Strahlentherapie und
 
 // Hier wird entweder die Bezeichnung von CTCAE Grad oder die MedDRA Code genutzt
 * event 1..1 MS
+// CTCAE-Katalogversion (oBDS 15.3) als eigene Extension — NICHT in
+// event.coding[meddra].version: Dort gehoert die Version des MedDRA-Katalogs hin,
+// aus dem der Code stammt (CTCAE v4.03 basiert auf MedDRA v12.0). Die frueher hier
+// gefuehrte Angabe "Version 4" meinte die CTCAE-Version und liess den Code im
+// ValueSet unauffindbar.
+* extension contains MII_EX_Onko_Nebenwirkung_CTCAE_Version named ctcaeVersion 0..1 MS
+* insert Label(extension[ctcaeVersion], CTCAE-Version, Version des CTCAE-Katalogs nach 15.3 oBDS 2021)
+* insert Translation(extension[ctcaeVersion] ^short, de-DE, CTCAE-Version)
+
 * event.coding 0..* MS
 * event.coding ^slicing.discriminator.type = #pattern
 * event.coding ^slicing.discriminator.path = "system"
 * event.coding ^slicing.rules = #open
-* event.coding contains meddra 0..1 MS
+* event.coding contains
+    meddra 0..1 MS and
+    snomed 0..1 MS
 * event.coding[meddra].system = "https://www.meddra.org"
 * event.coding[meddra].code 1..1 MS
 * event.coding[meddra].version MS
-* event.coding from mii-vs-onko-nebenwirkung-art (required)
+* event.coding[meddra].version ^comment = "Version des MEDDRA-Katalogs (z. B. 12.0 fuer die von CTCAE v4.03 verwendeten Codes). Die CTCAE-Katalogversion nach oBDS 15.3 steht in der Extension ctcaeVersion."
+// Binding auf Slice-Ebene (nicht event.coding gesamt): das Art-VS enthält nur
+// MedDRA-Codes — ein Binding über alle Slices würde den snomed-Slice invalidieren.
+* event.coding[meddra] from mii-vs-onko-nebenwirkung-art (required)
+// SNOMED-CT-Übersetzung der Nebenwirkungsart (beads v9e): gespeist aus der
+// ConceptMap mii-cm-onko-nebenwirkung-meddra-sct (qg7); kein VS-Binding, da die
+// Zielmenge durch die ConceptMap kuratiert wird (~61-80% Coverage, Rest MedDRA-only).
+* event.coding[snomed].system = $SCT
+* event.coding[snomed].code 1..1 MS
+* event.coding[snomed] ^short = "Art der Nebenwirkung (SNOMED CT)"
+* event.coding[snomed] ^definition = "SNOMED-CT-Übersetzung der Nebenwirkungsart, abgeleitet über die ConceptMap mii-cm-onko-nebenwirkung-meddra-sct. Optional; nicht jeder MedDRA-/CTCAE-Term hat ein SNOMED-CT-Äquivalent."
+* insert Translation(event.coding[snomed] ^short, de-DE, Art der Nebenwirkung als SNOMED CT)
 * event.coding.code 0..1 MS
 * event.coding.system 1..1 MS
 * event.coding.version MS
@@ -49,7 +73,7 @@ Description: "Dieses Profil beschreibt die Nebenwirkung von Strahlentherapie und
 // Die Referenz zu Procedure/MedicationStatement
 * suspectEntity 1..* MS
 * suspectEntity.instance MS
-* suspectEntity.instance only Reference(Procedure or MedicationStatement) // add Refernce to Systemic and radiation therapy
+* suspectEntity.instance only Reference(MII_PR_Onko_Strahlentherapie or MII_PR_Onko_Systemische_Therapie or MII_PR_Onko_Systemische_Therapie_Medikation) // agi: typsicher statt generisch Procedure/MedicationStatement
 
 Mapping: FHIR-oBDS-AdverseEvents
 Id: oBDS
@@ -57,4 +81,5 @@ Title: "Mapping FHIR zu oBDS"
 Source: MII_PR_Onko_Nebenwirkung_Adverse_Event
 * seriousness -> "15.1" "Nebenwirkungen nach CTCAE-Grad"
 * event.coding.code -> "15.2" "Nebenwirkungen nach CTCAE Art"
-* event.coding.version -> "15.3" "Nebenwirkungen nach CTCAE Version"
+* extension[ctcaeVersion] -> "15.3" "Nebenwirkungen nach CTCAE Version"
+* event.coding[meddra].version -> "kein oBDS-Feld" "Version des MedDRA-Katalogs, aus dem der Code stammt - vom oBDS nicht erhoben"

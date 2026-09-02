@@ -5,6 +5,7 @@ Title: "MII PR Onkologie Rezeptorstatus Progesteron"
 Description: "Dieses Profil beschreibt den diagnostischen Progesteron-Rezeptorstatus eines pathologisch untersuchten Probe beim Mamma-Karzinom in der Onkologie"
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert OnkoCRMIProfile
 * ^status = #active
 
 * meta.profile 0..* MS
@@ -62,4 +63,13 @@ Description: "Dieses Profil beschreibt den diagnostischen Progesteron-Rezeptorst
 * component[Faerbeintensitaet].value[x] only CodeableConcept
 * component[Faerbeintensitaet].valueCodeableConcept MS
 * component[Faerbeintensitaet].valueCodeableConcept 0..1
-* component[Faerbeintensitaet].valueCodeableConcept from http://loinc.org/vs/LL4358-9 (extensible) //Weak, Moderate, Strong
+* component[Faerbeintensitaet].valueCodeableConcept from mii-vs-onko-mamma-faerbeintensitaet (extensible) // Weak, Moderate, Strong (≙ LOINC LL4358-9)
+
+Mapping: FHIR-oBDS-MammaRezeptorstatusProgesteron
+Id: oBDS
+Title: "Mapping FHIR zu oBDS"
+Source: MII_PR_Onko_Mamma_Rezeptorstatus_Progesteron
+* -> "M3" "HormonrezeptorStatus: Progesteron"
+* valueCodeableConcept -> "M3" "Kategoriale Bewertung des Progesteron-Rezeptorstatus"
+* component[AnteilPositiveZellen].valueQuantity.value -> "M3 (Komponente)" "Anteil positiver Zellen in Prozent; keine eigene oBDS-Feldnummer (S3-Leitlinie)"
+* component[Faerbeintensitaet].valueCodeableConcept -> "M3 (Komponente)" "Färbeintensität; keine eigene oBDS-Feldnummer (S3-Leitlinie)"

@@ -9,8 +9,8 @@ Description: "Beispiel einer systemischen Therapie Medikation mit UNII-Code für
 * subject = Reference(Patient/example)
 * medicationCodeableConcept.coding[UNII] = http://fdasis.nlm.nih.gov#8V66F27X44 "IBERDOMIDE"
 * medicationCodeableConcept.text = "Iberdomide (experimenteller Immunmodulator)"
-* partOf = Reference(Procedure/systemische-therapie-example)
+* partOf[systemischeTherapie] = Reference(mii-exa-onko-systemische-therapie-1)
 * note.text = "Experimentelles Protokoll"
 * effectivePeriod.start = "2024-06-01"
 * effectivePeriod.end = "2024-08-30"
-* basedOn = Reference(CarePlan/example)
+* basedOn[tumorkonferenz] = Reference(mii-exa-onko-tumorkonferenz-01)

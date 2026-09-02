@@ -5,6 +5,7 @@ Title: "MII PR Onkologie Rezeptorstatus Estrogen"
 Description: "Dieses Profil beschreibt den diagnostischen Estrogen-Rezeptorstatus eines pathologisch untersuchten Probe beim Mamma-Karzinom in der Onkologie"
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert OnkoCRMIProfile
 * ^status = #active
 
 * meta.profile 0..* MS
@@ -65,4 +66,13 @@ Description: "Dieses Profil beschreibt den diagnostischen Estrogen-Rezeptorstatu
 * component[Faerbeintensitaet].value[x] only CodeableConcept
 * component[Faerbeintensitaet].valueCodeableConcept MS
 * component[Faerbeintensitaet].valueCodeableConcept 0..1
-* component[Faerbeintensitaet].valueCodeableConcept from http://loinc.org/vs/LL4358-9 (extensible) //Weak, Moderate, Strong
+* component[Faerbeintensitaet].valueCodeableConcept from mii-vs-onko-mamma-faerbeintensitaet (extensible) // Weak, Moderate, Strong (≙ LOINC LL4358-9)
+
+Mapping: FHIR-oBDS-MammaRezeptorstatusEstrogen
+Id: oBDS
+Title: "Mapping FHIR zu oBDS"
+Source: MII_PR_Onko_Mamma_Rezeptorstatus_Estrogen
+* -> "M2" "HormonrezeptorStatus: Östrogen"
+* valueCodeableConcept -> "M2" "Kategoriale Bewertung des Estrogen-Rezeptorstatus"
+* component[AnteilPositiveZellen].valueQuantity.value -> "M2 (Komponente)" "Anteil positiver Zellen in Prozent; keine eigene oBDS-Feldnummer (S3-Leitlinie)"
+* component[Faerbeintensitaet].valueCodeableConcept -> "M2 (Komponente)" "Färbeintensität; keine eigene oBDS-Feldnummer (S3-Leitlinie)"

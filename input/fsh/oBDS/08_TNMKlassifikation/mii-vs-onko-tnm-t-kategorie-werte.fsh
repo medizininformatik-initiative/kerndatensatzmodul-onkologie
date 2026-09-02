@@ -8,6 +8,7 @@ Description: "Das ValueSet enthält die TNM T-Kategorie Codes aus der UICC TNM -
 * ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert OnkoCRMIValueSet
 * $UICC#TX	"TX"
 * $UICC#T0	"T0"
 * $UICC#Ta	"Ta"
@@ -26,6 +27,7 @@ Description: "Das ValueSet enthält die TNM T-Kategorie Codes aus der UICC TNM -
 * $UICC#T1b	"T1b"
 * $UICC#T1b1	"T1b1"
 * $UICC#T1b2	"T1b2"
+* $UICC#T1b3	"T1b3"
 * $UICC#T1c	"T1c"
 * $UICC#T1c1	"T1c1"
 * $UICC#T1c2	"T1c2"

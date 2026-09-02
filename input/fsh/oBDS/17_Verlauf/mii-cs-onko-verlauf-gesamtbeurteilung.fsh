@@ -8,6 +8,7 @@ Description: "oBDS-spezifisches Codesystem für die Gesamtbeurteilung im Behandl
 * ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert OnkoCRMICodeSystem
 * ^caseSensitive = true
 * ^content = #complete
 * #V "Vollremission (complete remission, CR)"

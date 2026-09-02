@@ -5,11 +5,14 @@ Title: "MII PR Onkologie Allgemeiner Leistungszustand nach Karnofsky"
 Description: "OBDS Beschreibung des allgemeines Leistungszustandes nach Karnofsky"
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert OnkoCRMIProfile
 * ^status = #active
 
 * meta.profile 0..* MS
 * subject 1..1 MS
 * subject only Reference(Patient)
+* focus MS
+* focus only Reference(MII_PR_Onko_Diagnose_Primaertumor)
 * encounter 0..1 MS
 
 
@@ -42,6 +45,7 @@ Description: "OBDS Beschreibung des allgemeines Leistungszustandes nach Karnofsk
 * valueCodeableConcept.coding[obds].system 1..
 * valueCodeableConcept.coding[obds].system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-karnofsky"
 * valueCodeableConcept.coding[obds].code 1.. MS
+* valueCodeableConcept.coding[loinc] from MII_VS_Onko_Allgemeiner_Leistungszustand_Karnofsky_LOINC (required)
 * valueCodeableConcept.coding[loinc].system 1..
 * valueCodeableConcept.coding[loinc].system = $LNC (exactly)
 * valueCodeableConcept.coding[loinc].code 1..

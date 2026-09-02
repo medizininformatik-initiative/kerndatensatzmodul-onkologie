@@ -1,12 +1,15 @@
 ValueSet: MII_VS_Onko_Prostata_Clavien_Dindo
 Id: mii-vs-onko-prostata-clavien-dindo
+Title: "MII VS Onkologie Prostata Clavien Dindo"
 Description: "Value Set für Gleason Score"
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
 //* ^url = ""
 * ^status = #active
-* ^experimental = true
+* ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert OnkoCRMIValueSet
+* insert SNOMEDCopyrightForVS
 
 * include $SCT#1367519000 "Clavien-Dindo classification grade I (finding)"
 * include $SCT#1367520006 "Clavien-Dindo classification grade II (finding)"

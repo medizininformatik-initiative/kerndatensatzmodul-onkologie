@@ -1,14 +1,155 @@
 {
   "resourceType": "ConceptMap",
   "id": "mii-cm-onko-allgemeiner-leistungszustand-karnofsky-loinc",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableconceptmap",
+      "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishableconceptmap"
+    ],
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-license",
+        "valueCode": "CC-BY-4.0"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/package-source",
+        "extension": [
+          {
+            "url": "packageId",
+            "valueId": "de.medizininformatikinitiative.kerndatensatz.onkologie"
+          }
+        ]
+      },
+      {
+        "url": "version",
+        "valueString": "2026.0.3"
+      }
+    ]
+  },
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-allgemeiner-leistungszustand-karnofsky-loinc",
   "title": "Mapping oBDS Karnofsky zu LOINC",
-  "description": "Mapping der oBDS-Codes für Karnofsky Performance Status zu LOINC Answer List LA29175-9",
+  "description": "Mapping der oBDS-Codes für Karnofsky Performance Status zu LOINC Answer List LL4986-7",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "shareable"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "publishable"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "package",
+            "system": "http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes",
+            "display": "Package"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
+      "valueDate": "2026-01-03"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-topic",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "C3262",
+            "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-author",
+      "valueContactDetail": {
+        "telecom": [
+          {
+            "system": "email",
+            "value": "thomas.debertshaeuser@charite.de"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-editor",
+      "valueContactDetail": {
+        "name": "Taskforce Core Data Set"
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
+      "valueContactDetail": {
+        "name": "Interoperability Working Group",
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
+      "valueContactDetail": {
+        "name": "National Steering Committee",
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
+      "valueContactDetail": {
+        "name": "Interoperability Working Group",
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
+      "valueContactDetail": {
+        "name": "National Steering Committee",
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
+      "valueCoding": {
+        "code": "semver",
+        "system": "http://hl7.org/fhir/version-algorithm",
+        "display": "SemVer"
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2026"
+      }
+    }
+  ],
   "status": "active",
   "experimental": false,
   "version": "2026.0.3",
   "sourceCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-allgemeiner-leistungszustand-karnofsky",
-  "targetCanonical": "http://loinc.org/vs/LL4986-7",
+  "targetCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-allgemeiner-leistungszustand-karnofsky-loinc",
   "group": [
     {
       "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-karnofsky",
@@ -19,7 +160,7 @@
           "display": "100%",
           "target": [
             {
-              "code": "LA29165-0",
+              "code": "LA29175-9",
               "display": "Normal; no complaints; no evidence of disease",
               "equivalence": "equivalent"
             }
@@ -30,7 +171,7 @@
           "display": "90%",
           "target": [
             {
-              "code": "LA29166-8",
+              "code": "LA29176-7",
               "display": "Able to carry on normal activity; minor signs or symptoms of disease",
               "equivalence": "equivalent"
             }
@@ -41,7 +182,7 @@
           "display": "80%",
           "target": [
             {
-              "code": "LA29167-6",
+              "code": "LA29177-5",
               "display": "Normal activity with effort; some signs or symptoms of disease",
               "equivalence": "equivalent"
             }
@@ -52,8 +193,8 @@
           "display": "70%",
           "target": [
             {
-              "code": "LA29168-4",
-              "display": "Cares for self; unable to carry on normal activity or to do active work",
+              "code": "LA29178-3",
+              "display": "Cares for self; unable to carry on normal activity or do active work",
               "equivalence": "equivalent"
             }
           ]
@@ -63,8 +204,8 @@
           "display": "60%",
           "target": [
             {
-              "code": "LA29169-2",
-              "display": "Requires occasional assistance, but is able to care for most needs",
+              "code": "LA29179-1",
+              "display": "Requires occasional assistance but is able to care for most needs",
               "equivalence": "equivalent"
             }
           ]
@@ -74,7 +215,7 @@
           "display": "50%",
           "target": [
             {
-              "code": "LA29170-0",
+              "code": "LA29180-9",
               "display": "Requires considerable assistance and frequent medical care",
               "equivalence": "equivalent"
             }
@@ -85,7 +226,7 @@
           "display": "40%",
           "target": [
             {
-              "code": "LA29171-8",
+              "code": "LA29181-7",
               "display": "Disabled; requires special care and assistance",
               "equivalence": "equivalent"
             }
@@ -96,7 +237,7 @@
           "display": "30%",
           "target": [
             {
-              "code": "LA29172-6",
+              "code": "LA29182-5",
               "display": "Severely disabled; hospitalization is indicated, although death not imminent",
               "equivalence": "equivalent"
             }
@@ -107,7 +248,7 @@
           "display": "20%",
           "target": [
             {
-              "code": "LA29173-4",
+              "code": "LA29183-3",
               "display": "Very sick; hospitalization necessary; active supportive treatment necessary",
               "equivalence": "equivalent"
             }
@@ -118,7 +259,7 @@
           "display": "10%",
           "target": [
             {
-              "code": "LA29174-2",
+              "code": "LA29184-1",
               "display": "Moribund; fatal processes progressing rapidly",
               "equivalence": "equivalent"
             }
@@ -129,7 +270,7 @@
           "display": "0%",
           "target": [
             {
-              "code": "LA9627-1",
+              "code": "LA9627-6",
               "display": "Dead",
               "equivalence": "equivalent"
             }

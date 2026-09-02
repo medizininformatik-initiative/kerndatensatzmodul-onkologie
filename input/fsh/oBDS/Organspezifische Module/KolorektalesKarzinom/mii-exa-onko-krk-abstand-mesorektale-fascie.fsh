@@ -8,7 +8,7 @@ Description: "Beispiel für den Abstand des Tumors zur mesorektalen Faszie bei M
 
 * status = #final
 
-* code.coding = $RADLEX#RDE96 "Distance to MRF"
+* code.coding = $RADELEMENT#RDE96 "Distance to MRF"
 
 * subject = Reference(mii-exa-onko-krk-bundle-patient)
 * encounter = Reference(mii-exa-onko-krk-bundle-encounter)

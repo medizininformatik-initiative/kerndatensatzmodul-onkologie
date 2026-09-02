@@ -8,5 +8,6 @@ Usage: #example
 * subject = Reference(Patient/example)
 
 * valueCodeableConcept.coding[obds] = $mii-cs-onko-allgemeiner-leistungszustand-karnofsky#30% "30%"
+* valueCodeableConcept.coding[loinc] = $LNC#LA29179-1 "Requires occasional assistance but is able to care for most needs"
 // * valueCodeableConcept.coding[loinc] = $LNC#LA29172-6 "Severely disabled; hospitalization is indicated, although death not imminent"
 

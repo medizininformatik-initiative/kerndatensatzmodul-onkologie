@@ -1,39 +1,54 @@
-//skinparam linetype polyline 
+//skinparam linetype polyline
 //skinparam linetype ortho
 @startuml MII_Onko_UML_Relations_v1
-skinparam linetype polyline
-object Onko_OP #9999FF
-object Onko_Strahlentherapie #9999FF
-object Onko_SystemischeTherapie #9999FF
-object Therapieplanung_Tumorkonferenz #CCCCFF
-
-Therapieplanung_Tumorkonferenz <-- Onko_OP: basedOn 
+skinparam linetype ortho
+object Onko_OP [[StructureDefinition-mii-pr-onko-operation.html]] #9999FF
+object Onko_Strahlentherapie [[StructureDefinition-mii-pr-onko-strahlentherapie.html]] #9999FF
+object Onko_SystemischeTherapie [[StructureDefinition-mii-pr-onko-systemische-therapie.html]] #9999FF
+object Therapieplanung_Tumorkonferenz [[StructureDefinition-mii-pr-onko-tumorkonferenz.html]] #CCCCFF
+Therapieplanung_Tumorkonferenz <-- Onko_OP: basedOn
 Therapieplanung_Tumorkonferenz <-- Onko_Strahlentherapie: basedOn
 Therapieplanung_Tumorkonferenz <-- Onko_SystemischeTherapie: basedOn
 rectangle "Medikation" {
-    object MedicationStatement #FFCCFF
+    object MedicationStatement [[StructureDefinition-mii-pr-onko-systemische-therapie-medikation.html]] #FFCCFF
 }
-Onko_SystemischeTherapie <--- MedicationStatement : partOf 
+Onko_SystemischeTherapie <--- MedicationStatement : partOf
 Therapieplanung_Tumorkonferenz <--- MedicationStatement: basedOn
-object Diagnose_Primaertumor #FFFF66
-object Evidenz_Erstdiagnose #EEEEEE 
+object Diagnose_Primaertumor [[StructureDefinition-mii-pr-onko-diagnose-primaertumor.html]] #FFFF66
+object Fruehere_Tumorerkrankung [[StructureDefinition-mii-pr-onko-fruehere-tumorerkrankung.html]] #FFFF66
+object Evidenz_Erstdiagnose [[StructureDefinition-mii-pr-onko-liste-evidenz-erstdiagnose.html]] #EEEEEE
 Diagnose_Primaertumor --left--> Evidenz_Erstdiagnose : evidence.detail
+Diagnose_Primaertumor <-- Diagnose_Primaertumor : extension[transformationVon] 0..*
+Fruehere_Tumorerkrankung <.. Diagnose_Primaertumor : extension[occurredFollowing] 0..*
 
 
 
 rectangle "Onkologie Observations"{
-    object Onko_Variante #22FF22
-    object Fernmetastasen #22FF22
-    object TNM_Klassifikation #22FF22
-    object WeitereKlassifikation #22FF22 
-    object Lymphknotenuntersuchung #22FF22
-    object HistologieGrading #22FF22
-    object Residualstatus #22FF22
-    object Allgemeiner_Leistungszustand #22FF22
-    object Tod #22FF22
-    object Onko_Befund #88FF88
-
+    object Onko_Variante [[StructureDefinition-mii-pr-onko-genetische-variante.html]] #22FF22
+    object Fernmetastasen [[StructureDefinition-mii-pr-onko-fernmetastasen.html]] #22FF22
+    object TNM_Klassifikation [[StructureDefinition-mii-pr-onko-tnm-klassifikation.html]] #22FF22
+    object TNM_Kategorien [[StructureDefinition-mii-pr-onko-tnm-t-kategorie.html]] #22FF22
+    object TNM_Synthetisiert [[StructureDefinition-mii-pr-onko-tnm-klassifikation-synthetisiert.html]] #22FF22
+    object WeitereKlassifikation [[StructureDefinition-mii-pr-onko-weitere-klassifikationen.html]] #22FF22
+    object Lymphknotenuntersuchung [[StructureDefinition-mii-pr-onko-anzahl-untersuchte-lymphknoten.html]] #22FF22
+    object HistologieGrading [[StructureDefinition-mii-pr-onko-histologie-icdo3.html]] #22FF22
+    object Residualstatus [[StructureDefinition-mii-pr-onko-residualstatus.html]] #22FF22
+    object Allgemeiner_Leistungszustand [[StructureDefinition-mii-pr-onko-allgemeiner-leistungszustand-ecog.html]] #22FF22
+    object Studienteilnahme [[StructureDefinition-mii-pr-onko-studienteilnahme.html]] #22FF22
+    object Tod [[StructureDefinition-mii-pr-onko-tod.html]] #22FF22
+    object Onko_Befund [[StructureDefinition-mii-pr-onko-befund.html]] #88FF88
 }
+
+note bottom of TNM_Kategorien
+  Sammelknoten: T/N/M + L/V/Pn/S
+  + Symbole a/m/r/y (11 Profile)
+end note
+
+note bottom of HistologieGrading
+  mii-pr-onko-histologie-icdo3
+  (+ mii-pr-onko-grading als eigenes Profil,
+  ebenfalls focus -> Diagnose_Primaertumor)
+end note
 
 Diagnose_Primaertumor <--- TNM_Klassifikation: focus
 Diagnose_Primaertumor <-right--  Therapieplanung_Tumorkonferenz : addresses
@@ -44,9 +59,37 @@ Diagnose_Primaertumor <--- WeitereKlassifikation: focus
 Diagnose_Primaertumor <--- Allgemeiner_Leistungszustand :focus
 Diagnose_Primaertumor <--- Fernmetastasen :focus
 
-Therapieplanung_Tumorkonferenz <-right-- Onko_Befund  : basedOn
+TNM_Klassifikation ---> TNM_Kategorien : hasMember
+TNM_Synthetisiert ---> "1..*" TNM_Klassifikation : derivedFrom
+TNM_Kategorien ..> Lymphknotenuntersuchung : hasMember (N)
+TNM_Kategorien ..> Fernmetastasen : hasMember (M)
 
-object Verlauf #22FF22
+Diagnose_Primaertumor <--- Onko_OP : reasonReference
+Diagnose_Primaertumor <--- Onko_Strahlentherapie : reasonReference
+Diagnose_Primaertumor <--- Onko_SystemischeTherapie : reasonReference
+
+Diagnose_Primaertumor <--- Studienteilnahme : focus[primaertumor]
+rectangle "Modul Medizinisches Forschungsvorhaben" {
+    object MII_Studie_Studie #CCFFCC
+}
+MII_Studie_Studie <--- Studienteilnahme : focus[studie]
+
+Therapieplanung_Tumorkonferenz <-right-- Onko_Befund  : basedOn
+Evidenz_Erstdiagnose ---> Onko_Befund : entry.item
+note on link : + Observations
+
+rectangle "Therapieempfehlung (Tumorkonferenz)" {
+    object Therapieempfehlung_Kombi [[StructureDefinition-mii-pr-onko-therapieempfehlung-kombinationstherapie.html]] #CCCCFF
+    object Therapieempfehlung_Medikation [[StructureDefinition-mii-pr-onko-therapieempfehlung-medikation.html]] #FFCCFF
+    object Therapieempfehlung_OP [[StructureDefinition-mii-pr-onko-therapieempfehlung-operation.html]] #DDFFDD
+}
+Therapieempfehlung_Kombi <--- Therapieplanung_Tumorkonferenz : activity[extended].reference
+Therapieempfehlung_Medikation <--- Therapieempfehlung_Kombi : action.action.resource
+Diagnose_Primaertumor <--- Therapieempfehlung_Kombi : reasonReference
+Diagnose_Primaertumor <--- Therapieempfehlung_Medikation : reasonReference 1..1
+Diagnose_Primaertumor <--- Therapieempfehlung_OP : reasonReference
+
+object Verlauf [[StructureDefinition-mii-pr-onko-verlauf.html]] #22FF22
 Diagnose_Primaertumor <----  Verlauf : focus
 Verlauf ---> Tod: hasMember
 Verlauf ---> TNM_Klassifikation:  hasMember
@@ -56,25 +99,30 @@ Verlauf ---> Fernmetastasen: hasMember
 Verlauf ---> Residualstatus:  hasMember
 Verlauf ---> Onko_Variante: hasMember
 
-object Onko_Bioprobe #44FFFF
+object Onko_Bioprobe [[StructureDefinition-mii-pr-onko-specimen.html]] #44FFFF
 Onko_Bioprobe <-- Onko_Befund : specimen
+Onko_Bioprobe <--- TNM_Klassifikation : specimen 0..1
+Onko_Bioprobe <--- HistologieGrading : specimen 1..1
 Onko_Variante ...> Onko_Bioprobe: specimen (0..1)
 
-object AdverseEvent #FF9999
+object AdverseEvent [[StructureDefinition-mii-pr-onko-nebenwirkung-adverse-event.html]] #FF9999
 Onko_SystemischeTherapie <--- AdverseEvent: suspectEntity.instance
 Onko_Strahlentherapie <--- AdverseEvent: suspectEntity.instance
+MedicationStatement <--- AdverseEvent: suspectEntity.instance
 
-legend right 
+legend right
 |Color|Type|
 |<#FFFF66>|Condition|
-|<#CCCCFF>|CarePlan|
+|<#CCCCFF>|CarePlan / RequestGroup|
 |<#9999FF>|Procedure|
 |<#DDFFDD>|ServiceRequest|
 |<#88FF88>|DiagnosticReport|
 |<#22FF22>|Observation|
-|<#FFCCFF>|Medication|
+|<#FFCCFF>|MedicationStatement / MedicationRequest|
 |<#FF9999>|AdverseEvent|
 |<#44FFFF>|Specimen|
+|<#EEEEEE>|List|
+|<#CCFFCC>|ResearchStudy (Modul Forschungsvorhaben)|
 endlegend
 
 

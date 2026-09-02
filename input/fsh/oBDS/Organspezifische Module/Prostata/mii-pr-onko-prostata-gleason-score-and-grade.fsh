@@ -5,6 +5,7 @@ Title: "MII PR Onkologie Prostata Gleason Grade Group"
 Description: "Dieses Profil beschreibt einen Gleasonscore in der Onkologie"
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert OnkoCRMIProfile
 * ^status = #active
 
 * meta.profile 0..* MS
@@ -19,7 +20,19 @@ Description: "Dieses Profil beschreibt einen Gleasonscore in der Onkologie"
 * code 1..1 
 * code ^definition = "Gleason Grade Group. Die Gleason Grade Group ist aus dem Gleason Grade abgeleitet. Score ist ein histopathologisches Klassifikationssystem zur Beurteilung der Morphologie von Adenokarzinomen der Prostata und wird aus der Summe von primären und sekundärem Pattern berechnet."
 * code ^short = "Gleason Grade Group"
-* code.coding =  $SCT#1812491000004107 "Histologic grade of primary malignant neoplasm of prostate by International Society of Urological Pathology technique (observable entity)"
+// GH #259: SNOMED CT verpflichtend, LOINC optional als Zweitkodierung
+* code.coding ^slicing.discriminator.type = #pattern
+* code.coding ^slicing.discriminator.path = "system"
+* code.coding ^slicing.rules = #open
+* code.coding contains
+    snomed 1..1 MS and
+    loinc 0..1 MS
+* code.coding[snomed] = $SCT#1812491000004107 "Histologic grade of primary malignant neoplasm of prostate by International Society of Urological Pathology technique (observable entity)"
+* code.coding[snomed].system 1.. MS
+* code.coding[snomed].code 1.. MS
+* code.coding[loinc] = $LNC#94734-1 "Prostate cancer grade group [Score] in Prostate tumor Qualitative"
+* code.coding[loinc].system 1.. MS
+* code.coding[loinc].code 1.. MS
 
 
 // P1 Gleason Score und Grade Group
@@ -42,13 +55,12 @@ Description: "Dieses Profil beschreibt einen Gleasonscore in der Onkologie"
 * insert Translation(effectiveDateTime ^definition, de-DE, Datum der Probenentnahme der Prostata-Biopise oder des Prostata-Exzisats)
 
 
-/*
-Mapping: FHIR-oBDS-Studienteilnahme
+
+
+Mapping: FHIR-oBDS-ProstataGleasonGradeGroup
 Id: oBDS
 Title: "Mapping FHIR zu oBDS"
-Source: MII_PR_Onko_Studienteilnahme
-* -> "24" "Studienteilnahme"
-*  valueCodeableConcept.coding.code -> "24.1" "Studienteilnahme Status"
-*  effectiveDateTime -> "24.2" "Studienteilnahme Datum"
-
-*/
+Source: MII_PR_Onko_Prostata_Gleason_Grade_Group
+* -> "P1" "Gleason-Score"
+* valueCodeableConcept -> "P1 (abgeleitet)" "Internationale Standard Grade Group (ISUP 1-5); keine eigene oBDS-Feldnummer"
+* effectiveDateTime -> "P3" "Datum der Stanzen"

@@ -1,0 +1,36 @@
+{
+  "resourceType": "Observation",
+  "id": "mii-exa-onko-cup-fernmetastase-hep",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fernmetastasen|2026.0.3"
+    ]
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "code": "385421009",
+        "system": "http://snomed.info/sct"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/mii-exa-onko-cup-patient"
+  },
+  "focus": [
+    {
+      "reference": "Condition/mii-exa-onko-cup-diagnose"
+    }
+  ],
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "HEP",
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-fernmetastasen",
+        "display": "Leber"
+      }
+    ]
+  },
+  "effectiveDateTime": "2026-02-11"
+}

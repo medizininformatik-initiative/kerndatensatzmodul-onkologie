@@ -2,10 +2,11 @@ Profile: MII_PR_Onko_TNM_a_Symbol
 Parent: Observation
 Id: mii-pr-onko-tnm-a-symbol
 Title: "MII PR Onkologie TNM a-Symbol"
-Description: "TNM-Klassifikation: TNM a-Symbol. Gibt an, ob die Klassifikation aus Anlass einer Autopsie erfolgte."
+Description: "DEPRECATED seit v2027: Die eigenständigen Symbol-Profile sind abgelöst — das a-Symbol wird als modifierExtension an den T-/N-/M-Kategorien erfasst (oBDS 8.3–8.5). Dieses Profil bleibt zum Lesen von Bestandsdaten definiert. — TNM-Klassifikation: TNM a-Symbol. Gibt an, ob die Klassifikation aus Anlass einer Autopsie erfolgte."
 * insert PR_CS_VS_Version
 * insert Publisher
-* ^status = #active
+* insert OnkoCRMIProfile
+* ^status = #retired
 * meta.profile 0..* MS
 * encounter 0..1 MS
 

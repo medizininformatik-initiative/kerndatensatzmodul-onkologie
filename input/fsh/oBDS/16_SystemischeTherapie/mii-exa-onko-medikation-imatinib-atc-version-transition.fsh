@@ -22,8 +22,8 @@ Description: "Beispiel einer systemischen Therapie Medikation mit Imatinib, das 
 * medicationCodeableConcept.coding[=].display = "Imatinib"
 
 * medicationCodeableConcept.text = "Imatinib (BCR-ABL Tyrosinkinase-Inhibitor)"
-* partOf = Reference(Procedure/systemische-therapie-example)
+* partOf[systemischeTherapie] = Reference(mii-exa-onko-systemische-therapie-1)
 * note.text = "CML-Protokoll mit Imatinib"
 * effectivePeriod.start = "2020-12-01"
 * effectivePeriod.end = "2024-08-30"
-* basedOn = Reference(CarePlan/example)
+* basedOn[tumorkonferenz] = Reference(mii-exa-onko-tumorkonferenz-01)

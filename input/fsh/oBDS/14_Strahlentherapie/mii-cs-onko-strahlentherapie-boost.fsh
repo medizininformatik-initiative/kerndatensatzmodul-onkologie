@@ -8,6 +8,7 @@ Description: "oBDS-spezifisches Codesystem für Klassifikation von Strahlenthera
 * ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert OnkoCRMICodeSystem
 * ^caseSensitive = true
 * ^valueSet = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-boost"
 * ^content = #complete

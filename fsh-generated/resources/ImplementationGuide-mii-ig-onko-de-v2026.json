@@ -1,12 +1,166 @@
 {
   "resourceType": "ImplementationGuide",
   "id": "mii-ig-onko-de-v2026",
-  "language": "de-DE",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableimplementationguide",
+      "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishableimplementationguide",
+      "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-implementationguide"
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
+      "valueDate": "2026-03-27"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "shareable"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "publishable"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes",
+            "code": "package",
+            "display": "Package"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/package-source",
+      "extension": [
+        {
+          "url": "packageId",
+          "valueId": "de.medizininformatikinitiative.kerndatensatz.onkologie"
+        },
+        {
+          "url": "version",
+          "valueString": "2026.0.3"
+        },
+        {
+          "url": "uri",
+          "valueUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko"
+        }
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2026"
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-author",
+      "valueContactDetail": {
+        "telecom": [
+          {
+            "system": "email",
+            "value": "thomas.debertshaeuser@charite.de"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-editor",
+      "valueContactDetail": {
+        "name": "Taskforce Core Data Set"
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
+      "valueContactDetail": {
+        "name": "Interoperability Working Group",
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
+      "valueContactDetail": {
+        "name": "National Steering Committee",
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
+      "valueContactDetail": {
+        "name": "Interoperability Working Group",
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
+      "valueContactDetail": {
+        "name": "National Steering Committee",
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-expansionParameters",
+      "valueReference": {
+        "reference": "Parameters/mii-param-onko-manifest"
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
+      "valueCoding": {
+        "system": "http://hl7.org/fhir/version-algorithm",
+        "code": "semver"
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-usage",
+      "valueMarkdown": "Use this ImplementationGuide resource as a computable definition of all the parts of the corresponding module of the Medical Informatics Initiative core data set."
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-purpose",
+      "valueMarkdown": "Provide the computable publication unit for the MII Core Dataset Oncology module, enabling implementers to discover, validate, version, and apply the specification consistently."
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-topic",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+            "code": "C3262"
+          }
+        ]
+      }
+    }
+  ],
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ImplementationGuide/mii-ig-onko-de-v2026",
   "version": "2026.0.3",
   "name": "MII_IG_Onko_DE",
   "title": "MII IG Kerndatensatz-Modul Onkologie",
   "status": "active",
+  "experimental": false,
+  "date": "2026-03-27",
   "publisher": "Medizininformatik Initiative",
   "contact": [
     {
@@ -19,52 +173,101 @@
       ]
     }
   ],
-  "packageId": "mii-ig-onko-de-v2026",
+  "description": "FHIR profiles for representing oncological data based on the German oBDS (Onkologischer Basisdatensatz) specification, part of the MII core dataset.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "DE",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Germany"
+        }
+      ]
+    }
+  ],
+  "packageId": "de.medizininformatikinitiative.kerndatensatz.onkologie",
+  "license": "CC0-1.0",
   "fhirVersion": [
     "4.0.1"
   ],
   "dependsOn": [
     {
       "packageId": "de.basisprofil.r4",
-      "version": "1.5.x",
+      "version": "1.6.0",
       "uri": "http://fhir.org/packages/de.basisprofil.r4/ImplementationGuide/de.basisprofil.r4",
       "id": "de_basisprofil_r4"
     },
     {
       "packageId": "de.medizininformatikinitiative.kerndatensatz.meta",
-      "version": "2026.0.x",
+      "version": "2027.0.0-ballot.rc3",
       "uri": "https://www.medizininformatik-initiative.de/fhir/modul-meta/ImplementationGuide/mii-ig-meta",
       "id": "de_medizininformatikinitiative_kerndatensatz_meta"
     },
     {
+      "packageId": "hl7.fhir.uv.xver-r5.r4",
+      "version": "0.1.0",
+      "uri": "http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4",
+      "id": "hl7_fhir_uv_xver_r5_r4"
+    },
+    {
+      "packageId": "hl7.fhir.uv.crmi",
+      "version": "2.0.0",
+      "uri": "http://hl7.org/fhir/uv/crmi/ImplementationGuide/hl7.fhir.uv.crmi",
+      "id": "hl7_fhir_uv_crmi"
+    },
+    {
       "packageId": "de.medizininformatikinitiative.kerndatensatz.base",
-      "version": "2026.0.x",
+      "version": "2027.0.0-ballot.rc1",
       "uri": "https://www.medizininformatik-initiative.de/fhir/modul-base/ImplementationGuide/mii-ig-base",
       "id": "de_medizininformatikinitiative_kerndatensatz_base"
     },
     {
       "packageId": "de.medizininformatikinitiative.kerndatensatz.biobank",
-      "version": "2026.0.x",
+      "version": "2027.0.0-ballot.rc1",
       "uri": "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.biobank/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.biobank",
       "id": "de_medizininformatikinitiative_kerndatensatz_biobank"
     },
     {
+      "packageId": "de.medizininformatikinitiative.kerndatensatz.laborbefund",
+      "version": "2026.0.3",
+      "uri": "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.laborbefund/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.laborbefund",
+      "id": "de_medizininformatikinitiative_kerndatensatz_laborbefund"
+    },
+    {
       "packageId": "de.medizininformatikinitiative.kerndatensatz.medikation",
-      "version": "2026.0.x",
+      "version": "2026.0.1",
       "uri": "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/ImplementationGuide/mii-ig-medikation",
       "id": "de_medizininformatikinitiative_kerndatensatz_medikation"
     },
     {
       "packageId": "de.medizininformatikinitiative.kerndatensatz.molgen",
-      "version": "2026.0.x",
+      "version": "2026.0.4",
       "uri": "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.molgen/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.molgen",
       "id": "de_medizininformatikinitiative_kerndatensatz_molgen"
     },
     {
+      "packageId": "hl7.fhir.uv.genomics-reporting",
+      "version": "3.0.0",
+      "uri": "http://hl7.org/fhir/uv/genomics-reporting/ImplementationGuide/hl7.fhir.uv.genomics-reporting",
+      "id": "hl7_fhir_uv_genomics_reporting"
+    },
+    {
       "packageId": "de.medizininformatikinitiative.kerndatensatz.studie",
-      "version": "2026.0.2",
-      "uri": "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.studie/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.studie",
+      "version": "2027.0.0-ballot.rc1",
+      "uri": "https://www.medizininformatik-initiative.de/fhir/modul-studie/ImplementationGuide/mii-ig-studie",
       "id": "de_medizininformatikinitiative_kerndatensatz_studie"
+    },
+    {
+      "packageId": "hl7.terminology.r4",
+      "version": "7.3.0",
+      "uri": "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
+      "id": "hl7_terminology_r4"
+    },
+    {
+      "packageId": "hl7.fhir.uv.extensions.r4",
+      "version": "5.3.0",
+      "uri": "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
+      "id": "hl7_fhir_uv_extensions_r4"
     }
   ],
   "definition": {
@@ -108,6 +311,62 @@
         "name": "Beispiel Strahlentherapie oBDS 2021 - Mamma Primärzielgebiet",
         "description": "oBDS 2021: Bestrahlung der Mamma als Primärzielgebiet (entspricht 2014 '3.1.+' Organanteil)",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie"
+      },
+      {
+        "reference": {
+          "reference": "Encounter/example"
+        },
+        "name": "Beispiel-Kontakt (Anker)",
+        "description": "Minimaler Anker-Kontakt für die generischen Referenzen Encounter/example.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/example-chemo-phase1"
+        },
+        "name": "Beispiel-Kontakt Chemotherapie Phase 1 (Anker)",
+        "description": "Minimaler Anker-Kontakt für Encounter/example-chemo-phase1.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/example-chemo-phase2"
+        },
+        "name": "Beispiel-Kontakt Chemotherapie Phase 2 (Anker)",
+        "description": "Minimaler Anker-Kontakt für Encounter/example-chemo-phase2.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/example-diagnosis-modification"
+        },
+        "name": "Beispiel-Kontakt Diagnosestellung FOLFOX-Modifikation (Anker)",
+        "description": "Minimaler Anker-Kontakt für Encounter/example-diagnosis-modification.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/example-surgery-modification"
+        },
+        "name": "Beispiel-Kontakt Operation FOLFOX-Modifikation (Anker)",
+        "description": "Minimaler Anker-Kontakt für Encounter/example-surgery-modification.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/example"
+        },
+        "name": "Beispiel-Patient (Anker)",
+        "description": "Minimaler Anker-Patient für die generischen Referenzen Patient/example in den Beispielen des Moduls.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/example-modification"
+        },
+        "name": "Beispiel-Patient FOLFOX-Modifikation (Anker)",
+        "description": "Minimaler Anker-Patient für das FOLFOX-Modifikations-Szenario (Patient/example-modification).",
+        "exampleBoolean": true
       },
       {
         "reference": {
@@ -209,6 +468,30 @@
         "name": "FOLFOX - Oxaliplatin tatsächlich verabreicht",
         "description": "Oxaliplatin medication statement as part of FOLFOX4 protocol",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"
+      },
+      {
+        "reference": {
+          "reference": "Encounter/mii-exa-onko-folfox-encounter-chemo"
+        },
+        "name": "FOLFOX Kontakt Chemotherapie",
+        "description": "Ambulanter Kontakt, unter dem die FOLFOX-Chemotherapie appliziert wurde",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/mii-exa-onko-folfox-encounter-diagnosis"
+        },
+        "name": "FOLFOX Kontakt Diagnosestellung",
+        "description": "Ambulanter Kontakt, in dem die Kolonkarzinom-Diagnose gestellt und gestaged wurde",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/mii-exa-onko-folfox-encounter-surgery"
+        },
+        "name": "FOLFOX Kontakt Sigmaresektion",
+        "description": "Stationärer Kontakt der Sigmaresektion samt zugehöriger Teilprozeduren",
+        "exampleBoolean": true
       },
       {
         "reference": {
@@ -359,7 +642,7 @@
           "reference": "ConceptMap/mii-cm-onko-allgemeiner-leistungszustand-ecog-loinc"
         },
         "name": "Mapping oBDS ECOG zu LOINC",
-        "description": "Mapping der oBDS-Codes für ECOG Performance Status zu LOINC Answer List LA29179-1",
+        "description": "Mapping der oBDS-Codes für ECOG Performance Status zu LOINC Answer List LL529-9",
         "exampleBoolean": false
       },
       {
@@ -367,7 +650,7 @@
           "reference": "ConceptMap/mii-cm-onko-allgemeiner-leistungszustand-karnofsky-loinc"
         },
         "name": "Mapping oBDS Karnofsky zu LOINC",
-        "description": "Mapping der oBDS-Codes für Karnofsky Performance Status zu LOINC Answer List LA29175-9",
+        "description": "Mapping der oBDS-Codes für Karnofsky Performance Status zu LOINC Answer List LL4986-7",
         "exampleBoolean": false
       },
       {
@@ -447,7 +730,7 @@
           "reference": "ConceptMap/mii-cm-onko-allgemeiner-leistungszustand-sct"
         },
         "name": "MII CM Onko Allgemeiner Leistungszustand SNOMED Mapping",
-        "description": "Mapping Allgemeiner Leistungszustand Codes zu SNOMED-CT",
+        "description": "Mapping Allgemeiner Leistungszustand Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich.",
         "exampleBoolean": false
       },
       {
@@ -456,6 +739,14 @@
         },
         "name": "MII CM Onko ATC Code Changes 2020 to 2021",
         "description": "Diese ConceptMap dokumentiert ausschließlich die ATC-Code-Änderungen von 2020 zu 2021. Im Jahr 2021 erfolgte eine umfassende Reorganisation der ATC-Klassifikation für onkologische Substanzen mit Umkodierung von über 60 Wirkstoffen.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/mii-cm-onko-atc-transitions-2022"
+        },
+        "name": "MII CM Onko ATC Code Changes 2021 to 2022",
+        "description": "Diese ConceptMap dokumentiert die ATC-Code-Änderungen von 2021 zu 2022. In diesem Jahr erfolgte die größte Reklassifikation der onkologischen ATC-Systematik: die monoklonalen Antikörper wurden aus der Sammelgruppe L01XC in die neue, nach Zielstruktur gegliederte Gruppe L01F überführt.",
         "exampleBoolean": false
       },
       {
@@ -495,7 +786,7 @@
           "reference": "ConceptMap/mii-cm-onko-tnm-uicc-sct-clinical"
         },
         "name": "MII CM Onko Clincal TNM UICC SNOMED",
-        "description": "Mapping clincal TNM UICC Codes zu SNOMED-CT",
+        "description": "Mapping clincal TNM UICC Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich.",
         "exampleBoolean": false
       },
       {
@@ -511,7 +802,7 @@
           "reference": "ConceptMap/mii-cm-onko-genetische-variante-auspraegung-sct"
         },
         "name": "MII CM Onko Genetische Variante Auspraegung SNOMED Mapping",
-        "description": "Mapping Therapieabweichung Codes zu SNOMED-CT",
+        "description": "Mapping Therapieabweichung Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich.",
         "exampleBoolean": false
       },
       {
@@ -519,7 +810,15 @@
           "reference": "ConceptMap/mii-cm-onko-grading-sct"
         },
         "name": "MII CM Onko Grading SNOMED Mapping",
-        "description": "Mapping Grading Codes zu SNOMED-CT",
+        "description": "Mapping Grading Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/mii-cm-onko-icdo3-transitions-2019"
+        },
+        "name": "MII CM Onko ICD-O-3 Code Changes 2014 to 2019",
+        "description": "Diese ConceptMap dokumentiert die Morphologie-Code-Änderungen der ICD-O-3 von der Ersten Revision (deutsche Ausgabe 2014, ICD-O-3.1) zur Zweiten Revision (2019, ICD-O-3.2): Dignitäts-Neubewertungen (z. B. GIST, Phäochromozytom, Thymome, Paragangliome), Entitäts-Zusammenlegungen (z. B. Ewing-Sarkom, Hämangioperizytom in solitärer fibröser Tumor) und entfallene Konzepte. Werkzeug für die Migration von Krebsregister-Bestandsdaten.",
         "exampleBoolean": false
       },
       {
@@ -527,7 +826,15 @@
           "reference": "ConceptMap/mii-cm-onko-intention-sct"
         },
         "name": "MII CM Onko Intention SNOMED Mapping",
-        "description": "Mapping Intention Codes zu SNOMED-CT",
+        "description": "Mapping Intention Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/mii-cm-onko-nebenwirkung-meddra-sct"
+        },
+        "name": "MII CM Onko Nebenwirkung MedDRA zu SNOMED CT (CTCAE v4.03)",
+        "description": "Kuratierte Zuordnung der MedDRA-Codes der CTCAE-v4.03-Nebenwirkungsterme zu SNOMED CT für die optionale SNOMED-Zweitkodierung in AdverseEvent.event (Profil mii-pr-onko-nebenwirkung-adverse-event). WICHTIGE HINWEISE: (1) Es existiert eine offizielle, lizenzpflichtige MedDRA-SNOMED-CT-Map (MedDRA MSSO / SNOMED International); diese ConceptMap ist eine davon unabhängige, projektseitig kuratierte Zuordnung und ersetzt die offizielle Map nicht. (2) Die Zuordnungen wurden automatisiert erstellt und stichproben- bzw. einzelfallkuratiert; für Vollständigkeit und Korrektheit wird KEINE GEWÄHR übernommen. Vor einer Nutzung in Produktivsystemen ist eine eigenverantwortliche fachliche Prüfung erforderlich. (3) Nicht jeder CTCAE-/MedDRA-Term hat ein SNOMED-CT-Äquivalent — solche Terme sind als unmatched gekennzeichnet und verbleiben MedDRA-only.",
         "exampleBoolean": false
       },
       {
@@ -535,7 +842,7 @@
           "reference": "ConceptMap/mii-cm-onko-nebenwirkung-sct"
         },
         "name": "MII CM Onko Nebenwirkung SNOMED Mapping",
-        "description": "Mapping Nebenwirkung CTCAE Codes zu SNOMED-CT",
+        "description": "Mapping Nebenwirkung CTCAE Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich.",
         "exampleBoolean": false
       },
       {
@@ -543,7 +850,7 @@
           "reference": "ConceptMap/mii-cm-onko-operation-komplikation-sct"
         },
         "name": "MII CM Onko Operation Komplikation SNOMED Mapping",
-        "description": "Mapping Operation Komplikation Codes zu SNOMED-CT",
+        "description": "Mapping Operation Komplikation Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich.",
         "exampleBoolean": false
       },
       {
@@ -551,7 +858,7 @@
           "reference": "ConceptMap/mii-cm-onko-tnm-uicc-sct-pathological"
         },
         "name": "MII CM Onko Pathological TNM UICC SNOMED",
-        "description": "Mapping pathological TNM UICC Codes zu SNOMED-CT",
+        "description": "Mapping pathological TNM UICC Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich.",
         "exampleBoolean": false
       },
       {
@@ -559,7 +866,7 @@
           "reference": "ConceptMap/mii-cm-onko-primaertumor-diagnosesicherung-sct"
         },
         "name": "MII CM Onko Primaertumor Diagnosesicherung SNOMED Mapping",
-        "description": "Mapping Primärtumor Diagnosesicherung Codes zu SNOMED-CT",
+        "description": "Mapping Primärtumor Diagnosesicherung Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich.",
         "exampleBoolean": false
       },
       {
@@ -567,7 +874,7 @@
           "reference": "ConceptMap/mii-cm-onko-residualstatus-uicc-sct"
         },
         "name": "MII CM Onko Residualstatus UICC SNOMED",
-        "description": "Mapping Residualstatus UICC Codes zu SNOMED-CT",
+        "description": "Mapping Residualstatus UICC Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich.",
         "exampleBoolean": false
       },
       {
@@ -575,7 +882,7 @@
           "reference": "ConceptMap/mii-cm-onko-seitenlokalisation-sct"
         },
         "name": "MII CM Onko Seitenlokalisation SNOMED Mapping",
-        "description": "Mapping Seitenlokalisation Codes zu SNOMED-CT",
+        "description": "Mapping Seitenlokalisation Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich.",
         "exampleBoolean": false
       },
       {
@@ -583,7 +890,7 @@
           "reference": "ConceptMap/mii-cm-onko-strahlentherapie-applikationsart-sct"
         },
         "name": "MII CM Onko Strahlentherapie Applikationsart SNOMED Mapping",
-        "description": "Mapping Strahlentherapie Applikationsart Codes zu SNOMED-CT",
+        "description": "Mapping Strahlentherapie Applikationsart Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich.",
         "exampleBoolean": false
       },
       {
@@ -591,7 +898,7 @@
           "reference": "ConceptMap/mii-cm-onko-strahlentherapie-boost-sct"
         },
         "name": "MII CM Onko Strahlentherapie Boost SNOMED Mapping",
-        "description": "Mapping Strahlentherapie Boost Codes zu SNOMED-CT",
+        "description": "Mapping Strahlentherapie Boost Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich.",
         "exampleBoolean": false
       },
       {
@@ -599,7 +906,7 @@
           "reference": "ConceptMap/mii-cm-onko-strahlentherapie-strahlenart-sct"
         },
         "name": "MII CM Onko Strahlentherapie Strahlenart SNOMED Mapping",
-        "description": "Mapping Strahlentherapie Strahlenart Codes zu SNOMED-CT",
+        "description": "Mapping Strahlentherapie Strahlenart Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich.",
         "exampleBoolean": false
       },
       {
@@ -607,7 +914,7 @@
           "reference": "ConceptMap/mii-cm-onko-strahlentherapie-strahleneinheit-sct"
         },
         "name": "MII CM Onko Strahlentherapie Strahleneinheit SNOMED Mapping",
-        "description": "Mapping Strahlentherapie Strahleneinheit Codes zu SNOMED-CT",
+        "description": "Mapping Strahlentherapie Strahleneinheit Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich.",
         "exampleBoolean": false
       },
       {
@@ -615,7 +922,7 @@
           "reference": "ConceptMap/mii-cm-onko-strahlentherapie-zielgebiet-sct"
         },
         "name": "MII CM Onko Strahlentherapie Zielgebiet SNOMED Mapping",
-        "description": "Mapping Strahlentherapie Zielgebiet Codes zu SNOMED-CT",
+        "description": "Mapping Strahlentherapie Zielgebiet Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich.",
         "exampleBoolean": false
       },
       {
@@ -623,7 +930,7 @@
           "reference": "ConceptMap/mii-cm-onko-studienteilnahme-sct"
         },
         "name": "MII CM Onko Studienteilnahme SNOMED Mapping",
-        "description": "Mapping Studienteilnahme Status Codes zu SNOMED-CT",
+        "description": "Mapping Studienteilnahme Status Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich.",
         "exampleBoolean": false
       },
       {
@@ -631,7 +938,7 @@
           "reference": "ConceptMap/mii-cm-onko-therapie-ende-sct"
         },
         "name": "MII CM Onko Therapie Ende SNOMED Mapping",
-        "description": "Mapping Therapie Ende Codes zu SNOMED-CT",
+        "description": "Mapping Therapie Ende Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich.",
         "exampleBoolean": false
       },
       {
@@ -639,7 +946,7 @@
           "reference": "ConceptMap/mii-cm-onko-therapie-stellung-sct"
         },
         "name": "MII CM Onko Therapie Stellung SNOMED Mapping",
-        "description": "Mapping Therapie Stellung Codes zu SNOMED-CT",
+        "description": "Mapping Therapie Stellung Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich.",
         "exampleBoolean": false
       },
       {
@@ -647,7 +954,7 @@
           "reference": "ConceptMap/mii-cm-onko-therapie-typ-sct"
         },
         "name": "MII CM Onko Therapie Typ SNOMED Mapping",
-        "description": "Mapping Therapie Typ Codes zu SNOMED-CT",
+        "description": "Mapping Therapie Typ Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich.",
         "exampleBoolean": false
       },
       {
@@ -655,7 +962,7 @@
           "reference": "ConceptMap/mii-cm-onko-therapieabweichung-sct"
         },
         "name": "MII CM Onko Therapieabweichung SNOMED Mapping",
-        "description": "Mapping Therapieabweichung Codes zu SNOMED-CT",
+        "description": "Mapping Therapieabweichung Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich.",
         "exampleBoolean": false
       },
       {
@@ -663,7 +970,7 @@
           "reference": "ConceptMap/mii-cm-onko-therapieplanung-sct"
         },
         "name": "MII CM Onko Therapieplanung SNOMED Mapping",
-        "description": "Mapping Therapieplanung Codes zu SNOMED-CT",
+        "description": "Mapping Therapieplanung Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich.",
         "exampleBoolean": false
       },
       {
@@ -671,7 +978,7 @@
           "reference": "ConceptMap/mii-cm-onko-tod-sct"
         },
         "name": "MII CM Onko Tod SNOMED Mapping",
-        "description": "Mapping Tod Codes zu SNOMED-CT",
+        "description": "Mapping Tod Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich.",
         "exampleBoolean": false
       },
       {
@@ -679,7 +986,7 @@
           "reference": "ConceptMap/mii-cm-onko-verlauf-fernmetastasen-sct"
         },
         "name": "MII CM Onko Verlauf Fernmetastasen SNOMED Mapping",
-        "description": "Mapping Verlauf Fernmetastasen Codes zu SNOMED-CT",
+        "description": "Mapping Verlauf Fernmetastasen Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich.",
         "exampleBoolean": false
       },
       {
@@ -687,7 +994,7 @@
           "reference": "ConceptMap/mii-cm-onko-verlauf-gesamtbeurteilung-sct"
         },
         "name": "MII CM Onko Verlauf Gesamtbeurteilung SNOMED Mapping",
-        "description": "Mapping Gesamtbeurteilung Codes zu SNOMED-CT",
+        "description": "Mapping Gesamtbeurteilung Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich.",
         "exampleBoolean": false
       },
       {
@@ -695,7 +1002,7 @@
           "reference": "ConceptMap/mii-cm-onko-verlauf-lymphknoten-sct"
         },
         "name": "MII CM Onko Verlauf Lymphknoten SNOMED Mapping",
-        "description": "Mapping Lymphknoten Codes zu SNOMED-CT",
+        "description": "Mapping Lymphknoten Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich.",
         "exampleBoolean": false
       },
       {
@@ -703,7 +1010,7 @@
           "reference": "ConceptMap/mii-cm-onko-verlauf-primaertumor-sct"
         },
         "name": "MII CM Onko Verlauf Primaertumor SNOMED Mapping",
-        "description": "Mapping Verlauf-Primaertumor Codes zu SNOMED-CT",
+        "description": "Mapping Verlauf-Primaertumor Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich.",
         "exampleBoolean": false
       },
       {
@@ -736,6 +1043,14 @@
         },
         "name": "MII CPS Onkology CapabilityStatement",
         "description": "Das vorliegende CapabilityStatement beschreibt alle verpflichtenden Interaktionen die ein konformes System unterstützen muss, um das Modul Onkologie der Medizininformatik Initiative zu implementieren.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-onko-nebenwirkung-meddra-de"
+        },
+        "name": "MII CS Onko Nebenwirkung MedDRA Deutsch (Supplement)",
+        "description": "Deutschsprachiges CodeSystem-Supplement für MedDRA-Codes der CTCAE v4.03 Nebenwirkungen. Quelle: §65c-Plattform / Krebsregister-Liste (Deutsche Übersetzung CTCAE Version 4).",
         "exampleBoolean": false
       },
       {
@@ -820,10 +1135,26 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/mii-cs-onko-krk-mrt-mesorektale-faszie-status"
+        },
+        "name": "MII CS Onkologie KRK MRT Mesorektale Faszie Status",
+        "description": "oBDS-basiertes Codesystem für den Status der MRT/CT Untersuchung zur mesorektalen Faszie beim Kolorektalen Karzinom (KR5)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/mii-cs-onko-krk-operationstyp"
         },
         "name": "MII CS Onkologie KRK Operationstyp",
         "description": "oBDS-spezifisches Codesystem TME-Präparat, basierend auf der S3-Leitlinie Mammakarzinom v",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-onko-krk-stoma-anzeichnung"
+        },
+        "name": "MII CS Onkologie KRK Stoma Anzeichnung",
+        "description": "oBDS-basiertes Codesystem für die präoperative Anzeichnung der Stoma-Position beim Rektumkarzinom",
         "exampleBoolean": false
       },
       {
@@ -860,10 +1191,26 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/mii-cs-onko-nebenwirkung-ctcae-version"
+        },
+        "name": "MII CS Onkologie Nebenwirkung CTCAE-Version",
+        "description": "Versionsbezeichnungen des CTCAE-Katalogs nach oBDS 15.3. Werte gemaess oBDS-XML-Schema (Nebenwirkung/Version).",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/mii-cs-onko-operation-komplikation"
         },
         "name": "MII CS Onkologie Operation Komplikationen",
         "description": "oBDS-spezifisches Codesystem für Klassifikation von Komplikationen während der OP",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-onko-operation-urgency"
+        },
+        "name": "MII CS Onkologie Operation Urgency",
+        "description": "oBDS-basiertes Codesystem für die Modalität der Eingriffsdurchführung (Art des Eingriffs KR6)",
         "exampleBoolean": false
       },
       {
@@ -996,10 +1343,18 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/mii-cs-onko-tnm-formel"
+        },
+        "name": "MII CS Onkologie TNM Formel",
+        "description": "Codes für die Darstellung der zusammengeführten TNM-Gesamtformel als Component der synthetisierten TNM-Klassifikation.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/mii-cs-onko-tnm-uicc"
         },
         "name": "MII CS Onkologie TNM UICC",
-        "description": "Codes für TNM UICC Ausprägungen.",
+        "description": "Codes für TNM UICC Ausprägungen. HINWEIS zur Auflagen-Versionierung: Dieses CodeSystem ist bewusst eine auflagen-übergreifende Union (8. Auflage + Ergänzungen der 9. Auflage, z.B. T1b3/M1c1/M1c2); die verwendete Auflage wird als eigenes Datenelement (TNM-Version, oBDS 8.2) dokumentiert. Eine formal strengere, auflagen-versionierte Validierung (je Auflage ein CS-/VS-Stand nach dem Muster der ATC-/ICD-O-Jahresversionen) ist als spätere Ausbaustufe vorgesehen.",
         "exampleBoolean": false
       },
       {
@@ -1140,6 +1495,22 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-ex-onko-nebenwirkung-ctcae-version"
+        },
+        "name": "MII EX Onkologie Nebenwirkung CTCAE-Version",
+        "description": "Version des CTCAE-Katalogs, aus dem die Nebenwirkungsart stammt (oBDS 15.3). Nicht zu verwechseln mit der MedDRA-Version in event.coding[meddra].version: Die CTCAE fuehrt ihre Terme mit MedDRA-Codes, CTCAE v4.03 basiert auf MedDRA v12.0.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-ex-onko-tnm-a-praefix"
+        },
+        "name": "MII EX Onkologie TNM a-Präfix",
+        "description": "Kennzeichnet eine TNM T-, N- oder M-Kategorie, deren Feststellung erst im Rahmen einer Autopsie erfolgte (UICC a-Präfix). Als modifierExtension zu verwenden, da das a-Präfix die Interpretation des Kategorie-Wertes verändert.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-ex-onko-tnm-cp-praefix"
         },
         "name": "MII EX Onkologie TNM c/p Präfix",
@@ -1156,11 +1527,43 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-ex-onko-tnm-r-praefix"
+        },
+        "name": "MII EX Onkologie TNM r-Präfix",
+        "description": "Kennzeichnet eine TNM T-, N- oder M-Kategorie, deren Feststellung zur Beurteilung eines Rezidivs erfolgte (UICC r-Präfix, z. B. rcT2). Als modifierExtension zu verwenden, da das r-Präfix die Interpretation des Kategorie-Wertes verändert.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-ex-onko-tnm-sn-suffix"
         },
         "name": "MII EX Onkologie TNM SN Suffix",
         "description": "Die Extension verleiht der TNM N-Kategorie das Schildwächterlymphknoten (Sentinel Lymph Node) Suffix.",
         "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-ex-onko-tnm-y-praefix"
+        },
+        "name": "MII EX Onkologie TNM y-Präfix",
+        "description": "Kennzeichnet eine TNM T-, N- oder M-Kategorie, deren Feststellung während oder nach initialer multimodaler Therapie erfolgte (UICC y-Präfix, z. B. ycT2, ypN0). Als modifierExtension zu verwenden, da das y-Präfix die Interpretation des Kategorie-Wertes verändert.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-ex-onko-transformation-von"
+        },
+        "name": "MII EX Onkologie Transformation von",
+        "description": "Kennzeichnet, dass diese onkologische Diagnose eine Transformation aus einem bereits registrierten Primärtumor derselben Tumor-Linie ist — für Fälle, in denen das Krebsregister-Regelwerk eine neue Tumor-Entität führt (z. B. MDS → sekundäre AML, ZNS-Tumor /0 → /3). Abzugrenzen von occurredFollowing (rein zeitliche Abfolge unabhängiger Erkrankungen) und von der CUP-Auflösung nach der Best-Of-Regel, bei der dieselbe Entität aktualisiert wird (keine zweite Ressource).",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Bundle/mii-exa-onko-kim-musterperson-synthesized"
+        },
+        "name": "MII EXA Onko Kim Musterperson — Multi-CarePlan TNM Synthese",
+        "description": "Vollständige Multi-Tumorkonferenz-Demo am Beispiel Kim Musterperson (Ovarial-CA, Intervalldebulking). Drei Source-Klassifikationen über die Zeit (Diagnose 2021-06-22, post-Chemo 2021-09-15, post-OP 2021-10-15), vier Tumorkonferenzen mit jeweils eigener synthetisierter TNM-Stage, Provenance pinnt Algorithmus auf mii-lib-onko-synthesize-tnm v1.0.0.",
+        "exampleBoolean": true
       },
       {
         "reference": {
@@ -1308,6 +1711,146 @@
       },
       {
         "reference": {
+          "reference": "Bundle/mii-exa-onko-tnm-bundle"
+        },
+        "name": "MII EXA Onko TNM Bundle (cT2 cN3 cM0)",
+        "description": "Beispiel-Bundle: ein TNM-Staging-Ereignis (cT2 cN3 cM0, UICC IIIB), zusammengehalten durch die TNM-Klassifikation als hasMember-Grouper. Demonstriert, wie T und N eindeutig demselben Staging zugeordnet werden können.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Bundle/mii-exa-onko-tnm-bundle-synthesized"
+        },
+        "name": "MII EXA Onko TNM Bundle (synthesized stage at Tumorkonferenz)",
+        "description": "Beispiel-Bundle: zwei Meldungs-bezogene TNM-Klassifikationen (Diagnose-Meldung cT3cN2cM0, OP-Meldung pT2pN1) plus eine synthetisierte Klassifikation pT2 pN1 cM0 (Stadium IIIA) zum Zeitpunkt der postoperativen Tumorkonferenz. Die Tumorkonferenz verlinkt die synthetisierte Klassifikation via supportingInfo.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Bundle/mii-exa-onko-tnm-bundle-legacy"
+        },
+        "name": "MII EXA Onko TNM Bundle Legacy (cT2 cN3 cM0, UICC-only)",
+        "description": "Beispiel-Bundle in der Legacy-Form (vor SNOMED-CT-Dual-Coding): ein TNM-Staging-Ereignis (cT2 cN3 cM0, UICC IIIB), zusammengehalten durch die TNM-Klassifikation als hasMember-Grouper. Demonstriert, dass die Grouper-zentrierte Suchlogik unabhängig vom Wertcoding funktioniert.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Procedure/mii-exa-onko-strahlentherapie-bestrahlung-pci-sclc"
+        },
+        "name": "MII EXA Onkologie Bestrahlung PCI Ganzhirn (Zielgebiet 1.1)",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie"
+      },
+      {
+        "reference": {
+          "reference": "Bundle/mii-exa-onko-cup-bundle"
+        },
+        "name": "MII EXA Onkologie CUP Bundle (cTX cNX cM1)",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Condition/mii-exa-onko-diagnose-meningeom-benigne"
+        },
+        "name": "MII EXA Onkologie Diagnose benignes Meningeom (Ursprungsdiagnose)",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
+      },
+      {
+        "reference": {
+          "reference": "Condition/mii-exa-onko-cup-diagnose"
+        },
+        "name": "MII EXA Onkologie Diagnose CUP (C80.0)",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
+      },
+      {
+        "reference": {
+          "reference": "Condition/mii-exa-onko-cup-diagnose-aufgeloest"
+        },
+        "name": "MII EXA Onkologie Diagnose CUP aufgelöst → Pankreaskarzinom (Zustand nach Update derselben Ressource)",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
+      },
+      {
+        "reference": {
+          "reference": "Condition/mii-exa-onko-diagnose-meningeom-maligne-transformation"
+        },
+        "name": "MII EXA Onkologie Diagnose malignes Meningeom (Transformation /0 → /3)",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
+      },
+      {
+        "reference": {
+          "reference": "Condition/mii-exa-onko-diagnose-mds"
+        },
+        "name": "MII EXA Onkologie Diagnose MDS (Ursprungsdiagnose)",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
+      },
+      {
+        "reference": {
+          "reference": "Condition/mii-exa-onko-diagnose-angiosarkom-nach-radiatio"
+        },
+        "name": "MII EXA Onkologie Diagnose radiogenes Angiosarkom nach Strahlentherapie (dueTo)",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
+      },
+      {
+        "reference": {
+          "reference": "Condition/mii-exa-onko-diagnose-aml-transformation"
+        },
+        "name": "MII EXA Onkologie Diagnose sekundäre AML (Transformation aus MDS)",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
+      },
+      {
+        "reference": {
+          "reference": "Condition/mii-exa-onko-diagnose-taml-nach-chemo"
+        },
+        "name": "MII EXA Onkologie Diagnose t-AML nach Chemotherapie (dueTo)",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
+      },
+      {
+        "reference": {
+          "reference": "AdverseEvent/mii-exa-onko-nebenwirkung-anaemie-grad3"
+        },
+        "name": "MII EXA Onkologie Nebenwirkung Anämie CTCAE Grad 3",
+        "description": "Anämie CTCAE Grad 3 (MedDRA 10002272, deutsches Display aus dem Supplement) unter systemischer Therapie — mit SNOMED-CT-Zweitkodierung aus der ConceptMap.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung-adverse-event"
+      },
+      {
+        "reference": {
+          "reference": "AdverseEvent/mii-exa-onko-nebenwirkung-crs-grad4"
+        },
+        "name": "MII EXA Onkologie Nebenwirkung Cytokine-Release-Syndrom CTCAE Grad 4",
+        "description": "Cytokine-Release-Syndrom CTCAE Grad 4 (MedDRA 10052015) unter medikamentöser systemischer Therapie — SNOMED-Zweitkodierung gemäß ConceptMap gegen die im Expansions-Manifest gepinnte SNOMED-Version (International 20250701).",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung-adverse-event"
+      },
+      {
+        "reference": {
+          "reference": "AdverseEvent/mii-exa-onko-nebenwirkung-rektale-mukositis-grad2"
+        },
+        "name": "MII EXA Onkologie Nebenwirkung Rektale Mukositis CTCAE Grad 2 (MedDRA-only)",
+        "description": "Rektale Mukositis CTCAE Grad 2 (MedDRA 10063190) nach Strahlentherapie — Beispiel für einen Term OHNE SNOMED-CT-Äquivalent (in der ConceptMap als unmatched geführt): Die Kodierung bleibt MedDRA-only, der optionale snomed-Slice entfällt.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung-adverse-event"
+      },
+      {
+        "reference": {
+          "reference": "Specimen/mii-exa-onko-prostata-specimen-stanze"
+        },
+        "name": "MII EXA Onkologie Prostata Stanzbiopsie Specimen",
+        "description": "Gewebeprobe einer Prostata-Stanzbiopsie, auf die sich die Befunde zum Karzinombefall der Stanze beziehen.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-specimen"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/mii-exa-onko-strahlentherapie-pci-sclc"
+        },
+        "name": "MII EXA Onkologie Strahlentherapie PCI bei SCLC (prophylaktisch)",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-cup-tnm-klassifikation"
+        },
+        "name": "MII EXA Onkologie TNM Klassifikation CUP (cTX cNX cM1, ohne Stadium)",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation"
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-lm-mvgenomseq-onkologie"
         },
         "name": "MII LM Modellvorhaben Genomsequenzierung Onkologie",
@@ -1327,7 +1870,15 @@
           "reference": "StructureDefinition/mii-lm-onko-organspezifische-zusatzmodule"
         },
         "name": "MII LM Onkologie Organspezifische Zusatzmodule",
-        "description": "Logisches Modell für die organspezifischen Zusatzmodule des oBDS",
+        "description": "Logisches Modell für die organspezifischen Zusatzmodule des oBDS. Feldnummern und Struktur folgen dem amtlichen oBDS-XML-Schema (oBDS v3.0.5, Modul_Mamma/Darm/Prostata/Malignes_Melanom/Allgemein) sowie dem Feldkatalog auf basisdatensatz.de.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Library/mii-lib-onko-synthesize-tnm"
+        },
+        "name": "MII Onkologie TNM-Synthese Algorithmus",
+        "description": "Deterministischer Algorithmus zur Synthese einer TNM-Klassifikation aus mehreren Meldungs-bezogenen Quell-Klassifikationen. Implementiert UICC General Rules nach Manual der Krebsregistrierung Kap. 6 (Stegmaier 2019). Drei Phasen: primary (kein y/r), post-neoadjuvant (y), recurrence (r). Symbol-Lesen aus hasMember (mii-pr-onko-tnm-{y,r,a,m}-symbol). Pre-therapeutic intentional NICHT Phase: nicht aus TNM-Daten ableitbar (Biopsien können pTNM ergeben), gehört in Workflow-Kontext (Tumorkonferenz.category=praeth).",
         "exampleBoolean": false
       },
       {
@@ -1630,8 +2181,16 @@
         "reference": {
           "reference": "StructureDefinition/mii-pr-onko-prostate-gleason-patterns"
         },
-        "name": "MII PR Onkologie Prostata Gleason Primär",
-        "description": "Dieses Profil beschreibt einen primären Gleasonscore in der Onkologie",
+        "name": "MII PR Onkologie Prostata Gleason Pattern",
+        "description": "Dieses Profil beschreibt ein Gleason Pattern in der Onkologie. Es wird für das primäre, das sekundäre und das tertiäre Pattern gleichermaßen verwendet; welches Pattern gemeint ist, ergibt sich aus Observation.code.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-prostate-gleason-score-gesamt"
+        },
+        "name": "MII PR Onkologie Prostata Gleason Score Gesamt",
+        "description": "Dieses Profil beschreibt den Gleason-Gesamtscore als Summe aus primärem und sekundärem Pattern. Es wird verwendet, wenn im Befund nur das Score-Ergebnis dokumentiert ist und keine Aufschlüsselung in Primär-/Sekundär-Pattern und keine ISUP Grade Group vorliegt. Für die detaillierte Dokumentation mit Grade Group ist MII_PR_Onko_Prostata_Gleason_Grade_Group zu verwenden, für die einzelnen Patterns MII_PR_Onko_Prostata_Gleason_Pattern.",
         "exampleBoolean": false
       },
       {
@@ -1783,7 +2342,7 @@
           "reference": "StructureDefinition/mii-pr-onko-tnm-a-symbol"
         },
         "name": "MII PR Onkologie TNM a-Symbol",
-        "description": "TNM-Klassifikation: TNM a-Symbol. Gibt an, ob die Klassifikation aus Anlass einer Autopsie erfolgte.",
+        "description": "DEPRECATED seit v2027: Die eigenständigen Symbol-Profile sind abgelöst — das a-Symbol wird als modifierExtension an den T-/N-/M-Kategorien erfasst (oBDS 8.3–8.5). Dieses Profil bleibt zum Lesen von Bestandsdaten definiert. — TNM-Klassifikation: TNM a-Symbol. Gibt an, ob die Klassifikation aus Anlass einer Autopsie erfolgte.",
         "exampleBoolean": false
       },
       {
@@ -1807,7 +2366,7 @@
           "reference": "StructureDefinition/mii-pr-onko-tnm-m-symbol"
         },
         "name": "MII PR Onkologie TNM m-Symbol",
-        "description": "TNM-Klassifikation: TNM m-Symbol. Kennzeichnet Vorhandensein multipler Primärtumoren in einem anatomischen Bezirk.",
+        "description": "DEPRECATED seit v2027: Die Angabe multipler Primärtumoren (UICC-m-Suffix, oBDS 8.10) erfolgt jetzt als Component multipleTumoren an der T-Kategorie (mii-pr-onko-tnm-t-kategorie) — das Suffix ist T-exklusiv und gehört an die Kategorie, nicht als eigene Observation daneben. Bestandsdaten bleiben lesbar; für Neuimplementierungen ist die Component zu verwenden. Ursprüngliche Beschreibung: TNM-Klassifikation: TNM m-Symbol. Kennzeichnet Vorhandensein multipler Primärtumoren in einem anatomischen Bezirk.",
         "exampleBoolean": false
       },
       {
@@ -1831,7 +2390,7 @@
           "reference": "StructureDefinition/mii-pr-onko-tnm-r-symbol"
         },
         "name": "MII PR Onkologie TNM r-Symbol",
-        "description": "TNM-Klassifikation: TNM r-Symbol. Gibt an, ob die Klassifikation ein Rezidiv beurteilt.",
+        "description": "DEPRECATED seit v2027: Die eigenständigen Symbol-Profile sind abgelöst — das r-Symbol wird als modifierExtension an den T-/N-/M-Kategorien erfasst (oBDS 8.3–8.5). Dieses Profil bleibt zum Lesen von Bestandsdaten definiert. — TNM-Klassifikation: TNM r-Symbol. Gibt an, ob die Klassifikation ein Rezidiv beurteilt.",
         "exampleBoolean": false
       },
       {
@@ -1863,7 +2422,7 @@
           "reference": "StructureDefinition/mii-pr-onko-tnm-y-symbol"
         },
         "name": "MII PR Onkologie TNM y-Symbol",
-        "description": "TNM-Klassifikation: TNM y-Symbol. Gibt an, ob die Klassifikation während oder nach initialer multimodaler Therapie erfolgte.",
+        "description": "DEPRECATED seit v2027: Die eigenständigen Symbol-Profile sind abgelöst — das y-Symbol wird als modifierExtension an den T-/N-/M-Kategorien erfasst (oBDS 8.3–8.5). Dieses Profil bleibt zum Lesen von Bestandsdaten definiert. — TNM-Klassifikation: TNM y-Symbol. Gibt an, ob die Klassifikation während oder nach initialer multimodaler Therapie erfolgte.",
         "exampleBoolean": false
       },
       {
@@ -1872,6 +2431,14 @@
         },
         "name": "MII PR Onkologie TNM-Klassifikation",
         "description": "TNM-Klassifikation: Grouper-Profil für Komponenten der TNM-Klassifikation.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-tnm-klassifikation-synthetisiert"
+        },
+        "name": "MII PR Onkologie TNM-Klassifikation (synthetisiert)",
+        "description": "Synthetisierte TNM-Klassifikation: Aggregat aus mehreren Meldungs-bezogenen TNM-Klassifikationen, das den Stand zum Entscheidungszeitpunkt (z. B. Tumorkonferenz) zusammenfasst. UICC-Regeln zur Stage-Auswahl (pTNM > cTNM, jüngste Bewertung innerhalb derselben Krankheitsphase, r-Präfix als Bruchpunkt) werden vom erzeugenden System angewendet. Provenienz wird über derivedFrom auf die Quell-Klassifikationen abgebildet.",
         "exampleBoolean": false
       },
       {
@@ -1896,6 +2463,14 @@
         },
         "name": "MII PR Onkologie Tumorkonferenz",
         "description": "Dieses Profil beschreibt die Tumorkonferenz und die Therapieempfehlungen",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-onko-tumormarker"
+        },
+        "name": "MII PR Onkologie Tumormarker",
+        "description": "Tumormarker-Bestimmung im Rahmen einer onkologischen Erkrankung. Das Profil leitet vom Laboruntersuchungs-Profil des KDS-Moduls Laborbefund ab und schraenkt den LOINC-Code auf die kuratierte Tumormarker-Liste ein (extensible). Fachlicher Hintergrund und die Zuordnung Marker zu zulaessiger ICD-O-Morphologie nach ENCR Table 4: siehe IG-Seite Tumormarker.",
         "exampleBoolean": false
       },
       {
@@ -1956,6 +2531,22 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/mii-vs-onko-allgemeiner-leistungszustand-ecog-loinc"
+        },
+        "name": "MII VS Onkologie Allgemeiner Leistungszustand ECOG LOINC",
+        "description": "LOINC-Answer-Codes für den ECOG Performance Status. Enumerierte Fassung der LOINC-Answer-List LL529-9.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-allgemeiner-leistungszustand-karnofsky-loinc"
+        },
+        "name": "MII VS Onkologie Allgemeiner Leistungszustand Karnofsky LOINC",
+        "description": "LOINC-Answer-Codes für den Karnofsky Performance Status. Enumerierte Fassung der LOINC-Answer-List LL4986-7.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/mii-vs-onko-allgemeiner-leistungszustand-ecog"
         },
         "name": "MII VS Onkologie Allgemeiner Leistungszustand nach ECOG",
@@ -1968,6 +2559,22 @@
         },
         "name": "MII VS Onkologie Allgemeiner Leistungszustand nach Karnofsky",
         "description": "Value Set für oBDS-Codes für den Allgemeinen Leistungszustand nach Karnofsky",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-asa-loinc"
+        },
+        "name": "MII VS Onkologie ASA LOINC",
+        "description": "Value Set für LOINC ASA Physical Status Classification (generalisiert für alle onkologischen Indikationen)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-asa-obds"
+        },
+        "name": "MII VS Onkologie ASA oBDS",
+        "description": "Value Set für oBDS ASA-Klassifikation (ursprünglich KR9 aus Kolorektales Karzinom Modul, generalisiert für alle onkologischen Indikationen)",
         "exampleBoolean": false
       },
       {
@@ -2004,6 +2611,14 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/mii-vs-onko-icd10-meldepflichtige-tumoren"
+        },
+        "name": "MII VS Onkologie ICD-10-GM Meldepflichtige Tumoren",
+        "description": "ICD-10-GM-Codes der nach KFRG/§65c krebsregister-meldepflichtigen Neubildungen: bösartige Neubildungen (C00-C97), In-situ-Neubildungen (D00-D09), gutartige Neubildungen der Meningen, des Gehirns/ZNS und intrakranieller endokriner Strukturen (D32, D33, D35.2-D35.4) sowie Neubildungen unsicheren oder unbekannten Verhaltens (D37-D48, einschließlich hämatologischer Entitäten D45-D47).",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/mii-vs-onko-icdo3-morphologie"
         },
         "name": "MII VS Onkologie ICD-O-3 Morphologie",
@@ -2012,10 +2627,154 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/mii-vs-onko-icdo3-morphologie-2014"
+        },
+        "name": "MII VS Onkologie ICD-O-3 Morphologie 2014",
+        "description": "Codes für histologische Morphologie und Verhalten einer neoplastischen Veränderung gemäß ICD-O-3 Erste Revision (deutsche Ausgabe 2014).",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-icdo3-morphologie-2019"
+        },
+        "name": "MII VS Onkologie ICD-O-3 Morphologie 2019",
+        "description": "Codes für histologische Morphologie und Verhalten einer neoplastischen Veränderung gemäß ICD-O-3 Zweite Revision (deutsche Ausgabe 2019).",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/mii-vs-onko-icdo3-topographie"
         },
         "name": "MII VS Onkologie ICD-O-3 Topographie",
         "description": "Codes für Topographie einer neoplastischen Veränderung",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-icdo3-topographie-2014"
+        },
+        "name": "MII VS Onkologie ICD-O-3 Topographie 2014",
+        "description": "Codes für die Topographie einer neoplastischen Veränderung gemäß ICD-O-3 Erste Revision (deutsche Ausgabe 2014).",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-icdo3-topographie-2019"
+        },
+        "name": "MII VS Onkologie ICD-O-3 Topographie 2019",
+        "description": "Codes für die Topographie einer neoplastischen Veränderung gemäß ICD-O-3 Zweite Revision (deutsche Ausgabe 2019).",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-ighv-gensegmente-hgnc"
+        },
+        "name": "MII VS Onkologie IGHV-Gensegmente HGNC",
+        "description": "Alle IGHV-Gensegmente (Immunglobulin-Schwerketten-V-Region) als HGNC-Gen-IDs. Auswahlunterstuetzung fuer die Angabe des rearrangierten V-Segments in Observation.component:gene-studied — insbesondere bei der chronischen lymphatischen Leukaemie, wo einzelne Segmente wie IGHV3-21 eigene prognostische Bedeutung haben. Ob das Segment mutiert oder unmutiert ist, wird nicht hier, sondern ueber die Auspraegung der Varianten-Observation abgebildet (oBDS M = Mutation, W = Wildtyp).",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-kdl-dokumentklassen"
+        },
+        "name": "MII VS Onkologie KDL Dokumentklassen",
+        "description": "Kuratierte Auswahl der KDL-Dokumentklassen (KDL 2025) entlang des onkologischen Behandlungspfads (oBDS-Kapitel: Diagnose/Pathologie, Staging-Bildgebung, Tumorkonferenz, Operation, Strahlentherapie, Systemische Therapie, Verlauf/Labor, Tod, Studien, übergreifende Dokumente) als Begleitartefakt für DocumentReference.type. Teilmenge des KDL-Bindings im MII-KDS-Modul Dokument; deprecated-Klassen sind ausgeschlossen.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-praedispositionsgene-hgnc"
+        },
+        "name": "MII VS Onkologie Krebsprädispositionsgene HGNC",
+        "description": "Krebsprädispositionsgene der §65c-Liste (Manual Plus, Krebsprädispositionssyndrom und -gen) als HGNC-Gen-IDs, inkl. Expansion der Sammel-Einträge (FANCA-FANCW, IDH1/2, XP-Komplementationsgruppen). Begleitartefakt ohne Profil-Binding (Andockung an die genetischen Profile folgt mit dem Konzept für genetische Marker). Zytogenetische Aberrationen der Quell-Liste (11p13/11p15, Trisomien, ETV-RUNX1-Fusion) sind keine Gene und hier nicht enthalten. Projektseitige Code-Auflösung ohne Gewähr; fachliche Prüfung vor Produktivnutzung erforderlich.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-praedispositionssyndrome-orpha"
+        },
+        "name": "MII VS Onkologie Krebsprädispositionssyndrome ORPHA",
+        "description": "Krebsprädispositionssyndrome der §65c-Liste (Manual Plus, Krebsprädispositionssyndrom und -gen) als Orphanet-Codes. Begleitartefakt ohne Profil-Binding (Andockung an die genetischen Profile folgt mit dem Konzept für genetische Marker); 15 genspezifische Prädispositionen der Quell-Liste haben kein Orphanet-Konzept und sind über das Gen-ValueSet mii-vs-onko-praedispositionsgene-hgnc adressierbar. Projektseitige Code-Auflösung ohne Gewähr; fachliche Prüfung vor Produktivnutzung erforderlich.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-krk-abstand-circumferelle-resektionsrand"
+        },
+        "name": "MII VS Onkologie KRK Abstand Circumferelle Resektionsrand",
+        "description": "Value Set für semantische Kodierung des oBDS-Abstand des Tumorrandes zur circumferellen Resektionsrand im Kolorektalen Karzinom",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-krk-abstand-resektionslinie-aboral"
+        },
+        "name": "MII VS Onkologie KRK Abstand Resektionslinie Aboral",
+        "description": "Value Set für semantische Kodierung des oBDS-Abstand des Tumorrandes zur aboralen Resektionslinie im Kolorektalen Karzinom",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-krk-anastomoseninsuffizienz"
+        },
+        "name": "MII VS Onkologie KRK Anastomoseninsuffizienz",
+        "description": "Value Set für die Bewertung der Anastomoseninsuffizienz beim Kolorektalen Karzinom",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-krk-mrt-mesorektale-faszie-status"
+        },
+        "name": "MII VS Onkologie KRK MRT Mesorektale Faszie Status",
+        "description": "Value Set für semantische Kodierung des oBDS-Status der MRT/CT Untersuchung zur mesorektalen Faszie beim Kolorektalen Karzinom (KR5)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-krk-stoma-anzeichnung"
+        },
+        "name": "MII VS Onkologie KRK Stoma Anzeichnung",
+        "description": "Value Set für semantische Kodierung der oBDS-präoperativen Stoma-Anzeichnung beim Rektumkarzinom",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-krk-stoma-status-reason"
+        },
+        "name": "MII VS Onkologie KRK Stoma Status Reason",
+        "description": "Value Set für SNOMED CT Codes zur Begründung des Status der präoperativen Stoma-Anzeichnung",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-krk-tme-qualitaet"
+        },
+        "name": "MII VS Onkologie KRK TME Qualität",
+        "description": "Value Set für semantische Kodierung des oBDS-Abstand des Tumorrandes zur aboralen Resektionslinie im Kolorektalen Karzinom",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-koerperstruktur-sct"
+        },
+        "name": "MII VS Onkologie Körperstruktur (SNOMED CT)",
+        "description": "SNOMED CT Körperstrukturen (Body structure) zur optionalen exakten Lokalisationsangabe (z.B. bei Fernmetastasen).",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-mamma-faerbeintensitaet"
+        },
+        "name": "MII VS Onkologie Mamma Färbeintensität",
+        "description": "Färbeintensität der immunhistochemischen Rezeptorbestimmung (Weak, Moderate, Strong). Enumerierte Fassung der LOINC-Answer-List LL4358-9.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-mamma-her2neu-ihc-score"
+        },
+        "name": "MII VS Onkologie Mamma Her2neu IHC Score",
+        "description": "HER2-Score der Immunhistochemie (0, 1+, 2+, 3+, Indeterminate). Enumerierte Fassung der LOINC-Answer-List LL4396-9.",
         "exampleBoolean": false
       },
       {
@@ -2036,6 +2795,86 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/mii-vs-onko-mamma-intraoperatives-imaging-praeparat"
+        },
+        "name": "MII VS Onkologie Mamma Intraoperatives Imaging Präparat",
+        "description": "Value Set für intraoperatives Imaging des Präparats nach Exzision bei Mamma-Karzinom",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-mamma-ish-ergebnis"
+        },
+        "name": "MII VS Onkologie Mamma ISH Ergebnis",
+        "description": "Ergebnis der In-situ-Hybridisierung (ISH/FISH): Positive, Negative, Equivocal (LOINC-Answer-Codes).",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-mamma-menopause-status"
+        },
+        "name": "MII VS Onkologie Mamma Menopause Status",
+        "description": "Value Set für (prätherapeutischen) Status der Menopause Score",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-mamma-operation-ops"
+        },
+        "name": "MII VS Onkologie Mamma Operation OPS",
+        "description": "Value Set für Mamma-Operationen basierend auf OPS",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-mamma-operation-sct"
+        },
+        "name": "MII VS Onkologie Mamma Operation SNOMED CT",
+        "description": "Value Set für Mamma-Operationen basierend auf SNOMED CT",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-mamma-praeoperative-markierung-modalitaet"
+        },
+        "name": "MII VS Onkologie Mamma Präoperative Markierung Modalität",
+        "description": "Value Set für Imagingmodalität der präoperativen Markierung bei Mamma-Karzinom",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-mamma-rezeptorstatus-leitlinie"
+        },
+        "name": "MII VS Onkologie Mamma Rezeptorstatus Leitlinie",
+        "description": "Value Set für oBDS-Rezeptorstatus Mamma",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-mamma-rezeptorstatus-obds"
+        },
+        "name": "MII VS Onkologie Mamma Rezeptorstatus oBDS",
+        "description": "Value Set für oBDS-Rezeptorstatus Mamma",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-marker-gene-hgnc"
+        },
+        "name": "MII VS Onkologie Marker-Gene HGNC",
+        "description": "Gensymbole der onkologisch gebraeuchlichen Marker-Gene aus der Genetik-Markerliste der §65c-Plattform, als HGNC-Gen-IDs. Auswahlunterstuetzung fuer Observation.component:gene-studied im Profil MII_PR_Onko_Genetische_Variante (extensible gebunden — weitere Gene sind zulaessig). Nicht-Gene der Quellliste (IHC-Marker, zytogenetische Aberrationen) sind bewusst ausgeschlossen; siehe die Kommentare in der FSH-Quelle und die IG-Seite zu den Variantentypen.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-melanom-ldh"
+        },
+        "name": "MII VS Onkologie Melanom LDH",
+        "description": "Value Set für Laktatdehydrogenase (LDH) Laborwerte beim Malignen Melanom",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/mii-vs-onko-melanom-ulzeration"
         },
         "name": "MII VS Onkologie Melanom Ulzeration",
@@ -2044,10 +2883,18 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/mii-vs-onko-nebenwirkung-ctcae-version"
+        },
+        "name": "MII VS Onkologie Nebenwirkung CTCAE-Version",
+        "description": "Versionsbezeichnungen des CTCAE-Katalogs nach oBDS 15.3.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/mii-vs-onko-nebenwirkung-art"
         },
         "name": "MII VS Onkologie Nebenwirkung nach CTCAE Art",
-        "description": "oBDS-spezifisches ValueSet für Nebenwirkung nach CTCAE oder MedDRA code",
+        "description": "Alle MedDRA-Codes der CTCAE v4.03 (Art der Nebenwirkung). Deutsche/englische Displays via CodeSystem-Supplements mii-cs-onko-nebenwirkung-meddra-de/-en.",
         "exampleBoolean": false
       },
       {
@@ -2072,6 +2919,14 @@
         },
         "name": "MII VS Onkologie Operation Komplikationen",
         "description": "Value Set für oBDS-Codes für Klassifikation von Komplikationen während der OP",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-operation-urgency"
+        },
+        "name": "MII VS Onkologie Operation Urgency",
+        "description": "Value Set für semantische Kodierung der oBDS-Modalität der Eingriffsdurchführung (Art des Eingriffs KR6)",
         "exampleBoolean": false
       },
       {
@@ -2108,10 +2963,58 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/mii-vs-onko-prostata-clavien-dindo"
+        },
+        "name": "MII VS Onkologie Prostata Clavien Dindo",
+        "description": "Value Set für Gleason Score",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-prostata-gleason-pattern-loinc"
+        },
+        "name": "MII VS Onkologie Prostata Gleason Pattern LOINC",
+        "description": "Value Set der LOINC-Codes für Primär-, Sekundär- und Tertiär-Gleason-Pattern. Dient als optionale LOINC-Zweitkodierung zum verpflichtenden SNOMED-CT-Slice im Profil MII_PR_Onko_Prostata_Gleason_Pattern (GitHub-Issue #259).",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/mii-vs-onko-prostata-gleason-patterns"
         },
         "name": "MII VS Onkologie Prostata Gleason Patterns",
         "description": "Value Set für die histopathologische Bewertung von Prostata-Adenokarzinomen mittels Gleason-Patterns. Dieser Value Set wird verwendet, um die verschiedenen Gleason-Patterns zu kodieren, die bei der Beurteilung von Prostatakarzinomen auftreten können.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-prostata-gleason-primary-secondary-tertiary"
+        },
+        "name": "MII VS Onkologie Prostata Gleason Primary Secondary Tertiary",
+        "description": "Value Set für Primär-, Sekundär- und Tertiär-Gleason Patterns in der Onkologie Prostata. Der häufigste Gleason Pattern wird als primär, der zweithäufigste als sekundär und (seltener, meistens bei Gleason Pattern 5) der dritthäufigste als tertiär bezeichnet. Diese Value Set wird verwendet, um die verschiedenen Gleason Patterns zu kodieren, die bei der Beurteilung von Prostatakarzinomen auftreten können.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-prostata-gleason-score"
+        },
+        "name": "MII VS Onkologie Prostata Gleason Score",
+        "description": "Value Set für den Gleason Score in Kombination mit der ISUP Grade Group. Da ISUP Grade Groups erst ab einem Gleason-Gesamtscore von 6 definiert sind, deckt dieses Value Set nur Scores >= 6 ab. Liegt nur das Score-Ergebnis ohne Grade Group vor oder ein Gesamtscore < 6, ist MII_VS_Onko_Prostata_Gleason_Score_Gesamt zu verwenden.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-prostata-gleason-score-gesamt"
+        },
+        "name": "MII VS Onkologie Prostata Gleason Score Gesamt",
+        "description": "Value Set für den Gleason-Gesamtscore (Summe aus primärem und sekundärem Pattern) ohne Aufschlüsselung in Primär-/Sekundär-Pattern. Enthält die Scores 2 bis 10 aus der SNOMED-CT-Hierarchie unterhalb von 385377005 (Gleason grade finding for prostatic cancer). Damit sind auch Gesamtscores < 6 abbildbar, wie sie bei TURP-Material und in historischen Befunden vorkommen. Ein Gesamtscore 1 existiert nicht, da sich der Score aus zwei Patterns mit Werten ab 1 zusammensetzt. Die ISUP Grade Groups sind bewusst nicht enthalten; sie werden über MII_VS_Onko_Prostata_Gleason_Score abgebildet.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-prostata-postsurgical-complications"
+        },
+        "name": "MII VS Onkologie Prostata Postsurgical Complications",
+        "description": "Value Set für Clavien-Dindo Klassifikation",
         "exampleBoolean": false
       },
       {
@@ -2388,6 +3291,14 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/mii-vs-onko-tnm-m-kategorie-werte-sct"
+        },
+        "name": "MII VS Onkologie TNM M Kategorie Werte SNOMED CT",
+        "description": "SNOMED CT Codes für die TNM M-Kategorie (alle Präfix-Kombinationen: cM, pM, rcM, rpM).",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/mii-vs-onko-tnm-m-symbol"
         },
         "name": "MII VS Onkologie TNM m-Symbol",
@@ -2408,6 +3319,14 @@
         },
         "name": "MII VS Onkologie TNM N Kategorie Werte",
         "description": "Das ValueSet enthält die TNM N-Kategorie Codes aus der UICC TNM - Klassifikation maligner Tumoren Achte Auflage.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-tnm-n-kategorie-werte-sct"
+        },
+        "name": "MII VS Onkologie TNM N Kategorie Werte SNOMED CT",
+        "description": "SNOMED CT Codes für die TNM N-Kategorie (alle Präfix-Kombinationen: cN, pN, ycN, ypN, rcN, rpN).",
         "exampleBoolean": false
       },
       {
@@ -2452,6 +3371,14 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/mii-vs-onko-tnm-t-kategorie-werte-sct"
+        },
+        "name": "MII VS Onkologie TNM T Kategorie Werte SNOMED CT",
+        "description": "SNOMED CT Codes für die TNM T-Kategorie (alle Präfix-Kombinationen: cT, pT, ycT, ypT, rcT, rpT).",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/mii-vs-onko-tnm-uicc-stadium"
         },
         "name": "MII VS Onkologie TNM UICC Stadium",
@@ -2480,6 +3407,14 @@
         },
         "name": "MII VS Onkologie Tod",
         "description": "Value Set für oBDS-Codes turmorbedingter Tod",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-tumormarker-loinc"
+        },
+        "name": "MII VS Onkologie Tumormarker LOINC",
+        "description": "Kuratierte LOINC-Codes der in der Onkologie gebraeuchlichen Tumormarker (Serum-/Plasma- bzw. Urin-Bestimmungen). Verwendung als Auswahlliste fuer Observation.code im Profil MII_PR_Onko_Tumormarker (Ableitung des KDS-Moduls Laborbefund). Die Liste ist nicht abschliessend gemeint: Weitere Laborwerte werden ueber das KDS-Modul Laborbefund abgebildet.",
         "exampleBoolean": false
       },
       {
@@ -2586,6 +3521,48 @@
       },
       {
         "reference": {
+          "reference": "Observation/mii-exa-onko-cup-fernmetastase-hep"
+        },
+        "name": "mii-exa-onko-cup-fernmetastase-hep",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fernmetastasen"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-cup-fernmetastase-pul"
+        },
+        "name": "mii-exa-onko-cup-fernmetastase-pul",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fernmetastasen"
+      },
+      {
+        "reference": {
+          "reference": "Patient/mii-exa-onko-cup-patient"
+        },
+        "name": "mii-exa-onko-cup-patient",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-cup-tnm-m-cM1"
+        },
+        "name": "mii-exa-onko-cup-tnm-m-cM1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-cup-tnm-n-cNX"
+        },
+        "name": "mii-exa-onko-cup-tnm-n-cNX",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-cup-tnm-t-cTX"
+        },
+        "name": "mii-exa-onko-cup-tnm-t-cTX",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie"
+      },
+      {
+        "reference": {
           "reference": "Condition/mii-exa-onko-diagnose"
         },
         "name": "mii-exa-onko-diagnose",
@@ -2618,6 +3595,202 @@
         },
         "name": "mii-exa-onko-histologie-icdo3",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-histologie-icdo3"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-kim-klass1"
+        },
+        "name": "mii-exa-onko-kim-klass1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-kim-klass1-cM1"
+        },
+        "name": "mii-exa-onko-kim-klass1-cM1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-kim-klass1-cN1"
+        },
+        "name": "mii-exa-onko-kim-klass1-cN1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-kim-klass1-cT3c"
+        },
+        "name": "mii-exa-onko-kim-klass1-cT3c",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-kim-klass2"
+        },
+        "name": "mii-exa-onko-kim-klass2",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-kim-klass2-ycM1b"
+        },
+        "name": "mii-exa-onko-kim-klass2-ycM1b",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-kim-klass2-ycN1"
+        },
+        "name": "mii-exa-onko-kim-klass2-ycN1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-kim-klass2-ycT3c"
+        },
+        "name": "mii-exa-onko-kim-klass2-ycT3c",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-kim-klass2-ysym"
+        },
+        "name": "mii-exa-onko-kim-klass2-ysym",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-y-symbol"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-kim-klass3"
+        },
+        "name": "mii-exa-onko-kim-klass3",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-kim-klass3-L1"
+        },
+        "name": "mii-exa-onko-kim-klass3-L1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-l-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-kim-klass3-Pn0"
+        },
+        "name": "mii-exa-onko-kim-klass3-Pn0",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-pn-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-kim-klass3-V0"
+        },
+        "name": "mii-exa-onko-kim-klass3-V0",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-v-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-kim-klass3-ypM1b"
+        },
+        "name": "mii-exa-onko-kim-klass3-ypM1b",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-kim-klass3-ypT3c"
+        },
+        "name": "mii-exa-onko-kim-klass3-ypT3c",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-kim-klass3-ysym"
+        },
+        "name": "mii-exa-onko-kim-klass3-ysym",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-y-symbol"
+      },
+      {
+        "reference": {
+          "reference": "Condition/mii-exa-onko-kim-synth-diagnose"
+        },
+        "name": "mii-exa-onko-kim-synth-diagnose",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
+      },
+      {
+        "reference": {
+          "reference": "Patient/mii-exa-onko-kim-synth-patient"
+        },
+        "name": "mii-exa-onko-kim-synth-patient",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-kim-synth1"
+        },
+        "name": "mii-exa-onko-kim-synth1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation-synthetisiert"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-kim-synth2"
+        },
+        "name": "mii-exa-onko-kim-synth2",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation-synthetisiert"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-kim-synth3"
+        },
+        "name": "mii-exa-onko-kim-synth3",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation-synthetisiert"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-kim-synth4"
+        },
+        "name": "mii-exa-onko-kim-synth4",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation-synthetisiert"
+      },
+      {
+        "reference": {
+          "reference": "Device/mii-exa-onko-kim-synthesis-device"
+        },
+        "name": "mii-exa-onko-kim-synthesis-device",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Provenance/mii-exa-onko-kim-synthesis-provenance"
+        },
+        "name": "mii-exa-onko-kim-synthesis-provenance",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "CarePlan/mii-exa-onko-kim-tk1"
+        },
+        "name": "mii-exa-onko-kim-tk1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz"
+      },
+      {
+        "reference": {
+          "reference": "CarePlan/mii-exa-onko-kim-tk2"
+        },
+        "name": "mii-exa-onko-kim-tk2",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz"
+      },
+      {
+        "reference": {
+          "reference": "CarePlan/mii-exa-onko-kim-tk3"
+        },
+        "name": "mii-exa-onko-kim-tk3",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz"
+      },
+      {
+        "reference": {
+          "reference": "CarePlan/mii-exa-onko-kim-tk4"
+        },
+        "name": "mii-exa-onko-kim-tk4",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz"
       },
       {
         "reference": {
@@ -2817,6 +3990,13 @@
       },
       {
         "reference": {
+          "reference": "Observation/mii-exa-onko-prostata-gleason-score-gesamt-1"
+        },
+        "name": "mii-exa-onko-prostata-gleason-score-gesamt-1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-score-gesamt"
+      },
+      {
+        "reference": {
           "reference": "Observation/mii-exa-onko-prostata-psa-diagnose-1"
         },
         "name": "mii-exa-onko-prostata-psa-diagnose-1",
@@ -2873,6 +4053,132 @@
       },
       {
         "reference": {
+          "reference": "Observation/mii-exa-onko-tnm-biopsy-cT4cN1cM0"
+        },
+        "name": "mii-exa-onko-tnm-biopsy-cT4cN1cM0",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation"
+      },
+      {
+        "reference": {
+          "reference": "Condition/mii-exa-onko-tnm-bundle-diagnose"
+        },
+        "name": "mii-exa-onko-tnm-bundle-diagnose",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-tnm-bundle-klassifikation-cT2cN3cM0"
+        },
+        "name": "mii-exa-onko-tnm-bundle-klassifikation-cT2cN3cM0",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation"
+      },
+      {
+        "reference": {
+          "reference": "Condition/mii-exa-onko-tnm-bundle-legacy-diagnose"
+        },
+        "name": "mii-exa-onko-tnm-bundle-legacy-diagnose",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-tnm-bundle-legacy-klassifikation-cT2cN3cM0"
+        },
+        "name": "mii-exa-onko-tnm-bundle-legacy-klassifikation-cT2cN3cM0",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-tnm-bundle-legacy-m-cM0"
+        },
+        "name": "mii-exa-onko-tnm-bundle-legacy-m-cM0",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-tnm-bundle-legacy-n-cN3"
+        },
+        "name": "mii-exa-onko-tnm-bundle-legacy-n-cN3",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Patient/mii-exa-onko-tnm-bundle-legacy-patient"
+        },
+        "name": "mii-exa-onko-tnm-bundle-legacy-patient",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-tnm-bundle-legacy-t-cT2"
+        },
+        "name": "mii-exa-onko-tnm-bundle-legacy-t-cT2",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-tnm-bundle-m-kategorie-cM0"
+        },
+        "name": "mii-exa-onko-tnm-bundle-m-kategorie-cM0",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-tnm-bundle-n-kategorie-cN3"
+        },
+        "name": "mii-exa-onko-tnm-bundle-n-kategorie-cN3",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Patient/mii-exa-onko-tnm-bundle-patient"
+        },
+        "name": "mii-exa-onko-tnm-bundle-patient",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-tnm-bundle-t-kategorie-cT2"
+        },
+        "name": "mii-exa-onko-tnm-bundle-t-kategorie-cT2",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-tnm-clinical-cT3cN1cM0"
+        },
+        "name": "mii-exa-onko-tnm-clinical-cT3cN1cM0",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-tnm-journey-l-kategorie-L0"
+        },
+        "name": "mii-exa-onko-tnm-journey-l-kategorie-L0",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-l-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-tnm-journey-pn-kategorie-Pn0"
+        },
+        "name": "mii-exa-onko-tnm-journey-pn-kategorie-Pn0",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-pn-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-tnm-journey-residualstatus-R0"
+        },
+        "name": "mii-exa-onko-tnm-journey-residualstatus-R0",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-residualstatus"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-tnm-journey-v-kategorie-V0"
+        },
+        "name": "mii-exa-onko-tnm-journey-v-kategorie-V0",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-v-kategorie"
+      },
+      {
+        "reference": {
           "reference": "Observation/mii-exa-onko-tnm-klassifikation-TisN0M0"
         },
         "name": "mii-exa-onko-tnm-klassifikation-TisN0M0",
@@ -2901,6 +4207,13 @@
       },
       {
         "reference": {
+          "reference": "Observation/mii-exa-onko-tnm-m-kategorie-cM0"
+        },
+        "name": "mii-exa-onko-tnm-m-kategorie-cM0",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-kategorie"
+      },
+      {
+        "reference": {
           "reference": "Observation/mii-exa-onko-tnm-m-kategorie-cM1"
         },
         "name": "mii-exa-onko-tnm-m-kategorie-cM1",
@@ -2912,6 +4225,20 @@
         },
         "name": "mii-exa-onko-tnm-m-kategorie-M0",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-tnm-m-kategorie-rcM1"
+        },
+        "name": "mii-exa-onko-tnm-m-kategorie-rcM1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-tnm-n-kategorie-cN1"
+        },
+        "name": "mii-exa-onko-tnm-n-kategorie-cN1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie"
       },
       {
         "reference": {
@@ -2929,6 +4256,27 @@
       },
       {
         "reference": {
+          "reference": "Observation/mii-exa-onko-tnm-n-kategorie-rcN1"
+        },
+        "name": "mii-exa-onko-tnm-n-kategorie-rcN1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-tnm-n-kategorie-ycN0"
+        },
+        "name": "mii-exa-onko-tnm-n-kategorie-ycN0",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-tnm-n-kategorie-ypN0"
+        },
+        "name": "mii-exa-onko-tnm-n-kategorie-ypN0",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie"
+      },
+      {
+        "reference": {
           "reference": "Observation/mii-exa-onko-tnm-pn-kategorie-Pn1"
         },
         "name": "mii-exa-onko-tnm-pn-kategorie-Pn1",
@@ -2936,10 +4284,129 @@
       },
       {
         "reference": {
+          "reference": "Observation/mii-exa-onko-tnm-post-chemo-ycT2ycN0cM0"
+        },
+        "name": "mii-exa-onko-tnm-post-chemo-ycT2ycN0cM0",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-tnm-post-surgery-ypT0ypN0cM0"
+        },
+        "name": "mii-exa-onko-tnm-post-surgery-ypT0ypN0cM0",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-tnm-recurrence-rcT2cN1cM1"
+        },
+        "name": "mii-exa-onko-tnm-recurrence-rcT2cN1cM1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation"
+      },
+      {
+        "reference": {
           "reference": "Observation/mii-exa-onko-tnm-s-kategorie-S1"
         },
         "name": "mii-exa-onko-tnm-s-kategorie-S1",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-s-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Condition/mii-exa-onko-tnm-synth-diagnose"
+        },
+        "name": "mii-exa-onko-tnm-synth-diagnose",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-tnm-synth-klassifikation"
+        },
+        "name": "mii-exa-onko-tnm-synth-klassifikation",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation-synthetisiert"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-tnm-synth-meldung1-klassifikation"
+        },
+        "name": "mii-exa-onko-tnm-synth-meldung1-klassifikation",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-tnm-synth-meldung1-m-cM0"
+        },
+        "name": "mii-exa-onko-tnm-synth-meldung1-m-cM0",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-tnm-synth-meldung1-n-cN2"
+        },
+        "name": "mii-exa-onko-tnm-synth-meldung1-n-cN2",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-tnm-synth-meldung1-t-cT3"
+        },
+        "name": "mii-exa-onko-tnm-synth-meldung1-t-cT3",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-tnm-synth-meldung2-klassifikation"
+        },
+        "name": "mii-exa-onko-tnm-synth-meldung2-klassifikation",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-tnm-synth-meldung2-n-pN1"
+        },
+        "name": "mii-exa-onko-tnm-synth-meldung2-n-pN1",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-tnm-synth-meldung2-t-pT2"
+        },
+        "name": "mii-exa-onko-tnm-synth-meldung2-t-pT2",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Patient/mii-exa-onko-tnm-synth-patient"
+        },
+        "name": "mii-exa-onko-tnm-synth-patient",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "CarePlan/mii-exa-onko-tnm-synth-tumorkonferenz"
+        },
+        "name": "mii-exa-onko-tnm-synth-tumorkonferenz",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-tnm-t-kategorie-cT3"
+        },
+        "name": "mii-exa-onko-tnm-t-kategorie-cT3",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-tnm-t-kategorie-cT4"
+        },
+        "name": "mii-exa-onko-tnm-t-kategorie-cT4",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-tnm-t-kategorie-rcT2"
+        },
+        "name": "mii-exa-onko-tnm-t-kategorie-rcT2",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie"
       },
       {
         "reference": {
@@ -2953,6 +4420,20 @@
           "reference": "Observation/mii-exa-onko-tnm-t-kategorie-uT2a2"
         },
         "name": "mii-exa-onko-tnm-t-kategorie-uT2a2",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-tnm-t-kategorie-ycT2"
+        },
+        "name": "mii-exa-onko-tnm-t-kategorie-ycT2",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-tnm-t-kategorie-ypT0"
+        },
+        "name": "mii-exa-onko-tnm-t-kategorie-ypT0",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie"
       },
       {
@@ -3041,6 +4522,27 @@
       },
       {
         "reference": {
+          "reference": "Observation/mii-exa-onko-verlauf-journey-post-chemo"
+        },
+        "name": "mii-exa-onko-verlauf-journey-post-chemo",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-verlauf"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-verlauf-journey-post-surgery"
+        },
+        "name": "mii-exa-onko-verlauf-journey-post-surgery",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-verlauf"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-onko-verlauf-journey-recurrence"
+        },
+        "name": "mii-exa-onko-verlauf-journey-recurrence",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-verlauf"
+      },
+      {
+        "reference": {
           "reference": "Observation/mii-exa-onko-verlauf-tumor"
         },
         "name": "mii-exa-onko-verlauf-tumor",
@@ -3076,6 +4578,13 @@
       },
       {
         "reference": {
+          "reference": "Parameters/mii-param-onko-manifest"
+        },
+        "exampleBoolean": false,
+        "name": "mii-param-onko-manifest"
+      },
+      {
+        "reference": {
           "reference": "AdverseEvent/mii-pr-onko-nebenwirkung-0"
         },
         "name": "mii-pr-onko-nebenwirkung-0",
@@ -3093,7 +4602,7 @@
           "reference": "SearchParameter/mii-sp-onko-condition-ext-morphology-behavior-icdo3"
         },
         "name": "mii-sp-onko-condition-ext-morphology-behavior-icdo3",
-        "description": "SearchParameter for Condition.extension[morphology-behaviour-icdo3]",
+        "description": "SearchParameter for Condition.extension[morphology-behavior-icdo3]",
         "exampleBoolean": false
       },
       {
@@ -3114,22 +4623,6 @@
       },
       {
         "reference": {
-          "reference": "SearchParameter/mii-sp-onko-observation-ext-tnm-m-cppraefix"
-        },
-        "name": "mii-sp-onko-observation-ext-tnm-m-cppraefix",
-        "description": "SearchParameter for Observation.extension[cppraefix]",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "SearchParameter/mii-sp-onko-observation-ext-tnm-n-cppraefix"
-        },
-        "name": "mii-sp-onko-observation-ext-tnm-n-cppraefix",
-        "description": "SearchParameter for Observation.extension[cppraefix]",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "SearchParameter/mii-sp-onko-observation-ext-tnm-n-itc"
         },
         "name": "mii-sp-onko-observation-ext-tnm-n-itc",
@@ -3146,10 +4639,26 @@
       },
       {
         "reference": {
-          "reference": "SearchParameter/mii-sp-onko-observation-ext-tnm-t-cppraefix"
+          "reference": "SearchParameter/mii-sp-onko-observation-tnm-cp-praefix"
         },
-        "name": "mii-sp-onko-observation-ext-tnm-t-cppraefix",
-        "description": "SearchParameter for Observation.extension[cppraefix]",
+        "name": "mii-sp-onko-observation-tnm-cp-praefix",
+        "description": "SearchParameter for Observation.code.extension[cp-praefix]. Die Extension gilt gleichermaßen für T-, N- und M-Kategorien; die Unterscheidung der Kategorie erfolgt über den Kategorie-Code der Observation (Kombination mit dem SearchParameter `code`).",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/mii-sp-onko-observation-tnm-r-praefix"
+        },
+        "name": "mii-sp-onko-observation-tnm-r-praefix",
+        "description": "SearchParameter for Observation.modifierExtension[r-praefix]. Kennzeichnet TNM-Kategorien, die zur Beurteilung eines Rezidivs festgestellt wurden (UICC r-Präfix). Die Unterscheidung zwischen T-, N- und M-Kategorie erfolgt über den Kategorie-Code der Observation.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/mii-sp-onko-observation-tnm-y-praefix"
+        },
+        "name": "mii-sp-onko-observation-tnm-y-praefix",
+        "description": "SearchParameter for Observation.modifierExtension[y-praefix]. Kennzeichnet TNM-Kategorien, die während oder nach initialer multimodaler Therapie festgestellt wurden (UICC y-Präfix). Die Unterscheidung zwischen T-, N- und M-Kategorie erfolgt über den Kategorie-Code der Observation.",
         "exampleBoolean": false
       },
       {
@@ -3226,210 +4735,10 @@
       },
       {
         "reference": {
-          "reference": "CodeSystem/mii-cs-onko-krk-mrt-mesorektale-faszie-status"
-        },
-        "name": "MII_CS_Onko_KRK_MRT_Mesorektale_Faszie_Status",
-        "description": "oBDS-basiertes Codesystem für den Status der MRT/CT Untersuchung zur mesorektalen Faszie beim Kolorektalen Karzinom (KR5)",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "CodeSystem/mii-cs-onko-krk-stoma-anzeichnung"
-        },
-        "name": "MII_CS_Onko_KRK_Stoma_Anzeichnung",
-        "description": "oBDS-basiertes Codesystem für die präoperative Anzeichnung der Stoma-Position beim Rektumkarzinom",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "CodeSystem/mii-cs-onko-operation-urgency"
-        },
-        "name": "MII_CS_Onko_Operation_Urgency",
-        "description": "oBDS-basiertes Codesystem für die Modalität der Eingriffsdurchführung (Art des Eingriffs KR6)",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "ValueSet/mii-vs-onko-genetische-variante-auspraegung"
         },
         "name": "MII_VS Onkologie Genetische Variante Ausprägung",
         "description": "Value Set für oBDS-Codes für Ausprägung der Genetischen Variante",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-onko-asa-loinc"
-        },
-        "name": "MII_VS_Onko_ASA_LOINC",
-        "description": "Value Set für LOINC ASA Physical Status Classification (generalisiert für alle onkologischen Indikationen)",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-onko-asa-obds"
-        },
-        "name": "MII_VS_Onko_ASA_oBDS",
-        "description": "Value Set für oBDS ASA-Klassifikation (ursprünglich KR9 aus Kolorektales Karzinom Modul, generalisiert für alle onkologischen Indikationen)",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-onko-krk-abstand-circumferelle-resektionsrand"
-        },
-        "name": "MII_VS_Onko_KRK_Abstand_Circumferelle_Resektionsrand",
-        "description": "Value Set für semantische Kodierung des oBDS-Abstand des Tumorrandes zur circumferellen Resektionsrand im Kolorektalen Karzinom",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-onko-krk-abstand-resektionslinie-aboral"
-        },
-        "name": "MII_VS_Onko_KRK_Abstand_Resektionslinie_Aboral",
-        "description": "Value Set für semantische Kodierung des oBDS-Abstand des Tumorrandes zur aboralen Resektionslinie im Kolorektalen Karzinom",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-onko-krk-anastomoseninsuffizienz"
-        },
-        "name": "MII_VS_Onko_KRK_Anastomoseninsuffizienz",
-        "description": "Value Set für die Bewertung der Anastomoseninsuffizienz beim Kolorektalen Karzinom",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-onko-krk-mrt-mesorektale-faszie-status"
-        },
-        "name": "MII_VS_Onko_KRK_MRT_Mesorektale_Faszie_Status",
-        "description": "Value Set für semantische Kodierung des oBDS-Status der MRT/CT Untersuchung zur mesorektalen Faszie beim Kolorektalen Karzinom (KR5)",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-onko-krk-stoma-anzeichnung"
-        },
-        "name": "MII_VS_Onko_KRK_Stoma_Anzeichnung",
-        "description": "Value Set für semantische Kodierung der oBDS-präoperativen Stoma-Anzeichnung beim Rektumkarzinom",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-onko-krk-stoma-status-reason"
-        },
-        "name": "MII_VS_Onko_KRK_Stoma_Status_Reason",
-        "description": "Value Set für SNOMED CT Codes zur Begründung des Status der präoperativen Stoma-Anzeichnung",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-onko-krk-tme-qualitaet"
-        },
-        "name": "MII_VS_Onko_KRK_TME_Qualitaet",
-        "description": "Value Set für semantische Kodierung des oBDS-Abstand des Tumorrandes zur aboralen Resektionslinie im Kolorektalen Karzinom",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-onko-mamma-intraoperatives-imaging-praeparat"
-        },
-        "name": "MII_VS_Onko_Mamma_Intraoperatives_Imaging_Praeparat",
-        "description": "Value Set für intraoperatives Imaging des Präparats nach Exzision bei Mamma-Karzinom",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-onko-mamma-menopause-status"
-        },
-        "name": "MII_VS_Onko_Mamma_Menopause_Status",
-        "description": "Value Set für (prätherapeutischen) Status der Menopause Score",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-onko-mamma-operation-ops"
-        },
-        "name": "MII_VS_Onko_Mamma_Operation_OPS",
-        "description": "Value Set für Mamma-Operationen basierend auf OPS",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-onko-mamma-operation-sct"
-        },
-        "name": "MII_VS_Onko_Mamma_Operation_SCT",
-        "description": "Value Set für Mamma-Operationen basierend auf SNOMED CT",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-onko-mamma-praeoperative-markierung-modalitaet"
-        },
-        "name": "MII_VS_Onko_Mamma_Praeoperative_Markierung_Modalitaet",
-        "description": "Value Set für Imagingmodalität der präoperativen Markierung bei Mamma-Karzinom",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-onko-mamma-rezeptorstatus-leitlinie"
-        },
-        "name": "MII_VS_Onko_Mamma_Rezeptorstatus_Leitlinie",
-        "description": "Value Set für oBDS-Rezeptorstatus Mamma",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-onko-mamma-rezeptorstatus-obds"
-        },
-        "name": "MII_VS_Onko_Mamma_Rezeptorstatus_oBDS",
-        "description": "Value Set für oBDS-Rezeptorstatus Mamma",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-onko-melanom-ldh"
-        },
-        "name": "MII_VS_Onko_Melanom_LDH",
-        "description": "Value Set für Laktatdehydrogenase (LDH) Laborwerte beim Malignen Melanom",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-onko-operation-urgency"
-        },
-        "name": "MII_VS_Onko_Operation_Urgency",
-        "description": "Value Set für semantische Kodierung der oBDS-Modalität der Eingriffsdurchführung (Art des Eingriffs KR6)",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-onko-prostata-clavien-dindo"
-        },
-        "name": "MII_VS_Onko_Prostata_Clavien_Dindo",
-        "description": "Value Set für Gleason Score",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-onko-prostata-gleason-primary-secondary-tertiary"
-        },
-        "name": "MII_VS_Onko_Prostata_Gleason_PrimarySecondaryTertiary",
-        "description": "Value Set für Primär-, Sekundär- und Tertiär-Gleason Patterns in der Onkologie Prostata. Der häufigste Gleason Pattern wird als primär, der zweithäufigste als sekundär und (seltener, meistens bei Gleason Pattern 5) der dritthäufigste als tertiär bezeichnet. Diese Value Set wird verwendet, um die verschiedenen Gleason Patterns zu kodieren, die bei der Beurteilung von Prostatakarzinomen auftreten können.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-onko-prostata-gleason-score"
-        },
-        "name": "MII_VS_Onko_Prostata_Gleason_Score",
-        "description": "Value Set für Gleason Score",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-onko-prostata-postsurgical-complications"
-        },
-        "name": "MII_VS_Onko_Prostata_Postsurgical_Complications",
-        "description": "Value Set für Clavien-Dindo Klassifikation",
         "exampleBoolean": false
       },
       {
@@ -3665,6 +4974,14 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/radelement"
+        },
+        "name": "RSNA RadElement Common Data Elements (Fragment)",
+        "description": "Fragment des RSNA-RadElement-Systems (Common Data Elements, https://www.radelement.org). Enthält nur die im MII-Modul Onkologie verwendeten Datenelemente. Quelle: RSNA RadElement API.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "Procedure/mii-exa-onko-sigmoid-resection"
         },
         "name": "Sigmaresektion - Haupteingriff",
@@ -3891,6 +5208,155 @@
           "nameUrl": "index.html",
           "title": "Home",
           "generation": "markdown"
+        },
+        {
+          "nameUrl": "guidance.html",
+          "title": "Guidance",
+          "generation": "markdown",
+          "page": [
+            {
+              "nameUrl": "anwendungsfaelle-informationsmodell.html",
+              "title": "Use Cases and Information Model",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "datasets-and-descriptions.html",
+              "title": "Datasets and Descriptions",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "tnm-breast-cancer-journey.html",
+              "title": "TNM Breast Cancer Journey (Example)",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "toronto-klassifikation.html",
+              "title": "Toronto Classification (Pediatric Oncology)",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "molgen-variantentypen.html",
+              "title": "MolGen Mapping of Variant Types",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "researcher-guidance.html",
+              "title": "Guidance for Researchers",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "implementer-guidance.html",
+              "title": "Guidance for Implementers",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "uml-diagrams.html",
+              "title": "UML Diagrams",
+              "generation": "markdown"
+            }
+          ]
+        },
+        {
+          "nameUrl": "security-and-privacy.html",
+          "title": "Security and Privacy",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "profiles.html",
+          "title": "Profiles",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "extensions.html",
+          "title": "Extensions",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "capability-statements.html",
+          "title": "Capability Statements",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "search-parameters.html",
+          "title": "Search Parameters",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "logical-models.html",
+          "title": "Logical Models",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "value-sets.html",
+          "title": "Value Sets",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "code-systems.html",
+          "title": "Code Systems",
+          "generation": "markdown",
+          "page": [
+            {
+              "nameUrl": "icd-o-terminologie.html",
+              "title": "ICD-O: Revisions and Validation",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "atc-terminologie.html",
+              "title": "ATC: Annual Versions and Transitions",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "weitere-klassifikationen-terminologien.html",
+              "title": "Further Classifications: Terminologies",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "tumormarker-loinc.html",
+              "title": "Tumor Markers: Curated LOINC Codes",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "konformitaets-mappings.html",
+              "title": "Concept Mappings: Overview and Review",
+              "generation": "markdown"
+            }
+          ]
+        },
+        {
+          "nameUrl": "examples.html",
+          "title": "Examples",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "downloads.html",
+          "title": "Downloads",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "changes.html",
+          "title": "Changelog",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "metadata.html",
+          "title": "Metadata Overview",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "version-history.html",
+          "title": "Versioning",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "ImplementationGuide-mii-ig-onko-de-v2026.html",
+          "title": "MII ImplementationGuide Resource",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "translationinfo.html",
+          "title": "Translation Information",
+          "generation": "markdown"
         }
       ]
     },
@@ -3902,6 +5368,90 @@
       {
         "code": "releaselabel",
         "value": "release"
+      },
+      {
+        "code": "path-resource",
+        "value": "input/predefined-resources"
+      },
+      {
+        "code": "path-pages",
+        "value": "input/intro-notes"
+      },
+      {
+        "code": "i18n-default-lang",
+        "value": "en"
+      },
+      {
+        "code": "i18n-lang",
+        "value": "de"
+      },
+      {
+        "code": "translation-sources",
+        "value": "input/translations/de"
+      },
+      {
+        "code": "excludexml",
+        "value": "false"
+      },
+      {
+        "code": "excludejson",
+        "value": "false"
+      },
+      {
+        "code": "excludettl",
+        "value": "true"
+      },
+      {
+        "code": "excludemap",
+        "value": "false"
+      },
+      {
+        "code": "logging",
+        "value": "init"
+      },
+      {
+        "code": "logging",
+        "value": "progress"
+      },
+      {
+        "code": "logging",
+        "value": "context"
+      },
+      {
+        "code": "logging",
+        "value": "html"
+      },
+      {
+        "code": "logging",
+        "value": "tx"
+      },
+      {
+        "code": "pin-canonicals",
+        "value": "pin-all"
+      },
+      {
+        "code": "path-expansion-params",
+        "value": "../../input/resources/Parameters-expansion-manifest.json"
+      },
+      {
+        "code": "pin-manifest",
+        "value": "mii-param-onko-manifest"
+      },
+      {
+        "code": "suppress-mappings",
+        "value": "http://hl7.org/v3"
+      },
+      {
+        "code": "suppress-mappings",
+        "value": "http://hl7.org/v3/cda"
+      },
+      {
+        "code": "special-url",
+        "value": "https://radelement.org"
+      },
+      {
+        "code": "special-url",
+        "value": "https://www.uicc.org/resources/tnm"
       }
     ]
   }

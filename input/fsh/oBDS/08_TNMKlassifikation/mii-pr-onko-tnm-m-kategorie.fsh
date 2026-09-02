@@ -5,7 +5,9 @@ Title: "MII PR Onkologie TNM M-Kategorie"
 Description: "TNM-Klassifikation: TNM M-Kategorie. Fehlen oder Vorhandensein von Fernmetastasen, gemäß Tumorentität nach TNM."
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert OnkoCRMIProfile
 * ^status = #active
+* obeys tnm-sct-uicc-konsistenz
 * meta.profile 0..* MS
 * encounter 0..1 MS
 
@@ -19,6 +21,18 @@ Description: "TNM-Klassifikation: TNM M-Kategorie. Fehlen oder Vorhandensein von
 * code from MII_VS_Onko_TNM_M_Kategorie (preferred)
 * code.coding.code 1.. MS
 * code.coding.system 1.. MS
+
+// UICC-Präfixe y/r/a als modifierExtension: sie verändern die Interpretation des
+// Kategorie-Wertes (ypT2 ist nicht mit pT2 vergleichbar, rT beurteilt das Rezidiv,
+// aT wurde erst bei Autopsie festgestellt) — siehe Extension-Definitionen.
+* modifierExtension contains
+    MII_EX_Onko_TNM_y_Praefix named yPraefix 0..1 MS and
+    MII_EX_Onko_TNM_r_Praefix named rPraefix 0..1 MS and
+    MII_EX_Onko_TNM_a_Praefix named aPraefix 0..1 MS
+* modifierExtension[yPraefix] ^short = "TNM y-Präfix (während/nach multimodaler Therapie)"
+* modifierExtension[rPraefix] ^short = "TNM r-Präfix (Rezidiv)"
+* modifierExtension[aPraefix] ^short = "TNM a-Präfix (Autopsie)"
+
 * subject 1..1 MS
 * subject only Reference(Patient)
 * effective[x] MS
@@ -46,14 +60,25 @@ Description: "TNM-Klassifikation: TNM M-Kategorie. Fehlen oder Vorhandensein von
 * valueCodeableConcept.extension contains 
     MII_EX_Onko_TNM_ITC_Suffix named itcSuffix 0..1 MS
 * valueCodeableConcept.extension[MII_EX_Onko_TNM_ITC_Suffix] ^short = "isolierte Tumorzellen (ITC) Suffix"
-* valueCodeableConcept from MII_VS_Onko_TNM_M_Kategorie_Werte (required)
+* valueCodeableConcept.coding ^slicing.discriminator.type = #pattern
+* valueCodeableConcept.coding ^slicing.discriminator.path = "$this"
+* valueCodeableConcept.coding ^slicing.rules = #open
 * valueCodeableConcept.coding ^short = "TNM M-Kategorie"
 * valueCodeableConcept.coding ^definition = "Fehlen oder Vorhandensein von Fernmetastasen, gemäß Tumorentität nach TNM."
 * valueCodeableConcept.coding ^comment = "Teilweise entitätsspezifisch, einschließlich Zusatzangaben wie (i+/-) und (mol+/-)"
-* valueCodeableConcept.coding.code 1.. MS
-* valueCodeableConcept.coding.system 1.. MS
 * insert Translation(valueCodeableConcept.coding ^short, de-DE, TNM M-Kategorie )
 * insert Translation(valueCodeableConcept.coding ^definition, de-DE, TNM Fernmetastasierung nach 8.12 oBDS 2021 )
+* valueCodeableConcept.coding contains
+    uicc 1..1 MS and
+    snomed-ct 0..1 MS
+* valueCodeableConcept.coding[uicc] from MII_VS_Onko_TNM_M_Kategorie_Werte (required)
+* valueCodeableConcept.coding[uicc].system 1.. MS
+* valueCodeableConcept.coding[uicc].system = $UICC
+* valueCodeableConcept.coding[uicc].code 1.. MS
+* valueCodeableConcept.coding[snomed-ct] from MII_VS_Onko_TNM_M_Kategorie_Werte_SCT (required)
+* valueCodeableConcept.coding[snomed-ct].system 1.. MS
+* valueCodeableConcept.coding[snomed-ct].system = $SCT
+* valueCodeableConcept.coding[snomed-ct].code 1.. MS
 
 
 
@@ -70,3 +95,6 @@ Source: MII_PR_Onko_TNM_M_Kategorie
 * effectiveDateTime -> "8.1" "TNM Datum"
 * code.extension[MII_EX_Onko_TNM_cp_Praefix].valueCodeableConcept.coding.code -> "8.8" "TNM c/p-Präfix M"
 * valueCodeableConcept.coding.code -> "8.12" "TNM M-Kategorie"
+* modifierExtension[yPraefix].valueCodeableConcept.coding.code -> "8.3" "TNM y-Symbol"
+* modifierExtension[rPraefix].valueCodeableConcept.coding.code -> "8.4" "TNM r-Symbol"
+* modifierExtension[aPraefix].valueCodeableConcept.coding.code -> "8.5" "TNM a-Symbol"

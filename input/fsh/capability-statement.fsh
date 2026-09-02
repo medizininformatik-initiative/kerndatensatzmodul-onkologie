@@ -34,6 +34,7 @@ InstanceOf: CapabilityStatement
 Usage: #definition
 * url = "https://www.medizininformatik-initiative.de/fhir/modul-onko/CapabilityStatement/metadata"
 * insert Version
+* insert OnkoCRMICapabilityStatement
 * name = "MII_CPS_Onkology_CapabilityStatement"
 * title = "MII CPS Onkology CapabilityStatement"
 * status = #active
@@ -61,14 +62,14 @@ Usage: #definition
 * insert SupportSearchParam(_lastUpdated, http://hl7.org/fhir/SearchParameter/Resource-lastUpdated, #date, #SHALL)
 * insert SupportSearchParam(_profile, http://hl7.org/fhir/SearchParameter/Resource-profile, #uri, #SHALL)
 * insert SupportSearchParam(verificationStatus, https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-condition-verification-status, #token, #SHALL)
-* insert SupportSearchParam(morphology-behavior-icdo3, https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-condition-ext-morphology-behavior-icdo, #token, #SHALL)
+* insert SupportSearchParam(morphology-behavior-icdo3, https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-condition-ext-morphology-behavior-icdo3, #token, #SHALL)
 * insert SupportSearchParam(code, http://hl7.org/fhir/SearchParameter/clinical-code, #token, #SHALL) 
 * insert SupportSearchParam(body-site, http://hl7.org/fhir/SearchParameter/Condition-body-site, #token, #SHALL) 
 * insert SupportSearchParam(subject, http://hl7.org/fhir/SearchParameter/Condition-subject, #reference, #SHALL)
 * insert SupportSearchParam(encounter, http://hl7.org/fhir/SearchParameter/clinical-encounter, #reference, #SHALL)
 * insert SupportSearchParam(recorded-date, http://hl7.org/fhir/SearchParameter/Condition-recorded-date, #date, #SHALL)
 * insert SupportSearchParam(asserted-date, https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-condition-asserted-date, #date, #SHALL)
-* insert SupportSearchParam(evidence-detail, https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-condition-evidence, #reference, #SHALL)
+* insert SupportSearchParam(evidence-detail, https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-condition-evidence-detail, #reference, #SHALL)
 
 // Specimen requirements
 * insert SupportResource(Specimen, #SHALL)
@@ -190,9 +191,9 @@ Usage: #definition
 * insert SupportSearchParam(interpretation, https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-observation-interpretation,  #token, #SHALL)
 * insert SupportSearchParam(value-concept, http://hl7.org/fhir/SearchParameter/Observation-value-concept, #token, #SHALL)
 * insert SupportSearchParam(note, https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-observation-note, #string, #SHALL)
-* insert SupportSearchParam(tnm-t-cppraefix, https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-observation-ext-tnm-t-cppraefix, #token, #SHALL)
-* insert SupportSearchParam(tnm-n-cppraefix, https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-observation-ext-tnm-n-cppraefix, #token, #SHALL)
-* insert SupportSearchParam(tnm-m-cppraefix, https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-observation-ext-tnm-m-cppraefix, #token, #SHALL)
+* insert SupportSearchParam(tnm-cp-praefix, https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-observation-tnm-cp-praefix, #token, #SHALL)
+* insert SupportSearchParam(tnm-y-praefix, https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-observation-tnm-y-praefix, #token, #SHALL)
+* insert SupportSearchParam(tnm-r-praefix, https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-observation-tnm-r-praefix, #token, #SHALL)
 * insert SupportSearchParam(tnm-n-itc, https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-observation-ext-tnm-n-itc, #token, #SHALL)
 * insert SupportSearchParam(tnm-n-sn-suffix, https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-observation-ext-tnm-n-sn-suffix, #token, #SHALL)
 

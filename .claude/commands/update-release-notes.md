@@ -15,7 +15,7 @@ Update the release notes with changes since a reference commit or tag.
    ```
 
 3. **Read current release notes**:
-   - Location: `implementation-guides/ImplementationGuide-2026.x-DE/MIIIGModulOnkologie/Release-Notes.page.md`
+   - Location: `implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/Release-Notes.page.md`
 
 4. **Categorize commits**: Group changes into these categories based on commit prefixes:
    - **Breaking Changes** (`BREAKING`): Changes requiring implementation updates
@@ -70,4 +70,4 @@ Update the release notes with changes since a reference commit or tag.
 ## Reference
 
 - Ballot tag: `v2026.0.0-ballot`
-- Release notes path: `implementation-guides/ImplementationGuide-2026.x-DE/MIIIGModulOnkologie/Release-Notes.page.md`
+- Release notes path: `implementation-guides/ImplementationGuide-2027.x-DE/MIIIGModulOnkologie/Release-Notes.page.md`

@@ -9,7 +9,7 @@ Usage: #example
 * subject = Reference(Patient/example)
 * focus = Reference(Condition/primaertumor-example)
 * effectiveDateTime = "2024-01-11"
-* valueCodeableConcept.coding.code = #IVB
+* valueCodeableConcept.coding = $mii-cs-onko-weitere-klassifikationen-obds#figo-ivb "FIGO IVB"
 * valueCodeableConcept.text = "FIGO Stadium IVB"
 
 Instance: mii-exa-onko-weitere-klassifikationen-3
@@ -21,7 +21,7 @@ Usage: #example
 * code.text = "FIGO Grading für gynäkologische Tumore"
 * subject = Reference(Patient/example)
 * focus = Reference(Condition/primaertumor-example)
-* specimen = Reference(Specimen/example)
+* specimen = Reference(mii-exa-onko-specimen-1)
 * effectiveDateTime = "2024-01-11"
 * valueCodeableConcept.coding = $SCT#1290303004 "International Federation of Gynecology and Obstetrics grading system grade 2 (qualifier value)"
 * valueCodeableConcept.text = "FIGO Grad 2"

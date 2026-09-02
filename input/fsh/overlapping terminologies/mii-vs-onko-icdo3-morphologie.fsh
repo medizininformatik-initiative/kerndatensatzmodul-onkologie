@@ -8,4 +8,11 @@ Description: "Codes für histologische Morphologie und Verhalten einer neoplasti
 * ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
-* include codes from system  http://terminology.hl7.org/CodeSystem/icd-o-3 where concept descendent-of #M
+* insert OnkoCRMIValueSet
+// UNION beider Revisionen (Erste Revision 2014 + Zweite Revision 2019), jeweils
+// versions-gepinnt: Bestandsdaten (2014-codiert, inkl. der in 3.2 gestrichenen
+// Codes wie GIST 8936/1) UND aktuelle Daten validieren gegen dieses Binding.
+// Revisionsscharfe Pruefung: mii-vs-onko-icdo3-morphologie-2014/-2019;
+// Migration: mii-cm-onko-icdo3-transitions-2019. Hintergrund: beads dq9/14w.30.
+* include codes from system http://terminology.hl7.org/CodeSystem/icd-o-3|2014 where concept descendent-of #M
+* include codes from system http://terminology.hl7.org/CodeSystem/icd-o-3|2019 where concept descendent-of #M

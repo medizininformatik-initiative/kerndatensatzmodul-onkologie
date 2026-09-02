@@ -5,6 +5,7 @@ Title: "MII PR Onkologie Befund"
 Description: "Histologie: Befund. Vollständiger Befundbericht des Pathologen."
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert OnkoCRMIProfile
 * ^status = #active
 * meta.profile 0..* MS
 * encounter 0..1 MS

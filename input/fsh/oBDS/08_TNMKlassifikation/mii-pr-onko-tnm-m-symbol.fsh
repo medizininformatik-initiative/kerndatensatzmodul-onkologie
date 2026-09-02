@@ -2,10 +2,11 @@ Profile: MII_PR_Onko_TNM_m_Symbol
 Parent: Observation
 Id: mii-pr-onko-tnm-m-symbol
 Title: "MII PR Onkologie TNM m-Symbol"
-Description: "TNM-Klassifikation: TNM m-Symbol. Kennzeichnet Vorhandensein multipler Primärtumoren in einem anatomischen Bezirk."
+Description: "DEPRECATED seit v2027: Die Angabe multipler Primärtumoren (UICC-m-Suffix, oBDS 8.10) erfolgt jetzt als Component multipleTumoren an der T-Kategorie (mii-pr-onko-tnm-t-kategorie) — das Suffix ist T-exklusiv und gehört an die Kategorie, nicht als eigene Observation daneben. Bestandsdaten bleiben lesbar; für Neuimplementierungen ist die Component zu verwenden. Ursprüngliche Beschreibung: TNM-Klassifikation: TNM m-Symbol. Kennzeichnet Vorhandensein multipler Primärtumoren in einem anatomischen Bezirk."
 * insert PR_CS_VS_Version
 * insert Publisher
-* ^status = #active
+* insert OnkoCRMIProfile
+* ^status = #retired
 * meta.profile 0..* MS
 * encounter 0..1 MS
 

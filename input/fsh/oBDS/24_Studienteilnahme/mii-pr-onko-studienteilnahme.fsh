@@ -5,6 +5,7 @@ Title: "MII PR Onkologie Studienteilnahme"
 Description: "Dieses Profil beschreibt Studienteilnahmen in der Onkologie"
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert OnkoCRMIProfile
 * ^status = #active
 
 * meta.profile 0..* MS
@@ -22,9 +23,14 @@ Description: "Dieses Profil beschreibt Studienteilnahmen in der Onkologie"
 * focus[primaertumor] only Reference(MII_PR_Onko_Diagnose_Primaertumor)
 * focus[primaertumor] ^short = "Referenz zum Primärtumor"
 * focus[primaertumor] ^definition = "Referenz zur Primärtumordiagnose, auf die sich die Studienteilnahme bezieht"
-* focus[studie] only Reference(ResearchStudy)
-* focus[studie] ^short = "Referenz zur Studie"
-* focus[studie] ^definition = "Referenz zur konkreten Studie (ResearchStudy), an der der Patient teilnimmt"
+// GH #232: Ziel ist das Studien-Profil des KDS-Moduls Medizinisches
+// Forschungsvorhaben (Paket kerndatensatz.studie); der generische
+// ResearchStudy-Typ bleibt als Fallback zulässig, solange Standorte das
+// Modul nicht führen.
+* focus[studie] only Reference(https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-studie or ResearchStudy)
+* focus[studie] ^short = "Referenz zur Studie (KDS-Modul Medizinisches Forschungsvorhaben)"
+* focus[studie] ^definition = "Referenz zur konkreten Studie, an der die Patientin oder der Patient teilnimmt. SOLL auf das Profil MII_PR_Studie_Studie des KDS-Moduls Medizinisches Forschungsvorhaben verweisen; eine generische ResearchStudy-Ressource ist zulässig, wenn das Modul am Standort nicht geführt wird."
+* insert Translation(focus[studie] ^short, de-DE, Referenz zur Studie - KDS-Modul Medizinisches Forschungsvorhaben)
 
 * code MS
 * code 1..1 

@@ -5,6 +5,7 @@ Title: "MII PR Onkologie Systemische Therapie Medikation"
 Description: "Medikation der Systemische Therapie. Dieses Profil beschreibt die konkreten Medikationen, die im Rahmen der systemische Therapie für den oBDS dokumentiert werden.  Da im oBDS systemische und abwartende Therapie in einem Feld gruppiert sind, werden die Daten für die Systemische und abwartende Therapie sowohl über eine FHIR-Prozedur (systemisch und abwartend) als auch als FHIR-Medikation abgedeckt. "
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert OnkoCRMIProfileUK
 * ^status = #active
 
 // Logical Modell see:  https://plattform65c.atlassian.net/wiki/spaces/UMK/pages/15532379/Systemische+Therapie+SYST+Typ // t
@@ -14,12 +15,30 @@ Description: "Medikation der Systemische Therapie. Dieses Profil beschreibt die 
 
 
 * medication[x] 1..1 MS
-* medicationCodeableConcept 1..1 MS
+// HINWEIS (beads 2a4.3): Der Slice medication[x]:medicationCodeableConcept trägt
+// bewusst KEIN slicing-Intro am Basis-Element — Choice-Type-Slicing ist per
+// FHIR-Spec implizit, und SUSHI emittiert ^slicing-Regeln auf Choice-Elementen
+// prinzipiell nicht (verifiziert 2026-08-26, beide Syntaxvarianten verworfen).
+// Der Abbruch der HL7-compare-Funktion daran ist eine Tool-Strictness → upstream.
+//
+// ENTSCHEIDUNG #288 (2026-08-26): medication[x] bleibt 1..1 — als Choice-Element
+// erzwingt das strukturell GENAU EINE der beiden Formen (keine Invariante nötig):
+//   (a) medicationCodeableConcept mit coding 1..* (reiner .text ist ausgeschlossen;
+//       .text KANN und SOLL ergänzend mitgeführt werden), ODER
+//   (b) medicationReference auf eine MII-Medikation-Medication (Ziel-Profil aus dem
+//       Parent geerbt; die Substanz-Codierung liegt dann in Medication.code/
+//       .ingredient — konsistent zur Modellierung der AG Meona-Medikation).
+// oBDS-Mapping 16.6 (Substanz): bei (b) über die referenzierte Medication.
+* medicationCodeableConcept 0..1 MS
+* medicationReference 0..1 MS
+* medicationReference ^short = "Referenz auf Medication (Alternative zur Inline-Codierung)"
+* medicationReference ^definition = "Alternative zur Inline-Codierung: Referenz auf eine Medication-Ressource gemäß MII-Modul Medikation. Die Substanz ist dort über Medication.code (ATC/UNII) bzw. Medication.ingredient codiert."
+* insert Translation(medicationReference ^short, de-DE, Referenz auf Medication als Alternative zur Inline-Codierung)
 * medicationCodeableConcept.coding 1..* MS
 * medicationCodeableConcept.coding ^short = "Wirkstoff der systemischen Medikation"
 * medicationCodeableConcept.coding ^definition = "Wirkstoff der systemischen onkologischen Medikation. Nach Möglichkeit als ATC-kodiert anzugeben. Wirkstoffe sind einzeln zu kodieren. Kombinationstherapien können über MedicationStatement.partOf in übergeordneten MedicationStatements gruppiert werden - in diesem Fall ist bei jedem Wirkstoff unter `MedicationStatement.note.text` das Kürzel des (z.B. chemotherapeutischen) Protokolls zu hinterlegen."
 * insert Translation(medicationCodeableConcept.coding ^short, de-DE, Wirkstoff/ Substanz der systemischen Medikation)
-* insert Translation(medicationCodeableConcept.coding ^definition, de-DE, Wirkstoff / Substanz der systemischen onkologischen Medikation gemäß 16.4  oBDS 2021. )
+* insert Translation(medicationCodeableConcept.coding ^definition, de-DE, Wirkstoff / Substanz der systemischen onkologischen Medikation gemäß 16.6 oBDS 2021. )
 
 // Set existing ATC slice from parent profile as Must Support
 * medicationCodeableConcept.coding[atcClassDe] MS
@@ -41,7 +60,7 @@ Description: "Medikation der Systemische Therapie. Dieses Profil beschreibt die 
 * note.text ^short = "Protokoll"
 * note.text ^definition = "Protokoll der systemischen Medikation. Bei Angabe eines Schemas sind alle Wirkstoffe in einzelnen Ressourcen unter MedicationStatement.medication[x] gesondert zu kodieren "
 * insert Translation(note.text ^short, de-DE, Protokoll der systemischen Medikation)
-* insert Translation(note.text ^definition, de-DE, Protokoll der systemischen Medikation gemäß 16.6 oBDS 2021. )
+* insert Translation(note.text ^definition, de-DE, Protokoll der systemischen Medikation gemäß 16.4 oBDS 2021. )
 
 
 // Systemische Therapie Beginn und Ende --> ggfs. dupliziert im MedicationStatement 
@@ -52,15 +71,24 @@ Description: "Medikation der Systemische Therapie. Dieses Profil beschreibt die 
 * effectiveDateTime 0..1 MS  // falls es einmalige Anwendungen / Protokolle gibt
 
 * effectivePeriod.start ^short = "Startdatum der systemischen Medikation"
-* effectivePeriod.start ^definition = "Startdatum der systemischen Medikation gemäß 16.7 oBDS 2021."
+* effectivePeriod.start ^definition = "Startdatum der systemischen Medikation gemäß 16.5 oBDS 2021."
 * effectivePeriod.end ^short = "Enddatum der systemischen Medikation"
-* effectivePeriod.end ^definition = "Enddatum der systemischen Medikation gemäß 16.9 oBDS 2021."
+* effectivePeriod.end ^definition = "Enddatum der systemischen Medikation gemäß 16.8 oBDS 2021."
 * insert Translation(effectivePeriod.start ^short, de-DE, Startdatum der systemischen Medikation)
-* insert Translation(effectivePeriod.start ^definition, de-DE, Startdatum der systemischen Medikation gemäß 16.7 oBDS 2021. )
+* insert Translation(effectivePeriod.start ^definition, de-DE, Startdatum der systemischen Medikation gemäß 16.5 oBDS 2021. )
 * insert Translation(effectivePeriod.end ^short, de-DE, Enddatum der systemischen Medikation)
-* insert Translation(effectivePeriod.end ^definition, de-DE, Enddatum der systemischen Medikation gemäß 16.9 oBDS 2021. )
+* insert Translation(effectivePeriod.end ^definition, de-DE, Enddatum der systemischen Medikation gemäß 16.8 oBDS 2021. )
 * basedOn MS
 * basedOn only Reference(CarePlan or MedicationRequest)
+// agi: Tumorkonferenz + Therapieempfehlung typsicher referenzierbar
+* basedOn ^slicing.discriminator.type = #type
+* basedOn ^slicing.discriminator.path = "$this.resolve()"
+* basedOn ^slicing.rules = #open
+* basedOn contains
+    tumorkonferenz 0..1 MS and
+    therapieempfehlung 0..1 MS
+* basedOn[tumorkonferenz] only Reference(MII_PR_Onko_Tumorkonferenz)
+* basedOn[therapieempfehlung] only Reference(MII_PR_Onko_Therapieempfehlung_Medikation)
 * basedOn ^short = "Therapieplan oder Therapieempfehlung"
 * basedOn ^definition = "Referenz auf den CarePlan (Therapieplan) oder MedicationRequest (Therapieempfehlung) auf dem diese Medikation basiert."
 
@@ -69,5 +97,5 @@ Mapping: FHIR-oBDS-Systemische_Therapie_Medikation
 Id: oBDS
 Title: "Mapping FHIR zu oBDS"
 Source: MII_PR_Onko_Systemische_Therapie_Medikation
-* medicationCodeableConcept.coding.code -> "16.4" "Systemische Therapie Substanz"
-* note.text -> "16.6" "Systemische Therapie Protokoll"
+* medicationCodeableConcept.coding.code -> "16.6" "Systemische Therapie Substanz"
+* note.text -> "16.4" "Systemische Therapie Protokoll"

@@ -1,13 +1,15 @@
 CodeSystem: MII_CS_Onko_TNM_UICC
 Id: mii-cs-onko-tnm-uicc
 Title: "MII CS Onkologie TNM UICC"
-Description: "Codes für TNM UICC Ausprägungen."
+Description: "Codes für TNM UICC Ausprägungen. HINWEIS zur Auflagen-Versionierung: Dieses CodeSystem ist bewusst eine auflagen-übergreifende Union (8. Auflage + Ergänzungen der 9. Auflage, z.B. T1b3/M1c1/M1c2); die verwendete Auflage wird als eigenes Datenelement (TNM-Version, oBDS 8.2) dokumentiert. Eine formal strengere, auflagen-versionierte Validierung (je Auflage ein CS-/VS-Stand nach dem Muster der ATC-/ICD-O-Jahresversionen) ist als spätere Ausbaustufe vorgesehen."
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
 * ^url = "https://www.uicc.org/resources/tnm"
 * ^status = #active
 * ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert OnkoCRMICodeSystemFremdinhalt
+* insert UICCCopyright
 * ^caseSensitive = true
 //* ^valueSet = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-cs-onko-tnm-version"
 * ^content = #complete
@@ -35,6 +37,7 @@ Description: "Codes für TNM UICC Ausprägungen."
 * #T1b	"T1b"
 * #T1b1	"T1b1"
 * #T1b2	"T1b2"
+* #T1b3	"T1b3" // 9. Auflage (Zervix, FIGO-Angleichung)
 * #T1c	"T1c"
 * #T1c1	"T1c1"
 * #T1c2	"T1c2"
@@ -89,6 +92,8 @@ Description: "Codes für TNM UICC Ausprägungen."
 * #M1a "M1a"
 * #M1b "M1b"
 * #M1c "M1c"
+* #M1c1 "M1c1" // 9. Auflage (Lunge: eine extrathorakale Organregion)
+* #M1c2 "M1c2" // 9. Auflage (Lunge: mehrere extrathorakale Organregionen)
 * #M1d "M1d"
 * #MX "MX"
 * #i+ "(i+)"

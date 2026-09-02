@@ -8,11 +8,14 @@ Description: "Das ValueSet enthält die TNM M-Kategorie Codes aus der UICC TNM -
 * ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert OnkoCRMIValueSet
 * $UICC#M0 "M0"
 * $UICC#M1 "M1"
 * $UICC#M1a "M1a"
 * $UICC#M1b "M1b"
 * $UICC#M1c "M1c"
+* $UICC#M1c1 "M1c1"
+* $UICC#M1c2 "M1c2"
 * $UICC#M1d "M1d"
 //* $UICC#M1cy "M1(cy)"
 * $UICC#MX "MX"

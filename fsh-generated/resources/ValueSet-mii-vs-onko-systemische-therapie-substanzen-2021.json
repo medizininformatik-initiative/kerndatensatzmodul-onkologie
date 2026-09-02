@@ -8,10 +8,36 @@
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-2021",
   "meta": {
     "profile": [
-      "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
+      "http://hl7.org/fhir/StructureDefinition/shareablevalueset",
+      "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset",
+      "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset",
+      "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-computablevalueset"
+    ],
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-license",
+        "valueCode": "CC-BY-4.0"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/package-source",
+        "extension": [
+          {
+            "url": "packageId",
+            "valueId": "de.medizininformatikinitiative.kerndatensatz.onkologie"
+          },
+          {
+            "url": "version",
+            "valueString": "2026.0.3"
+          },
+          {
+            "url": "uri",
+            "valueUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko"
+          }
+        ]
+      }
     ]
   },
-  "experimental": true,
+  "experimental": false,
   "publisher": "Medizininformatik Initiative",
   "contact": [
     {
@@ -24,10 +50,131 @@
     }
   ],
   "version": "2026.0.3",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "shareable"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "publishable"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "computable"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "package",
+            "system": "http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes",
+            "display": "Package"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
+      "valueDate": "2026-01-03"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-topic",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "C3262",
+            "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-author",
+      "valueContactDetail": {
+        "telecom": [
+          {
+            "system": "email",
+            "value": "thomas.debertshaeuser@charite.de"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-editor",
+      "valueContactDetail": {
+        "name": "Taskforce Core Data Set"
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
+      "valueContactDetail": {
+        "name": "Interoperability Working Group",
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
+      "valueContactDetail": {
+        "name": "National Steering Committee",
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
+      "valueContactDetail": {
+        "name": "Interoperability Working Group",
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
+      "valueContactDetail": {
+        "name": "National Steering Committee",
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
+      "valueCoding": {
+        "code": "semver",
+        "system": "http://hl7.org/fhir/version-algorithm",
+        "display": "SemVer"
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2026"
+      }
+    }
+  ],
   "compose": {
     "include": [
       {
         "system": "http://fhir.de/CodeSystem/bfarm/atc",
+        "version": "2021",
         "concept": [
           {
             "code": "L02BX01",
@@ -158,8 +305,16 @@
             "display": "Asparaginase"
           },
           {
+            "code": "L01XC32",
+            "display": "Atezolizumab"
+          },
+          {
             "code": "L01EX18",
             "display": "Avapritinib"
+          },
+          {
+            "code": "L01XC31",
+            "display": "Avelumab"
           },
           {
             "code": "L01XX70",
@@ -202,6 +357,10 @@
             "display": "Bendamustin"
           },
           {
+            "code": "L01XC07",
+            "display": "Bevacizumab"
+          },
+          {
             "code": "L01XF03",
             "display": "Bexaroten"
           },
@@ -218,12 +377,20 @@
             "display": "Bleomycin"
           },
           {
+            "code": "L01XC19",
+            "display": "Blinatumomab"
+          },
+          {
             "code": "L01XG01",
             "display": "Bortezomib"
           },
           {
             "code": "L01EA04",
             "display": "Bosutinib"
+          },
+          {
+            "code": "L01XC12",
+            "display": "Brentuximab vedotin"
           },
           {
             "code": "L04AC09",
@@ -306,6 +473,10 @@
             "display": "Cetrorelix"
           },
           {
+            "code": "L01XC06",
+            "display": "Cetuximab"
+          },
+          {
             "code": "L01AA02",
             "display": "Chlorambucil"
           },
@@ -386,6 +557,10 @@
             "display": "Dactinomycin"
           },
           {
+            "code": "L01XC24",
+            "display": "Daratumumab"
+          },
+          {
             "code": "B03XA02",
             "display": "Darbepoetin alfa"
           },
@@ -432,6 +607,10 @@
           {
             "code": "L01DB01",
             "display": "Doxorubicin"
+          },
+          {
+            "code": "L01XC28",
+            "display": "Durvalumab"
           },
           {
             "code": "G04CB02",
@@ -666,6 +845,10 @@
             "display": "Ingenolmebutat"
           },
           {
+            "code": "L01XC26",
+            "display": "Inotuzumab ozogamicin"
+          },
+          {
             "code": "L03AB01",
             "display": "Interferon alfa, natürlich"
           },
@@ -680,6 +863,10 @@
           {
             "code": "L03AB18",
             "display": "Interferon gamma-1b"
+          },
+          {
+            "code": "L01XC11",
+            "display": "Ipilimumab"
           },
           {
             "code": "L01CE02",
@@ -910,6 +1097,14 @@
             "display": "Niraparib"
           },
           {
+            "code": "L01XC17",
+            "display": "Nivolumab"
+          },
+          {
+            "code": "L01XC15",
+            "display": "Obinutuzumab"
+          },
+          {
             "code": "L01XX36",
             "display": "Oblimersen"
           },
@@ -920,6 +1115,10 @@
           {
             "code": "L01XK01",
             "display": "Olaparib"
+          },
+          {
+            "code": "L01XC27",
+            "display": "Olaratumab"
           },
           {
             "code": "L01XX40",
@@ -958,6 +1157,10 @@
             "display": "Pamidronsäure"
           },
           {
+            "code": "L01XC08",
+            "display": "Panitumumab"
+          },
+          {
             "code": "L01XH03",
             "display": "Panobinostat"
           },
@@ -982,12 +1185,20 @@
             "display": "Peginterferon alfa-2b"
           },
           {
+            "code": "L01XC18",
+            "display": "Pembrolizumab"
+          },
+          {
             "code": "L01BA04",
             "display": "Pemetrexed"
           },
           {
             "code": "L01XX08",
             "display": "Pentostatin"
+          },
+          {
+            "code": "L01XC13",
+            "display": "Pertuzumab"
           },
           {
             "code": "L01AX02",
@@ -1082,6 +1293,10 @@
             "display": "Raltitrexed"
           },
           {
+            "code": "L01XC21",
+            "display": "Ramucirumab"
+          },
+          {
             "code": "L01AD07",
             "display": "Ranimustin"
           },
@@ -1104,6 +1319,10 @@
           {
             "code": "M05BA07",
             "display": "Risedronsäure"
+          },
+          {
+            "code": "L01XC02",
+            "display": "Rituximab"
           },
           {
             "code": "L01XH02",
@@ -1276,6 +1495,14 @@
           {
             "code": "L01EE01",
             "display": "Trametinib"
+          },
+          {
+            "code": "L01XC03",
+            "display": "Trastuzumab"
+          },
+          {
+            "code": "L01XC14",
+            "display": "Trastuzumab emtansin"
           },
           {
             "code": "L01AB02",

@@ -4,6 +4,7 @@ Title: "MII VS Onkologie Nebenwirkung nach CTCAE Grad"
 Description: "oBDS-spezifisches ValueSet für Nebenwirkung nach CTCAE-Grad"
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert OnkoCRMIValueSet
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-nebenwirkung-ctcae-grad"
 * ^status = #active

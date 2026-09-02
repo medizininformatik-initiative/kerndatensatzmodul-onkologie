@@ -10,4 +10,4 @@ Usage: #example
 * valueCodeableConcept.coding.code = #3 "schlecht differenziert"
 
 * subject = Reference(Patient/example)
-* specimen = Reference (Specimen/example)
+* specimen = Reference(mii-exa-onko-specimen-1)

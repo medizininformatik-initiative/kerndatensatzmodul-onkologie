@@ -5,6 +5,7 @@ Title: "MII PR Onkologie Tumorkonferenz"
 Description: "Dieses Profil beschreibt die Tumorkonferenz und die Therapieempfehlungen"
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert OnkoCRMIProfile
 * ^status = #active
 * meta.profile 0..* MS
 * encounter 0..1 MS
@@ -82,9 +83,9 @@ Description: "Dieses Profil beschreibt die Tumorkonferenz und die Therapieempfeh
 * activity[extended] ^short = "Extended molecular tumor board recommendation with detailed protocols"
 * activity[extended] ^definition = "Detailed molecular tumor board recommendation using RequestGroup for structured multi-agent protocols and specific medication choices"
 * activity[extended].reference 1..1 MS
-* activity[extended].reference only Reference(MII_PR_Onko_Therapieempfehlung_Kombinationstherapie or MedicationRequest or ServiceRequest)
+* activity[extended].reference only Reference(MII_PR_Onko_Therapieempfehlung_Kombinationstherapie or MII_PR_Onko_Therapieempfehlung_Medikation or MII_PR_Onko_Therapieempfehlung_Operation)
 * activity[extended].reference ^short = "Detailed therapy recommendation - RequestGroup, MedicationRequest, or ServiceRequest"
-* activity[extended].reference ^definition = "Reference to detailed therapy recommendations: RequestGroup for complex multi-agent protocols, MedicationRequest for specific medication orders, or ServiceRequest for therapy referrals (surgery, radiation, etc.)"
+* activity[extended].reference ^definition = "Reference to detailed therapy recommendations: Therapieempfehlung Kombinationstherapie (RequestGroup) for complex multi-agent protocols, Therapieempfehlung Medikation (MedicationRequest) for specific medication orders, or Therapieempfehlung Operation (ServiceRequest) for therapy referrals (surgery, radiation, etc.)"
 * activity[extended].detail 0..0  // Disabled to avoid FHIR invariant cpl-3
 * activity[extended].progress MS
 * activity[extended].progress ^short = "Progress notes for recommendation implementation"

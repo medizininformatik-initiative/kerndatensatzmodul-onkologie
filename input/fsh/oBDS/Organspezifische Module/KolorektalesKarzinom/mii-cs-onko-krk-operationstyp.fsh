@@ -8,6 +8,7 @@ Description: "oBDS-spezifisches Codesystem TME-Präparat, basierend auf der S3-L
 * ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert OnkoCRMICodeSystem
 * ^caseSensitive = true
 * ^content = #fragment
 * #T "TME" "Totale mesorektale Exzision" // ergänzt, im Original-oBDS nicht enthalten

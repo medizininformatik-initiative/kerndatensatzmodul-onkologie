@@ -5,6 +5,7 @@ Title: "MII PR Onkologie Therapieempfehlung Medikation"
 Description: "Dieses Profil beschreibt eine Medikations-Tumorempfehlung"
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert OnkoCRMIProfileUK
 * ^status = #active
 * meta.profile 0..* MS
 * encounter 0..1 MS

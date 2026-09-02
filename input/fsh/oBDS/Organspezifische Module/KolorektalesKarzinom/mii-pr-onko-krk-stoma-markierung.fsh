@@ -5,6 +5,7 @@ Title: "MII PR Onkologie KRK Stoma-Markierung"
 Description: "Dieses Profil beschreibt die präoperative Markierung der geplanten Stoma-Position beim Kolorektalen Karzinom"
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert OnkoCRMIProfileUK
 * ^status = #active
 
 * meta.profile 0..* MS
@@ -45,5 +46,7 @@ Mapping: FHIR-oBDS-KRK-Stoma-Markierung
 Id: oBDS
 Title: "Mapping FHIR zu oBDS"
 Source: MII_PR_Onko_KRK_Stoma_Markierung
-* -> "KR-Stoma" "Präoperative Stoma-Markierung"
-* performedDateTime -> "KR-Stoma.1" "Datum der Stoma-Markierung"
+* -> "KR7" "Rektum: Präoperative Anzeichnung der Stomaposition"
+* status -> "KR7" "Status der präoperativen Stoma-Markierung"
+* statusReason -> "KR7 (Komponente)" "Grund für den Markierungsstatus; keine eigene oBDS-Feldnummer"
+* performedDateTime -> "KR7" "Datum der Stoma-Markierung"

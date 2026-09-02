@@ -5,6 +5,7 @@ Title: "MII PR Onkologie Histologie ICD-O-3"
 Description: "Histologie-Kodierung nach ICD-0 für die Verwendung von Folgediagnostik. Bei der histologischen Beurteilung des Primärtumors sind die histologischen Informationen direkt über die Condition-Ressource abzubilden."
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert OnkoCRMIProfile
 * ^status = #active
 * meta.profile 0..* MS
 * encounter 0..1 MS
@@ -53,7 +54,9 @@ Description: "Histologie-Kodierung nach ICD-0 für die Verwendung von Folgediagn
 * bodySite.coding[icd-o-3].system 1.. MS
 * bodySite.coding[icd-o-3] ^patternCoding.system = $ICDO3
 * bodySite.coding[icd-o-3].code 1.. MS
-* bodySite.coding[icd-o-3].code from MII_VS_Onko_ICDO3_Topographie (required)
+// Binding auf coding-Ebene (nicht .code): Bei nacktem code kann der Validator das
+// System nicht bestimmen, sobald das VS mehrere Versions-Kanten hat (Union 2014+2019).
+* bodySite.coding[icd-o-3] from MII_VS_Onko_ICDO3_Topographie (required)
 * insert Label (bodySite.coding[icd-o-3], ICD-O-3 Topographie, ICD-O-3 Topographie bei vom Primärtumor abweichender Lokalisation in der Verlaufsbeschreibung)
 * insert Translation(bodySite.coding[icd-o-3] ^short, de-DE, ICD-O-3 Topographie )
 * insert Translation(bodySite.coding[icd-o-3] ^definition, de-DE, ICD-O-3 Topographie bei vom Primärtumor abweichender Lokalisation in der Verlaufsbeschreibung)

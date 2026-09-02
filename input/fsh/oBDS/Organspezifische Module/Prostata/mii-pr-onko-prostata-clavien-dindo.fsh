@@ -5,6 +5,7 @@ Title: "MII PR Onkologie Clavien Dindo"
 Description: "Dieses Profil beschreibt den Clavien-Dindo-Score für die Prostatektomie in der Onkologie"
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert OnkoCRMIProfile
 * ^status = #active
 
 * meta.profile 0..* MS
@@ -35,7 +36,7 @@ Description: "Dieses Profil beschreibt den Clavien-Dindo-Score für die Prostate
 * specimen MS
 * specimen 0..1
 
-// P7 Anzahl der Ca-Befall Stanzen 
+// P9 Postoperative Komplikation (Clavien-Dindo Grad III/IV) 
 
 
 * value[x] MS
@@ -61,13 +62,11 @@ Description: "Dieses Profil beschreibt den Clavien-Dindo-Score für die Prostate
 
 
 
-/*
-Mapping: FHIR-oBDS-Studienteilnahme
+
+Mapping: FHIR-oBDS-ProstataClavienDindo
 Id: oBDS
 Title: "Mapping FHIR zu oBDS"
-Source: MII_PR_Onko_Studienteilnahme
-* -> "24" "Studienteilnahme"
-*  valueCodeableConcept.coding.code -> "24.1" "Studienteilnahme Status"
-*  effectiveDateTime -> "24.2" "Studienteilnahme Datum"
-
-*/
+Source: MII_PR_Onko_Prostata_Clavien_Dindo
+* -> "P9" "Postoperative Komplikation (Clavien-Dindo Grad III/IV innerhalb 6 Monaten)"
+* valueCodeableConcept.coding[ClavienDindo] -> "P9" "Clavien-Dindo Klassifikation postoperativer Komplikationen"
+* valueCodeableConcept.coding[OBDSPostOPKompl] -> "P9 (Komponente)" "Spezifische Art der postoperativen Komplikation; keine eigene oBDS-Feldnummer"

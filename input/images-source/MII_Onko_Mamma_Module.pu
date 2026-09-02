@@ -1,135 +1,129 @@
 @startuml MII_Onko_Mamma_Module
-title MII Onkologie - Mammakarzinom Modul
+title MII Onkologie - Organmodul Mammakarzinom (oBDS M1-M8)
 skinparam defaultFontSize 16
-skinparam objectFontSize 16
+skinparam objectFontSize 15
 skinparam packageFontSize 18
 skinparam noteFontSize 14
 
-' Zentrale Diagnose
-object MII_Diagnose_Primaertumor #FFFF66 {
-    "Primärtumor Diagnose"
+' Zentrale Diagnose (oBDS Kapitel 5)
+object Diagnose_Primaertumor [[StructureDefinition-mii-pr-onko-diagnose-primaertumor.html]] #FFFF66
+Diagnose_Primaertumor : Condition, oBDS Kapitel 5
+
+' Basisprofil Operation (oBDS Kapitel 13)
+object Onko_Operation [[StructureDefinition-mii-pr-onko-operation.html]] #9999FF
+Onko_Operation : Procedure, oBDS Kapitel 13
+Onko_Operation : Basisprofil der Organmodule
+
+package "Hormon- und Rezeptorstatus (M1-M4)" as hormone #E8F5E8 {
+    object Menopausenstatus [[StructureDefinition-mii-pr-onko-mamma-menopause-status.html]] #22FF22
+    Menopausenstatus : oBDS M1
+    Menopausenstatus : code = SCT 161712005
+    Menopausenstatus : valueCodeableConcept 1..1
+
+    object Rezeptorstatus_Estrogen [[StructureDefinition-mii-pr-onko-mamma-rezeptorstatus-estrogen.html]] #22FF22
+    Rezeptorstatus_Estrogen : oBDS M2
+    Rezeptorstatus_Estrogen : code = LOINC 40556-3
+    Rezeptorstatus_Estrogen : value coding[DefinitionOBDS | DefinitionLeitlinie]
+    Rezeptorstatus_Estrogen : component[AnteilPositiveZellen] in %
+    Rezeptorstatus_Estrogen : component[Faerbeintensitaet]
+
+    object Rezeptorstatus_Progesteron [[StructureDefinition-mii-pr-onko-mamma-rezeptorstatus-progesteron.html]] #22FF22
+    Rezeptorstatus_Progesteron : oBDS M3
+    Rezeptorstatus_Progesteron : code = LOINC 85339-0
+    Rezeptorstatus_Progesteron : value coding[DefinitionOBDS | DefinitionLeitlinie]
+    Rezeptorstatus_Progesteron : component[AnteilPositiveZellen] in %
+    Rezeptorstatus_Progesteron : component[Faerbeintensitaet]
+
+    object Her2neu_Status [[StructureDefinition-mii-pr-onko-mamma-her2neu-status.html]] #22FF22
+    Her2neu_Status : oBDS M4
+    Her2neu_Status : code = LOINC 48676-1
+    Her2neu_Status : value coding[DefinitionOBDS | DefinitionLeitlinie]
+    Her2neu_Status : component[IHCScore] = LOINC 85319-2
+    Her2neu_Status : component[ISHResult] = LOINC 96893-3
 }
 
-' Zentrale Operation
-object Mamma_Operation #9999FF {
-    Base_Profile = MII_PR_Onko_Operation
-    oBDS_Code = M4
-    **Procedure.reasonReference** → Diagnosis
-    code = OPS oder SNOMED CT
-    "Brust-Operation"
+package "Perioperative Prozeduren (M5-M6)" as chirurgie #E8E8FF {
+    object Praeoperative_Markierung [[StructureDefinition-mii-pr-onko-mamma-praeoperative-markierung.html]] #9999FF
+    Praeoperative_Markierung : oBDS M5
+    Praeoperative_Markierung : Parent = Procedure
+    Praeoperative_Markierung : code aus VS Markierungsmodalitaet
+    Praeoperative_Markierung : partOf -> Operation
+
+    object Mamma_Operation [[StructureDefinition-mii-pr-onko-mamma-operation.html]] #9999FF
+    Mamma_Operation : kein oBDS-Modulfeld (Kapitel 13 / OPS)
+    Mamma_Operation : code.coding[ops], code.coding[sct]
+    Mamma_Operation : usedCode[IntraoperativesImaging] = oBDS M6
+    Mamma_Operation : usedCode[PraeoperativeMarkierung]
 }
 
-' Hormon-bezogene Observationen gruppieren (links positionieren)
-package "Hormon & Rezeptor Status" as hormones #E8F5E8 {
-    object Mamma_Menopausenstatus #22FF22 {
-        oBDS_Code = M1
-        SNOMED_CT = 161712005
-        **Observation.focus** → Diagnosis
-        valueCodeableConcept = Status
-        "Menopausenstatus"
-    }
+' Modul_Allgemein (im Web-Feldkatalog als M9 gefuehrt)
+object Sozialdienst [[StructureDefinition-mii-pr-onko-mamma-sozialdienst.html]] #9999FF
+Sozialdienst : oBDS M9 (Web-Feldkatalog)
+Sozialdienst : XSD: Modul_Allgemein.Sozialdienstkontakt
+Sozialdienst : code = SCT 306238000
+Sozialdienst : performedDateTime 1..1
 
-    object Mamma_Rezeptorstatus_Estrogen #22FF22 {
-        oBDS_Code = M2a-c
-        LOINC = 40556-3
-        **Observation.focus** → Diagnosis
-        valueCodeableConcept = Status
-        component[0] = % positive Zellen
-        component[1] = Färbeintensität
-        "Östrogenrezeptor Status"
-    }
+' Referenzen gemaess FSH-Profilen
+Diagnose_Primaertumor <-- Menopausenstatus : focus
+Diagnose_Primaertumor <-- Rezeptorstatus_Estrogen : focus
+Diagnose_Primaertumor <-- Rezeptorstatus_Progesteron : focus
+Diagnose_Primaertumor <-- Her2neu_Status : focus
+Diagnose_Primaertumor <-- Mamma_Operation : reasonReference
+Diagnose_Primaertumor <-- Sozialdienst : reasonReference
 
-    object Mamma_Rezeptorstatus_Progesteron #22FF22 {
-        oBDS_Code = M3a-c
-        LOINC = 85339-0
-        **Observation.focus** → Diagnosis
-        valueCodeableConcept = Status
-        component[0] = % positive Zellen
-        component[1] = Färbeintensität
-        "Progesteronrezeptor Status"
-    }
-    
-    object "HER2/neu Status" as HER2 #22FF22 {
-        oBDS_Code = M7a-c
-        **Observation.focus** → Diagnosis
-        "→ Molekulares Tumorboard"
-        "Multimodale Bewertung:"
-        "IHC + ISH"
-    }
-}
+Onko_Operation <|.. Mamma_Operation : Parent
+Onko_Operation <|.. Sozialdienst : Parent
+Onko_Operation <-- Praeoperative_Markierung : partOf
+Onko_Operation <-- Mamma_Operation : partOf
 
-' Chirurgie-bezogene Prozeduren gruppieren
-package "Perioperative Prozeduren" as surgery #E8E8FF {
-    object Mamma_Praeoperative_Markierung #9999FF {
-        oBDS_Code = M5
-        **Procedure.reasonReference** → Diagnosis
-        **Procedure.partOf** → Operation (optional)
-        code = Markierungsmodalität
-        "Präoperative Tumormarkierung"
-    }
+note bottom of hormone
+**Hormon- und Rezeptorstatus**
+M1 Menopausenstatus, M2 Oestrogen,
+M3 Progesteron, M4 Her2neu.
+Alle vier sind eigenstaendige
+Observation-Profile mit
+focus -> Diagnose Primaertumor.
+Her2neu wird multimodal (IHC + ISH)
+ueber component abgebildet.
+end note
 
-    object Mamma_Sozialdienst #9999FF {
-        Base_Profile = MII_PR_Onko_Operation  
-        oBDS_Code = M6
-        **Procedure.reasonReference** → Diagnosis
-        "Sozialdienst Konsultation"
-    }
-}
+note bottom of chirurgie
+**M5 / M6**
+M5 = Praeoperative Markierung als
+eigenes Procedure-Profil (Draht-,
+Clip- oder Seed-Markierung).
+M6 = Intraoperatives Praeparatroentgen /
+Sonografie, abgebildet als
+Mamma_Operation.usedCode, kein
+eigenes Profil.
+end note
 
-' Positionierung
-hormones -left- MII_Diagnose_Primaertumor
-MII_Diagnose_Primaertumor -right- Mamma_Operation
+note right of Diagnose_Primaertumor
+**Ohne dediziertes Profil in v2027**
+M7 Tumorgroesse invasives Karzinom (mm)
+M8 Tumorgroesse DCIS (mm)
+-> generische Observation.valueQuantity
 
-' Beziehungen
-MII_Diagnose_Primaertumor <--- Mamma_Operation : reasonReference
-MII_Diagnose_Primaertumor <--- hormones : focus
-MII_Diagnose_Primaertumor <--- surgery : reasonReference
+M9 Sozialdienstkontakt und
+M10 Studienrekrutierung sind im
+oBDS-XSD 3.0.5 in Modul_Allgemein
+zentralisiert; M10 ueber
+mii-pr-onko-studienteilnahme
+(oBDS Kapitel 24).
+end note
 
-Mamma_Praeoperative_Markierung --> Mamma_Operation : partOf (optional)
-
-legend right 
-|Farbe|Typ|
+legend right
+|Color|Type|
 |<#FFFF66>|Condition|
-|<#CCCCFF>|CarePlan|
+|<#CCCCFF>|CarePlan / RequestGroup|
 |<#9999FF>|Procedure|
 |<#DDFFDD>|ServiceRequest|
 |<#88FF88>|DiagnosticReport|
 |<#22FF22>|Observation|
-|<#FFCCFF>|Medication|
+|<#FFCCFF>|MedicationStatement / MedicationRequest|
 |<#FF9999>|AdverseEvent|
 |<#44FFFF>|Specimen|
-|<#EEEEEE>|Bundle|
+|<#EEEEEE>|List / ResearchStudy|
 endlegend
-
-note top of hormones
-**Hormonelle Marker:**
-Wichtig für Therapieentscheidung
-- Menopausenstatus
-- Östrogenrezeptor (quantitativ)
-- Progesteronrezeptor (quantitativ)
-- HER2/neu Status
-end note
-
-note top of HER2
-**HER2/neu Bewertung:**
-Aufgrund multimodaler Diagnostik
-(Immunhistochemie + In-situ-Hybridisierung)
-im Modul "Molekulares Tumorboard" abgebildet
-end note
-
-note top of Mamma_Operation
-**ValueSet Strategie:**
-Erweiterbare OPS + SNOMED CT Codes
-Unterstützt deutsche und internationale Systeme
-end note
-
-note top of Mamma_Praeoperative_Markierung
-**Integration aktueller klinischer Praxis:**
-Traditionell Drahtmarkierung in Registern,
-aber aktuelle klinische Praxis beinhaltet:
-- Radioaktive Seed-Lokalisierung  
-- Magnetische Seed-Lokalisierung
-→ ValueSet erweitert für moderne Verfahren
-end note
 
 @enduml

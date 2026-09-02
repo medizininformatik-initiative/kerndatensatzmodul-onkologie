@@ -28,6 +28,35 @@ Description: "Patient for FOLFOX colorectal cancer treatment example"
 * gender = #male
 * birthDate = "1959-03-15"
 
+// Kontakte des Behandlungsverlaufs — als eigene Instanzen, damit das
+// FOLFOX-Bundle vollständig aus sich heraus auflösbar bleibt.
+Instance: mii-exa-onko-folfox-encounter-diagnosis
+InstanceOf: Encounter
+Usage: #example
+Title: "FOLFOX Kontakt Diagnosestellung"
+Description: "Ambulanter Kontakt, in dem die Kolonkarzinom-Diagnose gestellt und gestaged wurde"
+* status = #finished
+* class = $v3-ActCode#AMB "ambulatory"
+* subject = Reference(mii-exa-onko-folfox-patient)
+
+Instance: mii-exa-onko-folfox-encounter-surgery
+InstanceOf: Encounter
+Usage: #example
+Title: "FOLFOX Kontakt Sigmaresektion"
+Description: "Stationärer Kontakt der Sigmaresektion samt zugehöriger Teilprozeduren"
+* status = #finished
+* class = $v3-ActCode#IMP "inpatient encounter"
+* subject = Reference(mii-exa-onko-folfox-patient)
+
+Instance: mii-exa-onko-folfox-encounter-chemo
+InstanceOf: Encounter
+Usage: #example
+Title: "FOLFOX Kontakt Chemotherapie"
+Description: "Ambulanter Kontakt, unter dem die FOLFOX-Chemotherapie appliziert wurde"
+* status = #finished
+* class = $v3-ActCode#AMB "ambulatory"
+* subject = Reference(mii-exa-onko-folfox-patient)
+
 // Primary Diagnosis - Stage III Sigmoid Colon Cancer
 Instance: mii-exa-onko-colorectal-cancer-diagnosis
 InstanceOf: MII_PR_Onko_Diagnose_Primaertumor
@@ -44,7 +73,7 @@ Description: "Stage III sigmoid colon adenocarcinoma, diagnosed January 2024"
 * code.coding[icd10-gm].version = "2024"
 * extension[Feststellungsdatum].valueDateTime = "2024-01-15"
 * subject = Reference(mii-exa-onko-folfox-patient)
-* encounter = Reference(Encounter/example-diagnosis)
+* encounter = Reference(mii-exa-onko-folfox-encounter-diagnosis)
 * onsetDateTime = "2024-01-15"
 * recordedDate = "2024-01-15"
 * note.text = "Adenokarzinom des Colon sigmoideum, Stadium III (T3N1M0)"
@@ -73,7 +102,7 @@ Description: "Main surgical procedure: Laparoscopic sigmoid resection with lymph
 * code.text = "Laparoskopische Sigmaresektion mit TME und Lymphknotendissektion"
 
 * subject = Reference(mii-exa-onko-folfox-patient)
-* encounter = Reference(Encounter/example-surgery)
+* encounter = Reference(mii-exa-onko-folfox-encounter-surgery)
 * performedDateTime = "2024-02-15"
 * reasonReference = Reference(mii-exa-onko-colorectal-cancer-diagnosis)
 
@@ -106,7 +135,7 @@ Description: "Component procedure 1: Sigmoid resection with anastomosis"
 * code.coding[ops].display = "Rektumresektion unter Sphinktererhaltung: Tiefe anteriore Resektion"
 
 * subject = Reference(mii-exa-onko-folfox-patient)
-* encounter = Reference(Encounter/example-surgery)
+* encounter = Reference(mii-exa-onko-folfox-encounter-surgery)
 * performedDateTime = "2024-02-15"
 * reasonReference = Reference(mii-exa-onko-colorectal-cancer-diagnosis)
 
@@ -138,7 +167,7 @@ Description: "Component procedure 2: Regional lymph node dissection"
 * code.coding[ops].display = "Radikale (systematische) Lymphadenektomie im Rahmen einer anderen Operation: Axillär"
 
 * subject = Reference(mii-exa-onko-folfox-patient)
-* encounter = Reference(Encounter/example-surgery)
+* encounter = Reference(mii-exa-onko-folfox-encounter-surgery)
 * performedDateTime = "2024-02-15"
 * reasonReference = Reference(mii-exa-onko-colorectal-cancer-diagnosis)
 
@@ -170,7 +199,7 @@ Description: "Component procedure 3: Laparoscopic port placement"
 * code.coding[ops].display = "Minimalinvasive Technik: Sonstige"
 
 * subject = Reference(mii-exa-onko-folfox-patient)
-* encounter = Reference(Encounter/example-surgery)
+* encounter = Reference(mii-exa-onko-folfox-encounter-surgery)
 * performedDateTime = "2024-02-15"
 * reasonReference = Reference(mii-exa-onko-colorectal-cancer-diagnosis)
 
@@ -385,7 +414,7 @@ Description: "Actual FOLFOX chemotherapy given, linked back to tumor board recom
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie"
 * status = #completed
 * subject = Reference(mii-exa-onko-folfox-patient)
-* encounter = Reference(Encounter/example)
+* encounter = Reference(mii-exa-onko-folfox-encounter-chemo)
 * reasonReference = Reference(mii-exa-onko-colorectal-cancer-diagnosis)
 
 // Links back to tumor board recommendation

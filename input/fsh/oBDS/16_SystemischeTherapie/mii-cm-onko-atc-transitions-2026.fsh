@@ -1,6 +1,7 @@
 Instance: mii-cm-onko-atc-transitions-2026
 InstanceOf: ConceptMap
 Usage: #definition
+* insert OnkoCRMIConceptMap
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-atc-transitions-2026"
 * name = "MII_CM_Onko_ATC_Transitions_2026"
 * title = "MII CM Onko ATC Code Changes 2025 to 2026"

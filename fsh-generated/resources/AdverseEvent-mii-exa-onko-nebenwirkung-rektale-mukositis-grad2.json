@@ -1,0 +1,53 @@
+{
+  "resourceType": "AdverseEvent",
+  "id": "mii-exa-onko-nebenwirkung-rektale-mukositis-grad2",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung-adverse-event"
+    ]
+  },
+  "event": {
+    "coding": [
+      {
+        "system": "https://www.meddra.org",
+        "code": "10063190",
+        "display": "Rektale Mukositis"
+      }
+    ]
+  },
+  "extension": [
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-nebenwirkung-ctcae-version",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "4.03",
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-nebenwirkung-ctcae-version",
+            "display": "CTCAE Version 4.03"
+          }
+        ]
+      }
+    }
+  ],
+  "actuality": "actual",
+  "subject": {
+    "reference": "Patient/PatientKimMusterperson"
+  },
+  "date": "2021-09-10",
+  "seriousness": {
+    "coding": [
+      {
+        "code": "2",
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-nebenwirkung-ctcae-grad",
+        "display": "moderat"
+      }
+    ]
+  },
+  "suspectEntity": [
+    {
+      "instance": {
+        "reference": "Procedure/mii-exa-onko-strahlentherapie-strahlentherapie-1"
+      }
+    }
+  ]
+}

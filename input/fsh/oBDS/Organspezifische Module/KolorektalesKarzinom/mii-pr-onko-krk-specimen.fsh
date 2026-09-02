@@ -5,6 +5,7 @@ Title: "MII PR Onkologie Specimen"
 Description: "Histologie: Dieses Profil beschreibt eine Gewebeprobe in der Onkologie."
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert OnkoCRMIProfileUK
 * ^status = #active
 * meta.profile 0..* MS
 
@@ -28,9 +29,10 @@ Description: "Histologie: Dieses Profil beschreibt eine Gewebeprobe in der Onkol
 
 
 Mapping: FHIR-oBDS-KRK-Specimen
-Id: oBDS
-Title: "Mapping FHIR zu oBDS"
+Id: oBDS-Organ
+Title: "Mapping FHIR zu oBDS (organspezifisches Zusatzmodul)"
 Source: MII_PR_Onko_KRK_Specimen
-* -> "6" "Histologie"
-* collection.collectedDateTime -> "6.1" "Tumor Histologiedatum"
-* accessionIdentifier.value -> "6.2" "Histologie-Einsendenummer" 
+* -> "KR4" "Rektum: Qualität des TME-Präparats"
+* condition -> "KR4" "Qualität des TME-Präparats (Mesorektum-Beurteilung)"
+* collection.collectedDateTime -> "6.1" "Tumor Histologiedatum (oBDS Kapitel 6 Histologie)"
+* accessionIdentifier.value -> "6.2" "Histologie-Einsendenummer (oBDS Kapitel 6 Histologie)"

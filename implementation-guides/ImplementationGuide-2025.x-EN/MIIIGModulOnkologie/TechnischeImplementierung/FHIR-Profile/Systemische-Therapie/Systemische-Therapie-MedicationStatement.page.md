@@ -1,6 +1,6 @@
 ---
 parent: 
-topic: AdverseEvent
+topic: SystemischeTherapieMedicationStatement
 subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation
 ---
 
@@ -119,17 +119,17 @@ The following search parameters are relevant for the oncology module, also in co
 3. The search parameter ```medicationCodeableConcept``` MUST be supported:
     Examples:
 
-    ```GET [base]/MedicationStatement?code=http://snomed.info/ct|400847007```
+    ```GET [base]/MedicationStatement?code=http://fhir.de/CodeSystem/bfarm/atc|L01AA01```
 
-    Application notes: Further information on searching by "event" can be found in the [FHIR base specification - section "token"](http://hl7.org/fhir/R4/search.html#all).
+    Application notes: Further information on searching by "token" can be found in the [FHIR base specification - section "token"](http://hl7.org/fhir/R4/search.html#all).
 
 4. The search parameter ```partOf``` MUST be supported:
     
     Examples:
 
-    ```GET [base]/MedicationStatement?part-of=Medication/123```
+    ```GET [base]/MedicationStatement?part-of=Procedure/123```
 
-    Application notes: Further information on searching by "severity" can be found in the [FHIR base specification - section "reference"](http://hl7.org/fhir/R4/search.html#all).
+    Application notes: `MedicationStatement.partOf` references the corresponding systemic therapy procedure, so the reference has to be given as `Procedure/[id]`. Further information on searching by "part-of" can be found in the [FHIR base specification - section "reference"](http://hl7.org/fhir/R4/search.html#all).
 
 5. The search parameter ```effective``` MUST be supported:
     
@@ -137,12 +137,12 @@ The following search parameters are relevant for the oncology module, also in co
 
     ```GET [base]/MedicationStatement?effective=gt2019-01-01```
     
-    ```GET [base]/MedicationStatement?MedicationStatement?effective=ge2019-01-01&effective=le2019-12-01```
+    ```GET [base]/MedicationStatement?effective=ge2019-01-01&effective=le2019-12-01```
 
-    Application notes: Further information on searching by "severity" can be found in the [FHIR base specification - section "date"](http://hl7.org/fhir/R4/search.html#all).
+    Application notes: The search parameter "effective" evaluates the period of the medication (`MedicationStatement.effectivePeriod`). Further information on searching by "effective" can be found in the [FHIR base specification - section "date"](http://hl7.org/fhir/R4/search.html#all).
 
 **Examples**
 
-{{json:mii-exa-onko-systemische-therapie-1}}
+{{json:mii-exa-onko-systemische-therapie-medikation1}}
 
 ---

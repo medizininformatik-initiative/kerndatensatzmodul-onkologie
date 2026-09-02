@@ -10,7 +10,7 @@ Usage: #example
 * code.coding[snomed] = $SCT#371479009 "Tumor size, largest dimension (observable entity)"
 
 * subject = Reference(Patient/example)
-* focus = Reference(Condition/exampleOncologicCondition)
+* focus = Reference(primaertumor-example)
 
 * effectiveDateTime = "2024-03-15"
 

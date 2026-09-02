@@ -5,6 +5,7 @@ Title: "MII PR Onkologie Menopausenstatus Mamma"
 Description: "Dieses Profil beschreibt den (prätherapeutischen) Menopausenstatus einer Patientin mit Mamma-Karzinom in der Onkologie"
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert OnkoCRMIProfile
 * ^status = #active
 
 * meta.profile 0..* MS
@@ -32,13 +33,10 @@ Description: "Dieses Profil beschreibt den (prätherapeutischen) Menopausenstatu
 * valueCodeableConcept from mii-vs-onko-mamma-menopause-status (extensible)
 * valueCodeableConcept.coding.code 1.. MS
 
-/*
-Mapping: FHIR-oBDS-Studienteilnahme
+
+Mapping: FHIR-oBDS-MammaMenopausenstatus
 Id: oBDS
 Title: "Mapping FHIR zu oBDS"
-Source: MII_PR_Onko_Studienteilnahme
-* -> "24" "Studienteilnahme"
-*  valueCodeableConcept.coding.code -> "24.1" "Studienteilnahme Status"
-*  effectiveDateTime -> "24.2" "Studienteilnahme Datum"
-
-*/
+Source: MII_PR_Onko_Mamma_Menopausenstatus
+* -> "M1" "Prätherapeutischer Menopausenstatus"
+* valueCodeableConcept -> "M1" "Menopausenstatus prätherapeutisch; perimenopausal wird unter prämenopausal subsumiert"

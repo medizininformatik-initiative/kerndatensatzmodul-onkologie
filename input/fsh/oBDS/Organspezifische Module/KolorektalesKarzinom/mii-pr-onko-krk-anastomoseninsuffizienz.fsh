@@ -5,6 +5,7 @@ Title: "MII PR Onkologie KRK Anastomoseninsuffizienz"
 Description: "Dieses Profil beschreibt die Bewertung der Anastomoseninsuffizienz nach einer Operation beim Kolorektalen Karzinom"
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert OnkoCRMIProfile
 * ^status = #active
 
 * meta.profile 0..* MS
@@ -40,6 +41,6 @@ Mapping: FHIR-oBDS-KRK-Anastomoseninsuffizienz
 Id: oBDS
 Title: "Mapping FHIR zu oBDS"
 Source: MII_PR_Onko_KRK_Anastomoseninsuffizienz
-* -> "KR-Anastomose" "Anastomoseninsuffizienz"
-* valueCodeableConcept.coding.code -> "KR-Anastomose" "Bewertung der Anastomoseninsuffizienz"
-* effectiveDateTime -> "KR-Anastomose" "Datum der Bewertung"
+* -> "KR8" "Rektumkarzinom: Anastomoseninsuffizienz"
+* valueCodeableConcept.coding.code -> "KR8" "Bewertung der Anastomoseninsuffizienz"
+* effectiveDateTime -> "KR8" "Datum der Bewertung"

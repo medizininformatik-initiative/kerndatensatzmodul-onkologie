@@ -42,6 +42,17 @@
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor|2026.0.3"
           ]
         },
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "55342001",
+                "system": "http://snomed.info/sct",
+                "display": "Neoplastic disease"
+              }
+            ]
+          }
+        ],
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
@@ -249,7 +260,7 @@
           }
         ],
         "specimen": {
-          "reference": "Specimen/exampleProstateBiopsySlide"
+          "reference": "Specimen/mii-exa-onko-prostata-specimen-stanze"
         }
       },
       "request": {
@@ -273,6 +284,11 @@
               "code": "1812491000004107",
               "system": "http://snomed.info/sct",
               "display": "Histologic grade of primary malignant neoplasm of prostate by International Society of Urological Pathology technique (observable entity)"
+            },
+            {
+              "code": "94734-1",
+              "system": "http://loinc.org",
+              "display": "Prostate cancer grade group [Score] in Prostate tumor Qualitative"
             }
           ]
         },
@@ -319,16 +335,21 @@
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-patterns|2026.0.3"
           ]
         },
-        "status": "final",
         "code": {
           "coding": [
             {
-              "code": "384994009",
               "system": "http://snomed.info/sct",
+              "code": "384994009",
               "display": "Primary Gleason pattern (observable entity)"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "44641-9",
+              "display": "Gleason pattern.primary in Prostate tumor"
             }
           ]
         },
+        "status": "final",
         "subject": {
           "reference": "Patient/mii-exa-onko-prostata-bundle-patient"
         },
@@ -363,16 +384,21 @@
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-patterns|2026.0.3"
           ]
         },
-        "status": "final",
         "code": {
           "coding": [
             {
-              "code": "384995005",
               "system": "http://snomed.info/sct",
+              "code": "384995005",
               "display": "Secondary Gleason pattern (observable entity)"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "44642-7",
+              "display": "Gleason pattern.secondary in Prostate tumor"
             }
           ]
         },
+        "status": "final",
         "subject": {
           "reference": "Patient/mii-exa-onko-prostata-bundle-patient"
         },

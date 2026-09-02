@@ -5,7 +5,7 @@ Usage: #example
 * status = #final
 * code.coding = $SCT#709491003 
 * subject = Reference(Patient/example)
-* focus = Reference (Condition/exampleOncologicCondition)
+* focus = Reference(primaertumor-example)
 
 * effectiveDateTime = "2024-01-02"
 * valueCodeableConcept.coding = $mii-cs-onko-studienteilnahme#J "Ja"

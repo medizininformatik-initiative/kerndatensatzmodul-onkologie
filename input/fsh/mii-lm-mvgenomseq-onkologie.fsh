@@ -5,6 +5,7 @@ Title: "MII LM Modellvorhaben Genomsequenzierung Onkologie"
 Description: "MII LogicalModel Modellvorhaben Genomsequenzierung Onkologie"
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert OnkoCRMILogicalModel
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/LogicalModel/mii-lm-mvgenomseq-onkologie"
 * OnkologieFall 0..* BackboneElement "Onkologie-Fall"
   * Diagnose 1..1 BackboneElement "Diagnose"
@@ -202,6 +203,7 @@ Source: MII_PR_Onko_Diagnose_Primaertumor
 Instance: mii-cm-mii-to-mvgenomseq-condition-diagnose-primaertumor
 InstanceOf: ConceptMap
 Usage: #definition
+* insert OnkoCRMIConceptMap
 * status = #draft
 * sourceCanonical = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onkologie/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
 * targetUri = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onkologie/ConceptMap/mii-lm-mvgenomseq-onkologie"

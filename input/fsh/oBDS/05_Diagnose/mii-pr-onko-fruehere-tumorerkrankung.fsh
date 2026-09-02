@@ -5,6 +5,7 @@ Title: "MII PR Onkologie Frühere Tumorerkrankung"
 Description: "Dieses Profil beschreibt frühere Tumorerkrankungen, die in der Anamnese zu einem früheren Zeitpunkt diagnostiziert/behandelt wurden. Basiert auf FHIR Condition, da historische Daten oft nur als Freitext vorliegen."
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert OnkoCRMIProfile
 * ^status = #active
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fruehere-tumorerkrankung"
 * insert Translation(^title, de-DE, Frühere Tumorerkrankung)
@@ -24,6 +25,18 @@ Description: "Dieses Profil beschreibt frühere Tumorerkrankungen, die in der An
 * encounter 0..1 MS
 * subject 1..1 MS
 * subject only Reference(Patient)
+
+// Onkologie-Kennzeichnung (User-Entscheid 2026-08-28): macht onkologische
+// Diagnosen über Condition?category suchbar. Das extensible-Kern-Binding
+// (problem-list-item/encounter-diagnosis) bleibt gewahrt - weitere Categories
+// sind zulässig (rules #open), "Onkologie" ist dort nicht abgedeckt.
+* category ^slicing.discriminator.type = #pattern
+* category ^slicing.discriminator.path = "$this"
+* category ^slicing.rules = #open
+* category contains onkologie 1..1 MS
+* category[onkologie] = $SCT#55342001 "Neoplastic disease"
+* insert Label(category[onkologie], Onkologie-Kennzeichnung, Kennzeichnet die Diagnose als onkologische Diagnose des KDS-Moduls Onkologie und macht sie über die category-Suche auffindbar)
+* insert Translation(category[onkologie] ^short, de-DE, Onkologie-Kennzeichnung)
 
 // Clinical status
 * clinicalStatus 0..1 MS
@@ -59,7 +72,9 @@ Description: "Dieses Profil beschreibt frühere Tumorerkrankungen, die in der An
 * bodySite.coding[icd-o-3].system 1.. MS
 * bodySite.coding[icd-o-3].system = $ICDO3
 * bodySite.coding[icd-o-3].code 1.. MS
-* bodySite.coding[icd-o-3].code from MII_VS_Onko_ICDO3_Topographie (required)
+// Binding auf coding-Ebene (nicht .code): Bei nacktem code kann der Validator das
+// System nicht bestimmen, sobald das VS mehrere Versions-Kanten hat (Union 2014+2019).
+* bodySite.coding[icd-o-3] from MII_VS_Onko_ICDO3_Topographie (required)
 * insert Label (bodySite.coding[icd-o-3], ICD-O-3 Topographie, Anatomische Lokalisation nach ICD-O-3)
 
 // Recorded date

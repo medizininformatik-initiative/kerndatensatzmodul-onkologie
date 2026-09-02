@@ -5,6 +5,7 @@ Description: "Modalität der Eingriffsdurchführung (Art des Eingriffs) im Rahme
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-urgency"
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert OnkoCRMIExtension
 * ^context.type = #element
 * ^context.expression = "Procedure"
 * value[x] 1..

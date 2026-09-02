@@ -5,6 +5,7 @@ Title: "MII PR Onkologie Strahlentherapie"
 Description: "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie in der Onkologie."
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert OnkoCRMIProfileUK
 * ^status = #active
 
 
@@ -39,6 +40,10 @@ Description: "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie i
 * insert Translation(performedPeriod.start ^short, de-DE, Start der Strahlentherapie)
 * insert Translation(performedPeriod.start ^definition, de-DE, Start der gesamten Strahlentherapie mit allen Einzelbestrahlungen gemäß 14.5 oBDS 2021. )
 * insert Label(performedPeriod.end, Ende der Strahlentherapie, Ende der gesamten Strahlentherapie mit allen Einzelbestrahlungen gemäß 14.6 oBDS 2021.)
+// Seeds-Konvention (oBDS 14.6): Bei Permanentstrahlern ist der Applikationstag
+// als Ende zu dokumentieren — start == end ist dann korrekt und FHIR-valide
+// (per-1 verlangt nur start <= end). DQ-Regel siehe GH #292 (beads ioj.1).
+* performedPeriod.end ^comment = "Bei Permanentstrahlern (Seeds, typischerweise interstitielle LDR-Brachytherapie) ist gemäß oBDS der Tag der Applikation als Ende zu dokumentieren — Beginn und Ende sind dann identisch."
 * insert Translation(performedPeriod.end ^short, de-DE, Ende der Strahlentherapie )
 * insert Translation(performedPeriod.end ^definition, de-DE, Ende der gesamten Strahlentherapie mit allen Einzelbestrahlungen gemäß 14.6 oBDS 2021. )
 
@@ -57,6 +62,12 @@ Description: "Strahlentherapie. Dieses Profil beschreibt eine Strahlentherapie i
 // Referenz auf Tumorboard
 * basedOn MS
 * basedOn only Reference(CarePlan)
+// agi: Tumorkonferenz typsicher referenzierbar (Muster: mii-pr-onko-befund)
+* basedOn ^slicing.discriminator.type = #type
+* basedOn ^slicing.discriminator.path = "$this.resolve()"
+* basedOn ^slicing.rules = #open
+* basedOn contains tumorkonferenz 0..1 MS
+* basedOn[tumorkonferenz] only Reference(MII_PR_Onko_Tumorkonferenz)
 
 // Referenz auf Primaerdiagnose oder andere Condition
 * reasonReference MS

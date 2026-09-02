@@ -1,0 +1,59 @@
+{
+  "resourceType": "Procedure",
+  "id": "mii-exa-onko-strahlentherapie-pci-sclc",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie|2026.0.3"
+    ]
+  },
+  "extension": [
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-intention",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "K",
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention"
+          }
+        ]
+      }
+    },
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-stellungzurop",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "S",
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-stellungzurop"
+          }
+        ]
+      }
+    }
+  ],
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "status": "completed",
+  "category": {
+    "coding": [
+      {
+        "code": "1287742003",
+        "system": "http://snomed.info/sct",
+        "display": "Radiotherapy (procedure)"
+      }
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "8-52",
+        "system": "http://fhir.de/CodeSystem/bfarm/ops",
+        "version": "2026"
+      }
+    ]
+  },
+  "performedPeriod": {
+    "start": "2026-05-04",
+    "end": "2026-05-18"
+  }
+}

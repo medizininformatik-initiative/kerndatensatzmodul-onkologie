@@ -5,6 +5,7 @@ Title: "MII PR Onkologie Ca-Befall Stanze"
 Description: "Dieses Profil beschreibt den prozentualen Befall der am stärksten befallenen Stanze einer Prostata-Biopsie oder eines Prostata-Exzisionspräparates in der Onkologie"
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert OnkoCRMIProfile
 * ^status = #active
 
 * meta.profile 0..* MS
@@ -23,7 +24,7 @@ Description: "Dieses Profil beschreibt den prozentualen Befall der am stärksten
 * specimen MS
 * specimen 0..1
 
-// P6 Anzahl der Ca-Befall Stanzen 
+// P6 Ca-Befall Stanze 
 
 
 * value[x] MS
@@ -40,13 +41,10 @@ Description: "Dieses Profil beschreibt den prozentualen Befall der am stärksten
 
 
 
-/*
-Mapping: FHIR-oBDS-Studienteilnahme
+
+Mapping: FHIR-oBDS-ProstataCaBefallStanze
 Id: oBDS
 Title: "Mapping FHIR zu oBDS"
-Source: MII_PR_Onko_Studienteilnahme
-* -> "24" "Studienteilnahme"
-*  valueCodeableConcept.coding.code -> "24.1" "Studienteilnahme Status"
-*  effectiveDateTime -> "24.2" "Studienteilnahme Datum"
-
-*/
+Source: MII_PR_Onko_Prostata_CA_Befall_Stanze
+* -> "P6" "Ca-Befall Stanze"
+* valueQuantity.value -> "P6" "Prozentualer Karzinombefall der am stärksten befallenen Stanze"

@@ -1,165 +1,137 @@
 @startuml MII_Onko_Prostata_Module
-title MII Onkologie - Prostatakarzinom Modul
+title MII Onkologie - Organmodul Prostatakarzinom (oBDS P1-P9)
+left to right direction
 skinparam defaultFontSize 16
-skinparam objectFontSize 16
+skinparam objectFontSize 15
 skinparam packageFontSize 18
 skinparam noteFontSize 14
 
-' Zentrale Diagnose
-object MII_Diagnose_Primaertumor #FFFF66 {
-    "Primärtumor Diagnose"
+' Zentrale Diagnose (oBDS Kapitel 5)
+object Diagnose_Primaertumor [[StructureDefinition-mii-pr-onko-diagnose-primaertumor.html]] #FFFF66
+Diagnose_Primaertumor : Condition, oBDS Kapitel 5
+
+' Basisprofil Operation (oBDS Kapitel 13)
+object Onko_Operation [[StructureDefinition-mii-pr-onko-operation.html]] #9999FF
+Onko_Operation : Procedure, oBDS Kapitel 13
+Onko_Operation : Basisprofil der Organmodule
+
+object Prostata_Operation [[StructureDefinition-mii-pr-onko-prostata-operation.html]] #9999FF
+Prostata_Operation : kein oBDS-Modulfeld (Kapitel 13 / OPS)
+Prostata_Operation : code.coding[sct] 1..1 required
+Prostata_Operation : VS aus SCT 118877007 Procedure on prostate
+
+package "Gleason (P1, P2)" as gleason #E8F5E8 {
+    object Gleason_Score_Gesamt [[StructureDefinition-mii-pr-onko-prostate-gleason-score-gesamt.html]] #22FF22
+    Gleason_Score_Gesamt : oBDS P1
+    Gleason_Score_Gesamt : code = SCT 372278000
+    Gleason_Score_Gesamt : valueCodeableConcept, Score 2-10
+
+    object Gleason_Pattern [[StructureDefinition-mii-pr-onko-prostate-gleason-patterns.html]] #22FF22
+    Gleason_Pattern : oBDS P1 (Komponente, keine eigene Feldnummer)
+    Gleason_Pattern : code aus VS primaer / sekundaer / tertiaer
+    Gleason_Pattern : valueCodeableConcept, Pattern 1-5
+
+    object Gleason_Grade_Group [[StructureDefinition-mii-pr-onko-prostate-gleason-grade-group.html]] #22FF22
+    Gleason_Grade_Group : oBDS P1 (ISUP-Ableitung)
+    Gleason_Grade_Group : code = SCT 1812491000004107
+    Gleason_Grade_Group : valueCodeableConcept, Grade Group 1-5
 }
 
-' PSA als zentraler Marker
-object Prostata_PSA #22FF22 {
-    oBDS_Code = P1
-    LOINC = 33747-0
-    **Observation.focus** → Diagnosis
-    valueQuantity = ng/mL
-    "PSA Messung"
+package "Stanzbiopsie (P3-P6)" as biopsie #E8F5E8 {
+    object Anzahl_Stanzen [[StructureDefinition-mii-pr-onko-prostate-anzahl-stanzen.html]] #22FF22
+    Anzahl_Stanzen : oBDS P4
+    Anzahl_Stanzen : code = LOINC 44652-6
+    Anzahl_Stanzen : valueInteger
+    Anzahl_Stanzen : effectiveDateTime = oBDS P3
+
+    object Anzahl_Positive_Stanzen [[StructureDefinition-mii-pr-onko-prostate-anzahl-positive-stanzen.html]] #22FF22
+    Anzahl_Positive_Stanzen : oBDS P5
+    Anzahl_Positive_Stanzen : code = LOINC 44651-8
+    Anzahl_Positive_Stanzen : valueInteger 1..1
+
+    object CA_Befall_Stanze [[StructureDefinition-mii-pr-onko-prostate-ca-befall-stanze.html]] #22FF22
+    CA_Befall_Stanze : oBDS P6
+    CA_Befall_Stanze : code = LOINC 44654-2
+    CA_Befall_Stanze : valueQuantity in %
 }
 
-' Zentrale Operation
-object Prostata_Operation #9999FF {
-    Base_Profile = MII_PR_Onko_Operation
-    **Procedure.reasonReference** → Diagnosis
-    code = OPS oder SNOMED CT
-    "Prostatektomie/TURP"
-}
+object PSA [[StructureDefinition-mii-pr-onko-prostate-psa.html]] #22FF22
+PSA : oBDS P7 (Wert), P8 (Datum)
+PSA : code aus VS PSA LOINC
+PSA : valueQuantity in ng/mL
+PSA : effectiveDateTime = oBDS P8
 
-' Biopsie und Pathologie-Befunde gruppieren
-package "Biopsie & Pathologie-Befunde" as biopsy #E8F5E8 {
-    object Prostata_Anzahl_Stanzen #22FF22 {
-        oBDS_Code = P4
-        **Observation.focus** → Diagnosis
-        valueQuantity = Anzahl
-        "Gesamtzahl Stanzen"
-    }
+object Clavien_Dindo [[StructureDefinition-mii-pr-onko-prostate-clavien-dindo.html]] #22FF22
+Clavien_Dindo : oBDS P9
+Clavien_Dindo : code = SCT 789279006
+Clavien_Dindo : method = SCT 789278003
+Clavien_Dindo : value coding[ClavienDindo | OBDSPostOPKompl]
 
-    object Prostata_Anzahl_Positive_Stanzen #22FF22 {
-        oBDS_Code = P5
-        **Observation.focus** → Diagnosis
-        valueQuantity = Anzahl
-        "Positive Stanzen"
-    }
+object Onko_Specimen [[StructureDefinition-mii-pr-onko-specimen.html]] #44FFFF
+Onko_Specimen : Specimen, oBDS Kapitel 6
+Onko_Specimen : Stanzen, Prostatektomie-Praeparat, TURP-Resektat
 
-    object Prostata_CA_Befall_Stanze #22FF22 {
-        oBDS_Code = P6
-        **Observation.focus** → Diagnosis
-        valueQuantity = %
-        "Tumorbefall pro Stanze"
-    }
-    
-    object Prostata_Gleason_Pattern_Primary #22FF22 {
-        oBDS_Code = P2a
-        SNOMED_CT = 384994009
-        **Observation.focus** → Diagnosis
-        valueCodeableConcept = 1-5
-        "Primäres Gleason-Muster"
-    }
+' Referenzen gemaess FSH-Profilen
+Diagnose_Primaertumor <-- Gleason_Score_Gesamt : focus
+Diagnose_Primaertumor <-- Gleason_Pattern : focus
+Diagnose_Primaertumor <-- Gleason_Grade_Group : focus
+Diagnose_Primaertumor <-- Anzahl_Stanzen : focus
+Diagnose_Primaertumor <-- Anzahl_Positive_Stanzen : focus
+Diagnose_Primaertumor <-- CA_Befall_Stanze : focus
+Diagnose_Primaertumor <-- PSA : focus
+Diagnose_Primaertumor <-- Clavien_Dindo : focus[Diagnose] 1..1
 
-    object Prostata_Gleason_Pattern_Secondary #22FF22 {
-        oBDS_Code = P2b  
-        SNOMED_CT = 384995005
-        **Observation.focus** → Diagnosis
-        valueCodeableConcept = 1-5
-        "Sekundäres Gleason-Muster"
-    }
+Prostata_Operation .down.|> Onko_Operation : Parent
+Diagnose_Primaertumor <-- Prostata_Operation : reasonReference
+Clavien_Dindo -down-> Onko_Operation : focus[Operation] 1..1
 
-    object Prostata_Gleason_Grade_Group #22FF22 {
-        oBDS_Code = P3
-        SNOMED_CT = 1812491000004107
-        **Observation.focus** → Diagnosis
-        valueCodeableConcept = Grade 1-5
-        "ISUP Grade Group"
-    }
-}
+Gleason_Score_Gesamt .down.> Onko_Specimen : specimen 0..1
+Gleason_Pattern .down.> Onko_Specimen : specimen 0..1
+CA_Befall_Stanze .down.> Onko_Specimen : specimen 0..1
+PSA .down.> Onko_Specimen : specimen 0..1
+Clavien_Dindo .down.> Onko_Specimen : specimen 0..1
 
-' Postoperative Komplikationen
-object Prostata_Clavien_Dindo #22FF22 {
-    oBDS_Code = P7
-    **Observation.focus** → Operation
-    valueCodeableConcept = Grade I-V
-    "Clavien-Dindo Klassifikation"
-}
+note bottom of gleason
+**P1 Gleason-Score**
+Drei alternative Profile:
+- Gleason_Score_Gesamt: nur Summe 2-10
+- Gleason_Pattern: primaer / sekundaer /
+  tertiaer, das Pattern ergibt sich
+  aus Observation.code
+- Gleason_Grade_Group: ISUP 1-5
 
-' Specimen-Verweis
-object "Specimen (multiple)" as specimens #44FFFF {
-    "→ Siehe Pathologie-Modul"
-    "- Biopsie-Stanzen (12+)"
-    "- Prostatektomie-Präparat"
-    "- Lymphknoten"
-    "- TURP-Resektat"
-}
+**P2 Anlass Gleason-Score** (Stanze / OP)
+hat in v2027 kein dediziertes Profil;
+Abbildung als Komponente bzw. Methode
+der Gleason-Observation.
+end note
 
-' Beziehungen
-MII_Diagnose_Primaertumor <--- Prostata_PSA : focus
-MII_Diagnose_Primaertumor <--- biopsy : focus
-MII_Diagnose_Primaertumor <--- Prostata_Operation : reasonReference
-Prostata_Operation <--- Prostata_Clavien_Dindo : focus
+note bottom of biopsie
+**P3 Datum der Stanzen**
+kein eigenes Profil: abgebildet als
+Observation.effectiveDateTime bzw.
+Specimen.collection.collectedDateTime.
+end note
 
-' Klinische Logik
-Prostata_Gleason_Pattern_Primary ..> Prostata_Gleason_Grade_Group : "kombiniert zu"
-Prostata_Gleason_Pattern_Secondary ..> Prostata_Gleason_Grade_Group : "kombiniert zu"
-Prostata_Anzahl_Stanzen ..> Prostata_Anzahl_Positive_Stanzen : "Gesamt vs. positiv"
-biopsy --> specimens : specimen
+note right of Clavien_Dindo
+**P9 Postoperative Komplikation**
+focus ist gesliced und verweist
+zwingend sowohl auf die Diagnose
+als auch auf die Operation.
+end note
 
-legend right 
-|Farbe|Typ|
+legend right
+|Color|Type|
 |<#FFFF66>|Condition|
-|<#CCCCFF>|CarePlan|
+|<#CCCCFF>|CarePlan / RequestGroup|
 |<#9999FF>|Procedure|
 |<#DDFFDD>|ServiceRequest|
 |<#88FF88>|DiagnosticReport|
 |<#22FF22>|Observation|
-|<#FFCCFF>|Medication|
+|<#FFCCFF>|MedicationStatement / MedicationRequest|
 |<#FF9999>|AdverseEvent|
 |<#44FFFF>|Specimen|
-|<#EEEEEE>|Bundle|
+|<#EEEEEE>|List / ResearchStudy|
 endlegend
-
-note right of Prostata_PSA
-**LOINC Standardisierung:**
-33747-0 für internationale
-Labor-Interoperabilität
-end note
-
-note left of Prostata_Operation
-**Zentrale Operation:**
-- Radikale Prostatektomie
-- Transurethrale Resektion
-- Andere urologische Eingriffe
-
-Verbindet Komplikationen mit
-der onkologischen Diagnose
-end note
-
-note bottom of biopsy
-**Biopsie & Pathologie-Dokumentation:**
-- Gesamtzahl der Stanzen
-- Anzahl positiver Stanzen  
-- Prozentualer Tumorbefall
-- Gleason-Muster (primär/sekundär)
-- ISUP Grade Group (2014)
-→ Komplette histopathologische Bewertung
-end note
-
-note right of Prostata_Clavien_Dindo
-**Chirurgische Qualitätsmetrik:**
-Standardisierte Komplikations-
-klassifikation für internationales
-Benchmarking
-
-Fokus auf Operation, indirekt
-zur onkologischen Diagnose
-end note
-
-note bottom of specimens
-**Specimen-Verwaltung:**
-Prostatakarzinom erfordert
-multiple Specimen-Ressourcen.
-Detaillierte Modellierung im
-Pathologie-Modul.
-end note
 
 @enduml

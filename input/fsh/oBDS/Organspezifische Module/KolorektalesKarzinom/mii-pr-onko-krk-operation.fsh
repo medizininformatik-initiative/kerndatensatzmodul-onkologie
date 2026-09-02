@@ -5,6 +5,7 @@ Title: "MII PR Onkologie Präoperative Drahtmarkierung Mamma"
 Description: "Das vorliegende Profil beschreibt eine radiologisch durchgeführte Markierung von Tumorgewebe mittels  der Brust. Dabei können verschiedene Methoden gewählt werden. Die  "
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert OnkoCRMIProfileUK
 * ^status = #active
 
 * meta.profile 0..* MS
@@ -35,13 +36,10 @@ Description: "Das vorliegende Profil beschreibt eine radiologisch durchgeführte
 * usedCode.coding ^slicing.description = "Slicing für die intraoperative Verwendung von z.B. Drahtmarkierungen, Markierungsclips oder Seed-Markierungen"
 
 
-/*
-Mapping: FHIR-oBDS-Studienteilnahme
-Id: oBDS
-Title: "Mapping FHIR zu oBDS"
-Source: MII_PR_Onko_Studienteilnahme
-* -> "24" "Studienteilnahme"
-*  valueCodeableConcept.coding.code -> "24.1" "Studienteilnahme Status"
-*  effectiveDateTime -> "24.2" "Studienteilnahme Datum"
 
-*/
+Mapping: FHIR-oBDS-KRK-Operation
+Id: oBDS-Organ
+Title: "Mapping FHIR zu oBDS (organspezifisches Zusatzmodul)"
+Source: MII_PR_Onko_KRK_Operation
+* -> "KR6" "Art des Eingriffs"
+* code.coding -> "KR6" "Art des kolorektalen Eingriffs (OPS/SNOMED CT)"

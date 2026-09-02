@@ -8,6 +8,7 @@ Description: "Value Set für Prostata-spezifisches Antigen (PSA) LOINC Codes. En
 * ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert OnkoCRMIValueSet
 
 * $LNC#2857-1 //"Prostate specific Ag [Mass/volume] in Serum or Plasma"
 * $LNC#10886-0 //"Prostate Specific Ag Free [Mass/volume] in Serum or Plasma"

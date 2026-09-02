@@ -1,14 +1,16 @@
 Instance: mii-cm-onko-residualstatus-uicc-sct
 InstanceOf: ConceptMap
 Usage: #definition
+* insert OnkoCRMIConceptMap
 * insert Version
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-residualstatus-uicc-sct"
 * name = "MII CM Onko Residualstatus UICC SCT Mapping"
 * title = "MII CM Onko Residualstatus UICC SNOMED"
 * status = #active
-* experimental = false
+* insert SNOMEDCopyrightForInstance
+* experimental = true
 * date = "2024-01-05"
-* description = "Mapping Residualstatus UICC Codes zu SNOMED-CT"
+* description = "Mapping Residualstatus UICC Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich."
 
 * group.source = "https://www.uicc.org/resources/r-classification" 
 * group.target = "http://snomed.info/sct/900000000000207008/version/20240401"

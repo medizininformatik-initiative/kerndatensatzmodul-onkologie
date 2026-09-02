@@ -5,6 +5,7 @@ Title: "MII PR Onkologie Melanom Breslow Tiefe"
 Description: "Dieses Profil beschreibt die Breslow-Tumordicke beim Malignen Melanom der Haut"
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert OnkoCRMIProfile
 * ^status = #active
 
 * meta.profile 0..* MS
@@ -54,6 +55,6 @@ Mapping: FHIR-oBDS-Melanom-Breslow-Tiefe
 Id: oBDS
 Title: "Mapping FHIR zu oBDS"
 Source: MII_PR_Onko_Melanom_Breslow_Tiefe
-* -> "Breslow" "Breslow-Tumordicke"
-* valueQuantity.value -> "Breslow" "Breslow-Tumordicke in mm"
-* effectiveDateTime -> "Breslow" "Datum der histopathologischen Untersuchung"
+* -> "MM2" "Tumordicke (Breslow)"
+* valueQuantity.value -> "MM2" "Tumordicke nach Breslow in mm"
+* effectiveDateTime -> "MM2" "Datum der histopathologischen Untersuchung"

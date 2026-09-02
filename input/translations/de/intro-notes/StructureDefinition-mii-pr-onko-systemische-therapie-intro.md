@@ -1,0 +1,81 @@
+Dieses Profil beschreibt eine systemische oder abwartende Therapie in der Onkologie.
+
+### Beschreibung
+
+Im oBDS werden mehrere klinische Konzepte innerhalb der Systemische Therapie abbgebildet
+* Systemische Therapien
+    * Chemotherapie
+    * Immuntherapie
+    * Targeted Therapy
+    * Kombinationstherapien der oben genannten Therapien
+    * Hormontherapie
+    * Stammzell- und Knochenmarkstransplantation
+* Abwartende Therapien
+    * Watchful Waiting
+    * Active Surveillance
+    * Wait and see
+
+Zu diesen einzelnen Therapien werden im oBDS weitere Datenelemente erfasst und hier abgebildet, darunter:
+- Start und Endezeitpunkt der Therapie
+- Zusammenhang zur OP und Intention der Therapie
+- der Grund der Beendigung (unabhängig ob erfolgreich oder nicht erfolgreich)
+- das verwendete Therapieprotokoll mit Substanzkombinationen (gemäß oBDS Umsetzungsleitfaden).
+
+#### Kategorie
+- Die verwendete MII-Prozedur empfiehlt die Abbildung der **Kategorie** mittels der in SNOMED übertragenen OPS-Hauptkategorien (https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/ValueSet/procedures-category-sct)
+- Die vorliegende Kategorie SNOMED `277132007 | Therapeutic procedure` , die der OPS Kategorie 8 ("Nicht-operative therapeutische Maßnahmen") entspricht, beinhaltet sowohl Strahlen - als auch Nuklearmedizinische Therapie als auch bestimmte systemische Therapien (z.B. Chemo- und Immuntherapie), wobei andere systemische medikamtöse Therapien (z.B. Hormontherapie, Targeted Therapy) auch unter Kategorie 6 "Medikamente" kodiert werden können. Er ist daher unspezifisch und nicht geeignet, um z.B. innerhalb einer Forschungsfrage gezielt nach Nuklearmedizinischen Therapien zu filtern.
+
+#### Code
+- Als **Code** wird von der MII-Prozedur ein OPS-Code oder ein SNOMED-Code verlangt.
+- Die medikationsbasierten systemischen Therapien werden je nach Art der Therapie durch unterschiedlichen OPS-Kategorien kodiert.
+- Für die abwartenden Therapien sind keine OPS-Codes im aktuellen Katalog hinterlegt.
+- In der MII-Prozedur SOLL genau eine Kodierung (OPS oder SNOMED CT) für genau eine Therapie verwendet werden. Zusätzliche Prozeduren werden als einzelne Procedure-Ressourcen abgebildet.
+
+#### Therapieprotokoll
+- Als **usedCode** werden die spezifischen Therapieprotokolle dokumentiert, die in der systemischen Therapie verwendet werden.
+- Die Protokolle basieren auf dem [oBDS Umsetzungsleitfaden](https://plattform65c.atlassian.net/wiki/spaces/UMK/pages/15532385/Systemische+Therapie+SYST+Protokolle) und enthalten standardisierte Substanzkombinationen.
+- Jedes Protokoll ist mit seiner charakteristischen Bezeichnung (z.B. "FOLFOX", "R-CHOP", "AC") und den enthaltenen Wirkstoffen dokumentiert.
+- Die Kodierung erfolgt über das **MII CodeSystem Systemische Therapie Protokolle**, das alle gängigen onkologischen Therapieprotokolle umfasst.
+- Nicht enthaltene Protokolle können trotzdem dokumentiert werden - hier ist jedoch eine Harmonisierung über die Standorte entscheidend. Neue Protokolle sind daher bitte unter [GitHub Issues](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues) einzureichen.
+- **Führendes Element für oBDS 16.4:** Das Protokoll wird führend an der Therapie-Klammer dokumentiert (`Procedure.usedCode`, extensible an das Protokoll-ValueSet gebunden). Die zusätzliche Freitext-Angabe unter `MedicationStatement.note.text` der einzelnen Wirkstoff-Ressourcen dient ausschließlich der Zuordnung der Einzelwirkstoffe zu ihrem Schema (z.B. bei Kombinationstherapien) und ist keine eigenständige zweite Kodierung.
+
+#### Implementierungsempfehlung
+Aus den oben genannten Punkten ergibt sich folgende Kodierempfehlung für die Systemische / abwartende Therapie aus dem oBDS:
+- Kategorie als SNOMED - Code
+    - Kategorie für Systemische Therapien `18629005 | Administration of drug or medicament (procedure)`
+    - Kategorie für Abwartende Therapien : keine (kein geeignetes Parent-Konzept, Suche direkt über Kodierung empfohlen)
+- Kodierung
+    - Systemische Therapie über OPS wie folgt. Es ist zu beachten, dass der exakte Wirkstoff mittels ATC als Teil der MedicationStatment-Ressource kodiert wird. Eine zusätzliche Dokumentation der Medikation über
+        - Chemotherapie über OPS `8-54` oder spezifischer
+        - Immuntherapie über OPS `8-54` oder spezifischer (Zusatzangabe von )
+        - Stammzelltherapie über OPS `8-86` oder spezifischer
+        - Hormontherapie über OPS `6-xxx.y` (bsw.`6-009.0` für Olaparib, oral bei Prostatakarzinom)
+    - Abwartende Therapie über SNOMED-CT wie folgt
+        - Watchful Waiting: SNOMED-CT `373818007 | No anti-cancer treatment - watchful waiting (finding)`
+        - Active Surveillance: SNOMED-CT `424313000 | Active surveillance (regime/therapy)`
+        - Wait and see: SNOMED-CT `310341009 | Follow-up (wait and see) (finding)`
+
+---
+
+### Konformität
+Die vorliegende Profilierung ist kompatibel mit dem Prozedurenprofil der ISiK-Basismodule Stufe 4. https://simplifier.net/isik-basis-v4/isikprozedur
+
+---
+
+Mapping Datensatz zu FHIR
+
+<!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Systemische-Therapie/Systemische-Therapie-Procedure.page.md gate=B -->
+> Die Zuordnung der Datensatzfelder ist im logischen Modell dokumentiert: [MII LM Onkologie](StructureDefinition-mii-lm-onko.html).
+{: .ig-highlight .ig-highlight-grey}
+
+---
+
+Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensatz.de/basisdatensatz) zu FHIR
+
+<!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Systemische-Therapie/Systemische-Therapie-Procedure.page.md gate=B -->
+> Die oBDS-Mappings sind in der Artefaktdarstellung des Profils hinterlegt: [MII PR Onkologie Systemische Therapie](StructureDefinition-mii-pr-onko-systemische-therapie.html).
+{: .ig-highlight .ig-highlight-grey}
+
+**Beispiele**
+
+[mii-exa-onko-systemische-therapie-1](Procedure-mii-exa-onko-systemische-therapie-1.html)

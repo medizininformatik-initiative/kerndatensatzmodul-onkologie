@@ -5,6 +5,7 @@ Title: "MII PR Onkologie Residualstatus"
 Description: "Umfang eines Residualtumors nach einer Therapie"
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert OnkoCRMIProfile
 * ^status = #active
 
 * meta.profile 0..* MS
@@ -17,6 +18,7 @@ Description: "Umfang eines Residualtumors nach einer Therapie"
 // Referenz auf Procedure/ Operation, die Specimen erzeugt (Biopsie, Exzision) 
 * partOf MS
 * partOf 0..1
+* partOf only Reference(MII_PR_Onko_Operation)
 
 // Referenz zu Primärtumor
 * focus MS

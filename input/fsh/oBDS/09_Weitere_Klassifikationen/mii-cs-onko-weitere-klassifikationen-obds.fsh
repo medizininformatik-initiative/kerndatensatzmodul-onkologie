@@ -3,9 +3,10 @@ Id: mii-cs-onko-weitere-klassifikationen-obds
 Title: "MII CodeSystem Onkologie - Weitere Klassifikationen oBDS"
 Description: "oBDS-specific classification systems and scoring systems not yet covered by international terminologies (SNOMED CT, NCI Thesaurus). These codes supplement the existing ValueSet for additional classifications. Research required: Check if SNOMED CT or LOINC codes exist for these scoring systems before using oBDS-specific codes."
 * ^status = #active
-* ^experimental = true
+* ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert OnkoCRMICodeSystem
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "https://www.medizininformatik-initiative.de"
 
@@ -153,6 +154,50 @@ Description: "oBDS-specific classification systems and scoring systems not yet c
   * #durie-salmon-iii "Durie-Salmon III" "High tumor burden: hemoglobin <8.5 g/dL, calcium elevated, extensive bone lesions"
   * #durie-salmon-iiia "Durie-Salmon IIIA" "High tumor burden with normal renal function"
   * #durie-salmon-iiib "Durie-Salmon IIIB" "High tumor burden with abnormal renal function"
+
+// FIGO Staging System - gynecological malignancies
+// Union of the substages used by the entity-specific FIGO systems (ovary/fallopian tube/peritoneum,
+// endometrium, cervix, vulva, vagina, uterine sarcoma, gestational trophoblastic neoplasia) across
+// current and historical FIGO revisions, as reported to German cancer registries.
+// The entity and the FIGO revision are conveyed via Observation.method / Observation.code.
+* #figo "FIGO" "Staging system of the International Federation of Gynecology and Obstetrics (FIGO) for gynecological malignancies."
+  * #figo-i "FIGO I" "Tumor confined to the organ of origin"
+  * #figo-ia "FIGO IA" "Stage I with limited local extent (entity-specific definition)"
+  * #figo-ia1 "FIGO IA1" "Stage IA, subgroup 1 (e.g. cervix: measured stromal invasion <3 mm)"
+  * #figo-ia2 "FIGO IA2" "Stage IA, subgroup 2 (e.g. cervix: measured stromal invasion 3 to <5 mm)"
+  * #figo-ia3 "FIGO IA3" "Stage IA, subgroup 3 (entity-specific definition)"
+  * #figo-ib "FIGO IB" "Stage I with extended local extent (entity-specific definition)"
+  * #figo-ib1 "FIGO IB1" "Stage IB, subgroup 1 (e.g. cervix: invasive carcinoma <2 cm)"
+  * #figo-ib2 "FIGO IB2" "Stage IB, subgroup 2 (e.g. cervix: invasive carcinoma 2 to <4 cm)"
+  * #figo-ib3 "FIGO IB3" "Stage IB, subgroup 3 (e.g. cervix: invasive carcinoma 4 cm or larger)"
+  * #figo-ic "FIGO IC" "Stage I with capsule rupture, surface involvement or malignant ascites"
+  * #figo-ic1 "FIGO IC1" "Stage IC due to intraoperative surgical spill"
+  * #figo-ic2 "FIGO IC2" "Stage IC due to preoperative capsule rupture or surface tumor"
+  * #figo-ic3 "FIGO IC3" "Stage IC due to malignant cells in ascites or peritoneal washings"
+  * #figo-ii "FIGO II" "Tumor extending beyond the organ of origin within the pelvis"
+  * #figo-iia "FIGO IIA" "Stage II with limited extension (entity-specific definition)"
+  * #figo-iia1 "FIGO IIA1" "Stage IIA, subgroup 1 (e.g. cervix: lesion <4 cm)"
+  * #figo-iia2 "FIGO IIA2" "Stage IIA, subgroup 2 (e.g. cervix: lesion 4 cm or larger)"
+  * #figo-iib "FIGO IIB" "Stage II with extended extension (entity-specific definition)"
+  * #figo-iic "FIGO IIC" "Stage II with capsule rupture, surface involvement or malignant ascites (historical FIGO revisions)"
+  * #figo-iii "FIGO III" "Tumor with extrapelvic peritoneal spread and/or regional lymph node involvement"
+  * #figo-iiia "FIGO IIIA" "Stage III with microscopic or limited extrapelvic spread (entity-specific definition)"
+  * #figo-iiia1 "FIGO IIIA1" "Stage III with retroperitoneal lymph node metastasis only"
+  * #figo-iiia1i "FIGO IIIA1(i)" "Stage IIIA1 with lymph node metastasis 10 mm or smaller"
+  * #figo-iiia1ii "FIGO IIIA1(ii)" "Stage IIIA1 with lymph node metastasis larger than 10 mm"
+  * #figo-iiia2 "FIGO IIIA2" "Stage III with microscopic extrapelvic peritoneal involvement"
+  * #figo-iiib "FIGO IIIB" "Stage III with macroscopic extrapelvic peritoneal metastasis 2 cm or smaller"
+  * #figo-iiic "FIGO IIIC" "Stage III with macroscopic extrapelvic peritoneal metastasis larger than 2 cm and/or regional lymph node metastasis"
+  * #figo-iiic1 "FIGO IIIC1" "Stage III with pelvic lymph node metastasis"
+  * #figo-iiic1r "FIGO IIIC1r" "Stage IIIC1 established by imaging"
+  * #figo-iiic1p "FIGO IIIC1p" "Stage IIIC1 established by pathology"
+  * #figo-iiic2 "FIGO IIIC2" "Stage III with para-aortic lymph node metastasis"
+  * #figo-iiic2r "FIGO IIIC2r" "Stage IIIC2 established by imaging"
+  * #figo-iiic2p "FIGO IIIC2p" "Stage IIIC2 established by pathology"
+  * #figo-iv "FIGO IV" "Distant metastasis beyond the peritoneal cavity"
+  * #figo-iva "FIGO IVA" "Stage IV with spread to adjacent pelvic organs or pleural effusion with positive cytology (entity-specific definition)"
+  * #figo-ivb "FIGO IVB" "Stage IV with distant metastasis including extra-abdominal organs and lymph nodes"
+  * #figo-ivc "FIGO IVC" "Stage IV with distant metastasis (entity-specific definition)"
 
 // Bismuth Classification
 * #bismuth "Bismuth" "Classification system for hilar cholangiocarcinoma based on the extent of biliary involvement and resectability."

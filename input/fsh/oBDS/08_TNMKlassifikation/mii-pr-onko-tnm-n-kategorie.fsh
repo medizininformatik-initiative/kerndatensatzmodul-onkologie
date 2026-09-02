@@ -5,7 +5,9 @@ Title: "MII PR Onkologie TNM N-Kategorie"
 Description: "TNM-Klassifikation: TNM N-Kategorie. Ausbreitung von regionären Lymphknotenmetastasen, erfolgt gemäß Tumorentität nach TNM."
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert OnkoCRMIProfile
 * ^status = #active
+* obeys tnm-sct-uicc-konsistenz
 * meta.profile 0..* MS
 * encounter 0..1 MS
 
@@ -19,6 +21,18 @@ Description: "TNM-Klassifikation: TNM N-Kategorie. Ausbreitung von regionären L
 * code from MII_VS_Onko_TNM_N_Kategorie (preferred)
 * code.coding.code 1.. MS
 * code.coding.system 1.. MS
+
+// UICC-Präfixe y/r/a als modifierExtension: sie verändern die Interpretation des
+// Kategorie-Wertes (ypT2 ist nicht mit pT2 vergleichbar, rT beurteilt das Rezidiv,
+// aT wurde erst bei Autopsie festgestellt) — siehe Extension-Definitionen.
+* modifierExtension contains
+    MII_EX_Onko_TNM_y_Praefix named yPraefix 0..1 MS and
+    MII_EX_Onko_TNM_r_Praefix named rPraefix 0..1 MS and
+    MII_EX_Onko_TNM_a_Praefix named aPraefix 0..1 MS
+* modifierExtension[yPraefix] ^short = "TNM y-Präfix (während/nach multimodaler Therapie)"
+* modifierExtension[rPraefix] ^short = "TNM r-Präfix (Rezidiv)"
+* modifierExtension[aPraefix] ^short = "TNM a-Präfix (Autopsie)"
+
 * subject 1..1 MS
 * subject only Reference(Patient)
 * effective[x] MS
@@ -46,14 +60,25 @@ Description: "TNM-Klassifikation: TNM N-Kategorie. Ausbreitung von regionären L
     MII_EX_Onko_TNM_SN_Suffix named snSuffix 0..1 MS
 * valueCodeableConcept.extension[MII_EX_Onko_TNM_ITC_Suffix] ^short = "isolierte Tumorzellen (ITC) Suffix"
 * valueCodeableConcept.extension[MII_EX_Onko_TNM_SN_Suffix] ^short = "Schildwächterlymphknoten (Sentinel Lymph Node) Suffix"
-* valueCodeableConcept from MII_VS_Onko_TNM_N_Kategorie_Werte (required)
+* valueCodeableConcept.coding ^slicing.discriminator.type = #pattern
+* valueCodeableConcept.coding ^slicing.discriminator.path = "$this"
+* valueCodeableConcept.coding ^slicing.rules = #open
 * valueCodeableConcept.coding ^short = "TNM N-Kategorie"
 * valueCodeableConcept.coding ^definition = "Ausbreitung von regionären Lymphknotenmetastasen, erfolgt gemäß Tumorentität nach TNM."
 * valueCodeableConcept.coding ^comment = "Entitätsspezifisch, siehe auch allgemeine Bemerkungen zu TNM."
-* valueCodeableConcept.coding.code 1.. MS
-* valueCodeableConcept.coding.system 1.. MS
 * insert Translation(valueCodeableConcept.coding ^short, de-DE, TNM N-Kategorie )
 * insert Translation(valueCodeableConcept.coding ^definition, de-DE, TNM Lymphknotenbefall nach 8.11 oBDS 2021 )
+* valueCodeableConcept.coding contains
+    uicc 1..1 MS and
+    snomed-ct 0..1 MS
+* valueCodeableConcept.coding[uicc] from MII_VS_Onko_TNM_N_Kategorie_Werte (required)
+* valueCodeableConcept.coding[uicc].system 1.. MS
+* valueCodeableConcept.coding[uicc].system = $UICC
+* valueCodeableConcept.coding[uicc].code 1.. MS
+* valueCodeableConcept.coding[snomed-ct] from MII_VS_Onko_TNM_N_Kategorie_Werte_SCT (required)
+* valueCodeableConcept.coding[snomed-ct].system 1.. MS
+* valueCodeableConcept.coding[snomed-ct].system = $SCT
+* valueCodeableConcept.coding[snomed-ct].code 1.. MS
 
 
 
@@ -70,3 +95,6 @@ Source: MII_PR_Onko_TNM_N_Kategorie
 * effectiveDateTime -> "8.1" "TNM Datum"
 * code.extension[MII_EX_Onko_TNM_cp_Praefix].valueCodeableConcept.coding.code -> "8.7" "TNM c/p-Präfix N"
 * valueCodeableConcept.coding.code -> "8.11" "TNM N-Kategorie"
+* modifierExtension[yPraefix].valueCodeableConcept.coding.code -> "8.3" "TNM y-Symbol"
+* modifierExtension[rPraefix].valueCodeableConcept.coding.code -> "8.4" "TNM r-Symbol"
+* modifierExtension[aPraefix].valueCodeableConcept.coding.code -> "8.5" "TNM a-Symbol"

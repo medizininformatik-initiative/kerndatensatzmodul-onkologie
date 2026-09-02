@@ -8,6 +8,8 @@ Description: "Codes für Codes zur Differenzierung der TNM M-Kategorie als entwe
 * ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert OnkoCRMIValueSet
+* insert SNOMEDCopyrightForVS
 * $SCT#277208005 "M category (observable entity)"
 * $SCT#399387003 "cM category (observable entity)"
 * $SCT#371497001 "pM category (observable entity)"

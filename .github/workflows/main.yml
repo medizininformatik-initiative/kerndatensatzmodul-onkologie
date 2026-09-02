@@ -134,6 +134,10 @@ jobs:
           RESOURCE_COUNT=$(ls -1 fsh-generated/resources/*.json 2>/dev/null | wc -l)
           echo "Resources to validate: $RESOURCE_COUNT"
 
+          # Hinweis: -output/-html-output kommen aus vars.JAVA_VALIDATION_OPTIONS.
+          # Crasht der Validator, bleiben die committeten QA-Dateien (validation.json/.html)
+          # unverändert im Workspace und werden als stale Artefakt hochgeladen — Artefakt-MD5
+          # gegen den Repo-Stand prüfen, bevor man Ergebnissen traut (vgl. Vorfall 2026-02..08).
           java -jar validator_cli.jar \
             fsh-generated/resources/*.json \
             -version 4.0 \

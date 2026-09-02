@@ -5,6 +5,7 @@ Title: "MII PR Onkologie KRK MRT/CT Abstand Mesorektale Faszie"
 Description: "Dieses Profil beschreibt den Abstand des Tumors zur mesorektalen Faszie bei MRT oder Dünnschicht-CT Untersuchung beim Kolorektalen Karzinom (oBDS KR5)"
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert OnkoCRMIProfile
 * ^status = #active
 
 * meta.profile 0..* MS
@@ -20,7 +21,7 @@ Description: "Dieses Profil beschreibt den Abstand des Tumors zur mesorektalen F
 * code 1..1 
 * code ^definition = "Abstand des Tumors zur mesorektalen Faszie bei MRT oder Dünnschicht-CT, gemäß oBDS 2021 KR5"
 * code ^short = "MRT/CT Abstand mesorektale Faszie"
-* code.coding = $RADLEX#RDE96 "Distance to MRF" 
+* code.coding = $RADELEMENT#RDE96 "Distance to MRF"
 // mikroskopisch 
 
 * value[x] MS
@@ -45,7 +46,7 @@ Description: "Dieses Profil beschreibt den Abstand des Tumors zur mesorektalen F
 * insert Translation(valueCodeableConcept ^short, de-DE, MRT/CT Status)
 * insert Translation(valueCodeableConcept ^definition, de-DE, Status der MRT/CT Untersuchung gemäß oBDS 2021 KR5)
 
-// P3 Datum der Stanzen
+// Datum der MRT/CT Untersuchung
 * effective[x] only dateTime
 * effectiveDateTime 0..1 MS
 * insert Label(effectiveDateTime, Datum MRT/CT, Datum der MRT/CT Untersuchung)

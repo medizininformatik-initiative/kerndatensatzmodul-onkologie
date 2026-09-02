@@ -1,6 +1,6 @@
 ---
 parent: 
-topic: StrahlentherapieProcedure
+topic: SystemischeTherapieProcedure
 subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie
 ---
 

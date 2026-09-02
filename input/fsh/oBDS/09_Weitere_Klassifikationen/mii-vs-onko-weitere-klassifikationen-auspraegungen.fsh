@@ -3,9 +3,11 @@ Id: mii-vs-onko-weitere-klassifikationen-auspraegungen
 Title: "MII Value Set Onkologie - Weitere Klassifikationen - Auspraegungen"
 Description: "Comprehensive collection of cancer staging systems and classification schemes used in oncology beyond TNM classification. This includes AJCC, FIGO, hematological classifications, and specialized organ-specific systems. Based on mCODE STU4 and German oBDS catalogue. Covers entity-specific classifications (e.g., FIGO for gynecological tumors), hematological classifications, and WHO classifications for CNS tumors."
 * ^status = #active
-* ^experimental = true
+* ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
+* insert OnkoCRMIValueSet
+* insert SNOMEDCopyrightForVS
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "https://www.medizininformatik-initiative.de"
 
@@ -18,6 +20,7 @@ Description: "Comprehensive collection of cancer staging systems and classificat
 * include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept is-a #formen
 * include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept is-a #eln-klassifikation
 * include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept is-a #durie-salmon-stadium
+* include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept is-a #figo
 * include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept is-a #bismuth
 * include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept is-a #masaoka
 * include codes from system $mii-cs-onko-weitere-klassifikationen-obds where concept is-a #mitoserate-gist

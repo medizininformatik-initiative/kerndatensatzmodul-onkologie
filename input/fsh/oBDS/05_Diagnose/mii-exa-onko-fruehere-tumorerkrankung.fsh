@@ -31,7 +31,7 @@ Description: "Beispiel einer früheren Tumorerkrankung (Mammakarzinom links) aus
 * code.coding[icd10-gm].display = "Bösartige Neubildung: Brustdrüse, nicht näher bezeichnet"
 * code.text = "Mamma-Ca, links"
 * bodySite.coding[icd-o-3].system = $ICDO3
-* bodySite.coding[icd-o-3].code = #C50.9
+* bodySite.coding[icd-o-3] = $ICDO3#C50.9 "Brustdrüse o.n.A."
 * bodySite.coding[icd-o-3].display = "Brust o.n.A."
 * subject = Reference(Patient/example)
 * extension[assertedDate].valueDateTime = "2013"
@@ -54,7 +54,7 @@ Description: "Beispiel einer früheren Tumorerkrankung (Prostatakarzinom) aus de
 * code.coding[icd10-gm].display = "Bösartige Neubildung der Prostata"
 * code.text = "Prostatakarzinom"
 * bodySite.coding[icd-o-3].system = $ICDO3
-* bodySite.coding[icd-o-3].code = #C61.9
+* bodySite.coding[icd-o-3] = $ICDO3#C61.9 "Prostata o.n.A."
 * bodySite.coding[icd-o-3].display = "Prostata"
 * subject = Reference(Patient/example)
 * extension[assertedDate].valueDateTime = "2018-03-15"
