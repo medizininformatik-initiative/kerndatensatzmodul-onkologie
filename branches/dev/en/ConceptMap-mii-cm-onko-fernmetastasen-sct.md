@@ -150,7 +150,7 @@ Fernmetastasen STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT Internati
   "title" : "Fernmetastasen Mapping",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-09-03T12:57:16+00:00",
+  "date" : "2026-09-03T15:50:39+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

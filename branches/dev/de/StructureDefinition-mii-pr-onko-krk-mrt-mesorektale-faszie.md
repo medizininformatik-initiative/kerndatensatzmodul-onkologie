@@ -291,7 +291,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "name" : "MII_PR_Onko_KRK_MRT_Mesorektale_Faszie",
   "title" : "MII PR Onkologie KRK MRT/CT Abstand Mesorektale Faszie",
   "status" : "active",
-  "date" : "2026-09-03T12:57:16+00:00",
+  "date" : "2026-09-03T15:50:39+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
