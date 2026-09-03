@@ -171,7 +171,7 @@ Value Set für semantische Kodierung des oBDS-Status der MRT/CT Untersuchung zur
   "title" : "MII VS Onkologie KRK MRT Mesorektale Faszie Status",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-03T16:38:13+00:00",
+  "date" : "2026-09-03T19:21:23+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
