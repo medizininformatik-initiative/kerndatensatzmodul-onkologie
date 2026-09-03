@@ -346,9 +346,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
      module-specific aspects. Stages 1 and 2 are static overarching content —
      keep them; stage 3 is where your module writes. Stage 3's CONTENT is
      optional: a module with no aspects of its own adopts the default text in
-     the section. The Person example box is illustrative only and MUST be
-     removed before the first release (ILLUSTRATIVE-EXAMPLE marker, convention
-     check M11).
+     the section. Oncology does not: stage 3 states the module's own aspects
+     (germline findings affecting third parties, identifying variant profiles,
+     re-identification via rare entities).
      German mirror: input/translations/de/pagecontent/security-and-privacy.md —
      both files must say the same thing. -->
 
@@ -398,25 +398,40 @@ data category that raises security or privacy aspects of its own, and it
 places no module-specific security or privacy requirements on implementers.</p>
 </blockquote>
 
-<!-- ILLUSTRATIVE-EXAMPLE — decide this section and remove the example box
-     below (in this file AND the German mirror) before the first release;
-     the convention check (M11) fails a release branch while it is present. -->
-<blockquote class="ig-highlight ig-highlight-orange">
-  <p><strong>Illustrative example — remove before the first release.</strong> How another KDS
-module fills this section (<em>Person</em>): the patient identifiers are pseudonyms
-from the trusted third party; systems must not let record linkage
-re-identify a person, and the pseudonym's scope (site-wide vs
-project-specific) must be respected when data is combined.</p>
-</blockquote>
+<p>This module carries data categories that require consideration beyond the
+overarching framework:</p>
 
-<blockquote class="ig-highlight ig-highlight-grey">
-  <p>[TODO: State your module's specific aspects — the data categories it carries
-and their sensitivity, risks that profile-level pseudonymisation does not
-cover, and any security- or privacy-related SHALL/SHOULD/MAY requirements
-this module places on implementers, each with the risk it addresses. Name
-residual risks that must be handled in system design, deployment or policy —
-or adopt the default text above if there are none.]</p>
-</blockquote>
+<ul>
+  <li><strong>Germline findings affecting third parties.</strong> Predisposition syndromes
+(<a href="ValueSet-mii-vs-onko-praedispositionssyndrome-orpha.html">ORPHA</a>) and
+predisposition genes (<a href="ValueSet-mii-vs-onko-praedispositionsgene-hgnc.html">HGNC</a>)
+are statements about germline variants. They concern blood relatives who never
+consented to the data use. Pseudonymisation at profile level does not protect
+those third parties.</li>
+  <li><strong>Genetic variants are identifying in themselves.</strong> A sufficiently specific
+variant profile
+(<a href="StructureDefinition-mii-pr-onko-genetische-variante.html">Genetic variant</a>)
+remains traceable even after pseudonymisation. The risk lies in the datum
+itself, not in the linkage.</li>
+  <li><strong>Re-identification via rare entities.</strong> The combination of a rare tumour
+entity (ICD-O-3 morphology), age and region can converge on an individual in
+small cohorts without any identifier being involved.</li>
+  <li><strong>Death data</strong> (oBDS chapter 20) and study participation (chapter 24) connect
+this module to further contexts.</li>
+</ul>
+
+<p>This yields requirements for implementers:</p>
+
+<ul>
+  <li>Systems <strong>SHOULD</strong> subject germline and predisposition findings to a separate
+access decision rather than releasing them together with the remaining
+oncological dataset.</li>
+  <li>Analyses over rare entities <strong>SHOULD</strong> be checked for cell sizes before
+release; the profiles of this module do not do this.</li>
+  <li>These risks are <strong>not</strong> solvable at profile level. They must be addressed in
+system design, in operations and through data use policies — this module
+describes the structure of the data, not the conditions of its use.</li>
+</ul>
 
 
 
@@ -443,7 +458,7 @@ or adopt the default text above if there are none.]</p>
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.onkologie#2027.0.0-ballot.rc1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Thu, Sep 3, 2026 08:25+0000">2026-09-03</span>
+          Generated <span title="Thu, Sep 3, 2026 09:17+0000">2026-09-03</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

@@ -375,28 +375,40 @@ Datenschutzaspekte aufwirft, und stellt keine modulspezifischen Sicherheits-
 oder Datenschutzanforderungen an Implementierende.</p>
 </blockquote>
 
-<!-- ILLUSTRATIVE-EXAMPLE — Abschnitt entscheiden und die Beispiel-Box unten
-     (in dieser Datei UND der englischen Quellseite) vor dem ersten Release
-     entfernen; der Konventions-Check (M11) lässt einen Release-Branch damit
-     fehlschlagen. -->
-<blockquote class="ig-highlight ig-highlight-orange">
-  <p><strong>Illustratives Beispiel — vor dem ersten Release entfernen.</strong> So füllt ein
-anderes KDS-Modul diesen Abschnitt (<em>Person</em>): die Patienten-Identifikatoren
-sind Pseudonyme der Treuhandstelle; Systeme dürfen ein Record Linkage nicht
-zur Re-Identifizierung führen lassen, und der Geltungsbereich eines
-Pseudonyms (standortweit vs. projektspezifisch) ist beim Zusammenführen von
-Daten zu respektieren.</p>
-</blockquote>
+<p>Dieses Modul führt Datenkategorien, die über den übergreifenden Rahmen hinaus
+eigene Betrachtung verlangen:</p>
 
-<blockquote class="ig-highlight ig-highlight-grey">
-  <p>[TODO: Nennen Sie die spezifischen Aspekte Ihres Moduls — die geführten
-Datenkategorien und ihre Sensibilität, Risiken, die eine Pseudonymisierung
-auf Profilebene nicht abdeckt, sowie sicherheits- oder datenschutzbezogene
-SHALL/SHOULD/MAY-Anforderungen dieses Moduls an Implementierende, jeweils mit
-dem adressierten Risiko. Benennen Sie verbleibende Risiken, die im
-Systemdesign, im Betrieb oder per Policy behandelt werden müssen — oder
-übernehmen Sie den Standardtext oben, wenn es keine gibt.]</p>
-</blockquote>
+<ul>
+  <li><strong>Keimbahnbefunde mit Drittbetroffenheit.</strong> Prädispositionssyndrome
+(<a href="ValueSet-mii-vs-onko-praedispositionssyndrome-orpha.html">ORPHA</a>) und
+Prädispositionsgene (<a href="ValueSet-mii-vs-onko-praedispositionsgene-hgnc.html">HGNC</a>)
+sind Aussagen über Keimbahnvarianten. Sie betreffen Blutsverwandte, die in die
+Datennutzung nie eingewilligt haben. Eine Pseudonymisierung auf Profilebene
+schützt diese Dritten nicht.</li>
+  <li><strong>Genetische Varianten sind für sich identifizierend.</strong> Ein hinreichend
+spezifisches Variantenprofil
+(<a href="StructureDefinition-mii-pr-onko-genetische-variante.html">Genetische Variante</a>)
+bleibt auch nach Pseudonymisierung rückführbar. Das Risiko liegt im Datum
+selbst, nicht in der Verknüpfung.</li>
+  <li><strong>Re-Identifizierung über seltene Entitäten.</strong> Die Kombination aus seltener
+Tumorentität (ICD-O-3-Morphologie), Alter und Region kann in kleinen Kohorten
+auf eine Person zulaufen, ohne dass ein Identifikator beteiligt ist.</li>
+  <li><strong>Sterbedaten</strong> (oBDS-Kapitel 20) und Angaben zur Studienteilnahme
+(Kapitel 24) verbinden das Modul mit weiteren Kontexten.</li>
+</ul>
+
+<p>Daraus folgen Anforderungen an Implementierende:</p>
+
+<ul>
+  <li>Systeme <strong>SOLLTEN</strong> Keimbahn- und Prädispositionsbefunde einer eigenen
+Zugriffsentscheidung unterwerfen, statt sie mit dem übrigen onkologischen
+Datensatz gemeinsam freizugeben.</li>
+  <li>Auswertungen über seltene Entitäten <strong>SOLLTEN</strong> vor der Herausgabe auf
+Zellgrößen geprüft werden; die Profile dieses Moduls leisten das nicht.</li>
+  <li>Die genannten Risiken sind <strong>nicht</strong> auf Profilebene lösbar. Sie sind im
+Systemdesign, im Betrieb und über Nutzungsordnungen zu behandeln — dieses
+Modul beschreibt die Struktur der Daten, nicht die Bedingungen ihrer Nutzung.</li>
+</ul>
 
 
 
@@ -423,7 +435,7 @@ Systemdesign, im Betrieb oder per Policy behandelt werden müssen — oder
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.onkologie#2027.0.0-ballot.rc1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Thu, Sep 3, 2026 08:25+0000">2026-09-03</span>
+          Erstellt <span title="Thu, Sep 3, 2026 09:17+0000">2026-09-03</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

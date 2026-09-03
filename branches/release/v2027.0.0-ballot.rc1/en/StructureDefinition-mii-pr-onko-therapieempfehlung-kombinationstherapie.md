@@ -318,7 +318,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-thera
   "name" : "MII_PR_Onko_Therapieempfehlung_Kombinationstherapie",
   "title" : "MII PR Onkologie Therapieempfehlung Kombinationstherapie",
   "status" : "active",
-  "date" : "2026-09-03T08:25:31+00:00",
+  "date" : "2026-09-03T09:17:44+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
