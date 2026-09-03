@@ -115,20 +115,13 @@ extension:
       telecom:
         - system: url
           value: https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee
-  # OPTIONAL (module-specific): literature reference(s) for the module.
-  # For example, kerndatensatz-basis cites the MII core-data-set paper
-  # (doi:10.1007/s00103-024-03888-4) with this exact structure — uncomment and
-  # fill in when your module has a citation:
-  # - url: http://hl7.org/fhir/StructureDefinition/artifact-relatedArtifact
-  #   valueRelatedArtifact:
-  #     type: citation
-  #     citation: "{{CITATION_TEXT}}"
-  #     url: "{{CITATION_URL}}"
-  #     extension:
-  #       - url: http://hl7.org/fhir/StructureDefinition/cqf-publicationDate
-  #         valueDate: "{{CITATION_PUBLICATION_DATE}}"
-  #       - url: http://hl7.org/fhir/StructureDefinition/cqf-publicationStatus
-  #         valueCode: active
+  # OPTIONAL (module-specific): literature reference(s) for the module —
+  # an artifact-relatedArtifact extension (type: citation) with citation text,
+  # URL und cqf-publicationDate/-publicationStatus. Vorbild: kerndatensatz-basis
+  # zitiert so das MII-Kerndatensatz-Paper (doi:10.1007/s00103-024-03888-4).
+  # Der Beispielblock der Vorlage stand hier mit {{...}}-Platzhaltern — entfernt,
+  # weil der Release-Guard in module-release.yml per grep auf '{{' prueft und
+  # das Modul sonst als un-instanziierte Vorlage einstuft (build/release skipped).
   # The module's expansion-parameters manifest — the pinned code system versions
   # every ValueSet in this IG is expanded against (MII meta wiki, "Terminology
   # Version Policy"). Shipped at
@@ -406,7 +399,6 @@ parameters:
   special-url:
     - https://radelement.org
     - https://www.uicc.org/resources/tnm
-  #   - {{SPECIAL_URL_1}}
   # FHIR validation test cases (for example, kerndatensatz-basis does the same).
   # A minimal working harness ships in
   # tests/profiles/ — see tests/README.md. It stays COMMENTED OUT in the template
