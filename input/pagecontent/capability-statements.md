@@ -17,7 +17,7 @@ instance via
 [`CapabilityStatement.instantiates`](https://www.hl7.org/fhir/R4/capabilitystatement-definitions.html#CapabilityStatement.instantiates).
 
 Canonical:
-`https://www.medizininformatik-initiative.de/fhir/modul-onko/CapabilityStatement/metadata`
+`https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CapabilityStatement/mii-cps-onko-capabilitystatement`
 
 Artifact page:
 [CapabilityStatement of the Oncology module](CapabilityStatement-mii-cps-onko-capabilitystatement.html)
