@@ -172,7 +172,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-ex-onko-strah
   "name" : "MII_EX_Onko_Strahlentherapie_Bestrahlung_Boost",
   "title" : "MII EX Onko Strahlentherapie Bestrahlung Boost",
   "status" : "active",
-  "date" : "2026-09-03T15:50:39+00:00",
+  "date" : "2026-09-03T16:38:13+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
