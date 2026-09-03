@@ -16,18 +16,17 @@ Description: "Tumormarker-Bestimmung im Rahmen einer onkologischen Erkrankung. D
 * insert Translation(^title, de-DE, MII PR Onkologie Tumormarker)
 
 * code.coding MS
-// Das Parent-Profil (Laboruntersuchung) sliced code.coding nicht — Slicing-Intro
-// daher hier definieren.
-* code.coding ^slicing.discriminator.type = #pattern
-* code.coding ^slicing.discriminator.path = "system"
-* code.coding ^slicing.rules = #open
-* code.coding contains tumormarker-loinc 0..1 MS
-* code.coding[tumormarker-loinc] from MII_VS_Onko_Tumormarker_LOINC (extensible)
-* code.coding[tumormarker-loinc].system = $LNC
-* code.coding[tumormarker-loinc].system 1.. MS
-* code.coding[tumormarker-loinc].code 1.. MS
-* insert Label(code.coding[tumormarker-loinc], Tumormarker als LOINC-Code, LOINC-Code des bestimmten Tumormarkers aus der kuratierten onkologischen Auswahlliste)
-* insert Translation(code.coding[tumormarker-loinc] ^short, de-DE, Tumormarker als LOINC-Code)
+// Seit laborbefund 2027.0.0-ballot.rc3 sliced das Elternprofil code.coding selbst
+// (discriminator pattern:$this) und bringt einen loinc-Slice mit. Wir schraenken
+// diesen ein, statt ein zweites Slicing danebenzustellen: Ein abweichender
+// Diskriminator (frueher pattern:system) laesst die Snapshot-Erzeugung im
+// IG Publisher scheitern — SUSHI meldet das nicht, es faellt erst im Build auf.
+* code.coding[loinc] 0..1 MS
+* code.coding[loinc] from MII_VS_Onko_Tumormarker_LOINC (extensible)
+* code.coding[loinc].system 1.. MS
+* code.coding[loinc].code 1.. MS
+* insert Label(code.coding[loinc], Tumormarker als LOINC-Code, LOINC-Code des bestimmten Tumormarkers aus der kuratierten onkologischen Auswahlliste)
+* insert Translation(code.coding[loinc] ^short, de-DE, Tumormarker als LOINC-Code)
 
 // Bezug zur onkologischen Diagnose (Muster der uebrigen Onko-Observations)
 * focus MS
