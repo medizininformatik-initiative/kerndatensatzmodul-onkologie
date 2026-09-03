@@ -19,43 +19,43 @@ Jede einzelne ConceptMap rendert zusätzlich als eigene Seite unter [Artefakte](
 | | | | | |
 | :--- | :--- | :--- | :--- | :--- |
 | Quellsystem | Mappings | Aequivalent | Enger | Weiter |
-| MedDRA (CTCAE v4.03) | 708 | 638 | 42 | 28 |
-| UICC TNM | 189 | 189 | 0 | 0 |
-| ATC (BfArM) | [SNOMED CT to ICD-10-CM mappings for fracture of ulna](103) | [SNOMED CT to ICD-10-CM mappings for fracture of ulna](103) | 0 | 0 |
-| oBDS-CS strahlentherapie-zielgebiet | 96 | 88 | 6 | 2 |
-| oBDS-CS operation-komplikation | 77 | 66 | 4 | 7 |
-| ICD-O-3 | 57 | 41 | 8 | 8 |
-| oBDS-CS strahlentherapie-strahlenart | 19 | 17 | 0 | 2 |
-| oBDS-CS therapie-typ | 18 | 14 | 0 | 4 |
-| oBDS-CS strahlentherapie-applikationsart | 15 | 8 | 7 | 0 |
-| oBDS-CS primaertumor-diagnosesicherung | 15 | 10 | 0 | 5 |
-| oBDS-CS grading | 12 | 12 | 0 | 0 |
-| oBDS-CS fernmetastasen | 12 | 12 | 0 | 0 |
-| oBDS-CS allgemeiner-leistungszustand-karnofsky | 11 | 11 | 0 | 0 |
-| oBDS-CS allgemeiner-leistungszustand-ecog | 11 | 11 | 0 | 0 |
-| oBDS-CS verlauf-gesamtbeurteilung | 9 | 8 | 1 | 0 |
-| oBDS-CS verlauf-fernmetastasen | 9 | 7 | 0 | 2 |
-| oBDS-CS verlauf-primaertumor | 8 | 8 | 0 | 0 |
-| oBDS-CS verlauf-lymphknoten | 8 | 8 | 0 | 0 |
-| oBDS-CS nebenwirkung-ctcae-grad | 7 | 7 | 0 | 0 |
-| oBDS-CS intention | 7 | 6 | 1 | 0 |
-| oBDS-CS seitenlokalisation | 6 | 6 | 0 | 0 |
-| oBDS-CS https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-grund-ende | 6 | 4 | 2 | 0 |
-| oBDS-CS genetische-variante-auspraegung | 6 | 6 | 0 | 0 |
-| oBDS-CS asa-obds | 6 | 6 | 0 | 0 |
-| oBDS-CS therapie-stellungzurop | 5 | 5 | 0 | 0 |
-| oBDS-CS strahlentherapie-boost | 5 | 2 | 3 | 0 |
-| [MII PR Onkologie Diagnose Primärtumor](https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor) | 5 | 5 | 0 | 0 |
-| oBDS-CS krk-stoma-anzeichnung | 4 | 4 | 0 | 0 |
-| [MII PR Onkologie TNM-Klassifikation](https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation) | 4 | 4 | 0 | 0 |
-| [Unified Code for Units of Measure (UCUM)](http://unitsofmeasure.org) | 4 | 4 | 0 | 0 |
-| oBDS-CS tod | 3 | 0 | 3 | 0 |
-| oBDS-CS therapieplanung-typ | 3 | 0 | 3 | 0 |
-| oBDS-CS therapieabweichung | 3 | 3 | 0 | 0 |
-| oBDS-CS studienteilnahme | 3 | 3 | 0 | 0 |
-| [https://www.medizininformatik-initiative.de/fhir/ext/modul-diagnose/StructureDefinition/Diagnose](https://www.medizininformatik-initiative.de/fhir/ext/modul-diagnose/StructureDefinition/Diagnose) | 2 | 0 | 0 | 2 |
-| [MII PR Onkologie Grading](https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-grading) | 1 | 1 | 0 | 0 |
-| [MII PR Onkologie Allgemeiner Leistungszustand ECOG](https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-ecog) | 1 | 1 | 0 | 0 |
+| oBDS-CS verlauf-gesamtbeurteilung | `9` | `8` | `1` | `0` |
+| oBDS-CS verlauf-fernmetastasen | `9` | `7` | `0` | `2` |
+| oBDS-CS strahlentherapie-zielgebiet | `96` | `88` | `6` | `2` |
+| oBDS-CS verlauf-primaertumor | `8` | `8` | `0` | `0` |
+| oBDS-CS verlauf-lymphknoten | `8` | `8` | `0` | `0` |
+| oBDS-CS nebenwirkung-ctcae-grad | `7` | `7` | `0` | `0` |
+| oBDS-CS intention | `7` | `6` | `1` | `0` |
+| oBDS-CS operation-komplikation | `77` | `66` | `4` | `7` |
+| MedDRA (CTCAE v4.03) | `708` | `638` | `42` | `28` |
+| oBDS-CS seitenlokalisation | `6` | `6` | `0` | `0` |
+| oBDS-CS https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-grund-ende | `6` | `4` | `2` | `0` |
+| oBDS-CS genetische-variante-auspraegung | `6` | `6` | `0` | `0` |
+| oBDS-CS asa-obds | `6` | `6` | `0` | `0` |
+| oBDS-CS therapie-stellungzurop | `5` | `5` | `0` | `0` |
+| oBDS-CS strahlentherapie-boost | `5` | `2` | `3` | `0` |
+| [MII PR Onkologie Diagnose Primärtumor](https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor) | `5` | `5` | `0` | `0` |
+| ICD-O-3 | `57` | `41` | `8` | `8` |
+| oBDS-CS krk-stoma-anzeichnung | `4` | `4` | `0` | `0` |
+| [MII PR Onkologie TNM-Klassifikation](https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation) | `4` | `4` | `0` | `0` |
+| [Unified Code for Units of Measure (UCUM)](http://unitsofmeasure.org) | `4` | `4` | `0` | `0` |
+| oBDS-CS tod | `3` | `0` | `3` | `0` |
+| oBDS-CS therapieplanung-typ | `3` | `0` | `3` | `0` |
+| oBDS-CS therapieabweichung | `3` | `3` | `0` | `0` |
+| oBDS-CS studienteilnahme | `3` | `3` | `0` | `0` |
+| [https://www.medizininformatik-initiative.de/fhir/ext/modul-diagnose/StructureDefinition/Diagnose](https://www.medizininformatik-initiative.de/fhir/ext/modul-diagnose/StructureDefinition/Diagnose) | `2` | `0` | `0` | `2` |
+| [MII PR Onkologie Grading](https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-grading) | `1` | `1` | `0` | `0` |
+| [MII PR Onkologie Allgemeiner Leistungszustand ECOG](https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-ecog) | `1` | `1` | `0` | `0` |
+| oBDS-CS strahlentherapie-strahlenart | `19` | `17` | `0` | `2` |
+| oBDS-CS therapie-typ | `18` | `14` | `0` | `4` |
+| UICC TNM | `189` | `189` | `0` | `0` |
+| oBDS-CS strahlentherapie-applikationsart | `15` | `8` | `7` | `0` |
+| oBDS-CS primaertumor-diagnosesicherung | `15` | `10` | `0` | `5` |
+| oBDS-CS grading | `12` | `12` | `0` | `0` |
+| oBDS-CS fernmetastasen | `12` | `12` | `0` | `0` |
+| oBDS-CS allgemeiner-leistungszustand-karnofsky | `11` | `11` | `0` | `0` |
+| oBDS-CS allgemeiner-leistungszustand-ecog | `11` | `11` | `0` | `0` |
+| ATC (BfArM) | `103` | `103` | `0` | `0` |
 
 ### oBDS-CodeSystems → SNOMED CT / LOINC
 

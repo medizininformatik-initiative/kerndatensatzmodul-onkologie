@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-onko/CapabilityStatement/metadata | *Version*:2027.0.0-ballot.rc1 |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CapabilityStatement/mii-cps-onko-capabilitystatement | *Version*:2027.0.0-ballot.rc1 |
 | Active Stand: 2025-12-04 | *Maschinenlesbarer Name*:MII_CPS_Onkology_CapabilityStatement |
 
  
@@ -118,7 +118,7 @@ Das vorliegende CapabilityStatement beschreibt alle verpflichtenden Interaktione
       }]
     }
   }],
-  "url" : "https://www.medizininformatik-initiative.de/fhir/modul-onko/CapabilityStatement/metadata",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CapabilityStatement/mii-cps-onko-capabilitystatement",
   "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_CPS_Onkology_CapabilityStatement",
   "title" : "MII CPS Onkology CapabilityStatement",

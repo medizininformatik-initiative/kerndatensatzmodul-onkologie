@@ -20,7 +20,7 @@ Deterministischer Algorithmus zur Synthese einer TNM-Klassifikation aus mehreren
 
 -------
 
-**Exception parsing generated Narrative (see /tmp/liquid-e1850c82-4e66-4516-9a8f-d4a0b019dee8.html): unexpected non-end of element null::a at line 124 column 50**
+**Exception parsing generated Narrative (see /tmp/liquid-e3c9c18a-4a50-4e5a-a809-6daa57989069.html): unexpected non-end of element null::a at line 124 column 50**
 
 
 
@@ -155,7 +155,7 @@ Deterministischer Algorithmus zur Synthese einer TNM-Klassifikation aus mehreren
       "code" : "logic-library"
     }]
   },
-  "date" : "2026-09-03T10:10:01+00:00",
+  "date" : "2026-09-03T11:07:20+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
