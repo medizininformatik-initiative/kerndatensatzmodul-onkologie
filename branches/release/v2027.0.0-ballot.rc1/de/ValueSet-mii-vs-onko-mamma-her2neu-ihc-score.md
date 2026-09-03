@@ -171,7 +171,7 @@ HER2-Score der Immunhistochemie (0, 1+, 2+, 3+, Indeterminate). Enumerierte Fass
   "title" : "MII VS Onkologie Mamma Her2neu IHC Score",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-03T07:02:13+00:00",
+  "date" : "2026-09-03T08:25:31+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

@@ -397,7 +397,7 @@ The following tables are generated at build time via SQL directly from this IG's
 | oBDS-CS therapie-typ | #CIZ | source-is-broader-than-target | SNOMED CT | #897713009 |
 | oBDS-CS therapie-typ | #CZ | equivalent | SNOMED CT | #1255831008 |
 | oBDS-CS therapie-typ | #HO | equivalent | SNOMED CT | #169413002 |
-| oBDS-CS therapie-typ | #IM | equivalent | SNOMED CT | #897713009 |
+| oBDS-CS therapie-typ | #IM | equivalent | SNOMED CT | #76334006 |
 | oBDS-CS therapie-typ | #IZ | source-is-broader-than-target | SNOMED CT | #76334006 |
 | oBDS-CS therapie-typ | #KW | equivalent | SNOMED CT | #897016006 |
 | oBDS-CS therapie-typ | #OP | equivalent | SNOMED CT | #387713003 |

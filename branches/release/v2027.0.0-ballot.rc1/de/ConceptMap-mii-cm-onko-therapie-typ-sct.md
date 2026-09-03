@@ -198,7 +198,7 @@ Therapietyp wird einerseits bei der systemischen/abwartenden Therapie kodiert. A
       "code" : "IM",
       "display" : "Immun-/Antikörpertherapie",
       "target" : [{
-        "code" : "897713009",
+        "code" : "76334006",
         "display" : "Immunotherapy (procedure)",
         "equivalence" : "equivalent"
       }]
