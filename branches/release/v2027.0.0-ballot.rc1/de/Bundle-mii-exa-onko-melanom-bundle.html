@@ -1,0 +1,638 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+<html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>MII EXA Onko Melanom Bundle - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Branding override for the fhir2.base.template CSS placeholder
+     (base ships includes/fragment-css.html as a single comment; it is included
+     in <head> AFTER all base stylesheets, so the linked files win the
+     cascade).
+     Load model (docs/styleguide.md §1/§10): bootstrap-accessibility.css
+     (PayPal Bootstrap Accessibility Plugin v1.0.7, vendored + pinned - §8)
+     patches Bootstrap-3 component styling for accessibility (focus outlines,
+     alert contrast) and loads FIRST so the template's own rules can override;
+     then template-base.css carries the
+     brand-INDEPENDENT rule blocks and always loads; then EXACTLY ONE palette
+     file follows - num-diz.css, the DEFAULT design, unless the consuming IG
+     ships input/data/brand.json with { "design": "mii" } (read as
+     site.data.brand.design via the base's input/data -> _data pre-process),
+     which selects mii.css instead. Only the exact value 'mii' selects the
+     MII design; anything else - including no brand.json at all and unknown
+     values - renders NUM-DIZ. Both palettes declare the same variable set
+     (scripts/brand-switch.test.mjs). -->
+<link href="assets/css/bootstrap-accessibility.css" rel="stylesheet"/>
+<link href="assets/css/template-base.css" rel="stylesheet"/>
+
+<link href="assets/css/num-diz.css" rel="stylesheet"/>
+
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"18.395"}
+    h3,h4,h5,h6{--heading-prefix:"18.395"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Branding override for the fhir2.base.template header placeholder
+     (base ships includes/fragment-header.html as a single comment; it is included
+     inside "#segment-header > .container", before the #ig-status block).
+     Language handling: only the asset and its descriptive alt text switch on
+     include.lang (the pattern kerndatensatz-basis uses); no translatable UI
+     strings are hard-coded.
+     Brand handling: the project logo additionally switches on
+     site.data.brand.design (input/data/brand.json in the consuming IG, see
+     docs/styleguide.md §10). Only the exact value 'mii' selects the MII
+     logos - anything else, including no brand.json at all, falls through to
+     the NUM-DIZ default.
+     Two logos, mirroring kerndatensatz-basis: the HL7 FHIR logo (links to the
+     FHIR spec) in #family-nav, and the project logo in #project-nav.
+     fhir-logo-www.png is shipped by fhir2.base.template
+     (content/assets/images/), so it resolves from the inherited assets without
+     shipping it here. -->
+<div id="family-nav">
+  <a id="family-logo" no-external="true" href="https://hl7.org/fhir">
+    <img height="50" alt="HL7 FHIR" src="assets/images/fhir-logo-www.png"/>
+  </a>
+</div>
+<div id="project-nav">
+
+  <a id="project-logo" no-external="true" href="https://www.netzwerk-universitaetsmedizin.de/forschung/num-diz">
+
+    <img height="50" alt="NUM-DIZ (Netzwerk Universitätsmedizin — Datenintegrationszentrum)" src="assets/images/logo-num-diz-de.svg"/>
+
+  </a>
+
+</div>
+<!-- Font-size control (A / A+ / A++): three reader-selectable levels; level A
+     is the untouched default. Logic in assets/js/font-size-control.js, the
+     zoom mapping + button styling in template-base.css ("font-size control"
+     block). All three buttons read "A" — the button's own font size shows the level; labels are language-neutral; only the aria texts switch
+     on include.lang. REMOVAL: delete this block, the js file and the CSS
+     block - one commit, styleguide §5a. -->
+
+<div class="ig-fontsize" role="group" aria-label="Schriftgröße">
+  <button type="button" data-level="0" aria-pressed="true" aria-label="Schriftgröße: Standard">A</button>
+  <button type="button" data-level="1" aria-pressed="false" aria-label="Schriftgröße: größer">A</button>
+  <button type="button" data-level="2" aria-pressed="false" aria-label="Schriftgröße: am größten">A</button>
+</div>
+
+<script src="assets/js/font-size-control.js" defer></script>
+<!-- PayPal Bootstrap Accessibility Plugin v1.0.7 (vendored + pinned, §8):
+     patches the Bootstrap-3 components the publisher renders - navbar
+     dropdowns gain ARIA menu semantics + arrow-key navigation, tab panels
+     (structure-tabs) the full ARIA tabs pattern, alerts live-region
+     announcements. `defer` guarantees it executes AFTER the parser-inserted
+     bootstrap.min.js at the end of the body. Vendored from
+     paypal/bootstrap-accessibility-plugin @ v1.0.7 (the admin-ch fork was
+     evaluated and rejected: 151 commits behind upstream, its 6 deltas are
+     site-specific tab tweaks). REMOVAL: delete this tag, both vendored
+     assets and the fragment-css link - guard test pins the hashes. -->
+<script src="assets/js/bootstrap-accessibility.min.js" defer></script>
+<!-- Back-to-top button: appears after one viewport of scrolling (logic in
+     assets/js/back-to-top.js, styling in template-base.css "back-to-top"
+     block). Rendered here inside #segment-header, which is OUTSIDE the
+     data-fontsize zoom regions, so the fixed button never scales. REMOVAL:
+     this block, the js file and the CSS block - one commit, styleguide §8. -->
+
+<button type="button" class="ig-back-to-top" aria-label="Zurück zum Seitenanfang">↑</button>
+
+<script src="assets/js/back-to-top.js" defer></script>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">MII IG Kerndatensatz-Modul Onkologie</span>
+            <br/>
+            <span style="display:inline-block;">2027.0.0-ballot.rc1 - 
+
+
+
+  Germany
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- German translation of input/includes/menu.xml.
+     Keep the href targets IDENTICAL to the source menu; translate only labels.
+     Structure notes (OPTIONAL entries, link-only entries, the interim
+     meta-wiki links) are documented in the source menu's header and in
+     docs/page-structure.md / docs/optional-pages.md. -->
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">Startseite</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="guidance.html" class="dropdown-toggle">Anleitung<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="guidance.html">Anleitung</a></li>
+      <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="researcher-guidance.html">Anleitung für Forschende (optional)</a></li>
+      <li><a href="implementer-guidance.html">Anleitung für Implementierende</a></li>
+      <!-- Nur-Link-Eintrag: die Seite "Logische Modelle" (Begründung im Quell-Menü) -->
+      <li><a href="datasets-and-descriptions.html">Datensätze inkl. Beschreibungen</a></li>
+      <li><a href="uml-diagrams.html">UML-Diagramme</a></li>
+      <li><a href="anwendungsfaelle-informationsmodell.html">Anwendungsfälle und Informationsmodell</a></li>
+      <li><a href="icd-o-terminologie.html">ICD-O: Revisionen und Validierung</a></li>
+      <li><a href="atc-terminologie.html">ATC: Jahresversionen und Überleitungen</a></li>
+      <li><a href="weitere-klassifikationen-terminologien.html">Weitere Klassifikationen: Terminologien</a></li>
+      <li><a href="tumormarker-loinc.html">Tumormarker: kuratierte LOINC-Codes</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <!-- Eltern-Eintrag und die ersten vier Einträge verlinken die KDS-weiten
+         Konformitätsregeln des Meta-Moduls (INTERIM: Meta-Wiki; siehe
+         Quell-Menü). -->
+    <a data-toggle="dropdown" href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance" class="dropdown-toggle">Konformität<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance">Konformität</a></li>
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#anforderungsdokumentation">Allgemeine Anforderungen</a></li>
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#must-support-ms">Must-Support</a></li>
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#fehlende-daten">Umgang mit fehlenden Daten</a></li>
+      <li><a href="security-and-privacy.html">Sicherheit und Datenschutz</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="artifacts.html" class="dropdown-toggle">Artefakte<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="artifacts.html">Artefakt-Übersicht</a></li>
+      <li><a href="profiles.html">Profile</a></li>
+      <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="extensions.html">Extensions (optional)</a></li>
+      <li><a href="capability-statements.html">CapabilityStatements</a></li>
+      <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="search-parameters.html">Suchparameter (optional)</a></li>
+      <li><a href="logical-models.html">Logische Modelle</a></li>
+      <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="value-sets.html">ValueSets (optional)</a></li>
+      <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="code-systems.html">CodeSystems (optional)</a></li>
+      <li><a href="examples.html">Beispiele</a></li>
+    </ul>
+  </li>
+  <li><a href="downloads.html">Downloads</a></li>
+  <li><a href="changes.html">Änderungshistorie</a></li>
+  <li class="dropdown">
+    <!-- Der Eltern-Eintrag verlinkt bewusst das PFLICHT-Kind (Versionierung):
+         die Metadaten-Übersicht ist optional. -->
+    <a data-toggle="dropdown" href="version-history.html" class="dropdown-toggle">Metadaten<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="metadata.html">Metadaten-Übersicht (optional)</a></li>
+      <li><a href="version-history.html">Versionierung</a></li>
+    </ul>
+  </li>
+</ul>
+
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+
+
+
+<div style="float: var(--ig-right);padding: 8px 0px;" id="language">
+  <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-de.png"/>Deutsch</div>
+  </div>
+  <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Sprache:</div>
+ 	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag de" src="assets/images/lang-de.png"/>Deutsch</div>
+
+    <div><a href="../en/Bundle-mii-exa-onko-melanom-bundle.html"><img class="flag" src="assets/images/lang-en.png" alt="flag en"/>English</a></div>
+
+  </div>
+</div>
+
+
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Inhaltsverzeichnis</b></a></li><li><a href='artifacts.html'><b>Artefaktübersicht</b></a></li><li><b>MII EXA Onko Melanom Bundle</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<!-- layouts\layout-instance-base -->
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">MII IG Kerndatensatz-Modul Onkologie - Local Development build (v2027.0.0-ballot.rc1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+
+  
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li class="active">
+    <a href="#">Narrativer Inhalt</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="Bundle-mii-exa-onko-melanom-bundle.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Bundle-mii-exa-onko-melanom-bundle.json.html">JSON</a>
+    </li>
+  
+
+
+
+
+</ul>
+
+
+  <a name="root"> </a>
+
+
+
+  <h2 id="root">Beispiel Bundle: MII EXA Onko Melanom Bundle</h2>
+
+
+
+
+  <!-- insert intro if present -->
+  
+
+
+
+<div style="display:inline-block" markdown="1">
+
+<h3 id="inhalt">Inhalt</h3>
+
+<p>Das <strong>Melanom Bundle Beispiel</strong> demonstriert die strukturierte Zusammenstellung aller Melanom-spezifischen FHIR-Ressourcen in einem einheitlichen Transaktions-Bundle. Dieses Bundle zeigt die praktische Anwendung der Melanom-Profile und deren Verknüpfungen untereinander in einem realistischen klinischen Szenario eines Malignen Melanoms der Haut.</p>
+
+<p>Das Bundle implementiert das <strong>Transaction-Pattern</strong> und ist server-konsumierbar, wodurch alle enthaltenen Ressourcen als atomare Operation übertragen werden können.</p>
+
+<hr />
+
+<h3 id="bundle-struktur">Bundle-Struktur</h3>
+
+<p>Das Melanom-Bundle umfasst folgende Ressourcen:</p>
+
+<h4 id="primäre-ressourcen">Primäre Ressourcen</h4>
+
+<ul>
+  <li><strong>Patient</strong>: Melanom-Patient (Maria Melanom)</li>
+  <li><strong>Condition</strong>: Primärtumor-Diagnose (C43.9 - Bösartige Neubildung: Haut, nicht näher bezeichnet)</li>
+  <li><strong>Encounter</strong>: Stationärer Behandlungsfall</li>
+</ul>
+
+<h4 id="melanom-spezifische-observations">Melanom-spezifische Observations</h4>
+
+<ul>
+  <li><strong>Breslow-Tiefe</strong>: Tumordicke 2.1mm von Granularschicht bis tiefste Invasion (Breslow)</li>
+  <li><strong>Sicherheitsabstand</strong>: Minimaler Abstand zum Resektionsrand 5mm (MM1)</li>
+  <li><strong>Ulzeration</strong>: Nachweis einer Ulzeration der Epidermis (MM4)</li>
+  <li><strong>LDH</strong>: Laktatdehydrogenase-Wert 280 U/L als prognostischer Marker (LDH)</li>
+</ul>
+
+<h4 id="bundle-spezifische-merkmale">Bundle-spezifische Merkmale</h4>
+
+<ul>
+  <li><strong>Transaction Bundle</strong>: Server-konsumierbare atomare Operation</li>
+  <li><strong>Referenz-Konsistenz</strong>: Alle Einzelressourcen referenzieren Bundle-Kernressourcen</li>
+  <li><strong>Vollständige Abdeckung</strong>: Alle 4 Melanom-Profile sind enthalten</li>
+</ul>
+
+<!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/MalignesMelanom/Melanom-Bundle-Example.page.md gate=B -->
+<blockquote class="ig-highlight ig-highlight-grey">
+  <p>Als therapeutische Ressource enthält das Bundle darüber hinaus die <strong>Exzision am Oberarm</strong> als Procedure.</p>
+</blockquote>
+
+<hr />
+
+<h3 id="klinisches-szenario">Klinisches Szenario</h3>
+
+<p>Das Bundle repräsentiert eine <strong>Patientin mit Malignem Melanom</strong> mit kompletter histopathologischer Diagnostik und operativer Therapie:</p>
+
+<p><strong>Patientencharakteristika:</strong></p>
+
+<ul>
+  <li><strong>Diagnose</strong>: C43.9 Malignes Melanom der Haut</li>
+  <li><strong>Breslow-Tiefe</strong>: 2.1mm (prognostisch wichtig)</li>
+  <li><strong>Tumorlokalisation</strong>: Haut, nicht näher bezeichnet</li>
+</ul>
+
+<p><strong>Histopathologische Diagnostik:</strong></p>
+
+<ul>
+  <li><strong>Ulzeration</strong>: Nachweis einer Ulzeration der Epidermis</li>
+  <li><strong>LDH</strong>: Erhöhter Wert (280 U/L) als prognostischer Marker</li>
+</ul>
+
+<p><strong>Operative Therapie:</strong></p>
+
+<ul>
+  <li><strong>Exzision</strong>: Mit ausreichendem Sicherheitsabstand</li>
+  <li><strong>Sicherheitsabstand</strong>: Minimaler Abstand 5mm zum Resektionsrand</li>
+  <li><strong>Resektionsstatus</strong>: R0-Resektion erreicht</li>
+</ul>
+
+<hr />
+
+<h3 id="technische-implementation">Technische Implementation</h3>
+
+<h4 id="bundle-typ-und-struktur">Bundle-Typ und Struktur</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* type = #transaction
+</code></pre></div></div>
+
+<ul>
+  <li><strong>Transaction Bundle</strong>: Atomare Übertragung aller Ressourcen</li>
+  <li><strong>Server-konsumierbar</strong>: Alle Entries mit vollständigen Request-Informationen</li>
+</ul>
+
+<h4 id="entry-pattern">Entry-Pattern</h4>
+
+<p>Jeder Bundle-Entry enthält:</p>
+
+<ul>
+  <li><strong>fullUrl</strong>: Eindeutige Referenz-URL</li>
+  <li><strong>resource</strong>: Die eigentliche FHIR-Ressource</li>
+  <li><strong>request.method</strong>: HTTP POST für Erstellung</li>
+  <li><strong>request.url</strong>: Ziel-Ressourcentyp</li>
+</ul>
+
+<h4 id="referenz-integrität">Referenz-Integrität</h4>
+
+<ul>
+  <li><strong>Condition</strong>: Referenziert Patient über <code class="language-plaintext highlighter-rouge">subject</code></li>
+  <li><strong>Observations</strong>: Referenzieren sowohl Patient (<code class="language-plaintext highlighter-rouge">subject</code>) als auch Condition (<code class="language-plaintext highlighter-rouge">focus</code>)</li>
+  <li><strong>Procedures</strong>: Referenzieren Patient (<code class="language-plaintext highlighter-rouge">subject</code>) und Condition (<code class="language-plaintext highlighter-rouge">reasonReference</code>)</li>
+  <li><strong>Specimen</strong>: Referenziert Patient (<code class="language-plaintext highlighter-rouge">subject</code>) und Collection-Procedure</li>
+</ul>
+
+<hr />
+
+<h3 id="obds-zuordnung">oBDS-Zuordnung</h3>
+
+<p>Das Bundle demonstriert die vollständige Abbildung der oBDS-Datenfelder für Malignes Melanom:</p>
+
+<h4 id="histopathologische-bewertung">Histopathologische Bewertung</h4>
+
+<ul>
+  <li><strong>MM2</strong>: Breslow-Tiefe → <a href="Observation-mii-exa-onko-melanom-breslow-tiefe.html">mii-exa-onko-melanom-breslow-tiefe</a></li>
+  <li><strong>MM4</strong>: Ulzeration → <a href="Observation-mii-exa-onko-melanom-ulzeration.html">mii-exa-onko-melanom-ulzeration</a></li>
+</ul>
+
+<h4 id="chirurgische-bewertung">Chirurgische Bewertung</h4>
+
+<ul>
+  <li><strong>MM1</strong>: Sicherheitsabstand → <a href="Observation-mii-exa-onko-melanom-sicherheitsabstand.html">mii-exa-onko-melanom-sicherheitsabstand</a></li>
+</ul>
+
+<h4 id="laborparameter">Laborparameter</h4>
+
+<ul>
+  <li><strong>MM3</strong>: Laktatdehydrogenase → <a href="Observation-mii-exa-onko-melanom-ldh.html">mii-exa-onko-melanom-ldh</a></li>
+</ul>
+
+<hr />
+
+<h3 id="valueset-verwendung">ValueSet-Verwendung</h3>
+
+<p>Das Bundle zeigt die praktische Anwendung verschiedener Terminologien:</p>
+
+<h4 id="loinc">LOINC</h4>
+
+<ul>
+  <li><strong>LDH</strong>: <code class="language-plaintext highlighter-rouge">14805-6</code> "Lactate dehydrogenase activity in Serum or Plasma"</li>
+</ul>
+
+<h4 id="snomed-ct">SNOMED CT</h4>
+
+<ul>
+  <li><strong>Breslow-Tiefe</strong>: <code class="language-plaintext highlighter-rouge">106243009</code> "Breslow depth staging for melanoma of skin"</li>
+  <li><strong>Sicherheitsabstand</strong>: <code class="language-plaintext highlighter-rouge">396511007</code> "Distance of in situ melanoma from closest lateral surgical margin"</li>
+  <li><strong>Ulzeration</strong>: <code class="language-plaintext highlighter-rouge">97816-3</code> "Ulceration present in melanoma of skin"</li>
+</ul>
+
+<h4 id="icd-10-gm">ICD-10-GM</h4>
+
+<ul>
+  <li><strong>Diagnose</strong>: <code class="language-plaintext highlighter-rouge">C43.9</code> "Bösartige Neubildung: Haut, nicht näher bezeichnet"</li>
+</ul>
+
+<h4 id="obds-codesystems">oBDS CodeSystems</h4>
+
+<ul>
+  <li><strong>Ulzeration</strong>: <code class="language-plaintext highlighter-rouge">mii-cs-onko-melanom-ulzeration#J</code> "Ja"</li>
+  <li><strong>LDH-Bewertung</strong>: <code class="language-plaintext highlighter-rouge">mii-cs-onko-melanom-ldh-bewertung#erhoeht</code> "Erhöht"</li>
+</ul>
+
+<!-- TODO:REVIEW Die hier aus der Quellseite uebernommenen Codes weichen von den ausgelieferten Instanzen ab: LDH nutzt LOINC 14804-9 (nicht 14805-6); die Ulzeration nutzt SNOMED CT 6270001000004106 "Presence of ulcer in primary malignant melanoma of skin (observable entity)" - der in der Quelle genannte Code 97816-3 ist ein LOINC-Code der ASA-Klassifikation; ein CodeSystem mii-cs-onko-melanom-ldh-bewertung existiert nicht, die Bewertung erfolgt ueber Observation.interpretation (v3-ObservationInterpretation#H "High"). Fachlich pruefen und angleichen. -->
+
+<hr />
+
+<h3 id="einzelne-ressourcen-beispiele">Einzelne Ressourcen-Beispiele</h3>
+
+<!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/FHIR-Profile/Organspezifische-Module/MalignesMelanom/Melanom-Bundle-Example.page.md gate=B -->
+<blockquote class="ig-highlight ig-highlight-grey">
+  <p>Die im Bundle enthaltenen Ressourcen sind zusätzlich als eigenständige Beispielinstanzen ausgeliefert:</p>
+</blockquote>
+
+<ul>
+  <li>Patient: <a href="Patient-mii-exa-onko-melanom-bundle-patient.html">mii-exa-onko-melanom-bundle-patient</a></li>
+  <li>Primärtumor-Condition: <a href="Condition-mii-exa-onko-melanom-diagnose.html">mii-exa-onko-melanom-diagnose</a></li>
+  <li>Behandlungsfall: <a href="Encounter-mii-exa-onko-melanom-bundle-encounter.html">mii-exa-onko-melanom-bundle-encounter</a></li>
+  <li>Breslow-Tiefe: <a href="Observation-mii-exa-onko-melanom-breslow-tiefe.html">mii-exa-onko-melanom-breslow-tiefe</a></li>
+  <li>Sicherheitsabstand: <a href="Observation-mii-exa-onko-melanom-sicherheitsabstand.html">mii-exa-onko-melanom-sicherheitsabstand</a></li>
+  <li>Ulzeration: <a href="Observation-mii-exa-onko-melanom-ulzeration.html">mii-exa-onko-melanom-ulzeration</a></li>
+  <li>LDH: <a href="Observation-mii-exa-onko-melanom-ldh.html">mii-exa-onko-melanom-ldh</a></li>
+  <li>Exzision Oberarm: <a href="Procedure-mii-exa-onko-melanom-exzision-oberarm.html">mii-exa-onko-melanom-exzision-oberarm</a></li>
+</ul>
+
+
+</div>
+
+
+
+
+  <div data-fhir="generated"><p class="res-header-id"/><a name="mii-exa-onko-melanom-bundle"> </a><a name="hcmii-exa-onko-melanom-bundle"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: de</p><p style="margin-bottom: 0px">Profile: <a href="http://hl7.org/fhir/R4/bundle.html">Bundle</a></p></div><p>Bundle mii-exa-onko-melanom-bundle of type transaction</p><a name="https-//www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-melanom-bundle-patient"> </a><a name="Patient_mii-exa-onko-melanom-bundle-patient"> </a><a name="hcPatient_mii-exa-onko-melanom-bundle-patient"> </a><hr/><p>Entry 1 - fullUrl = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-melanom-bundle-patient</p><p>Resource Patient:</p><blockquote><p class="res-header-id"/><a name="mii-exa-onko-melanom-bundle/mii-exa-onko-melanom-bundle-patient"> </a><a name="hcmii-exa-onko-melanom-bundle/mii-exa-onko-melanom-bundle-patient"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: de</p></div><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Maria Melanom  (no stated gender), DoB Unknown</p><hr/></blockquote><p>Request:</p><pre>POST Patient
+</pre><a name="https-//www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-melanom-diagnose"> </a><a name="Condition_mii-exa-onko-melanom-diagnose"> </a><a name="hcCondition_mii-exa-onko-melanom-diagnose"> </a><hr/><p>Entry 2 - fullUrl = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-melanom-diagnose</p><p>Resource Condition:</p><blockquote><p class="res-header-id"/><a name="mii-exa-onko-melanom-bundle/mii-exa-onko-melanom-diagnose"> </a><a name="hcmii-exa-onko-melanom-bundle/mii-exa-onko-melanom-diagnose"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: de</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-diagnose-primaertumor.html">MII PR Onkologie Diagnose Primärtumor</a> version: 2027.0.0-ballot.rc1</p></div><p><b>Condition Asserted Date</b>: 2024-01-02</p><p><b>clinicalStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}">Active</span></p><p><b>verificationStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}, {https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung 7.1}">histologische Untersuchung eines Primärtumors</span></p><p><b>category</b>: <span title="Codes:{http://snomed.info/sct 55342001}">Neoplastic disease</span></p><p><b>code</b>: <span title="Codes:{http://fhir.de/CodeSystem/bfarm/icd-10-gm C43.9}">Bösartiges Melanom der Haut, nicht näher bezeichnet</span></p><p><b>subject</b>: <a href="Patient-mii-exa-onko-melanom-bundle-patient.html">Maria Melanom  (no stated gender), DoB Unknown</a></p><p><b>encounter</b>: <a href="Encounter-mii-exa-onko-melanom-bundle-encounter.html">Encounter: status = finished; class = inpatient encounter (ActCode#IMP)</a></p><p><b>recordedDate</b>: 2024-01-02</p></blockquote><p>Request:</p><pre>POST Condition
+</pre><a name="https-//www.medizininformatik-initiative.de/fhir/ext/modul-onko/Encounter/mii-exa-onko-melanom-bundle-encounter"> </a><a name="Encounter_mii-exa-onko-melanom-bundle-encounter"> </a><a name="hcEncounter_mii-exa-onko-melanom-bundle-encounter"> </a><hr/><p>Entry 3 - fullUrl = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Encounter/mii-exa-onko-melanom-bundle-encounter</p><p>Resource Encounter:</p><blockquote><p class="res-header-id"/><a name="mii-exa-onko-melanom-bundle/mii-exa-onko-melanom-bundle-encounter"> </a><a name="hcmii-exa-onko-melanom-bundle/mii-exa-onko-melanom-bundle-encounter"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: de</p></div><p><b>status</b>: completed</p><p><b>class</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode IMP}">inpatient encounter</span></p><p><b>subject</b>: <a href="Patient-mii-exa-onko-melanom-bundle-patient.html">Maria Melanom  (no stated gender), DoB Unknown</a></p></blockquote><p>Request:</p><pre>POST Encounter
+</pre><a name="https-//www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-melanom-sicherheitsabstand"> </a><a name="Observation_mii-exa-onko-melanom-sicherheitsabstand"> </a><a name="hcObservation_mii-exa-onko-melanom-sicherheitsabstand"> </a><hr/><p>Entry 4 - fullUrl = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-melanom-sicherheitsabstand</p><p>Resource Observation:</p><blockquote><p class="res-header-id"/><a name="mii-exa-onko-melanom-bundle/mii-exa-onko-melanom-sicherheitsabstand"> </a><a name="hcmii-exa-onko-melanom-bundle/mii-exa-onko-melanom-sicherheitsabstand"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: de</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-melanom-sicherheitsabstand.html">MII PR Onkologie Melanom Sicherheitsabstand</a></p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 396511007}">Distance of in situ melanoma from closest lateral surgical margin in excised specimen of skin (observable entity)</span></p><p><b>subject</b>: <a href="Patient-mii-exa-onko-melanom-bundle-patient.html">Maria Melanom  (no stated gender), DoB Unknown</a></p><p><b>focus</b>: <a href="Condition-mii-exa-onko-melanom-diagnose.html">Condition Bösartiges Melanom der Haut, nicht näher bezeichnet</a></p><p><b>encounter</b>: <a href="Encounter-mii-exa-onko-melanom-bundle-encounter.html">Encounter: status = finished; class = inpatient encounter (ActCode#IMP)</a></p><p><b>effective</b>: 2024-03-25 10:00:00+0100</p><p><b>value</b>: 5 mm<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemm = 'mm')</span></p></blockquote><p>Request:</p><pre>POST Observation
+</pre><a name="https-//www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-melanom-breslow-tiefe"> </a><a name="Observation_mii-exa-onko-melanom-breslow-tiefe"> </a><a name="hcObservation_mii-exa-onko-melanom-breslow-tiefe"> </a><hr/><p>Entry 5 - fullUrl = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-melanom-breslow-tiefe</p><p>Resource Observation:</p><blockquote><p class="res-header-id"/><a name="mii-exa-onko-melanom-bundle/mii-exa-onko-melanom-breslow-tiefe"> </a><a name="hcmii-exa-onko-melanom-bundle/mii-exa-onko-melanom-breslow-tiefe"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: de</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-melanom-breslow-tiefe.html">MII PR Onkologie Melanom Breslow Tiefe</a></p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 106243009}">Breslow depth staging for melanoma of skin (observable entity)</span></p><p><b>subject</b>: <a href="Patient-mii-exa-onko-melanom-bundle-patient.html">Maria Melanom  (no stated gender), DoB Unknown</a></p><p><b>focus</b>: <a href="Condition-mii-exa-onko-melanom-diagnose.html">Condition Bösartiges Melanom der Haut, nicht näher bezeichnet</a></p><p><b>encounter</b>: <a href="Encounter-mii-exa-onko-melanom-bundle-encounter.html">Encounter: status = finished; class = inpatient encounter (ActCode#IMP)</a></p><p><b>effective</b>: 2024-03-20 14:30:00+0100</p><p><b>value</b>: 2.1 mm<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemm = 'mm')</span></p><p><b>method</b>: <span title="Codes:{http://snomed.info/sct 117617002}">Immunohistochemistry procedure</span></p></blockquote><p>Request:</p><pre>POST Observation
+</pre><a name="https-//www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-melanom-ulzeration"> </a><a name="Observation_mii-exa-onko-melanom-ulzeration"> </a><a name="hcObservation_mii-exa-onko-melanom-ulzeration"> </a><hr/><p>Entry 6 - fullUrl = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-melanom-ulzeration</p><p>Resource Observation:</p><blockquote><p class="res-header-id"/><a name="mii-exa-onko-melanom-bundle/mii-exa-onko-melanom-ulzeration"> </a><a name="hcmii-exa-onko-melanom-bundle/mii-exa-onko-melanom-ulzeration"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: de</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-melanom-ulzeration.html">MII PR Onkologie Melanom Ulzeration</a></p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 6270001000004106}">Presence of ulcer in primary malignant melanoma of skin (observable entity)</span></p><p><b>subject</b>: <a href="Patient-mii-exa-onko-melanom-bundle-patient.html">Maria Melanom  (no stated gender), DoB Unknown</a></p><p><b>focus</b>: <a href="Condition-mii-exa-onko-melanom-diagnose.html">Condition Bösartiges Melanom der Haut, nicht näher bezeichnet</a></p><p><b>encounter</b>: <a href="Encounter-mii-exa-onko-melanom-bundle-encounter.html">Encounter: status = finished; class = inpatient encounter (ActCode#IMP)</a></p><p><b>effective</b>: 2024-03-20 14:30:00+0100</p><p><b>value</b>: <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-melanom-ulzeration J}">Ja</span></p><p><b>method</b>: <span title="Codes:{http://snomed.info/sct 117617002}">Immunohistochemistry procedure</span></p></blockquote><p>Request:</p><pre>POST Observation
+</pre><a name="https-//www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-melanom-ldh"> </a><a name="Observation_mii-exa-onko-melanom-ldh"> </a><a name="hcObservation_mii-exa-onko-melanom-ldh"> </a><hr/><p>Entry 7 - fullUrl = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-melanom-ldh</p><p>Resource Observation:</p><blockquote><p class="res-header-id"/><a name="mii-exa-onko-melanom-bundle/mii-exa-onko-melanom-ldh"> </a><a name="hcmii-exa-onko-melanom-bundle/mii-exa-onko-melanom-ldh"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: de</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-melanom-ldh.html">MII PR Onkologie Melanom LDH</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 14804-9}">Lactate dehydrogenase [Enzymatic activity/volume] in Serum or Plasma by Lactate to pyruvate reaction</span></p><p><b>subject</b>: <a href="Patient-mii-exa-onko-melanom-bundle-patient.html">Maria Melanom  (no stated gender), DoB Unknown</a></p><p><b>focus</b>: <a href="Condition-mii-exa-onko-melanom-diagnose.html">Condition Bösartiges Melanom der Haut, nicht näher bezeichnet</a></p><p><b>encounter</b>: <a href="Encounter-mii-exa-onko-melanom-bundle-encounter.html">Encounter: status = finished; class = inpatient encounter (ActCode#IMP)</a></p><p><b>effective</b>: 2024-03-18 08:30:00+0100</p><p><b>value</b>: 280 U/L<span style="background: LightGoldenRodYellow"> (Details: UCUM  codeU/L = 'U/L')</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation H}">High</span></p><h3>ReferenceRanges</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Low</b></td><td><b>High</b></td><td><b>Text</b></td></tr><tr><td style="display: none">*</td><td>135 U/L<span style="background: LightGoldenRodYellow"> (Details: UCUM  codeU/L = 'U/L')</span></td><td>250 U/L<span style="background: LightGoldenRodYellow"> (Details: UCUM  codeU/L = 'U/L')</span></td><td><div><p>135-250 U/L</p>
+</div></td></tr></table></blockquote><p>Request:</p><pre>POST Observation
+</pre><a name="https-//www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-melanom-exzision-oberarm"> </a><a name="Procedure_mii-exa-onko-melanom-exzision-oberarm"> </a><a name="hcProcedure_mii-exa-onko-melanom-exzision-oberarm"> </a><hr/><p>Entry 8 - fullUrl = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-melanom-exzision-oberarm</p><p>Resource Procedure:</p><blockquote><p class="res-header-id"/><a name="mii-exa-onko-melanom-bundle/mii-exa-onko-melanom-exzision-oberarm"> </a><a name="hcmii-exa-onko-melanom-bundle/mii-exa-onko-melanom-exzision-oberarm"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: de</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-melanom-exzision.html">MII PR Onko Melanom Exzision</a> version: 2027.0.0-ballot.rc1</p></div><p><b>MII EX Onko Operation Intention</b>: <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention K}">kurativ</span></p><p><b>status</b>: Completed</p><p><b>category</b>: <span title="Codes:{http://snomed.info/sct 387713003}">Surgical procedure</span></p><p><b>code</b>: <span title="Codes:{http://fhir.de/CodeSystem/bfarm/ops 5-894.06}, {http://snomed.info/sct 177281002}">Lokale Exzision von erkranktem Gewebe an Haut und Unterhaut: Ohne primären Wundverschluss: Schulter und Axilla</span></p><p><b>subject</b>: <a href="Patient-mii-exa-onko-melanom-bundle-patient.html">Maria Melanom  (no stated gender), DoB Unknown</a></p><p><b>bodySite</b>: <span title="Codes:{http://snomed.info/sct 368208006}">Left upper arm structure</span></p><p><b>outcome</b>: <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus R0}">Kein Residualtumor</span></p></blockquote><p>Request:</p><pre>POST Procedure
+</pre></div>
+
+  
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
+          Package de.medizininformatikinitiative.kerndatensatz.onkologie#2027.0.0-ballot.rc1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Erstellt <span title="Thu, Sep 3, 2026 07:02+0000">2026-09-03</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+            <!-- Branding override for the fhir2.base.template footer fragment.
+     Unlike header/css, the base footer fragment is NOT an empty placeholder: it
+     renders "Links: Table of Contents | QA Report [| feedback dashboards]".
+     The base uses site.data.stringsBase[include.lang][...] for the labels. The
+     reason this override supplies its own is the Imprint label: the base ships no
+     stringsBase key for it and a child template cannot add one (docs/styleguide.md
+     section 6), and the same include.lang branch then has to carry the other
+     labels too. (The blank-label problem that first motivated this is separately
+     mitigated: this repo vendors the base's own German catalogs into
+     translations/ — see translations/README.md.) The override preserves the base
+     links (TOC, QA, feedback dashboards) and appends the project information links.
+     NUM-DIZ takes over IG development and maintenance when MII funding ends
+     (end-2026), so the NUM-DIZ website link renders BEFORE the MII website link —
+     in BOTH brand designs and both languages; the MII links stay because the
+     modules remain MII content. Both anchors are the SITE ROOTS with the bare
+     domain as anchor text (TF-KDS feedback 2026-08-14: aligned anchor style;
+     domains are language-neutral, styleguide §6).
+     Imprint: points at the NUM-DIZ website's legal pages since 2026-08-14
+     (TF-KDS: NUM-DIZ takes over from MII in 2027, so legal-aspect links use
+     the NUM-DIZ counterpart where one exists) - German /impressum and English
+     /en/legal-notice (both verified HTTP 200 on 2026-08-14). -->
+
+          Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Inhaltsverzeichnis</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA-Bericht</a>
+                 
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.netzwerk-universitaetsmedizin.de/">netzwerk-universitaetsmedizin.de</a>
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.medizininformatik-initiative.de/">medizininformatik-initiative.de</a>
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.netzwerk-universitaetsmedizin.de/impressum">Impressum</a>
+                 <br/>
+                 <!-- HL7 trademark attribution (required wherever the FHIR flame
+                      renders - the header shows it on every page; see HL7's
+                      trademark guidelines; permission request tracked in issue #109). The sentence is
+                      HL7's prescribed formula and stays in English on every
+                      language's pages (legal wording, styleguide §6). -->
+                 <span>HL7®, FHIR® and the FHIR flame design are registered trademarks of Health Level Seven International. Their use does not constitute endorsement by HL7.</span>
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

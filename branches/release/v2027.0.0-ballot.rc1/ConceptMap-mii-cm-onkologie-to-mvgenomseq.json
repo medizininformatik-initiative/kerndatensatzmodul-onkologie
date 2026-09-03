@@ -1,0 +1,310 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "mii-cm-onkologie-to-mvgenomseq",
+  "meta" : {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-license",
+      "valueCode" : "CC-BY-4.0"
+    },
+    {
+      "extension" : [{
+        "url" : "packageId",
+        "valueId" : "de.medizininformatikinitiative.kerndatensatz.onkologie"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/package-source"
+    },
+    {
+      "url" : "version",
+      "valueString" : "2026.0.3"
+    }],
+    "profile" : ["http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableconceptmap",
+    "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishableconceptmap"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap mii-cm-onkologie-to-mvgenomseq</b></p><a name=\"mii-cm-onkologie-to-mvgenomseq\"> </a><a name=\"hcmii-cm-onkologie-to-mvgenomseq\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-shareableconceptmap.html\">CRMI Shareable ConceptMap</a>, <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-publishableconceptmap.html\">CRMI Publishable ConceptMap</a></p></div><p>Mapping from https://www.medizininformatik-initiative.de/fhir/ext/modul-onkologie/ to https://www.bfarm.de/DE/Das-BfArM/Aufgaben/Modellvorhaben-Genomsequenzierung</p><br/><p><b>Group 1 </b>Mapping from <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor|2026.0.3</code> to <code>https://github.com/BfArM-MVH/MVGenomseq_KDK/blob/main/KDK/OncologyCase.json|1.1.1</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>Condition.code (Diagnose Primärtumor)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>diagnosisOD.mainDiagnosis (Haupttumordiagnose)</td><td>Abbildung über ICD-10-GM-Coding Code/System/Version</td></tr><tr><td>Condition.extension:Feststellungsdatum (Feststellungsdatum)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>diagnosisOD.diagnosisDate (Datum der Diagnose)</td><td>Wenn Tag unbekannt, soll auf 15. gesetzt werden</td></tr><tr><td>Condition.bodySite.coding:icd-o-3.code (ICD-O-3 Topographie)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>diagnosisOD.topography.code (ICD-O-3 Topographie)</td><td/></tr><tr><td>Condition.bodySite.coding:icd-o-3.version (ICD-O-3 Version)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>diagnosisOD.topography.version (ICD-O-3 Version)</td><td/></tr><tr><td>Condition.extension:morphology-behavior-icdo3.valueCodeableConcept.coding.code (ICD-O-3 Morphologie-Code)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>diagnosisOD.histology.code (ICD-O-3 Morphologie)</td><td/></tr></table><hr/><p><b>Group 2 </b>Mapping from <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-diagnose/StructureDefinition/Diagnose|2026.0.3</code> to <code>https://github.com/BfArM-MVH/MVGenomseq_KDK/blob/main/KDK/OncologyCase.json|1.1.1</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>Condition.code.coding (Diagnosecode)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-narrower\" title=\"narrower\">narrower</a></td><td>diagnosisOD.additionalDiagnoses (Diagnosecode)</td><td>Abbildung über ICD-10-GM/OrphaCode/AlphaID jeweils mit Code/System/Version. Hier hauptsächlich relevante onkologische Begleit- und Vorerkrankungen. Diagnostizierte Keimbahnerkrankungen sind ueber diagnosisOD.germlineDiagnosisCode zu uebermitteln.</td></tr><tr><td>Condition.extension:Feststellungsdatum (Feststellungsdatum)</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Kein Zielfeld: diagnosisOD.additionalDiagnoses ist im Datenkranz ein reines Coding-Array ohne Datumsattribut. Ein Feststellungsdatum je Nebendiagnose kann nicht uebermittelt werden; diagnosisOD.diagnosisDate bezieht sich auf die Hauptdiagnose.</td></tr><tr><td>Condition.code.coding (Diagnosecode)</td><td colspan=\"3\" style=\"background-color: #efefef\">(not mapped)</td></tr></table><hr/><p><b>Group 3 </b>Mapping from <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-ecog|2026.0.3</code> to <code>https://github.com/BfArM-MVH/MVGenomseq_KDK/blob/main/KDK/OncologyCase.json|1.1.1</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>Observation.valueCodeableConcept.coding.code (ECOG-Performance-Status)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>diagnosisOD.ECOGPerformanceStatusScore (ECOG-Performance-Status)</td></tr></table><hr/><p><b>Group 4 </b>Mapping from <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-grading|2026.0.3</code> to <code>https://github.com/BfArM-MVH/MVGenomseq_KDK/blob/main/KDK/OncologyCase.json|1.1.1</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>Observation.valueCodeableConcept.coding.code (Histologisches Grading)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>diagnosisOD.grading (Histologisches Grading)</td></tr></table><hr/><p><b>Group 5 </b>Mapping from <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation|2026.0.3</code> to <code>https://github.com/BfArM-MVH/MVGenomseq_KDK/blob/main/KDK/OncologyCase.json|1.1.1</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>Observation.valueCodeableConcept.coding.code (TNM-Klassifikation)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>diagnosisOD.ECOGPerformanceStatusScore (TNM-KLassifkation)</td><td>für Primärtherapie entscheidendes TNM(auswerterelevanter TNM)</td></tr><tr><td>Observation.valueCodeableConcept.coding.code (TNM-T-Kategorie)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>diagnosisOD.ECOGPerformanceStatusScore (TNM-KLassifkation)</td><td/></tr><tr><td>Observation.valueCodeableConcept.coding.code (TNM-N-Kategorie)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>diagnosisOD.ECOGPerformanceStatusScore (TNM-KLassifkation)</td><td/></tr><tr><td>Observation.valueCodeableConcept.coding.code (TNM-M-Kategorie)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>diagnosisOD.ECOGPerformanceStatusScore (TNM-KLassifkation)</td><td/></tr></table></div><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap mii-cm-onkologie-to-mvgenomseq</b></p><a name=\"de-mii-cm-onkologie-to-mvgenomseq\"> </a><a name=\"de-hcmii-cm-onkologie-to-mvgenomseq\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-shareableconceptmap.html\">CRMI Shareable ConceptMap</a>, <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-publishableconceptmap.html\">CRMI Publishable ConceptMap</a></p></div><p>Mapping from https://www.medizininformatik-initiative.de/fhir/ext/modul-onkologie/ to https://www.bfarm.de/DE/Das-BfArM/Aufgaben/Modellvorhaben-Genomsequenzierung</p><br/><p><b>Group 1 </b>Mapping from <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor|2026.0.3</code> to <code>https://github.com/BfArM-MVH/MVGenomseq_KDK/blob/main/KDK/OncologyCase.json|1.1.1</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>Condition.code (Diagnose Primärtumor)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>diagnosisOD.mainDiagnosis (Haupttumordiagnose)</td><td>Abbildung über ICD-10-GM-Coding Code/System/Version</td></tr><tr><td>Condition.extension:Feststellungsdatum (Feststellungsdatum)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>diagnosisOD.diagnosisDate (Datum der Diagnose)</td><td>Wenn Tag unbekannt, soll auf 15. gesetzt werden</td></tr><tr><td>Condition.bodySite.coding:icd-o-3.code (ICD-O-3 Topographie)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>diagnosisOD.topography.code (ICD-O-3 Topographie)</td><td/></tr><tr><td>Condition.bodySite.coding:icd-o-3.version (ICD-O-3 Version)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>diagnosisOD.topography.version (ICD-O-3 Version)</td><td/></tr><tr><td>Condition.extension:morphology-behavior-icdo3.valueCodeableConcept.coding.code (ICD-O-3 Morphologie-Code)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>diagnosisOD.histology.code (ICD-O-3 Morphologie)</td><td/></tr></table><hr/><p><b>Group 2 </b>Mapping from <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-diagnose/StructureDefinition/Diagnose|2026.0.3</code> to <code>https://github.com/BfArM-MVH/MVGenomseq_KDK/blob/main/KDK/OncologyCase.json|1.1.1</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>Condition.code.coding (Diagnosecode)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-narrower\" title=\"narrower\">narrower</a></td><td>diagnosisOD.additionalDiagnoses (Diagnosecode)</td><td>Abbildung über ICD-10-GM/OrphaCode/AlphaID jeweils mit Code/System/Version. Hier hauptsächlich relevante onkologische Begleit- und Vorerkrankungen. Diagnostizierte Keimbahnerkrankungen sind ueber diagnosisOD.germlineDiagnosisCode zu uebermitteln.</td></tr><tr><td>Condition.extension:Feststellungsdatum (Feststellungsdatum)</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Kein Zielfeld: diagnosisOD.additionalDiagnoses ist im Datenkranz ein reines Coding-Array ohne Datumsattribut. Ein Feststellungsdatum je Nebendiagnose kann nicht uebermittelt werden; diagnosisOD.diagnosisDate bezieht sich auf die Hauptdiagnose.</td></tr><tr><td>Condition.code.coding (Diagnosecode)</td><td colspan=\"3\" style=\"background-color: #efefef\">(not mapped)</td></tr></table><hr/><p><b>Group 3 </b>Mapping from <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-ecog|2026.0.3</code> to <code>https://github.com/BfArM-MVH/MVGenomseq_KDK/blob/main/KDK/OncologyCase.json|1.1.1</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>Observation.valueCodeableConcept.coding.code (ECOG-Performance-Status)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>diagnosisOD.ECOGPerformanceStatusScore (ECOG-Performance-Status)</td></tr></table><hr/><p><b>Group 4 </b>Mapping from <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-grading|2026.0.3</code> to <code>https://github.com/BfArM-MVH/MVGenomseq_KDK/blob/main/KDK/OncologyCase.json|1.1.1</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>Observation.valueCodeableConcept.coding.code (Histologisches Grading)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>diagnosisOD.grading (Histologisches Grading)</td></tr></table><hr/><p><b>Group 5 </b>Mapping from <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation|2026.0.3</code> to <code>https://github.com/BfArM-MVH/MVGenomseq_KDK/blob/main/KDK/OncologyCase.json|1.1.1</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>Observation.valueCodeableConcept.coding.code (TNM-Klassifikation)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>diagnosisOD.ECOGPerformanceStatusScore (TNM-KLassifkation)</td><td>für Primärtherapie entscheidendes TNM(auswerterelevanter TNM)</td></tr><tr><td>Observation.valueCodeableConcept.coding.code (TNM-T-Kategorie)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>diagnosisOD.ECOGPerformanceStatusScore (TNM-KLassifkation)</td><td/></tr><tr><td>Observation.valueCodeableConcept.coding.code (TNM-N-Kategorie)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>diagnosisOD.ECOGPerformanceStatusScore (TNM-KLassifkation)</td><td/></tr><tr><td>Observation.valueCodeableConcept.coding.code (TNM-M-Kategorie)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>diagnosisOD.ECOGPerformanceStatusScore (TNM-KLassifkation)</td><td/></tr></table></div></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+    "valueCode" : "shareable"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+    "valueCode" : "publishable"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes",
+        "code" : "package",
+        "display" : "Package"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
+    "valueDate" : "2026-01-03"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-topic",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+        "code" : "C3262"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-author",
+    "valueContactDetail" : {
+      "telecom" : [{
+        "system" : "email",
+        "value" : "thomas.debertshaeuser@charite.de"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-editor",
+    "valueContactDetail" : {
+      "name" : "Taskforce Core Data Set"
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
+    "valueContactDetail" : {
+      "name" : "Interoperability Working Group",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
+    "valueContactDetail" : {
+      "name" : "National Steering Committee",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
+    "valueContactDetail" : {
+      "name" : "Interoperability Working Group",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
+    "valueContactDetail" : {
+      "name" : "National Steering Committee",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
+    "valueCoding" : {
+      "system" : "http://hl7.org/fhir/version-algorithm",
+      "code" : "semver",
+      "display" : "SemVer"
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+    "valuePeriod" : {
+      "start" : "2026"
+    }
+  }],
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onkologie-to-mvgenomseq",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_CM_MVGenomSeq_Onkologie",
+  "title" : "MII Concept Map Modellvorhaben Genomsequenzierung Onkologie",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2025-04-25",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "Mapping der einzelnen MII-Onkologieprofile auf den Klinischen Datenkranz der Modellvorhaben-Genomsequenzierung. ABGRENZUNG: Diese ConceptMap deckt bewusst nur OncologyCase.json ab — die klinischen Falldaten, die im KDS-Modul Onkologie gefuehrt werden. Die uebrigen Schemata des Datenkranzes (OncologyMolecular, OncologyPlan, OncologyFollowUp, Oncology) betreffen die molekulare Diagnostik und die Therapieplanung des Molekularen Tumorboards und werden im KDS-Modul MTB abgebildet, nicht hier. Zielfelder gegen mvgenomseq_schemas/2024-12/OncologyCase.json verifiziert.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "purpose" : "Das Ziel dieser ConceptMap ist die Abbildung der MII-OnkologieProfile auf den MVGenomSeq-Datenkranz. Die ConceptMap ist ein Teil des MII-Onkologiemoduls und soll den Datenintegrationszentren das Erstellen von harmonisierbaren ETL-Strecken erleichtern.",
+  "sourceUri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onkologie/",
+  "targetUri" : "https://www.bfarm.de/DE/Das-BfArM/Aufgaben/Modellvorhaben-Genomsequenzierung",
+  "group" : [{
+    "source" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor",
+    "sourceVersion" : "2026.0.3",
+    "target" : "https://github.com/BfArM-MVH/MVGenomseq_KDK/blob/main/KDK/OncologyCase.json",
+    "targetVersion" : "1.1.1",
+    "element" : [{
+      "code" : "Condition.code",
+      "display" : "Diagnose Primärtumor",
+      "target" : [{
+        "code" : "diagnosisOD.mainDiagnosis",
+        "display" : "Haupttumordiagnose",
+        "equivalence" : "equivalent",
+        "comment" : "Abbildung über ICD-10-GM-Coding Code/System/Version"
+      }]
+    },
+    {
+      "code" : "Condition.extension:Feststellungsdatum",
+      "display" : "Feststellungsdatum",
+      "target" : [{
+        "code" : "diagnosisOD.diagnosisDate",
+        "display" : "Datum der Diagnose",
+        "equivalence" : "equivalent",
+        "comment" : "Wenn Tag unbekannt, soll auf 15. gesetzt werden"
+      }]
+    },
+    {
+      "code" : "Condition.bodySite.coding:icd-o-3.code",
+      "display" : "ICD-O-3 Topographie",
+      "target" : [{
+        "code" : "diagnosisOD.topography.code",
+        "display" : "ICD-O-3 Topographie",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "Condition.bodySite.coding:icd-o-3.version",
+      "display" : "ICD-O-3 Version",
+      "target" : [{
+        "code" : "diagnosisOD.topography.version",
+        "display" : "ICD-O-3 Version",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "Condition.extension:morphology-behavior-icdo3.valueCodeableConcept.coding.code",
+      "display" : "ICD-O-3 Morphologie-Code",
+      "target" : [{
+        "code" : "diagnosisOD.histology.code",
+        "display" : "ICD-O-3 Morphologie",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-diagnose/StructureDefinition/Diagnose",
+    "sourceVersion" : "2026.0.3",
+    "target" : "https://github.com/BfArM-MVH/MVGenomseq_KDK/blob/main/KDK/OncologyCase.json",
+    "targetVersion" : "1.1.1",
+    "element" : [{
+      "code" : "Condition.code.coding",
+      "display" : "Diagnosecode",
+      "target" : [{
+        "code" : "diagnosisOD.additionalDiagnoses",
+        "display" : "Diagnosecode",
+        "equivalence" : "narrower",
+        "comment" : "Abbildung über ICD-10-GM/OrphaCode/AlphaID jeweils mit Code/System/Version. Hier hauptsächlich relevante onkologische Begleit- und Vorerkrankungen. Diagnostizierte Keimbahnerkrankungen sind ueber diagnosisOD.germlineDiagnosisCode zu uebermitteln."
+      }]
+    },
+    {
+      "code" : "Condition.extension:Feststellungsdatum",
+      "display" : "Feststellungsdatum",
+      "target" : [{
+        "equivalence" : "unmatched",
+        "comment" : "Kein Zielfeld: diagnosisOD.additionalDiagnoses ist im Datenkranz ein reines Coding-Array ohne Datumsattribut. Ein Feststellungsdatum je Nebendiagnose kann nicht uebermittelt werden; diagnosisOD.diagnosisDate bezieht sich auf die Hauptdiagnose."
+      }]
+    },
+    {
+      "code" : "Condition.code.coding",
+      "display" : "Diagnosecode",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    }]
+  },
+  {
+    "source" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-ecog",
+    "sourceVersion" : "2026.0.3",
+    "target" : "https://github.com/BfArM-MVH/MVGenomseq_KDK/blob/main/KDK/OncologyCase.json",
+    "targetVersion" : "1.1.1",
+    "element" : [{
+      "code" : "Observation.valueCodeableConcept.coding.code",
+      "display" : "ECOG-Performance-Status",
+      "target" : [{
+        "code" : "diagnosisOD.ECOGPerformanceStatusScore",
+        "display" : "ECOG-Performance-Status",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-grading",
+    "sourceVersion" : "2026.0.3",
+    "target" : "https://github.com/BfArM-MVH/MVGenomseq_KDK/blob/main/KDK/OncologyCase.json",
+    "targetVersion" : "1.1.1",
+    "element" : [{
+      "code" : "Observation.valueCodeableConcept.coding.code",
+      "display" : "Histologisches Grading",
+      "target" : [{
+        "code" : "diagnosisOD.grading",
+        "display" : "Histologisches Grading",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation",
+    "sourceVersion" : "2026.0.3",
+    "target" : "https://github.com/BfArM-MVH/MVGenomseq_KDK/blob/main/KDK/OncologyCase.json",
+    "targetVersion" : "1.1.1",
+    "element" : [{
+      "code" : "Observation.valueCodeableConcept.coding.code",
+      "display" : "TNM-Klassifikation",
+      "target" : [{
+        "code" : "diagnosisOD.ECOGPerformanceStatusScore",
+        "display" : "TNM-KLassifkation",
+        "equivalence" : "equivalent",
+        "comment" : "für Primärtherapie entscheidendes TNM(auswerterelevanter TNM)"
+      }]
+    },
+    {
+      "code" : "Observation.valueCodeableConcept.coding.code",
+      "display" : "TNM-T-Kategorie",
+      "target" : [{
+        "code" : "diagnosisOD.ECOGPerformanceStatusScore",
+        "display" : "TNM-KLassifkation",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "Observation.valueCodeableConcept.coding.code",
+      "display" : "TNM-N-Kategorie",
+      "target" : [{
+        "code" : "diagnosisOD.ECOGPerformanceStatusScore",
+        "display" : "TNM-KLassifkation",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "Observation.valueCodeableConcept.coding.code",
+      "display" : "TNM-M-Kategorie",
+      "target" : [{
+        "code" : "diagnosisOD.ECOGPerformanceStatusScore",
+        "display" : "TNM-KLassifkation",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  }]
+}

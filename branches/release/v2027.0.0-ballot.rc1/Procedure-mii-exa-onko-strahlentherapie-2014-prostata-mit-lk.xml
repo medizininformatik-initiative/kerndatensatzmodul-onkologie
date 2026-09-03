@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Procedure xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-onko-strahlentherapie-2014-prostata-mit-lk"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie|2027.0.0-ballot.rc1"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Procedure mii-exa-onko-strahlentherapie-2014-prostata-mit-lk</b></p><a name="mii-exa-onko-strahlentherapie-2014-prostata-mit-lk"> </a><a name="hcmii-exa-onko-strahlentherapie-2014-prostata-mit-lk"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie.html">MII PR Onkologie Strahlentherapie</a> version: 2027.0.0-ballot.rc1</p></div><p><b>MII EX Onko Strahlentherapie Bestrahlung Gesamtdosis</b>: 78 Gy<span style="background: LightGoldenRodYellow"> (Details: UCUM  codeGy = 'Gy')</span></p><p><b>MII EX Onko Strahlentherapie Bestrahlung Einzeldosis</b>: 2 Gy<span style="background: LightGoldenRodYellow"> (Details: UCUM  codeGy = 'Gy')</span></p><p><b>status</b>: Completed</p><p><b>category</b>: <span title="Codes:{http://snomed.info/sct 1287742003}">Radiotherapy (procedure)</span></p><p><b>code</b>: <span title="Codes:{http://fhir.de/CodeSystem/bfarm/ops 8-522}">Hochvoltstrahlentherapie</span></p><p><b>subject</b>: <a href="Patient-example.html">Erika Beispiel  Female, DoB: 1965-04-12</a></p><p><b>encounter</b>: <a href="Encounter-example.html">Encounter: status = finished; class = ambulatory (ActCode#AMB)</a></p><p><b>performed</b>: 2023-05-10 --&gt; 2023-07-15</p><p><b>reasonReference</b>: <a href="Condition-primaertumor-example.html">Condition Bösartige Neubildung: Brustdrüse, nicht näher bezeichnet</a></p><p><b>bodySite</b>: <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet-2014 5.4.+}">Prostata mit Lk</span></p></div><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Procedure mii-exa-onko-strahlentherapie-2014-prostata-mit-lk</b></p><a name="de-mii-exa-onko-strahlentherapie-2014-prostata-mit-lk"> </a><a name="de-hcmii-exa-onko-strahlentherapie-2014-prostata-mit-lk"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie.html">MII PR Onkologie Strahlentherapie</a> version: 2027.0.0-ballot.rc1</p></div><p><b>MII EX Onko Strahlentherapie Bestrahlung Gesamtdosis</b>: 78 Gy<span style="background: LightGoldenRodYellow"> (Details: UCUM  codeGy = 'Gy')</span></p><p><b>MII EX Onko Strahlentherapie Bestrahlung Einzeldosis</b>: 2 Gy<span style="background: LightGoldenRodYellow"> (Details: UCUM  codeGy = 'Gy')</span></p><p><b>status</b>: Completed</p><p><b>category</b>: <span title="Codes:{http://snomed.info/sct 1287742003}">Radiotherapy (procedure)</span></p><p><b>code</b>: <span title="Codes:{http://fhir.de/CodeSystem/bfarm/ops 8-522}">Hochvoltstrahlentherapie</span></p><p><b>subject</b>: <a href="Patient-example.html">Erika Beispiel  Female, DoB: 1965-04-12</a></p><p><b>encounter</b>: <a href="Encounter-example.html">Encounter: status = finished; class = ambulatory (ActCode#AMB)</a></p><p><b>performed</b>: 2023-05-10 --&gt; 2023-07-15</p><p><b>reasonReference</b>: <a href="Condition-primaertumor-example.html">Condition Bösartige Neubildung: Brustdrüse, nicht näher bezeichnet</a></p><p><b>bodySite</b>: <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet-2014 5.4.+}">Prostata mit Lk</span></p></div></div>
+  </text>
+  <extension url="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-gesamtdosis">
+    <valueQuantity>
+      <value value="78"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="Gy"/>
+    </valueQuantity>
+  </extension>
+  <extension url="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-einzeldosis">
+    <valueQuantity>
+      <value value="2"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="Gy"/>
+    </valueQuantity>
+  </extension>
+  <status value="completed"/>
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="1287742003"/>
+      <display value="Radiotherapy (procedure)"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://fhir.de/CodeSystem/bfarm/ops"/>
+      <version value="2024"/>
+      <code value="8-522"/>
+      <display value="Hochvoltstrahlentherapie"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/example"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/example"/>
+  </encounter>
+  <performedPeriod>
+    <start value="2023-05-10"/>
+    <end value="2023-07-15"/>
+  </performedPeriod>
+  <reasonReference>
+    <reference value="Condition/primaertumor-example"/>
+  </reasonReference>
+  <bodySite>
+    <coding>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet-2014"/>
+      <code value="5.4.+"/>
+      <display value="Prostata mit Lk"/>
+    </coding>
+  </bodySite>
+</Procedure>

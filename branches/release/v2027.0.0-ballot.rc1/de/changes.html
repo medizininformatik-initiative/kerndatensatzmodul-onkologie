@@ -1,0 +1,1011 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+<html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Änderungshistorie - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Branding override for the fhir2.base.template CSS placeholder
+     (base ships includes/fragment-css.html as a single comment; it is included
+     in <head> AFTER all base stylesheets, so the linked files win the
+     cascade).
+     Load model (docs/styleguide.md §1/§10): bootstrap-accessibility.css
+     (PayPal Bootstrap Accessibility Plugin v1.0.7, vendored + pinned - §8)
+     patches Bootstrap-3 component styling for accessibility (focus outlines,
+     alert contrast) and loads FIRST so the template's own rules can override;
+     then template-base.css carries the
+     brand-INDEPENDENT rule blocks and always loads; then EXACTLY ONE palette
+     file follows - num-diz.css, the DEFAULT design, unless the consuming IG
+     ships input/data/brand.json with { "design": "mii" } (read as
+     site.data.brand.design via the base's input/data -> _data pre-process),
+     which selects mii.css instead. Only the exact value 'mii' selects the
+     MII design; anything else - including no brand.json at all and unknown
+     values - renders NUM-DIZ. Both palettes declare the same variable set
+     (scripts/brand-switch.test.mjs). -->
+<link href="assets/css/bootstrap-accessibility.css" rel="stylesheet"/>
+<link href="assets/css/template-base.css" rel="stylesheet"/>
+
+<link href="assets/css/num-diz.css" rel="stylesheet"/>
+
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"13"}
+    h3,h4,h5,h6{--heading-prefix:"13"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Branding override for the fhir2.base.template header placeholder
+     (base ships includes/fragment-header.html as a single comment; it is included
+     inside "#segment-header > .container", before the #ig-status block).
+     Language handling: only the asset and its descriptive alt text switch on
+     include.lang (the pattern kerndatensatz-basis uses); no translatable UI
+     strings are hard-coded.
+     Brand handling: the project logo additionally switches on
+     site.data.brand.design (input/data/brand.json in the consuming IG, see
+     docs/styleguide.md §10). Only the exact value 'mii' selects the MII
+     logos - anything else, including no brand.json at all, falls through to
+     the NUM-DIZ default.
+     Two logos, mirroring kerndatensatz-basis: the HL7 FHIR logo (links to the
+     FHIR spec) in #family-nav, and the project logo in #project-nav.
+     fhir-logo-www.png is shipped by fhir2.base.template
+     (content/assets/images/), so it resolves from the inherited assets without
+     shipping it here. -->
+<div id="family-nav">
+  <a id="family-logo" no-external="true" href="https://hl7.org/fhir">
+    <img height="50" alt="HL7 FHIR" src="assets/images/fhir-logo-www.png"/>
+  </a>
+</div>
+<div id="project-nav">
+
+  <a id="project-logo" no-external="true" href="https://www.netzwerk-universitaetsmedizin.de/forschung/num-diz">
+
+    <img height="50" alt="NUM-DIZ (Netzwerk Universitätsmedizin — Datenintegrationszentrum)" src="assets/images/logo-num-diz-de.svg"/>
+
+  </a>
+
+</div>
+<!-- Font-size control (A / A+ / A++): three reader-selectable levels; level A
+     is the untouched default. Logic in assets/js/font-size-control.js, the
+     zoom mapping + button styling in template-base.css ("font-size control"
+     block). All three buttons read "A" — the button's own font size shows the level; labels are language-neutral; only the aria texts switch
+     on include.lang. REMOVAL: delete this block, the js file and the CSS
+     block - one commit, styleguide §5a. -->
+
+<div class="ig-fontsize" role="group" aria-label="Schriftgröße">
+  <button type="button" data-level="0" aria-pressed="true" aria-label="Schriftgröße: Standard">A</button>
+  <button type="button" data-level="1" aria-pressed="false" aria-label="Schriftgröße: größer">A</button>
+  <button type="button" data-level="2" aria-pressed="false" aria-label="Schriftgröße: am größten">A</button>
+</div>
+
+<script src="assets/js/font-size-control.js" defer></script>
+<!-- PayPal Bootstrap Accessibility Plugin v1.0.7 (vendored + pinned, §8):
+     patches the Bootstrap-3 components the publisher renders - navbar
+     dropdowns gain ARIA menu semantics + arrow-key navigation, tab panels
+     (structure-tabs) the full ARIA tabs pattern, alerts live-region
+     announcements. `defer` guarantees it executes AFTER the parser-inserted
+     bootstrap.min.js at the end of the body. Vendored from
+     paypal/bootstrap-accessibility-plugin @ v1.0.7 (the admin-ch fork was
+     evaluated and rejected: 151 commits behind upstream, its 6 deltas are
+     site-specific tab tweaks). REMOVAL: delete this tag, both vendored
+     assets and the fragment-css link - guard test pins the hashes. -->
+<script src="assets/js/bootstrap-accessibility.min.js" defer></script>
+<!-- Back-to-top button: appears after one viewport of scrolling (logic in
+     assets/js/back-to-top.js, styling in template-base.css "back-to-top"
+     block). Rendered here inside #segment-header, which is OUTSIDE the
+     data-fontsize zoom regions, so the fixed button never scales. REMOVAL:
+     this block, the js file and the CSS block - one commit, styleguide §8. -->
+
+<button type="button" class="ig-back-to-top" aria-label="Zurück zum Seitenanfang">↑</button>
+
+<script src="assets/js/back-to-top.js" defer></script>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">MII IG Kerndatensatz-Modul Onkologie</span>
+            <br/>
+            <span style="display:inline-block;">2027.0.0-ballot.rc1 - 
+
+
+
+  Germany
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- German translation of input/includes/menu.xml.
+     Keep the href targets IDENTICAL to the source menu; translate only labels.
+     Structure notes (OPTIONAL entries, link-only entries, the interim
+     meta-wiki links) are documented in the source menu's header and in
+     docs/page-structure.md / docs/optional-pages.md. -->
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">Startseite</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="guidance.html" class="dropdown-toggle">Anleitung<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="guidance.html">Anleitung</a></li>
+      <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="researcher-guidance.html">Anleitung für Forschende (optional)</a></li>
+      <li><a href="implementer-guidance.html">Anleitung für Implementierende</a></li>
+      <!-- Nur-Link-Eintrag: die Seite "Logische Modelle" (Begründung im Quell-Menü) -->
+      <li><a href="datasets-and-descriptions.html">Datensätze inkl. Beschreibungen</a></li>
+      <li><a href="uml-diagrams.html">UML-Diagramme</a></li>
+      <li><a href="anwendungsfaelle-informationsmodell.html">Anwendungsfälle und Informationsmodell</a></li>
+      <li><a href="icd-o-terminologie.html">ICD-O: Revisionen und Validierung</a></li>
+      <li><a href="atc-terminologie.html">ATC: Jahresversionen und Überleitungen</a></li>
+      <li><a href="weitere-klassifikationen-terminologien.html">Weitere Klassifikationen: Terminologien</a></li>
+      <li><a href="tumormarker-loinc.html">Tumormarker: kuratierte LOINC-Codes</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <!-- Eltern-Eintrag und die ersten vier Einträge verlinken die KDS-weiten
+         Konformitätsregeln des Meta-Moduls (INTERIM: Meta-Wiki; siehe
+         Quell-Menü). -->
+    <a data-toggle="dropdown" href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance" class="dropdown-toggle">Konformität<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance">Konformität</a></li>
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#anforderungsdokumentation">Allgemeine Anforderungen</a></li>
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#must-support-ms">Must-Support</a></li>
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#fehlende-daten">Umgang mit fehlenden Daten</a></li>
+      <li><a href="security-and-privacy.html">Sicherheit und Datenschutz</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="artifacts.html" class="dropdown-toggle">Artefakte<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="artifacts.html">Artefakt-Übersicht</a></li>
+      <li><a href="profiles.html">Profile</a></li>
+      <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="extensions.html">Extensions (optional)</a></li>
+      <li><a href="capability-statements.html">CapabilityStatements</a></li>
+      <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="search-parameters.html">Suchparameter (optional)</a></li>
+      <li><a href="logical-models.html">Logische Modelle</a></li>
+      <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="value-sets.html">ValueSets (optional)</a></li>
+      <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="code-systems.html">CodeSystems (optional)</a></li>
+      <li><a href="examples.html">Beispiele</a></li>
+    </ul>
+  </li>
+  <li><a href="downloads.html">Downloads</a></li>
+  <li><a href="changes.html">Änderungshistorie</a></li>
+  <li class="dropdown">
+    <!-- Der Eltern-Eintrag verlinkt bewusst das PFLICHT-Kind (Versionierung):
+         die Metadaten-Übersicht ist optional. -->
+    <a data-toggle="dropdown" href="version-history.html" class="dropdown-toggle">Metadaten<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
+      <li><a href="metadata.html">Metadaten-Übersicht (optional)</a></li>
+      <li><a href="version-history.html">Versionierung</a></li>
+    </ul>
+  </li>
+</ul>
+
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+
+
+
+<div style="float: var(--ig-right);padding: 8px 0px;" id="language">
+  <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-de.png"/>Deutsch</div>
+  </div>
+  <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Sprache:</div>
+ 	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag de" src="assets/images/lang-de.png"/>Deutsch</div>
+
+    <div><a href="../en/changes.html"><img class="flag" src="assets/images/lang-en.png" alt="flag en"/>English</a></div>
+
+  </div>
+</div>
+
+
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Inhaltsverzeichnis</b></a></li><li><b>Änderungshistorie</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">MII IG Kerndatensatz-Modul Onkologie - Local Development build (v2027.0.0-ballot.rc1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Änderungshistorie</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#änderungen-v202700-ballotrc1-ballot-kandidat-noch-nicht-veröffentlicht" id="markdown-toc-änderungen-v202700-ballotrc1-ballot-kandidat-noch-nicht-veröffentlicht">Änderungen v2027.0.0-ballot.rc1 (Ballot-Kandidat, noch nicht veröffentlicht)</a>    <ul>
+      <li><a href="#️-breaking-changes" id="markdown-toc-️-breaking-changes">⚠️ Breaking Changes</a></li>
+      <li><a href="#neue-profile-und-funktionalität" id="markdown-toc-neue-profile-und-funktionalität">Neue Profile und Funktionalität</a></li>
+      <li><a href="#refaktorierungen" id="markdown-toc-refaktorierungen">Refaktorierungen</a></li>
+      <li><a href="#weitere-verbesserungen" id="markdown-toc-weitere-verbesserungen">Weitere Verbesserungen</a></li>
+    </ul>
+  </li>
+  <li><a href="#änderungen-v202603-veröffentlicht-27032026" id="markdown-toc-änderungen-v202603-veröffentlicht-27032026">Änderungen v2026.0.3 (veröffentlicht 27.03.2026)</a>    <ul>
+      <li><a href="#technische-verbesserungen" id="markdown-toc-technische-verbesserungen">Technische Verbesserungen</a></li>
+    </ul>
+  </li>
+  <li><a href="#änderungen-v202602-veröffentlicht-10032026" id="markdown-toc-änderungen-v202602-veröffentlicht-10032026">Änderungen v2026.0.2 (veröffentlicht 10.03.2026)</a>    <ul>
+      <li><a href="#terminologie" id="markdown-toc-terminologie">Terminologie</a></li>
+      <li><a href="#technische-verbesserungen-1" id="markdown-toc-technische-verbesserungen-1">Technische Verbesserungen</a></li>
+    </ul>
+  </li>
+  <li><a href="#änderungen-v202601-veröffentlicht-05022026" id="markdown-toc-änderungen-v202601-veröffentlicht-05022026">Änderungen v2026.0.1 (veröffentlicht 05.02.2026)</a>    <ul>
+      <li><a href="#abhängigkeiten" id="markdown-toc-abhängigkeiten">Abhängigkeiten</a></li>
+      <li><a href="#technische-verbesserungen-2" id="markdown-toc-technische-verbesserungen-2">Technische Verbesserungen</a></li>
+    </ul>
+  </li>
+  <li><a href="#änderungen-v202600-veröffentlicht-03012026" id="markdown-toc-änderungen-v202600-veröffentlicht-03012026">Änderungen v2026.0.0 (veröffentlicht 03.01.2026)</a>    <ul>
+      <li><a href="#️-breaking-changes-1" id="markdown-toc-️-breaking-changes-1">⚠️ Breaking Changes</a></li>
+      <li><a href="#neue-profile-und-funktionalität-1" id="markdown-toc-neue-profile-und-funktionalität-1">Neue Profile und Funktionalität</a></li>
+      <li><a href="#refaktorierungen-1" id="markdown-toc-refaktorierungen-1">Refaktorierungen</a></li>
+      <li><a href="#validierung-und-qualitätsverbesserungen" id="markdown-toc-validierung-und-qualitätsverbesserungen">Validierung und Qualitätsverbesserungen</a></li>
+      <li><a href="#display-namen-und-terminologie-korrekturen" id="markdown-toc-display-namen-und-terminologie-korrekturen">Display-Namen und Terminologie-Korrekturen</a></li>
+      <li><a href="#obds-mapping-verbesserungen" id="markdown-toc-obds-mapping-verbesserungen">oBDS-Mapping Verbesserungen</a></li>
+      <li><a href="#beispieldaten-korrekturen" id="markdown-toc-beispieldaten-korrekturen">Beispieldaten-Korrekturen</a></li>
+      <li><a href="#atc-code-transitionen" id="markdown-toc-atc-code-transitionen">ATC-Code Transitionen</a></li>
+      <li><a href="#therapieempfehlung-medikation-erweiterung" id="markdown-toc-therapieempfehlung-medikation-erweiterung">Therapieempfehlung Medikation Erweiterung</a></li>
+      <li><a href="#technische-verbesserungen-3" id="markdown-toc-technische-verbesserungen-3">Technische Verbesserungen</a></li>
+      <li><a href="#weitere-verbesserungen-1" id="markdown-toc-weitere-verbesserungen-1">Weitere Verbesserungen</a></li>
+    </ul>
+  </li>
+  <li><a href="#änderungen-kommentierungs-version-2026-veröffentlicht-21082025" id="markdown-toc-änderungen-kommentierungs-version-2026-veröffentlicht-21082025">Änderungen Kommentierungs-Version 2026 (veröffentlicht 21.08.2025)</a>    <ul>
+      <li><a href="#weitere-klassifikationen-und-molekulare-tumorboards" id="markdown-toc-weitere-klassifikationen-und-molekulare-tumorboards">Weitere Klassifikationen und Molekulare Tumorboards</a></li>
+      <li><a href="#tumorkonferenz-erweiterung" id="markdown-toc-tumorkonferenz-erweiterung">Tumorkonferenz-Erweiterung</a></li>
+      <li><a href="#systemische-therapie-erweiterungen" id="markdown-toc-systemische-therapie-erweiterungen">Systemische Therapie Erweiterungen</a></li>
+      <li><a href="#operationprocedure-erweiterungen" id="markdown-toc-operationprocedure-erweiterungen">OperationProcedure Erweiterungen</a></li>
+      <li><a href="#verlauf-profil-anpassungen" id="markdown-toc-verlauf-profil-anpassungen">Verlauf-Profil Anpassungen</a></li>
+      <li><a href="#strahlentherapie-zielgebiet---obds-20142021-kompatibilität" id="markdown-toc-strahlentherapie-zielgebiet---obds-20142021-kompatibilität">Strahlentherapie Zielgebiet - oBDS 2014/2021 Kompatibilität</a></li>
+      <li><a href="#neue-profile-zur-abdeckung-der-organspezifischen-module" id="markdown-toc-neue-profile-zur-abdeckung-der-organspezifischen-module">Neue Profile zur Abdeckung der organspezifischen Module</a></li>
+    </ul>
+  </li>
+  <li><a href="#änderungen-in-202510-veröffentlicht-12062025" id="markdown-toc-änderungen-in-202510-veröffentlicht-12062025">Änderungen in 2025.1.0 (veröffentlicht 12.06.2025)</a></li>
+  <li><a href="#änderungen-in-202504-veröffentlicht-28032025" id="markdown-toc-änderungen-in-202504-veröffentlicht-28032025">Änderungen in 2025.0.4 (veröffentlicht 28.03.2025)</a></li>
+  <li><a href="#änderungen-in-202503" id="markdown-toc-änderungen-in-202503">Änderungen in 2025.0.3</a></li>
+  <li><a href="#änderungen-in-der-profilierung-seit-der-kommentierungsversion-202400-ballot" id="markdown-toc-änderungen-in-der-profilierung-seit-der-kommentierungsversion-202400-ballot">Änderungen in der Profilierung seit der Kommentierungsversion 2024.0.0-ballot</a>    <ul>
+      <li><a href="#fhir-profile" id="markdown-toc-fhir-profile">FHIR-Profile</a></li>
+      <li><a href="#dokumentation-und-implementation-guide" id="markdown-toc-dokumentation-und-implementation-guide">Dokumentation und Implementation Guide</a></li>
+      <li><a href="#snomed-ct-mappings" id="markdown-toc-snomed-ct-mappings">SNOMED-CT Mappings</a></li>
+    </ul>
+  </li>
+</ul>
+
+</div>
+
+<p>Hier sind alle Änderungen aufgelistet.</p>
+
+<h2 id="änderungen-v202700-ballotrc1-ballot-kandidat-noch-nicht-veröffentlicht">Änderungen v2027.0.0-ballot.rc1 (Ballot-Kandidat, noch nicht veröffentlicht)</h2>
+
+<h3 id="️-breaking-changes">⚠️ Breaking Changes</h3>
+
+<p>Diese Änderungen erfordern möglicherweise Anpassungen in bestehenden Implementierungen:</p>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">BREAKING</code></strong> <strong>UICC-Präfixe y, r und a als modifierExtension auf Kategorie-Ebene</strong>: Die Präfixe werden nicht mehr im Kategorie-Wert mitgeführt, sondern an der jeweiligen T-, N- bzw. M-Beobachtung über die neuen Extensions <code class="language-plaintext highlighter-rouge">mii-ex-onko-tnm-y-praefix</code>, <code class="language-plaintext highlighter-rouge">mii-ex-onko-tnm-r-praefix</code> und <code class="language-plaintext highlighter-rouge">mii-ex-onko-tnm-a-praefix</code> abgebildet.
+    <ul>
+      <li><strong>Warum modifierExtension</strong>: Die Präfixe verändern die Interpretation des Kategorie-Wertes — <code class="language-plaintext highlighter-rouge">ypT2</code> (Feststellung während oder nach initialer multimodaler Therapie) ist <strong>nicht</strong> dasselbe wie <code class="language-plaintext highlighter-rouge">pT2</code>. Verarbeitende Systeme MÜSSEN die Extensions kennen und dürfen eine Kategorie nicht ohne Auswertung des Präfixes interpretieren.</li>
+      <li><strong>Abgrenzung</strong>: Das c/p/u-Präfix bleibt als reguläre Extension <code class="language-plaintext highlighter-rouge">mii-ex-onko-tnm-cp-praefix</code> auf <code class="language-plaintext highlighter-rouge">Observation.code</code> (es benennt die Feststellungsmethode, nicht eine abweichende Interpretation).</li>
+    </ul>
+  </li>
+  <li><strong><code class="language-plaintext highlighter-rouge">BREAKING</code></strong> <strong>Karnofsky-/ECOG-LOINC-ConceptMaps korrigiert</strong> (GH #269): Die bisherigen Ziel-Codes waren systematisch falsch (Karnofsky um zehn LA-Nummern verschoben, ECOG mit falschen Prüfziffern). Systeme, die die alten LA-Codes aus den ConceptMaps übernommen haben, müssen ihre Daten korrigieren. Zusätzlich binden die Leistungszustand-Profile <code class="language-plaintext highlighter-rouge">valueCodeableConcept.coding[loinc]</code> jetzt required an neue enumerierte Answer-ValueSets (≙ LL4986-7 bzw. LL529-9, GH #236).</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">BREAKING</code></strong> <strong>Onkologie-Kennzeichnung an der Diagnose verpflichtend</strong>: <code class="language-plaintext highlighter-rouge">Condition.category</code> trägt am Primärtumor- und am Früheren-Tumorerkrankung-Profil einen neuen Pflicht-Slice <code class="language-plaintext highlighter-rouge">onkologie</code> (1..1) mit SNOMED CT <code class="language-plaintext highlighter-rouge">55342001</code> "Neoplastic disease". Damit sind onkologische Diagnosen über <code class="language-plaintext highlighter-rouge">Condition?category=…|55342001</code> auffindbar. Bestandsinstanzen ohne diese Kategorie werden ungültig und müssen ergänzt werden; das extensible Kern-Binding (problem-list-item / encounter-diagnosis) bleibt unberührt.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">BREAKING</code></strong> <strong>Gleason-Profile: <code class="language-plaintext highlighter-rouge">code.coding</code> gesliced</strong> (GH #259): SNOMED CT ist verpflichtend (1..1), LOINC optional als Zweitkodierung (0..1) — für Grade Group, Score-Gesamt und Pattern. Bisher war das Coding ungesliced. Verifizierte LOINC-Codes: <code class="language-plaintext highlighter-rouge">94734-1</code> (Grade Group), <code class="language-plaintext highlighter-rouge">35266-6</code> (Score), <code class="language-plaintext highlighter-rouge">44641-9</code>/<code class="language-plaintext highlighter-rouge">44642-7</code>/<code class="language-plaintext highlighter-rouge">44643-5</code> (Pattern).</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">BREAKING</code></strong> <strong>CTCAE-Katalogversion aus der MedDRA-Kodierung herausgelöst</strong> (oBDS 15.3): Die Version steht nicht mehr in <code class="language-plaintext highlighter-rouge">AdverseEvent.event.coding[meddra].version</code>, sondern in der neuen Extension <code class="language-plaintext highlighter-rouge">mii-ex-onko-nebenwirkung-ctcae-version</code> mit required-Bindung an die oBDS-Enumeration (<code class="language-plaintext highlighter-rouge">4</code>, <code class="language-plaintext highlighter-rouge">4.03</code>, <code class="language-plaintext highlighter-rouge">5.0</code>, <code class="language-plaintext highlighter-rouge">Sonstige</code>, neues CodeSystem <code class="language-plaintext highlighter-rouge">mii-cs-onko-nebenwirkung-ctcae-version</code>). Grund: <code class="language-plaintext highlighter-rouge">coding.version</code> bezeichnet die Version des CodeSystems, aus dem der Code stammt — das ist MedDRA (CTCAE v4.03 basiert auf MedDRA v12.0), nicht CTCAE. Die Vermischung machte Codes gegen das ValueSet unauflösbar. Systeme, die die CTCAE-Version aus <code class="language-plaintext highlighter-rouge">coding.version</code> lesen, müssen angepasst werden.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">BREAKING</code></strong> <strong>Referenztypen gehärtet</strong>: Bisher generische Referenzen sind jetzt auf die fachlich zulässigen Profile eingeschränkt — <code class="language-plaintext highlighter-rouge">Verlauf.hasMember</code> (statt beliebiger Observation nur die sieben definierten Mitglieder), <code class="language-plaintext highlighter-rouge">AdverseEvent.suspectEntity.instance</code> (Strahlentherapie / Systemische Therapie / Medikation), <code class="language-plaintext highlighter-rouge">Condition.extension:dueTo.valueReference</code>, <code class="language-plaintext highlighter-rouge">Residualstatus.partOf</code> (Operation), <code class="language-plaintext highlighter-rouge">TNM-synthetisiert.device</code> (Device) sowie <code class="language-plaintext highlighter-rouge">Tumorkonferenz.activity[extended].reference</code> (die drei Therapieempfehlungs-Profile). Instanzen mit anderen Zieltypen werden ungültig.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">BREAKING</code></strong> <strong>Symbol-Profile der TNM-Klassifikation deprecated</strong>: <code class="language-plaintext highlighter-rouge">mii-pr-onko-tnm-y-symbol</code>, <code class="language-plaintext highlighter-rouge">-r-symbol</code>, <code class="language-plaintext highlighter-rouge">-a-symbol</code> und <code class="language-plaintext highlighter-rouge">-m-symbol</code> stehen auf <code class="language-plaintext highlighter-rouge">retired</code>. Die Präfixe y/r/a laufen als <code class="language-plaintext highlighter-rouge">modifierExtension</code> an den Kategorie-Profilen; das m-Suffix als neue <code class="language-plaintext highlighter-rouge">component[multipleTumoren]</code> an der T-Kategorie (Component-Code LOINC <code class="language-plaintext highlighter-rouge">42030-7</code>, Wert weiterhin aus dem UICC-CodeSystem). Bestandsdaten bleiben lesbar — <code class="language-plaintext highlighter-rouge">hasMember</code> am Panel nennt die Profile weiterhin —, für Neuimplementierungen sind die Extensions bzw. die Component zu verwenden.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">BREAKING</code></strong> <strong>Legacy-Artefakte entfernt</strong>: die auskommentierte Strahlentherapie-Alt-Familie (Profil, Extension, Beispiel) sowie die nie aktivierten Quantity-Profile für ECOG und Karnofsky.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">BREAKING</code></strong> <strong>Abhängigkeiten auf die 2027-Ballot-Linie</strong>: <code class="language-plaintext highlighter-rouge">kerndatensatz.meta</code> 2027.0.0-ballot.rc3, <code class="language-plaintext highlighter-rouge">kerndatensatz.base</code> 2027.0.0-ballot.rc1, <code class="language-plaintext highlighter-rouge">de.basisprofil.r4</code> 1.6.0, <code class="language-plaintext highlighter-rouge">kerndatensatz.biobank</code> und <code class="language-plaintext highlighter-rouge">kerndatensatz.studie</code> je 2027.0.0-ballot.rc1. Neu hinzugekommen: <code class="language-plaintext highlighter-rouge">kerndatensatz.laborbefund</code> 2026.0.3 (für das Tumormarker-Profil) und <code class="language-plaintext highlighter-rouge">hl7.fhir.uv.genomics-reporting</code> 3.0.0.</li>
+</ul>
+
+<h3 id="neue-profile-und-funktionalität">Neue Profile und Funktionalität</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">feat</code> <strong>Synthetisierte TNM-Klassifikation finalisiert</strong> (<code class="language-plaintext highlighter-rouge">mii-pr-onko-tnm-klassifikation-synthetisiert</code>): Zusammenführung mehrerer Meldungs-bezogener TNM-Klassifikationen zu einem kohärenten Stand zum Entscheidungszeitpunkt (z. B. Tumorkonferenz).
+    <ul>
+      <li><strong>Code fix</strong> auf SNOMED CT <code class="language-plaintext highlighter-rouge">399703000</code> "Integrated TNM category"; das Typ-ValueSet <code class="language-plaintext highlighter-rouge">mii-vs-onko-tnm-klassifikation-typ</code> wurde entsprechend erweitert (klinisch / pathologisch / integriert)</li>
+      <li><strong><code class="language-plaintext highlighter-rouge">value</code> (UICC-Stadium) jetzt 1..1</strong>: Das Stadium ist der Zweck der Synthese; am Meldungs-Panel bleibt <code class="language-plaintext highlighter-rouge">value</code> unverändert 0..1</li>
+      <li><strong>Neues optionales <code class="language-plaintext highlighter-rouge">component[tnmFormel]</code></strong> (CodeSystem <code class="language-plaintext highlighter-rouge">mii-cs-onko-tnm-formel</code>) für die generierte TNM-Gesamtformel (z. B. "ypT0 ypN0 cM0"); sie MUSS zu den <code class="language-plaintext highlighter-rouge">hasMember</code>-Beobachtungen inklusive Präfixen passen und SOLL generiert, nicht manuell gepflegt werden</li>
+      <li><strong>Provenienz</strong>: <code class="language-plaintext highlighter-rouge">derivedFrom</code> auf die Quell-Klassifikationen ist PFLICHT (1..*), <code class="language-plaintext highlighter-rouge">device</code> ist MS — bei automatisierter Erzeugung SOLL das erzeugende System inklusive Version dokumentiert werden, eine zusätzliche <code class="language-plaintext highlighter-rouge">Provenance</code>-Ressource KANN für Audit-Anforderungen ergänzt werden</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">feat</code> Neue SearchParameter <code class="language-plaintext highlighter-rouge">tnm-y-praefix</code> (<code class="language-plaintext highlighter-rouge">mii-sp-onko-observation-tnm-y-praefix</code>) und <code class="language-plaintext highlighter-rouge">tnm-r-praefix</code> (<code class="language-plaintext highlighter-rouge">mii-sp-onko-observation-tnm-r-praefix</code>) zur Suche über die neuen Präfix-modifierExtensions.</li>
+  <li><code class="language-plaintext highlighter-rouge">feat</code> <strong>Beziehungsachsen der Diagnose vervollständigt</strong>: Neben <code class="language-plaintext highlighter-rouge">occurredFollowing</code> (zeitliche Folge, oBDS 5.9 — Ziel jetzt auch Frühere Tumorerkrankung) gibt es die neue Extension <code class="language-plaintext highlighter-rouge">mii-ex-onko-transformation-von</code> (Linien-Kontinuität, z. B. MDS → AML, Meningeom /0 → /3) und einen Slice auf die HL7-Standard-Extension <code class="language-plaintext highlighter-rouge">condition-dueTo</code> (Verursachung, z. B. t-AML nach Chemotherapie, radiogenes Angiosarkom). Drei-Achsen-Guidance mit CUP-Abgrenzung auf der Diagnose-Seite; sechs neue Beispielinstanzen inkl. CUP-Beispielbundle mit Best-Of-Auflösung.</li>
+  <li><code class="language-plaintext highlighter-rouge">feat</code> <strong>ICD-O-Revisions-Artefakte</strong> (löst u. a. den Heidelberg-Befund zu 2014er-Codes): versionsgepinnte Jahres-ValueSets für Topographie und Morphologie (Erste Revision 2014 / Zweite Revision 2019), Haupt-ValueSet als Union beider Stände, Transitions-ConceptMap <code class="language-plaintext highlighter-rouge">mii-cm-onko-icdo3-transitions-2019</code> mit den Umsteigern der Morphologie-Achse (Stand nach BfArM-Abgleich: 56, siehe unten).</li>
+  <li><code class="language-plaintext highlighter-rouge">feat</code> <strong>ATC-Jahres-ValueSets 2018–2026 versionsgepinnt</strong> (3.422 Einträge) plus Transitions-ConceptMap 2022 (Monoklonale-Antikörper-Umzug L01XC → L01F); behebt die Versionsambiguität des Terminologieservers bei jahresversionierten CodeSystemen.</li>
+  <li><code class="language-plaintext highlighter-rouge">feat</code> <strong>Meldepflicht-ValueSet + Warning-Invariante für die ICD-10-Codierung</strong> der Onko-Diagnose (<code class="language-plaintext highlighter-rouge">mii-vs-onko-icd10-meldepflichtige-tumoren</code>, Blockcodes C00–C97, D00–D09, D32/D33, D35.2–.4, D37–D48): meldet nicht-meldepflichtige Codes als Warnung, ohne sie zu verbieten.</li>
+  <li><code class="language-plaintext highlighter-rouge">feat</code> <strong>MedicationStatement Systemische Therapie</strong>: <code class="language-plaintext highlighter-rouge">medicationReference</code> ist jetzt als Alternative zu <code class="language-plaintext highlighter-rouge">medicationCodeableConcept</code> zulässig (beide 0..1 bei <code class="language-plaintext highlighter-rouge">medication[x]</code> 1..1, GH #288) — erleichtert die Nachnutzung bestehender KDS-Medikation-Ressourcen.</li>
+  <li><code class="language-plaintext highlighter-rouge">feat</code> <strong>Kuratiertes KDL-ValueSet</strong> <code class="language-plaintext highlighter-rouge">mii-vs-onko-kdl-dokumentklassen</code> (45 Dokumentklassen entlang des onkologischen Behandlungspfads) als nicht-verpflichtendes Begleitartefakt für die Dokumentenebene.</li>
+  <li><code class="language-plaintext highlighter-rouge">feat</code> AdverseEvent: <code class="language-plaintext highlighter-rouge">event.coding</code> um SNOMED-CT-Slice erweitert (MedDRA-Binding unverändert am MedDRA-Slice).</li>
+  <li><code class="language-plaintext highlighter-rouge">feat</code> Approved Community-Changes: Morphologie-Extension <code class="language-plaintext highlighter-rouge">morphology-behavior-icdo3</code> jetzt 0..* (GH #298), FIGO-Stadien codierbar (GH #297), Gleason-Scores &lt; 6 zulässig und Pattern-Titel korrigiert (GH #260/#261).</li>
+  <li><code class="language-plaintext highlighter-rouge">feat</code> <strong>ConceptMap MedDRA → SNOMED CT für die CTCAE-Nebenwirkungen</strong> (<code class="language-plaintext highlighter-rouge">mii-cm-onko-nebenwirkung-meddra-sct</code>): alle 790 Terme der CTCAE v4.03, davon 708 zugeordnet (638 äquivalent, 28 enger, 42 weiter), 82 bewusst ohne Zuordnung. Die Zielcodes sind gegen die Kurationsversion SNOMED International 20260501 verifiziert; <code class="language-plaintext highlighter-rouge">group.targetVersion</code> dokumentiert sie. Drei Beispielinstanzen zeigen Dual-Kodierung, Nachfolgekonzept-Fall und den MedDRA-only-Fall.</li>
+  <li><code class="language-plaintext highlighter-rouge">feat</code> <strong>Tumormarker-Profil <code class="language-plaintext highlighter-rouge">mii-pr-onko-tumormarker</code></strong>: Ableitung von <code class="language-plaintext highlighter-rouge">MII_PR_Labor_Laboruntersuchung</code> (KDS-Modul Laborbefund) mit extensible Bindung von <code class="language-plaintext highlighter-rouge">Observation.code</code> an die neue Union-Liste <code class="language-plaintext highlighter-rouge">mii-vs-onko-tumormarker-loinc</code> (48 kuratierte LOINC-Codes) und Bezug zur Diagnose über <code class="language-plaintext highlighter-rouge">focus</code>. Laborwerte bleiben damit im Laborbefund-Modell; das Onkologie-Modul steuert nur die fachliche Auswahlliste bei.</li>
+  <li><code class="language-plaintext highlighter-rouge">feat</code> <strong>ValueSets zur Krebsprädisposition</strong> aus der §65c-Liste: <code class="language-plaintext highlighter-rouge">mii-vs-onko-praedispositionssyndrome-orpha</code> (55 Orphanet-Codes) und <code class="language-plaintext highlighter-rouge">mii-vs-onko-praedispositionsgene-hgnc</code> (109 HGNC-Gene, inkl. vollständiger Fanconi-Expansion).</li>
+  <li><code class="language-plaintext highlighter-rouge">feat</code> <strong>Strukturierte Gen-Identität</strong> (erste Stufe des tiered-Konzepts): <code class="language-plaintext highlighter-rouge">Observation.component:gene-studied</code> ist im Profil Genetische Variante extensible an <code class="language-plaintext highlighter-rouge">mii-vs-onko-marker-gene-hgnc</code> gebunden (40 HGNC-Gene der §65c-Markerliste). Der Freitext-Genname nach oBDS 23.1 bleibt in <code class="language-plaintext highlighter-rouge">note.text</code>. Für den IGHV-Sonderfall (Genfamilie statt Einzelgen) steht <code class="language-plaintext highlighter-rouge">mii-vs-onko-ighv-gensegmente-hgnc</code> mit allen 167 Segmenten bereit; mutiert/unmutiert wird weiterhin über die Ausprägung abgebildet (oBDS M/W).</li>
+  <li><code class="language-plaintext highlighter-rouge">feat</code> <strong>TNM 9. Auflage</strong>: die Codes <code class="language-plaintext highlighter-rouge">T1b3</code> (Zervix, FIGO-Angleichung) sowie <code class="language-plaintext highlighter-rouge">M1c1</code> und <code class="language-plaintext highlighter-rouge">M1c2</code> (Lunge) im UICC-CodeSystem und den Werte-ValueSets ergänzt.</li>
+  <li><code class="language-plaintext highlighter-rouge">feat</code> <strong>CRMI-Metadaten auf allen Konformitätsressourcen</strong> (324 von 325): StructureDefinitions, ValueSets, CodeSystems, ConceptMaps, SearchParameter, Library, CapabilityStatement und ImplementationGuide tragen jetzt crmi-shareable/publishable-Profile, <code class="language-plaintext highlighter-rouge">cqf-knowledgeCapability</code>, Contributor- und Topic-Angaben, Versionsalgorithmus, Freigabedatum, Gültigkeitszeitraum sowie <code class="language-plaintext highlighter-rouge">crmi-license</code> und <code class="language-plaintext highlighter-rouge">package-source</code> in <code class="language-plaintext highlighter-rouge">meta.extension</code> — nach dem Muster des Basismoduls.</li>
+  <li><code class="language-plaintext highlighter-rouge">feat</code> <strong>ECOG- und Karnofsky-Profile mit <code class="language-plaintext highlighter-rouge">focus</code></strong> auf die Primärtumor-Diagnose — sie waren bisher die einzigen Kern-Observations ohne Diagnosebezug.</li>
+  <li><code class="language-plaintext highlighter-rouge">feat</code> <strong>OPS-Seitenlokalisation am OP-Profil sichtbar</strong>: Die aus der MII-Prozedur geerbte Extension (R/L/B) ist als Must-Support ausgewiesen. Das oBDS führt am OP kein eigenes Seitenfeld — die Seitenangabe läuft amtlich über den OPS-Seitenzusatz.</li>
+  <li><code class="language-plaintext highlighter-rouge">feat</code> <strong>Bezug zum KDS-Modul Medizinisches Forschungsvorhaben</strong> (GH #232): <code class="language-plaintext highlighter-rouge">Studienteilnahme.focus[studie]</code> verweist auf <code class="language-plaintext highlighter-rouge">MII_PR_Studie_Studie</code>; der generische <code class="language-plaintext highlighter-rouge">ResearchStudy</code> bleibt als dokumentierter Rückfall für Standorte ohne das Modul.</li>
+  <li><code class="language-plaintext highlighter-rouge">feat</code> <strong>oBDS-Mapping am Logical Model</strong>: Das Haupt-LM <code class="language-plaintext highlighter-rouge">mii-lm-onko</code> trägt neben dem FHIR-Mapping jetzt ein zweites mit <code class="language-plaintext highlighter-rouge">Id: oBDS</code> — alle 16 Bereiche und 85 Unterelemente sind auf ihre oBDS-Feldnummern abgebildet.</li>
+</ul>
+
+<h3 id="refaktorierungen">Refaktorierungen</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">refactor</code> <strong>SearchParameter für das c/p/u-Präfix konsolidiert</strong>: Die drei defekten SearchParameter <code class="language-plaintext highlighter-rouge">tnm-t-cppraefix</code>, <code class="language-plaintext highlighter-rouge">tnm-n-cppraefix</code> und <code class="language-plaintext highlighter-rouge">tnm-m-cppraefix</code> wurden durch den gemeinsamen SearchParameter <code class="language-plaintext highlighter-rouge">mii-sp-onko-observation-tnm-cp-praefix</code> (Code <code class="language-plaintext highlighter-rouge">tnm-cp-praefix</code>) ersetzt. Die Extension existiert genau einmal auf <code class="language-plaintext highlighter-rouge">Observation.code</code>; die Unterscheidung zwischen T-, N- und M-Kategorie erfolgt über den Kategorie-Code der Observation (Kombination mit dem SearchParameter <code class="language-plaintext highlighter-rouge">code</code>).</li>
+</ul>
+
+<h3 id="weitere-verbesserungen">Weitere Verbesserungen</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">documentation</code> <strong>LOINC-SNOMED-Anker der Tumormarker</strong>: für 23 der 28 Marker ist das Observable-Konzept der LOINC-SNOMED-Ontologie verifiziert (sieben davon neu ermittelt). Für Gastrin, Calcitonin, M-Protein, IgA und IgM existiert dort kein „Measurement of …"-Grouper — ein Content-Request an SNOMED International wäre nötig. Methodischer Hinweis auf der Seite: Die Konzepte liegen in einer eigenen Terminologieserver-Branch und sind über die Standard-Expansion nicht auffindbar; eine naive Textsuche liefert für ACTH den Corticotropin releasing factor und für TSH den Rezeptor-Antikörper.</li>
+  <li><code class="language-plaintext highlighter-rouge">documentation</code> <strong>UICC-CodeSystem: Auflagen-Union als bewusste Entscheidung dokumentiert</strong> — das CodeSystem führt die Codes auflagenübergreifend (8. Auflage plus Ergänzungen der 9.), die verwendete Auflage steht als eigenes Datenelement daneben (TNM-Version, oBDS 8.2). Eine auflagenscharfe Validierung nach dem Muster der ATC-Jahresversionen ist als spätere Ausbaustufe vorgesehen.</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> <strong>Organmodule auf die amtliche oBDS-Nummerierung</strong> (basisdatensatz.de-Feldkatalog und oBDS-XSD v3.0.5 als Quelle): Die Nummern sind flach (Mamma M1–M8, Kolorektal KR1–KR10, Prostata P1–P9, Melanom MM1–MM4); die früheren hierarchischen Angaben (P4.1, M2.1.1 …) existieren amtlich nicht. Korrigiert wurden das Organmodul-Logical-Model, die oBDS-Mappings aller 30 Organprofile und die zugehörigen Seiten. Dabei behobene Fehlzuordnungen: PSA war als P1 geführt (amtlich P7), Clavien-Dindo als P5 (amtlich P9), „Mamma-Operationen" als M4 (amtlich Her2neu-Status). Ergänzt wurden bislang fehlende Felder: Her2neu (M4), Tumorgrößen (M7/M8), RAS-Mutation (KR10), Anlass Gleason (P2), Datum der Stanzen (P3), Datum PSA (P8) sowie das im XSD zentralisierte <code class="language-plaintext highlighter-rouge">Modul_Allgemein</code> (Sozialdienst-, Psychoonkologie- und Studienkontakt).</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> <strong>ICD-O-Transitions-ConceptMap gegen die amtliche BfArM-Aktualisierungsliste abgeglichen</strong> (Stand 29.01.2021): 56 statt bisher 55 Umsteiger. Neu aufgenommen ist <code class="language-plaintext highlighter-rouge">8153/1</code> (Gastrinom o.n.A.), das die Aktualisierungsliste und die amtliche Online-Fassung streichen, die maschinenlesbare ClaML-Fassung aber weiterhin führt — der Terminologieserver spiegelt die ClaML und zeigt den Code deshalb noch. Alle 119 amtlichen Neueinfügungen sind serverseitig vorhanden.</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> <strong>MVGenomSeq-ConceptMap gegen den echten Datenkranz korrigiert</strong>: 13 von 15 Zielfeldern existierten im Schema <code class="language-plaintext highlighter-rouge">OncologyCase.json</code> nicht (Schreibweise <code class="language-plaintext highlighter-rouge">diagnosisOd</code> statt <code class="language-plaintext highlighter-rouge">diagnosisOD</code>, erfundene Verschachtelungen wie <code class="language-plaintext highlighter-rouge">mainDiagnosis.date</code>, falsche Feldnamen wie <code class="language-plaintext highlighter-rouge">germlineDiagnoses</code>). <code class="language-plaintext highlighter-rouge">additionalDiagnoses.date</code> ist jetzt als <code class="language-plaintext highlighter-rouge">unmatched</code> dokumentiert — der Datenkranz führt dort ein reines Coding-Array ohne Datumsattribut, ein Feststellungsdatum je Nebendiagnose ist also nicht übermittelbar.</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> <strong>Beispielinstanzen: unauflösbare Referenzen bereinigt</strong> — sieben Anker-Instanzen für historisch gewachsene Verweise (<code class="language-plaintext highlighter-rouge">Patient/example</code> u. a.), profil-pflichtige Ziele auf bestehende konforme Beispiele umgebogen.</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> <strong><code class="language-plaintext highlighter-rouge">experimental = false</code></strong> auf 37 Modul-Terminologien (Organmodule, ATC-Jahresstände, Weitere Klassifikationen, OP-Dringlichkeit) — nach einem Jahr im Feld nicht mehr experimentell.</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> <strong>Kurationsstatus der oBDS-SNOMED-ConceptMaps offengelegt</strong>: Die 28 Maps der ersten Generation (2024, gegen SNOMED International 20240401) sind als <code class="language-plaintext highlighter-rouge">experimental = true</code> gekennzeichnet und tragen den Hinweis, dass sie weder offiziell endorsed noch final qualitätsgesichert sind.</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> <strong>UICC-Copyright am TNM-CodeSystem</strong>: Der Rechtehinweis auf die UICC ersetzt die zuvor gesetzte CC-BY-4.0-Lizenzangabe — das CodeSystem führt fremdes, geschütztes Material unter der UICC-Kanonical-URL.</li>
+  <li><code class="language-plaintext highlighter-rouge">documentation</code> <strong>Umzug des Implementation Guide auf den HL7 IG Publisher</strong> (weg von Simplifier, MII-KDS-Modul-Template): Der Guide wird jetzt zweisprachig aus dem Repository gebaut; Identität (Canonical, Package-ID, Version) bleibt unverändert.</li>
+  <li><code class="language-plaintext highlighter-rouge">documentation</code> <strong>Neue Übersichtsseite „Konformitäts-Mappings"</strong>: alle 1.459 Zuordnungen des Moduls in fünf SQL-generierten Tabellen — nicht handgepflegt, sondern beim Build aus der Paket-Datenbank erzeugt und damit immer auf dem Stand der gebauten Artefakte.</li>
+  <li><code class="language-plaintext highlighter-rouge">documentation</code> <strong>ENCR Table 4 auf der Tumormarker-Seite</strong>: die 16 Entitäten, die bei fehlender pathologischer Sicherung über Tumormarker dokumentiert werden dürfen, mit der jeweils zu vergebenden ICD-O-Morphologie — fachliche Grundlage der oBDS-Diagnosesicherung <code class="language-plaintext highlighter-rouge">4</code>. Ergänzt um die Matrix-Frage (Probenmaterial) bei Serotonin/5-HIES, HVA/VMA, Katecholaminen und den neu aufgenommenen Metanephrinen.</li>
+  <li><code class="language-plaintext highlighter-rouge">documentation</code> <strong>KDL-Dokumentklassen mit Zuordnungstabelle</strong>: IHE-XDS-typeCode amtlich über die DVMD-ConceptMap (45/45), SNOMED CT (31/45) und LOINC (39/45) projektseitig kuratiert; fünf deutsche Register- und Studienformulare bleiben dokumentiert ohne internationales Äquivalent.</li>
+  <li><code class="language-plaintext highlighter-rouge">documentation</code> <strong>Toronto-Klassifikation</strong>: die §65c-Übermittlungsregeln ergänzt (Klassifikationsnamen „Toronto Stufe 1/2", zulässige Stadienkürzel, Zusammenfassungsregel Stufe 2 → Stufe 1, morphologiebasierte Zuordnung).</li>
+  <li><code class="language-plaintext highlighter-rouge">documentation</code> <strong>Genetik: Übermittlungsnotation der §65c-Markerliste</strong> — Zwei-Positionen-Modell (Gen an Position 1, Weitere Information an Position 2), Formelangabe nach HGVSp/HGVSc, Codon- und Fusionsschreibweise (<code class="language-plaintext highlighter-rouge">GEN1::GEN2</code>) samt Parser-Vertrag zur FHIR-Abbildung.</li>
+  <li><code class="language-plaintext highlighter-rouge">documentation</code> <strong>TNM: die drei Kodier-Mechanismen erklärt</strong> — binäre Präfixe (modifierExtension), wertetragendes m-Suffix (Component) und Kategoriewerte (Dual-Coding UICC/SNOMED), jeweils mit Begründung.</li>
+  <li><code class="language-plaintext highlighter-rouge">documentation</code> <strong>oBDS-Diagnosesicherung 16.4 und Morphologie-Kardinalitäten</strong>: Führungssystem für das Therapieprotokoll dokumentiert (<code class="language-plaintext highlighter-rouge">Procedure.usedCode</code> führend, <code class="language-plaintext highlighter-rouge">MedicationStatement.note.text</code> nur zur Schema-Zuordnung) sowie die bewusste Asymmetrie der Morphologie-Angaben (Diagnose 0..*, Histologie-Observation je Befund genau eine).</li>
+  <li><code class="language-plaintext highlighter-rouge">documentation</code> Neuer Guidance-Abschnitt "Erscheinungsformen der TNM-Klassifikation" auf der <a href="StructureDefinition-mii-pr-onko-tnm-klassifikation.html">TNMKlassifikationObservation</a>-Seite: beschreibt klinisches Staging, pathologisches Staging, Verlauf und die synthetisierte Klassifikation sowie deren Unterscheidung über Code-Achse und Präfix-Modifier.</li>
+</ul>
+
+<hr />
+
+<h2 id="änderungen-v202603-veröffentlicht-27032026">Änderungen v2026.0.3 (veröffentlicht 27.03.2026)</h2>
+
+<h3 id="technische-verbesserungen">Technische Verbesserungen</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> Package-Erstellung auf macOS korrigiert: <code class="language-plaintext highlighter-rouge">COPYFILE_DISABLE=1</code> beim tar-Aufruf verhindert AppleDouble (<code class="language-plaintext highlighter-rouge">._</code>)-Datei-Kontamination (v2026.0.2 enthielt 490 solcher Dateien)</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> Abhängigkeiten aktualisiert: biobank <code class="language-plaintext highlighter-rouge">2026.0.1</code>, medikation <code class="language-plaintext highlighter-rouge">2026.0.1</code>, studie <code class="language-plaintext highlighter-rouge">2026.0.2</code></li>
+  <li><code class="language-plaintext highlighter-rouge">chore</code> Firely Terminal auf 3.5.0 aktualisiert</li>
+</ul>
+
+<hr />
+
+<h2 id="änderungen-v202602-veröffentlicht-10032026">Änderungen v2026.0.2 (veröffentlicht 10.03.2026)</h2>
+
+<h3 id="terminologie">Terminologie</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">feat</code> ATC-DE 2026 ValueSet aktualisiert: 23 neue Codes hinzugefügt, neue Substanzklasse L01EP (c-MET-Inhibitoren)</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> 27 ATC Display-Namen korrigiert (WIdO-validiert)</li>
+  <li><code class="language-plaintext highlighter-rouge">feat</code> ATC-Code Transitions-ConceptMap für 2026 aktualisiert</li>
+</ul>
+
+<h3 id="technische-verbesserungen-1">Technische Verbesserungen</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> advisor.json Suppressionen für externe TX-Server Fehler erweitert</li>
+</ul>
+
+<hr />
+
+<h2 id="änderungen-v202601-veröffentlicht-05022026">Änderungen v2026.0.1 (veröffentlicht 05.02.2026)</h2>
+
+<h3 id="abhängigkeiten">Abhängigkeiten</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> Modul-Studie Abhängigkeit auf 2026.0.2 aktualisiert</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> ResearchStudy Beispiel wiederhergestellt</li>
+</ul>
+
+<h3 id="technische-verbesserungen-2">Technische Verbesserungen</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> ig.ini an umbenannte IG-Ressource angepasst (v2025→v2026)</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> MII IG Namenskonventionen für 2026 Release angewendet</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> Bezeichnung 'Erweiterungsmodul' durch 'KDS-Modul' gemäß MII-Richtlinien ersetzt</li>
+</ul>
+
+<hr />
+
+<h2 id="änderungen-v202600-veröffentlicht-03012026">Änderungen v2026.0.0 (veröffentlicht 03.01.2026)</h2>
+
+<h3 id="️-breaking-changes-1">⚠️ Breaking Changes</h3>
+
+<p>Diese Änderungen erfordern möglicherweise Anpassungen in bestehenden Implementierungen:</p>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">BREAKING</code></strong> Canonical URL des Strahlentherapie Applikationsart ValueSets von <code class="language-plaintext highlighter-rouge">mii-vs-onko-sstrahlentherapie-applikationsart</code> auf <code class="language-plaintext highlighter-rouge">mii-vs-onko-strahlentherapie-applikationsart</code> korrigiert (Tippfehler-Korrektur). Bestehende Referenzen müssen aktualisiert werden. [<a href="https://hl7germany.atlassian.net/browse/HDB-708">HDB-708</a>, <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/219">#219</a>]</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">BREAKING</code></strong> CodeSystem-URLs für therapie-ende-grund und therapie-stellungzurop korrigiert. Bestehende Referenzen müssen aktualisiert werden.</li>
+</ul>
+
+<h3 id="neue-profile-und-funktionalität-1">Neue Profile und Funktionalität</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">feat</code> <strong>Frühere Tumorerkrankungen Profil</strong>: Neues <a href="StructureDefinition-mii-pr-onko-fruehere-tumorerkrankung.html">FruehereTumorerkrankungCondition</a> Profil zur Erfassung anamnestischer Tumorerkrankungen mit Mapping zu oBDS 5.9
+    <ul>
+      <li><strong>Basis</strong>: FHIR Condition (nicht MII Diagnose) für flexible Freitexterfassung</li>
+      <li><strong>Kodierung</strong>: code.text verpflichtend (1..1), code.coding[icd10-gm] optional (0..1)</li>
+      <li><strong>Optionale Elemente</strong>: ICD-O-3 Topographie, Morphologie-Extension, assertedDate, clinicalStatus</li>
+      <li><strong>Integration</strong>: condition-occurredFollowing Extension im Primärtumor-Profil für Verlinkung zu früheren Tumorerkrankungen</li>
+      <li><strong>Beispiele</strong>: Vier Instanzen demonstrieren verschiedene Szenarien inklusive reiner Freitext-Dokumentation</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">feat</code> PRO-B Studienteilnahme-Beispiel mit ResearchStudy-Referenz zur Demonstration der Integration mit dem Forschungsvorhaben-Modul</li>
+  <li><code class="language-plaintext highlighter-rouge">feat</code> QA Validierungsseite zur Dokumentation der Qualitätssicherungsprozesse hinzugefügt</li>
+</ul>
+
+<h3 id="refaktorierungen-1">Refaktorierungen</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">refactor</code> <strong>ASA-Klassifikation</strong>: Vom KRK-Modul in das Allgemeiner Leistungszustand Profil verschoben für breitere Anwendbarkeit über verschiedene Tumorentitäten hinweg</li>
+</ul>
+
+<h3 id="validierung-und-qualitätsverbesserungen">Validierung und Qualitätsverbesserungen</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> Package-Abhängigkeiten auf 2026.0.0-ballot Versionen aktualisiert (studie, biobank, molgen) um fehlende Snapshots zu beheben</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> advisor.json Suppressionen für IG Parameter-Code Validierung erweitert</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> MedDRA-Slice zum AdverseEvent-Profil hinzugefügt und explizite MedDRA-Codes zum ValueSet für Validierung ergänzt</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> SNOMED-Code durch MedDRA-Code für Neuropathie-AdverseEvent ersetzt (präzisere Kodierung von Nebenwirkungen)</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> HER2 ISH LOINC-Code auf korrekten FISH-Test geändert für präzisere Laborwerterfassung</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> Neun fehlende Profile zum CapabilityStatement hinzugefügt für vollständige Server-Capability-Dokumentation</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> capabilitystatement-expectation Extension aus Profile RuleSet entfernt (verursachte Validierungsfehler)</li>
+</ul>
+
+<h3 id="display-namen-und-terminologie-korrekturen">Display-Namen und Terminologie-Korrekturen</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> OPS- und SNOMED-CT Display-Namen in diversen Beispielen korrigiert (Sigmoidresektion, Right-Hemikolektomie, KRK-Operation, etc.)</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> CodeSystem-URLs für therapie-ende-grund und therapie-stellungzurop korrigiert</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> ATC Display-Namen für Folinsäure und Trastuzumab korrigiert</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> TNM-Code und Verlauf Display-Namen korrigiert</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> Residualstatus Display-Namen korrigiert</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> FUFOL durch LV5FU2 ersetzt mit korrektem OPS Display-Namen</li>
+</ul>
+
+<h3 id="obds-mapping-verbesserungen">oBDS-Mapping Verbesserungen</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> oBDS-Mapping zur Operation Urgency Extension und Dokumentation hinzugefügt</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> Korrektes oBDS-Mapping zum Tumorgröße-Profil hinzugefügt und Dokumentationsseite erstellt</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> oBDS-Mapping zum Prostata PSA-Profil hinzugefügt</li>
+</ul>
+
+<h3 id="beispieldaten-korrekturen">Beispieldaten-Korrekturen</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> Fehlende OPS-Versionen zu diversen Procedure-Instanzen hinzugefügt (palbociclib-therapie, pertuzumab-therapie, Strahlentherapie-Beispiele, etc.)</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> [ops] Slice-Notation zu allen OPS code.coding in example-patient-1 hinzugefügt</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> Fehlende SNOMED-CT Codes und Kategorien zu Procedure-Beispielen hinzugefügt</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> Instanztyp von Procedure zu MedicationRequest für Tumorkonferenz-Beispiele korrigiert</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> Ungültige SNOMED-Codes aus KRK-Operation entfernt</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> Bundle-Typ von collection zu transaction für ECOG und Karnofsky Beispiele geändert</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> Verpflichtende fullUrl zu Bundle-Einträgen in Beispielen hinzugefügt</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> Verpflichtende diagnostic certainty und encounter zu Melanom-Diagnose hinzugefügt</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> ICD-O-3 Display-Namen in Frühere Tumorerkrankung Beispielen korrigiert</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> PRO-B ResearchStudy focus auf korrekten SNOMED-Code aktualisiert</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> TKI-Beispiel Therapieempfehlung korrigiert</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> Systemische Therapie Beispiel-Kategorie korrigiert</li>
+</ul>
+
+<h3 id="atc-code-transitionen">ATC-Code Transitionen</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">feat</code> ATC-Code Transitionsbeispiele hinzugefügt und Display-Namen korrigiert zur Demonstration temporaler ATC-Änderungen (z.B. Imatinib, Quizartinib)</li>
+  <li><code class="language-plaintext highlighter-rouge">feat</code> Umfassende ATC-Code Transitions-Dokumentation und ConceptMaps hinzugefügt</li>
+  <li><code class="language-plaintext highlighter-rouge">feat</code> Protokoll- und Medikations-Tracking für Kombinationstherapie-Empfehlungen ergänzt</li>
+</ul>
+
+<h3 id="therapieempfehlung-medikation-erweiterung">Therapieempfehlung Medikation Erweiterung</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">improve</code> <strong>reasonReference erweitert</strong>: <code class="language-plaintext highlighter-rouge">MII_PR_Onko_Therapieempfehlung_Medikation</code> (MedicationRequest) erlaubt nun neben der Pflicht-Referenz auf <code class="language-plaintext highlighter-rouge">MII_PR_Onko_Diagnose_Primaertumor</code> auch Referenzen auf <code class="language-plaintext highlighter-rouge">Condition</code> und <code class="language-plaintext highlighter-rouge">Observation</code> zur Unterstützung zusätzlicher klinischer Begründungen für Therapieempfehlungen</li>
+</ul>
+
+<h3 id="technische-verbesserungen-3">Technische Verbesserungen</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">chore</code> Version auf 2026.0.0-rc.1 aktualisiert</li>
+  <li><code class="language-plaintext highlighter-rouge">chore</code> .validation-history zu gitignore hinzugefügt</li>
+  <li><code class="language-plaintext highlighter-rouge">chore</code> Generierte CapabilityStatement und ECOG-Dateien aktualisiert</li>
+  <li><code class="language-plaintext highlighter-rouge">feat</code> UML-Diagramme aktualisiert und PlantUML Auto-Rendering Workflow hinzugefügt</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> FHIRPath Typ-Vergleich in ECOG und Karnofsky Constraints korrigiert</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> ECOG und Karnofsky Constraint Validierungsausdrücke verbessert</li>
+  <li><code class="language-plaintext highlighter-rouge">chore</code> Simplifier Build-Skript hinzugefügt und molgen Dependency aktualisiert</li>
+</ul>
+
+<h3 id="weitere-verbesserungen-1">Weitere Verbesserungen</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">improve</code> Dinatriumfolinat/Natriumfolinat zu Systemische Therapie Substanzen ValueSets hinzugefügt: UNII-Code für Leucovorin Sodium (4MXU9LJS4Q) und ATC-Code V03AF06 (Natriumfolinat). Dokumentation auf Terminologie-Seite aktualisiert. [<a href="https://hl7germany.atlassian.net/browse/HDB-628">HDB-628</a>]</li>
+  <li><code class="language-plaintext highlighter-rouge">documentation</code> Fehlerhafte interne Dokumentationslinks (pagelinks) korrigiert, die nach Export von Simplifier zur MII-Homepage nicht funktionierten: Topic-Namen in Kommentierungs-Seite, Operation-Profile und Extension-Dokumentation aktualisiert. [<a href="https://hl7germany.atlassian.net/browse/HDB-646">HDB-646</a>]</li>
+  <li><code class="language-plaintext highlighter-rouge">improve</code> Kardinalität von <code class="language-plaintext highlighter-rouge">Observation.code</code> im Residualstatus-Profil explizit auf <code class="language-plaintext highlighter-rouge">1..1</code> gesetzt für bessere Verständlichkeit. [<a href="https://hl7germany.atlassian.net/browse/HDB-707">HDB-707</a>, <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/220">#220</a>]</li>
+  <li><code class="language-plaintext highlighter-rouge">documentation</code> Beschreibung des Melanom Sicherheitsabstand Profils vervollständigt und Handhabung von nicht beurteilbaren Fällen dokumentiert. [<a href="https://hl7germany.atlassian.net/browse/HDB-705">HDB-705</a>, <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/222">#222</a>]</li>
+  <li><code class="language-plaintext highlighter-rouge">documentation</code> GOLD-Projektbeschreibung auf Seite "Bezug zu nationalen Standards" aktualisiert. [<a href="https://hl7germany.atlassian.net/browse/HDB-711">HDB-711</a>, <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/216">#216</a>]</li>
+  <li><code class="language-plaintext highlighter-rouge">improve</code> Optionale Specimen-Referenz (0..1) zum Genetische Variante Profil hinzugefügt. [<a href="https://hl7germany.atlassian.net/browse/HDB-712">HDB-712</a>, <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/215">#215</a>]</li>
+  <li><code class="language-plaintext highlighter-rouge">improve</code> Klarstellung der Datums-Semantik in Verlaufshistologie und Specimen Profilen: <code class="language-plaintext highlighter-rouge">Observation.effectiveDateTime</code> bezeichnet "Datum der histologischen Untersuchung", während <code class="language-plaintext highlighter-rouge">Specimen.collection.collectedDateTime</code> das "Datum der Probenentnahme" (oBDS 6.1 "Tumor Histologiedatum") darstellt. Labels, oBDS-Mappings und UML-Diagramme entsprechend aktualisiert. Verpflichtende 1..1 Specimen-Referenz im UML-Diagramm visualisiert. [<a href="https://hl7germany.atlassian.net/browse/HDB-714">HDB-714</a>, <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/233">#233</a>]</li>
+  <li><code class="language-plaintext highlighter-rouge">documentation</code> Hinweis auf Vererbung vom MII KDS Modul Diagnose zur Beschreibung des Diagnose Primärtumor Profils hinzugefügt. [<a href="https://hl7germany.atlassian.net/browse/HDB-701">HDB-701</a>, <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/227">#227</a>]</li>
+  <li><code class="language-plaintext highlighter-rouge">documentation</code> Beschreibungen der TNM c/p/u-Präfix Extension und ValueSet verbessert mit Erklärungen der Klassifikationsmethoden. [<a href="https://hl7germany.atlassian.net/browse/HDB-699">HDB-699</a>, <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/229">#229</a>]</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> SNOMED CT Versions-URI-Syntax in ConceptMap mii-cm-onko-krk-stoma-obds-sct korrigiert: Versionierte URI von <code class="language-plaintext highlighter-rouge">target</code> nach <code class="language-plaintext highlighter-rouge">targetVersion</code> verschoben. [<a href="https://hl7germany.atlassian.net/browse/HDB-702">HDB-702</a>, <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/226">#226</a>]</li>
+  <li><code class="language-plaintext highlighter-rouge">documentation</code> Beschreibung und Definition im Prostata Operation Profil korrigiert um Binding-Stärke korrekt als <code class="language-plaintext highlighter-rouge">required</code> (statt <code class="language-plaintext highlighter-rouge">preferred</code>) zu reflektieren. [<a href="https://hl7germany.atlassian.net/browse/HDB-706">HDB-706</a>, <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/224">#224</a>]</li>
+  <li><code class="language-plaintext highlighter-rouge">documentation</code> UCUM Hinweistext in Lymphknoten-Zählprofilen verbessert für bessere Klarheit über verpflichtenden UCUM Code 1. [<a href="https://hl7germany.atlassian.net/browse/HDB-700">HDB-700</a>, <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/228">#228</a>]</li>
+  <li><code class="language-plaintext highlighter-rouge">improve</code> LOINC Slices zu Karnofsky und ECOG Leistungszustand Profilen hinzugefügt für bessere internationale Interoperabilität. [<a href="https://hl7germany.atlassian.net/browse/HDB-689">HDB-689</a>, <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/236">#236</a>]</li>
+  <li><code class="language-plaintext highlighter-rouge">improve</code> Strahlentherapie Applikationsart von <code class="language-plaintext highlighter-rouge">Procedure.usedCode</code> zu Standard-Extension <code class="language-plaintext highlighter-rouge">procedure-method</code> verschoben für semantisch korrektere Modellierung. [<a href="https://hl7germany.atlassian.net/browse/HDB-682">HDB-682</a>, <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/238">#238</a>]</li>
+  <li><code class="language-plaintext highlighter-rouge">documentation</code> MII Modul Forschungsvorhaben zum UML-Diagramm "Profile - Beziehungen und Referenzen" hinzugefügt zur Darstellung der optionalen Integration mit Forschungsprojekten. [<a href="https://hl7germany.atlassian.net/browse/HDB-715">HDB-715</a>, <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/232">#232</a>]</li>
+  <li><code class="language-plaintext highlighter-rouge">improve</code> Mamma Operation Profil um strukturierte <code class="language-plaintext highlighter-rouge">usedCode</code> Slices für intraoperatives Präparatröntgen/Sonografie (M6) und präoperative Drahtmarkierung (M5) mit entsprechenden ValueSets erweitert. [<a href="https://hl7germany.atlassian.net/browse/HDB-653">HDB-653</a>, <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/243">#243</a>]</li>
+  <li><code class="language-plaintext highlighter-rouge">improve</code> Prostata PSA LOINC ValueSet mit korrekten LOINC Display-Namen erstellt: Total-PSA (generisch und per Immunoassay), freies PSA (generisch und per Immunoassay) und ultrasensitives PSA (Nachweisgrenze ≤ 0.01 ng/mL). [<a href="https://hl7germany.atlassian.net/browse/HDB-688">HDB-688</a>, <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/235">#235</a>]</li>
+  <li><code class="language-plaintext highlighter-rouge">improve</code> Her2neu Status Profil für Mamma-Modul mit dualer Kodierungsstrategie implementiert: oBDS-Spezifikation (P/N/U) und S3-Leitlinie/ASCO-CAP Guidelines (positiv/low/ultralow/negativ/equivocal) mit IHC Score und ISH Result Komponenten für moderne HER2-low Therapieansätze.</li>
+</ul>
+
+<h2 id="änderungen-kommentierungs-version-2026-veröffentlicht-21082025">Änderungen Kommentierungs-Version 2026 (veröffentlicht 21.08.2025)</h2>
+
+<h3 id="weitere-klassifikationen-und-molekulare-tumorboards">Weitere Klassifikationen und Molekulare Tumorboards</h3>
+<ul>
+  <li><strong>Hierarchische Klassifikationssysteme</strong>: Implementierung weiterer Klassifikationssysteme (BINET, Ann Arbor, ISS, WHO-Grad, etc.) als hierarchisches CodeSystem
+    <ul>
+      <li><strong>Grund</strong>: Unterstützung hämatologischer und anderer spezifischer Klassifikationssysteme gemäß oBDS-Anforderungen</li>
+      <li><strong>Technische Umsetzung</strong>: CodeSystem mit <code class="language-plaintext highlighter-rouge">descendant-of</code> ValueSet-Filtern für die jeweiligen Antwortmöglichkeiten, um hohe Anzahl eigener Profile zu vermeiden</li>
+      <li><strong>mCODE-Kompatibilität</strong>: Integration des mCODE STU4 code+method+value Patterns für Staging-Observationen</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="tumorkonferenz-erweiterung">Tumorkonferenz-Erweiterung</h3>
+<ul>
+  <li><strong>Erweiterte <a href="StructureDefinition-mii-pr-onko-tumorkonferenz.html">CarePlan</a></strong> zur Unterstützung sowohl bisheriger oBDS-Darstellung der Tumorkonferenzen als auch komplexere Darstellung von Therapieempfehlungen wie im Modul Molekulares Tumorboard</li>
+  <li><strong>Grund</strong>: FHIR R4 Invariant cpl-3 verhindert gleichzeitige Nutzung von <code class="language-plaintext highlighter-rouge">activity.detail.code</code> und <code class="language-plaintext highlighter-rouge">activity.reference</code></li>
+  <li><strong>Lösung</strong>: Activity-Slicing mit <code class="language-plaintext highlighter-rouge">obds</code> (Standard oBDS 19.1 Kategorisierung) und <code class="language-plaintext highlighter-rouge">extended</code> (<a href="StructureDefinition-mii-pr-onko-therapieempfehlung-kombinationstherapie.html">TherapieempfehlungKombinationstherapieRequestGroup</a>-basierte Protokolle) Slices</li>
+  <li><strong>Rückwärtskompatibilität</strong>: Bestehende oBDS-Implementierungen werden unverändert unterstützt</li>
+</ul>
+
+<h3 id="systemische-therapie-erweiterungen">Systemische Therapie Erweiterungen</h3>
+
+<h4 id="protokoll-implementierung">Protokoll-Implementierung</h4>
+<ul>
+  <li><strong>usedCode-Implementierung</strong>: Strukturierte Dokumentation von Therapieprotokollen in <a href="StructureDefinition-mii-pr-onko-systemische-therapie.html">SystemischeTherapieProcedure</a>
+    <ul>
+      <li><strong>Grund</strong>: Ablösung der unstrukturierten <code class="language-plaintext highlighter-rouge">note.text</code> Protokollangaben durch standardisierte Kodierung</li>
+      <li><strong>Umfang</strong>: Vollständiges CodeSystem mit 96 Protokollen aus oBDS Umsetzungsleitfaden (FOLFOX, R-CHOP, AC, etc.)</li>
+      <li><strong>Technische Umsetzung</strong>: <code class="language-plaintext highlighter-rouge">Procedure.usedCode</code> mit extensible Binding an Protokolle-ValueSet</li>
+      <li><strong>Substanzkombinationen</strong>: Jedes Protokoll dokumentiert enthaltene Wirkstoffe (z.B. "AC" → "Cyclophosphamid, Doxorubicin")</li>
+      <li><strong>oBDS-Mapping</strong>: Protokollfeld 16.6 im oBDS-Mapping nun auch zur Systemischen Therapie hinzugefügt (vorher nur in MedicationStatements)</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="unii-kodierung-für-experimentelle-substanzen">UNII-Kodierung für experimentelle Substanzen</h4>
+<ul>
+  <li><strong>Dual-Coding-Support</strong>: <a href="StructureDefinition-mii-pr-onko-systemische-therapie-medikation.html">SystemischeTherapieMedicationStatement</a> erweitert um UNII-Slice zusätzlich zum bestehenden ATC-Slice
+    <ul>
+      <li><strong>Grund</strong>: Unterstützung experimenteller/neuerer Substanzen ohne etablierte ATC-Codes</li>
+      <li><strong>Technische Umsetzung</strong>:
+        <ul>
+          <li>Neuer <code class="language-plaintext highlighter-rouge">unii</code> Slice auf MedicationStatement.medication mit extensible Binding an UNII-ValueSet</li>
+        </ul>
+      </li>
+      <li><strong>ValueSet</strong>: UNII-ValueSet mit 100+ UNII-Codes</li>
+      <li><strong>Beispiel</strong>: Iberdomide (UNII: 8V66F27X44) als experimenteller Immunmodulator</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="atc-code-transitionen-und-post-hoc-mapping">ATC-Code Transitionen und Post-hoc Mapping</h4>
+<ul>
+  <li><strong>Dokumentation temporaler ATC-Änderungen</strong>: Neue Dokumentation für Terminologie-Besonderheiten
+    <ul>
+      <li><strong>Quizartinib-Beispiel</strong>: L01XE52 (bis 2020) → L01EX11 (ab 2021)</li>
+      <li><strong>Weitere Transitionen</strong>: Abemaciclib, Acalabrutinib, Adalimumab dokumentiert</li>
+    </ul>
+  </li>
+  <li><strong>Post-hoc Mapping (kontrovers, daher optional)</strong>: Empfehlung zur DIZ-basierte Freitext-zu-ATC-Annotation
+    <ul>
+      <li><strong>Erlaubt wenn</strong>: Klare Provenance-Dokumentation vorhanden</li>
+      <li><strong>Verwendung aktueller Codes</strong>: Bei Post-Annotation aktuelle ATC-Codes verwenden (nicht zwingend die historischen)</li>
+      <li><strong>Originaltext erhalten</strong>: Im <code class="language-plaintext highlighter-rouge">medicationCodeableConcept.text</code> Element</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="operationprocedure-erweiterungen"><a href="StructureDefinition-mii-pr-onko-operation.html">OperationProcedure</a> Erweiterungen</h3>
+
+<h4 id="mehrteilige-eingriffe-unterstützung">Mehrteilige Eingriffe Unterstützung</h4>
+<ul>
+  <li><strong>OPS-Code Kardinalität</strong>: Änderung von <code class="language-plaintext highlighter-rouge">code.coding[ops] 1..1</code> zu <code class="language-plaintext highlighter-rouge">code.coding[ops] 0..1</code>
+    <ul>
+      <li><strong>Grund</strong>: GitHub Issue #194 - Unterstützung für mehrteilige Operationen mit mehreren OPS-Codes</li>
+      <li><strong>Lösung</strong>: Zwei Modellierungsansätze dokumentiert:
+        <ul>
+          <li>Übergeordnete Procedure mit SNOMED CT Code + Teil-Procedures mit OPS-Codes</li>
+          <li>Gleichberechtigte Procedures bei unklarer Hierarchie</li>
+        </ul>
+      </li>
+      <li><strong>Code-Anforderung</strong>: Klarstellung dass jede Procedure einen Code haben MUSS (OPS oder SNOMED CT)</li>
+      <li><strong>Beispiel aktualisiert</strong>: Kim Musterperson 4-teilige Operation demonstriert Ansatz mit SNOMED CT für Hauptprocedure</li>
+      <li><strong>Dokumentation</strong>: Ausführliche Anleitung für <code class="language-plaintext highlighter-rouge">partOf</code>-Verknüpfung und gemeinsame Aspekte</li>
+      <li><strong>Harmonisierung</strong>: Hinweis auf Schwierigkeit der post-hoc Harmonisierung bei komplexen Tumoroperationen</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="urgency-extension-art-des-eingriffs">Urgency Extension (Art des Eingriffs)</h4>
+<ul>
+  <li><strong>Neue Extension</strong>: <a href="StructureDefinition-mii-ex-onko-operation-urgency.html">ExtensionUrgencyOperation</a> zur Erfassung der Eingriffsmodalität
+    <ul>
+      <li><strong>Herkunft</strong>: Ursprünglich aus KRK 6 oBDS 2021, aber universell auf alle Procedures anwendbar</li>
+      <li><strong>Wertebereich</strong>: Elektiveingriff (E), Notfalleingriff (N), Unbekannt (U)</li>
+      <li><strong>Grund</strong>: Qualitätssicherung und Risikostratifizierung - Notfalleingriffe haben andere Komplikationsraten</li>
+      <li><strong>Integration</strong>: Extension in allgemeines <a href="StructureDefinition-mii-pr-onko-operation.html">OperationProcedure</a> Profil integriert für breite Anwendbarkeit</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="verlauf-profil-anpassungen">Verlauf-Profil Anpassungen</h3>
+<ul>
+  <li><strong>Component-Kardinalität</strong>: Änderung von <code class="language-plaintext highlighter-rouge">component 1..*</code> zu <code class="language-plaintext highlighter-rouge">component 0..*</code> im <strong>AllgemeinerObservation</strong>
+    <ul>
+      <li><strong>Grund</strong>: GitHub Issue #202 - Unterstützung für "K - keine Änderung" Fälle und hämatologische Krebsarten ohne TNM-Anwendbarkeit</li>
+      <li><strong>Betroffene Felder</strong>: Tumor_Verlauf, Lymphknoten_Verlauf, Fernmetastasen_Verlauf bleiben 0..1</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="strahlentherapie-zielgebiet---obds-20142021-kompatibilität">Strahlentherapie Zielgebiet - oBDS 2014/2021 Kompatibilität</h3>
+<ul>
+  <li><strong>oBDS 2014 CodeSystem Integration</strong>: Unterstützung für oBDS 2014 Zielgebiet-Definitionen zur Abwärtskompatibilität in <a href="StructureDefinition-mii-pr-onko-strahlentherapie.html">StrahlentherapieProcedure</a>
+    <ul>
+      <li><strong>Grund</strong>: oBDS 2021 führte architektonische Änderung ein - Trennung von Organ- und Lymphknotenkodierung</li>
+      <li><strong>oBDS 2014 Ansatz</strong>: Kombinierte Kodierung mit <code class="language-plaintext highlighter-rouge">+</code>/<code class="language-plaintext highlighter-rouge">-</code> Suffixen (z.B. <code class="language-plaintext highlighter-rouge">"3.1.+"</code> = "Mamma mit Lymphknoten")</li>
+      <li><strong>oBDS 2021 Änderung</strong>: Separate Kodierung - Organe (Sektionen 1-8) und dedizierte Lymphknotenregionen (Sektion 9)</li>
+      <li><strong>Technische Umsetzung</strong>: Separates CodeSystem für Strahlentherapie-Zielgebiet-2014 - semantische Konflikte über Angabe der Version vermeidbar (2014 vs 2021)</li>
+      <li><strong>ValueSet Integration</strong>: Erweiterte ValueSet für Strahlentherapie-Zielgebiet unterstützt beide CodeSystems</li>
+      <li><strong>Migration Pattern</strong>: 2014 Einzelkodes → 2021 Mehrfachkodierung (z.B. <code class="language-plaintext highlighter-rouge">"3.1.+"</code> → <code class="language-plaintext highlighter-rouge">#3.1</code> + <code class="language-plaintext highlighter-rouge">#9.3</code>)</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="neue-profile-zur-abdeckung-der-organspezifischen-module">Neue Profile zur Abdeckung der organspezifischen Module</h3>
+<ul>
+  <li><strong>Mamma</strong>: Vollständige Implementierung des <a href="profiles.html">MammaModule</a>
+    <ul>
+      <li><strong>Estrogen-Rezeptorstatus</strong>: <a href="StructureDefinition-mii-pr-onko-mamma-rezeptorstatus-estrogen.html">MammaEstrogenRezeptorstatus</a> mit dualer Kodierung (oBDS/S3-Leitlinien) und Komponenten für Anteil positiver Zellen und Färbeintensität</li>
+      <li><strong>Progesteron-Rezeptorstatus</strong>: <a href="StructureDefinition-mii-pr-onko-mamma-rezeptorstatus-progesteron.html">MammaProgesteronRezeptorstatus</a> mit identischer Struktur zum Estrogen-Status</li>
+      <li><strong>Menopause-Status</strong>: <a href="StructureDefinition-mii-pr-onko-mamma-menopause-status.html">MammaMenopauseStatus</a> mit oBDS 2021-konformer Subsumierung (perimenopausal → prämenopausal)</li>
+      <li><strong>Präoperative Markierung</strong>: <a href="StructureDefinition-mii-pr-onko-mamma-praeoperative-markierung.html">MammaPraeoperativeMarkierung</a> für verschiedene Markierungsmodalitäten (Draht, Seeds, magnetisch)</li>
+      <li><strong>Mamma-Operation</strong>: <a href="StructureDefinition-mii-pr-onko-mamma-operation.html">MammaOperation</a> mit SNOMED CT und OPS ValueSets</li>
+      <li><strong>Hinweise</strong>: Her2Neu im Molecular Tumorboard-Profil; Tumorgröße im Histologie-Modul; Studienteilnahme in oBDS 2021 abgedeckt</li>
+    </ul>
+  </li>
+  <li><strong>Prostata</strong>: Vollständige Implementierung des <a href="profiles.html">ProstataModule</a>
+    <ul>
+      <li><strong>PSA</strong>: <a href="StructureDefinition-mii-pr-onko-prostate-psa.html">ProstataPSA</a> mit LOINC 2857-1 Kodierung</li>
+      <li><strong>Anzahl Stanzen</strong>: <a href="StructureDefinition-mii-pr-onko-prostate-anzahl-stanzen.html">ProstataAnzahlStanzen</a> (LOINC 33743-6)</li>
+      <li><strong>Anzahl positive Stanzen</strong>: <a href="StructureDefinition-mii-pr-onko-prostate-anzahl-positive-stanzen.html">ProstataAnzahlPositiveStanzen</a> (LOINC 33746-9)</li>
+      <li><strong>Karzinom-Befall Stanze</strong>: <a href="StructureDefinition-mii-pr-onko-prostate-ca-befall-stanze.html">ProstataKarzinomBefallStanze</a> (LOINC 33748-5)</li>
+      <li><strong>Gleason Score/Grade Group</strong>: <a href="StructureDefinition-mii-pr-onko-prostate-gleason-grade-group.html">ProstataGleasonScoreGradeGroup</a> (LOINC 44648-7)</li>
+      <li><strong>Gleason Patterns</strong>: Primäre und sekundäre Gleason-Grad-Komponenten</li>
+      <li><strong>Clavien-Dindo</strong>: <a href="StructureDefinition-mii-pr-onko-prostate-clavien-dindo.html">ProstataClavienDindo</a> mit dualer Kodierung (SNOMED CT + oBDS)</li>
+    </ul>
+  </li>
+  <li><strong>Kolorektales Karzinom</strong>: Vollständige Implementierung des <a href="profiles.html">KRKModule</a>
+    <ul>
+      <li><strong>Abstand Anokutanlinie</strong>: <a href="StructureDefinition-mii-pr-onko-krk-abstand-anokutan.html">KRKAbstandTumorAnokutanlinie</a> (oBDS KR1, LOINC 33748-5)</li>
+      <li><strong>Circumferelle Resektionsebene</strong>: <a href="StructureDefinition-mii-pr-onko-krk-abstand-circumferelle-resektionsebene.html">KRKAbstandCircumferelleResektionsebene</a> (oBDS KR3)</li>
+      <li><strong>Aboraler Resektionsrand</strong>: <a href="StructureDefinition-mii-pr-onko-krk-abstand-aboral.html">KRKAbstandResektionsrandAboral</a> (oBDS KR2)</li>
+      <li><strong>MRT Mesorektale Faszie</strong>: <a href="StructureDefinition-mii-pr-onko-krk-mrt-mesorektale-faszie.html">KRKMRTMesorektale</a> mit Abstandsmessung (oBDS KR5)</li>
+      <li><strong>ASA-Klassifikation</strong>: <strong>KRKASAKlassifikation</strong> (oBDS KR9, LOINC 97816-3)</li>
+      <li><strong>Anastomoseninsuffizienz</strong>: <a href="StructureDefinition-mii-pr-onko-krk-anastomoseninsuffizienz.html">KRKAnastomoseninsuffizienz</a> (oBDS KR8, SNOMED CT 235919008)</li>
+      <li><strong>KRK-Operation</strong>: <a href="StructureDefinition-mii-pr-onko-krk-operation.html">KRKOperation</a> (oBDS KR6); TME-Qualitätsbewertung am Specimen (oBDS KR4)</li>
+      <li><strong>KRK-Specimen</strong>: <a href="StructureDefinition-mii-pr-onko-krk-specimen.html">KRKSpecimen</a> mit pathologischer TME-Qualität</li>
+      <li><strong>Stoma-Markierung</strong>: <a href="StructureDefinition-mii-pr-onko-krk-stoma-markierung.html">KRKStomaMarkierung</a> (oBDS KR7)</li>
+      <li><strong>Bundle-Beispiel</strong>: <a href="profiles.html">KRKBundle</a> demonstriert vollständigen KRK-Workflow</li>
+    </ul>
+  </li>
+  <li><strong>Malignes Melanom</strong>: Vollständige Implementierung des <a href="profiles.html">MalignesMelanomModule</a>
+    <ul>
+      <li><strong>Breslow-Tiefe</strong>: <a href="StructureDefinition-mii-pr-onko-melanom-breslow-tiefe.html">MelanomBreslowTiefe</a> (SNOMED CT 106243009)</li>
+      <li><strong>Ulzeration</strong>: <a href="StructureDefinition-mii-pr-onko-melanom-ulzeration.html">MelanomUlzeration</a> (oBDS MM4)</li>
+      <li><strong>Sicherheitsabstand</strong>: <a href="StructureDefinition-mii-pr-onko-melanom-sicherheitsabstand.html">MelanomSicherheitsabstand</a> (oBDS MM1)</li>
+      <li><strong>LDH</strong>: <a href="StructureDefinition-mii-pr-onko-melanom-ldh.html">MelanomLDH</a> Laktatdehydrogenase als prognostischer Marker</li>
+      <li><strong>Melanom-Exzision</strong>: <strong>MelanomExzision</strong> mit SNOMED CT Codes für Hautexzisionen</li>
+      <li><strong>Bundle-Beispiel</strong>: <a href="profiles.html">MelanomBundle</a> demonstriert vollständigen Melanom-Workflow</li>
+    </ul>
+  </li>
+  <li><strong>Bundle-Beispiele</strong>: Für alle organspezifischen Module (<a href="profiles.html">MammaBundle</a>, <strong>ProstataBundle</strong>, <a href="profiles.html">KRKBundle</a>, <a href="profiles.html">MelanomBundle</a>) stehen vollständige Transaktions-Bundles zur Verfügung, die alle zugehörigen Profile in einem server-konsumierbaren Format demonstrieren</li>
+</ul>
+
+<hr />
+
+<h2 id="änderungen-in-202510-veröffentlicht-12062025">Änderungen in 2025.1.0 (veröffentlicht 12.06.2025)</h2>
+<ul>
+  <li>Umprofilierung des Strahlentherapie-Profils (BREAKING CHANGE!)
+    <ul>
+      <li>bisher:
+        <ul>
+          <li>basierend auf MII-Prozedur-Profil</li>
+          <li>mit Extensions für Intention, Stellung zur OP und Bestrahlungsdetails</li>
+        </ul>
+      </li>
+      <li>neu:
+        <ul>
+          <li>übergeordnete Strahlentherapie-Prozedur
+            <ul>
+              <li>Extensions für Intention und Stellung zur OP</li>
+              <li>Zeitraum der kompletten Strahlentherapie über Procedure</li>
+            </ul>
+          </li>
+          <li>individuelle Bestrahlungsprofile für Strahlentherapi eund Nuklearmedizin
+            <ul>
+              <li>Strahlenart und Applikationsart über Procedure.usedCode</li>
+              <li>Zielstruktur und Seitenlokalisation über Procedure.bodySite</li>
+              <li>Zeitraum der Einzelbestrahlungen über Procedure.effectivePeriod</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Profile
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">Verlauf.component[Tumor].code</code> von <code class="language-plaintext highlighter-rouge">277062004 |Status des Residualtumors|</code> auf <code class="language-plaintext highlighter-rouge">445200009 |Status of residual neoplasm (observable entity)|</code> (verfügbar seit September 2024) und pattern angepasst</li>
+      <li>Extensions haben jetzt experimental <code class="language-plaintext highlighter-rouge">experimental=true</code> und Datumsstempel</li>
+      <li>Slicing-Regeln des Onko-Befunds korrigiert und Label korrekt auf von <code class="language-plaintext highlighter-rouge">conclusion.value</code> auf <code class="language-plaintext highlighter-rouge">conclusion</code> gesetzt</li>
+      <li>Onko-Medikation: MedicationStatement.partOf-Slice korrigiert und Kardinalität von 1..* auf 0..1 angepasst</li>
+      <li>Operations-Prozeduren können jetzt wieder mit <code class="language-plaintext highlighter-rouge">Procedure.partOf</code> auf übergeordnete Profile verweisen, wenn mehrere OPS-Codes für einen Eingriff kodiert wurden(war vorher auf Observation eingeschränkt) <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/194">Ticket</a></li>
+      <li>UICC-ValueSet um vier Staging-Stadien ergänzt [Ticket] (https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/issues/193)</li>
+      <li>Nebenwirkung: AdverseEvent.event wieder auf 1..1 gesetzt und Beispieldatei mit nur-Text ohne coding unter AdverseEvent.event.text hinzugefügt</li>
+    </ul>
+  </li>
+  <li>ConceptMaps
+    <ul>
+      <li>Einfügen Versionsnummer entsprechend dem Package</li>
+      <li>Ersetzen der targetURI "http://snomed.info/sct" (CodeSystem-URI) mit spezifischer SNOMED-Distribution "http://snomed.info/sct/900000000000207008/version/20240401" (ValueSet-URI)</li>
+    </ul>
+  </li>
+  <li>Beispieldaten
+    <ul>
+      <li>Condition-PatientKimMusterperson-Diagnosis-1 - Korrektur: verificationStatus = <code class="language-plaintext highlighter-rouge">active</code> korrigert auf <code class="language-plaintext highlighter-rouge">verificationStatus</code> = <code class="language-plaintext highlighter-rouge">unconfirmed </code> &amp; <code class="language-plaintext highlighter-rouge">clinicalStatus</code> = <code class="language-plaintext highlighter-rouge">active</code></li>
+      <li>Korrektur des falsch hinterlegten Profils in Observation-TNM-V-Observation-2 (hier war L-Kategorie statt V-Kategorie hinterlegt)</li>
+      <li>Observation-mii-exa-onko-studienteilnahme: Korrektes Hinterlegen von system und display bei 'valueCodeableConcept.coding.code`= "Ja"</li>
+      <li>Observation-mii-exa-onko-weitere-klassifikationen-2: Code weiter spezifiziert von <code class="language-plaintext highlighter-rouge">385388004 |Ann Arbor Klassifkation|</code> auf <code class="language-plaintext highlighter-rouge">254373007 |Ann Arbor Hodgkin's disease tumor staging system (tumor staging)|</code></li>
+      <li>Procedure-PatientKimMusterperson-Procedure-1: Einfügen der Imaging-Kategorie; Korrigieren des OPS-Codes von <code class="language-plaintext highlighter-rouge">3-222 Computertomographie des Thorax mit Kontrastmittel (Version 2024)</code> auf <code class="language-plaintext highlighter-rouge">3-225 Computertomographie des Abdomens mit Kontrastmittel (Version 2021)</code></li>
+      <li>Procedure-PatientKimMusterperson-Procedure-2: Einfügen einer Kategorie für Diagnostic Assessment, Einfügen der OPS-Version 2021</li>
+      <li>Procedure-PatientKimMusterperson-Procedure-3: Einfügen der Imaging-Kategorie; Anpassen des Codes von <code class="language-plaintext highlighter-rouge">1-853.2 CT Thorax</code> auf <code class="language-plaintext highlighter-rouge">3-202 Native Computertomographie des Thorax</code>; Einfügen der OPS-Version 2021</li>
+      <li>Procedure-PatientKimMusterperson-Procedure-4 und 4a-d: Korrigieren des Kategorien-Labels von "Operationen" auf "Surgical Procedure"; Einfügen der OPS-Version 2021</li>
+      <li>Procedure-PatientKimMusterperson-SystemicTherapy-2 und -3: Einfügen der Kategorie <code class="language-plaintext highlighter-rouge">18629005 |Administration of drug or medicament (procedure)|</code>; Einfügen der Version bei OPS</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="änderungen-in-202504-veröffentlicht-28032025">Änderungen in 2025.0.4 (veröffentlicht 28.03.2025)</h2>
+<ul>
+  <li>Nebenwirkung: Kardinalität des Elements AdverseEvent.event von 1..1 auf 0..1 gesenkt, da in den Krebsregisterdaten keine näheren Informationen zu CTCAE 0-2 gegeben werden.</li>
+  <li>Studienteilnahme: Korrektur eines falschen SNOMED-Codes auf der IG-Seite von 70709491003 auf 709491003(Code im Profil war korrekt)</li>
+  <li>Strahlentherapie-Bestrahlung: ValueSet-Binding von Strahlenart, Applikationsart und Lokalisation von required auf extensible gesenkt. Hintergrund war, dass auch experimentelle Strahlentherapien kodierbar sein sollen, und dass historische Werte teilweise auf der alten Werteliste Zielgebiet_2014 basieren (siehe https://plattform65c.atlassian.net/wiki/spaces/UMK/pages/15532594/oBDS_Zielgebiet2014_Typ)</li>
+</ul>
+
+<h2 id="änderungen-in-202503">Änderungen in 2025.0.3</h2>
+<ul>
+  <li>Hinzufügen von ValueSets für ICD-O-3 Morphologie und Topologie, sowie required-binding bei den Profilen "Diagnose" und "Verlaufshistologie"</li>
+  <li>Einfügen von fehlender SNOMED-Categories bei Operations-Beispielen</li>
+  <li>kleine Korrekturen von Rechtschreibfehlern im IG</li>
+  <li>Aktualisierung von externen Links</li>
+</ul>
+
+<h2 id="änderungen-in-der-profilierung-seit-der-kommentierungsversion-202400-ballot">Änderungen in der Profilierung seit der Kommentierungsversion 2024.0.0-ballot</h2>
+
+<h3 id="fhir-profile">FHIR-Profile</h3>
+<ul>
+  <li>SystemicTherapyMedication(MedicationStatement): Lockerung der Einschränkung von <code class="language-plaintext highlighter-rouge">MedicationStatement.basedOn</code>, so dass ein MedicationStatement andere MedicationStatements referenzieren kann</li>
+  <li>Diagnose (Condition): Auslagerung des morphologischen ICD-O-3-Codes in die Extension <code class="language-plaintext highlighter-rouge">https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-histology-morphology-behavior-icdo3</code> (vgl. bei mCODE), da ICD-O-3 Morphologie-Codes nicht das gleiche klinische Konzept wie ein ICD-10 Code oder ein Orpha-Code beschreiben.</li>
+  <li>Verlaufshistologie (Observation): Hinzufügen der Seite im Implementation Guide und Ergänzen des ICD-O-3-Topographie-Codes unter <code class="language-plaintext highlighter-rouge">Observation.bodySite</code></li>
+  <li>Änderung des Pathologie-Befund-Codes <code class="language-plaintext highlighter-rouge">DiagnosticReport.code</code> auf LOINC <code class="language-plaintext highlighter-rouge">22034-3 Pathology Report Cancer Narrative</code></li>
+  <li>Fernmetasen (Observation): Lokalisation der Fernmetastasen von <code class="language-plaintext highlighter-rouge">bodySite</code> nach <code class="language-plaintext highlighter-rouge">valueCodeableConcept</code> verschoben, um konform mit den Pathologiebefund-Patho Findings zu sein</li>
+  <li>Specimen (Specimen): Probennummer von <code class="language-plaintext highlighter-rouge">Specimen.identifier</code> nach <code class="language-plaintext highlighter-rouge">Specimen.accessionIdentifier</code> verschoben</li>
+  <li>Allgemeiner Leistungszustand (Observation): Aufsplitten in einzelne Observations für  ECOG und Karnofsky , inkl. Anpassung der CodeSystems und ValueSets</li>
+  <li>Strahlentherapie (Procedure): "Stellung zur OP"-Extension umbenannt von "Stellung" in "StellungZurOp"</li>
+  <li>Systemische Therapie (Procedure): "Stellung zur OP"-Extension umbenannt von "Stellung" in "StellungZurOp"</li>
+  <li>Tod (Observation): Lockerung der Kardinalitäten von Todesursache(<code class="language-plaintext highlighter-rouge">valueCodeableConcept</code>), Todesdatum(<code class="language-plaintext highlighter-rouge">effective</code>) und Zusammenhang mit Tumorerkrankung(<code class="language-plaintext highlighter-rouge">interpretation</code>) von 1..1 auf 0..1, da Informationen im Krankenhaus nicht immer bekannt und von den Krebsregistern häufig über Todesmeldungen in Standesämtern abgefragt</li>
+  <li>Nebenwirkungen (AdverseEvent): Ändern des CTCAE-Grads von <code class="language-plaintext highlighter-rouge">AdverseEvent.severity</code> zu <code class="language-plaintext highlighter-rouge">AdverseEvent.seriousness</code></li>
+</ul>
+
+<h3 id="dokumentation-und-implementation-guide">Dokumentation und Implementation Guide</h3>
+<ul>
+  <li>Erarbeitung und Dokumentation von Kodierempfehlungen für <code class="language-plaintext highlighter-rouge">category</code> und <code class="language-plaintext highlighter-rouge">code</code> der Strahlentherapie und Systemischen / Abwartenden Therapie</li>
+  <li>Aktualisierung der UML-Diagramme</li>
+  <li>Anpassen der Beispieldateien</li>
+</ul>
+
+<h3 id="snomed-ct-mappings">SNOMED-CT Mappings</h3>
+<ul>
+  <li>IDs der ConceptMaps auf MII-Naming convention angepasst (mii-cm-*); Vereinheitlichen der ids, urls und Dateinamen</li>
+  <li>Beheben inhaltlicher Fehler</li>
+  <li>cave: größere inhaltliche Änderungen wurden nicht vorgenommen, da parallel die Abstimmung oBDS-meets-SNOMEDCT läuft</li>
+</ul>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
+          Package de.medizininformatikinitiative.kerndatensatz.onkologie#2027.0.0-ballot.rc1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Erstellt <span title="Thu, Sep 3, 2026 07:02+0000">2026-09-03</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+            <!-- Branding override for the fhir2.base.template footer fragment.
+     Unlike header/css, the base footer fragment is NOT an empty placeholder: it
+     renders "Links: Table of Contents | QA Report [| feedback dashboards]".
+     The base uses site.data.stringsBase[include.lang][...] for the labels. The
+     reason this override supplies its own is the Imprint label: the base ships no
+     stringsBase key for it and a child template cannot add one (docs/styleguide.md
+     section 6), and the same include.lang branch then has to carry the other
+     labels too. (The blank-label problem that first motivated this is separately
+     mitigated: this repo vendors the base's own German catalogs into
+     translations/ — see translations/README.md.) The override preserves the base
+     links (TOC, QA, feedback dashboards) and appends the project information links.
+     NUM-DIZ takes over IG development and maintenance when MII funding ends
+     (end-2026), so the NUM-DIZ website link renders BEFORE the MII website link —
+     in BOTH brand designs and both languages; the MII links stay because the
+     modules remain MII content. Both anchors are the SITE ROOTS with the bare
+     domain as anchor text (TF-KDS feedback 2026-08-14: aligned anchor style;
+     domains are language-neutral, styleguide §6).
+     Imprint: points at the NUM-DIZ website's legal pages since 2026-08-14
+     (TF-KDS: NUM-DIZ takes over from MII in 2027, so legal-aspect links use
+     the NUM-DIZ counterpart where one exists) - German /impressum and English
+     /en/legal-notice (both verified HTTP 200 on 2026-08-14). -->
+
+          Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Inhaltsverzeichnis</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA-Bericht</a>
+                 
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.netzwerk-universitaetsmedizin.de/">netzwerk-universitaetsmedizin.de</a>
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.medizininformatik-initiative.de/">medizininformatik-initiative.de</a>
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.netzwerk-universitaetsmedizin.de/impressum">Impressum</a>
+                 <br/>
+                 <!-- HL7 trademark attribution (required wherever the FHIR flame
+                      renders - the header shows it on every page; see HL7's
+                      trademark guidelines; permission request tracked in issue #109). The sentence is
+                      HL7's prescribed formula and stays in English on every
+                      language's pages (legal wording, styleguide §6). -->
+                 <span>HL7®, FHIR® and the FHIR flame design are registered trademarks of Health Level Seven International. Their use does not constitute endorsement by HL7.</span>
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

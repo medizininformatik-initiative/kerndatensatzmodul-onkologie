@@ -1,0 +1,1050 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="mii-cm-onko-strahlentherapie-zielgebiet-sct"/>
+  <meta>
+    <extension url="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-license">
+      <valueCode value="CC-BY-4.0"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/package-source">
+      <extension url="packageId">
+        <valueId value="de.medizininformatikinitiative.kerndatensatz.onkologie"/>
+      </extension>
+    </extension>
+    <extension url="version">
+      <valueString value="2026.0.3"/>
+    </extension>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableconceptmap"/>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishableconceptmap"/>
+  </meta>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ConceptMap mii-cm-onko-strahlentherapie-zielgebiet-sct</b></p><a name="de-mii-cm-onko-strahlentherapie-zielgebiet-sct"> </a><a name="de-hcmii-cm-onko-strahlentherapie-zielgebiet-sct"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profiles: <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-shareableconceptmap.html">CRMI Shareable ConceptMap</a>, <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-publishableconceptmap.html">CRMI Publishable ConceptMap</a></p></div><p>Mapping from https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ to http://snomed.info/sct/900000000000207008/version/20240401</p><br/><p>Mapping from <a href="CodeSystem-mii-cs-onko-strahlentherapie-zielgebiet.html">MII CS Onkologie Strahlentherapie Zielgebiet</a> to <code>http://snomed.info/sct/900000000000207008/version/20240401</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>1.1 (Ganzhirn (Neurokranium, inklusive Meningen))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>258335003 (Entire brain (body structure))</td><td/></tr><tr><td>1.2 (Teilhirn (frontal/parietal/occipital/temporal/Kleinhirn))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>119235005 (Brain part (body structure))</td><td/></tr><tr><td>1.3 (Neuroachse/Rückenmark)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>389079005 (Brain and spinal cord structure (body structure))</td><td/></tr><tr><td>1.4 (Hypophyse)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>56329008 (Pituitary structure (body structure))</td><td/></tr><tr><td>1.5 (Hirn sonstiges)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>74964007 (Other (qualifier value))</td><td>ggfs. über Postkoordination besser darstellbar</td></tr><tr><td>2.1 (Auge (r, l))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>81745001 (Structure of eye proper (body structure))</td><td>Lateralität über Postkoordination darstellbar</td></tr><tr><td>2.2 (Nase/Nasennebenhöhle)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>1286894002 (Structure of nasal cavity and/or nasal sinus (body structure))</td><td/></tr><tr><td>2.3 (Mundhöhle inklusive Mundhöhlenvorhof)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>74262004 (Oral cavity structure (body structure))</td><td/></tr><tr><td>2.4 (Ohr (r, l))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>117590005 (Ear structure (body structure))</td><td>Lateralität über Postkoordination darstellbar</td></tr><tr><td>2.5 (Speicheldrüse (r, l))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>385294005 (Salivary gland structure (body structure))</td><td>Lateralität über Postkoordination darstellbar</td></tr><tr><td>2.6 (Pharynx)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>54066008 (Pharyngeal structure (body structure))</td><td/></tr><tr><td>2.7 (Nasopharynx)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>71836000 (Nasopharyngeal structure (body structure))</td><td/></tr><tr><td>2.8 (Oropharynx)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>31389004 (Oropharyngeal structure (body structure))</td><td/></tr><tr><td>2.9 (Hypopharynx)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>81502006 (Hypopharyngeal structure (body structure))</td><td/></tr><tr><td>2.10 (Larynx)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>4596009 (Laryngeal structure (body structure))</td><td/></tr><tr><td>2.11 (Schilddrüse)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>69748006 (Thyroid structure (body structure))</td><td/></tr><tr><td>2.12 (Kopf-Hals sonstige)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>774007 (Structure of head and/or neck (body structure))</td><td/></tr><tr><td>3.1 (Mamma als Ganzbrust (r, l))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>181131000 (Entire breast (body structure))</td><td>Lateralität über Postkoordination darstellbar</td></tr><tr><td>3.2 (Mamma als Teilbrust (r, l))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>119184005 (Breast part (body structure))</td><td>Lateralität über Postkoordination darstellbar</td></tr><tr><td>3.3 (Thoraxwand, gegebenenfalls r, l)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>78904004 (Chest wall structure (body structure))</td><td>Lateralität über Postkoordination darstellbar</td></tr><tr><td>3.4 (Lunge (r, l))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>39607008 (Lung structure (body structure))</td><td>Lateralität über Postkoordination darstellbar</td></tr><tr><td>3.5 (Ösophagus)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>32849002 (Esophageal structure (body structure))</td><td/></tr><tr><td>3.6 (Mediastinum (mediastinaler Lymphabfluss ist in Nummer 9 zu kodieren))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>72410000 (Mediastinal structure (body structure))</td><td/></tr><tr><td>3.7 (Thymus)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>9875009 (Thymus gland structure (body structure))</td><td/></tr><tr><td>3.8 (Thorax sonstige)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>51185008 (Thoracic structure (body structure))</td><td/></tr><tr><td>4.1 (Magen)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>69695003 (Stomach structure (body structure))</td><td/></tr><tr><td>4.2 (Pankreas)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>15776009 (Pancreatic structure (body structure))</td><td/></tr><tr><td>4.3 (Leber, auch bei Teilbestrahlung)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>10200004 (Liver structure (body structure))</td><td/></tr><tr><td>4.4 (Milz)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>78961009 (Splenic structure (body structure))</td><td/></tr><tr><td>4.5 (Niere (r, l))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>64033007 (Kidney structure (body structure))</td><td>Lateralität über Postkoordination darstellbar</td></tr><tr><td>4.6 (Nebenniere (r, l))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>23451007 (Adrenal structure (body structure))</td><td>Lateralität über Postkoordination darstellbar</td></tr><tr><td>4.7 (Retroperitoneum (z. B. Sarkome))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>82849001 (Retroperitoneal compartment structure (body structure))</td><td/></tr><tr><td>4.8 (Ureter (r, l))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>87953007 (Ureteric structure (body structure))</td><td>Lateralität über Postkoordination darstellbar</td></tr><tr><td>4.9 (Bauchwand (z. B. Sarkome))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>822992007 (Structure of wall of abdominal proper segment of trunk (body structure))</td><td/></tr><tr><td>4.10 (Oberbauch)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>80581009 (Upper abdomen structure (body structure))</td><td/></tr><tr><td>4.11 (Gallengänge)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>28273000 (Bile duct structure (body structure))</td><td/></tr><tr><td>4.12 (Gallenblase)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>28231008 (Gallbladder structure (body structure))</td><td/></tr><tr><td>4.13 (Abdomen sonstige)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>818983003 (Structure of abdominopelvic cavity and/or content of abdominopelvic cavity and/or anterior abdominal wall (body structure))</td><td/></tr><tr><td>5.1 (Rektum)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>34402009 (Rectum structure (body structure))</td><td/></tr><tr><td>5.2 (Analbereich)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>53505006 (Anal structure (body structure))</td><td/></tr><tr><td>5.3 (Harnblase)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>89837001 (Urinary bladder structure (body structure))</td><td/></tr><tr><td>5.4 (Prostata)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>41216001 (Prostatic structure (body structure))</td><td/></tr><tr><td>5.5 (Hoden (r, l))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>40689003 (Testis structure (body structure))</td><td/></tr><tr><td>5.6 (Penis)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>18911002 (Penile structure (body structure))</td><td/></tr><tr><td>5.7 (Uterus)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>35039007 (Uterine structure (body structure))</td><td/></tr><tr><td>5.8 (Zervix)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>71252005 (Cervix uteri structure (body structure))</td><td/></tr><tr><td>5.9 (Vulva)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>45292006 (Vulval structure (body structure))</td><td/></tr><tr><td>5.10 (Vagina)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>76784001 (Vaginal structure (body structure))</td><td/></tr><tr><td>5.11 (Beckenwand)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>3665003 (Pelvic wall structure (body structure))</td><td/></tr><tr><td>5.12 (Becken sonstige)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>826984001 (Structure of cavity and/or content of true pelvis (body structure))</td><td/></tr><tr><td>6.1 (Schädel)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>89546000 (Bone structure of cranium (body structure))</td><td/></tr><tr><td>6.2 (Schädelbasis)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>31467002 (Base of skull structure (body structure))</td><td/></tr><tr><td>6.3 (Orbita (r, l))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>363654007 (Structure of orbit proper (body structure))</td><td>Lateralität über Postkoordination darstellbar</td></tr><tr><td>6.4 (Halswirbelsäule)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>84667006 (Bone structure of cervical vertebra (body structure))</td><td/></tr><tr><td>6.5 (Brustwirbelsäule)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>35769007 (Bone structure of thoracic vertebra (body structure))</td><td/></tr><tr><td>6.6 (Lendenwirbelsäule)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>73903008 (Bone structure of lumbar vertebra (body structure))</td><td/></tr><tr><td>6.7 (Sacrum /Coccygeum)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>699698002 (Structure of sacral vertebral column (body structure))</td><td/></tr><tr><td>6.8 (Rippen (r, l))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>113197003 (Bone structure of rib (body structure))</td><td>Lateralität über Postkoordination darstellbar</td></tr><tr><td>6.9 (Sternum)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>56873002 (Bone structure of sternum (body structure))</td><td/></tr><tr><td>6.10 (Schulter (r, l))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>896747000 (Bone structure of shoulder girdle and/or proximal humerus (body structure))</td><td>Lateralität über Postkoordination darstellbar</td></tr><tr><td>6.11 (Oberarm (r, l))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>85050009 (Bone structure of humerus (body structure))</td><td>Lateralität über Postkoordination darstellbar</td></tr><tr><td>6.12 (Unterarm (r, l))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>299701004 (Structure of bone of forearm (body structure))</td><td>Lateralität über Postkoordination darstellbar</td></tr><tr><td>6.13 (Hand (r, l))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>24097009 (Bone structure of hand (body structure))</td><td>Lateralität über Postkoordination darstellbar</td></tr><tr><td>6.14 (Becken (r, l))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>12921003 (Structure of pelvis (body structure))</td><td>Lateralität über Postkoordination darstellbar</td></tr><tr><td>6.15 (Hüfte (r, l))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>28254004 (Innominate bone structure (body structure))</td><td>Lateralität über Postkoordination darstellbar</td></tr><tr><td>6.16 (Oberschenkel (r, l))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>71341001 (Bone structure of femur (body structure))</td><td>Lateralität über Postkoordination darstellbar</td></tr><tr><td>6.17 (Unterschenkel (r, l))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>702468001 (Bone structure of lower leg (body structure))</td><td/></tr><tr><td>6.18 (Fuß (r, l))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>84167007 (Bone structure of foot (body structure))</td><td>Lateralität über Postkoordination darstellbar</td></tr><tr><td>6.19 (Knochen sonstige)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>74964007 (Other (qualifier value))</td><td/></tr><tr><td>7.1 (Kopf, Gesicht, Hals)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>774007 (Structure of head and/or neck (body structure))</td><td/></tr><tr><td>7.2 (obere Extremität ink* #lusive Schulter (r, l))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>53120007 (Upper limb structure (body structure))</td><td>Lateralität über Postkoordination darstellbar</td></tr><tr><td>7.3 (untere Extremität und Hüfte (r, l))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>61685007 (Lower limb structure (body structure))</td><td>Lateralität über Postkoordination darstellbar</td></tr><tr><td>7.4 (Thorax)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>51185008 (Thoracic structure (body structure))</td><td/></tr><tr><td>7.5 (Abdomen)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>302553009 (Entire abdomen (body structure))</td><td/></tr><tr><td>7.6 (Becken)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>12921003 (Structure of pelvis (body structure))</td><td/></tr><tr><td>7.7 (Stammes o. n. A.)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>1490004 (Structure of soft tissue of trunk (body structure))</td><td/></tr><tr><td>7.8 (mehrere Bereiche überlappend)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>276825009 (Overlapping sites (qualifier value))</td><td/></tr><tr><td>7.9 (sonstige Weichteile o. n. A.)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>74964007 (Other (qualifier value))</td><td/></tr><tr><td>8.1 (Ganzhaut)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>181469002 (Entire skin (body structure))</td><td/></tr><tr><td>8.2 (Teilbereiche)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>119181002 (Skin part (body structure))</td><td/></tr><tr><td>9.1 (Cervikale Lymphknoten (r, l))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>81105003 (Cervical lymph node structure (body structure))</td><td>Lateralität über Postkoordination darstellbar</td></tr><tr><td>9.2 (Supra-/infraclavikuläre Lymphknoten (r, l))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>9659009 (Structure of infraclavicular lymph node (body structure))</td><td>Lateralität über Postkoordination darstellbar</td></tr><tr><td>9.3 (Axilläre Lymphknoten (r, l))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>245269009 (Axillary lymph node group (body structure))</td><td>Lateralität über Postkoordination darstellbar</td></tr><tr><td>9.4 (Retrosternale/sternale/Mammaria interna Lymphknoten)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-narrower" title="narrower">narrower</a></td><td>245282001 (Internal mammary lymph node group (body structure))</td><td>Mapping umfasst nur Mammaria-interna-Lokalisation der Lymphknoten.</td></tr><tr><td>9.5 (Mediastinale Lymphknoten)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>62683002 (Mediastinal lymph node structure (body structure))</td><td/></tr><tr><td>9.6 (Hiläre Lymphknoten)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>264016003 (Hilar lymph node group (body structure))</td><td/></tr><tr><td>9.7 (Intraabdominale Lymphknoten (z. B. subphrenisch, perigastrisch, peripankreatisch, Leber-, Milzhilus))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>818991007 (Structure of abdominal lymph node (body structure))</td><td/></tr><tr><td>9.8 (Paraaortale/paracavale Lymphknoten)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-narrower" title="narrower">narrower</a></td><td>245285004 (Para-aortic lymph node group (body structure))</td><td>Mapping umfasst nur para-aortale Lokalisation der Lymphknoten.</td></tr><tr><td>9.9 (Retroperitoneale Lymphknoten)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>91394001 (Structure of retroperitoneal lymph node (body structure))</td><td/></tr><tr><td>9.10 (Beckenlymphabfluss (r, l) (Iliakal commun, extern, intern, obturatorisch, präsakral))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>54268001 (Pelvic lymph node structure (body structure))</td><td>Lateralität über Postkoordination darstellbar</td></tr><tr><td>9.11 (Inguinale Lymphknoten (r, l))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>8928004 (Inguinal lymph node structure (body structure))</td><td>Lateralität über Postkoordination darstellbar</td></tr><tr><td>9.12 (Involved Node)</td><td colspan="3" style="background-color: #efefef">(not mapped)</td></tr><tr><td>9.13 (Involved Site)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>397440000 (Anatomic location of excised lymph node containing metastatic neoplasm (observable entity))</td><td/></tr><tr><td>9.14 (Involved Field)</td><td colspan="3" style="background-color: #efefef">(not mapped)</td></tr><tr><td>9.15 (Sonstige Lymphknoten)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>59441001 (Structure of lymph node (body structure))</td><td/></tr><tr><td>10.1 (Ganzkörperbestrahlung bei allogener Stammzelltransplantation)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>38266002 (Entire body as a whole (body structure))</td><td/></tr><tr><td>10.2 (operative Zugangswege)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>309795001 (Surgical access values (qualifier value))</td><td/></tr><tr><td>10.3 (Sonstige, nicht genannte Zielgebiete)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>74964007 (Other (qualifier value))</td><td/></tr></table></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability">
+    <valueCode value="shareable"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability">
+    <valueCode value="publishable"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes"/>
+        <code value="package"/>
+        <display value="Package"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/resource-approvalDate">
+    <valueDate value="2026-01-03"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-topic">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"/>
+        <code value="C3262"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-author">
+    <valueContactDetail>
+      <telecom>
+        <system value="email"/>
+        <value value="thomas.debertshaeuser@charite.de"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-editor">
+    <valueContactDetail>
+      <name value="Taskforce Core Data Set"/>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-reviewer">
+    <valueContactDetail>
+      <name value="Interoperability Working Group"/>
+      <telecom>
+        <system value="url"/>
+        <value value="https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-reviewer">
+    <valueContactDetail>
+      <name value="National Steering Committee"/>
+      <telecom>
+        <system value="url"/>
+        <value value="https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-endorser">
+    <valueContactDetail>
+      <name value="Interoperability Working Group"/>
+      <telecom>
+        <system value="url"/>
+        <value value="https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-endorser">
+    <valueContactDetail>
+      <name value="National Steering Committee"/>
+      <telecom>
+        <system value="url"/>
+        <value value="https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm">
+    <valueCoding>
+      <system value="http://hl7.org/fhir/version-algorithm"/>
+      <code value="semver"/>
+      <display value="SemVer"/>
+    </valueCoding>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+    <valuePeriod>
+      <start value="2026"/>
+    </valuePeriod>
+  </extension>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-strahlentherapie-zielgebiet-sct"/>
+  <version value="2027.0.0-ballot.rc1"/>
+  <name value="MII CM Onko Strahlentherapie Zielstellung SCT Mapping"/>
+  <title value="MII CM Onko Strahlentherapie Zielgebiet SNOMED Mapping"/>
+  <status value="active"/>
+  <experimental value="true"/>
+  <date value="2024-04-11"/>
+  <publisher value="Medizininformatik Initiative"/>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de/"/>
+    </telecom>
+  </contact>
+  <description value="Mapping Strahlentherapie Zielgebiet Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <purpose value="Technical mapping to transform oBDS-Data into SNOMED"/>
+  <copyright value="This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license."/>
+  <sourceUri value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/"/>
+  <targetUri value="http://snomed.info/sct/900000000000207008/version/20240401"/>
+  <group>
+    <source value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet"/>
+    <target value="http://snomed.info/sct/900000000000207008/version/20240401"/>
+    <element>
+      <code value="1.1"/>
+      <display value="Ganzhirn (Neurokranium, inklusive Meningen)"/>
+      <target>
+        <code value="258335003"/>
+        <display value="Entire brain (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="1.2"/>
+      <display value="Teilhirn (frontal/parietal/occipital/temporal/Kleinhirn)"/>
+      <target>
+        <code value="119235005"/>
+        <display value="Brain part (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="1.3"/>
+      <display value="Neuroachse/Rückenmark"/>
+      <target>
+        <code value="389079005"/>
+        <display value="Brain and spinal cord structure (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="1.4"/>
+      <display value="Hypophyse"/>
+      <target>
+        <code value="56329008"/>
+        <display value="Pituitary structure (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="1.5"/>
+      <display value="Hirn sonstiges"/>
+      <target>
+        <code value="74964007"/>
+        <display value="Other (qualifier value)"/>
+        <equivalence value="equivalent"/>
+        <comment value="ggfs. über Postkoordination besser darstellbar"/>
+      </target>
+    </element>
+    <element>
+      <code value="2.1"/>
+      <display value="Auge (r, l)"/>
+      <target>
+        <code value="81745001"/>
+        <display value="Structure of eye proper (body structure)"/>
+        <equivalence value="equivalent"/>
+        <comment value="Lateralität über Postkoordination darstellbar"/>
+      </target>
+    </element>
+    <element>
+      <code value="2.2"/>
+      <display value="Nase/Nasennebenhöhle"/>
+      <target>
+        <code value="1286894002"/>
+        <display value="Structure of nasal cavity and/or nasal sinus (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="2.3"/>
+      <display value="Mundhöhle inklusive Mundhöhlenvorhof"/>
+      <target>
+        <code value="74262004"/>
+        <display value="Oral cavity structure (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="2.4"/>
+      <display value="Ohr (r, l)"/>
+      <target>
+        <code value="117590005"/>
+        <display value="Ear structure (body structure)"/>
+        <equivalence value="equivalent"/>
+        <comment value="Lateralität über Postkoordination darstellbar"/>
+      </target>
+    </element>
+    <element>
+      <code value="2.5"/>
+      <display value="Speicheldrüse (r, l)"/>
+      <target>
+        <code value="385294005"/>
+        <display value="Salivary gland structure (body structure)"/>
+        <equivalence value="equivalent"/>
+        <comment value="Lateralität über Postkoordination darstellbar"/>
+      </target>
+    </element>
+    <element>
+      <code value="2.6"/>
+      <display value="Pharynx"/>
+      <target>
+        <code value="54066008"/>
+        <display value="Pharyngeal structure (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="2.7"/>
+      <display value="Nasopharynx"/>
+      <target>
+        <code value="71836000"/>
+        <display value="Nasopharyngeal structure (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="2.8"/>
+      <display value="Oropharynx"/>
+      <target>
+        <code value="31389004"/>
+        <display value="Oropharyngeal structure (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="2.9"/>
+      <display value="Hypopharynx"/>
+      <target>
+        <code value="81502006"/>
+        <display value="Hypopharyngeal structure (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="2.10"/>
+      <display value="Larynx"/>
+      <target>
+        <code value="4596009"/>
+        <display value="Laryngeal structure (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="2.11"/>
+      <display value="Schilddrüse"/>
+      <target>
+        <code value="69748006"/>
+        <display value="Thyroid structure (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="2.12"/>
+      <display value="Kopf-Hals sonstige"/>
+      <target>
+        <code value="774007"/>
+        <display value="Structure of head and/or neck (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="3.1"/>
+      <display value="Mamma als Ganzbrust (r, l)"/>
+      <target>
+        <code value="181131000"/>
+        <display value="Entire breast (body structure)"/>
+        <equivalence value="equivalent"/>
+        <comment value="Lateralität über Postkoordination darstellbar"/>
+      </target>
+    </element>
+    <element>
+      <code value="3.2"/>
+      <display value="Mamma als Teilbrust (r, l)"/>
+      <target>
+        <code value="119184005"/>
+        <display value="Breast part (body structure)"/>
+        <equivalence value="equivalent"/>
+        <comment value="Lateralität über Postkoordination darstellbar"/>
+      </target>
+    </element>
+    <element>
+      <code value="3.3"/>
+      <display value="Thoraxwand, gegebenenfalls r, l"/>
+      <target>
+        <code value="78904004"/>
+        <display value="Chest wall structure (body structure)"/>
+        <equivalence value="equivalent"/>
+        <comment value="Lateralität über Postkoordination darstellbar"/>
+      </target>
+    </element>
+    <element>
+      <code value="3.4"/>
+      <display value="Lunge (r, l)"/>
+      <target>
+        <code value="39607008"/>
+        <display value="Lung structure (body structure)"/>
+        <equivalence value="equivalent"/>
+        <comment value="Lateralität über Postkoordination darstellbar"/>
+      </target>
+    </element>
+    <element>
+      <code value="3.5"/>
+      <display value="Ösophagus"/>
+      <target>
+        <code value="32849002"/>
+        <display value="Esophageal structure (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="3.6"/>
+      <display value="Mediastinum (mediastinaler Lymphabfluss ist in Nummer 9 zu kodieren)"/>
+      <target>
+        <code value="72410000"/>
+        <display value="Mediastinal structure (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="3.7"/>
+      <display value="Thymus"/>
+      <target>
+        <code value="9875009"/>
+        <display value="Thymus gland structure (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="3.8"/>
+      <display value="Thorax sonstige"/>
+      <target>
+        <code value="51185008"/>
+        <display value="Thoracic structure (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="4.1"/>
+      <display value="Magen"/>
+      <target>
+        <code value="69695003"/>
+        <display value="Stomach structure (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="4.2"/>
+      <display value="Pankreas"/>
+      <target>
+        <code value="15776009"/>
+        <display value="Pancreatic structure (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="4.3"/>
+      <display value="Leber, auch bei Teilbestrahlung"/>
+      <target>
+        <code value="10200004"/>
+        <display value="Liver structure (body structure)"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="4.4"/>
+      <display value="Milz"/>
+      <target>
+        <code value="78961009"/>
+        <display value="Splenic structure (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="4.5"/>
+      <display value="Niere (r, l)"/>
+      <target>
+        <code value="64033007"/>
+        <display value="Kidney structure (body structure)"/>
+        <equivalence value="equivalent"/>
+        <comment value="Lateralität über Postkoordination darstellbar"/>
+      </target>
+    </element>
+    <element>
+      <code value="4.6"/>
+      <display value="Nebenniere (r, l)"/>
+      <target>
+        <code value="23451007"/>
+        <display value="Adrenal structure (body structure)"/>
+        <equivalence value="equivalent"/>
+        <comment value="Lateralität über Postkoordination darstellbar"/>
+      </target>
+    </element>
+    <element>
+      <code value="4.7"/>
+      <display value="Retroperitoneum (z. B. Sarkome)"/>
+      <target>
+        <code value="82849001"/>
+        <display value="Retroperitoneal compartment structure (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="4.8"/>
+      <display value="Ureter (r, l)"/>
+      <target>
+        <code value="87953007"/>
+        <display value="Ureteric structure (body structure)"/>
+        <equivalence value="equivalent"/>
+        <comment value="Lateralität über Postkoordination darstellbar"/>
+      </target>
+    </element>
+    <element>
+      <code value="4.9"/>
+      <display value="Bauchwand (z. B. Sarkome)"/>
+      <target>
+        <code value="822992007"/>
+        <display value="Structure of wall of abdominal proper segment of trunk (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="4.10"/>
+      <display value="Oberbauch"/>
+      <target>
+        <code value="80581009"/>
+        <display value="Upper abdomen structure (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="4.11"/>
+      <display value="Gallengänge"/>
+      <target>
+        <code value="28273000"/>
+        <display value="Bile duct structure (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="4.12"/>
+      <display value="Gallenblase"/>
+      <target>
+        <code value="28231008"/>
+        <display value="Gallbladder structure (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="4.13"/>
+      <display value="Abdomen sonstige"/>
+      <target>
+        <code value="818983003"/>
+        <display value="Structure of abdominopelvic cavity and/or content of abdominopelvic cavity and/or anterior abdominal wall (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="5.1"/>
+      <display value="Rektum"/>
+      <target>
+        <code value="34402009"/>
+        <display value="Rectum structure (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="5.2"/>
+      <display value="Analbereich"/>
+      <target>
+        <code value="53505006"/>
+        <display value="Anal structure (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="5.3"/>
+      <display value="Harnblase"/>
+      <target>
+        <code value="89837001"/>
+        <display value="Urinary bladder structure (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="5.4"/>
+      <display value="Prostata"/>
+      <target>
+        <code value="41216001"/>
+        <display value="Prostatic structure (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="5.5"/>
+      <display value="Hoden (r, l)"/>
+      <target>
+        <code value="40689003"/>
+        <display value="Testis structure (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="5.6"/>
+      <display value="Penis"/>
+      <target>
+        <code value="18911002"/>
+        <display value="Penile structure (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="5.7"/>
+      <display value="Uterus"/>
+      <target>
+        <code value="35039007"/>
+        <display value="Uterine structure (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="5.8"/>
+      <display value="Zervix"/>
+      <target>
+        <code value="71252005"/>
+        <display value="Cervix uteri structure (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="5.9"/>
+      <display value="Vulva"/>
+      <target>
+        <code value="45292006"/>
+        <display value="Vulval structure (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="5.10"/>
+      <display value="Vagina"/>
+      <target>
+        <code value="76784001"/>
+        <display value="Vaginal structure (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="5.11"/>
+      <display value="Beckenwand"/>
+      <target>
+        <code value="3665003"/>
+        <display value="Pelvic wall structure (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="5.12"/>
+      <display value="Becken sonstige"/>
+      <target>
+        <code value="826984001"/>
+        <display value="Structure of cavity and/or content of true pelvis (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="6.1"/>
+      <display value="Schädel"/>
+      <target>
+        <code value="89546000"/>
+        <display value="Bone structure of cranium (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="6.2"/>
+      <display value="Schädelbasis"/>
+      <target>
+        <code value="31467002"/>
+        <display value="Base of skull structure (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="6.3"/>
+      <display value="Orbita (r, l)"/>
+      <target>
+        <code value="363654007"/>
+        <display value="Structure of orbit proper (body structure)"/>
+        <equivalence value="equivalent"/>
+        <comment value="Lateralität über Postkoordination darstellbar"/>
+      </target>
+    </element>
+    <element>
+      <code value="6.4"/>
+      <display value="Halswirbelsäule"/>
+      <target>
+        <code value="84667006"/>
+        <display value="Bone structure of cervical vertebra (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="6.5"/>
+      <display value="Brustwirbelsäule"/>
+      <target>
+        <code value="35769007"/>
+        <display value="Bone structure of thoracic vertebra (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="6.6"/>
+      <display value="Lendenwirbelsäule"/>
+      <target>
+        <code value="73903008"/>
+        <display value="Bone structure of lumbar vertebra (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="6.7"/>
+      <display value="Sacrum /Coccygeum"/>
+      <target>
+        <code value="699698002"/>
+        <display value="Structure of sacral vertebral column (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="6.8"/>
+      <display value="Rippen (r, l)"/>
+      <target>
+        <code value="113197003"/>
+        <display value="Bone structure of rib (body structure)"/>
+        <equivalence value="equivalent"/>
+        <comment value="Lateralität über Postkoordination darstellbar"/>
+      </target>
+    </element>
+    <element>
+      <code value="6.9"/>
+      <display value="Sternum"/>
+      <target>
+        <code value="56873002"/>
+        <display value="Bone structure of sternum (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="6.10"/>
+      <display value="Schulter (r, l)"/>
+      <target>
+        <code value="896747000"/>
+        <display value="Bone structure of shoulder girdle and/or proximal humerus (body structure)"/>
+        <equivalence value="wider"/>
+        <comment value="Lateralität über Postkoordination darstellbar"/>
+      </target>
+    </element>
+    <element>
+      <code value="6.11"/>
+      <display value="Oberarm (r, l)"/>
+      <target>
+        <code value="85050009"/>
+        <display value="Bone structure of humerus (body structure)"/>
+        <equivalence value="equivalent"/>
+        <comment value="Lateralität über Postkoordination darstellbar"/>
+      </target>
+    </element>
+    <element>
+      <code value="6.12"/>
+      <display value="Unterarm (r, l)"/>
+      <target>
+        <code value="299701004"/>
+        <display value="Structure of bone of forearm (body structure)"/>
+        <equivalence value="equivalent"/>
+        <comment value="Lateralität über Postkoordination darstellbar"/>
+      </target>
+    </element>
+    <element>
+      <code value="6.13"/>
+      <display value="Hand (r, l)"/>
+      <target>
+        <code value="24097009"/>
+        <display value="Bone structure of hand (body structure)"/>
+        <equivalence value="equivalent"/>
+        <comment value="Lateralität über Postkoordination darstellbar"/>
+      </target>
+    </element>
+    <element>
+      <code value="6.14"/>
+      <display value="Becken (r, l)"/>
+      <target>
+        <code value="12921003"/>
+        <display value="Structure of pelvis (body structure)"/>
+        <equivalence value="equivalent"/>
+        <comment value="Lateralität über Postkoordination darstellbar"/>
+      </target>
+    </element>
+    <element>
+      <code value="6.15"/>
+      <display value="Hüfte (r, l)"/>
+      <target>
+        <code value="28254004"/>
+        <display value="Innominate bone structure (body structure)"/>
+        <equivalence value="equivalent"/>
+        <comment value="Lateralität über Postkoordination darstellbar"/>
+      </target>
+    </element>
+    <element>
+      <code value="6.16"/>
+      <display value="Oberschenkel (r, l)"/>
+      <target>
+        <code value="71341001"/>
+        <display value="Bone structure of femur (body structure)"/>
+        <equivalence value="equivalent"/>
+        <comment value="Lateralität über Postkoordination darstellbar"/>
+      </target>
+    </element>
+    <element>
+      <code value="6.17"/>
+      <display value="Unterschenkel (r, l)"/>
+      <target>
+        <code value="702468001"/>
+        <display value="Bone structure of lower leg (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="6.18"/>
+      <display value="Fuß (r, l)"/>
+      <target>
+        <code value="84167007"/>
+        <display value="Bone structure of foot (body structure)"/>
+        <equivalence value="equivalent"/>
+        <comment value="Lateralität über Postkoordination darstellbar"/>
+      </target>
+    </element>
+    <element>
+      <code value="6.19"/>
+      <display value="Knochen sonstige"/>
+      <target>
+        <code value="74964007"/>
+        <display value="Other (qualifier value)"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="7.1"/>
+      <display value="Kopf, Gesicht, Hals"/>
+      <target>
+        <code value="774007"/>
+        <display value="Structure of head and/or neck (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="7.2"/>
+      <display value="obere Extremität ink* #lusive Schulter (r, l)"/>
+      <target>
+        <code value="53120007"/>
+        <display value="Upper limb structure (body structure)"/>
+        <equivalence value="equivalent"/>
+        <comment value="Lateralität über Postkoordination darstellbar"/>
+      </target>
+    </element>
+    <element>
+      <code value="7.3"/>
+      <display value="untere Extremität und Hüfte (r, l)"/>
+      <target>
+        <code value="61685007"/>
+        <display value="Lower limb structure (body structure)"/>
+        <equivalence value="equivalent"/>
+        <comment value="Lateralität über Postkoordination darstellbar"/>
+      </target>
+    </element>
+    <element>
+      <code value="7.4"/>
+      <display value="Thorax"/>
+      <target>
+        <code value="51185008"/>
+        <display value="Thoracic structure (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="7.5"/>
+      <display value="Abdomen"/>
+      <target>
+        <code value="302553009"/>
+        <display value="Entire abdomen (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="7.6"/>
+      <display value="Becken"/>
+      <target>
+        <code value="12921003"/>
+        <display value="Structure of pelvis (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="7.7"/>
+      <display value="Stammes o. n. A."/>
+      <target>
+        <code value="1490004"/>
+        <display value="Structure of soft tissue of trunk (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="7.8"/>
+      <display value="mehrere Bereiche überlappend"/>
+      <target>
+        <code value="276825009"/>
+        <display value="Overlapping sites (qualifier value)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="7.9"/>
+      <display value="sonstige Weichteile o. n. A."/>
+      <target>
+        <code value="74964007"/>
+        <display value="Other (qualifier value)"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="8.1"/>
+      <display value="Ganzhaut"/>
+      <target>
+        <code value="181469002"/>
+        <display value="Entire skin (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="8.2"/>
+      <display value="Teilbereiche"/>
+      <target>
+        <code value="119181002"/>
+        <display value="Skin part (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="9.1"/>
+      <display value="Cervikale Lymphknoten (r, l)"/>
+      <target>
+        <code value="81105003"/>
+        <display value="Cervical lymph node structure (body structure)"/>
+        <equivalence value="equivalent"/>
+        <comment value="Lateralität über Postkoordination darstellbar"/>
+      </target>
+    </element>
+    <element>
+      <code value="9.2"/>
+      <display value="Supra-/infraclavikuläre Lymphknoten (r, l)"/>
+      <target>
+        <code value="9659009"/>
+        <display value="Structure of infraclavicular lymph node (body structure)"/>
+        <equivalence value="equivalent"/>
+        <comment value="Lateralität über Postkoordination darstellbar"/>
+      </target>
+    </element>
+    <element>
+      <code value="9.3"/>
+      <display value="Axilläre Lymphknoten (r, l)"/>
+      <target>
+        <code value="245269009"/>
+        <display value="Axillary lymph node group (body structure)"/>
+        <equivalence value="equivalent"/>
+        <comment value="Lateralität über Postkoordination darstellbar"/>
+      </target>
+    </element>
+    <element>
+      <code value="9.4"/>
+      <display value="Retrosternale/sternale/Mammaria interna Lymphknoten"/>
+      <target>
+        <code value="245282001"/>
+        <display value="Internal mammary lymph node group (body structure)"/>
+        <equivalence value="narrower"/>
+        <comment value="Mapping umfasst nur Mammaria-interna-Lokalisation der Lymphknoten."/>
+      </target>
+    </element>
+    <element>
+      <code value="9.5"/>
+      <display value="Mediastinale Lymphknoten"/>
+      <target>
+        <code value="62683002"/>
+        <display value="Mediastinal lymph node structure (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="9.6"/>
+      <display value="Hiläre Lymphknoten"/>
+      <target>
+        <code value="264016003"/>
+        <display value="Hilar lymph node group (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="9.7"/>
+      <display value="Intraabdominale Lymphknoten (z. B. subphrenisch, perigastrisch, peripankreatisch, Leber-, Milzhilus)"/>
+      <target>
+        <code value="818991007"/>
+        <display value="Structure of abdominal lymph node (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="9.8"/>
+      <display value="Paraaortale/paracavale Lymphknoten"/>
+      <target>
+        <code value="245285004"/>
+        <display value="Para-aortic lymph node group (body structure)"/>
+        <equivalence value="narrower"/>
+        <comment value="Mapping umfasst nur para-aortale Lokalisation der Lymphknoten."/>
+      </target>
+    </element>
+    <element>
+      <code value="9.9"/>
+      <display value="Retroperitoneale Lymphknoten"/>
+      <target>
+        <code value="91394001"/>
+        <display value="Structure of retroperitoneal lymph node (body structure)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="9.10"/>
+      <display value="Beckenlymphabfluss (r, l) (Iliakal commun, extern, intern, obturatorisch, präsakral)"/>
+      <target>
+        <code value="54268001"/>
+        <display value="Pelvic lymph node structure (body structure)"/>
+        <equivalence value="equivalent"/>
+        <comment value="Lateralität über Postkoordination darstellbar"/>
+      </target>
+    </element>
+    <element>
+      <code value="9.11"/>
+      <display value="Inguinale Lymphknoten (r, l)"/>
+      <target>
+        <code value="8928004"/>
+        <display value="Inguinal lymph node structure (body structure)"/>
+        <equivalence value="equivalent"/>
+        <comment value="Lateralität über Postkoordination darstellbar"/>
+      </target>
+    </element>
+    <element>
+      <code value="9.12"/>
+      <display value="Involved Node"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="9.13"/>
+      <display value="Involved Site"/>
+      <target>
+        <code value="397440000"/>
+        <display value="Anatomic location of excised lymph node containing metastatic neoplasm (observable entity)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="9.14"/>
+      <display value="Involved Field"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="9.15"/>
+      <display value="Sonstige Lymphknoten"/>
+      <target>
+        <code value="59441001"/>
+        <display value="Structure of lymph node (body structure)"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="10.1"/>
+      <display value="Ganzkörperbestrahlung bei allogener Stammzelltransplantation"/>
+      <target>
+        <code value="38266002"/>
+        <display value="Entire body as a whole (body structure)"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="10.2"/>
+      <display value="operative Zugangswege"/>
+      <target>
+        <code value="309795001"/>
+        <display value="Surgical access values (qualifier value)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="10.3"/>
+      <display value="Sonstige, nicht genannte Zielgebiete"/>
+      <target>
+        <code value="74964007"/>
+        <display value="Other (qualifier value)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

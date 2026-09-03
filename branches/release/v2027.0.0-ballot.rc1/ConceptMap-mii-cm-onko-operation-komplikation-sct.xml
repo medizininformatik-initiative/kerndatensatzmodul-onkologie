@@ -1,0 +1,888 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="mii-cm-onko-operation-komplikation-sct"/>
+  <meta>
+    <extension url="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-license">
+      <valueCode value="CC-BY-4.0"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/package-source">
+      <extension url="packageId">
+        <valueId value="de.medizininformatikinitiative.kerndatensatz.onkologie"/>
+      </extension>
+    </extension>
+    <extension url="version">
+      <valueString value="2026.0.3"/>
+    </extension>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableconceptmap"/>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishableconceptmap"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ConceptMap mii-cm-onko-operation-komplikation-sct</b></p><a name="mii-cm-onko-operation-komplikation-sct"> </a><a name="hcmii-cm-onko-operation-komplikation-sct"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profiles: <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-shareableconceptmap.html">CRMI Shareable ConceptMap</a>, <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-publishableconceptmap.html">CRMI Publishable ConceptMap</a></p></div><p>Mapping from https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ to http://snomed.info/sct/900000000000207008/version/20240401</p><br/><p>Mapping from <a href="CodeSystem-mii-cs-onko-operation-komplikation.html">MII CS Onkologie Operation Komplikationen</a> to <code>http://snomed.info/sct/900000000000207008/version/20240401</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>N (nein)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>373067005 (No (qualifier value))</td><td>sollte nicht gemeinsam mit anderen Antworten vergeben werden</td></tr><tr><td>U (unbekannt)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>261665006 (Unknown (qualifier value))</td><td/></tr><tr><td>ABD (Abszess in einem Drainagekanal)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>128477000 (Abscess (disorder))</td><td>Abzsess in Drainagekanal existiert nicht als Konzept, kann ggfs. über Postkoordination konstruiert werden</td></tr><tr><td>ABS (Abszess, intraabdominaler oder intrathorakaler)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-narrower" title="narrower">narrower</a></td><td>75100008 (Abdominal abscess (disorder))</td><td>kein spezifischer Code für diese 'oder'-Konstruktion, daher spezifisch entweder Abdominal oder thorarical Abzess</td></tr><tr><td/><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-narrower" title="narrower">narrower</a></td><td>405950009 (Abscess of thorax (disorder))</td><td>kein spezifischer Code für diese 'oder'-Konstruktion, daher spezifisch entweder Abdominal oder thorarical Abzess</td></tr><tr><td/><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>128477000 (Abscess (disorder))</td><td>weiterfassend als Abszess kodiert</td></tr><tr><td>ASF (Abszess, subfaszialer)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>128477000 (Abscess (disorder))</td><td>keine englische Expression für die Spezifizierung subfaszial gefunden</td></tr><tr><td>ANI (Akute Niereninsuffizienz)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>723189000 (Acute renal insufficiency (disorder))</td><td/></tr><tr><td>AEP (Alkoholentzugspsychose)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>8635005 (Alcohol withdrawal delirium (disorder))</td><td/></tr><tr><td>ALR (Allergische Reaktion ohne Schocksymptomatik)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>419076005 (Allergic reaction (disorder))</td><td/></tr><tr><td>ANS (Anaphylaktischer Schock)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>735173007 (Shock due to anaphylaxis (disorder))</td><td/></tr><tr><td>AEE (Anastomoseninsuffizienz einer Enterostomie)</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">kein äquivalenter SNOMED-Term, ggfs. über Postkoordination möglich</td></tr><tr><td>API (Apoplektischer Insult)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>230690007 (Cerebrovascular accident (disorder))</td><td/></tr><tr><td>BIF (Biliäre Fistel)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>53206008 (Fistula of bile duct (disorder))</td><td/></tr><tr><td>BOG (Blutung, obere gastrointestinale (z. B „Stressulkus“))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>37372002 (Upper gastrointestinal hemorrhage (disorder))</td><td/></tr><tr><td>BOE (Bolusverlegung eines Endotubus)</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">kein äquivalenter SNOMED-Term, ggfs. über Postkoordination möglich</td></tr><tr><td>BSI (Bronchusstumpfinsuffizienz)</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">kein äquivalenter SNOMED-Term, ggfs. über Postkoordination möglich</td></tr><tr><td>CHI (Cholangitis)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>82403002 (Cholangitis (disorder) )</td><td/></tr><tr><td>DAI (Darmanastomoseninsuffizienz)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-narrower" title="narrower">narrower</a></td><td>236091002 (Large intestine anastomotic leak (disorder))</td><td>kein SNOMED-Term für Gesamtdarm-Anastomoseninsuffizienz</td></tr><tr><td/><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>236090001 (Small intestine anastomotic leak (disorder))</td><td>kein SNOMED-Term für Gesamtdarm-Anastomoseninsuffizienz</td></tr><tr><td>DPS (Darmpassagestörungen (z. B. protrahierte Atonie, Subileus, Ileus))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>81060008 (Intestinal obstruction (disorder))</td><td/></tr><tr><td>DIC (Disseminierte intravasale Koagulopathie)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>67406007 (Disseminated intravascular coagulation (disorder))</td><td/></tr><tr><td>DEP (Drogenentzugspsychose)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>772133000 (Recreational drug misuse withdrawal (disorder))</td><td/></tr><tr><td>DLU (Druck- und Lagerungsschäden, z. B. Dekubitalulzera)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>1163215007 (Pressure injury (disorder))</td><td/></tr><tr><td>DSI (Duodenalstumpfinsuffizienz)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>236089005 (Duodenal stump leak (disorder))</td><td/></tr><tr><td>ENF (Enterale Fistel)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>735426009 (Fistula of digestive system (disorder))</td><td/></tr><tr><td>GER (Gerinnungsstörung)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>64779008 (Blood coagulation disorder (disorder))</td><td/></tr><tr><td>HEM (Hämatemesis)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>8765009 (Hematemesis (disorder))</td><td/></tr><tr><td>HUR (Hämaturie)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>34436003 (Blood in urine (finding))</td><td/></tr><tr><td>HAE (Hämorrhagischer Schock)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>355001 (Hemorrhagic shock (disorder))</td><td/></tr><tr><td>HFI (Harnfistel)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>57243009 (Urinary fistula (disorder))</td><td/></tr><tr><td>HNK (Hautnekrose im Operationsbereich)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>95347000 (Skin necrosis (disorder))</td><td>äquivalent insofern, als das im FHIR-Modell nach Komplikationen der OP gefragt wird; ansonsten ggfs. Spezifizierung über Postkoordination</td></tr><tr><td>HZI (Herzinsuffizienz)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>84114007 (Heart failure (disorder))</td><td/></tr><tr><td>HRS (Herzrhythmusstörungen)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>698247007 (Cardiac arrhythmia (disorder))</td><td/></tr><tr><td>HNA (Hirnnervenausfälle)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>73013002 (Cranial nerve disorder (disorder))</td><td/></tr><tr><td>HOP (Hirnorganisches Psychosyndrom (z. B. „Durchgangssyndrom“))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>2776000 (Delirium (disorder))</td><td/></tr><tr><td>HYB (Hyperbilirubinämie)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>14783006 (Hyperbilirubinemia (disorder))</td><td/></tr><tr><td>HYF (Hypopharynxfistel)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>126663003 (Disorder of hypopharynx (disorder))</td><td/></tr><tr><td>IFV (Ileofemorale Venenthrombose)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>234044007 (Iliofemoral deep vein thrombosis (disorder))</td><td/></tr><tr><td>KAS (Kardiogener Schock)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>89138009 (Cardiogenic shock (disorder))</td><td/></tr><tr><td>KES (Komplikationen einer Stomaanlage)</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">kein äquivalenter SNOMED-Term, ggfs. über Postkoordination möglich</td></tr><tr><td>KIM (Komplikation eines Implantates (Gefäßprothese, Totalendoprothese, Katheter), z. B. Dislokation)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>19220005 (Complication of implant (disorder))</td><td/></tr><tr><td>KRA (Krampfanfall)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>91175000 (Seizure (finding))</td><td/></tr><tr><td>KDS (Kurzdarmsyndrom)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>26629001 (Short bowel syndrome (disorder))</td><td/></tr><tr><td>LEV (Leberversagen)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>59927004 (Hepatic failure (disorder))</td><td/></tr><tr><td>LOE (Lungenödem)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>19242006 (Pulmonary edema (disorder))</td><td/></tr><tr><td>LYF (Lymphfistel)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>234105001 (Lymph fistula (disorder))</td><td/></tr><tr><td>LYE (Lymphozele)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>234109007 (Lymphocele (disorder))</td><td/></tr><tr><td>MES (Magenentleerungsstörung)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>386211005 (Disorder of function of stomach (disorder))</td><td/></tr><tr><td>MIL (Mechanischer Ileus)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>46420000 (Mechanical ileus (disorder))</td><td/></tr><tr><td>MED (Mediastinitis)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>373409004 (Inflammatory disorder of mediastinum (disorder))</td><td/></tr><tr><td>MAT (Mesenterialarterien- oder -venenthrombose)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-narrower" title="narrower">narrower</a></td><td>243410003 (Thrombosis of mesenteric artery (disorder))</td><td>es existiert weder das gemeinsame noch ein für Mesenterialvenenthrombose spezifisches Konzept in SNOMED</td></tr><tr><td>NIN (Nahtinsuffizienz, anderweitig nicht erwähnt)</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">kein äquivalenter SNOMED-Term, ggfs. über Postkoordination möglich</td></tr><tr><td>MYI (Myokardinfarkt)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>22298006 (Myocardial infarction (disorder))</td><td/></tr><tr><td>RNB (Nachblutung, revisionsbedürftig, anderweitig nicht erwähnt)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>308896002 (Secondary hemorrhage postprocedure (disorder))</td><td/></tr><tr><td>NAB (Nachblutung, nicht revisionsbedürftig, anderweitig nicht erwähnt)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>110265006 (Postoperative hemorrhage (disorder))</td><td/></tr><tr><td>OES (Ösophagitis)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>16761005 (Esophagitis (disorder))</td><td/></tr><tr><td>PPA (Periphere Parese)</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">kein äquivalenter SNOMED-Term, ggfs. über Postkoordination möglich</td></tr><tr><td>OSM (Osteitis, Osteomyelitis)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-narrower" title="narrower">narrower</a></td><td>274144001 (Bone inflammatory disease (disorder))</td><td>Spezifische Kodierung für Knochenentzündung</td></tr><tr><td/><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-narrower" title="narrower">narrower</a></td><td>60168000 (Osteomyelitis (disorder))</td><td>Spezifische Kodierung für Knochenmarksentzündung</td></tr><tr><td>PAF (Pankreasfistel)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>25803005 (Pancreatic fistula (disorder))</td><td/></tr><tr><td>PIT (Pankreatitis)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>75694006 (Pancreatitis (disorder))</td><td/></tr><tr><td>PAB (Peranale Blutung)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>6072007 (Bleeding from anus (disorder))</td><td/></tr><tr><td>PAV (Peripherer arterieller Verschluss (Embolie, Thrombose))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>399957001 (Peripheral arterial occlusive disease (disorder))</td><td/></tr><tr><td>PER (Peritonitis)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>48661000 (Peritonitis (disorder))</td><td/></tr><tr><td>PLB (Platzbauch)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>698817002 (Dehiscence of postoperative abdominal wound (disorder))</td><td/></tr><tr><td>PEY (Pleuraempyem)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>58554001 (Empyema of pleura (disorder))</td><td/></tr><tr><td>PLE (Pleuraerguss)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>60046008 (Pleural effusion (disorder))</td><td/></tr><tr><td>PMN (Pneumonie)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>233604007 (Pneumonia (disorder))</td><td/></tr><tr><td>PNT (Pneumothorax)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>36118008 (Pneumothorax (disorder))</td><td/></tr><tr><td>PDA (Protrahierte Darmatonie (paralytischer Ileus))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>1162567000 (Postoperative paralytic ileus (disorder))</td><td/></tr><tr><td>PAE (Pulmonalarterienembolie)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>59282003 (Pulmonary embolism (disorder))</td><td/></tr><tr><td>RPA (Rekurrensparese)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-narrower" title="narrower">narrower</a></td><td>1052240009 (Paresis of right vocal cord (disorder))</td><td>Kein gemeinsamer Überbegriff</td></tr><tr><td>RIN (Respiratorische Insuffizienz)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>409623005 (Respiratory insufficiency (disorder))</td><td/></tr><tr><td>SKI (Septische Komplikation eines Implantates)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>19220005 (Complication of implant (disorder))</td><td>Komplikation hat keine spezifischen Sepsis-Unterkonzepte, ggfs. über Postkoordination</td></tr><tr><td>SES (Septischer Schock)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>76571007 (Septic shock (disorder))</td><td/></tr><tr><td>SFH (Störungen des Flüssigkeits-, Elektrolyt- und Säurebasenhaushaltes)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>76314005 (Disorder of fluid AND/OR electrolyte (disorder))</td><td/></tr><tr><td>STK (Stomakomplikation (z. B. Blutung, Nekrose, Stenose))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>302918009 (Disorder of stoma (disorder))</td><td/></tr><tr><td>TZP (Thrombozytopenie)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>302215000 (Thrombocytopenic disorder (disorder))</td><td/></tr><tr><td>TIA (TIA(transitorische ischämische Attacke) oder RIND(reversibles ischämisches neurologisches Defizit))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>266257000 (Transient ischemic attack (disorder))</td><td/></tr><tr><td>TRZ (Transfusionszwischenfall)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>82545002 (Blood transfusion reaction (disorder))</td><td/></tr><tr><td>WUH (Wundhämatom (konservativ therapiert))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>239160006 (Wound hematoma (finding))</td><td/></tr><tr><td>WSS (Wundheilungsstörung, subkutane)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>271618001 (Impaired wound healing (finding))</td><td/></tr></table></div><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ConceptMap mii-cm-onko-operation-komplikation-sct</b></p><a name="de-mii-cm-onko-operation-komplikation-sct"> </a><a name="de-hcmii-cm-onko-operation-komplikation-sct"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profiles: <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-shareableconceptmap.html">CRMI Shareable ConceptMap</a>, <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-publishableconceptmap.html">CRMI Publishable ConceptMap</a></p></div><p>Mapping from https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ to http://snomed.info/sct/900000000000207008/version/20240401</p><br/><p>Mapping from <a href="CodeSystem-mii-cs-onko-operation-komplikation.html">MII CS Onkologie Operation Komplikationen</a> to <code>http://snomed.info/sct/900000000000207008/version/20240401</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>N (nein)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>373067005 (No (qualifier value))</td><td>sollte nicht gemeinsam mit anderen Antworten vergeben werden</td></tr><tr><td>U (unbekannt)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>261665006 (Unknown (qualifier value))</td><td/></tr><tr><td>ABD (Abszess in einem Drainagekanal)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>128477000 (Abscess (disorder))</td><td>Abzsess in Drainagekanal existiert nicht als Konzept, kann ggfs. über Postkoordination konstruiert werden</td></tr><tr><td>ABS (Abszess, intraabdominaler oder intrathorakaler)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-narrower" title="narrower">narrower</a></td><td>75100008 (Abdominal abscess (disorder))</td><td>kein spezifischer Code für diese 'oder'-Konstruktion, daher spezifisch entweder Abdominal oder thorarical Abzess</td></tr><tr><td/><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-narrower" title="narrower">narrower</a></td><td>405950009 (Abscess of thorax (disorder))</td><td>kein spezifischer Code für diese 'oder'-Konstruktion, daher spezifisch entweder Abdominal oder thorarical Abzess</td></tr><tr><td/><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>128477000 (Abscess (disorder))</td><td>weiterfassend als Abszess kodiert</td></tr><tr><td>ASF (Abszess, subfaszialer)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>128477000 (Abscess (disorder))</td><td>keine englische Expression für die Spezifizierung subfaszial gefunden</td></tr><tr><td>ANI (Akute Niereninsuffizienz)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>723189000 (Acute renal insufficiency (disorder))</td><td/></tr><tr><td>AEP (Alkoholentzugspsychose)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>8635005 (Alcohol withdrawal delirium (disorder))</td><td/></tr><tr><td>ALR (Allergische Reaktion ohne Schocksymptomatik)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>419076005 (Allergic reaction (disorder))</td><td/></tr><tr><td>ANS (Anaphylaktischer Schock)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>735173007 (Shock due to anaphylaxis (disorder))</td><td/></tr><tr><td>AEE (Anastomoseninsuffizienz einer Enterostomie)</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">kein äquivalenter SNOMED-Term, ggfs. über Postkoordination möglich</td></tr><tr><td>API (Apoplektischer Insult)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>230690007 (Cerebrovascular accident (disorder))</td><td/></tr><tr><td>BIF (Biliäre Fistel)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>53206008 (Fistula of bile duct (disorder))</td><td/></tr><tr><td>BOG (Blutung, obere gastrointestinale (z. B „Stressulkus“))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>37372002 (Upper gastrointestinal hemorrhage (disorder))</td><td/></tr><tr><td>BOE (Bolusverlegung eines Endotubus)</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">kein äquivalenter SNOMED-Term, ggfs. über Postkoordination möglich</td></tr><tr><td>BSI (Bronchusstumpfinsuffizienz)</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">kein äquivalenter SNOMED-Term, ggfs. über Postkoordination möglich</td></tr><tr><td>CHI (Cholangitis)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>82403002 (Cholangitis (disorder) )</td><td/></tr><tr><td>DAI (Darmanastomoseninsuffizienz)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-narrower" title="narrower">narrower</a></td><td>236091002 (Large intestine anastomotic leak (disorder))</td><td>kein SNOMED-Term für Gesamtdarm-Anastomoseninsuffizienz</td></tr><tr><td/><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>236090001 (Small intestine anastomotic leak (disorder))</td><td>kein SNOMED-Term für Gesamtdarm-Anastomoseninsuffizienz</td></tr><tr><td>DPS (Darmpassagestörungen (z. B. protrahierte Atonie, Subileus, Ileus))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>81060008 (Intestinal obstruction (disorder))</td><td/></tr><tr><td>DIC (Disseminierte intravasale Koagulopathie)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>67406007 (Disseminated intravascular coagulation (disorder))</td><td/></tr><tr><td>DEP (Drogenentzugspsychose)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>772133000 (Recreational drug misuse withdrawal (disorder))</td><td/></tr><tr><td>DLU (Druck- und Lagerungsschäden, z. B. Dekubitalulzera)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>1163215007 (Pressure injury (disorder))</td><td/></tr><tr><td>DSI (Duodenalstumpfinsuffizienz)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>236089005 (Duodenal stump leak (disorder))</td><td/></tr><tr><td>ENF (Enterale Fistel)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>735426009 (Fistula of digestive system (disorder))</td><td/></tr><tr><td>GER (Gerinnungsstörung)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>64779008 (Blood coagulation disorder (disorder))</td><td/></tr><tr><td>HEM (Hämatemesis)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>8765009 (Hematemesis (disorder))</td><td/></tr><tr><td>HUR (Hämaturie)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>34436003 (Blood in urine (finding))</td><td/></tr><tr><td>HAE (Hämorrhagischer Schock)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>355001 (Hemorrhagic shock (disorder))</td><td/></tr><tr><td>HFI (Harnfistel)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>57243009 (Urinary fistula (disorder))</td><td/></tr><tr><td>HNK (Hautnekrose im Operationsbereich)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>95347000 (Skin necrosis (disorder))</td><td>äquivalent insofern, als das im FHIR-Modell nach Komplikationen der OP gefragt wird; ansonsten ggfs. Spezifizierung über Postkoordination</td></tr><tr><td>HZI (Herzinsuffizienz)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>84114007 (Heart failure (disorder))</td><td/></tr><tr><td>HRS (Herzrhythmusstörungen)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>698247007 (Cardiac arrhythmia (disorder))</td><td/></tr><tr><td>HNA (Hirnnervenausfälle)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>73013002 (Cranial nerve disorder (disorder))</td><td/></tr><tr><td>HOP (Hirnorganisches Psychosyndrom (z. B. „Durchgangssyndrom“))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>2776000 (Delirium (disorder))</td><td/></tr><tr><td>HYB (Hyperbilirubinämie)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>14783006 (Hyperbilirubinemia (disorder))</td><td/></tr><tr><td>HYF (Hypopharynxfistel)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>126663003 (Disorder of hypopharynx (disorder))</td><td/></tr><tr><td>IFV (Ileofemorale Venenthrombose)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>234044007 (Iliofemoral deep vein thrombosis (disorder))</td><td/></tr><tr><td>KAS (Kardiogener Schock)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>89138009 (Cardiogenic shock (disorder))</td><td/></tr><tr><td>KES (Komplikationen einer Stomaanlage)</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">kein äquivalenter SNOMED-Term, ggfs. über Postkoordination möglich</td></tr><tr><td>KIM (Komplikation eines Implantates (Gefäßprothese, Totalendoprothese, Katheter), z. B. Dislokation)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>19220005 (Complication of implant (disorder))</td><td/></tr><tr><td>KRA (Krampfanfall)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>91175000 (Seizure (finding))</td><td/></tr><tr><td>KDS (Kurzdarmsyndrom)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>26629001 (Short bowel syndrome (disorder))</td><td/></tr><tr><td>LEV (Leberversagen)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>59927004 (Hepatic failure (disorder))</td><td/></tr><tr><td>LOE (Lungenödem)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>19242006 (Pulmonary edema (disorder))</td><td/></tr><tr><td>LYF (Lymphfistel)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>234105001 (Lymph fistula (disorder))</td><td/></tr><tr><td>LYE (Lymphozele)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>234109007 (Lymphocele (disorder))</td><td/></tr><tr><td>MES (Magenentleerungsstörung)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>386211005 (Disorder of function of stomach (disorder))</td><td/></tr><tr><td>MIL (Mechanischer Ileus)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>46420000 (Mechanical ileus (disorder))</td><td/></tr><tr><td>MED (Mediastinitis)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>373409004 (Inflammatory disorder of mediastinum (disorder))</td><td/></tr><tr><td>MAT (Mesenterialarterien- oder -venenthrombose)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-narrower" title="narrower">narrower</a></td><td>243410003 (Thrombosis of mesenteric artery (disorder))</td><td>es existiert weder das gemeinsame noch ein für Mesenterialvenenthrombose spezifisches Konzept in SNOMED</td></tr><tr><td>NIN (Nahtinsuffizienz, anderweitig nicht erwähnt)</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">kein äquivalenter SNOMED-Term, ggfs. über Postkoordination möglich</td></tr><tr><td>MYI (Myokardinfarkt)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>22298006 (Myocardial infarction (disorder))</td><td/></tr><tr><td>RNB (Nachblutung, revisionsbedürftig, anderweitig nicht erwähnt)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>308896002 (Secondary hemorrhage postprocedure (disorder))</td><td/></tr><tr><td>NAB (Nachblutung, nicht revisionsbedürftig, anderweitig nicht erwähnt)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>110265006 (Postoperative hemorrhage (disorder))</td><td/></tr><tr><td>OES (Ösophagitis)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>16761005 (Esophagitis (disorder))</td><td/></tr><tr><td>PPA (Periphere Parese)</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">kein äquivalenter SNOMED-Term, ggfs. über Postkoordination möglich</td></tr><tr><td>OSM (Osteitis, Osteomyelitis)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-narrower" title="narrower">narrower</a></td><td>274144001 (Bone inflammatory disease (disorder))</td><td>Spezifische Kodierung für Knochenentzündung</td></tr><tr><td/><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-narrower" title="narrower">narrower</a></td><td>60168000 (Osteomyelitis (disorder))</td><td>Spezifische Kodierung für Knochenmarksentzündung</td></tr><tr><td>PAF (Pankreasfistel)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>25803005 (Pancreatic fistula (disorder))</td><td/></tr><tr><td>PIT (Pankreatitis)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>75694006 (Pancreatitis (disorder))</td><td/></tr><tr><td>PAB (Peranale Blutung)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>6072007 (Bleeding from anus (disorder))</td><td/></tr><tr><td>PAV (Peripherer arterieller Verschluss (Embolie, Thrombose))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>399957001 (Peripheral arterial occlusive disease (disorder))</td><td/></tr><tr><td>PER (Peritonitis)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>48661000 (Peritonitis (disorder))</td><td/></tr><tr><td>PLB (Platzbauch)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>698817002 (Dehiscence of postoperative abdominal wound (disorder))</td><td/></tr><tr><td>PEY (Pleuraempyem)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>58554001 (Empyema of pleura (disorder))</td><td/></tr><tr><td>PLE (Pleuraerguss)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>60046008 (Pleural effusion (disorder))</td><td/></tr><tr><td>PMN (Pneumonie)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>233604007 (Pneumonia (disorder))</td><td/></tr><tr><td>PNT (Pneumothorax)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>36118008 (Pneumothorax (disorder))</td><td/></tr><tr><td>PDA (Protrahierte Darmatonie (paralytischer Ileus))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>1162567000 (Postoperative paralytic ileus (disorder))</td><td/></tr><tr><td>PAE (Pulmonalarterienembolie)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>59282003 (Pulmonary embolism (disorder))</td><td/></tr><tr><td>RPA (Rekurrensparese)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-narrower" title="narrower">narrower</a></td><td>1052240009 (Paresis of right vocal cord (disorder))</td><td>Kein gemeinsamer Überbegriff</td></tr><tr><td>RIN (Respiratorische Insuffizienz)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>409623005 (Respiratory insufficiency (disorder))</td><td/></tr><tr><td>SKI (Septische Komplikation eines Implantates)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>19220005 (Complication of implant (disorder))</td><td>Komplikation hat keine spezifischen Sepsis-Unterkonzepte, ggfs. über Postkoordination</td></tr><tr><td>SES (Septischer Schock)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>76571007 (Septic shock (disorder))</td><td/></tr><tr><td>SFH (Störungen des Flüssigkeits-, Elektrolyt- und Säurebasenhaushaltes)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>76314005 (Disorder of fluid AND/OR electrolyte (disorder))</td><td/></tr><tr><td>STK (Stomakomplikation (z. B. Blutung, Nekrose, Stenose))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>302918009 (Disorder of stoma (disorder))</td><td/></tr><tr><td>TZP (Thrombozytopenie)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>302215000 (Thrombocytopenic disorder (disorder))</td><td/></tr><tr><td>TIA (TIA(transitorische ischämische Attacke) oder RIND(reversibles ischämisches neurologisches Defizit))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>266257000 (Transient ischemic attack (disorder))</td><td/></tr><tr><td>TRZ (Transfusionszwischenfall)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>82545002 (Blood transfusion reaction (disorder))</td><td/></tr><tr><td>WUH (Wundhämatom (konservativ therapiert))</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>239160006 (Wound hematoma (finding))</td><td/></tr><tr><td>WSS (Wundheilungsstörung, subkutane)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>271618001 (Impaired wound healing (finding))</td><td/></tr></table></div></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability">
+    <valueCode value="shareable"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability">
+    <valueCode value="publishable"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes"/>
+        <code value="package"/>
+        <display value="Package"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/resource-approvalDate">
+    <valueDate value="2026-01-03"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-topic">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"/>
+        <code value="C3262"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-author">
+    <valueContactDetail>
+      <telecom>
+        <system value="email"/>
+        <value value="thomas.debertshaeuser@charite.de"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-editor">
+    <valueContactDetail>
+      <name value="Taskforce Core Data Set"/>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-reviewer">
+    <valueContactDetail>
+      <name value="Interoperability Working Group"/>
+      <telecom>
+        <system value="url"/>
+        <value value="https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-reviewer">
+    <valueContactDetail>
+      <name value="National Steering Committee"/>
+      <telecom>
+        <system value="url"/>
+        <value value="https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-endorser">
+    <valueContactDetail>
+      <name value="Interoperability Working Group"/>
+      <telecom>
+        <system value="url"/>
+        <value value="https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-endorser">
+    <valueContactDetail>
+      <name value="National Steering Committee"/>
+      <telecom>
+        <system value="url"/>
+        <value value="https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm">
+    <valueCoding>
+      <system value="http://hl7.org/fhir/version-algorithm"/>
+      <code value="semver"/>
+      <display value="SemVer"/>
+    </valueCoding>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+    <valuePeriod>
+      <start value="2026"/>
+    </valuePeriod>
+  </extension>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-operation-komplikation-sct"/>
+  <version value="2027.0.0-ballot.rc1"/>
+  <name value="MII CM Onko Operation Komplikation SCT Mapping"/>
+  <title value="MII CM Onko Operation Komplikation SNOMED Mapping"/>
+  <status value="active"/>
+  <experimental value="true"/>
+  <date value="2024-04-10"/>
+  <publisher value="Medizininformatik Initiative"/>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de/"/>
+    </telecom>
+  </contact>
+  <description value="Mapping Operation Komplikation Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <purpose value="Technical mapping to transform oBDS-Data into SNOMED"/>
+  <copyright value="This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license."/>
+  <sourceUri value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/"/>
+  <targetUri value="http://snomed.info/sct/900000000000207008/version/20240401"/>
+  <group>
+    <source value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-komplikation"/>
+    <target value="http://snomed.info/sct/900000000000207008/version/20240401"/>
+    <element>
+      <code value="N"/>
+      <display value="nein"/>
+      <target>
+        <code value="373067005"/>
+        <display value="No (qualifier value)"/>
+        <equivalence value="equivalent"/>
+        <comment value="sollte nicht gemeinsam mit anderen Antworten vergeben werden"/>
+      </target>
+    </element>
+    <element>
+      <code value="U"/>
+      <display value="unbekannt"/>
+      <target>
+        <code value="261665006"/>
+        <display value="Unknown (qualifier value)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="ABD"/>
+      <display value="Abszess in einem Drainagekanal"/>
+      <target>
+        <code value="128477000"/>
+        <display value="Abscess (disorder)"/>
+        <equivalence value="wider"/>
+        <comment value="Abzsess in Drainagekanal existiert nicht als Konzept, kann ggfs. über Postkoordination konstruiert werden"/>
+      </target>
+    </element>
+    <element>
+      <code value="ABS"/>
+      <display value="Abszess, intraabdominaler oder intrathorakaler"/>
+      <target>
+        <code value="75100008"/>
+        <display value="Abdominal abscess (disorder)"/>
+        <equivalence value="narrower"/>
+        <comment value="kein spezifischer Code für diese 'oder'-Konstruktion, daher spezifisch entweder Abdominal oder thorarical Abzess"/>
+      </target>
+    </element>
+    <element>
+      <target>
+        <code value="405950009"/>
+        <display value="Abscess of thorax (disorder)"/>
+        <equivalence value="narrower"/>
+        <comment value="kein spezifischer Code für diese 'oder'-Konstruktion, daher spezifisch entweder Abdominal oder thorarical Abzess"/>
+      </target>
+    </element>
+    <element>
+      <target>
+        <code value="128477000"/>
+        <display value="Abscess (disorder)"/>
+        <equivalence value="wider"/>
+        <comment value="weiterfassend als Abszess kodiert"/>
+      </target>
+    </element>
+    <element>
+      <code value="ASF"/>
+      <display value="Abszess, subfaszialer"/>
+      <target>
+        <code value="128477000"/>
+        <display value="Abscess (disorder)"/>
+        <equivalence value="wider"/>
+        <comment value="keine englische Expression für die Spezifizierung subfaszial gefunden"/>
+      </target>
+    </element>
+    <element>
+      <code value="ANI"/>
+      <display value="Akute Niereninsuffizienz"/>
+      <target>
+        <code value="723189000"/>
+        <display value="Acute renal insufficiency (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="AEP"/>
+      <display value="Alkoholentzugspsychose"/>
+      <target>
+        <code value="8635005"/>
+        <display value="Alcohol withdrawal delirium (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="ALR"/>
+      <display value="Allergische Reaktion ohne Schocksymptomatik"/>
+      <target>
+        <code value="419076005"/>
+        <display value="Allergic reaction (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="ANS"/>
+      <display value="Anaphylaktischer Schock"/>
+      <target>
+        <code value="735173007"/>
+        <display value="Shock due to anaphylaxis (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="AEE"/>
+      <display value="Anastomoseninsuffizienz einer Enterostomie"/>
+      <target>
+        <equivalence value="unmatched"/>
+        <comment value="kein äquivalenter SNOMED-Term, ggfs. über Postkoordination möglich"/>
+      </target>
+    </element>
+    <element>
+      <code value="API"/>
+      <display value="Apoplektischer Insult"/>
+      <target>
+        <code value="230690007"/>
+        <display value="Cerebrovascular accident (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="BIF"/>
+      <display value="Biliäre Fistel"/>
+      <target>
+        <code value="53206008"/>
+        <display value="Fistula of bile duct (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="BOG"/>
+      <display value="Blutung, obere gastrointestinale (z. B „Stressulkus“)"/>
+      <target>
+        <code value="37372002"/>
+        <display value="Upper gastrointestinal hemorrhage (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="BOE"/>
+      <display value="Bolusverlegung eines Endotubus"/>
+      <target>
+        <equivalence value="unmatched"/>
+        <comment value="kein äquivalenter SNOMED-Term, ggfs. über Postkoordination möglich"/>
+      </target>
+    </element>
+    <element>
+      <code value="BSI"/>
+      <display value="Bronchusstumpfinsuffizienz"/>
+      <target>
+        <equivalence value="unmatched"/>
+        <comment value="kein äquivalenter SNOMED-Term, ggfs. über Postkoordination möglich"/>
+      </target>
+    </element>
+    <element>
+      <code value="CHI"/>
+      <display value="Cholangitis"/>
+      <target>
+        <code value="82403002"/>
+        <display value="Cholangitis (disorder) "/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="DAI"/>
+      <display value="Darmanastomoseninsuffizienz"/>
+      <target>
+        <code value="236091002"/>
+        <display value="Large intestine anastomotic leak (disorder)"/>
+        <equivalence value="narrower"/>
+        <comment value="kein SNOMED-Term für Gesamtdarm-Anastomoseninsuffizienz"/>
+      </target>
+    </element>
+    <element>
+      <target>
+        <code value="236090001"/>
+        <display value="Small intestine anastomotic leak (disorder)"/>
+        <equivalence value="equivalent"/>
+        <comment value="kein SNOMED-Term für Gesamtdarm-Anastomoseninsuffizienz"/>
+      </target>
+    </element>
+    <element>
+      <code value="DPS"/>
+      <display value="Darmpassagestörungen (z. B. protrahierte Atonie, Subileus, Ileus)"/>
+      <target>
+        <code value="81060008"/>
+        <display value="Intestinal obstruction (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="DIC"/>
+      <display value="Disseminierte intravasale Koagulopathie"/>
+      <target>
+        <code value="67406007"/>
+        <display value="Disseminated intravascular coagulation (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="DEP"/>
+      <display value="Drogenentzugspsychose"/>
+      <target>
+        <code value="772133000"/>
+        <display value="Recreational drug misuse withdrawal (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="DLU"/>
+      <display value="Druck- und Lagerungsschäden, z. B. Dekubitalulzera"/>
+      <target>
+        <code value="1163215007"/>
+        <display value="Pressure injury (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="DSI"/>
+      <display value="Duodenalstumpfinsuffizienz"/>
+      <target>
+        <code value="236089005"/>
+        <display value="Duodenal stump leak (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="ENF"/>
+      <display value="Enterale Fistel"/>
+      <target>
+        <code value="735426009"/>
+        <display value="Fistula of digestive system (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="GER"/>
+      <display value="Gerinnungsstörung"/>
+      <target>
+        <code value="64779008"/>
+        <display value="Blood coagulation disorder (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="HEM"/>
+      <display value="Hämatemesis"/>
+      <target>
+        <code value="8765009"/>
+        <display value="Hematemesis (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="HUR"/>
+      <display value="Hämaturie"/>
+      <target>
+        <code value="34436003"/>
+        <display value="Blood in urine (finding)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="HAE"/>
+      <display value="Hämorrhagischer Schock"/>
+      <target>
+        <code value="355001"/>
+        <display value="Hemorrhagic shock (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="HFI"/>
+      <display value="Harnfistel"/>
+      <target>
+        <code value="57243009"/>
+        <display value="Urinary fistula (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="HNK"/>
+      <display value="Hautnekrose im Operationsbereich"/>
+      <target>
+        <code value="95347000"/>
+        <display value="Skin necrosis (disorder)"/>
+        <equivalence value="equivalent"/>
+        <comment value="äquivalent insofern, als das im FHIR-Modell nach Komplikationen der OP gefragt wird; ansonsten ggfs. Spezifizierung über Postkoordination"/>
+      </target>
+    </element>
+    <element>
+      <code value="HZI"/>
+      <display value="Herzinsuffizienz"/>
+      <target>
+        <code value="84114007"/>
+        <display value="Heart failure (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="HRS"/>
+      <display value="Herzrhythmusstörungen"/>
+      <target>
+        <code value="698247007"/>
+        <display value="Cardiac arrhythmia (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="HNA"/>
+      <display value="Hirnnervenausfälle"/>
+      <target>
+        <code value="73013002"/>
+        <display value="Cranial nerve disorder (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="HOP"/>
+      <display value="Hirnorganisches Psychosyndrom (z. B. „Durchgangssyndrom“)"/>
+      <target>
+        <code value="2776000"/>
+        <display value="Delirium (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="HYB"/>
+      <display value="Hyperbilirubinämie"/>
+      <target>
+        <code value="14783006"/>
+        <display value="Hyperbilirubinemia (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="HYF"/>
+      <display value="Hypopharynxfistel"/>
+      <target>
+        <code value="126663003"/>
+        <display value="Disorder of hypopharynx (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="IFV"/>
+      <display value="Ileofemorale Venenthrombose"/>
+      <target>
+        <code value="234044007"/>
+        <display value="Iliofemoral deep vein thrombosis (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="KAS"/>
+      <display value="Kardiogener Schock"/>
+      <target>
+        <code value="89138009"/>
+        <display value="Cardiogenic shock (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="KES"/>
+      <display value="Komplikationen einer Stomaanlage"/>
+      <target>
+        <equivalence value="unmatched"/>
+        <comment value="kein äquivalenter SNOMED-Term, ggfs. über Postkoordination möglich"/>
+      </target>
+    </element>
+    <element>
+      <code value="KIM"/>
+      <display value="Komplikation eines Implantates (Gefäßprothese, Totalendoprothese, Katheter), z. B. Dislokation"/>
+      <target>
+        <code value="19220005"/>
+        <display value="Complication of implant (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="KRA"/>
+      <display value="Krampfanfall"/>
+      <target>
+        <code value="91175000"/>
+        <display value="Seizure (finding)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="KDS"/>
+      <display value="Kurzdarmsyndrom"/>
+      <target>
+        <code value="26629001"/>
+        <display value="Short bowel syndrome (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="LEV"/>
+      <display value="Leberversagen"/>
+      <target>
+        <code value="59927004"/>
+        <display value="Hepatic failure (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="LOE"/>
+      <display value="Lungenödem"/>
+      <target>
+        <code value="19242006"/>
+        <display value="Pulmonary edema (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="LYF"/>
+      <display value="Lymphfistel"/>
+      <target>
+        <code value="234105001"/>
+        <display value="Lymph fistula (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="LYE"/>
+      <display value="Lymphozele"/>
+      <target>
+        <code value="234109007"/>
+        <display value="Lymphocele (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="MES"/>
+      <display value="Magenentleerungsstörung"/>
+      <target>
+        <code value="386211005"/>
+        <display value="Disorder of function of stomach (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="MIL"/>
+      <display value="Mechanischer Ileus"/>
+      <target>
+        <code value="46420000"/>
+        <display value="Mechanical ileus (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="MED"/>
+      <display value="Mediastinitis"/>
+      <target>
+        <code value="373409004"/>
+        <display value="Inflammatory disorder of mediastinum (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="MAT"/>
+      <display value="Mesenterialarterien- oder -venenthrombose"/>
+      <target>
+        <code value="243410003"/>
+        <display value="Thrombosis of mesenteric artery (disorder)"/>
+        <equivalence value="narrower"/>
+        <comment value="es existiert weder das gemeinsame noch ein für Mesenterialvenenthrombose spezifisches Konzept in SNOMED"/>
+      </target>
+    </element>
+    <element>
+      <code value="NIN"/>
+      <display value="Nahtinsuffizienz, anderweitig nicht erwähnt"/>
+      <target>
+        <equivalence value="unmatched"/>
+        <comment value="kein äquivalenter SNOMED-Term, ggfs. über Postkoordination möglich"/>
+      </target>
+    </element>
+    <element>
+      <code value="MYI"/>
+      <display value="Myokardinfarkt"/>
+      <target>
+        <code value="22298006"/>
+        <display value="Myocardial infarction (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="RNB"/>
+      <display value="Nachblutung, revisionsbedürftig, anderweitig nicht erwähnt"/>
+      <target>
+        <code value="308896002"/>
+        <display value="Secondary hemorrhage postprocedure (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="NAB"/>
+      <display value="Nachblutung, nicht revisionsbedürftig, anderweitig nicht erwähnt"/>
+      <target>
+        <code value="110265006"/>
+        <display value="Postoperative hemorrhage (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OES"/>
+      <display value="Ösophagitis"/>
+      <target>
+        <code value="16761005"/>
+        <display value="Esophagitis (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="PPA"/>
+      <display value="Periphere Parese"/>
+      <target>
+        <equivalence value="unmatched"/>
+        <comment value="kein äquivalenter SNOMED-Term, ggfs. über Postkoordination möglich"/>
+      </target>
+    </element>
+    <element>
+      <code value="OSM"/>
+      <display value="Osteitis, Osteomyelitis"/>
+      <target>
+        <code value="274144001"/>
+        <display value="Bone inflammatory disease (disorder)"/>
+        <equivalence value="narrower"/>
+        <comment value="Spezifische Kodierung für Knochenentzündung"/>
+      </target>
+    </element>
+    <element>
+      <target>
+        <code value="60168000"/>
+        <display value="Osteomyelitis (disorder)"/>
+        <equivalence value="narrower"/>
+        <comment value="Spezifische Kodierung für Knochenmarksentzündung"/>
+      </target>
+    </element>
+    <element>
+      <code value="PAF"/>
+      <display value="Pankreasfistel"/>
+      <target>
+        <code value="25803005"/>
+        <display value="Pancreatic fistula (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="PIT"/>
+      <display value="Pankreatitis"/>
+      <target>
+        <code value="75694006"/>
+        <display value="Pancreatitis (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="PAB"/>
+      <display value="Peranale Blutung"/>
+      <target>
+        <code value="6072007"/>
+        <display value="Bleeding from anus (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="PAV"/>
+      <display value="Peripherer arterieller Verschluss (Embolie, Thrombose)"/>
+      <target>
+        <code value="399957001"/>
+        <display value="Peripheral arterial occlusive disease (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="PER"/>
+      <display value="Peritonitis"/>
+      <target>
+        <code value="48661000"/>
+        <display value="Peritonitis (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="PLB"/>
+      <display value="Platzbauch"/>
+      <target>
+        <code value="698817002"/>
+        <display value="Dehiscence of postoperative abdominal wound (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="PEY"/>
+      <display value="Pleuraempyem"/>
+      <target>
+        <code value="58554001"/>
+        <display value="Empyema of pleura (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="PLE"/>
+      <display value="Pleuraerguss"/>
+      <target>
+        <code value="60046008"/>
+        <display value="Pleural effusion (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="PMN"/>
+      <display value="Pneumonie"/>
+      <target>
+        <code value="233604007"/>
+        <display value="Pneumonia (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="PNT"/>
+      <display value="Pneumothorax"/>
+      <target>
+        <code value="36118008"/>
+        <display value="Pneumothorax (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="PDA"/>
+      <display value="Protrahierte Darmatonie (paralytischer Ileus)"/>
+      <target>
+        <code value="1162567000"/>
+        <display value="Postoperative paralytic ileus (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="PAE"/>
+      <display value="Pulmonalarterienembolie"/>
+      <target>
+        <code value="59282003"/>
+        <display value="Pulmonary embolism (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="RPA"/>
+      <display value="Rekurrensparese"/>
+      <target>
+        <code value="1052240009"/>
+        <display value="Paresis of right vocal cord (disorder)"/>
+        <equivalence value="narrower"/>
+        <comment value="Kein gemeinsamer Überbegriff"/>
+      </target>
+    </element>
+    <element>
+      <code value="RIN"/>
+      <display value="Respiratorische Insuffizienz"/>
+      <target>
+        <code value="409623005"/>
+        <display value="Respiratory insufficiency (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="SKI"/>
+      <display value="Septische Komplikation eines Implantates"/>
+      <target>
+        <code value="19220005"/>
+        <display value="Complication of implant (disorder)"/>
+        <equivalence value="wider"/>
+        <comment value="Komplikation hat keine spezifischen Sepsis-Unterkonzepte, ggfs. über Postkoordination"/>
+      </target>
+    </element>
+    <element>
+      <code value="SES"/>
+      <display value="Septischer Schock"/>
+      <target>
+        <code value="76571007"/>
+        <display value="Septic shock (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="SFH"/>
+      <display value="Störungen des Flüssigkeits-, Elektrolyt- und Säurebasenhaushaltes"/>
+      <target>
+        <code value="76314005"/>
+        <display value="Disorder of fluid AND/OR electrolyte (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="STK"/>
+      <display value="Stomakomplikation (z. B. Blutung, Nekrose, Stenose)"/>
+      <target>
+        <code value="302918009"/>
+        <display value="Disorder of stoma (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="TZP"/>
+      <display value="Thrombozytopenie"/>
+      <target>
+        <code value="302215000"/>
+        <display value="Thrombocytopenic disorder (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="TIA"/>
+      <display value="TIA(transitorische ischämische Attacke) oder RIND(reversibles ischämisches neurologisches Defizit)"/>
+      <target>
+        <code value="266257000"/>
+        <display value="Transient ischemic attack (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="TRZ"/>
+      <display value="Transfusionszwischenfall"/>
+      <target>
+        <code value="82545002"/>
+        <display value="Blood transfusion reaction (disorder)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="WUH"/>
+      <display value="Wundhämatom (konservativ therapiert)"/>
+      <target>
+        <code value="239160006"/>
+        <display value="Wound hematoma (finding)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="WSS"/>
+      <display value="Wundheilungsstörung, subkutane"/>
+      <target>
+        <code value="271618001"/>
+        <display value="Impaired wound healing (finding)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

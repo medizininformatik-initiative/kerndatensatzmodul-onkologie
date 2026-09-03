@@ -1,0 +1,306 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "mii-exa-onko-tnm-bundle-legacy",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/StructureDefinition/Bundle"]
+  },
+  "language" : "de",
+  "identifier" : {
+    "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko",
+    "value" : "tnm-bundle-legacy-2024-001"
+  },
+  "type" : "transaction",
+  "timestamp" : "2024-01-11T10:00:00+01:00",
+  "entry" : [{
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-tnm-bundle-legacy-patient",
+    "resource" : {
+      "resourceType" : "Patient",
+      "id" : "mii-exa-onko-tnm-bundle-legacy-patient",
+      "language" : "de",
+      "text" : {
+        "status" : "generated"
+      },
+      "name" : [{
+        "family" : "TNMLegacy",
+        "given" : ["Tobias"]
+      }],
+      "gender" : "male",
+      "birthDate" : "1962-04-18"
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Patient"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-tnm-bundle-legacy-diagnose",
+    "resource" : {
+      "resourceType" : "Condition",
+      "id" : "mii-exa-onko-tnm-bundle-legacy-diagnose",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor|2027.0.0-ballot.rc1"]
+      },
+      "language" : "de",
+      "text" : {
+        "status" : "extensions"
+      },
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
+        "valueDateTime" : "2024-01-11"
+      }],
+      "clinicalStatus" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code" : "active"
+        }]
+      },
+      "verificationStatus" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+          "code" : "confirmed"
+        }]
+      },
+      "category" : [{
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "55342001",
+          "display" : "Neoplastic disease"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+          "version" : "2024",
+          "code" : "C20",
+          "display" : "Bösartige Neubildung des Rektums"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-tnm-bundle-legacy-patient"
+      },
+      "recordedDate" : "2024-01-11"
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Condition"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-tnm-bundle-legacy-t-cT2",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "mii-exa-onko-tnm-bundle-legacy-t-cT2",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie|2027.0.0-ballot.rc1"]
+      },
+      "language" : "de",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "final",
+      "code" : {
+        "extension" : [{
+          "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix",
+          "valueCodeableConcept" : {
+            "coding" : [{
+              "system" : "https://www.uicc.org/resources/tnm",
+              "code" : "c",
+              "display" : "c"
+            }]
+          }
+        }],
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "399504009",
+          "display" : "cT category (observable entity)"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-tnm-bundle-legacy-patient"
+      },
+      "effectiveDateTime" : "2024-01-11",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://www.uicc.org/resources/tnm",
+          "code" : "T2",
+          "display" : "T2"
+        }]
+      },
+      "method" : {
+        "coding" : [{
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version",
+          "code" : "8",
+          "display" : "8. Auflage"
+        }]
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-tnm-bundle-legacy-n-cN3",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "mii-exa-onko-tnm-bundle-legacy-n-cN3",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie|2027.0.0-ballot.rc1"]
+      },
+      "language" : "de",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "final",
+      "code" : {
+        "extension" : [{
+          "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix",
+          "valueCodeableConcept" : {
+            "coding" : [{
+              "system" : "https://www.uicc.org/resources/tnm",
+              "code" : "c",
+              "display" : "c"
+            }]
+          }
+        }],
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "399534004",
+          "display" : "cN category (observable entity)"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-tnm-bundle-legacy-patient"
+      },
+      "effectiveDateTime" : "2024-01-11",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://www.uicc.org/resources/tnm",
+          "code" : "N3",
+          "display" : "N3"
+        }]
+      },
+      "method" : {
+        "coding" : [{
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version",
+          "code" : "8",
+          "display" : "8. Auflage"
+        }]
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-tnm-bundle-legacy-m-cM0",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "mii-exa-onko-tnm-bundle-legacy-m-cM0",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-kategorie|2027.0.0-ballot.rc1"]
+      },
+      "language" : "de",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "final",
+      "code" : {
+        "extension" : [{
+          "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix",
+          "valueCodeableConcept" : {
+            "coding" : [{
+              "system" : "https://www.uicc.org/resources/tnm",
+              "code" : "c",
+              "display" : "c"
+            }]
+          }
+        }],
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "399387003",
+          "display" : "cM category (observable entity)"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-tnm-bundle-legacy-patient"
+      },
+      "effectiveDateTime" : "2024-01-11",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://www.uicc.org/resources/tnm",
+          "code" : "M0",
+          "display" : "M0"
+        }]
+      },
+      "method" : {
+        "coding" : [{
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version",
+          "code" : "8",
+          "display" : "8. Auflage"
+        }]
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-tnm-bundle-legacy-klassifikation-cT2cN3cM0",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "mii-exa-onko-tnm-bundle-legacy-klassifikation-cT2cN3cM0",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation|2027.0.0-ballot.rc1"]
+      },
+      "language" : "de",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "399537006",
+          "display" : "Clinical TNM stage grouping"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-tnm-bundle-legacy-patient"
+      },
+      "focus" : [{
+        "reference" : "Condition/mii-exa-onko-tnm-bundle-legacy-diagnose"
+      }],
+      "effectiveDateTime" : "2024-01-11",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://www.uicc.org/resources/tnm",
+          "code" : "IIIB",
+          "display" : "Stadium IIIB"
+        }]
+      },
+      "method" : {
+        "coding" : [{
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version",
+          "code" : "8",
+          "display" : "8. Auflage"
+        }]
+      },
+      "hasMember" : [{
+        "reference" : "Observation/mii-exa-onko-tnm-bundle-legacy-t-cT2"
+      },
+      {
+        "reference" : "Observation/mii-exa-onko-tnm-bundle-legacy-n-cN3"
+      },
+      {
+        "reference" : "Observation/mii-exa-onko-tnm-bundle-legacy-m-cM0"
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  }]
+}

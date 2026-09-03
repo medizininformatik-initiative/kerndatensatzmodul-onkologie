@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-onko-mamma-her2neu-status"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-her2neu-status|2027.0.0-ballot.rc1"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Observation mii-exa-onko-mamma-her2neu-status</b></p><a name="mii-exa-onko-mamma-her2neu-status"> </a><a name="hcmii-exa-onko-mamma-her2neu-status"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-mamma-her2neu-status.html">MII PR Onkologie Her2neu Status</a> version: 2027.0.0-ballot.rc1</p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:{http://loinc.org 48676-1}">HER2 [Interpretation] in Tissue</span></p><p><b>subject</b>: <a href="Patient-mii-exa-onko-mamma-bundle-patient.html">Martha MammaCa  (no stated gender), DoB Unknown</a></p><p><b>focus</b>: <a href="Condition-mii-exa-onko-mamma-diagnose.html">Condition Bösartige Neubildung: Unterer innerer Quadrant der Brustdrüse</a></p><p><b>effective</b>: 2024-01-10 10:00:00+0000</p><p><b>value</b>: <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-obds P}, {https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-leitlinie positiv}">positiv</span></p><h3>Components</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Code</b></td><td><b>Value[x]</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://loinc.org 85319-2}">HER2 [Presence] in Breast cancer specimen by Immune stain</span></td><td><span title="Codes:{http://loinc.org LA11843-2}">3+</span></td></tr></table></div>
+  </text>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="48676-1"/>
+      <display value="HER2 [Interpretation] in Tissue"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/mii-exa-onko-mamma-bundle-patient"/>
+  </subject>
+  <focus>
+    <reference value="Condition/mii-exa-onko-mamma-diagnose"/>
+  </focus>
+  <effectiveDateTime value="2024-01-10T10:00:00Z"/>
+  <valueCodeableConcept>
+    <coding>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-obds"/>
+      <code value="P"/>
+      <display value="positiv"/>
+    </coding>
+    <coding>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-her2neu-status-leitlinie"/>
+      <code value="positiv"/>
+      <display value="HER2-positiv"/>
+    </coding>
+  </valueCodeableConcept>
+  <component>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="85319-2"/>
+        <display value="HER2 [Presence] in Breast cancer specimen by Immune stain"/>
+      </coding>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="LA11843-2"/>
+        <display value="3+"/>
+      </coding>
+    </valueCodeableConcept>
+  </component>
+</Observation>

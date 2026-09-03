@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="mii-vs-onko-systemische-therapie-substanzen-unii"/>
+  <meta>
+    <extension url="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-license">
+      <valueCode value="CC-BY-4.0"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/package-source">
+      <extension url="packageId">
+        <valueId value="de.medizininformatikinitiative.kerndatensatz.onkologie"/>
+      </extension>
+      <extension url="version">
+        <valueString value="2026.0.3"/>
+      </extension>
+      <extension url="uri">
+        <valueUri value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko"/>
+      </extension>
+    </extension>
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-computablevalueset"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-onko-systemische-therapie-substanzen-unii</b></p><a name="mii-vs-onko-systemische-therapie-substanzen-unii"> </a><a name="hcmii-vs-onko-systemische-therapie-substanzen-unii"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profiles: <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-shareablevalueset.html">Shareable ValueSet</a>, <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-shareablevalueset.html">CRMI Shareable ValueSet</a>, <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-publishablevalueset.html">CRMI Publishable ValueSet</a>, <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-computablevalueset.html">CRMI Computable ValueSet</a></p></div><ul><li>Include these codes as defined in <a href="http://fdasis.nlm.nih.gov"><code>http://fdasis.nlm.nih.gov</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>T66ES73M18</td><td>ALISERTIB</td></tr><tr><td>F333OQQ9UV</td><td>ASUNERCEPT</td></tr><tr><td>31M3WLJ3KG</td><td>BELVARAFENIB</td></tr><tr><td>0ICW2LX8AS</td><td>BEMCENTINIB</td></tr><tr><td>0ZM2Z182GD</td><td>BUPARLISIB</td></tr><tr><td>85RE35306Z</td><td>CERALASERTIB</td></tr><tr><td>4EDF46E4GI</td><td>CILENGITIDE</td></tr><tr><td>923X28214S</td><td>CRENIGACESTAT</td></tr><tr><td>LQF7I567TQ</td><td>CRENOLANIB</td></tr><tr><td>N9B0H171MJ</td><td>DERAZANTINIB</td></tr><tr><td>SJ82PK3HWA</td><td>EFTILAGIMOD ALFA</td></tr><tr><td>SMA5ZS5B22</td><td>ENSARTINIB</td></tr><tr><td>6I3O3W6O3B</td><td>ENTOSPLETINIB</td></tr><tr><td>UC96G28EQF</td><td>ENZASTAURIN</td></tr><tr><td>2E8412Y946</td><td>GANETESPIB</td></tr><tr><td>QSQ883V35U</td><td>IDASANUTLIN</td></tr><tr><td>F60NE4XB53</td><td>IMETELSTAT</td></tr><tr><td>L4C1UY2NYH</td><td>INAVOLISIB</td></tr><tr><td>PP449XA4BH</td><td>LUCITANIB</td></tr><tr><td>703P9YDP7F</td><td>MARIZOMIB</td></tr><tr><td>5OGS5K699E</td><td>MERESTINIB</td></tr><tr><td>6O01GMS00P</td><td>MOMELOTINIB</td></tr><tr><td>15JL80DG6H</td><td>NAPORAFENIB</td></tr><tr><td>KE7K32EME8</td><td>NAZARTINIB</td></tr><tr><td>JTZ51LIXN4</td><td>NEMTABRUTINIB</td></tr><tr><td>MTM792B442</td><td>OLAPTESED PEGOL</td></tr><tr><td>S3AZD8D215</td><td>PEVONEDISTAT</td></tr><tr><td>JNA39I7ZVB</td><td>PIRTOBRUTINIB</td></tr><tr><td>08O3FQ4UNP</td><td>REPOTRECTINIB</td></tr><tr><td>15KFN616FK</td><td>RINETERKIB</td></tr><tr><td>67DOW7F9GL</td><td>RIGOSERTIB</td></tr><tr><td>0282IF4JC8</td><td>SIREMADLIN</td></tr><tr><td>G287IC9MH3</td><td>TILSOTOLIMOD</td></tr><tr><td>MAT637500A</td><td>TIPIFARNIB</td></tr><tr><td>LXG44NDL2T</td><td>TIRABRUTINIB</td></tr><tr><td>PJ4H73IL17</td><td>TIVANTINIB</td></tr><tr><td>ZN90E4027M</td><td>TOVORAFENIB</td></tr><tr><td>X8Y5U6NC7E</td><td>TREBANANIB</td></tr><tr><td>U36PGF65JH</td><td>UMIROLIMUS</td></tr><tr><td>6EM57086EA</td><td>VOLASERTIB</td></tr><tr><td>H4GXR80IZE</td><td>ZOTAROLIMUS</td></tr><tr><td>7OSV6M6T4D</td><td>ALNUCTAMAB</td></tr><tr><td>6HP0354G04</td><td>AMATUXIMAB</td></tr><tr><td>PRC974M49B</td><td>BALIXAFORTIDE</td></tr><tr><td>Q16CT95N25</td><td>BAVITUXIMAB</td></tr><tr><td>RJW23BQ0KW</td><td>BEMARITUZUMAB</td></tr><tr><td>LYK98WP91F</td><td>CETRELIMAB</td></tr><tr><td>RR5U4UFJ8L</td><td>CUSATUZUMAB</td></tr><tr><td>2OQ3OPV2F8</td><td>DARLEUKIN</td></tr><tr><td>GD2OWY1DTK</td><td>DATOPOTAMAB DERUXTECAN</td></tr><tr><td>W984C353CG</td><td>DEPATUXIZUMAB</td></tr><tr><td>RB3U3A1S27</td><td>DISITAMAB VEDOTIN</td></tr><tr><td>L0HR9A577V</td><td>ELRANATAMAB</td></tr><tr><td>DGK38A42AE</td><td>ELSILIMOMAB</td></tr><tr><td>VE267FC2UB</td><td>FIGITUMUMAB</td></tr><tr><td>S9OX9692ZB</td><td>GALIXIMAB</td></tr><tr><td>85V55ZLV2Z</td><td>GATIPOTUZUMAB</td></tr><tr><td>4B57CWT710</td><td>GEBASAXTUREV</td></tr><tr><td>28P3DU6DB3</td><td>GIREDESTRANT</td></tr><tr><td>539B57DFJF</td><td>GIRENTUXIMAB</td></tr><tr><td>06P3KLK2J8</td><td>GLOFITAMAB</td></tr><tr><td>8V66F27X44</td><td>IBERDOMIDE</td></tr><tr><td>XGL4M23834</td><td>INDATUXIMAB RAVTANSINE</td></tr><tr><td>GO90DFK14U</td><td>INOLIMOMAB</td></tr><tr><td>0H2XLR2IKW</td><td>LEMZOPARLIMAB</td></tr><tr><td>NYM5HO7I39</td><td>LONCASTUXIMAB</td></tr><tr><td>7K5O7P6QIU</td><td>LONCASTUXIMAB TESIRINE</td></tr><tr><td>90YIEHRFJ9</td><td>MAGROLIMAB</td></tr><tr><td>98DE7VN88D</td><td>MIRVETUXIMAB SORAVTANSINE</td></tr><tr><td>DA9G065962</td><td>MOTIXAFORTIDE</td></tr><tr><td>ND296JF21I</td><td>NIDANILIMAB</td></tr><tr><td>W2OR26S7UE</td><td>NISEVOKITUG</td></tr><tr><td>6HXC0O6JMV</td><td>ONFEKAFUSP ALFA</td></tr><tr><td>S9J80L3D1U</td><td>PELAREOREP</td></tr><tr><td>IBS1BZ4E4I</td><td>PENPULIMAB</td></tr><tr><td>4XG66BMN0D</td><td>PLOZALIZUMAB</td></tr><tr><td>AF75XOF6W3</td><td>RELATLIMAB</td></tr><tr><td>51WEW898IJ</td><td>RILOTUMUMAB</td></tr><tr><td>P256HB60FF</td><td>ROVALPITUZUMAB TESIRINE</td></tr><tr><td>1N3L70MDFX</td><td>SERIBANTUMAB</td></tr><tr><td>8FU7FQ8UPK</td><td>SINTILIMAB</td></tr><tr><td>QOG25L6Z8Z</td><td>SPARTALIZUMAB</td></tr><tr><td>X8JR0I7JE1</td><td>TALACOTUZUMAB</td></tr><tr><td>6XG22YQM2Z</td><td>TIRAGOLUMAB</td></tr><tr><td>T41737F88A</td><td>TISOTUMAB VEDOTIN</td></tr><tr><td>5P637IXG16</td><td>TOMUZOTUXIMAB</td></tr><tr><td>8JXN261VVA</td><td>TORIPALIMAB</td></tr><tr><td>230902QLLC</td><td>URELUMAB</td></tr><tr><td>5XO3JF0FEK</td><td>VIBOSTOLIMAB</td></tr><tr><td>IZY9ZSI6FI</td><td>ZILOVERTAMAB VEDOTIN</td></tr><tr><td>94N635564T</td><td>HUMAN PARVOVIRUS B19</td></tr><tr><td>1Q8D39N37L</td><td>AMONAFIDE</td></tr><tr><td>XT3Z54Z28A</td><td>CAMPTOTHECIN</td></tr><tr><td>04079A1RDZ</td><td>CYTARABINE</td></tr><tr><td>5L84T2Z6NP</td><td>DAUNORUBICIN CITRATE</td></tr><tr><td>V1JK16Y2JP</td><td>DOXIFLURIDINE</td></tr><tr><td>2KT4YN1DP7</td><td>GUADECITABINE</td></tr><tr><td>P88XT4IS4D</td><td>PACLITAXEL</td></tr><tr><td>Z8R4A37V9Q</td><td>ARFOLITIXORIN</td></tr><tr><td>BNO1JG5MZC</td><td>BEMPEGALDESLEUKIN</td></tr><tr><td>4MXU9LJS4Q</td><td>LEUCOVORIN SODIUM</td></tr></table></li></ul></div><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-onko-systemische-therapie-substanzen-unii</b></p><a name="de-mii-vs-onko-systemische-therapie-substanzen-unii"> </a><a name="de-hcmii-vs-onko-systemische-therapie-substanzen-unii"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profiles: <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-shareablevalueset.html">Shareable ValueSet</a>, <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-shareablevalueset.html">CRMI Shareable ValueSet</a>, <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-publishablevalueset.html">CRMI Publishable ValueSet</a>, <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-computablevalueset.html">CRMI Computable ValueSet</a></p></div><ul><li>Include these codes as defined in <a href="http://fdasis.nlm.nih.gov"><code>http://fdasis.nlm.nih.gov</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>T66ES73M18</td><td>ALISERTIB</td></tr><tr><td>F333OQQ9UV</td><td>ASUNERCEPT</td></tr><tr><td>31M3WLJ3KG</td><td>BELVARAFENIB</td></tr><tr><td>0ICW2LX8AS</td><td>BEMCENTINIB</td></tr><tr><td>0ZM2Z182GD</td><td>BUPARLISIB</td></tr><tr><td>85RE35306Z</td><td>CERALASERTIB</td></tr><tr><td>4EDF46E4GI</td><td>CILENGITIDE</td></tr><tr><td>923X28214S</td><td>CRENIGACESTAT</td></tr><tr><td>LQF7I567TQ</td><td>CRENOLANIB</td></tr><tr><td>N9B0H171MJ</td><td>DERAZANTINIB</td></tr><tr><td>SJ82PK3HWA</td><td>EFTILAGIMOD ALFA</td></tr><tr><td>SMA5ZS5B22</td><td>ENSARTINIB</td></tr><tr><td>6I3O3W6O3B</td><td>ENTOSPLETINIB</td></tr><tr><td>UC96G28EQF</td><td>ENZASTAURIN</td></tr><tr><td>2E8412Y946</td><td>GANETESPIB</td></tr><tr><td>QSQ883V35U</td><td>IDASANUTLIN</td></tr><tr><td>F60NE4XB53</td><td>IMETELSTAT</td></tr><tr><td>L4C1UY2NYH</td><td>INAVOLISIB</td></tr><tr><td>PP449XA4BH</td><td>LUCITANIB</td></tr><tr><td>703P9YDP7F</td><td>MARIZOMIB</td></tr><tr><td>5OGS5K699E</td><td>MERESTINIB</td></tr><tr><td>6O01GMS00P</td><td>MOMELOTINIB</td></tr><tr><td>15JL80DG6H</td><td>NAPORAFENIB</td></tr><tr><td>KE7K32EME8</td><td>NAZARTINIB</td></tr><tr><td>JTZ51LIXN4</td><td>NEMTABRUTINIB</td></tr><tr><td>MTM792B442</td><td>OLAPTESED PEGOL</td></tr><tr><td>S3AZD8D215</td><td>PEVONEDISTAT</td></tr><tr><td>JNA39I7ZVB</td><td>PIRTOBRUTINIB</td></tr><tr><td>08O3FQ4UNP</td><td>REPOTRECTINIB</td></tr><tr><td>15KFN616FK</td><td>RINETERKIB</td></tr><tr><td>67DOW7F9GL</td><td>RIGOSERTIB</td></tr><tr><td>0282IF4JC8</td><td>SIREMADLIN</td></tr><tr><td>G287IC9MH3</td><td>TILSOTOLIMOD</td></tr><tr><td>MAT637500A</td><td>TIPIFARNIB</td></tr><tr><td>LXG44NDL2T</td><td>TIRABRUTINIB</td></tr><tr><td>PJ4H73IL17</td><td>TIVANTINIB</td></tr><tr><td>ZN90E4027M</td><td>TOVORAFENIB</td></tr><tr><td>X8Y5U6NC7E</td><td>TREBANANIB</td></tr><tr><td>U36PGF65JH</td><td>UMIROLIMUS</td></tr><tr><td>6EM57086EA</td><td>VOLASERTIB</td></tr><tr><td>H4GXR80IZE</td><td>ZOTAROLIMUS</td></tr><tr><td>7OSV6M6T4D</td><td>ALNUCTAMAB</td></tr><tr><td>6HP0354G04</td><td>AMATUXIMAB</td></tr><tr><td>PRC974M49B</td><td>BALIXAFORTIDE</td></tr><tr><td>Q16CT95N25</td><td>BAVITUXIMAB</td></tr><tr><td>RJW23BQ0KW</td><td>BEMARITUZUMAB</td></tr><tr><td>LYK98WP91F</td><td>CETRELIMAB</td></tr><tr><td>RR5U4UFJ8L</td><td>CUSATUZUMAB</td></tr><tr><td>2OQ3OPV2F8</td><td>DARLEUKIN</td></tr><tr><td>GD2OWY1DTK</td><td>DATOPOTAMAB DERUXTECAN</td></tr><tr><td>W984C353CG</td><td>DEPATUXIZUMAB</td></tr><tr><td>RB3U3A1S27</td><td>DISITAMAB VEDOTIN</td></tr><tr><td>L0HR9A577V</td><td>ELRANATAMAB</td></tr><tr><td>DGK38A42AE</td><td>ELSILIMOMAB</td></tr><tr><td>VE267FC2UB</td><td>FIGITUMUMAB</td></tr><tr><td>S9OX9692ZB</td><td>GALIXIMAB</td></tr><tr><td>85V55ZLV2Z</td><td>GATIPOTUZUMAB</td></tr><tr><td>4B57CWT710</td><td>GEBASAXTUREV</td></tr><tr><td>28P3DU6DB3</td><td>GIREDESTRANT</td></tr><tr><td>539B57DFJF</td><td>GIRENTUXIMAB</td></tr><tr><td>06P3KLK2J8</td><td>GLOFITAMAB</td></tr><tr><td>8V66F27X44</td><td>IBERDOMIDE</td></tr><tr><td>XGL4M23834</td><td>INDATUXIMAB RAVTANSINE</td></tr><tr><td>GO90DFK14U</td><td>INOLIMOMAB</td></tr><tr><td>0H2XLR2IKW</td><td>LEMZOPARLIMAB</td></tr><tr><td>NYM5HO7I39</td><td>LONCASTUXIMAB</td></tr><tr><td>7K5O7P6QIU</td><td>LONCASTUXIMAB TESIRINE</td></tr><tr><td>90YIEHRFJ9</td><td>MAGROLIMAB</td></tr><tr><td>98DE7VN88D</td><td>MIRVETUXIMAB SORAVTANSINE</td></tr><tr><td>DA9G065962</td><td>MOTIXAFORTIDE</td></tr><tr><td>ND296JF21I</td><td>NIDANILIMAB</td></tr><tr><td>W2OR26S7UE</td><td>NISEVOKITUG</td></tr><tr><td>6HXC0O6JMV</td><td>ONFEKAFUSP ALFA</td></tr><tr><td>S9J80L3D1U</td><td>PELAREOREP</td></tr><tr><td>IBS1BZ4E4I</td><td>PENPULIMAB</td></tr><tr><td>4XG66BMN0D</td><td>PLOZALIZUMAB</td></tr><tr><td>AF75XOF6W3</td><td>RELATLIMAB</td></tr><tr><td>51WEW898IJ</td><td>RILOTUMUMAB</td></tr><tr><td>P256HB60FF</td><td>ROVALPITUZUMAB TESIRINE</td></tr><tr><td>1N3L70MDFX</td><td>SERIBANTUMAB</td></tr><tr><td>8FU7FQ8UPK</td><td>SINTILIMAB</td></tr><tr><td>QOG25L6Z8Z</td><td>SPARTALIZUMAB</td></tr><tr><td>X8JR0I7JE1</td><td>TALACOTUZUMAB</td></tr><tr><td>6XG22YQM2Z</td><td>TIRAGOLUMAB</td></tr><tr><td>T41737F88A</td><td>TISOTUMAB VEDOTIN</td></tr><tr><td>5P637IXG16</td><td>TOMUZOTUXIMAB</td></tr><tr><td>8JXN261VVA</td><td>TORIPALIMAB</td></tr><tr><td>230902QLLC</td><td>URELUMAB</td></tr><tr><td>5XO3JF0FEK</td><td>VIBOSTOLIMAB</td></tr><tr><td>IZY9ZSI6FI</td><td>ZILOVERTAMAB VEDOTIN</td></tr><tr><td>94N635564T</td><td>HUMAN PARVOVIRUS B19</td></tr><tr><td>1Q8D39N37L</td><td>AMONAFIDE</td></tr><tr><td>XT3Z54Z28A</td><td>CAMPTOTHECIN</td></tr><tr><td>04079A1RDZ</td><td>CYTARABINE</td></tr><tr><td>5L84T2Z6NP</td><td>DAUNORUBICIN CITRATE</td></tr><tr><td>V1JK16Y2JP</td><td>DOXIFLURIDINE</td></tr><tr><td>2KT4YN1DP7</td><td>GUADECITABINE</td></tr><tr><td>P88XT4IS4D</td><td>PACLITAXEL</td></tr><tr><td>Z8R4A37V9Q</td><td>ARFOLITIXORIN</td></tr><tr><td>BNO1JG5MZC</td><td>BEMPEGALDESLEUKIN</td></tr><tr><td>4MXU9LJS4Q</td><td>LEUCOVORIN SODIUM</td></tr></table></li></ul></div></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability">
+    <valueCode value="shareable"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability">
+    <valueCode value="publishable"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability">
+    <valueCode value="computable"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes"/>
+        <code value="package"/>
+        <display value="Package"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/resource-approvalDate">
+    <valueDate value="2026-01-03"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-topic">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"/>
+        <code value="C3262"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-author">
+    <valueContactDetail>
+      <telecom>
+        <system value="email"/>
+        <value value="thomas.debertshaeuser@charite.de"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-editor">
+    <valueContactDetail>
+      <name value="Taskforce Core Data Set"/>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-reviewer">
+    <valueContactDetail>
+      <name value="Interoperability Working Group"/>
+      <telecom>
+        <system value="url"/>
+        <value value="https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-reviewer">
+    <valueContactDetail>
+      <name value="National Steering Committee"/>
+      <telecom>
+        <system value="url"/>
+        <value value="https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-endorser">
+    <valueContactDetail>
+      <name value="Interoperability Working Group"/>
+      <telecom>
+        <system value="url"/>
+        <value value="https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-endorser">
+    <valueContactDetail>
+      <name value="National Steering Committee"/>
+      <telecom>
+        <system value="url"/>
+        <value value="https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm">
+    <valueCoding>
+      <system value="http://hl7.org/fhir/version-algorithm"/>
+      <code value="semver"/>
+      <display value="SemVer"/>
+    </valueCoding>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+    <valuePeriod>
+      <start value="2026"/>
+    </valuePeriod>
+  </extension>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-unii"/>
+  <version value="2027.0.0-ballot.rc1"/>
+  <name value="MII_VS_Onko_Systemische_Therapie_Substanzen_UNII"/>
+  <title value="MII VS Onkologie Systemische Therapie Substanzen (UNII)"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-09-03T07:02:13+00:00"/>
+  <publisher value="Medizininformatik Initiative"/>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de/"/>
+    </telecom>
+  </contact>
+  <description value="UNII-Codes für Substanzen der systemischen Therapie ohne ATC-Code. Ergänzung zum ATC-basierten Haupt-ValueSet für neuere und experimentelle onkologische Wirkstoffe."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://fdasis.nlm.nih.gov"/>
+      <concept>
+        <code value="T66ES73M18"/>
+        <display value="ALISERTIB"/>
+      </concept>
+      <concept>
+        <code value="F333OQQ9UV"/>
+        <display value="ASUNERCEPT"/>
+      </concept>
+      <concept>
+        <code value="31M3WLJ3KG"/>
+        <display value="BELVARAFENIB"/>
+      </concept>
+      <concept>
+        <code value="0ICW2LX8AS"/>
+        <display value="BEMCENTINIB"/>
+      </concept>
+      <concept>
+        <code value="0ZM2Z182GD"/>
+        <display value="BUPARLISIB"/>
+      </concept>
+      <concept>
+        <code value="85RE35306Z"/>
+        <display value="CERALASERTIB"/>
+      </concept>
+      <concept>
+        <code value="4EDF46E4GI"/>
+        <display value="CILENGITIDE"/>
+      </concept>
+      <concept>
+        <code value="923X28214S"/>
+        <display value="CRENIGACESTAT"/>
+      </concept>
+      <concept>
+        <code value="LQF7I567TQ"/>
+        <display value="CRENOLANIB"/>
+      </concept>
+      <concept>
+        <code value="N9B0H171MJ"/>
+        <display value="DERAZANTINIB"/>
+      </concept>
+      <concept>
+        <code value="SJ82PK3HWA"/>
+        <display value="EFTILAGIMOD ALFA"/>
+      </concept>
+      <concept>
+        <code value="SMA5ZS5B22"/>
+        <display value="ENSARTINIB"/>
+      </concept>
+      <concept>
+        <code value="6I3O3W6O3B"/>
+        <display value="ENTOSPLETINIB"/>
+      </concept>
+      <concept>
+        <code value="UC96G28EQF"/>
+        <display value="ENZASTAURIN"/>
+      </concept>
+      <concept>
+        <code value="2E8412Y946"/>
+        <display value="GANETESPIB"/>
+      </concept>
+      <concept>
+        <code value="QSQ883V35U"/>
+        <display value="IDASANUTLIN"/>
+      </concept>
+      <concept>
+        <code value="F60NE4XB53"/>
+        <display value="IMETELSTAT"/>
+      </concept>
+      <concept>
+        <code value="L4C1UY2NYH"/>
+        <display value="INAVOLISIB"/>
+      </concept>
+      <concept>
+        <code value="PP449XA4BH"/>
+        <display value="LUCITANIB"/>
+      </concept>
+      <concept>
+        <code value="703P9YDP7F"/>
+        <display value="MARIZOMIB"/>
+      </concept>
+      <concept>
+        <code value="5OGS5K699E"/>
+        <display value="MERESTINIB"/>
+      </concept>
+      <concept>
+        <code value="6O01GMS00P"/>
+        <display value="MOMELOTINIB"/>
+      </concept>
+      <concept>
+        <code value="15JL80DG6H"/>
+        <display value="NAPORAFENIB"/>
+      </concept>
+      <concept>
+        <code value="KE7K32EME8"/>
+        <display value="NAZARTINIB"/>
+      </concept>
+      <concept>
+        <code value="JTZ51LIXN4"/>
+        <display value="NEMTABRUTINIB"/>
+      </concept>
+      <concept>
+        <code value="MTM792B442"/>
+        <display value="OLAPTESED PEGOL"/>
+      </concept>
+      <concept>
+        <code value="S3AZD8D215"/>
+        <display value="PEVONEDISTAT"/>
+      </concept>
+      <concept>
+        <code value="JNA39I7ZVB"/>
+        <display value="PIRTOBRUTINIB"/>
+      </concept>
+      <concept>
+        <code value="08O3FQ4UNP"/>
+        <display value="REPOTRECTINIB"/>
+      </concept>
+      <concept>
+        <code value="15KFN616FK"/>
+        <display value="RINETERKIB"/>
+      </concept>
+      <concept>
+        <code value="67DOW7F9GL"/>
+        <display value="RIGOSERTIB"/>
+      </concept>
+      <concept>
+        <code value="0282IF4JC8"/>
+        <display value="SIREMADLIN"/>
+      </concept>
+      <concept>
+        <code value="G287IC9MH3"/>
+        <display value="TILSOTOLIMOD"/>
+      </concept>
+      <concept>
+        <code value="MAT637500A"/>
+        <display value="TIPIFARNIB"/>
+      </concept>
+      <concept>
+        <code value="LXG44NDL2T"/>
+        <display value="TIRABRUTINIB"/>
+      </concept>
+      <concept>
+        <code value="PJ4H73IL17"/>
+        <display value="TIVANTINIB"/>
+      </concept>
+      <concept>
+        <code value="ZN90E4027M"/>
+        <display value="TOVORAFENIB"/>
+      </concept>
+      <concept>
+        <code value="X8Y5U6NC7E"/>
+        <display value="TREBANANIB"/>
+      </concept>
+      <concept>
+        <code value="U36PGF65JH"/>
+        <display value="UMIROLIMUS"/>
+      </concept>
+      <concept>
+        <code value="6EM57086EA"/>
+        <display value="VOLASERTIB"/>
+      </concept>
+      <concept>
+        <code value="H4GXR80IZE"/>
+        <display value="ZOTAROLIMUS"/>
+      </concept>
+      <concept>
+        <code value="7OSV6M6T4D"/>
+        <display value="ALNUCTAMAB"/>
+      </concept>
+      <concept>
+        <code value="6HP0354G04"/>
+        <display value="AMATUXIMAB"/>
+      </concept>
+      <concept>
+        <code value="PRC974M49B"/>
+        <display value="BALIXAFORTIDE"/>
+      </concept>
+      <concept>
+        <code value="Q16CT95N25"/>
+        <display value="BAVITUXIMAB"/>
+      </concept>
+      <concept>
+        <code value="RJW23BQ0KW"/>
+        <display value="BEMARITUZUMAB"/>
+      </concept>
+      <concept>
+        <code value="LYK98WP91F"/>
+        <display value="CETRELIMAB"/>
+      </concept>
+      <concept>
+        <code value="RR5U4UFJ8L"/>
+        <display value="CUSATUZUMAB"/>
+      </concept>
+      <concept>
+        <code value="2OQ3OPV2F8"/>
+        <display value="DARLEUKIN"/>
+      </concept>
+      <concept>
+        <code value="GD2OWY1DTK"/>
+        <display value="DATOPOTAMAB DERUXTECAN"/>
+      </concept>
+      <concept>
+        <code value="W984C353CG"/>
+        <display value="DEPATUXIZUMAB"/>
+      </concept>
+      <concept>
+        <code value="RB3U3A1S27"/>
+        <display value="DISITAMAB VEDOTIN"/>
+      </concept>
+      <concept>
+        <code value="L0HR9A577V"/>
+        <display value="ELRANATAMAB"/>
+      </concept>
+      <concept>
+        <code value="DGK38A42AE"/>
+        <display value="ELSILIMOMAB"/>
+      </concept>
+      <concept>
+        <code value="VE267FC2UB"/>
+        <display value="FIGITUMUMAB"/>
+      </concept>
+      <concept>
+        <code value="S9OX9692ZB"/>
+        <display value="GALIXIMAB"/>
+      </concept>
+      <concept>
+        <code value="85V55ZLV2Z"/>
+        <display value="GATIPOTUZUMAB"/>
+      </concept>
+      <concept>
+        <code value="4B57CWT710"/>
+        <display value="GEBASAXTUREV"/>
+      </concept>
+      <concept>
+        <code value="28P3DU6DB3"/>
+        <display value="GIREDESTRANT"/>
+      </concept>
+      <concept>
+        <code value="539B57DFJF"/>
+        <display value="GIRENTUXIMAB"/>
+      </concept>
+      <concept>
+        <code value="06P3KLK2J8"/>
+        <display value="GLOFITAMAB"/>
+      </concept>
+      <concept>
+        <code value="8V66F27X44"/>
+        <display value="IBERDOMIDE"/>
+      </concept>
+      <concept>
+        <code value="XGL4M23834"/>
+        <display value="INDATUXIMAB RAVTANSINE"/>
+      </concept>
+      <concept>
+        <code value="GO90DFK14U"/>
+        <display value="INOLIMOMAB"/>
+      </concept>
+      <concept>
+        <code value="0H2XLR2IKW"/>
+        <display value="LEMZOPARLIMAB"/>
+      </concept>
+      <concept>
+        <code value="NYM5HO7I39"/>
+        <display value="LONCASTUXIMAB"/>
+      </concept>
+      <concept>
+        <code value="7K5O7P6QIU"/>
+        <display value="LONCASTUXIMAB TESIRINE"/>
+      </concept>
+      <concept>
+        <code value="90YIEHRFJ9"/>
+        <display value="MAGROLIMAB"/>
+      </concept>
+      <concept>
+        <code value="98DE7VN88D"/>
+        <display value="MIRVETUXIMAB SORAVTANSINE"/>
+      </concept>
+      <concept>
+        <code value="DA9G065962"/>
+        <display value="MOTIXAFORTIDE"/>
+      </concept>
+      <concept>
+        <code value="ND296JF21I"/>
+        <display value="NIDANILIMAB"/>
+      </concept>
+      <concept>
+        <code value="W2OR26S7UE"/>
+        <display value="NISEVOKITUG"/>
+      </concept>
+      <concept>
+        <code value="6HXC0O6JMV"/>
+        <display value="ONFEKAFUSP ALFA"/>
+      </concept>
+      <concept>
+        <code value="S9J80L3D1U"/>
+        <display value="PELAREOREP"/>
+      </concept>
+      <concept>
+        <code value="IBS1BZ4E4I"/>
+        <display value="PENPULIMAB"/>
+      </concept>
+      <concept>
+        <code value="4XG66BMN0D"/>
+        <display value="PLOZALIZUMAB"/>
+      </concept>
+      <concept>
+        <code value="AF75XOF6W3"/>
+        <display value="RELATLIMAB"/>
+      </concept>
+      <concept>
+        <code value="51WEW898IJ"/>
+        <display value="RILOTUMUMAB"/>
+      </concept>
+      <concept>
+        <code value="P256HB60FF"/>
+        <display value="ROVALPITUZUMAB TESIRINE"/>
+      </concept>
+      <concept>
+        <code value="1N3L70MDFX"/>
+        <display value="SERIBANTUMAB"/>
+      </concept>
+      <concept>
+        <code value="8FU7FQ8UPK"/>
+        <display value="SINTILIMAB"/>
+      </concept>
+      <concept>
+        <code value="QOG25L6Z8Z"/>
+        <display value="SPARTALIZUMAB"/>
+      </concept>
+      <concept>
+        <code value="X8JR0I7JE1"/>
+        <display value="TALACOTUZUMAB"/>
+      </concept>
+      <concept>
+        <code value="6XG22YQM2Z"/>
+        <display value="TIRAGOLUMAB"/>
+      </concept>
+      <concept>
+        <code value="T41737F88A"/>
+        <display value="TISOTUMAB VEDOTIN"/>
+      </concept>
+      <concept>
+        <code value="5P637IXG16"/>
+        <display value="TOMUZOTUXIMAB"/>
+      </concept>
+      <concept>
+        <code value="8JXN261VVA"/>
+        <display value="TORIPALIMAB"/>
+      </concept>
+      <concept>
+        <code value="230902QLLC"/>
+        <display value="URELUMAB"/>
+      </concept>
+      <concept>
+        <code value="5XO3JF0FEK"/>
+        <display value="VIBOSTOLIMAB"/>
+      </concept>
+      <concept>
+        <code value="IZY9ZSI6FI"/>
+        <display value="ZILOVERTAMAB VEDOTIN"/>
+      </concept>
+      <concept>
+        <code value="94N635564T"/>
+        <display value="HUMAN PARVOVIRUS B19"/>
+      </concept>
+      <concept>
+        <code value="1Q8D39N37L"/>
+        <display value="AMONAFIDE"/>
+      </concept>
+      <concept>
+        <code value="XT3Z54Z28A"/>
+        <display value="CAMPTOTHECIN"/>
+      </concept>
+      <concept>
+        <code value="04079A1RDZ"/>
+        <display value="CYTARABINE"/>
+      </concept>
+      <concept>
+        <code value="5L84T2Z6NP"/>
+        <display value="DAUNORUBICIN CITRATE"/>
+      </concept>
+      <concept>
+        <code value="V1JK16Y2JP"/>
+        <display value="DOXIFLURIDINE"/>
+      </concept>
+      <concept>
+        <code value="2KT4YN1DP7"/>
+        <display value="GUADECITABINE"/>
+      </concept>
+      <concept>
+        <code value="P88XT4IS4D"/>
+        <display value="PACLITAXEL"/>
+      </concept>
+      <concept>
+        <code value="Z8R4A37V9Q"/>
+        <display value="ARFOLITIXORIN"/>
+      </concept>
+      <concept>
+        <code value="BNO1JG5MZC"/>
+        <display value="BEMPEGALDESLEUKIN"/>
+      </concept>
+      <concept>
+        <code value="4MXU9LJS4Q"/>
+        <display value="LEUCOVORIN SODIUM"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

@@ -1,0 +1,488 @@
+# MII PR Onkologie Tod - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **MII PR Onkologie Tod**
+
+## Resource Profile: MII PR Onkologie Tod 
+
+| | |
+| :--- | :--- |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tod | *Version*:2027.0.0-ballot.rc1 |
+| Active as of 2026-09-03 | *Computable Name*:MII_PR_Onko_Tod |
+
+ 
+Tumorbedingter Tod 
+
+This profile describes whether and when a patient died of tumor-related causes. It is part of the oBDS cancer registry dataset.
+
+The date of death can also be represented in the MII Kerndatensatz via the Patient resource, but has additionally been added here as an Observation for reasons of data structure and cohesion.
+
+Since version MII-Patient(2024), a cause of death is also available directly in the Patient resource. In contrast to the oBDS cause of death, which is recorded using ICD-10-GM, the MII-Patient cause of death refers to ICD-10-WHO.
+
+It includes:
+
+* a reference to Patient
+*  
+
+| | |
+| :--- | :--- |
+| the Observation code "184305005 | Cause of death (observable entity)" (SNOMED-CT) |
+
+ 
+* the exact date of death
+* a coding of the cause of death according to ICD-10 GM
+* an interpretation of the relationship between the tumor disease and the cause of death
+
+In the oBDS, the death report is transmitted as a standalone entity. Since there should only be one death report per patient, the FHIR profiling therefore does not include a direct link to the primary diagnosis or the individual follow-up stagings, but exclusively to the patient.
+
+-------
+
+Mapping of dataset to FHIR
+
+> The mapping of the dataset fields is documented in the logical model: [MII LM Onkologie](StructureDefinition-mii-lm-onko.md).
+
+-------
+
+Mapping [Einheitlicher onkologischer Basisdatensatz (oBDS)](https://basisdatensatz.de/basisdatensatz) to FHIR
+
+> The oBDS mappings are recorded in the artefact view of this profile: [MII PR Onkologie Tod](StructureDefinition-mii-pr-onko-tod.md).
+
+**Examples**
+
+[mii-exa-onko-tod-j](Observation-mii-exa-onko-tod-j.md)
+
+[mii-exa-onko-tod-n](Observation-mii-exa-onko-tod-n.md)
+
+[mii-exa-onko-tod-u](Observation-mii-exa-onko-tod-u.md)
+
+**Usages:**
+
+* Refer to this Profile: [MII PR Onkologie Verlauf](StructureDefinition-mii-pr-onko-verlauf.md)
+* Examples for this Profile: [Observation/mii-exa-onko-tod-j](Observation-mii-exa-onko-tod-j.md), [Observation/mii-exa-onko-tod-n](Observation-mii-exa-onko-tod-n.md) and [Observation/mii-exa-onko-tod-u](Observation-mii-exa-onko-tod-u.md)
+* CapabilityStatements using this Profile: [MII CPS Onkology CapabilityStatement](CapabilityStatement-mii-cps-onko-capabilitystatement.md)
+
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.medizininformatikinitiative.kerndatensatz.onkologie|current/StructureDefinition/StructureDefinition-mii-pr-onko-tod.json)
+
+### Formal Views of Profile Content
+
+ [Description of Profiles, Differentials, Snapshots, and their representations](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions). 
+
+ 
+
+Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-tod.csv), [Excel](../StructureDefinition-mii-pr-onko-tod.xlsx), [Schematron](../StructureDefinition-mii-pr-onko-tod.sch) 
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "StructureDefinition",
+  "id" : "mii-pr-onko-tod",
+  "meta" : {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-license",
+      "valueCode" : "CC-BY-4.0"
+    },
+    {
+      "extension" : [{
+        "url" : "packageId",
+        "valueId" : "de.medizininformatikinitiative.kerndatensatz.onkologie"
+      },
+      {
+        "url" : "version",
+        "valueString" : "2026.0.3"
+      },
+      {
+        "url" : "uri",
+        "valueUri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/package-source"
+    }],
+    "profile" : ["http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablestructuredefinition",
+    "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablestructuredefinition"]
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+    "valueCode" : "shareable"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+    "valueCode" : "publishable"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-usage",
+    "valueMarkdown" : "Use this profile as the technical FHIR representation of the corresponding Medical Informatics Initiative logical model. The profile constrains a base FHIR resource for the MII module context by specifying how elements are used, which elements are required or not used, which extensions and terminology bindings apply, and how the resource maps to the module-specific content model. Implementers should produce and consume resource instances that conform to this profile when exchanging data for the corresponding MII module."
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes",
+        "code" : "package",
+        "display" : "Package"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
+    "valueDate" : "2026-01-03"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-topic",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+        "code" : "C3262"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-author",
+    "valueContactDetail" : {
+      "telecom" : [{
+        "system" : "email",
+        "value" : "thomas.debertshaeuser@charite.de"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-editor",
+    "valueContactDetail" : {
+      "name" : "Taskforce Core Data Set"
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
+    "valueContactDetail" : {
+      "name" : "Interoperability Working Group",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
+    "valueContactDetail" : {
+      "name" : "National Steering Committee",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
+    "valueContactDetail" : {
+      "name" : "Interoperability Working Group",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
+    "valueContactDetail" : {
+      "name" : "National Steering Committee",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
+    "valueCoding" : {
+      "system" : "http://hl7.org/fhir/version-algorithm",
+      "code" : "semver",
+      "display" : "SemVer"
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+    "valuePeriod" : {
+      "start" : "2026"
+    }
+  }],
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tod",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_PR_Onko_Tod",
+  "title" : "MII PR Onkologie Tod",
+  "status" : "active",
+  "date" : "2026-09-03T07:02:13+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "Tumorbedingter Tod",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "fhirVersion" : "4.0.1",
+  "mapping" : [{
+    "identity" : "oBDS",
+    "name" : "Mapping FHIR zu oBDS"
+  },
+  {
+    "identity" : "workflow",
+    "uri" : "http://hl7.org/fhir/workflow",
+    "name" : "Workflow Pattern"
+  },
+  {
+    "identity" : "sct-concept",
+    "uri" : "http://snomed.info/conceptdomain",
+    "name" : "SNOMED CT Concept Domain Binding"
+  },
+  {
+    "identity" : "v2",
+    "uri" : "http://hl7.org/v2",
+    "name" : "HL7 v2 Mapping"
+  },
+  {
+    "identity" : "w5",
+    "uri" : "http://hl7.org/fhir/fivews",
+    "name" : "FiveWs Pattern Mapping"
+  },
+  {
+    "identity" : "sct-attr",
+    "uri" : "http://snomed.org/attributebinding",
+    "name" : "SNOMED CT Attribute Binding"
+  }],
+  "kind" : "resource",
+  "abstract" : false,
+  "type" : "Observation",
+  "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation" : "constraint",
+  "differential" : {
+    "element" : [{
+      "id" : "Observation",
+      "path" : "Observation"
+    },
+    {
+      "id" : "Observation.meta.profile",
+      "path" : "Observation.meta.profile",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.code",
+      "path" : "Observation.code",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.code.coding",
+      "path" : "Observation.code.coding",
+      "patternCoding" : {
+        "system" : "http://snomed.info/sct",
+        "code" : "184305005"
+      }
+    },
+    {
+      "id" : "Observation.subject",
+      "path" : "Observation.subject",
+      "min" : 1,
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Patient"]
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.focus",
+      "path" : "Observation.focus",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"]
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.encounter",
+      "path" : "Observation.encounter",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.effective[x]",
+      "path" : "Observation.effective[x]",
+      "short" : "Sterbedatum",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "de-DE"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Sterbedatum"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "Sterbedatum gemäß 20.1 oBDS 2021",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "de-DE"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Sterbedatum gemäß 20.1 oBDS 2021"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "type" : [{
+        "code" : "dateTime"
+      }],
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "20.1",
+        "comment" : "Sterbedatum"
+      }]
+    },
+    {
+      "id" : "Observation.value[x]",
+      "path" : "Observation.value[x]",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "mustSupport" : true,
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-icd10gm"
+      }
+    },
+    {
+      "id" : "Observation.value[x].coding",
+      "path" : "Observation.value[x].coding",
+      "short" : "Todesursache ICD-10",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "de-DE"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Todesursache ICD-10"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "Todesursache ICD-10 gemäß 20.3 oBDS 2021",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "de-DE"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Todesursache ICD-10 gemäß 20.3 oBDS 2021"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      }
+    },
+    {
+      "id" : "Observation.value[x].coding.system",
+      "path" : "Observation.value[x].coding.system",
+      "min" : 1,
+      "patternUri" : "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.value[x].coding.version",
+      "path" : "Observation.value[x].coding.version",
+      "min" : 1,
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "20.4",
+        "comment" : "Todesursache ICD-Version "
+      }]
+    },
+    {
+      "id" : "Observation.value[x].coding.code",
+      "path" : "Observation.value[x].coding.code",
+      "min" : 1,
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "20.3",
+        "comment" : "Todesursache ICD "
+      }]
+    },
+    {
+      "id" : "Observation.interpretation",
+      "path" : "Observation.interpretation",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.interpretation.coding",
+      "path" : "Observation.interpretation.coding",
+      "short" : "Sterbedatum",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "de-DE"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Tod tumorbedingt"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "Sterbedatum gemäß 20.1 oBDS 2021",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "de-DE"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Tod tumorbedingt gemäß 20.2 oBDS 2021"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tod"
+      }
+    },
+    {
+      "id" : "Observation.interpretation.coding.system",
+      "path" : "Observation.interpretation.coding.system",
+      "patternUri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tod",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.interpretation.coding.code",
+      "path" : "Observation.interpretation.coding.code",
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "oBDS",
+        "map" : "20.2",
+        "comment" : "Tod tumorbedingt"
+      }]
+    }]
+  }
+}
+
+```

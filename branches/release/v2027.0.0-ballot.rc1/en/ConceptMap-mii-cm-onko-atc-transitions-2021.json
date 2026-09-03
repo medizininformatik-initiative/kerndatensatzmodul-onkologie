@@ -1,0 +1,735 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "mii-cm-onko-atc-transitions-2021",
+  "meta" : {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-license",
+      "valueCode" : "CC-BY-4.0"
+    },
+    {
+      "extension" : [{
+        "url" : "packageId",
+        "valueId" : "de.medizininformatikinitiative.kerndatensatz.onkologie"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/package-source"
+    },
+    {
+      "url" : "version",
+      "valueString" : "2026.0.3"
+    }],
+    "profile" : ["http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableconceptmap",
+    "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishableconceptmap"]
+  },
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap mii-cm-onko-atc-transitions-2021</b></p><a name=\"mii-cm-onko-atc-transitions-2021\"> </a><a name=\"hcmii-cm-onko-atc-transitions-2021\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-shareableconceptmap.html\">CRMI Shareable ConceptMap</a>, <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-publishableconceptmap.html\">CRMI Publishable ConceptMap</a></p></div><p>Mapping from <a href=\"ValueSet-mii-vs-onko-systemische-therapie-substanzen-2020.html\">MII VS Onkologie Systemische Therapie Substanzen ATC 2020</a> to <a href=\"ValueSet-mii-vs-onko-systemische-therapie-substanzen-2021.html\">MII VS Onkologie Systemische Therapie Substanzen ATC 2021</a></p><br/><p>Mapping from <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.medikation@2026.0.1&amp;canonical=http://fhir.de/CodeSystem/bfarm/atc\">ATC</a> to <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.medikation@2026.0.1&amp;canonical=http://fhir.de/CodeSystem/bfarm/atc\">ATC</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>L01XE01 (Imatinib)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EA01 (Imatinib)</td><td>Reklassifizierung zu BCR-ABL Tyrosinkinase-Inhibitoren</td></tr><tr><td>L01XE06 (Dasatinib)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EA02 (Dasatinib)</td><td/></tr><tr><td>L01XE08 (Nilotinib)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EA03 (Nilotinib)</td><td/></tr><tr><td>L01XE14 (Bosutinib)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EA04 (Bosutinib)</td><td/></tr><tr><td>L01XE24 (Ponatinib)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EA05 (Ponatinib)</td><td/></tr><tr><td>L01XE02 (Gefitinib)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EB01 (Gefitinib)</td><td>Reklassifizierung zu EGFR Tyrosinkinase-Inhibitoren</td></tr><tr><td>L01XE03 (Erlotinib)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EB02 (Erlotinib)</td><td/></tr><tr><td>L01XE13 (Afatinib)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EB03 (Afatinib)</td><td/></tr><tr><td>L01XE35 (Osimertinib)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EB04 (Osimertinib)</td><td/></tr><tr><td>L01XE15 (Vemurafenib)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EC01 (Vemurafenib)</td><td>Reklassifizierung zu BRAF-Inhibitoren</td></tr><tr><td>L01XE23 (Dabrafenib)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EC02 (Dabrafenib)</td><td/></tr><tr><td>L01XE46 (Encorafenib)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EC03 (Encorafenib)</td><td/></tr><tr><td>L01XE16 (Crizotinib)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01ED01 (Crizotinib)</td><td>Reklassifizierung zu ALK-Inhibitoren</td></tr><tr><td>L01XE28 (Ceritinib)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01ED02 (Ceritinib)</td><td/></tr><tr><td>L01XE36 (Alectinib)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01ED03 (Alectinib)</td><td/></tr><tr><td>L01XE43 (Brigatinib)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01ED04 (Brigatinib)</td><td/></tr><tr><td>L01XE44 (Lorlatinib)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01ED05 (Lorlatinib)</td><td/></tr><tr><td>L01XE25 (Trametinib)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EE01 (Trametinib)</td><td>Reklassifizierung zu MEK-Inhibitoren</td></tr><tr><td>L01XE38 (Cobimetinib)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EE02 (Cobimetinib)</td><td/></tr><tr><td>L01XE41 (Binimetinib)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EE03 (Binimetinib)</td><td/></tr><tr><td>L01XE33 (Palbociclib)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EF01 (Palbociclib)</td><td>Reklassifizierung zu CDK4/6-Inhibitoren</td></tr><tr><td>L01XE42 (Ribociclib)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EF02 (Ribociclib)</td><td/></tr><tr><td>L01XE50 (Abemaciclib)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EF03 (Abemaciclib)</td><td/></tr><tr><td>L01XE09 (Temsirolimus)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EG01 (Temsirolimus)</td><td>Reklassifizierung zu mTOR-Inhibitoren</td></tr><tr><td>L01XE10 (Everolimus)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EG02 (Everolimus)</td><td/></tr><tr><td>L01XE07 (Lapatinib)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EH01 (Lapatinib)</td><td>Reklassifizierung zu HER2-Inhibitoren</td></tr><tr><td>L01XE45 (Neratinib)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EH02 (Neratinib)</td><td/></tr><tr><td>L01XE18 (Ruxolitinib)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EJ01 (Ruxolitinib)</td><td>Reklassifizierung zu JAK-Inhibitoren</td></tr><tr><td>L01XE17 (Axitinib)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EK01 (Axitinib)</td><td>Reklassifizierung zu VEGFR-Inhibitoren</td></tr><tr><td>L01XE34 (Tivozanib)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EK03 (Tivozanib)</td><td/></tr><tr><td>L01XE27 (Ibrutinib)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EL01 (Ibrutinib)</td><td>Reklassifizierung zu BTK-Inhibitoren</td></tr><tr><td>L01XE51 (Acalabrutinib)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EL02 (Acalabrutinib)</td><td/></tr><tr><td>L01XX47 (Idelalisib)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EM01 (Idelalisib)</td><td>Reklassifizierung zu PI3K-Inhibitoren</td></tr><tr><td>L01XX61 (Copanlisib)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EM02 (Copanlisib)</td><td/></tr><tr><td>L01XE04 (Sunitinib)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EX01 (Sunitinib)</td><td>Reklassifizierung zu andere Proteinkinase-Inhibitoren</td></tr><tr><td>L01XE05 (Sorafenib)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EX02 (Sorafenib)</td><td/></tr><tr><td>L01XE12 (Vandetanib)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EX04 (Vandetanib)</td><td/></tr><tr><td>L01XE21 (Regorafenib)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EX05 (Regorafenib)</td><td/></tr><tr><td>L01XE26 (Cabozantinib)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EX07 (Cabozantinib)</td><td/></tr><tr><td>L01XE29 (Lenvatinib)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EX08 (Lenvatinib)</td><td/></tr><tr><td>L01XE31 (Nintedanib)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EX09 (Nintedanib)</td><td/></tr><tr><td>L01XE39 (Midostaurin)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EX10 (Midostaurin)</td><td/></tr><tr><td>L01XE52 (Quizartinib)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EX11 (Quizartinib)</td><td/></tr><tr><td>L01XE53 (Larotrectinib)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EX12 (Larotrectinib)</td><td/></tr><tr><td>L01XE54 (Gilteritinib)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01EX13 (Gilteritinib)</td><td/></tr><tr><td>L01XX14 (Tretinoin)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01XF01 (Tretinoin)</td><td>Reklassifizierung zu Retinoide</td></tr><tr><td>L01XX22 (Alitretinoin)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01XF02 (Alitretinoin)</td><td/></tr><tr><td>L01XX25 (Bexaroten)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01XF03 (Bexaroten)</td><td/></tr><tr><td>L01XX32 (Bortezomib)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01XG01 (Bortezomib)</td><td>Reklassifizierung zu Proteasom-Inhibitoren</td></tr><tr><td>L01XX45 (Carfilzomib)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01XG02 (Carfilzomib)</td><td/></tr><tr><td>L01XX50 (Ixazomib)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01XG03 (Ixazomib)</td><td/></tr><tr><td>L01XX38 (Vorinostat)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01XH01 (Vorinostat)</td><td>Reklassifizierung zu Histon-Deacetylase-Inhibitoren</td></tr><tr><td>L01XX39 (Romidepsin)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01XH02 (Romidepsin)</td><td/></tr><tr><td>L01XX42 (Panobinostat)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01XH03 (Panobinostat)</td><td/></tr><tr><td>L01XX49 (Belinostat)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01XH04 (Belinostat)</td><td/></tr><tr><td>L01XX43 (Vismodegib)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01XJ01 (Vismodegib)</td><td>Reklassifizierung zu Hedgehog-Signalweg-Inhibitoren</td></tr><tr><td>L01XX63 (Glasdegib)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01XJ03 (Glasdegib)</td><td/></tr><tr><td>L01XX46 (Olaparib)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01XK01 (Olaparib)</td><td>Reklassifizierung zu PARP-Inhibitoren</td></tr><tr><td>L01XX54 (Niraparib)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01XK02 (Niraparib)</td><td/></tr><tr><td>L01XX60 (Talazoparib)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01XK04 (Talazoparib)</td><td/></tr><tr><td>L01XX17 (Topotecan)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01CE01 (Topotecan)</td><td>Reklassifizierung zu Topoisomerase-I-Inhibitoren</td></tr><tr><td>L01XX19 (Irinotecan)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>L01CE02 (Irinotecan)</td><td/></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+    "valueCode" : "shareable"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+    "valueCode" : "publishable"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes",
+        "code" : "package",
+        "display" : "Package"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
+    "valueDate" : "2026-01-03"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-topic",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+        "code" : "C3262"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-author",
+    "valueContactDetail" : {
+      "telecom" : [{
+        "system" : "email",
+        "value" : "thomas.debertshaeuser@charite.de"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-editor",
+    "valueContactDetail" : {
+      "name" : "Taskforce Core Data Set"
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
+    "valueContactDetail" : {
+      "name" : "Interoperability Working Group",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
+    "valueContactDetail" : {
+      "name" : "National Steering Committee",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
+    "valueContactDetail" : {
+      "name" : "Interoperability Working Group",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
+    "valueContactDetail" : {
+      "name" : "National Steering Committee",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
+    "valueCoding" : {
+      "system" : "http://hl7.org/fhir/version-algorithm",
+      "code" : "semver",
+      "display" : "SemVer"
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+    "valuePeriod" : {
+      "start" : "2026"
+    }
+  }],
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-atc-transitions-2021",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_CM_Onko_ATC_Transitions_2021",
+  "title" : "MII CM Onko ATC Code Changes 2020 to 2021",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2024-12-12",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "Diese ConceptMap dokumentiert ausschließlich die ATC-Code-Änderungen von 2020 zu 2021. Im Jahr 2021 erfolgte eine umfassende Reorganisation der ATC-Klassifikation für onkologische Substanzen mit Umkodierung von über 60 Wirkstoffen.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "purpose" : "Migration von ATC-Codes für Substanzen, die 2021 umkodiert wurden. Enthält nur geänderte Codes, keine neuen oder unveränderten Einträge.",
+  "sourceCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-2020",
+  "targetCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-2021",
+  "group" : [{
+    "source" : "http://fhir.de/CodeSystem/bfarm/atc",
+    "target" : "http://fhir.de/CodeSystem/bfarm/atc",
+    "element" : [{
+      "code" : "L01XE01",
+      "display" : "Imatinib",
+      "target" : [{
+        "code" : "L01EA01",
+        "display" : "Imatinib",
+        "equivalence" : "equivalent",
+        "comment" : "Reklassifizierung zu BCR-ABL Tyrosinkinase-Inhibitoren"
+      }]
+    },
+    {
+      "code" : "L01XE06",
+      "display" : "Dasatinib",
+      "target" : [{
+        "code" : "L01EA02",
+        "display" : "Dasatinib",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "L01XE08",
+      "display" : "Nilotinib",
+      "target" : [{
+        "code" : "L01EA03",
+        "display" : "Nilotinib",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "L01XE14",
+      "display" : "Bosutinib",
+      "target" : [{
+        "code" : "L01EA04",
+        "display" : "Bosutinib",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "L01XE24",
+      "display" : "Ponatinib",
+      "target" : [{
+        "code" : "L01EA05",
+        "display" : "Ponatinib",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "L01XE02",
+      "display" : "Gefitinib",
+      "target" : [{
+        "code" : "L01EB01",
+        "display" : "Gefitinib",
+        "equivalence" : "equivalent",
+        "comment" : "Reklassifizierung zu EGFR Tyrosinkinase-Inhibitoren"
+      }]
+    },
+    {
+      "code" : "L01XE03",
+      "display" : "Erlotinib",
+      "target" : [{
+        "code" : "L01EB02",
+        "display" : "Erlotinib",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "L01XE13",
+      "display" : "Afatinib",
+      "target" : [{
+        "code" : "L01EB03",
+        "display" : "Afatinib",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "L01XE35",
+      "display" : "Osimertinib",
+      "target" : [{
+        "code" : "L01EB04",
+        "display" : "Osimertinib",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "L01XE15",
+      "display" : "Vemurafenib",
+      "target" : [{
+        "code" : "L01EC01",
+        "display" : "Vemurafenib",
+        "equivalence" : "equivalent",
+        "comment" : "Reklassifizierung zu BRAF-Inhibitoren"
+      }]
+    },
+    {
+      "code" : "L01XE23",
+      "display" : "Dabrafenib",
+      "target" : [{
+        "code" : "L01EC02",
+        "display" : "Dabrafenib",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "L01XE46",
+      "display" : "Encorafenib",
+      "target" : [{
+        "code" : "L01EC03",
+        "display" : "Encorafenib",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "L01XE16",
+      "display" : "Crizotinib",
+      "target" : [{
+        "code" : "L01ED01",
+        "display" : "Crizotinib",
+        "equivalence" : "equivalent",
+        "comment" : "Reklassifizierung zu ALK-Inhibitoren"
+      }]
+    },
+    {
+      "code" : "L01XE28",
+      "display" : "Ceritinib",
+      "target" : [{
+        "code" : "L01ED02",
+        "display" : "Ceritinib",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "L01XE36",
+      "display" : "Alectinib",
+      "target" : [{
+        "code" : "L01ED03",
+        "display" : "Alectinib",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "L01XE43",
+      "display" : "Brigatinib",
+      "target" : [{
+        "code" : "L01ED04",
+        "display" : "Brigatinib",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "L01XE44",
+      "display" : "Lorlatinib",
+      "target" : [{
+        "code" : "L01ED05",
+        "display" : "Lorlatinib",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "L01XE25",
+      "display" : "Trametinib",
+      "target" : [{
+        "code" : "L01EE01",
+        "display" : "Trametinib",
+        "equivalence" : "equivalent",
+        "comment" : "Reklassifizierung zu MEK-Inhibitoren"
+      }]
+    },
+    {
+      "code" : "L01XE38",
+      "display" : "Cobimetinib",
+      "target" : [{
+        "code" : "L01EE02",
+        "display" : "Cobimetinib",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "L01XE41",
+      "display" : "Binimetinib",
+      "target" : [{
+        "code" : "L01EE03",
+        "display" : "Binimetinib",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "L01XE33",
+      "display" : "Palbociclib",
+      "target" : [{
+        "code" : "L01EF01",
+        "display" : "Palbociclib",
+        "equivalence" : "equivalent",
+        "comment" : "Reklassifizierung zu CDK4/6-Inhibitoren"
+      }]
+    },
+    {
+      "code" : "L01XE42",
+      "display" : "Ribociclib",
+      "target" : [{
+        "code" : "L01EF02",
+        "display" : "Ribociclib",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "L01XE50",
+      "display" : "Abemaciclib",
+      "target" : [{
+        "code" : "L01EF03",
+        "display" : "Abemaciclib",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "L01XE09",
+      "display" : "Temsirolimus",
+      "target" : [{
+        "code" : "L01EG01",
+        "display" : "Temsirolimus",
+        "equivalence" : "equivalent",
+        "comment" : "Reklassifizierung zu mTOR-Inhibitoren"
+      }]
+    },
+    {
+      "code" : "L01XE10",
+      "display" : "Everolimus",
+      "target" : [{
+        "code" : "L01EG02",
+        "display" : "Everolimus",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "L01XE07",
+      "display" : "Lapatinib",
+      "target" : [{
+        "code" : "L01EH01",
+        "display" : "Lapatinib",
+        "equivalence" : "equivalent",
+        "comment" : "Reklassifizierung zu HER2-Inhibitoren"
+      }]
+    },
+    {
+      "code" : "L01XE45",
+      "display" : "Neratinib",
+      "target" : [{
+        "code" : "L01EH02",
+        "display" : "Neratinib",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "L01XE18",
+      "display" : "Ruxolitinib",
+      "target" : [{
+        "code" : "L01EJ01",
+        "display" : "Ruxolitinib",
+        "equivalence" : "equivalent",
+        "comment" : "Reklassifizierung zu JAK-Inhibitoren"
+      }]
+    },
+    {
+      "code" : "L01XE17",
+      "display" : "Axitinib",
+      "target" : [{
+        "code" : "L01EK01",
+        "display" : "Axitinib",
+        "equivalence" : "equivalent",
+        "comment" : "Reklassifizierung zu VEGFR-Inhibitoren"
+      }]
+    },
+    {
+      "code" : "L01XE34",
+      "display" : "Tivozanib",
+      "target" : [{
+        "code" : "L01EK03",
+        "display" : "Tivozanib",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "L01XE27",
+      "display" : "Ibrutinib",
+      "target" : [{
+        "code" : "L01EL01",
+        "display" : "Ibrutinib",
+        "equivalence" : "equivalent",
+        "comment" : "Reklassifizierung zu BTK-Inhibitoren"
+      }]
+    },
+    {
+      "code" : "L01XE51",
+      "display" : "Acalabrutinib",
+      "target" : [{
+        "code" : "L01EL02",
+        "display" : "Acalabrutinib",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "L01XX47",
+      "display" : "Idelalisib",
+      "target" : [{
+        "code" : "L01EM01",
+        "display" : "Idelalisib",
+        "equivalence" : "equivalent",
+        "comment" : "Reklassifizierung zu PI3K-Inhibitoren"
+      }]
+    },
+    {
+      "code" : "L01XX61",
+      "display" : "Copanlisib",
+      "target" : [{
+        "code" : "L01EM02",
+        "display" : "Copanlisib",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "L01XE04",
+      "display" : "Sunitinib",
+      "target" : [{
+        "code" : "L01EX01",
+        "display" : "Sunitinib",
+        "equivalence" : "equivalent",
+        "comment" : "Reklassifizierung zu andere Proteinkinase-Inhibitoren"
+      }]
+    },
+    {
+      "code" : "L01XE05",
+      "display" : "Sorafenib",
+      "target" : [{
+        "code" : "L01EX02",
+        "display" : "Sorafenib",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "L01XE12",
+      "display" : "Vandetanib",
+      "target" : [{
+        "code" : "L01EX04",
+        "display" : "Vandetanib",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "L01XE21",
+      "display" : "Regorafenib",
+      "target" : [{
+        "code" : "L01EX05",
+        "display" : "Regorafenib",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "L01XE26",
+      "display" : "Cabozantinib",
+      "target" : [{
+        "code" : "L01EX07",
+        "display" : "Cabozantinib",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "L01XE29",
+      "display" : "Lenvatinib",
+      "target" : [{
+        "code" : "L01EX08",
+        "display" : "Lenvatinib",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "L01XE31",
+      "display" : "Nintedanib",
+      "target" : [{
+        "code" : "L01EX09",
+        "display" : "Nintedanib",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "L01XE39",
+      "display" : "Midostaurin",
+      "target" : [{
+        "code" : "L01EX10",
+        "display" : "Midostaurin",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "L01XE52",
+      "display" : "Quizartinib",
+      "target" : [{
+        "code" : "L01EX11",
+        "display" : "Quizartinib",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "L01XE53",
+      "display" : "Larotrectinib",
+      "target" : [{
+        "code" : "L01EX12",
+        "display" : "Larotrectinib",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "L01XE54",
+      "display" : "Gilteritinib",
+      "target" : [{
+        "code" : "L01EX13",
+        "display" : "Gilteritinib",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "L01XX14",
+      "display" : "Tretinoin",
+      "target" : [{
+        "code" : "L01XF01",
+        "display" : "Tretinoin",
+        "equivalence" : "equivalent",
+        "comment" : "Reklassifizierung zu Retinoide"
+      }]
+    },
+    {
+      "code" : "L01XX22",
+      "display" : "Alitretinoin",
+      "target" : [{
+        "code" : "L01XF02",
+        "display" : "Alitretinoin",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "L01XX25",
+      "display" : "Bexaroten",
+      "target" : [{
+        "code" : "L01XF03",
+        "display" : "Bexaroten",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "L01XX32",
+      "display" : "Bortezomib",
+      "target" : [{
+        "code" : "L01XG01",
+        "display" : "Bortezomib",
+        "equivalence" : "equivalent",
+        "comment" : "Reklassifizierung zu Proteasom-Inhibitoren"
+      }]
+    },
+    {
+      "code" : "L01XX45",
+      "display" : "Carfilzomib",
+      "target" : [{
+        "code" : "L01XG02",
+        "display" : "Carfilzomib",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "L01XX50",
+      "display" : "Ixazomib",
+      "target" : [{
+        "code" : "L01XG03",
+        "display" : "Ixazomib",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "L01XX38",
+      "display" : "Vorinostat",
+      "target" : [{
+        "code" : "L01XH01",
+        "display" : "Vorinostat",
+        "equivalence" : "equivalent",
+        "comment" : "Reklassifizierung zu Histon-Deacetylase-Inhibitoren"
+      }]
+    },
+    {
+      "code" : "L01XX39",
+      "display" : "Romidepsin",
+      "target" : [{
+        "code" : "L01XH02",
+        "display" : "Romidepsin",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "L01XX42",
+      "display" : "Panobinostat",
+      "target" : [{
+        "code" : "L01XH03",
+        "display" : "Panobinostat",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "L01XX49",
+      "display" : "Belinostat",
+      "target" : [{
+        "code" : "L01XH04",
+        "display" : "Belinostat",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "L01XX43",
+      "display" : "Vismodegib",
+      "target" : [{
+        "code" : "L01XJ01",
+        "display" : "Vismodegib",
+        "equivalence" : "equivalent",
+        "comment" : "Reklassifizierung zu Hedgehog-Signalweg-Inhibitoren"
+      }]
+    },
+    {
+      "code" : "L01XX63",
+      "display" : "Glasdegib",
+      "target" : [{
+        "code" : "L01XJ03",
+        "display" : "Glasdegib",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "L01XX46",
+      "display" : "Olaparib",
+      "target" : [{
+        "code" : "L01XK01",
+        "display" : "Olaparib",
+        "equivalence" : "equivalent",
+        "comment" : "Reklassifizierung zu PARP-Inhibitoren"
+      }]
+    },
+    {
+      "code" : "L01XX54",
+      "display" : "Niraparib",
+      "target" : [{
+        "code" : "L01XK02",
+        "display" : "Niraparib",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "L01XX60",
+      "display" : "Talazoparib",
+      "target" : [{
+        "code" : "L01XK04",
+        "display" : "Talazoparib",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "L01XX17",
+      "display" : "Topotecan",
+      "target" : [{
+        "code" : "L01CE01",
+        "display" : "Topotecan",
+        "equivalence" : "equivalent",
+        "comment" : "Reklassifizierung zu Topoisomerase-I-Inhibitoren"
+      }]
+    },
+    {
+      "code" : "L01XX19",
+      "display" : "Irinotecan",
+      "target" : [{
+        "code" : "L01CE02",
+        "display" : "Irinotecan",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  }]
+}

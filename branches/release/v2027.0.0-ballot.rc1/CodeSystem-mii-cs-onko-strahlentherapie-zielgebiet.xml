@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="mii-cs-onko-strahlentherapie-zielgebiet"/>
+  <meta>
+    <extension url="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-license">
+      <valueCode value="CC-BY-4.0"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/package-source">
+      <extension url="packageId">
+        <valueId value="de.medizininformatikinitiative.kerndatensatz.onkologie"/>
+      </extension>
+      <extension url="version">
+        <valueString value="2026.0.3"/>
+      </extension>
+      <extension url="uri">
+        <valueUri value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko"/>
+      </extension>
+    </extension>
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablecodesystem"/>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablecodesystem"/>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablecodesystem"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: CodeSystem mii-cs-onko-strahlentherapie-zielgebiet</b></p><a name="mii-cs-onko-strahlentherapie-zielgebiet"> </a><a name="hcmii-cs-onko-strahlentherapie-zielgebiet"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profiles: <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-shareablecodesystem.html">Shareable CodeSystem</a>, <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-shareablecodesystem.html">CRMI Shareable CodeSystem</a>, <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-publishablecodesystem.html">CRMI Publishable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">1.1<a name="mii-cs-onko-strahlentherapie-zielgebiet-1.461"> </a></td><td>Ganzhirn (Neurokranium, inklusive Meningen)</td></tr><tr><td style="white-space:nowrap">1.2<a name="mii-cs-onko-strahlentherapie-zielgebiet-1.462"> </a></td><td>Teilhirn (frontal/parietal/occipital/temporal/Kleinhirn)</td></tr><tr><td style="white-space:nowrap">1.3<a name="mii-cs-onko-strahlentherapie-zielgebiet-1.463"> </a></td><td>Neuroachse/Rückenmark</td></tr><tr><td style="white-space:nowrap">1.4<a name="mii-cs-onko-strahlentherapie-zielgebiet-1.464"> </a></td><td>Hypophyse</td></tr><tr><td style="white-space:nowrap">1.5<a name="mii-cs-onko-strahlentherapie-zielgebiet-1.465"> </a></td><td>Hirn sonstiges</td></tr><tr><td style="white-space:nowrap">2.1<a name="mii-cs-onko-strahlentherapie-zielgebiet-2.461"> </a></td><td>Auge (r, l)</td></tr><tr><td style="white-space:nowrap">2.2<a name="mii-cs-onko-strahlentherapie-zielgebiet-2.462"> </a></td><td>Nase/Nasennebenhöhle</td></tr><tr><td style="white-space:nowrap">2.3<a name="mii-cs-onko-strahlentherapie-zielgebiet-2.463"> </a></td><td>Mundhöhle inklusive Mundhöhlenvorhof</td></tr><tr><td style="white-space:nowrap">2.4<a name="mii-cs-onko-strahlentherapie-zielgebiet-2.464"> </a></td><td>Ohr (r, l)</td></tr><tr><td style="white-space:nowrap">2.5<a name="mii-cs-onko-strahlentherapie-zielgebiet-2.465"> </a></td><td>Speicheldrüse (r, l)</td></tr><tr><td style="white-space:nowrap">2.6<a name="mii-cs-onko-strahlentherapie-zielgebiet-2.466"> </a></td><td>Pharynx</td></tr><tr><td style="white-space:nowrap">2.7<a name="mii-cs-onko-strahlentherapie-zielgebiet-2.467"> </a></td><td>Nasopharynx</td></tr><tr><td style="white-space:nowrap">2.8<a name="mii-cs-onko-strahlentherapie-zielgebiet-2.468"> </a></td><td>Oropharynx</td></tr><tr><td style="white-space:nowrap">2.9<a name="mii-cs-onko-strahlentherapie-zielgebiet-2.469"> </a></td><td>Hypopharynx</td></tr><tr><td style="white-space:nowrap">2.10<a name="mii-cs-onko-strahlentherapie-zielgebiet-2.4610"> </a></td><td>Larynx</td></tr><tr><td style="white-space:nowrap">2.11<a name="mii-cs-onko-strahlentherapie-zielgebiet-2.4611"> </a></td><td>Schilddrüse</td></tr><tr><td style="white-space:nowrap">2.12<a name="mii-cs-onko-strahlentherapie-zielgebiet-2.4612"> </a></td><td>Kopf-Hals sonstige</td></tr><tr><td style="white-space:nowrap">3.1<a name="mii-cs-onko-strahlentherapie-zielgebiet-3.461"> </a></td><td>Mamma als Ganzbrust (r, l)</td></tr><tr><td style="white-space:nowrap">3.2<a name="mii-cs-onko-strahlentherapie-zielgebiet-3.462"> </a></td><td>Mamma als Teilbrust (r, l)</td></tr><tr><td style="white-space:nowrap">3.3<a name="mii-cs-onko-strahlentherapie-zielgebiet-3.463"> </a></td><td>Thoraxwand, gegebenenfalls r, l</td></tr><tr><td style="white-space:nowrap">3.4<a name="mii-cs-onko-strahlentherapie-zielgebiet-3.464"> </a></td><td>Lunge (r, l)</td></tr><tr><td style="white-space:nowrap">3.5<a name="mii-cs-onko-strahlentherapie-zielgebiet-3.465"> </a></td><td>Ösophagus</td></tr><tr><td style="white-space:nowrap">3.6<a name="mii-cs-onko-strahlentherapie-zielgebiet-3.466"> </a></td><td>Mediastinum (mediastinaler Lymphabfluss ist in Nummer 9 zu kodieren)</td></tr><tr><td style="white-space:nowrap">3.7<a name="mii-cs-onko-strahlentherapie-zielgebiet-3.467"> </a></td><td>Thymus</td></tr><tr><td style="white-space:nowrap">3.8<a name="mii-cs-onko-strahlentherapie-zielgebiet-3.468"> </a></td><td>Thorax sonstige</td></tr><tr><td style="white-space:nowrap">4.1<a name="mii-cs-onko-strahlentherapie-zielgebiet-4.461"> </a></td><td>Magen</td></tr><tr><td style="white-space:nowrap">4.2<a name="mii-cs-onko-strahlentherapie-zielgebiet-4.462"> </a></td><td>Pankreas</td></tr><tr><td style="white-space:nowrap">4.3<a name="mii-cs-onko-strahlentherapie-zielgebiet-4.463"> </a></td><td>Leber, auch bei Teilbestrahlung</td></tr><tr><td style="white-space:nowrap">4.4<a name="mii-cs-onko-strahlentherapie-zielgebiet-4.464"> </a></td><td>Milz</td></tr><tr><td style="white-space:nowrap">4.5<a name="mii-cs-onko-strahlentherapie-zielgebiet-4.465"> </a></td><td>Niere (r, l)</td></tr><tr><td style="white-space:nowrap">4.6<a name="mii-cs-onko-strahlentherapie-zielgebiet-4.466"> </a></td><td>Nebenniere (r, l)</td></tr><tr><td style="white-space:nowrap">4.7<a name="mii-cs-onko-strahlentherapie-zielgebiet-4.467"> </a></td><td>Retroperitoneum (z. B. Sarkome)</td></tr><tr><td style="white-space:nowrap">4.8<a name="mii-cs-onko-strahlentherapie-zielgebiet-4.468"> </a></td><td>Ureter (r, l)</td></tr><tr><td style="white-space:nowrap">4.9<a name="mii-cs-onko-strahlentherapie-zielgebiet-4.469"> </a></td><td>Bauchwand (z. B. Sarkome)</td></tr><tr><td style="white-space:nowrap">4.10<a name="mii-cs-onko-strahlentherapie-zielgebiet-4.4610"> </a></td><td>Oberbauch</td></tr><tr><td style="white-space:nowrap">4.11<a name="mii-cs-onko-strahlentherapie-zielgebiet-4.4611"> </a></td><td>Gallengänge</td></tr><tr><td style="white-space:nowrap">4.12<a name="mii-cs-onko-strahlentherapie-zielgebiet-4.4612"> </a></td><td>Gallenblase</td></tr><tr><td style="white-space:nowrap">4.13<a name="mii-cs-onko-strahlentherapie-zielgebiet-4.4613"> </a></td><td>Abdomen sonstige</td></tr><tr><td style="white-space:nowrap">5.1<a name="mii-cs-onko-strahlentherapie-zielgebiet-5.461"> </a></td><td>Rektum</td></tr><tr><td style="white-space:nowrap">5.2<a name="mii-cs-onko-strahlentherapie-zielgebiet-5.462"> </a></td><td>Analbereich</td></tr><tr><td style="white-space:nowrap">5.3<a name="mii-cs-onko-strahlentherapie-zielgebiet-5.463"> </a></td><td>Harnblase</td></tr><tr><td style="white-space:nowrap">5.4<a name="mii-cs-onko-strahlentherapie-zielgebiet-5.464"> </a></td><td>Prostata</td></tr><tr><td style="white-space:nowrap">5.5<a name="mii-cs-onko-strahlentherapie-zielgebiet-5.465"> </a></td><td>Hoden (r, l)</td></tr><tr><td style="white-space:nowrap">5.6<a name="mii-cs-onko-strahlentherapie-zielgebiet-5.466"> </a></td><td>Penis</td></tr><tr><td style="white-space:nowrap">5.7<a name="mii-cs-onko-strahlentherapie-zielgebiet-5.467"> </a></td><td>Uterus</td></tr><tr><td style="white-space:nowrap">5.8<a name="mii-cs-onko-strahlentherapie-zielgebiet-5.468"> </a></td><td>Zervix</td></tr><tr><td style="white-space:nowrap">5.9<a name="mii-cs-onko-strahlentherapie-zielgebiet-5.469"> </a></td><td>Vulva</td></tr><tr><td style="white-space:nowrap">5.10<a name="mii-cs-onko-strahlentherapie-zielgebiet-5.4610"> </a></td><td>Vagina</td></tr><tr><td style="white-space:nowrap">5.11<a name="mii-cs-onko-strahlentherapie-zielgebiet-5.4611"> </a></td><td>Beckenwand</td></tr><tr><td style="white-space:nowrap">5.12<a name="mii-cs-onko-strahlentherapie-zielgebiet-5.4612"> </a></td><td>Becken sonstige</td></tr><tr><td style="white-space:nowrap">6.1<a name="mii-cs-onko-strahlentherapie-zielgebiet-6.461"> </a></td><td>Schädel</td></tr><tr><td style="white-space:nowrap">6.2<a name="mii-cs-onko-strahlentherapie-zielgebiet-6.462"> </a></td><td>Schädelbasis</td></tr><tr><td style="white-space:nowrap">6.3<a name="mii-cs-onko-strahlentherapie-zielgebiet-6.463"> </a></td><td>Orbita (r, l)</td></tr><tr><td style="white-space:nowrap">6.4<a name="mii-cs-onko-strahlentherapie-zielgebiet-6.464"> </a></td><td>Halswirbelsäule</td></tr><tr><td style="white-space:nowrap">6.5<a name="mii-cs-onko-strahlentherapie-zielgebiet-6.465"> </a></td><td>Brustwirbelsäule</td></tr><tr><td style="white-space:nowrap">6.6<a name="mii-cs-onko-strahlentherapie-zielgebiet-6.466"> </a></td><td>Lendenwirbelsäule</td></tr><tr><td style="white-space:nowrap">6.7<a name="mii-cs-onko-strahlentherapie-zielgebiet-6.467"> </a></td><td>Sacrum /Coccygeum</td></tr><tr><td style="white-space:nowrap">6.8<a name="mii-cs-onko-strahlentherapie-zielgebiet-6.468"> </a></td><td>Rippen (r, l)</td></tr><tr><td style="white-space:nowrap">6.9<a name="mii-cs-onko-strahlentherapie-zielgebiet-6.469"> </a></td><td>Sternum</td></tr><tr><td style="white-space:nowrap">6.10<a name="mii-cs-onko-strahlentherapie-zielgebiet-6.4610"> </a></td><td>Schulter (r, l)</td></tr><tr><td style="white-space:nowrap">6.11<a name="mii-cs-onko-strahlentherapie-zielgebiet-6.4611"> </a></td><td>Oberarm (r, l)</td></tr><tr><td style="white-space:nowrap">6.12<a name="mii-cs-onko-strahlentherapie-zielgebiet-6.4612"> </a></td><td>Unterarm (r, l)</td></tr><tr><td style="white-space:nowrap">6.13<a name="mii-cs-onko-strahlentherapie-zielgebiet-6.4613"> </a></td><td>Hand (r, l)</td></tr><tr><td style="white-space:nowrap">6.14<a name="mii-cs-onko-strahlentherapie-zielgebiet-6.4614"> </a></td><td>Becken (r, l)</td></tr><tr><td style="white-space:nowrap">6.15<a name="mii-cs-onko-strahlentherapie-zielgebiet-6.4615"> </a></td><td>Hüfte (r, l)</td></tr><tr><td style="white-space:nowrap">6.16<a name="mii-cs-onko-strahlentherapie-zielgebiet-6.4616"> </a></td><td>Oberschenkel (r, l)</td></tr><tr><td style="white-space:nowrap">6.17<a name="mii-cs-onko-strahlentherapie-zielgebiet-6.4617"> </a></td><td>Unterschenkel (r, l)</td></tr><tr><td style="white-space:nowrap">6.18<a name="mii-cs-onko-strahlentherapie-zielgebiet-6.4618"> </a></td><td>Fuß (r, l)</td></tr><tr><td style="white-space:nowrap">6.19<a name="mii-cs-onko-strahlentherapie-zielgebiet-6.4619"> </a></td><td>Knochen sonstige</td></tr><tr><td style="white-space:nowrap">7.1<a name="mii-cs-onko-strahlentherapie-zielgebiet-7.461"> </a></td><td>Kopf, Gesicht, Hals</td></tr><tr><td style="white-space:nowrap">7.2<a name="mii-cs-onko-strahlentherapie-zielgebiet-7.462"> </a></td><td>obere Extremität ink* #lusive Schulter (r, l)</td></tr><tr><td style="white-space:nowrap">7.3<a name="mii-cs-onko-strahlentherapie-zielgebiet-7.463"> </a></td><td>untere Extremität und Hüfte (r, l)</td></tr><tr><td style="white-space:nowrap">7.4<a name="mii-cs-onko-strahlentherapie-zielgebiet-7.464"> </a></td><td>Thorax</td></tr><tr><td style="white-space:nowrap">7.5<a name="mii-cs-onko-strahlentherapie-zielgebiet-7.465"> </a></td><td>Abdomen</td></tr><tr><td style="white-space:nowrap">7.6<a name="mii-cs-onko-strahlentherapie-zielgebiet-7.466"> </a></td><td>Becken</td></tr><tr><td style="white-space:nowrap">7.7<a name="mii-cs-onko-strahlentherapie-zielgebiet-7.467"> </a></td><td>Stammes o. n. A.</td></tr><tr><td style="white-space:nowrap">7.8<a name="mii-cs-onko-strahlentherapie-zielgebiet-7.468"> </a></td><td>mehrere Bereiche überlappend</td></tr><tr><td style="white-space:nowrap">7.9<a name="mii-cs-onko-strahlentherapie-zielgebiet-7.469"> </a></td><td>sonstige Weichteile o. n. A.</td></tr><tr><td style="white-space:nowrap">8.1<a name="mii-cs-onko-strahlentherapie-zielgebiet-8.461"> </a></td><td>Ganzhaut</td></tr><tr><td style="white-space:nowrap">8.2<a name="mii-cs-onko-strahlentherapie-zielgebiet-8.462"> </a></td><td>Teilbereiche</td></tr><tr><td style="white-space:nowrap">9.1<a name="mii-cs-onko-strahlentherapie-zielgebiet-9.461"> </a></td><td>Cervikale Lymphknoten (r, l)</td></tr><tr><td style="white-space:nowrap">9.2<a name="mii-cs-onko-strahlentherapie-zielgebiet-9.462"> </a></td><td>Supra-/infraclavikuläre Lymphknoten (r, l)</td></tr><tr><td style="white-space:nowrap">9.3<a name="mii-cs-onko-strahlentherapie-zielgebiet-9.463"> </a></td><td>Axilläre Lymphknoten (r, l)</td></tr><tr><td style="white-space:nowrap">9.4<a name="mii-cs-onko-strahlentherapie-zielgebiet-9.464"> </a></td><td>Retrosternale/sternale/Mammaria interna Lymphknoten</td></tr><tr><td style="white-space:nowrap">9.5<a name="mii-cs-onko-strahlentherapie-zielgebiet-9.465"> </a></td><td>Mediastinale Lymphknoten</td></tr><tr><td style="white-space:nowrap">9.6<a name="mii-cs-onko-strahlentherapie-zielgebiet-9.466"> </a></td><td>Hiläre Lymphknoten</td></tr><tr><td style="white-space:nowrap">9.7<a name="mii-cs-onko-strahlentherapie-zielgebiet-9.467"> </a></td><td>Intraabdominale Lymphknoten (z. B. subphrenisch, perigastrisch, peripankreatisch, Leber-, Milzhilus)</td></tr><tr><td style="white-space:nowrap">9.8<a name="mii-cs-onko-strahlentherapie-zielgebiet-9.468"> </a></td><td>Paraaortale/paracavale Lymphknoten</td></tr><tr><td style="white-space:nowrap">9.9<a name="mii-cs-onko-strahlentherapie-zielgebiet-9.469"> </a></td><td>Retroperitoneale Lymphknoten</td></tr><tr><td style="white-space:nowrap">9.10<a name="mii-cs-onko-strahlentherapie-zielgebiet-9.4610"> </a></td><td>Beckenlymphabfluss (r, l) (Iliakal commun, extern, intern, obturatorisch, präsakral)</td></tr><tr><td style="white-space:nowrap">9.11<a name="mii-cs-onko-strahlentherapie-zielgebiet-9.4611"> </a></td><td>Inguinale Lymphknoten (r, l)</td></tr><tr><td style="white-space:nowrap">9.12<a name="mii-cs-onko-strahlentherapie-zielgebiet-9.4612"> </a></td><td>Involved Node</td></tr><tr><td style="white-space:nowrap">9.13<a name="mii-cs-onko-strahlentherapie-zielgebiet-9.4613"> </a></td><td>Involved Site</td></tr><tr><td style="white-space:nowrap">9.14<a name="mii-cs-onko-strahlentherapie-zielgebiet-9.4614"> </a></td><td>Involved Field</td></tr><tr><td style="white-space:nowrap">9.15<a name="mii-cs-onko-strahlentherapie-zielgebiet-9.4615"> </a></td><td>Sonstige Lymphknoten</td></tr><tr><td style="white-space:nowrap">10.1<a name="mii-cs-onko-strahlentherapie-zielgebiet-10.461"> </a></td><td>Ganzkörperbestrahlung bei allogener Stammzelltransplantation</td></tr><tr><td style="white-space:nowrap">10.2<a name="mii-cs-onko-strahlentherapie-zielgebiet-10.462"> </a></td><td>operative Zugangswege</td></tr><tr><td style="white-space:nowrap">10.3<a name="mii-cs-onko-strahlentherapie-zielgebiet-10.463"> </a></td><td>Sonstige, nicht genannte Zielgebiete</td></tr></table></div><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: CodeSystem mii-cs-onko-strahlentherapie-zielgebiet</b></p><a name="de-mii-cs-onko-strahlentherapie-zielgebiet"> </a><a name="de-hcmii-cs-onko-strahlentherapie-zielgebiet"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profiles: <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-shareablecodesystem.html">Shareable CodeSystem</a>, <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-shareablecodesystem.html">CRMI Shareable CodeSystem</a>, <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-publishablecodesystem.html">CRMI Publishable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">1.1<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-1.461"> </a></td><td>Ganzhirn (Neurokranium, inklusive Meningen)</td></tr><tr><td style="white-space:nowrap">1.2<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-1.462"> </a></td><td>Teilhirn (frontal/parietal/occipital/temporal/Kleinhirn)</td></tr><tr><td style="white-space:nowrap">1.3<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-1.463"> </a></td><td>Neuroachse/Rückenmark</td></tr><tr><td style="white-space:nowrap">1.4<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-1.464"> </a></td><td>Hypophyse</td></tr><tr><td style="white-space:nowrap">1.5<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-1.465"> </a></td><td>Hirn sonstiges</td></tr><tr><td style="white-space:nowrap">2.1<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-2.461"> </a></td><td>Auge (r, l)</td></tr><tr><td style="white-space:nowrap">2.2<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-2.462"> </a></td><td>Nase/Nasennebenhöhle</td></tr><tr><td style="white-space:nowrap">2.3<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-2.463"> </a></td><td>Mundhöhle inklusive Mundhöhlenvorhof</td></tr><tr><td style="white-space:nowrap">2.4<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-2.464"> </a></td><td>Ohr (r, l)</td></tr><tr><td style="white-space:nowrap">2.5<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-2.465"> </a></td><td>Speicheldrüse (r, l)</td></tr><tr><td style="white-space:nowrap">2.6<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-2.466"> </a></td><td>Pharynx</td></tr><tr><td style="white-space:nowrap">2.7<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-2.467"> </a></td><td>Nasopharynx</td></tr><tr><td style="white-space:nowrap">2.8<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-2.468"> </a></td><td>Oropharynx</td></tr><tr><td style="white-space:nowrap">2.9<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-2.469"> </a></td><td>Hypopharynx</td></tr><tr><td style="white-space:nowrap">2.10<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-2.4610"> </a></td><td>Larynx</td></tr><tr><td style="white-space:nowrap">2.11<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-2.4611"> </a></td><td>Schilddrüse</td></tr><tr><td style="white-space:nowrap">2.12<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-2.4612"> </a></td><td>Kopf-Hals sonstige</td></tr><tr><td style="white-space:nowrap">3.1<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-3.461"> </a></td><td>Mamma als Ganzbrust (r, l)</td></tr><tr><td style="white-space:nowrap">3.2<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-3.462"> </a></td><td>Mamma als Teilbrust (r, l)</td></tr><tr><td style="white-space:nowrap">3.3<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-3.463"> </a></td><td>Thoraxwand, gegebenenfalls r, l</td></tr><tr><td style="white-space:nowrap">3.4<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-3.464"> </a></td><td>Lunge (r, l)</td></tr><tr><td style="white-space:nowrap">3.5<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-3.465"> </a></td><td>Ösophagus</td></tr><tr><td style="white-space:nowrap">3.6<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-3.466"> </a></td><td>Mediastinum (mediastinaler Lymphabfluss ist in Nummer 9 zu kodieren)</td></tr><tr><td style="white-space:nowrap">3.7<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-3.467"> </a></td><td>Thymus</td></tr><tr><td style="white-space:nowrap">3.8<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-3.468"> </a></td><td>Thorax sonstige</td></tr><tr><td style="white-space:nowrap">4.1<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-4.461"> </a></td><td>Magen</td></tr><tr><td style="white-space:nowrap">4.2<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-4.462"> </a></td><td>Pankreas</td></tr><tr><td style="white-space:nowrap">4.3<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-4.463"> </a></td><td>Leber, auch bei Teilbestrahlung</td></tr><tr><td style="white-space:nowrap">4.4<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-4.464"> </a></td><td>Milz</td></tr><tr><td style="white-space:nowrap">4.5<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-4.465"> </a></td><td>Niere (r, l)</td></tr><tr><td style="white-space:nowrap">4.6<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-4.466"> </a></td><td>Nebenniere (r, l)</td></tr><tr><td style="white-space:nowrap">4.7<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-4.467"> </a></td><td>Retroperitoneum (z. B. Sarkome)</td></tr><tr><td style="white-space:nowrap">4.8<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-4.468"> </a></td><td>Ureter (r, l)</td></tr><tr><td style="white-space:nowrap">4.9<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-4.469"> </a></td><td>Bauchwand (z. B. Sarkome)</td></tr><tr><td style="white-space:nowrap">4.10<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-4.4610"> </a></td><td>Oberbauch</td></tr><tr><td style="white-space:nowrap">4.11<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-4.4611"> </a></td><td>Gallengänge</td></tr><tr><td style="white-space:nowrap">4.12<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-4.4612"> </a></td><td>Gallenblase</td></tr><tr><td style="white-space:nowrap">4.13<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-4.4613"> </a></td><td>Abdomen sonstige</td></tr><tr><td style="white-space:nowrap">5.1<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-5.461"> </a></td><td>Rektum</td></tr><tr><td style="white-space:nowrap">5.2<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-5.462"> </a></td><td>Analbereich</td></tr><tr><td style="white-space:nowrap">5.3<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-5.463"> </a></td><td>Harnblase</td></tr><tr><td style="white-space:nowrap">5.4<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-5.464"> </a></td><td>Prostata</td></tr><tr><td style="white-space:nowrap">5.5<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-5.465"> </a></td><td>Hoden (r, l)</td></tr><tr><td style="white-space:nowrap">5.6<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-5.466"> </a></td><td>Penis</td></tr><tr><td style="white-space:nowrap">5.7<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-5.467"> </a></td><td>Uterus</td></tr><tr><td style="white-space:nowrap">5.8<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-5.468"> </a></td><td>Zervix</td></tr><tr><td style="white-space:nowrap">5.9<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-5.469"> </a></td><td>Vulva</td></tr><tr><td style="white-space:nowrap">5.10<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-5.4610"> </a></td><td>Vagina</td></tr><tr><td style="white-space:nowrap">5.11<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-5.4611"> </a></td><td>Beckenwand</td></tr><tr><td style="white-space:nowrap">5.12<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-5.4612"> </a></td><td>Becken sonstige</td></tr><tr><td style="white-space:nowrap">6.1<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-6.461"> </a></td><td>Schädel</td></tr><tr><td style="white-space:nowrap">6.2<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-6.462"> </a></td><td>Schädelbasis</td></tr><tr><td style="white-space:nowrap">6.3<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-6.463"> </a></td><td>Orbita (r, l)</td></tr><tr><td style="white-space:nowrap">6.4<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-6.464"> </a></td><td>Halswirbelsäule</td></tr><tr><td style="white-space:nowrap">6.5<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-6.465"> </a></td><td>Brustwirbelsäule</td></tr><tr><td style="white-space:nowrap">6.6<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-6.466"> </a></td><td>Lendenwirbelsäule</td></tr><tr><td style="white-space:nowrap">6.7<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-6.467"> </a></td><td>Sacrum /Coccygeum</td></tr><tr><td style="white-space:nowrap">6.8<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-6.468"> </a></td><td>Rippen (r, l)</td></tr><tr><td style="white-space:nowrap">6.9<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-6.469"> </a></td><td>Sternum</td></tr><tr><td style="white-space:nowrap">6.10<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-6.4610"> </a></td><td>Schulter (r, l)</td></tr><tr><td style="white-space:nowrap">6.11<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-6.4611"> </a></td><td>Oberarm (r, l)</td></tr><tr><td style="white-space:nowrap">6.12<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-6.4612"> </a></td><td>Unterarm (r, l)</td></tr><tr><td style="white-space:nowrap">6.13<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-6.4613"> </a></td><td>Hand (r, l)</td></tr><tr><td style="white-space:nowrap">6.14<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-6.4614"> </a></td><td>Becken (r, l)</td></tr><tr><td style="white-space:nowrap">6.15<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-6.4615"> </a></td><td>Hüfte (r, l)</td></tr><tr><td style="white-space:nowrap">6.16<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-6.4616"> </a></td><td>Oberschenkel (r, l)</td></tr><tr><td style="white-space:nowrap">6.17<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-6.4617"> </a></td><td>Unterschenkel (r, l)</td></tr><tr><td style="white-space:nowrap">6.18<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-6.4618"> </a></td><td>Fuß (r, l)</td></tr><tr><td style="white-space:nowrap">6.19<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-6.4619"> </a></td><td>Knochen sonstige</td></tr><tr><td style="white-space:nowrap">7.1<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-7.461"> </a></td><td>Kopf, Gesicht, Hals</td></tr><tr><td style="white-space:nowrap">7.2<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-7.462"> </a></td><td>obere Extremität ink* #lusive Schulter (r, l)</td></tr><tr><td style="white-space:nowrap">7.3<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-7.463"> </a></td><td>untere Extremität und Hüfte (r, l)</td></tr><tr><td style="white-space:nowrap">7.4<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-7.464"> </a></td><td>Thorax</td></tr><tr><td style="white-space:nowrap">7.5<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-7.465"> </a></td><td>Abdomen</td></tr><tr><td style="white-space:nowrap">7.6<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-7.466"> </a></td><td>Becken</td></tr><tr><td style="white-space:nowrap">7.7<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-7.467"> </a></td><td>Stammes o. n. A.</td></tr><tr><td style="white-space:nowrap">7.8<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-7.468"> </a></td><td>mehrere Bereiche überlappend</td></tr><tr><td style="white-space:nowrap">7.9<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-7.469"> </a></td><td>sonstige Weichteile o. n. A.</td></tr><tr><td style="white-space:nowrap">8.1<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-8.461"> </a></td><td>Ganzhaut</td></tr><tr><td style="white-space:nowrap">8.2<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-8.462"> </a></td><td>Teilbereiche</td></tr><tr><td style="white-space:nowrap">9.1<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-9.461"> </a></td><td>Cervikale Lymphknoten (r, l)</td></tr><tr><td style="white-space:nowrap">9.2<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-9.462"> </a></td><td>Supra-/infraclavikuläre Lymphknoten (r, l)</td></tr><tr><td style="white-space:nowrap">9.3<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-9.463"> </a></td><td>Axilläre Lymphknoten (r, l)</td></tr><tr><td style="white-space:nowrap">9.4<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-9.464"> </a></td><td>Retrosternale/sternale/Mammaria interna Lymphknoten</td></tr><tr><td style="white-space:nowrap">9.5<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-9.465"> </a></td><td>Mediastinale Lymphknoten</td></tr><tr><td style="white-space:nowrap">9.6<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-9.466"> </a></td><td>Hiläre Lymphknoten</td></tr><tr><td style="white-space:nowrap">9.7<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-9.467"> </a></td><td>Intraabdominale Lymphknoten (z. B. subphrenisch, perigastrisch, peripankreatisch, Leber-, Milzhilus)</td></tr><tr><td style="white-space:nowrap">9.8<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-9.468"> </a></td><td>Paraaortale/paracavale Lymphknoten</td></tr><tr><td style="white-space:nowrap">9.9<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-9.469"> </a></td><td>Retroperitoneale Lymphknoten</td></tr><tr><td style="white-space:nowrap">9.10<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-9.4610"> </a></td><td>Beckenlymphabfluss (r, l) (Iliakal commun, extern, intern, obturatorisch, präsakral)</td></tr><tr><td style="white-space:nowrap">9.11<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-9.4611"> </a></td><td>Inguinale Lymphknoten (r, l)</td></tr><tr><td style="white-space:nowrap">9.12<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-9.4612"> </a></td><td>Involved Node</td></tr><tr><td style="white-space:nowrap">9.13<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-9.4613"> </a></td><td>Involved Site</td></tr><tr><td style="white-space:nowrap">9.14<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-9.4614"> </a></td><td>Involved Field</td></tr><tr><td style="white-space:nowrap">9.15<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-9.4615"> </a></td><td>Sonstige Lymphknoten</td></tr><tr><td style="white-space:nowrap">10.1<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-10.461"> </a></td><td>Ganzkörperbestrahlung bei allogener Stammzelltransplantation</td></tr><tr><td style="white-space:nowrap">10.2<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-10.462"> </a></td><td>operative Zugangswege</td></tr><tr><td style="white-space:nowrap">10.3<a name="de-mii-cs-onko-strahlentherapie-zielgebiet-10.463"> </a></td><td>Sonstige, nicht genannte Zielgebiete</td></tr></table></div></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability">
+    <valueCode value="shareable"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability">
+    <valueCode value="publishable"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes"/>
+        <code value="package"/>
+        <display value="Package"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/resource-approvalDate">
+    <valueDate value="2026-01-03"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-topic">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"/>
+        <code value="C3262"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-author">
+    <valueContactDetail>
+      <telecom>
+        <system value="email"/>
+        <value value="thomas.debertshaeuser@charite.de"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-editor">
+    <valueContactDetail>
+      <name value="Taskforce Core Data Set"/>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-reviewer">
+    <valueContactDetail>
+      <name value="Interoperability Working Group"/>
+      <telecom>
+        <system value="url"/>
+        <value value="https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-reviewer">
+    <valueContactDetail>
+      <name value="National Steering Committee"/>
+      <telecom>
+        <system value="url"/>
+        <value value="https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-endorser">
+    <valueContactDetail>
+      <name value="Interoperability Working Group"/>
+      <telecom>
+        <system value="url"/>
+        <value value="https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-endorser">
+    <valueContactDetail>
+      <name value="National Steering Committee"/>
+      <telecom>
+        <system value="url"/>
+        <value value="https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm">
+    <valueCoding>
+      <system value="http://hl7.org/fhir/version-algorithm"/>
+      <code value="semver"/>
+      <display value="SemVer"/>
+    </valueCoding>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+    <valuePeriod>
+      <start value="2026"/>
+    </valuePeriod>
+  </extension>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet"/>
+  <version value="2027.0.0-ballot.rc1"/>
+  <name value="MII_CS_Onko_Strahlentherapie_Zielgebiet"/>
+  <title value="MII CS Onkologie Strahlentherapie Zielgebiet"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-09-03T07:02:13+00:00"/>
+  <publisher value="Medizininformatik Initiative"/>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de/"/>
+    </telecom>
+  </contact>
+  <description value="oBDS-spezifisches Codesystem für Klassifikation von Zielgebiet von Strahlentherapie"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <valueSet value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-zielgebiet"/>
+  <content value="complete"/>
+  <count value="98"/>
+  <concept>
+    <code value="1.1"/>
+    <display value="Ganzhirn (Neurokranium, inklusive Meningen)"/>
+  </concept>
+  <concept>
+    <code value="1.2"/>
+    <display value="Teilhirn (frontal/parietal/occipital/temporal/Kleinhirn)"/>
+  </concept>
+  <concept>
+    <code value="1.3"/>
+    <display value="Neuroachse/Rückenmark"/>
+  </concept>
+  <concept>
+    <code value="1.4"/>
+    <display value="Hypophyse"/>
+  </concept>
+  <concept>
+    <code value="1.5"/>
+    <display value="Hirn sonstiges"/>
+  </concept>
+  <concept>
+    <code value="2.1"/>
+    <display value="Auge (r, l)"/>
+  </concept>
+  <concept>
+    <code value="2.2"/>
+    <display value="Nase/Nasennebenhöhle"/>
+  </concept>
+  <concept>
+    <code value="2.3"/>
+    <display value="Mundhöhle inklusive Mundhöhlenvorhof"/>
+  </concept>
+  <concept>
+    <code value="2.4"/>
+    <display value="Ohr (r, l)"/>
+  </concept>
+  <concept>
+    <code value="2.5"/>
+    <display value="Speicheldrüse (r, l)"/>
+  </concept>
+  <concept>
+    <code value="2.6"/>
+    <display value="Pharynx"/>
+  </concept>
+  <concept>
+    <code value="2.7"/>
+    <display value="Nasopharynx"/>
+  </concept>
+  <concept>
+    <code value="2.8"/>
+    <display value="Oropharynx"/>
+  </concept>
+  <concept>
+    <code value="2.9"/>
+    <display value="Hypopharynx"/>
+  </concept>
+  <concept>
+    <code value="2.10"/>
+    <display value="Larynx"/>
+  </concept>
+  <concept>
+    <code value="2.11"/>
+    <display value="Schilddrüse"/>
+  </concept>
+  <concept>
+    <code value="2.12"/>
+    <display value="Kopf-Hals sonstige"/>
+  </concept>
+  <concept>
+    <code value="3.1"/>
+    <display value="Mamma als Ganzbrust (r, l)"/>
+  </concept>
+  <concept>
+    <code value="3.2"/>
+    <display value="Mamma als Teilbrust (r, l)"/>
+  </concept>
+  <concept>
+    <code value="3.3"/>
+    <display value="Thoraxwand, gegebenenfalls r, l"/>
+  </concept>
+  <concept>
+    <code value="3.4"/>
+    <display value="Lunge (r, l)"/>
+  </concept>
+  <concept>
+    <code value="3.5"/>
+    <display value="Ösophagus"/>
+  </concept>
+  <concept>
+    <code value="3.6"/>
+    <display value="Mediastinum (mediastinaler Lymphabfluss ist in Nummer 9 zu kodieren)"/>
+  </concept>
+  <concept>
+    <code value="3.7"/>
+    <display value="Thymus"/>
+  </concept>
+  <concept>
+    <code value="3.8"/>
+    <display value="Thorax sonstige"/>
+  </concept>
+  <concept>
+    <code value="4.1"/>
+    <display value="Magen"/>
+  </concept>
+  <concept>
+    <code value="4.2"/>
+    <display value="Pankreas"/>
+  </concept>
+  <concept>
+    <code value="4.3"/>
+    <display value="Leber, auch bei Teilbestrahlung"/>
+  </concept>
+  <concept>
+    <code value="4.4"/>
+    <display value="Milz"/>
+  </concept>
+  <concept>
+    <code value="4.5"/>
+    <display value="Niere (r, l)"/>
+  </concept>
+  <concept>
+    <code value="4.6"/>
+    <display value="Nebenniere (r, l)"/>
+  </concept>
+  <concept>
+    <code value="4.7"/>
+    <display value="Retroperitoneum (z. B. Sarkome)"/>
+  </concept>
+  <concept>
+    <code value="4.8"/>
+    <display value="Ureter (r, l)"/>
+  </concept>
+  <concept>
+    <code value="4.9"/>
+    <display value="Bauchwand (z. B. Sarkome)"/>
+  </concept>
+  <concept>
+    <code value="4.10"/>
+    <display value="Oberbauch"/>
+  </concept>
+  <concept>
+    <code value="4.11"/>
+    <display value="Gallengänge"/>
+  </concept>
+  <concept>
+    <code value="4.12"/>
+    <display value="Gallenblase"/>
+  </concept>
+  <concept>
+    <code value="4.13"/>
+    <display value="Abdomen sonstige"/>
+  </concept>
+  <concept>
+    <code value="5.1"/>
+    <display value="Rektum"/>
+  </concept>
+  <concept>
+    <code value="5.2"/>
+    <display value="Analbereich"/>
+  </concept>
+  <concept>
+    <code value="5.3"/>
+    <display value="Harnblase"/>
+  </concept>
+  <concept>
+    <code value="5.4"/>
+    <display value="Prostata"/>
+  </concept>
+  <concept>
+    <code value="5.5"/>
+    <display value="Hoden (r, l)"/>
+  </concept>
+  <concept>
+    <code value="5.6"/>
+    <display value="Penis"/>
+  </concept>
+  <concept>
+    <code value="5.7"/>
+    <display value="Uterus"/>
+  </concept>
+  <concept>
+    <code value="5.8"/>
+    <display value="Zervix"/>
+  </concept>
+  <concept>
+    <code value="5.9"/>
+    <display value="Vulva"/>
+  </concept>
+  <concept>
+    <code value="5.10"/>
+    <display value="Vagina"/>
+  </concept>
+  <concept>
+    <code value="5.11"/>
+    <display value="Beckenwand"/>
+  </concept>
+  <concept>
+    <code value="5.12"/>
+    <display value="Becken sonstige"/>
+  </concept>
+  <concept>
+    <code value="6.1"/>
+    <display value="Schädel"/>
+  </concept>
+  <concept>
+    <code value="6.2"/>
+    <display value="Schädelbasis"/>
+  </concept>
+  <concept>
+    <code value="6.3"/>
+    <display value="Orbita (r, l)"/>
+  </concept>
+  <concept>
+    <code value="6.4"/>
+    <display value="Halswirbelsäule"/>
+  </concept>
+  <concept>
+    <code value="6.5"/>
+    <display value="Brustwirbelsäule"/>
+  </concept>
+  <concept>
+    <code value="6.6"/>
+    <display value="Lendenwirbelsäule"/>
+  </concept>
+  <concept>
+    <code value="6.7"/>
+    <display value="Sacrum /Coccygeum"/>
+  </concept>
+  <concept>
+    <code value="6.8"/>
+    <display value="Rippen (r, l)"/>
+  </concept>
+  <concept>
+    <code value="6.9"/>
+    <display value="Sternum"/>
+  </concept>
+  <concept>
+    <code value="6.10"/>
+    <display value="Schulter (r, l)"/>
+  </concept>
+  <concept>
+    <code value="6.11"/>
+    <display value="Oberarm (r, l)"/>
+  </concept>
+  <concept>
+    <code value="6.12"/>
+    <display value="Unterarm (r, l)"/>
+  </concept>
+  <concept>
+    <code value="6.13"/>
+    <display value="Hand (r, l)"/>
+  </concept>
+  <concept>
+    <code value="6.14"/>
+    <display value="Becken (r, l)"/>
+  </concept>
+  <concept>
+    <code value="6.15"/>
+    <display value="Hüfte (r, l)"/>
+  </concept>
+  <concept>
+    <code value="6.16"/>
+    <display value="Oberschenkel (r, l)"/>
+  </concept>
+  <concept>
+    <code value="6.17"/>
+    <display value="Unterschenkel (r, l)"/>
+  </concept>
+  <concept>
+    <code value="6.18"/>
+    <display value="Fuß (r, l)"/>
+  </concept>
+  <concept>
+    <code value="6.19"/>
+    <display value="Knochen sonstige"/>
+  </concept>
+  <concept>
+    <code value="7.1"/>
+    <display value="Kopf, Gesicht, Hals"/>
+  </concept>
+  <concept>
+    <code value="7.2"/>
+    <display value="obere Extremität ink* #lusive Schulter (r, l)"/>
+  </concept>
+  <concept>
+    <code value="7.3"/>
+    <display value="untere Extremität und Hüfte (r, l)"/>
+  </concept>
+  <concept>
+    <code value="7.4"/>
+    <display value="Thorax"/>
+  </concept>
+  <concept>
+    <code value="7.5"/>
+    <display value="Abdomen"/>
+  </concept>
+  <concept>
+    <code value="7.6"/>
+    <display value="Becken"/>
+  </concept>
+  <concept>
+    <code value="7.7"/>
+    <display value="Stammes o. n. A."/>
+  </concept>
+  <concept>
+    <code value="7.8"/>
+    <display value="mehrere Bereiche überlappend"/>
+  </concept>
+  <concept>
+    <code value="7.9"/>
+    <display value="sonstige Weichteile o. n. A."/>
+  </concept>
+  <concept>
+    <code value="8.1"/>
+    <display value="Ganzhaut"/>
+  </concept>
+  <concept>
+    <code value="8.2"/>
+    <display value="Teilbereiche"/>
+  </concept>
+  <concept>
+    <code value="9.1"/>
+    <display value="Cervikale Lymphknoten (r, l)"/>
+  </concept>
+  <concept>
+    <code value="9.2"/>
+    <display value="Supra-/infraclavikuläre Lymphknoten (r, l)"/>
+  </concept>
+  <concept>
+    <code value="9.3"/>
+    <display value="Axilläre Lymphknoten (r, l)"/>
+  </concept>
+  <concept>
+    <code value="9.4"/>
+    <display value="Retrosternale/sternale/Mammaria interna Lymphknoten"/>
+  </concept>
+  <concept>
+    <code value="9.5"/>
+    <display value="Mediastinale Lymphknoten"/>
+  </concept>
+  <concept>
+    <code value="9.6"/>
+    <display value="Hiläre Lymphknoten"/>
+  </concept>
+  <concept>
+    <code value="9.7"/>
+    <display value="Intraabdominale Lymphknoten (z. B. subphrenisch, perigastrisch, peripankreatisch, Leber-, Milzhilus)"/>
+  </concept>
+  <concept>
+    <code value="9.8"/>
+    <display value="Paraaortale/paracavale Lymphknoten"/>
+  </concept>
+  <concept>
+    <code value="9.9"/>
+    <display value="Retroperitoneale Lymphknoten"/>
+  </concept>
+  <concept>
+    <code value="9.10"/>
+    <display value="Beckenlymphabfluss (r, l) (Iliakal commun, extern, intern, obturatorisch, präsakral)"/>
+  </concept>
+  <concept>
+    <code value="9.11"/>
+    <display value="Inguinale Lymphknoten (r, l)"/>
+  </concept>
+  <concept>
+    <code value="9.12"/>
+    <display value="Involved Node"/>
+  </concept>
+  <concept>
+    <code value="9.13"/>
+    <display value="Involved Site"/>
+  </concept>
+  <concept>
+    <code value="9.14"/>
+    <display value="Involved Field"/>
+  </concept>
+  <concept>
+    <code value="9.15"/>
+    <display value="Sonstige Lymphknoten"/>
+  </concept>
+  <concept>
+    <code value="10.1"/>
+    <display value="Ganzkörperbestrahlung bei allogener Stammzelltransplantation"/>
+  </concept>
+  <concept>
+    <code value="10.2"/>
+    <display value="operative Zugangswege"/>
+  </concept>
+  <concept>
+    <code value="10.3"/>
+    <display value="Sonstige, nicht genannte Zielgebiete"/>
+  </concept>
+</CodeSystem>

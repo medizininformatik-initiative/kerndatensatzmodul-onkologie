@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MedicationRequest xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-onko-tucatinib-option"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation|2027.0.0-ballot.rc1"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: MedicationRequest mii-exa-onko-tucatinib-option</b></p><a name="mii-exa-onko-tucatinib-option"> </a><a name="hcmii-exa-onko-tucatinib-option"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-therapieempfehlung-medikation.html">MII PR Onkologie Therapieempfehlung Medikation</a> version: 2027.0.0-ballot.rc1</p></div><p><b>status</b>: Active</p><p><b>intent</b>: Option</p><p><b>medication</b>: <span title="Codes:{http://fhir.de/CodeSystem/bfarm/atc L01EH03}">Tucatinib + Trastuzumab + Capecitabin</span></p><p><b>subject</b>: <a href="Patient-mii-exa-onko-molecular-board-patient.html">Maria Müller  Female, DoB: 1968-07-22 ( https://www.medizininformatik-initiative.de/fhir/sid/patienten#MTB-2024-001)</a></p><p><b>authoredOn</b>: 2024-01-16</p><p><b>reasonReference</b>: <a href="Condition-primaertumor-example.html">Condition Bösartige Neubildung: Brustdrüse, nicht näher bezeichnet</a></p><p><b>note</b>: </p><blockquote><div><p>Drittlinien-Kombination für Hirnmetastasen oder mehrfach resistente HER2+ Erkrankung</p>
+</div></blockquote></div>
+  </text>
+  <status value="active"/>
+  <intent value="option"/>
+  <medicationCodeableConcept>
+    <coding>
+      <system value="http://fhir.de/CodeSystem/bfarm/atc"/>
+      <code value="L01EH03"/>
+      <display value="Tucatinib"/>
+    </coding>
+    <text value="Tucatinib + Trastuzumab + Capecitabin"/>
+  </medicationCodeableConcept>
+  <subject>
+    <reference value="Patient/mii-exa-onko-molecular-board-patient"/>
+  </subject>
+  <authoredOn value="2024-01-16"/>
+  <reasonReference>
+    <reference value="Condition/primaertumor-example"/>
+  </reasonReference>
+  <note>
+    <text value="Drittlinien-Kombination für Hirnmetastasen oder mehrfach resistente HER2+ Erkrankung"/>
+  </note>
+</MedicationRequest>

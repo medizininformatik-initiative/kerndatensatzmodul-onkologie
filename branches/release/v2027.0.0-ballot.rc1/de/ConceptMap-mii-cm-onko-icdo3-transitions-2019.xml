@@ -1,0 +1,721 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="mii-cm-onko-icdo3-transitions-2019"/>
+  <meta>
+    <extension url="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-license">
+      <valueCode value="CC-BY-4.0"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/package-source">
+      <extension url="packageId">
+        <valueId value="de.medizininformatikinitiative.kerndatensatz.onkologie"/>
+      </extension>
+    </extension>
+    <extension url="version">
+      <valueString value="2026.0.3"/>
+    </extension>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableconceptmap"/>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishableconceptmap"/>
+  </meta>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ConceptMap mii-cm-onko-icdo3-transitions-2019</b></p><a name="de-mii-cm-onko-icdo3-transitions-2019"> </a><a name="de-hcmii-cm-onko-icdo3-transitions-2019"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profiles: <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-shareableconceptmap.html">CRMI Shareable ConceptMap</a>, <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-publishableconceptmap.html">CRMI Publishable ConceptMap</a></p></div><p>Mapping from <a href="ValueSet-mii-vs-onko-icdo3-morphologie-2014.html">MII VS Onkologie ICD-O-3 Morphologie 2014</a> to <a href="ValueSet-mii-vs-onko-icdo3-morphologie-2019.html">MII VS Onkologie ICD-O-3 Morphologie 2019</a></p><br/><p>Mapping from <code>http://terminology.hl7.org/CodeSystem/icd-o-3|2014</code> to <code>http://terminology.hl7.org/CodeSystem/icd-o-3|2019</code></p><table class="grid"><tr><td colspan="2"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan="2"><b>Target Concept Details</b></td><td><b>Comment</b></td></tr><tr><td colspan="2"><b>Codes</b> from http://terminology.hl7.org/CodeSystem/icd-o-3|2014</td><td/><td colspan="2"><b>Codes</b> from http://terminology.hl7.org/CodeSystem/icd-o-3|2019</td><td/></tr><tr><td style="border-right-width: 0px">8151/0</td><td style="border-left-width: 0px">Insulinom o.n.A.</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">8151/3</td><td style="border-left-width: 0px">Insulinom o.n.A.</td><td>Umklassifizierung in der Zweiten Revision (ICD-O-3.2).</td></tr><tr><td style="border-right-width: 0px">8152/1</td><td style="border-left-width: 0px">Glukagonom o.n.A.</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">8152/3</td><td style="border-left-width: 0px">Glukagonom</td><td>Umklassifizierung in der Zweiten Revision (ICD-O-3.2).</td></tr><tr><td style="border-right-width: 0px">8153/1</td><td style="border-left-width: 0px">Gastrinom o.n.A.</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">8153/3</td><td style="border-left-width: 0px">Malignes Gastrinom</td><td>Streichung in der Zweiten Revision (Aktualisierungsliste 29.01.2021): Zusammenlegung in das bereits bestehende Konzept 8153/3. Achtung: Die amtliche BfArM-ClaML-Fassung (und damit der MII-Terminologieserver, der sie exakt spiegelt) enthaelt 8153/1 in der 2019er-Version weiterhin - im Widerspruch zu Aktualisierungsliste und amtlicher Online-Fassung, die den Code streichen (BfArM-Meldung, beads dq9).</td></tr><tr><td style="border-right-width: 0px">8156/1</td><td style="border-left-width: 0px">Somatostatinom o.n.A.</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">8156/3</td><td style="border-left-width: 0px">Malignes Somatostatinom</td><td>Umklassifizierung in der Zweiten Revision (ICD-O-3.2).</td></tr><tr><td style="border-right-width: 0px">8240/1</td><td style="border-left-width: 0px">Karzinoidtumor fraglicher Dignität</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">8240/3</td><td style="border-left-width: 0px">Neuroendokriner Tumor o.n.A.</td><td>Umklassifizierung in der Zweiten Revision (ICD-O-3.2).</td></tr><tr><td style="border-right-width: 0px">8242/1</td><td style="border-left-width: 0px">Enterochromaffin-like-cell-Karzinoid o.n.A.</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">8242/3</td><td style="border-left-width: 0px">Maligner Enterochromaffin-like-cell-Tumor</td><td>Umklassifizierung in der Zweiten Revision (ICD-O-3.2).</td></tr><tr><td style="border-right-width: 0px">8336/0</td><td style="border-left-width: 0px">Hyalinisiertes trabekuläres Adenom</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">8336/1</td><td style="border-left-width: 0px">Hyalinisierender trabekulärer Tumor</td><td>Umklassifizierung in der Zweiten Revision (ICD-O-3.2).</td></tr><tr><td style="border-right-width: 0px">8444/1</td><td style="border-left-width: 0px">Klarzelliger zystischer Tumor mit Borderline-Malignität</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">8313/1</td><td style="border-left-width: 0px">Klarzelliger Borderline-Tumor</td><td>Umklassifizierung in der Zweiten Revision (ICD-O-3.2).</td></tr><tr><td style="border-right-width: 0px">8581/1</td><td style="border-left-width: 0px">Thymom vom Typ A o.n.A.</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">8581/3</td><td style="border-left-width: 0px">Thymom vom Typ A</td><td>Umklassifizierung in der Zweiten Revision (ICD-O-3.2).</td></tr><tr><td style="border-right-width: 0px">8582/1</td><td style="border-left-width: 0px">Thymom vom Typ AB o.n.A.</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">8582/3</td><td style="border-left-width: 0px">Thymom vom Typ AB</td><td>Umklassifizierung in der Zweiten Revision (ICD-O-3.2).</td></tr><tr><td style="border-right-width: 0px">8583/1</td><td style="border-left-width: 0px">Thymom vom Typ B1 o.n.A.</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">8583/3</td><td style="border-left-width: 0px">Thymom vom Typ B1</td><td>Umklassifizierung in der Zweiten Revision (ICD-O-3.2).</td></tr><tr><td style="border-right-width: 0px">8584/1</td><td style="border-left-width: 0px">Thymom vom Typ B2 o.n.A.</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">8584/3</td><td style="border-left-width: 0px">Thymom vom Typ B2</td><td>Umklassifizierung in der Zweiten Revision (ICD-O-3.2).</td></tr><tr><td style="border-right-width: 0px">8585/1</td><td style="border-left-width: 0px">Thymom vom Typ B3 o.n.A.</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">8585/3</td><td style="border-left-width: 0px">Thymom vom Typ B3</td><td>Umklassifizierung in der Zweiten Revision (ICD-O-3.2).</td></tr><tr><td style="border-right-width: 0px">8680/0</td><td style="border-left-width: 0px">Benignes Paragangliom</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">8680/3</td><td style="border-left-width: 0px">Paragangliom o.n.A.</td><td>Umklassifizierung in der Zweiten Revision (ICD-O-3.2).</td></tr><tr><td style="border-right-width: 0px">8680/1</td><td style="border-left-width: 0px">Paragangliom o.n.A.</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">8680/3</td><td style="border-left-width: 0px">Paragangliom o.n.A.</td><td>Umklassifizierung in der Zweiten Revision (ICD-O-3.2).</td></tr><tr><td style="border-right-width: 0px">8681/1</td><td style="border-left-width: 0px">Sympathisches Paragangliom</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">8681/3</td><td style="border-left-width: 0px">Sympathisches Paragangliom</td><td>Umklassifizierung in der Zweiten Revision (ICD-O-3.2).</td></tr><tr><td style="border-right-width: 0px">8682/1</td><td style="border-left-width: 0px">Parasympathisches Paragangliom</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">8682/3</td><td style="border-left-width: 0px">Parasympathisches Paragangliom</td><td>Umklassifizierung in der Zweiten Revision (ICD-O-3.2).</td></tr><tr><td style="border-right-width: 0px">8690/1</td><td style="border-left-width: 0px">Glomus-jugulare-Tumor o.n.A.</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">8690/3</td><td style="border-left-width: 0px">Paragangliom des Mittelohrs</td><td>Umklassifizierung in der Zweiten Revision (ICD-O-3.2).</td></tr><tr><td style="border-right-width: 0px">8691/1</td><td style="border-left-width: 0px">Glomus-aorticum-Tumor</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">8691/3</td><td style="border-left-width: 0px">Glomus-aorticum-Tumor</td><td>Umklassifizierung in der Zweiten Revision (ICD-O-3.2).</td></tr><tr><td style="border-right-width: 0px">8692/1</td><td style="border-left-width: 0px">Glomus-caroticum-Tumor</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">8692/3</td><td style="border-left-width: 0px">Paragangliom des Glomus caroticum</td><td>Umklassifizierung in der Zweiten Revision (ICD-O-3.2).</td></tr><tr><td style="border-right-width: 0px">8693/1</td><td style="border-left-width: 0px">Extraadrenales Paragangliom o.n.A.</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">8693/3</td><td style="border-left-width: 0px">Extraadrenales Paragangliom o.n.A.</td><td>Umklassifizierung in der Zweiten Revision (ICD-O-3.2).</td></tr><tr><td style="border-right-width: 0px">8700/0</td><td style="border-left-width: 0px">Phäochromozytom o.n.A.</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">8700/3</td><td style="border-left-width: 0px">Phäochromozytom o.n.A.</td><td>Umklassifizierung in der Zweiten Revision (ICD-O-3.2).</td></tr><tr><td style="border-right-width: 0px">8833/3</td><td style="border-left-width: 0px">Pigmentiertes Dermatofibrosarcoma protuberans</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">8833/1</td><td style="border-left-width: 0px">Pigmentiertes Dermatofibrosarcoma protuberans</td><td>Umklassifizierung in der Zweiten Revision (ICD-O-3.2).</td></tr><tr><td style="border-right-width: 0px">8841/1</td><td style="border-left-width: 0px">Angiomyxom</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">8841/0</td><td style="border-left-width: 0px">Angiomyxom o.n.A.</td><td>Umklassifizierung in der Zweiten Revision (ICD-O-3.2).</td></tr><tr><td style="border-right-width: 0px">8936/0</td><td style="border-left-width: 0px">Benigner gastrointestinaler Stromatumor</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">8936/3</td><td style="border-left-width: 0px">Gastrointestinaler Stromatumor</td><td>Umklassifizierung in der Zweiten Revision (ICD-O-3.2).</td></tr><tr><td style="border-right-width: 0px">8936/1</td><td style="border-left-width: 0px">Gastrointestinaler Stromatumor o.n.A.</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">8936/3</td><td style="border-left-width: 0px">Gastrointestinaler Stromatumor</td><td>Umklassifizierung in der Zweiten Revision (ICD-O-3.2).</td></tr><tr><td style="border-right-width: 0px">9055/1</td><td style="border-left-width: 0px">Zystisches Mesotheliom o.n.A</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">9055/0</td><td style="border-left-width: 0px">Peritoneale Einschlusszysten</td><td>Umklassifizierung in der Zweiten Revision (ICD-O-3.2).</td></tr><tr><td style="border-right-width: 0px">9133/1</td><td style="border-left-width: 0px">Epitheloides Hämangioendotheliom o.n.A</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">9133/3</td><td style="border-left-width: 0px">Epitheloides Hämangioendotheliom o.n.A.</td><td>Umklassifizierung in der Zweiten Revision (ICD-O-3.2).</td></tr><tr><td style="border-right-width: 0px">9150/0</td><td style="border-left-width: 0px">Benignes Hämangioperizytom</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">8815/0</td><td style="border-left-width: 0px">Solitärer fibröser Tumor/Hämangioperizytom, Grad 1</td><td>Umklassifizierung in der Zweiten Revision (ICD-O-3.2).</td></tr><tr><td style="border-right-width: 0px">9150/1</td><td style="border-left-width: 0px">Hämangioperizytom o.n.A.</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">8815/1</td><td style="border-left-width: 0px">Solitärer fibröser Tumor o.n.A.</td><td>Umklassifizierung in der Zweiten Revision (ICD-O-3.2).</td></tr><tr><td style="border-right-width: 0px">9150/3</td><td style="border-left-width: 0px">Malignes Hämangioperizytom</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">8815/3</td><td style="border-left-width: 0px">Maligner solitärer fibröser Tumor</td><td>Umklassifizierung in der Zweiten Revision (ICD-O-3.2).</td></tr><tr><td style="border-right-width: 0px">9230/0</td><td style="border-left-width: 0px">Chondroblastom o.n.A.</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">9230/1</td><td style="border-left-width: 0px">Chondroblastom o.n.A.</td><td>Umklassifizierung in der Zweiten Revision (ICD-O-3.2).</td></tr><tr><td style="border-right-width: 0px">9260/3</td><td style="border-left-width: 0px">Ewing-Sarkom</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">9364/3</td><td style="border-left-width: 0px">Ewing-Sarkom</td><td>Umklassifizierung in der Zweiten Revision (ICD-O-3.2).</td></tr><tr><td style="border-right-width: 0px">9341/1</td><td style="border-left-width: 0px">Odontogener Klarzelltumor</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">9341/3</td><td style="border-left-width: 0px">Klarzelliges odontogenes Karzinom</td><td>Umklassifizierung in der Zweiten Revision (ICD-O-3.2).</td></tr><tr><td style="border-right-width: 0px">9670/3</td><td style="border-left-width: 0px">Kleinzelliges lymphozytisches B-Zell-Lymphom o.n.A. (siehe )</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">9823/3</td><td style="border-left-width: 0px">Chronische lymphatische B-Zell-Leukämie/kleinzelliges lymphozytisches Lymphom</td><td>Umklassifizierung in der Zweiten Revision (ICD-O-3.2).</td></tr><tr><td style="border-right-width: 0px">9725/3</td><td style="border-left-width: 0px">Hydroa-vacciniform-artiges Lymphom</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">9725/1</td><td style="border-left-width: 0px">Hydroa-vacciniform-lymphoproliferative Erkrankung</td><td>Umklassifizierung in der Zweiten Revision (ICD-O-3.2).</td></tr><tr><td style="border-right-width: 0px">9728/3</td><td style="border-left-width: 0px">B-lymphoblastisches Lymphom vom Vorläuferzell-Typ (siehe )</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">9811/3</td><td style="border-left-width: 0px">B-lymphoblastische/s Leukämie/Lymphom o.n.A.</td><td>Umklassifizierung in der Zweiten Revision (ICD-O-3.2).</td></tr><tr><td style="border-right-width: 0px">9729/3</td><td style="border-left-width: 0px">T-lymphoblastisches Lymphom vom Vorläuferzell-Typ (siehe )</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">9837/3</td><td style="border-left-width: 0px">Vorläufer-T-lymphoblastische Leukämie</td><td>Umklassifizierung in der Zweiten Revision (ICD-O-3.2).</td></tr><tr><td style="border-right-width: 0px">9826/3</td><td style="border-left-width: 0px">Burkitt-Zell-Leukämie (siehe )</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">9687/3</td><td style="border-left-width: 0px">Burkitt-Lymphom o.n.A. (Hinw.: Einschließlich aller Varianten)</td><td>Umklassifizierung in der Zweiten Revision (ICD-O-3.2).</td></tr><tr><td style="border-right-width: 0px">9836/3</td><td style="border-left-width: 0px">Vorläufer-B-lymphoblastische Leukämie (siehe )</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">9811/3</td><td style="border-left-width: 0px">B-lymphoblastische/s Leukämie/Lymphom o.n.A.</td><td>Umklassifizierung in der Zweiten Revision (ICD-O-3.2).</td></tr><tr><td style="border-right-width: 0px">9971/3</td><td style="border-left-width: 0px">Polymorphe lymphoproliferative Krankheit nach Transplantation</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">9971/1</td><td style="border-left-width: 0px">Lymphoproliferative Krankheit nach Transplantation o.n.A. (siehe )</td><td>Umklassifizierung in der Zweiten Revision (ICD-O-3.2).</td></tr><tr><td style="border-right-width: 0px">8460/0</td><td style="border-left-width: 0px">Seröses papilläres Zystadenom</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#wider" title="wider">maps to wider concept</a></td><td style="border-right-width: 0px">8441/0</td><td style="border-left-width: 0px">Seröses Zystadenom o.n.A.</td><td>In der Zweiten Revision im breiteren Konzept aufgegangen.</td></tr><tr><td style="border-right-width: 0px">8462/1</td><td style="border-left-width: 0px">Serös-papillärer zystischer Tumor mit Borderline-Malignität</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#wider" title="wider">maps to wider concept</a></td><td style="border-right-width: 0px">8442/1</td><td style="border-left-width: 0px">Seröser Borderline-Tumor o.n.A.</td><td>In der Zweiten Revision im breiteren Konzept aufgegangen.</td></tr><tr><td style="border-right-width: 0px">8463/1</td><td style="border-left-width: 0px">Serös-papillärer Oberflächentumor mit Borderline-Malignität</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#wider" title="wider">maps to wider concept</a></td><td style="border-right-width: 0px">8442/1</td><td style="border-left-width: 0px">Seröser Borderline-Tumor o.n.A.</td><td>In der Zweiten Revision im breiteren Konzept aufgegangen.</td></tr><tr><td style="border-right-width: 0px">8471/0</td><td style="border-left-width: 0px">Muzinöses papilläres Zystadenom o.n.A.</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#wider" title="wider">maps to wider concept</a></td><td style="border-right-width: 0px">8470/0</td><td style="border-left-width: 0px">Muzinöses Zystadenom o.n.A.</td><td>In der Zweiten Revision im breiteren Konzept aufgegangen.</td></tr><tr><td style="border-right-width: 0px">8471/3</td><td style="border-left-width: 0px">Muzinöses papilläres Zystadenokarzinom</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#wider" title="wider">maps to wider concept</a></td><td style="border-right-width: 0px">8470/3</td><td style="border-left-width: 0px">Muzinöses Zystadenokarzinom o.n.A.</td><td>In der Zweiten Revision im breiteren Konzept aufgegangen.</td></tr><tr><td style="border-right-width: 0px">8473/1</td><td style="border-left-width: 0px">Muzinöses papilläres Zystadenom mit Borderline-Malignität</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#wider" title="wider">maps to wider concept</a></td><td style="border-right-width: 0px">8472/1</td><td style="border-left-width: 0px">Muzinöser zystischer Tumor mit Borderline-Malignität</td><td>In der Zweiten Revision im breiteren Konzept aufgegangen.</td></tr><tr><td style="border-right-width: 0px">9991/3</td><td style="border-left-width: 0px">Refraktäre Neutropenie</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#wider" title="wider">maps to wider concept</a></td><td style="border-right-width: 0px">9980/3</td><td style="border-left-width: 0px">Myelodysplastisches Syndrom mit Single-Lineage-Dysplasie</td><td>In der Zweiten Revision im breiteren Konzept aufgegangen.</td></tr><tr><td style="border-right-width: 0px">9992/3</td><td style="border-left-width: 0px">Refraktäre Thrombozytopenie</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#wider" title="wider">maps to wider concept</a></td><td style="border-right-width: 0px">9980/3</td><td style="border-left-width: 0px">Myelodysplastisches Syndrom mit Single-Lineage-Dysplasie</td><td>In der Zweiten Revision im breiteren Konzept aufgegangen.</td></tr><tr><td style="border-right-width: 0px; border-bottom-style: none">8120/1</td><td style="border-left-width: 0px; border-bottom-style: none">Urothelpapillom o.n.A.</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#narrower" title="narrower">narrower</a></td><td style="border-right-width: 0px">8120/0</td><td style="border-left-width: 0px">Urothelpapillom o.n.A.</td><td>Dignität ist im Einzelfall anhand der Befundlage zuzuordnen.</td></tr><tr><td style="border-right-width: 0px; border-top-style: none; border-bottom-style: none"/><td style="border-left-width: 0px; border-top-style: none; border-bottom-style: none"/><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#narrower" title="narrower">narrower</a></td><td style="border-right-width: 0px">8120/2</td><td style="border-left-width: 0px">Urothel-Carcinoma in situ</td><td>Dignität ist im Einzelfall anhand der Befundlage zuzuordnen.</td></tr><tr><td style="border-right-width: 0px; border-top-style: none"/><td style="border-top-style: none; border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#narrower" title="narrower">narrower</a></td><td style="border-right-width: 0px">8120/3</td><td style="border-left-width: 0px">Übergangszellkarzinom o.n.A.</td><td>Dignität ist im Einzelfall anhand der Befundlage zuzuordnen.</td></tr><tr><td style="border-right-width: 0px; border-bottom-style: none">8150/1</td><td style="border-left-width: 0px; border-bottom-style: none">Endokriner Pankreastumor o.n.A.</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#narrower" title="narrower">narrower</a></td><td style="border-right-width: 0px">8150/0</td><td style="border-left-width: 0px">Neuroendokrines Pankreas-Mikroadenom</td><td>Dignität ist im Einzelfall anhand der Befundlage zuzuordnen.</td></tr><tr><td style="border-right-width: 0px; border-top-style: none"/><td style="border-top-style: none; border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#narrower" title="narrower">narrower</a></td><td style="border-right-width: 0px">8150/3</td><td style="border-left-width: 0px">Neuroendokriner Pankreastumor, hormoninaktiv</td><td>Dignität ist im Einzelfall anhand der Befundlage zuzuordnen.</td></tr><tr><td style="border-right-width: 0px">8158/1</td><td style="border-left-width: 0px">Endokriner Tumor, hormonaktiv, o.n.A.</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#narrower" title="narrower">narrower</a></td><td style="border-right-width: 0px">8158/3</td><td style="border-left-width: 0px">ACTH-produzierender Tumor</td><td>Dignität ist im Einzelfall anhand der Befundlage zuzuordnen.</td></tr><tr><td style="border-right-width: 0px; border-bottom-style: none">8408/1</td><td style="border-left-width: 0px; border-bottom-style: none">Aggressives digitales papilläres Adenom</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#narrower" title="narrower">narrower</a></td><td style="border-right-width: 0px">8408/0</td><td style="border-left-width: 0px">Ekkrines papilläres Adenom</td><td>Dignität ist im Einzelfall anhand der Befundlage zuzuordnen.</td></tr><tr><td style="border-right-width: 0px; border-top-style: none"/><td style="border-top-style: none; border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#narrower" title="narrower">narrower</a></td><td style="border-right-width: 0px">8408/3</td><td style="border-left-width: 0px">Digitales papilläres Adenokarzinom</td><td>Dignität ist im Einzelfall anhand der Befundlage zuzuordnen.</td></tr><tr><td style="border-right-width: 0px; border-bottom-style: none">8965/0</td><td style="border-left-width: 0px">Nephrogenes Adenofibrom</td><td colspan="3" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">Kein Nachfolgekonzept in der Zweiten Revision identifiziert — gegen BfArM-Aktualisierungsliste prüfen.</td></tr><tr><td style="border-right-width: 0px; border-bottom-style: none">9530/1</td><td style="border-left-width: 0px">Meningeomatose o.n.A.</td><td colspan="3" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">Syndrom-Konzept (Meningeomatose) in der Zweiten Revision entfallen — die einzelnen Meningeome sind separat zu codieren (z. B. 9530/0).</td></tr><tr><td style="border-right-width: 0px; border-bottom-style: none">9540/1</td><td style="border-left-width: 0px">Neurofibromatose o.n.A.</td><td colspan="3" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">Syndrom-Konzept (Neurofibromatose) in der Zweiten Revision entfallen — die einzelnen Neurofibrome sind separat zu codieren (z. B. 9540/0).</td></tr></table></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability">
+    <valueCode value="shareable"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability">
+    <valueCode value="publishable"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes"/>
+        <code value="package"/>
+        <display value="Package"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/resource-approvalDate">
+    <valueDate value="2026-01-03"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-topic">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"/>
+        <code value="C3262"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-author">
+    <valueContactDetail>
+      <telecom>
+        <system value="email"/>
+        <value value="thomas.debertshaeuser@charite.de"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-editor">
+    <valueContactDetail>
+      <name value="Taskforce Core Data Set"/>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-reviewer">
+    <valueContactDetail>
+      <name value="Interoperability Working Group"/>
+      <telecom>
+        <system value="url"/>
+        <value value="https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-reviewer">
+    <valueContactDetail>
+      <name value="National Steering Committee"/>
+      <telecom>
+        <system value="url"/>
+        <value value="https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-endorser">
+    <valueContactDetail>
+      <name value="Interoperability Working Group"/>
+      <telecom>
+        <system value="url"/>
+        <value value="https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-endorser">
+    <valueContactDetail>
+      <name value="National Steering Committee"/>
+      <telecom>
+        <system value="url"/>
+        <value value="https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm">
+    <valueCoding>
+      <system value="http://hl7.org/fhir/version-algorithm"/>
+      <code value="semver"/>
+      <display value="SemVer"/>
+    </valueCoding>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+    <valuePeriod>
+      <start value="2026"/>
+    </valuePeriod>
+  </extension>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-icdo3-transitions-2019"/>
+  <version value="2027.0.0-ballot.rc1"/>
+  <name value="MII_CM_Onko_ICDO3_Transitions_2019"/>
+  <title value="MII CM Onko ICD-O-3 Code Changes 2014 to 2019"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-08-26"/>
+  <publisher value="Medizininformatik Initiative"/>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de/"/>
+    </telecom>
+  </contact>
+  <description value="Diese ConceptMap dokumentiert die Morphologie-Code-Änderungen der ICD-O-3 von der Ersten Revision (deutsche Ausgabe 2014, ICD-O-3.1) zur Zweiten Revision (2019, ICD-O-3.2): Dignitäts-Neubewertungen (z. B. GIST, Phäochromozytom, Thymome, Paragangliome), Entitäts-Zusammenlegungen (z. B. Ewing-Sarkom, Hämangioperizytom in solitärer fibröser Tumor) und entfallene Konzepte. Werkzeug für die Migration von Krebsregister-Bestandsdaten."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <purpose value="Migration von ICD-O-3-Morphologie-Codes der Ersten Revision (2014) auf die Zweite Revision (2019)."/>
+  <sourceCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-icdo3-morphologie-2014"/>
+  <targetCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-icdo3-morphologie-2019"/>
+  <group>
+    <source value="http://terminology.hl7.org/CodeSystem/icd-o-3"/>
+    <sourceVersion value="2014"/>
+    <target value="http://terminology.hl7.org/CodeSystem/icd-o-3"/>
+    <targetVersion value="2019"/>
+    <element>
+      <code value="8151/0"/>
+      <display value="Insulinom o.n.A."/>
+      <target>
+        <code value="8151/3"/>
+        <display value="Insulinom o.n.A."/>
+        <equivalence value="equivalent"/>
+        <comment value="Umklassifizierung in der Zweiten Revision (ICD-O-3.2)."/>
+      </target>
+    </element>
+    <element>
+      <code value="8152/1"/>
+      <display value="Glukagonom o.n.A."/>
+      <target>
+        <code value="8152/3"/>
+        <display value="Glukagonom"/>
+        <equivalence value="equivalent"/>
+        <comment value="Umklassifizierung in der Zweiten Revision (ICD-O-3.2)."/>
+      </target>
+    </element>
+    <element>
+      <code value="8153/1"/>
+      <display value="Gastrinom o.n.A."/>
+      <target>
+        <code value="8153/3"/>
+        <display value="Malignes Gastrinom"/>
+        <equivalence value="equivalent"/>
+        <comment value="Streichung in der Zweiten Revision (Aktualisierungsliste 29.01.2021): Zusammenlegung in das bereits bestehende Konzept 8153/3. Achtung: Die amtliche BfArM-ClaML-Fassung (und damit der MII-Terminologieserver, der sie exakt spiegelt) enthaelt 8153/1 in der 2019er-Version weiterhin - im Widerspruch zu Aktualisierungsliste und amtlicher Online-Fassung, die den Code streichen (BfArM-Meldung, beads dq9)."/>
+      </target>
+    </element>
+    <element>
+      <code value="8156/1"/>
+      <display value="Somatostatinom o.n.A."/>
+      <target>
+        <code value="8156/3"/>
+        <display value="Malignes Somatostatinom"/>
+        <equivalence value="equivalent"/>
+        <comment value="Umklassifizierung in der Zweiten Revision (ICD-O-3.2)."/>
+      </target>
+    </element>
+    <element>
+      <code value="8240/1"/>
+      <display value="Karzinoidtumor fraglicher Dignität"/>
+      <target>
+        <code value="8240/3"/>
+        <display value="Neuroendokriner Tumor o.n.A."/>
+        <equivalence value="equivalent"/>
+        <comment value="Umklassifizierung in der Zweiten Revision (ICD-O-3.2)."/>
+      </target>
+    </element>
+    <element>
+      <code value="8242/1"/>
+      <display value="Enterochromaffin-like-cell-Karzinoid o.n.A."/>
+      <target>
+        <code value="8242/3"/>
+        <display value="Maligner Enterochromaffin-like-cell-Tumor"/>
+        <equivalence value="equivalent"/>
+        <comment value="Umklassifizierung in der Zweiten Revision (ICD-O-3.2)."/>
+      </target>
+    </element>
+    <element>
+      <code value="8336/0"/>
+      <display value="Hyalinisiertes trabekuläres Adenom"/>
+      <target>
+        <code value="8336/1"/>
+        <display value="Hyalinisierender trabekulärer Tumor"/>
+        <equivalence value="equivalent"/>
+        <comment value="Umklassifizierung in der Zweiten Revision (ICD-O-3.2)."/>
+      </target>
+    </element>
+    <element>
+      <code value="8444/1"/>
+      <display value="Klarzelliger zystischer Tumor mit Borderline-Malignität"/>
+      <target>
+        <code value="8313/1"/>
+        <display value="Klarzelliger Borderline-Tumor"/>
+        <equivalence value="equivalent"/>
+        <comment value="Umklassifizierung in der Zweiten Revision (ICD-O-3.2)."/>
+      </target>
+    </element>
+    <element>
+      <code value="8581/1"/>
+      <display value="Thymom vom Typ A o.n.A."/>
+      <target>
+        <code value="8581/3"/>
+        <display value="Thymom vom Typ A"/>
+        <equivalence value="equivalent"/>
+        <comment value="Umklassifizierung in der Zweiten Revision (ICD-O-3.2)."/>
+      </target>
+    </element>
+    <element>
+      <code value="8582/1"/>
+      <display value="Thymom vom Typ AB o.n.A."/>
+      <target>
+        <code value="8582/3"/>
+        <display value="Thymom vom Typ AB"/>
+        <equivalence value="equivalent"/>
+        <comment value="Umklassifizierung in der Zweiten Revision (ICD-O-3.2)."/>
+      </target>
+    </element>
+    <element>
+      <code value="8583/1"/>
+      <display value="Thymom vom Typ B1 o.n.A."/>
+      <target>
+        <code value="8583/3"/>
+        <display value="Thymom vom Typ B1"/>
+        <equivalence value="equivalent"/>
+        <comment value="Umklassifizierung in der Zweiten Revision (ICD-O-3.2)."/>
+      </target>
+    </element>
+    <element>
+      <code value="8584/1"/>
+      <display value="Thymom vom Typ B2 o.n.A."/>
+      <target>
+        <code value="8584/3"/>
+        <display value="Thymom vom Typ B2"/>
+        <equivalence value="equivalent"/>
+        <comment value="Umklassifizierung in der Zweiten Revision (ICD-O-3.2)."/>
+      </target>
+    </element>
+    <element>
+      <code value="8585/1"/>
+      <display value="Thymom vom Typ B3 o.n.A."/>
+      <target>
+        <code value="8585/3"/>
+        <display value="Thymom vom Typ B3"/>
+        <equivalence value="equivalent"/>
+        <comment value="Umklassifizierung in der Zweiten Revision (ICD-O-3.2)."/>
+      </target>
+    </element>
+    <element>
+      <code value="8680/0"/>
+      <display value="Benignes Paragangliom"/>
+      <target>
+        <code value="8680/3"/>
+        <display value="Paragangliom o.n.A."/>
+        <equivalence value="equivalent"/>
+        <comment value="Umklassifizierung in der Zweiten Revision (ICD-O-3.2)."/>
+      </target>
+    </element>
+    <element>
+      <code value="8680/1"/>
+      <display value="Paragangliom o.n.A."/>
+      <target>
+        <code value="8680/3"/>
+        <display value="Paragangliom o.n.A."/>
+        <equivalence value="equivalent"/>
+        <comment value="Umklassifizierung in der Zweiten Revision (ICD-O-3.2)."/>
+      </target>
+    </element>
+    <element>
+      <code value="8681/1"/>
+      <display value="Sympathisches Paragangliom"/>
+      <target>
+        <code value="8681/3"/>
+        <display value="Sympathisches Paragangliom"/>
+        <equivalence value="equivalent"/>
+        <comment value="Umklassifizierung in der Zweiten Revision (ICD-O-3.2)."/>
+      </target>
+    </element>
+    <element>
+      <code value="8682/1"/>
+      <display value="Parasympathisches Paragangliom"/>
+      <target>
+        <code value="8682/3"/>
+        <display value="Parasympathisches Paragangliom"/>
+        <equivalence value="equivalent"/>
+        <comment value="Umklassifizierung in der Zweiten Revision (ICD-O-3.2)."/>
+      </target>
+    </element>
+    <element>
+      <code value="8690/1"/>
+      <display value="Glomus-jugulare-Tumor o.n.A."/>
+      <target>
+        <code value="8690/3"/>
+        <display value="Paragangliom des Mittelohrs"/>
+        <equivalence value="equivalent"/>
+        <comment value="Umklassifizierung in der Zweiten Revision (ICD-O-3.2)."/>
+      </target>
+    </element>
+    <element>
+      <code value="8691/1"/>
+      <display value="Glomus-aorticum-Tumor"/>
+      <target>
+        <code value="8691/3"/>
+        <display value="Glomus-aorticum-Tumor"/>
+        <equivalence value="equivalent"/>
+        <comment value="Umklassifizierung in der Zweiten Revision (ICD-O-3.2)."/>
+      </target>
+    </element>
+    <element>
+      <code value="8692/1"/>
+      <display value="Glomus-caroticum-Tumor"/>
+      <target>
+        <code value="8692/3"/>
+        <display value="Paragangliom des Glomus caroticum"/>
+        <equivalence value="equivalent"/>
+        <comment value="Umklassifizierung in der Zweiten Revision (ICD-O-3.2)."/>
+      </target>
+    </element>
+    <element>
+      <code value="8693/1"/>
+      <display value="Extraadrenales Paragangliom o.n.A."/>
+      <target>
+        <code value="8693/3"/>
+        <display value="Extraadrenales Paragangliom o.n.A."/>
+        <equivalence value="equivalent"/>
+        <comment value="Umklassifizierung in der Zweiten Revision (ICD-O-3.2)."/>
+      </target>
+    </element>
+    <element>
+      <code value="8700/0"/>
+      <display value="Phäochromozytom o.n.A."/>
+      <target>
+        <code value="8700/3"/>
+        <display value="Phäochromozytom o.n.A."/>
+        <equivalence value="equivalent"/>
+        <comment value="Umklassifizierung in der Zweiten Revision (ICD-O-3.2)."/>
+      </target>
+    </element>
+    <element>
+      <code value="8833/3"/>
+      <display value="Pigmentiertes Dermatofibrosarcoma protuberans"/>
+      <target>
+        <code value="8833/1"/>
+        <display value="Pigmentiertes Dermatofibrosarcoma protuberans"/>
+        <equivalence value="equivalent"/>
+        <comment value="Umklassifizierung in der Zweiten Revision (ICD-O-3.2)."/>
+      </target>
+    </element>
+    <element>
+      <code value="8841/1"/>
+      <display value="Angiomyxom"/>
+      <target>
+        <code value="8841/0"/>
+        <display value="Angiomyxom o.n.A."/>
+        <equivalence value="equivalent"/>
+        <comment value="Umklassifizierung in der Zweiten Revision (ICD-O-3.2)."/>
+      </target>
+    </element>
+    <element>
+      <code value="8936/0"/>
+      <display value="Benigner gastrointestinaler Stromatumor"/>
+      <target>
+        <code value="8936/3"/>
+        <display value="Gastrointestinaler Stromatumor"/>
+        <equivalence value="equivalent"/>
+        <comment value="Umklassifizierung in der Zweiten Revision (ICD-O-3.2)."/>
+      </target>
+    </element>
+    <element>
+      <code value="8936/1"/>
+      <display value="Gastrointestinaler Stromatumor o.n.A."/>
+      <target>
+        <code value="8936/3"/>
+        <display value="Gastrointestinaler Stromatumor"/>
+        <equivalence value="equivalent"/>
+        <comment value="Umklassifizierung in der Zweiten Revision (ICD-O-3.2)."/>
+      </target>
+    </element>
+    <element>
+      <code value="9055/1"/>
+      <display value="Zystisches Mesotheliom o.n.A"/>
+      <target>
+        <code value="9055/0"/>
+        <display value="Peritoneale Einschlusszysten"/>
+        <equivalence value="equivalent"/>
+        <comment value="Umklassifizierung in der Zweiten Revision (ICD-O-3.2)."/>
+      </target>
+    </element>
+    <element>
+      <code value="9133/1"/>
+      <display value="Epitheloides Hämangioendotheliom o.n.A"/>
+      <target>
+        <code value="9133/3"/>
+        <display value="Epitheloides Hämangioendotheliom o.n.A."/>
+        <equivalence value="equivalent"/>
+        <comment value="Umklassifizierung in der Zweiten Revision (ICD-O-3.2)."/>
+      </target>
+    </element>
+    <element>
+      <code value="9150/0"/>
+      <display value="Benignes Hämangioperizytom"/>
+      <target>
+        <code value="8815/0"/>
+        <display value="Solitärer fibröser Tumor/Hämangioperizytom, Grad 1"/>
+        <equivalence value="equivalent"/>
+        <comment value="Umklassifizierung in der Zweiten Revision (ICD-O-3.2)."/>
+      </target>
+    </element>
+    <element>
+      <code value="9150/1"/>
+      <display value="Hämangioperizytom o.n.A."/>
+      <target>
+        <code value="8815/1"/>
+        <display value="Solitärer fibröser Tumor o.n.A."/>
+        <equivalence value="equivalent"/>
+        <comment value="Umklassifizierung in der Zweiten Revision (ICD-O-3.2)."/>
+      </target>
+    </element>
+    <element>
+      <code value="9150/3"/>
+      <display value="Malignes Hämangioperizytom"/>
+      <target>
+        <code value="8815/3"/>
+        <display value="Maligner solitärer fibröser Tumor"/>
+        <equivalence value="equivalent"/>
+        <comment value="Umklassifizierung in der Zweiten Revision (ICD-O-3.2)."/>
+      </target>
+    </element>
+    <element>
+      <code value="9230/0"/>
+      <display value="Chondroblastom o.n.A."/>
+      <target>
+        <code value="9230/1"/>
+        <display value="Chondroblastom o.n.A."/>
+        <equivalence value="equivalent"/>
+        <comment value="Umklassifizierung in der Zweiten Revision (ICD-O-3.2)."/>
+      </target>
+    </element>
+    <element>
+      <code value="9260/3"/>
+      <display value="Ewing-Sarkom"/>
+      <target>
+        <code value="9364/3"/>
+        <display value="Ewing-Sarkom"/>
+        <equivalence value="equivalent"/>
+        <comment value="Umklassifizierung in der Zweiten Revision (ICD-O-3.2)."/>
+      </target>
+    </element>
+    <element>
+      <code value="9341/1"/>
+      <display value="Odontogener Klarzelltumor"/>
+      <target>
+        <code value="9341/3"/>
+        <display value="Klarzelliges odontogenes Karzinom"/>
+        <equivalence value="equivalent"/>
+        <comment value="Umklassifizierung in der Zweiten Revision (ICD-O-3.2)."/>
+      </target>
+    </element>
+    <element>
+      <code value="9670/3"/>
+      <display value="Kleinzelliges lymphozytisches B-Zell-Lymphom o.n.A. (siehe )"/>
+      <target>
+        <code value="9823/3"/>
+        <display value="Chronische lymphatische B-Zell-Leukämie/kleinzelliges lymphozytisches Lymphom"/>
+        <equivalence value="equivalent"/>
+        <comment value="Umklassifizierung in der Zweiten Revision (ICD-O-3.2)."/>
+      </target>
+    </element>
+    <element>
+      <code value="9725/3"/>
+      <display value="Hydroa-vacciniform-artiges Lymphom"/>
+      <target>
+        <code value="9725/1"/>
+        <display value="Hydroa-vacciniform-lymphoproliferative Erkrankung"/>
+        <equivalence value="equivalent"/>
+        <comment value="Umklassifizierung in der Zweiten Revision (ICD-O-3.2)."/>
+      </target>
+    </element>
+    <element>
+      <code value="9728/3"/>
+      <display value="B-lymphoblastisches Lymphom vom Vorläuferzell-Typ (siehe )"/>
+      <target>
+        <code value="9811/3"/>
+        <display value="B-lymphoblastische/s Leukämie/Lymphom o.n.A."/>
+        <equivalence value="equivalent"/>
+        <comment value="Umklassifizierung in der Zweiten Revision (ICD-O-3.2)."/>
+      </target>
+    </element>
+    <element>
+      <code value="9729/3"/>
+      <display value="T-lymphoblastisches Lymphom vom Vorläuferzell-Typ (siehe )"/>
+      <target>
+        <code value="9837/3"/>
+        <display value="Vorläufer-T-lymphoblastische Leukämie"/>
+        <equivalence value="equivalent"/>
+        <comment value="Umklassifizierung in der Zweiten Revision (ICD-O-3.2)."/>
+      </target>
+    </element>
+    <element>
+      <code value="9826/3"/>
+      <display value="Burkitt-Zell-Leukämie (siehe )"/>
+      <target>
+        <code value="9687/3"/>
+        <display value="Burkitt-Lymphom o.n.A. (Hinw.: Einschließlich aller Varianten)"/>
+        <equivalence value="equivalent"/>
+        <comment value="Umklassifizierung in der Zweiten Revision (ICD-O-3.2)."/>
+      </target>
+    </element>
+    <element>
+      <code value="9836/3"/>
+      <display value="Vorläufer-B-lymphoblastische Leukämie (siehe )"/>
+      <target>
+        <code value="9811/3"/>
+        <display value="B-lymphoblastische/s Leukämie/Lymphom o.n.A."/>
+        <equivalence value="equivalent"/>
+        <comment value="Umklassifizierung in der Zweiten Revision (ICD-O-3.2)."/>
+      </target>
+    </element>
+    <element>
+      <code value="9971/3"/>
+      <display value="Polymorphe lymphoproliferative Krankheit nach Transplantation"/>
+      <target>
+        <code value="9971/1"/>
+        <display value="Lymphoproliferative Krankheit nach Transplantation o.n.A. (siehe )"/>
+        <equivalence value="equivalent"/>
+        <comment value="Umklassifizierung in der Zweiten Revision (ICD-O-3.2)."/>
+      </target>
+    </element>
+    <element>
+      <code value="8460/0"/>
+      <display value="Seröses papilläres Zystadenom"/>
+      <target>
+        <code value="8441/0"/>
+        <display value="Seröses Zystadenom o.n.A."/>
+        <equivalence value="wider"/>
+        <comment value="In der Zweiten Revision im breiteren Konzept aufgegangen."/>
+      </target>
+    </element>
+    <element>
+      <code value="8462/1"/>
+      <display value="Serös-papillärer zystischer Tumor mit Borderline-Malignität"/>
+      <target>
+        <code value="8442/1"/>
+        <display value="Seröser Borderline-Tumor o.n.A."/>
+        <equivalence value="wider"/>
+        <comment value="In der Zweiten Revision im breiteren Konzept aufgegangen."/>
+      </target>
+    </element>
+    <element>
+      <code value="8463/1"/>
+      <display value="Serös-papillärer Oberflächentumor mit Borderline-Malignität"/>
+      <target>
+        <code value="8442/1"/>
+        <display value="Seröser Borderline-Tumor o.n.A."/>
+        <equivalence value="wider"/>
+        <comment value="In der Zweiten Revision im breiteren Konzept aufgegangen."/>
+      </target>
+    </element>
+    <element>
+      <code value="8471/0"/>
+      <display value="Muzinöses papilläres Zystadenom o.n.A."/>
+      <target>
+        <code value="8470/0"/>
+        <display value="Muzinöses Zystadenom o.n.A."/>
+        <equivalence value="wider"/>
+        <comment value="In der Zweiten Revision im breiteren Konzept aufgegangen."/>
+      </target>
+    </element>
+    <element>
+      <code value="8471/3"/>
+      <display value="Muzinöses papilläres Zystadenokarzinom"/>
+      <target>
+        <code value="8470/3"/>
+        <display value="Muzinöses Zystadenokarzinom o.n.A."/>
+        <equivalence value="wider"/>
+        <comment value="In der Zweiten Revision im breiteren Konzept aufgegangen."/>
+      </target>
+    </element>
+    <element>
+      <code value="8473/1"/>
+      <display value="Muzinöses papilläres Zystadenom mit Borderline-Malignität"/>
+      <target>
+        <code value="8472/1"/>
+        <display value="Muzinöser zystischer Tumor mit Borderline-Malignität"/>
+        <equivalence value="wider"/>
+        <comment value="In der Zweiten Revision im breiteren Konzept aufgegangen."/>
+      </target>
+    </element>
+    <element>
+      <code value="9991/3"/>
+      <display value="Refraktäre Neutropenie"/>
+      <target>
+        <code value="9980/3"/>
+        <display value="Myelodysplastisches Syndrom mit Single-Lineage-Dysplasie"/>
+        <equivalence value="wider"/>
+        <comment value="In der Zweiten Revision im breiteren Konzept aufgegangen."/>
+      </target>
+    </element>
+    <element>
+      <code value="9992/3"/>
+      <display value="Refraktäre Thrombozytopenie"/>
+      <target>
+        <code value="9980/3"/>
+        <display value="Myelodysplastisches Syndrom mit Single-Lineage-Dysplasie"/>
+        <equivalence value="wider"/>
+        <comment value="In der Zweiten Revision im breiteren Konzept aufgegangen."/>
+      </target>
+    </element>
+    <element>
+      <code value="8120/1"/>
+      <display value="Urothelpapillom o.n.A."/>
+      <target>
+        <code value="8120/0"/>
+        <display value="Urothelpapillom o.n.A."/>
+        <equivalence value="narrower"/>
+        <comment value="Dignität ist im Einzelfall anhand der Befundlage zuzuordnen."/>
+      </target>
+      <target>
+        <code value="8120/2"/>
+        <display value="Urothel-Carcinoma in situ"/>
+        <equivalence value="narrower"/>
+        <comment value="Dignität ist im Einzelfall anhand der Befundlage zuzuordnen."/>
+      </target>
+      <target>
+        <code value="8120/3"/>
+        <display value="Übergangszellkarzinom o.n.A."/>
+        <equivalence value="narrower"/>
+        <comment value="Dignität ist im Einzelfall anhand der Befundlage zuzuordnen."/>
+      </target>
+    </element>
+    <element>
+      <code value="8150/1"/>
+      <display value="Endokriner Pankreastumor o.n.A."/>
+      <target>
+        <code value="8150/0"/>
+        <display value="Neuroendokrines Pankreas-Mikroadenom"/>
+        <equivalence value="narrower"/>
+        <comment value="Dignität ist im Einzelfall anhand der Befundlage zuzuordnen."/>
+      </target>
+      <target>
+        <code value="8150/3"/>
+        <display value="Neuroendokriner Pankreastumor, hormoninaktiv"/>
+        <equivalence value="narrower"/>
+        <comment value="Dignität ist im Einzelfall anhand der Befundlage zuzuordnen."/>
+      </target>
+    </element>
+    <element>
+      <code value="8158/1"/>
+      <display value="Endokriner Tumor, hormonaktiv, o.n.A."/>
+      <target>
+        <code value="8158/3"/>
+        <display value="ACTH-produzierender Tumor"/>
+        <equivalence value="narrower"/>
+        <comment value="Dignität ist im Einzelfall anhand der Befundlage zuzuordnen."/>
+      </target>
+    </element>
+    <element>
+      <code value="8408/1"/>
+      <display value="Aggressives digitales papilläres Adenom"/>
+      <target>
+        <code value="8408/0"/>
+        <display value="Ekkrines papilläres Adenom"/>
+        <equivalence value="narrower"/>
+        <comment value="Dignität ist im Einzelfall anhand der Befundlage zuzuordnen."/>
+      </target>
+      <target>
+        <code value="8408/3"/>
+        <display value="Digitales papilläres Adenokarzinom"/>
+        <equivalence value="narrower"/>
+        <comment value="Dignität ist im Einzelfall anhand der Befundlage zuzuordnen."/>
+      </target>
+    </element>
+    <element>
+      <code value="8965/0"/>
+      <display value="Nephrogenes Adenofibrom"/>
+      <target>
+        <equivalence value="unmatched"/>
+        <comment value="Kein Nachfolgekonzept in der Zweiten Revision identifiziert — gegen BfArM-Aktualisierungsliste prüfen."/>
+      </target>
+    </element>
+    <element>
+      <code value="9530/1"/>
+      <display value="Meningeomatose o.n.A."/>
+      <target>
+        <equivalence value="unmatched"/>
+        <comment value="Syndrom-Konzept (Meningeomatose) in der Zweiten Revision entfallen — die einzelnen Meningeome sind separat zu codieren (z. B. 9530/0)."/>
+      </target>
+    </element>
+    <element>
+      <code value="9540/1"/>
+      <display value="Neurofibromatose o.n.A."/>
+      <target>
+        <equivalence value="unmatched"/>
+        <comment value="Syndrom-Konzept (Neurofibromatose) in der Zweiten Revision entfallen — die einzelnen Neurofibrome sind separat zu codieren (z. B. 9540/0)."/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

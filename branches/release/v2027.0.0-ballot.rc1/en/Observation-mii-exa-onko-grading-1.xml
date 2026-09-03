@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-onko-grading-1"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-grading|2027.0.0-ballot.rc1"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Observation mii-exa-onko-grading-1</b></p><a name="mii-exa-onko-grading-1"> </a><a name="hcmii-exa-onko-grading-1"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-grading.html">MII PR Onkologie Grading</a> version: 2027.0.0-ballot.rc1</p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 33732-9}">Histology grade [Identifier] in Cancer specimen</span></p><p><b>subject</b>: <a href="Patient-example.html">Erika Beispiel  Female, DoB: 1965-04-12</a></p><p><b>effective</b>: 2022-04-21</p><p><b>value</b>: <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-grading 3}">schlecht differenziert</span></p><p><b>specimen</b>: <a href="Specimen-mii-exa-onko-specimen-1.html">Specimen: accessionIdentifier = 357532265</a></p></div>
+  </text>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="laboratory"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="33732-9"/>
+      <display value="Histology grade [Identifier] in Cancer specimen"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/example"/>
+  </subject>
+  <effectiveDateTime value="2022-04-21"/>
+  <valueCodeableConcept>
+    <coding>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-grading"/>
+      <code value="3"/>
+    </coding>
+  </valueCodeableConcept>
+  <specimen>
+    <reference value="Specimen/mii-exa-onko-specimen-1"/>
+  </specimen>
+</Observation>

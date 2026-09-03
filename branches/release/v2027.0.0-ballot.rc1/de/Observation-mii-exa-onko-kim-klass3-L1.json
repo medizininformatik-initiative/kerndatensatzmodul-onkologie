@@ -1,0 +1,38 @@
+{
+  "resourceType" : "Observation",
+  "id" : "mii-exa-onko-kim-klass3-L1",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-l-kategorie|2027.0.0-ballot.rc1"]
+  },
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-onko-kim-klass3-L1</b></p><a name=\"de-mii-exa-onko-kim-klass3-L1\"> </a><a name=\"de-hcmii-exa-onko-kim-klass3-L1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-tnm-l-kategorie.html\">MII PR Onkologie TNM L-Kategorie</a> version: 2027.0.0-ballot.rc1</p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 395715009}\">Status of lymphatic (small vessel) invasion by tumor (observable entity)</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-kim-synth-patient.html\">Kim Musterperson  Female, DoB: 1956-03-14</a></p><p><b>effective</b>: 2021-10-15</p><p><b>value</b>: <span title=\"Codes:{https://www.uicc.org/resources/tnm L1}\">L1</span></p><p><b>method</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version 8}\">8. Auflage</span></p></div>"
+  },
+  "status" : "final",
+  "code" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "395715009",
+      "display" : "Status of lymphatic (small vessel) invasion by tumor (observable entity)"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/mii-exa-onko-kim-synth-patient"
+  },
+  "effectiveDateTime" : "2021-10-15",
+  "valueCodeableConcept" : {
+    "coding" : [{
+      "system" : "https://www.uicc.org/resources/tnm",
+      "code" : "L1",
+      "display" : "L1"
+    }]
+  },
+  "method" : {
+    "coding" : [{
+      "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version",
+      "code" : "8",
+      "display" : "8. Auflage"
+    }]
+  }
+}

@@ -1,0 +1,63 @@
+# mii-exa-onko-studienteilnahme - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
+
+* [**Inhaltsverzeichnis**](toc.md)
+* [**Artefaktübersicht**](artifacts.md)
+* **mii-exa-onko-studienteilnahme**
+
+## Beispiel Observation: mii-exa-onko-studienteilnahme
+
+-------
+
+**German**
+
+-------
+
+Profile: [MII PR Onkologie Studienteilnahme](StructureDefinition-mii-pr-onko-studienteilnahme.md) version: 2027.0.0-ballot.rc1
+
+**status**: Final
+
+**code**: Enrollment in clinical trial
+
+**subject**: [Erika Beispiel Female, DoB: 1965-04-12](Patient-example.md)
+
+**focus**: [Condition Bösartige Neubildung: Brustdrüse, nicht näher bezeichnet](Condition-primaertumor-example.md)
+
+**effective**: 2024-01-02
+
+**value**: Ja
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Observation",
+  "id" : "mii-exa-onko-studienteilnahme",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-studienteilnahme|2027.0.0-ballot.rc1"]
+  },
+  "status" : "final",
+  "code" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "709491003"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/example"
+  },
+  "focus" : [{
+    "reference" : "Condition/primaertumor-example"
+  }],
+  "effectiveDateTime" : "2024-01-02",
+  "valueCodeableConcept" : {
+    "coding" : [{
+      "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-studienteilnahme",
+      "code" : "J",
+      "display" : "Ja"
+    }]
+  }
+}
+
+```

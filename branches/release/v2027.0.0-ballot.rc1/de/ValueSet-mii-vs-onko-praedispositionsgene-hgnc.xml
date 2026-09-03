@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="mii-vs-onko-praedispositionsgene-hgnc"/>
+  <meta>
+    <extension url="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-license">
+      <valueCode value="CC-BY-4.0"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/package-source">
+      <extension url="packageId">
+        <valueId value="de.medizininformatikinitiative.kerndatensatz.onkologie"/>
+      </extension>
+      <extension url="version">
+        <valueString value="2026.0.3"/>
+      </extension>
+      <extension url="uri">
+        <valueUri value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko"/>
+      </extension>
+    </extension>
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"/>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"/>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-computablevalueset"/>
+  </meta>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-onko-praedispositionsgene-hgnc</b></p><a name="de-mii-vs-onko-praedispositionsgene-hgnc"> </a><a name="de-hcmii-vs-onko-praedispositionsgene-hgnc"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profiles: <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-shareablevalueset.html">Shareable ValueSet</a>, <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-shareablevalueset.html">CRMI Shareable ValueSet</a>, <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-publishablevalueset.html">CRMI Publishable ValueSet</a>, <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-computablevalueset.html">CRMI Computable ValueSet</a></p></div><ul><li>Include these codes as defined in <code>http://www.genenames.org/geneId</code><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>HGNC:427</td><td>ALK</td></tr><tr><td>HGNC:26837</td><td>AMER1</td></tr><tr><td>HGNC:583</td><td>APC</td></tr><tr><td>HGNC:18318</td><td>ASXL1</td></tr><tr><td>HGNC:795</td><td>ATM</td></tr><tr><td>HGNC:1058</td><td>BLM</td></tr><tr><td>HGNC:1076</td><td>BMPR1A</td></tr><tr><td>HGNC:1097</td><td>BRAF</td></tr><tr><td>HGNC:1100</td><td>BRCA1</td></tr><tr><td>HGNC:1101</td><td>BRCA2</td></tr><tr><td>HGNC:20473</td><td>BRIP1</td></tr><tr><td>HGNC:1149</td><td>BUB1B</td></tr><tr><td>HGNC:1541</td><td>CBL</td></tr><tr><td>HGNC:1833</td><td>CEBPA</td></tr><tr><td>HGNC:30794</td><td>CEP57</td></tr><tr><td>HGNC:16850</td><td>CTR9</td></tr><tr><td>HGNC:2718</td><td>DDB2</td></tr><tr><td>HGNC:17098</td><td>DICER1</td></tr><tr><td>HGNC:28648</td><td>DIS3L2</td></tr><tr><td>HGNC:2890</td><td>DKC1</td></tr><tr><td>HGNC:3309</td><td>ELANE</td></tr><tr><td>HGNC:5959</td><td>ELP1</td></tr><tr><td>HGNC:3374</td><td>EPAS1</td></tr><tr><td>HGNC:11529</td><td>EPCAM</td></tr><tr><td>HGNC:3433</td><td>ERCC1</td></tr><tr><td>HGNC:3434</td><td>ERCC2</td></tr><tr><td>HGNC:3435</td><td>ERCC3</td></tr><tr><td>HGNC:3436</td><td>ERCC4</td></tr><tr><td>HGNC:3437</td><td>ERCC5</td></tr><tr><td>HGNC:3495</td><td>ETV6</td></tr><tr><td>HGNC:3527</td><td>EZH2</td></tr><tr><td>HGNC:3582</td><td>FANCA</td></tr><tr><td>HGNC:3583</td><td>FANCB</td></tr><tr><td>HGNC:3584</td><td>FANCC</td></tr><tr><td>HGNC:3585</td><td>FANCD2</td></tr><tr><td>HGNC:3586</td><td>FANCE</td></tr><tr><td>HGNC:3587</td><td>FANCF</td></tr><tr><td>HGNC:3588</td><td>FANCG</td></tr><tr><td>HGNC:25568</td><td>FANCI</td></tr><tr><td>HGNC:20748</td><td>FANCL</td></tr><tr><td>HGNC:23168</td><td>FANCM</td></tr><tr><td>HGNC:4451</td><td>GPC3</td></tr><tr><td>HGNC:23694</td><td>GPR161</td></tr><tr><td>HGNC:5173</td><td>HRAS</td></tr><tr><td>HGNC:5382</td><td>IDH1</td></tr><tr><td>HGNC:5383</td><td>IDH2</td></tr><tr><td>HGNC:13176</td><td>IKZF1</td></tr><tr><td>HGNC:6407</td><td>KRAS</td></tr><tr><td>HGNC:6764</td><td>MAD2L2</td></tr><tr><td>HGNC:6913</td><td>MAX</td></tr><tr><td>HGNC:7010</td><td>MEN1</td></tr><tr><td>HGNC:7127</td><td>MLH1</td></tr><tr><td>HGNC:7325</td><td>MSH2</td></tr><tr><td>HGNC:7329</td><td>MSH6</td></tr><tr><td>HGNC:7652</td><td>NBN</td></tr><tr><td>HGNC:7765</td><td>NF1</td></tr><tr><td>HGNC:7989</td><td>NRAS</td></tr><tr><td>HGNC:14234</td><td>NSD1</td></tr><tr><td>HGNC:26144</td><td>PALB2</td></tr><tr><td>HGNC:8619</td><td>PAX5</td></tr><tr><td>HGNC:9143</td><td>PHOX2B</td></tr><tr><td>HGNC:8975</td><td>PIK3CA</td></tr><tr><td>HGNC:9122</td><td>PMS2</td></tr><tr><td>HGNC:9181</td><td>POLH</td></tr><tr><td>HGNC:9585</td><td>PTCH1</td></tr><tr><td>HGNC:9588</td><td>PTEN</td></tr><tr><td>HGNC:9644</td><td>PTPN11</td></tr><tr><td>HGNC:9817</td><td>RAD51</td></tr><tr><td>HGNC:9820</td><td>RAD51C</td></tr><tr><td>HGNC:9884</td><td>RB1</td></tr><tr><td>HGNC:9949</td><td>RECQL4</td></tr><tr><td>HGNC:9966</td><td>REST</td></tr><tr><td>HGNC:9967</td><td>RET</td></tr><tr><td>HGNC:25539</td><td>RFWD3</td></tr><tr><td>HGNC:10402</td><td>RPS19</td></tr><tr><td>HGNC:15888</td><td>RTEL1</td></tr><tr><td>HGNC:10471</td><td>RUNX1</td></tr><tr><td>HGNC:1348</td><td>SAMD9</td></tr><tr><td>HGNC:1349</td><td>SAMD9L</td></tr><tr><td>HGNC:10680</td><td>SDHA</td></tr><tr><td>HGNC:26034</td><td>SDHAF2</td></tr><tr><td>HGNC:10681</td><td>SDHB</td></tr><tr><td>HGNC:10682</td><td>SDHC</td></tr><tr><td>HGNC:10683</td><td>SDHD</td></tr><tr><td>HGNC:23845</td><td>SLX4</td></tr><tr><td>HGNC:6770</td><td>SMAD4</td></tr><tr><td>HGNC:11100</td><td>SMARCA4</td></tr><tr><td>HGNC:11103</td><td>SMARCB1</td></tr><tr><td>HGNC:11119</td><td>SMO</td></tr><tr><td>HGNC:11187</td><td>SOS1</td></tr><tr><td>HGNC:11389</td><td>STK11</td></tr><tr><td>HGNC:16466</td><td>SUFU</td></tr><tr><td>HGNC:11633</td><td>TCF3</td></tr><tr><td>HGNC:11727</td><td>TERC</td></tr><tr><td>HGNC:11730</td><td>TERT</td></tr><tr><td>HGNC:11824</td><td>TINF2</td></tr><tr><td>HGNC:26038</td><td>TMEM127</td></tr><tr><td>HGNC:11998</td><td>TP53</td></tr><tr><td>HGNC:16384</td><td>TRIM28</td></tr><tr><td>HGNC:7523</td><td>TRIM37</td></tr><tr><td>HGNC:12307</td><td>TRIP13</td></tr><tr><td>HGNC:12362</td><td>TSC1</td></tr><tr><td>HGNC:12363</td><td>TSC2</td></tr><tr><td>HGNC:25009</td><td>UBE2T</td></tr><tr><td>HGNC:12687</td><td>VHL</td></tr><tr><td>HGNC:12796</td><td>WT1</td></tr><tr><td>HGNC:12814</td><td>XPA</td></tr><tr><td>HGNC:12816</td><td>XPC</td></tr><tr><td>HGNC:12829</td><td>XRCC2</td></tr></table></li></ul></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability">
+    <valueCode value="shareable"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability">
+    <valueCode value="publishable"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability">
+    <valueCode value="computable"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes"/>
+        <code value="package"/>
+        <display value="Package"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/resource-approvalDate">
+    <valueDate value="2026-01-03"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-topic">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"/>
+        <code value="C3262"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-author">
+    <valueContactDetail>
+      <telecom>
+        <system value="email"/>
+        <value value="thomas.debertshaeuser@charite.de"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-editor">
+    <valueContactDetail>
+      <name value="Taskforce Core Data Set"/>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-reviewer">
+    <valueContactDetail>
+      <name value="Interoperability Working Group"/>
+      <telecom>
+        <system value="url"/>
+        <value value="https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-reviewer">
+    <valueContactDetail>
+      <name value="National Steering Committee"/>
+      <telecom>
+        <system value="url"/>
+        <value value="https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-endorser">
+    <valueContactDetail>
+      <name value="Interoperability Working Group"/>
+      <telecom>
+        <system value="url"/>
+        <value value="https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-endorser">
+    <valueContactDetail>
+      <name value="National Steering Committee"/>
+      <telecom>
+        <system value="url"/>
+        <value value="https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm">
+    <valueCoding>
+      <system value="http://hl7.org/fhir/version-algorithm"/>
+      <code value="semver"/>
+      <display value="SemVer"/>
+    </valueCoding>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+    <valuePeriod>
+      <start value="2026"/>
+    </valuePeriod>
+  </extension>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-praedispositionsgene-hgnc"/>
+  <version value="2027.0.0-ballot.rc1"/>
+  <name value="MII_VS_Onko_Praedispositionsgene_HGNC"/>
+  <title value="MII VS Onkologie Krebsprädispositionsgene HGNC"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-09-03T07:02:13+00:00"/>
+  <publisher value="Medizininformatik Initiative"/>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de/"/>
+    </telecom>
+  </contact>
+  <description value="Krebsprädispositionsgene der §65c-Liste (Manual Plus, Krebsprädispositionssyndrom und -gen) als HGNC-Gen-IDs, inkl. Expansion der Sammel-Einträge (FANCA-FANCW, IDH1/2, XP-Komplementationsgruppen). Begleitartefakt ohne Profil-Binding (Andockung an die genetischen Profile folgt mit dem Konzept für genetische Marker). Zytogenetische Aberrationen der Quell-Liste (11p13/11p15, Trisomien, ETV-RUNX1-Fusion) sind keine Gene und hier nicht enthalten. Projektseitige Code-Auflösung ohne Gewähr; fachliche Prüfung vor Produktivnutzung erforderlich."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://www.genenames.org/geneId"/>
+      <concept>
+        <code value="HGNC:427"/>
+        <display value="ALK"/>
+      </concept>
+      <concept>
+        <code value="HGNC:26837"/>
+        <display value="AMER1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:583"/>
+        <display value="APC"/>
+      </concept>
+      <concept>
+        <code value="HGNC:18318"/>
+        <display value="ASXL1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:795"/>
+        <display value="ATM"/>
+      </concept>
+      <concept>
+        <code value="HGNC:1058"/>
+        <display value="BLM"/>
+      </concept>
+      <concept>
+        <code value="HGNC:1076"/>
+        <display value="BMPR1A"/>
+      </concept>
+      <concept>
+        <code value="HGNC:1097"/>
+        <display value="BRAF"/>
+      </concept>
+      <concept>
+        <code value="HGNC:1100"/>
+        <display value="BRCA1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:1101"/>
+        <display value="BRCA2"/>
+      </concept>
+      <concept>
+        <code value="HGNC:20473"/>
+        <display value="BRIP1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:1149"/>
+        <display value="BUB1B"/>
+      </concept>
+      <concept>
+        <code value="HGNC:1541"/>
+        <display value="CBL"/>
+      </concept>
+      <concept>
+        <code value="HGNC:1833"/>
+        <display value="CEBPA"/>
+      </concept>
+      <concept>
+        <code value="HGNC:30794"/>
+        <display value="CEP57"/>
+      </concept>
+      <concept>
+        <code value="HGNC:16850"/>
+        <display value="CTR9"/>
+      </concept>
+      <concept>
+        <code value="HGNC:2718"/>
+        <display value="DDB2"/>
+      </concept>
+      <concept>
+        <code value="HGNC:17098"/>
+        <display value="DICER1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:28648"/>
+        <display value="DIS3L2"/>
+      </concept>
+      <concept>
+        <code value="HGNC:2890"/>
+        <display value="DKC1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:3309"/>
+        <display value="ELANE"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5959"/>
+        <display value="ELP1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:3374"/>
+        <display value="EPAS1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:11529"/>
+        <display value="EPCAM"/>
+      </concept>
+      <concept>
+        <code value="HGNC:3433"/>
+        <display value="ERCC1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:3434"/>
+        <display value="ERCC2"/>
+      </concept>
+      <concept>
+        <code value="HGNC:3435"/>
+        <display value="ERCC3"/>
+      </concept>
+      <concept>
+        <code value="HGNC:3436"/>
+        <display value="ERCC4"/>
+      </concept>
+      <concept>
+        <code value="HGNC:3437"/>
+        <display value="ERCC5"/>
+      </concept>
+      <concept>
+        <code value="HGNC:3495"/>
+        <display value="ETV6"/>
+      </concept>
+      <concept>
+        <code value="HGNC:3527"/>
+        <display value="EZH2"/>
+      </concept>
+      <concept>
+        <code value="HGNC:3582"/>
+        <display value="FANCA"/>
+      </concept>
+      <concept>
+        <code value="HGNC:3583"/>
+        <display value="FANCB"/>
+      </concept>
+      <concept>
+        <code value="HGNC:3584"/>
+        <display value="FANCC"/>
+      </concept>
+      <concept>
+        <code value="HGNC:3585"/>
+        <display value="FANCD2"/>
+      </concept>
+      <concept>
+        <code value="HGNC:3586"/>
+        <display value="FANCE"/>
+      </concept>
+      <concept>
+        <code value="HGNC:3587"/>
+        <display value="FANCF"/>
+      </concept>
+      <concept>
+        <code value="HGNC:3588"/>
+        <display value="FANCG"/>
+      </concept>
+      <concept>
+        <code value="HGNC:25568"/>
+        <display value="FANCI"/>
+      </concept>
+      <concept>
+        <code value="HGNC:20748"/>
+        <display value="FANCL"/>
+      </concept>
+      <concept>
+        <code value="HGNC:23168"/>
+        <display value="FANCM"/>
+      </concept>
+      <concept>
+        <code value="HGNC:4451"/>
+        <display value="GPC3"/>
+      </concept>
+      <concept>
+        <code value="HGNC:23694"/>
+        <display value="GPR161"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5173"/>
+        <display value="HRAS"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5382"/>
+        <display value="IDH1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:5383"/>
+        <display value="IDH2"/>
+      </concept>
+      <concept>
+        <code value="HGNC:13176"/>
+        <display value="IKZF1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:6407"/>
+        <display value="KRAS"/>
+      </concept>
+      <concept>
+        <code value="HGNC:6764"/>
+        <display value="MAD2L2"/>
+      </concept>
+      <concept>
+        <code value="HGNC:6913"/>
+        <display value="MAX"/>
+      </concept>
+      <concept>
+        <code value="HGNC:7010"/>
+        <display value="MEN1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:7127"/>
+        <display value="MLH1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:7325"/>
+        <display value="MSH2"/>
+      </concept>
+      <concept>
+        <code value="HGNC:7329"/>
+        <display value="MSH6"/>
+      </concept>
+      <concept>
+        <code value="HGNC:7652"/>
+        <display value="NBN"/>
+      </concept>
+      <concept>
+        <code value="HGNC:7765"/>
+        <display value="NF1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:7989"/>
+        <display value="NRAS"/>
+      </concept>
+      <concept>
+        <code value="HGNC:14234"/>
+        <display value="NSD1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:26144"/>
+        <display value="PALB2"/>
+      </concept>
+      <concept>
+        <code value="HGNC:8619"/>
+        <display value="PAX5"/>
+      </concept>
+      <concept>
+        <code value="HGNC:9143"/>
+        <display value="PHOX2B"/>
+      </concept>
+      <concept>
+        <code value="HGNC:8975"/>
+        <display value="PIK3CA"/>
+      </concept>
+      <concept>
+        <code value="HGNC:9122"/>
+        <display value="PMS2"/>
+      </concept>
+      <concept>
+        <code value="HGNC:9181"/>
+        <display value="POLH"/>
+      </concept>
+      <concept>
+        <code value="HGNC:9585"/>
+        <display value="PTCH1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:9588"/>
+        <display value="PTEN"/>
+      </concept>
+      <concept>
+        <code value="HGNC:9644"/>
+        <display value="PTPN11"/>
+      </concept>
+      <concept>
+        <code value="HGNC:9817"/>
+        <display value="RAD51"/>
+      </concept>
+      <concept>
+        <code value="HGNC:9820"/>
+        <display value="RAD51C"/>
+      </concept>
+      <concept>
+        <code value="HGNC:9884"/>
+        <display value="RB1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:9949"/>
+        <display value="RECQL4"/>
+      </concept>
+      <concept>
+        <code value="HGNC:9966"/>
+        <display value="REST"/>
+      </concept>
+      <concept>
+        <code value="HGNC:9967"/>
+        <display value="RET"/>
+      </concept>
+      <concept>
+        <code value="HGNC:25539"/>
+        <display value="RFWD3"/>
+      </concept>
+      <concept>
+        <code value="HGNC:10402"/>
+        <display value="RPS19"/>
+      </concept>
+      <concept>
+        <code value="HGNC:15888"/>
+        <display value="RTEL1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:10471"/>
+        <display value="RUNX1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:1348"/>
+        <display value="SAMD9"/>
+      </concept>
+      <concept>
+        <code value="HGNC:1349"/>
+        <display value="SAMD9L"/>
+      </concept>
+      <concept>
+        <code value="HGNC:10680"/>
+        <display value="SDHA"/>
+      </concept>
+      <concept>
+        <code value="HGNC:26034"/>
+        <display value="SDHAF2"/>
+      </concept>
+      <concept>
+        <code value="HGNC:10681"/>
+        <display value="SDHB"/>
+      </concept>
+      <concept>
+        <code value="HGNC:10682"/>
+        <display value="SDHC"/>
+      </concept>
+      <concept>
+        <code value="HGNC:10683"/>
+        <display value="SDHD"/>
+      </concept>
+      <concept>
+        <code value="HGNC:23845"/>
+        <display value="SLX4"/>
+      </concept>
+      <concept>
+        <code value="HGNC:6770"/>
+        <display value="SMAD4"/>
+      </concept>
+      <concept>
+        <code value="HGNC:11100"/>
+        <display value="SMARCA4"/>
+      </concept>
+      <concept>
+        <code value="HGNC:11103"/>
+        <display value="SMARCB1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:11119"/>
+        <display value="SMO"/>
+      </concept>
+      <concept>
+        <code value="HGNC:11187"/>
+        <display value="SOS1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:11389"/>
+        <display value="STK11"/>
+      </concept>
+      <concept>
+        <code value="HGNC:16466"/>
+        <display value="SUFU"/>
+      </concept>
+      <concept>
+        <code value="HGNC:11633"/>
+        <display value="TCF3"/>
+      </concept>
+      <concept>
+        <code value="HGNC:11727"/>
+        <display value="TERC"/>
+      </concept>
+      <concept>
+        <code value="HGNC:11730"/>
+        <display value="TERT"/>
+      </concept>
+      <concept>
+        <code value="HGNC:11824"/>
+        <display value="TINF2"/>
+      </concept>
+      <concept>
+        <code value="HGNC:26038"/>
+        <display value="TMEM127"/>
+      </concept>
+      <concept>
+        <code value="HGNC:11998"/>
+        <display value="TP53"/>
+      </concept>
+      <concept>
+        <code value="HGNC:16384"/>
+        <display value="TRIM28"/>
+      </concept>
+      <concept>
+        <code value="HGNC:7523"/>
+        <display value="TRIM37"/>
+      </concept>
+      <concept>
+        <code value="HGNC:12307"/>
+        <display value="TRIP13"/>
+      </concept>
+      <concept>
+        <code value="HGNC:12362"/>
+        <display value="TSC1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:12363"/>
+        <display value="TSC2"/>
+      </concept>
+      <concept>
+        <code value="HGNC:25009"/>
+        <display value="UBE2T"/>
+      </concept>
+      <concept>
+        <code value="HGNC:12687"/>
+        <display value="VHL"/>
+      </concept>
+      <concept>
+        <code value="HGNC:12796"/>
+        <display value="WT1"/>
+      </concept>
+      <concept>
+        <code value="HGNC:12814"/>
+        <display value="XPA"/>
+      </concept>
+      <concept>
+        <code value="HGNC:12816"/>
+        <display value="XPC"/>
+      </concept>
+      <concept>
+        <code value="HGNC:12829"/>
+        <display value="XRCC2"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

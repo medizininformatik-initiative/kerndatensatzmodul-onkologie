@@ -1,0 +1,64 @@
+{
+  "resourceType" : "Procedure",
+  "id" : "mii-exa-onko-melanom-exzision-oberarm",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-exzision|2027.0.0-ballot.rc1"]
+  },
+  "language" : "en",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Procedure mii-exa-onko-melanom-exzision-oberarm</b></p><a name=\"mii-exa-onko-melanom-exzision-oberarm\"> </a><a name=\"hcmii-exa-onko-melanom-exzision-oberarm\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-melanom-exzision.html\">MII PR Onko Melanom Exzision</a> version: 2027.0.0-ballot.rc1</p></div><p><b>MII EX Onko Operation Intention</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention K}\">kurativ</span></p><p><b>status</b>: Completed</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 387713003}\">Surgical procedure</span></p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/ops 5-894.06}, {http://snomed.info/sct 177281002}\">Lokale Exzision von erkranktem Gewebe an Haut und Unterhaut: Ohne primären Wundverschluss: Schulter und Axilla</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-melanom-bundle-patient.html\">Maria Melanom  (no stated gender), DoB Unknown</a></p><p><b>performed</b>: 2024-03-20</p><p><b>reasonReference</b>: <a href=\"Condition-mii-exa-onko-melanom-diagnose.html\">Condition Bösartiges Melanom der Haut, nicht näher bezeichnet</a></p><p><b>bodySite</b>: <span title=\"Codes:{http://snomed.info/sct 368208006}\">Left upper arm structure</span></p><p><b>outcome</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus R0}\">Kein Residualtumor</span></p></div>"
+  },
+  "extension" : [{
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention",
+        "code" : "K",
+        "display" : "kurativ"
+      }]
+    }
+  }],
+  "status" : "completed",
+  "category" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "387713003",
+      "display" : "Surgical procedure"
+    }]
+  },
+  "code" : {
+    "coding" : [{
+      "system" : "http://fhir.de/CodeSystem/bfarm/ops",
+      "version" : "2024",
+      "code" : "5-894.06",
+      "display" : "Lokale Exzision von erkranktem Gewebe an Haut und Unterhaut: Ohne primären Wundverschluss: Schulter und Axilla"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "177281002",
+      "display" : "Excision of melanoma (procedure)"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/mii-exa-onko-melanom-bundle-patient"
+  },
+  "performedDateTime" : "2024-03-20",
+  "reasonReference" : [{
+    "reference" : "Condition/mii-exa-onko-melanom-diagnose"
+  }],
+  "bodySite" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "368208006",
+      "display" : "Left upper arm structure"
+    }]
+  }],
+  "outcome" : {
+    "coding" : [{
+      "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus",
+      "code" : "R0",
+      "display" : "Kein Residualtumor"
+    }]
+  }
+}

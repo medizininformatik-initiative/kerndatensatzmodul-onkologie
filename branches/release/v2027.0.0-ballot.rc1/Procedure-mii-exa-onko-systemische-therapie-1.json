@@ -1,0 +1,62 @@
+{
+  "resourceType" : "Procedure",
+  "id" : "mii-exa-onko-systemische-therapie-1",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie|2027.0.0-ballot.rc1"]
+  },
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Procedure mii-exa-onko-systemische-therapie-1</b></p><a name=\"mii-exa-onko-systemische-therapie-1\"> </a><a name=\"hcmii-exa-onko-systemische-therapie-1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-systemische-therapie.html\">MII PR Onkologie Systemische Therapie</a> version: 2027.0.0-ballot.rc1</p></div><p><b>MII EX Onko Systemische Therapie Intention</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention K}\">kurativ</span></p><p><b>MII EX Onko Systemische Therapie Stellung zur OP</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-stellungzurop A}\">adjuvant</span></p><p><b>status</b>: Completed</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 367336001}\">Chemotherapy (procedure)</span></p><p><b>code</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ CH}, {http://fhir.de/CodeSystem/bfarm/ops 8-52}\">Chemotherapie</span></p><p><b>subject</b>: <a href=\"Patient-example.html\">Erika Beispiel  Female, DoB: 1965-04-12</a></p><p><b>performed</b>: 2021-12-04 --&gt; 2022-04-06</p><p><b>usedCode</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-protokolle AC}\">AC</span></p></div><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Procedure mii-exa-onko-systemische-therapie-1</b></p><a name=\"de-mii-exa-onko-systemische-therapie-1\"> </a><a name=\"de-hcmii-exa-onko-systemische-therapie-1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-systemische-therapie.html\">MII PR Onkologie Systemische Therapie</a> version: 2027.0.0-ballot.rc1</p></div><p><b>MII EX Onko Systemische Therapie Intention</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention K}\">kurativ</span></p><p><b>MII EX Onko Systemische Therapie Stellung zur OP</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-stellungzurop A}\">adjuvant</span></p><p><b>status</b>: Completed</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 367336001}\">Chemotherapy (procedure)</span></p><p><b>code</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ CH}, {http://fhir.de/CodeSystem/bfarm/ops 8-52}\">Chemotherapie</span></p><p><b>subject</b>: <a href=\"Patient-example.html\">Erika Beispiel  Female, DoB: 1965-04-12</a></p><p><b>performed</b>: 2021-12-04 --&gt; 2022-04-06</p><p><b>usedCode</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-protokolle AC}\">AC</span></p></div></div>"
+  },
+  "extension" : [{
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-intention",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention",
+        "code" : "K"
+      }]
+    }
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-stellungzurop",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-stellungzurop",
+        "code" : "A"
+      }]
+    }
+  }],
+  "status" : "completed",
+  "category" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "367336001",
+      "display" : "Chemotherapy (procedure)"
+    }]
+  },
+  "code" : {
+    "coding" : [{
+      "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ",
+      "code" : "CH"
+    },
+    {
+      "system" : "http://fhir.de/CodeSystem/bfarm/ops",
+      "version" : "2021",
+      "code" : "8-52"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/example"
+  },
+  "performedPeriod" : {
+    "start" : "2021-12-04",
+    "end" : "2022-04-06"
+  },
+  "usedCode" : [{
+    "coding" : [{
+      "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-protokolle",
+      "code" : "AC",
+      "display" : "AC"
+    }]
+  }]
+}
