@@ -5,7 +5,7 @@ All changes to this module are listed here. The complete, detailed release
 history is maintained in the German edition of this page; the current release
 cycle is translated in full below.
 
-### Changes v2027.0.0 (not yet released)
+### Changes v2027.0.0-ballot.rc1 (ballot candidate, not yet released)
 
 #### ⚠️ Breaking Changes
 
@@ -57,6 +57,8 @@ These changes may require adjustments in existing implementations:
 
 #### Further improvements
 
+- `fix` **CapabilityStatement canonical moved into the module's namespace**: the URL was `…/fhir/modul-onko/CapabilityStatement/metadata` — missing the `ext/` segment, which made it the only resource of this module outside its own canonical base, and ending in `metadata` rather than its `id`. It is now `…/fhir/ext/modul-onko/CapabilityStatement/mii-cps-onko-capabilitystatement`. Formally a canonical change; in practice no profile or instance references a CapabilityStatement canonical, and the old URL pointed nowhere, since nothing is published under `/fhir/modul-onko/`.
+- `fix` **SNOMED CT code for pure immunotherapy corrected** (GH #267): in `mii-cm-onko-therapie-typ-sct`, oBDS therapy type `IM` (Immun-/Antikörpertherapie) mapped to `897713009` "Antineoplastic chemoimmunotherapy" — asserting a chemotherapy that does not take place in pure immunotherapy. The target is now `76334006` "Immunotherapy (procedure)". `897713009` remains correct for the combinations `CI` and `CIZ`. The ConceptMap is `experimental`, dates from 2024 and is not referenced by any profile, so no migration is required.
 - `documentation` **LOINC-SNOMED anchors for the tumour markers**: verified for 23 of 28 markers (seven newly determined). For gastrin, calcitonin, M-protein, IgA and IgM no "Measurement of …" grouper exists in the ontology.
 - `documentation` **UICC code system: cross-edition union documented as a deliberate decision** — the edition in use is carried as a separate data element (TNM version, oBDS 8.2); edition-specific validation is planned as a later stage.
 - `fix` **Organ modules aligned with the official oBDS numbering** (basisdatensatz.de and oBDS XSD v3.0.5): the numbers are flat (M1–M8, KR1–KR10, P1–P9, MM1–MM4); the earlier hierarchical entries do not exist officially. Misassignments corrected (PSA was P1, officially P7; Clavien-Dindo P5, officially P9) and missing fields added.

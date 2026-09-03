@@ -32,7 +32,11 @@ RuleSet: SupportSearchParam (name, canonical, type, expectation)
 Instance: mii-cps-onko-capabilitystatement
 InstanceOf: CapabilityStatement
 Usage: #definition
-* url = "https://www.medizininformatik-initiative.de/fhir/modul-onko/CapabilityStatement/metadata"
+// Canonical korrigiert: stand bis 2027.0.0-ballot.rc1 auf
+// .../fhir/modul-onko/CapabilityStatement/metadata — ohne "ext/" und damit als
+// einzige Ressource des Moduls ausserhalb unseres Namensraums; zudem endete sie
+// auf "metadata" statt auf der id.
+* url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CapabilityStatement/mii-cps-onko-capabilitystatement"
 * insert Version
 * insert OnkoCRMICapabilityStatement
 * name = "MII_CPS_Onkology_CapabilityStatement"

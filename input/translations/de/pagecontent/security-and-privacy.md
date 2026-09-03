@@ -55,23 +55,33 @@ Sie ihn wörtlich):
 > Datenschutzaspekte aufwirft, und stellt keine modulspezifischen Sicherheits-
 > oder Datenschutzanforderungen an Implementierende.
 
-<!-- ILLUSTRATIVE-EXAMPLE — Abschnitt entscheiden und die Beispiel-Box unten
-     (in dieser Datei UND der englischen Quellseite) vor dem ersten Release
-     entfernen; der Konventions-Check (M11) lässt einen Release-Branch damit
-     fehlschlagen. -->
-> **Illustratives Beispiel — vor dem ersten Release entfernen.** So füllt ein
-> anderes KDS-Modul diesen Abschnitt (*Person*): die Patienten-Identifikatoren
-> sind Pseudonyme der Treuhandstelle; Systeme dürfen ein Record Linkage nicht
-> zur Re-Identifizierung führen lassen, und der Geltungsbereich eines
-> Pseudonyms (standortweit vs. projektspezifisch) ist beim Zusammenführen von
-> Daten zu respektieren.
-{: .ig-highlight .ig-highlight-orange}
+Dieses Modul führt Datenkategorien, die über den übergreifenden Rahmen hinaus
+eigene Betrachtung verlangen:
 
-> [TODO: Nennen Sie die spezifischen Aspekte Ihres Moduls — die geführten
-> Datenkategorien und ihre Sensibilität, Risiken, die eine Pseudonymisierung
-> auf Profilebene nicht abdeckt, sowie sicherheits- oder datenschutzbezogene
-> SHALL/SHOULD/MAY-Anforderungen dieses Moduls an Implementierende, jeweils mit
-> dem adressierten Risiko. Benennen Sie verbleibende Risiken, die im
-> Systemdesign, im Betrieb oder per Policy behandelt werden müssen — oder
-> übernehmen Sie den Standardtext oben, wenn es keine gibt.]
-{: .ig-highlight .ig-highlight-grey}
+- **Keimbahnbefunde mit Drittbetroffenheit.** Prädispositionssyndrome
+  ([ORPHA](ValueSet-mii-vs-onko-praedispositionssyndrome-orpha.html)) und
+  Prädispositionsgene ([HGNC](ValueSet-mii-vs-onko-praedispositionsgene-hgnc.html))
+  sind Aussagen über Keimbahnvarianten. Sie betreffen Blutsverwandte, die in die
+  Datennutzung nie eingewilligt haben. Eine Pseudonymisierung auf Profilebene
+  schützt diese Dritten nicht.
+- **Genetische Varianten sind für sich identifizierend.** Ein hinreichend
+  spezifisches Variantenprofil
+  ([Genetische Variante](StructureDefinition-mii-pr-onko-genetische-variante.html))
+  bleibt auch nach Pseudonymisierung rückführbar. Das Risiko liegt im Datum
+  selbst, nicht in der Verknüpfung.
+- **Re-Identifizierung über seltene Entitäten.** Die Kombination aus seltener
+  Tumorentität (ICD-O-3-Morphologie), Alter und Region kann in kleinen Kohorten
+  auf eine Person zulaufen, ohne dass ein Identifikator beteiligt ist.
+- **Sterbedaten** (oBDS-Kapitel 20) und Angaben zur Studienteilnahme
+  (Kapitel 24) verbinden das Modul mit weiteren Kontexten.
+
+Daraus folgen Anforderungen an Implementierende:
+
+- Systeme **SOLLTEN** Keimbahn- und Prädispositionsbefunde einer eigenen
+  Zugriffsentscheidung unterwerfen, statt sie mit dem übrigen onkologischen
+  Datensatz gemeinsam freizugeben.
+- Auswertungen über seltene Entitäten **SOLLTEN** vor der Herausgabe auf
+  Zellgrößen geprüft werden; die Profile dieses Moduls leisten das nicht.
+- Die genannten Risiken sind **nicht** auf Profilebene lösbar. Sie sind im
+  Systemdesign, im Betrieb und über Nutzungsordnungen zu behandeln — dieses
+  Modul beschreibt die Struktur der Daten, nicht die Bedingungen ihrer Nutzung.

@@ -2,7 +2,7 @@ Instance: mii-cm-onko-intention-sct
 InstanceOf: ConceptMap
 Usage: #definition
 * insert OnkoCRMIConceptMap
-* version = "2025.1.0" 
+* insert Version
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-intention-sct"
 * name = "MII CM Onko Intention SNOMED Mapping"
 * title = "MII CM Onko Intention SNOMED Mapping"

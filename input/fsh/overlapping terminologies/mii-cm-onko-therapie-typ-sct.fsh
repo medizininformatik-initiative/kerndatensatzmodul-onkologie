@@ -31,7 +31,13 @@ Usage: #definition
 
 * group[=].element[+].code = #IM
 * group[=].element[=].display = "Immun-/Antikörpertherapie"
-* group[=].element[=].target.code = #897713009
+// Korrektur (GH #267, kein Breaking Change — die Map ist experimental und wird
+// von keinem Profil referenziert): stand bis 2027.0.0-ballot.rc1 auf 897713009
+// "Antineoplastic chemoimmunotherapy" — das behauptete eine Chemotherapie, die
+// bei reiner Immun-/Antikoerpertherapie nicht stattfindet. Das danebenstehende
+// Display "Immunotherapy (procedure)" ist die FSN von 76334006 und hat den
+// Vertipper verraten. 897713009 bleibt fuer die Kombinationen CI und CIZ richtig.
+* group[=].element[=].target.code = #76334006
 * group[=].element[=].target.display = "Immunotherapy (procedure)"
 * group[=].element[=].target.equivalence = #equivalent
 

@@ -19,7 +19,7 @@ CapabilityStatement-Instanz unter
 angegeben werden.
 
 Canonical:
-`https://www.medizininformatik-initiative.de/fhir/modul-onko/CapabilityStatement/metadata`
+`https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CapabilityStatement/mii-cps-onko-capabilitystatement`
 
 Artefaktseite:
 [CapabilityStatement des Moduls Onkologie](CapabilityStatement-mii-cps-onko-capabilitystatement.html)

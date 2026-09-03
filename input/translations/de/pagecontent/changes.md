@@ -1,7 +1,7 @@
 
 Hier sind alle Änderungen aufgelistet. 
 
-## Änderungen v2027.0.0 (noch nicht veröffentlicht)
+## Änderungen v2027.0.0-ballot.rc1 (Ballot-Kandidat, noch nicht veröffentlicht)
 
 ### ⚠️ Breaking Changes
 
@@ -52,6 +52,8 @@ Diese Änderungen erfordern möglicherweise Anpassungen in bestehenden Implement
 
 ### Weitere Verbesserungen
 
+- `fix` **CapabilityStatement-Canonical in den Namensraum des Moduls gezogen**: Die URL lautete `…/fhir/modul-onko/CapabilityStatement/metadata` — ohne das Segment `ext/` und damit als einzige Ressource des Moduls außerhalb des eigenen Canonical, zudem endend auf `metadata` statt auf der `id`. Sie lautet jetzt `…/fhir/ext/modul-onko/CapabilityStatement/mii-cps-onko-capabilitystatement`. Formal eine Canonical-Änderung; praktisch referenziert kein Profil und keine Instanz ein CapabilityStatement-Canonical, und die alte URL zeigte ins Leere, weil unter `/fhir/modul-onko/` nichts publiziert wird.
+- `fix` **SNOMED-CT-Code für reine Immuntherapie korrigiert** (GH #267): In `mii-cm-onko-therapie-typ-sct` bildete der oBDS-Therapietyp `IM` (Immun-/Antikörpertherapie) auf `897713009` „Antineoplastic chemoimmunotherapy" ab — das behauptet eine Chemotherapie, die bei reiner Immuntherapie nicht stattfindet. Ziel ist jetzt `76334006` „Immunotherapy (procedure)". Für die Kombinationen `CI` und `CIZ` bleibt `897713009` richtig. Die ConceptMap ist `experimental`, stammt von 2024 und wird von keinem Profil referenziert — eine Migration ist daher nicht nötig.
 - `documentation` **LOINC-SNOMED-Anker der Tumormarker**: für 23 der 28 Marker ist das Observable-Konzept der LOINC-SNOMED-Ontologie verifiziert (sieben davon neu ermittelt). Für Gastrin, Calcitonin, M-Protein, IgA und IgM existiert dort kein „Measurement of …"-Grouper — ein Content-Request an SNOMED International wäre nötig. Methodischer Hinweis auf der Seite: Die Konzepte liegen in einer eigenen Terminologieserver-Branch und sind über die Standard-Expansion nicht auffindbar; eine naive Textsuche liefert für ACTH den Corticotropin releasing factor und für TSH den Rezeptor-Antikörper.
 - `documentation` **UICC-CodeSystem: Auflagen-Union als bewusste Entscheidung dokumentiert** — das CodeSystem führt die Codes auflagenübergreifend (8. Auflage plus Ergänzungen der 9.), die verwendete Auflage steht als eigenes Datenelement daneben (TNM-Version, oBDS 8.2). Eine auflagenscharfe Validierung nach dem Muster der ATC-Jahresversionen ist als spätere Ausbaustufe vorgesehen.
 - `fix` **Organmodule auf die amtliche oBDS-Nummerierung** (basisdatensatz.de-Feldkatalog und oBDS-XSD v3.0.5 als Quelle): Die Nummern sind flach (Mamma M1–M8, Kolorektal KR1–KR10, Prostata P1–P9, Melanom MM1–MM4); die früheren hierarchischen Angaben (P4.1, M2.1.1 …) existieren amtlich nicht. Korrigiert wurden das Organmodul-Logical-Model, die oBDS-Mappings aller 30 Organprofile und die zugehörigen Seiten. Dabei behobene Fehlzuordnungen: PSA war als P1 geführt (amtlich P7), Clavien-Dindo als P5 (amtlich P9), „Mamma-Operationen" als M4 (amtlich Her2neu-Status). Ergänzt wurden bislang fehlende Felder: Her2neu (M4), Tumorgrößen (M7/M8), RAS-Mutation (KR10), Anlass Gleason (P2), Datum der Stanzen (P3), Datum PSA (P8) sowie das im XSD zentralisierte `Modul_Allgemein` (Sozialdienst-, Psychoonkologie- und Studienkontakt).
