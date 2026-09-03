@@ -6,8 +6,6 @@
 
 ## Guidance for Researchers
 
-> **Optional page (0..1).** The KDS module menu lists this page as **optional**. Decide for your module: **keep** it — fill it in and delete this banner and the `OPTIONAL-PAGE` marker comment (in this file AND the German mirror) — or **remove** it, following the per-entry procedure in [`docs/optional-pages.md`](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/blob/main/docs/optional-pages.md) of this repository. A release must not ship with this banner (convention check M9).
-
 ### Guidance for Researchers
 
 Guidance for researchers using the data of the **Oncology** module for research purposes — e.g. which data elements are relevant to which research questions, and how they are to be interpreted.
