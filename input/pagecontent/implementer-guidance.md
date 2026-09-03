@@ -86,7 +86,7 @@ cannot diverge from the artifacts.
 
 **Distribution of equivalence levels (all ConceptMaps):**
 
-{% sql SELECT Relationship, count(*) AS Count FROM ConceptMappings GROUP BY Relationship ORDER BY Count DESC %}
+{% sql SELECT Relationship, '`' || count(*) || '`' AS Count FROM ConceptMappings GROUP BY Relationship ORDER BY Count DESC %}
 
 **All mappings of the oBDS answer lists** (module-own code systems → SNOMED CT/LOINC;
 the year-versioned ATC/ICD-O transitions are described on

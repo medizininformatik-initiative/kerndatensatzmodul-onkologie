@@ -87,7 +87,7 @@ Publishers) — sie können daher nicht von den Artefakten abweichen.
 
 **Verteilung der Äquivalenzlevel (alle ConceptMaps):**
 
-{% sql SELECT Relationship AS Beziehung, count(*) AS Anzahl FROM ConceptMappings GROUP BY Relationship ORDER BY Anzahl DESC %}
+{% sql SELECT Relationship AS Beziehung, '`' || count(*) || '`' AS Anzahl FROM ConceptMappings GROUP BY Relationship ORDER BY Anzahl DESC %}
 
 **Alle Mappings der oBDS-Antwortlisten** (modul-eigene CodeSysteme → SNOMED CT/LOINC;
 die jahresversionierten ATC-/ICD-O-Überleitungen sind auf
