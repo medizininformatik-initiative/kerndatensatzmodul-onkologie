@@ -297,7 +297,7 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
   },
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-03-27",
+  "date" : "2026-09-03",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

@@ -172,7 +172,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-ex-onko-tnm-i
   "name" : "MII_EX_Onko_TNM_ITC_Suffix",
   "title" : "MII EX Onkologie TNM ITC Suffix",
   "status" : "active",
-  "date" : "2026-09-03T19:21:23+00:00",
+  "date" : "2026-09-03T20:25:33+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

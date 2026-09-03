@@ -283,7 +283,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "name" : "MII_PR_Onko_Melanom_Sicherheitsabstand",
   "title" : "MII PR Onkologie Melanom Sicherheitsabstand",
   "status" : "active",
-  "date" : "2026-09-03T19:21:23+00:00",
+  "date" : "2026-09-03T20:25:33+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

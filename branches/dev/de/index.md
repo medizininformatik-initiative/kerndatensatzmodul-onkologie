@@ -8,7 +8,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ImplementationGuide/mii-ig-onko-de-v2026 | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-03-27 | *Maschinenlesbarer Name*:MII_IG_Onko_DE |
+| Active Stand: 2026-09-03 | *Maschinenlesbarer Name*:MII_IG_Onko_DE |
 
 ### Einführung
 
