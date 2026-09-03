@@ -119,9 +119,10 @@ extension:
   # an artifact-relatedArtifact extension (type: citation) with citation text,
   # URL und cqf-publicationDate/-publicationStatus. Vorbild: kerndatensatz-basis
   # zitiert so das MII-Kerndatensatz-Paper (doi:10.1007/s00103-024-03888-4).
-  # Der Beispielblock der Vorlage stand hier mit {{...}}-Platzhaltern — entfernt,
-  # weil der Release-Guard in module-release.yml per grep auf '{{' prueft und
-  # das Modul sonst als un-instanziierte Vorlage einstuft (build/release skipped).
+  # Der Beispielblock der Vorlage stand hier mit Doppelklammer-Platzhaltern —
+  # entfernt, weil der Release-Guard in module-release.yml per grep auf zwei
+  # oeffnende geschweifte Klammern prueft (auch in Kommentaren!) und das Modul
+  # sonst als un-instanziierte Vorlage einstuft (build/release skipped).
   # The module's expansion-parameters manifest — the pinned code system versions
   # every ValueSet in this IG is expanded against (MII meta wiki, "Terminology
   # Version Policy"). Shipped at
