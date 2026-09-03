@@ -120,9 +120,8 @@ extension:
   # URL und cqf-publicationDate/-publicationStatus. Vorbild: kerndatensatz-basis
   # zitiert so das MII-Kerndatensatz-Paper (doi:10.1007/s00103-024-03888-4).
   # Der Beispielblock der Vorlage stand hier mit Doppelklammer-Platzhaltern —
-  # entfernt, weil der Release-Guard in module-release.yml per grep auf zwei
-  # oeffnende geschweifte Klammern prueft (auch in Kommentaren!) und das Modul
-  # sonst als un-instanziierte Vorlage einstuft (build/release skipped).
+  # entfernt, als der Release-Guard in module-release.yml noch blind auf
+  # oeffnende Doppelklammern greppte (inzwischen ignoriert er Kommentarzeilen).
   # The module's expansion-parameters manifest — the pinned code system versions
   # every ValueSet in this IG is expanded against (MII meta wiki, "Terminology
   # Version Policy"). Shipped at

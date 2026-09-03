@@ -653,10 +653,42 @@ jobs:
             }' > site/publish-setup.json
           touch site/.nojekyll
 
+          # publish-setup.json DECLARES both feeds but creates neither, and the
+          # very first -go-publish expects them to exist. Seed minimal valid
+          # RSS 2.0 skeletons; the Publisher appends items on each publication.
+          # LC_ALL=C is mandatory: RSS dates are RFC 822 English ("Wed, 02 Sep
+          # 2026"), and a de_DE locale writes "Do., 03 Sep. 2026" into the feed.
+          rss_date="$(LC_ALL=C date -u '+%a, %d %b %Y %H:%M:%S GMT')"
+          for feed in package publication; do
+            cat > "site/${feed}-feed.xml" <<RSS
+          <?xml version="1.0" encoding="UTF-8"?>
+          <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+            <channel>
+              <title>${EXPECTED_PACKAGE_ID} ${feed} feed</title>
+              <link>${PUBLICATION_BASE}</link>
+              <description>${feed^} feed for the MII Kerndatensatz Modul Onkologie implementation guide</description>
+              <language>en</language>
+              <lastBuildDate>${rss_date}</lastBuildDate>
+              <pubDate>${rss_date}</pubDate>
+              <atom:link href="${PUBLICATION_BASE}/${feed}-feed.xml" rel="self" type="application/rss+xml"/>
+              <ttl>600</ttl>
+            </channel>
+          </rss>
+          RSS
+          done
+
+          # The first publication also has no package-registry.json yet — the
+          # Publisher reads it during -go-publish and the post-publish checks
+          # require it. Generate it from the seeded webroot.
+          java -jar "${RUNNER_TEMP}/publisher.jar" \
+            -generate-package-registry "${GITHUB_WORKSPACE}/site"
+
           {
             echo "### First-publication webroot seeded"
             echo
             echo "- Generated publish-setup.json for ${PUBLICATION_BASE}"
+            echo "- Seeded package-feed.xml and publication-feed.xml (RFC 822 dates, LC_ALL=C)"
+            echo "- Generated package-registry.json"
           } >> "${GITHUB_STEP_SUMMARY}"
 
       - name: Prepare publication workspace
@@ -691,6 +723,12 @@ jobs:
           TX_URL: ${{ steps.terminology.outputs.tx_url }}
         run: |
           set -euo pipefail
+          # -fhir-settings also HERE, not only on the build call above: the
+          # -go-publish pass talks to the terminology proxy again, and without
+          # the allowlist the publisher's SSRF hardening refuses the local
+          # http:// proxy. Do NOT move this comment between the continuation
+          # lines below — a '#' inside a backslash continuation comments out
+          # the rest of the logical line, silently dropping the flags after it.
           java -Xmx6g -jar "${RUNNER_TEMP}/publisher.jar" -go-publish \
             -source "${GITHUB_WORKSPACE}/source" \
             -web "${GITHUB_WORKSPACE}/site" \
@@ -701,6 +739,7 @@ jobs:
             -zips "${RUNNER_TEMP}/publication-zips" \
             -date "${PUBLICATION_DATE}" \
             -tx "${TX_URL}" \
+            -fhir-settings "${GITHUB_WORKSPACE}/source/.github/fhir-settings.json" \
             2>&1 | tee "${RUNNER_TEMP}/go-publish.log"
 
       - name: Correct and validate FHIR IG registry entry
