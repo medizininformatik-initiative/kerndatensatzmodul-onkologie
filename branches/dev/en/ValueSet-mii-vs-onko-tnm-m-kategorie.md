@@ -1,4 +1,4 @@
-# MII VS Onkologie TNM M Kategorie - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# MII VS Onkologie TNM M Kategorie - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-m-kategorie | *Version*:2026.0.3 |
-| Active as of 2026-09-02 | *Computable Name*:MII_VS_Onko_TNM_M_Kategorie |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-m-kategorie | *Version*:2027.0.0-ballot.rc1 |
+| Active as of 2026-09-03 | *Computable Name*:MII_VS_Onko_TNM_M_Kategorie |
 | **Copyright/Legal**: This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. | |
 
  
@@ -167,12 +167,12 @@ Codes für Codes zur Differenzierung der TNM M-Kategorie als entweder klinisch (
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-m-kategorie",
-  "version" : "2026.0.3",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_VS_Onko_TNM_M_Kategorie",
   "title" : "MII VS Onkologie TNM M Kategorie",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-02T02:28:56+00:00",
+  "date" : "2026-09-03T12:57:16+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

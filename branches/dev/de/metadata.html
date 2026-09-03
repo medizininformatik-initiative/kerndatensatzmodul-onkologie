@@ -6,7 +6,7 @@
 <html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Metadaten-Übersicht - MII IG Kerndatensatz-Modul Onkologie v2026.0.3</title>
+    <title>Metadaten-Übersicht - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -141,7 +141,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">MII IG Kerndatensatz-Modul Onkologie</span>
             <br/>
-            <span style="display:inline-block;">2026.0.3 - 
+            <span style="display:inline-block;">2027.0.0-ballot.rc1 - 
 
 
 
@@ -291,7 +291,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">MII IG Kerndatensatz-Modul Onkologie - Local Development build (v2026.0.3) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">MII IG Kerndatensatz-Modul Onkologie - Local Development build (v2027.0.0-ballot.rc1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Metadaten-Übersicht</h2>
   
 
@@ -328,21 +328,6 @@ Diese Seite enthält Übersetzungen aus der Originalsprache, in der der Leitfade
      nicht. Sobald sushi-config.yaml ein CRMI-Profil, eine artifact-*-Extension
      oder einen Manifest-Parameter gewinnt oder verliert, sind die Tabellen unten
      in BEIDEN Sprachen nachzuziehen. -->
-<!-- OPTIONAL-PAGE (0..1) — Marker entfernen, wenn die Seite BLEIBT; andernfalls
-     die Seite gemäß docs/optional-pages.md entfernen. Der Konventions-Check
-     (M9) lässt ein Release mit diesem Marker fehlschlagen. -->
-
-<blockquote class="ig-highlight ig-highlight-grey">
-  <p><strong>Optionale Seite (0..1).</strong> Das KDS-Modulmenü führt diese Seite als
-<em>optional</em> — behalten Sie sie nur, wenn die Profile Ihres Moduls die hier
-dokumentierten Metadaten-Charakteristiken aufweisen (wie z. B. das
-Basis-Modul). Entscheiden Sie für Ihr Modul: Seite <strong>behalten</strong> — Inhalte
-ausfüllen und dieses Banner samt <code class="language-plaintext highlighter-rouge">OPTIONAL-PAGE</code>-Marker-Kommentar löschen (in
-dieser Datei UND in der englischen Quellseite) — oder Seite <strong>entfernen</strong>,
-nach der Schritt-für-Schritt-Anleitung in <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/blob/main/docs/optional-pages.md"><code class="language-plaintext highlighter-rouge">docs/optional-pages.md</code></a> dieses
-Repositories. Ein Release darf dieses Banner nicht enthalten
-(Konventions-Check M9).</p>
-</blockquote>
 
 <h3 id="metadaten-übersicht">Metadaten-Übersicht</h3>
 
@@ -535,14 +520,59 @@ zusammen mit einer
 und den Parametern <code class="language-plaintext highlighter-rouge">path-expansion-params</code> / <code class="language-plaintext highlighter-rouge">pin-manifest</code>.</li>
 </ul>
 
-<blockquote class="ig-highlight ig-highlight-grey">
-  <p>[TODO: Aktivieren Sie die für Ihr Modul nötigen Blöcke und ziehen Sie die
-Tabellen oben nach. Wenn Ihr Modul die CRMI-Shareable-/Publishable-Profile
-zusätzlich auf seine eigenen StructureDefinitions, CapabilityStatements,
-CodeSysteme und ValueSets anwendet — das Idiom aus <code class="language-plaintext highlighter-rouge">kerndatensatz-basis</code> ist
-ein gemeinsames <code class="language-plaintext highlighter-rouge">RuleSet</code> in <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/blob/main/input/fsh/rulesets/crmi.fsh"><code class="language-plaintext highlighter-rouge">input/fsh/rulesets/crmi.fsh</code></a> —, ergänzen Sie die
-entsprechenden Zeilen.]</p>
-</blockquote>
+<p>Dieses Modul wendet die CRMI-Shareable-/Publishable-Profile auf seine eigenen
+Conformance-Ressourcen an. Das Idiom stammt aus <code class="language-plaintext highlighter-rouge">kerndatensatz-basis</code>: gemeinsame
+<code class="language-plaintext highlighter-rouge">RuleSet</code>s in <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/blob/dev/input/fsh/rulesets/crmi.fsh"><code class="language-plaintext highlighter-rouge">input/fsh/rulesets/crmi.fsh</code></a>,
+die je Ressourcentyp eingefügt werden.</p>
+
+<p>Abdeckung im aktuellen Build:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ressourcentyp</th>
+      <th>mit CRMI-Metadaten</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>StructureDefinition</td>
+      <td>98 / 98</td>
+    </tr>
+    <tr>
+      <td>ValueSet</td>
+      <td>121 / 121</td>
+    </tr>
+    <tr>
+      <td>CodeSystem</td>
+      <td>46 / 47</td>
+    </tr>
+    <tr>
+      <td>ConceptMap</td>
+      <td>42 / 42</td>
+    </tr>
+    <tr>
+      <td>SearchParameter</td>
+      <td>17 / 17</td>
+    </tr>
+    <tr>
+      <td>CapabilityStatement</td>
+      <td>1 / 1</td>
+    </tr>
+    <tr>
+      <td>Library</td>
+      <td>1 / 1</td>
+    </tr>
+    <tr>
+      <td><strong>gesamt</strong></td>
+      <td><strong>326 / 327</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Die eine Ausnahme ist das RadElement-Fragment: ein Ausschnitt fremder Terminologie,
+für den dieses Modul keine Herausgeberschaft beansprucht und deshalb auch keine
+Publishable-Metadaten deklariert.</p>
 
 <h5 id="codesystem-supplements">CodeSystem-Supplements</h5>
 
@@ -615,12 +645,12 @@ Publisher mit <code class="language-plaintext highlighter-rouge">path-expansion-
 Werkzeuge haben dann eine stabile Stelle, an der die Parameter für Expansion und
 Paket-Pinnung einsehbar sind.</p>
 
-<blockquote class="ig-highlight ig-highlight-grey">
-  <p>[TODO: Ergänzen Sie das Manifest Ihres Moduls (siehe die auskommentierten
-Blöcke in <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code>) und verlinken Sie hier die erzeugte
-<code class="language-plaintext highlighter-rouge">Parameters</code>-Seite — oder halten Sie ausdrücklich fest, dass dieses Modul
-keine Expansions-Parameter pinnt.]</p>
-</blockquote>
+<p>Dieses Modul pinnt seine Expansions-Parameter: Die Ressource
+<code class="language-plaintext highlighter-rouge">mii-param-onko-manifest</code> (<a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/blob/dev/input/resources/Parameters-expansion-manifest.json"><code class="language-plaintext highlighter-rouge">input/resources/Parameters-expansion-manifest.json</code></a>)
+legt SNOMED CT auf die internationale Ausgabe <strong>20250701</strong> fest, dazu die
+Artifact-Version-Policy-Codes auf 3.0.0. Terminologie-Bindungen dieses Leitfadens
+sind damit gegen einen benannten Stand reproduzierbar — was gerade bei SNOMED
+zählt, das monatlich released.</p>
 
 <h4 id="bezug-zu-fair">Bezug zu FAIR</h4>
 
@@ -782,12 +812,11 @@ dauerhaft identifizierter FAIR-Datensatz behauptet.</p>
   </tbody>
 </table>
 
-<blockquote class="ig-highlight ig-highlight-grey">
-  <p>[TODO: Die Tabelle führt die Indikatoren der Priorität <em>Essential</em> auf. Wenn
-Ihr Modul die vollständige Selbsteinschätzung will, ergänzen Sie die
-Indikatoren der Prioritäten <em>Important</em> und <em>Useful</em> — <code class="language-plaintext highlighter-rouge">kerndatensatz-basis</code>
-führt die vollständige Tabelle.]</p>
-</blockquote>
+<p>Die Tabelle führt die Indikatoren der Priorität <em>Essential</em>. Auf die Prioritäten
+<em>Important</em> und <em>Useful</em> verzichtet dieses Modul bewusst: Sie hätten hier keine
+modulspezifische Aussage, weil sie von der KDS-Veröffentlichungsstrecke bestimmt
+werden, nicht vom einzelnen Modul. <code class="language-plaintext highlighter-rouge">kerndatensatz-basis</code> führt die vollständige
+Tabelle für die gemeinsame Infrastruktur.</p>
 
 <h4 id="praktische-nutzung">Praktische Nutzung</h4>
 
@@ -834,8 +863,8 @@ Ressourcen die vollständigen maschinenlesbaren Metadaten.</p>
 
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
-          Package de.medizininformatikinitiative.kerndatensatz.onkologie#2026.0.3 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Wed, Sep 2, 2026 02:28+0000">2026-09-02</span>
+          Package de.medizininformatikinitiative.kerndatensatz.onkologie#2027.0.0-ballot.rc1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Erstellt <span title="Thu, Sep 3, 2026 12:57+0000">2026-09-03</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

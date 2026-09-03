@@ -1,4 +1,4 @@
-# MII PR Onkologie Ca-Befall Stanze - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# MII PR Onkologie Ca-Befall Stanze - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-ca-befall-stanze | *Version*:2026.0.3 |
-| Active Stand: 2026-09-02 | *Maschinenlesbarer Name*:MII_PR_Onko_Prostata_CA_Befall_Stanze |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-ca-befall-stanze | *Version*:2027.0.0-ballot.rc1 |
+| Active Stand: 2026-09-03 | *Maschinenlesbarer Name*:MII_PR_Onko_Prostata_CA_Befall_Stanze |
 
  
 Dieses Profil beschreibt den prozentualen Befall der am stärksten befallenen Stanze einer Prostata-Biopsie oder eines Prostata-Exzisionspräparates in der Onkologie 
@@ -252,11 +252,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-ca-befall-stanze",
-  "version" : "2026.0.3",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_PR_Onko_Prostata_CA_Befall_Stanze",
   "title" : "MII PR Onkologie Ca-Befall Stanze",
   "status" : "active",
-  "date" : "2026-09-02T02:28:56+00:00",
+  "date" : "2026-09-03T12:57:16+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

@@ -1,4 +1,4 @@
-# Oxaliplatin Phase 1 (Zyklen 1-6, dann abgebrochen) - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# Oxaliplatin Phase 1 (Zyklen 1-6, dann abgebrochen) - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)

@@ -1,4 +1,4 @@
-# mii-exa-onko-tumorkonferenz-pure-molecular - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# mii-exa-onko-tumorkonferenz-pure-molecular - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Onkologie Tumorkonferenz](StructureDefinition-mii-pr-onko-tumorkonferenz.md) version: 2026.0.3
+Profile: [MII PR Onkologie Tumorkonferenz](StructureDefinition-mii-pr-onko-tumorkonferenz.md) version: 2027.0.0-ballot.rc1
 
 **identifier**: Tumorkonferenz_Molecular_002
 
@@ -53,7 +53,7 @@ Neurosurgical consultation recommended for brain metastases management
   "resourceType" : "CarePlan",
   "id" : "mii-exa-onko-tumorkonferenz-pure-molecular",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz|2026.0.3"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz|2027.0.0-ballot.rc1"]
   },
   "identifier" : [{
     "value" : "Tumorkonferenz_Molecular_002"

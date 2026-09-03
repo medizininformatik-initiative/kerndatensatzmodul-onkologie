@@ -1,4 +1,4 @@
-# MII PR Onkologie Melanom Sicherheitsabstand - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# MII PR Onkologie Melanom Sicherheitsabstand - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-sicherheitsabstand | *Version*:2026.0.3 |
-| Active as of 2026-09-02 | *Computable Name*:MII_PR_Onko_Melanom_Sicherheitsabstand |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-sicherheitsabstand | *Version*:2027.0.0-ballot.rc1 |
+| Active as of 2026-09-03 | *Computable Name*:MII_PR_Onko_Melanom_Sicherheitsabstand |
 
  
 Dieses Profil beschreibt den minimalen Sicherheitsabstand zum Primärtumor beim Malignen Melanom basierend auf oBDS Feld MM1. Bei nicht beurteilbaren Fällen (oBDS Wert -1) wird dataAbsentReason verwendet statt valueQuantity. 
@@ -215,11 +215,11 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-melan
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-sicherheitsabstand",
-  "version" : "2026.0.3",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_PR_Onko_Melanom_Sicherheitsabstand",
   "title" : "MII PR Onkologie Melanom Sicherheitsabstand",
   "status" : "active",
-  "date" : "2026-09-02T02:28:56+00:00",
+  "date" : "2026-09-03T12:57:16+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

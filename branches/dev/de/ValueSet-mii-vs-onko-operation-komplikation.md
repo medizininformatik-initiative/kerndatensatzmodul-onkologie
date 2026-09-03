@@ -1,4 +1,4 @@
-# MII VS Onkologie Operation Komplikationen - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# MII VS Onkologie Operation Komplikationen - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-operation-komplikation | *Version*:2026.0.3 |
-| Active Stand: 2026-09-02 | *Maschinenlesbarer Name*:MII_VS_Onko_Operation_Komplikation |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-operation-komplikation | *Version*:2027.0.0-ballot.rc1 |
+| Active Stand: 2026-09-03 | *Maschinenlesbarer Name*:MII_VS_Onko_Operation_Komplikation |
 
  
 Value Set für oBDS-Codes für Klassifikation von Komplikationen während der OP 
@@ -166,12 +166,12 @@ Value Set für oBDS-Codes für Klassifikation von Komplikationen während der OP
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-operation-komplikation",
-  "version" : "2026.0.3",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_VS_Onko_Operation_Komplikation",
   "title" : "MII VS Onkologie Operation Komplikationen",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-02T02:28:56+00:00",
+  "date" : "2026-09-03T12:57:16+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

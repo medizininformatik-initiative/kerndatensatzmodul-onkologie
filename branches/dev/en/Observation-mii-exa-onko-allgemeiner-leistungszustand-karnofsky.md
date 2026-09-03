@@ -1,4 +1,4 @@
-# mii-exa-onko-allgemeiner-leistungszustand-karnofsky - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# mii-exa-onko-allgemeiner-leistungszustand-karnofsky - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Onkologie Allgemeiner Leistungszustand nach Karnofsky](StructureDefinition-mii-pr-onko-allgemeiner-leistungszustand-karnofsky.md) version: 2026.0.3
+Profile: [MII PR Onkologie Allgemeiner Leistungszustand nach Karnofsky](StructureDefinition-mii-pr-onko-allgemeiner-leistungszustand-karnofsky.md) version: 2027.0.0-ballot.rc1
 
 **status**: Final
 
@@ -31,7 +31,7 @@ Profile: [MII PR Onkologie Allgemeiner Leistungszustand nach Karnofsky](Structur
   "resourceType" : "Observation",
   "id" : "mii-exa-onko-allgemeiner-leistungszustand-karnofsky",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-karnofsky|2026.0.3"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-karnofsky|2027.0.0-ballot.rc1"]
   },
   "status" : "final",
   "code" : {

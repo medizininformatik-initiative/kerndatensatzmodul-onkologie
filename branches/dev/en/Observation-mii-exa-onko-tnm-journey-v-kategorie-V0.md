@@ -1,4 +1,4 @@
-# mii-exa-onko-tnm-journey-v-kategorie-V0 - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# mii-exa-onko-tnm-journey-v-kategorie-V0 - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)

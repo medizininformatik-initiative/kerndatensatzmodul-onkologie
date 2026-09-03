@@ -1,4 +1,4 @@
-# MII EX Onkologie TNM y-Präfix - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# MII EX Onkologie TNM y-Präfix - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-y-praefix | *Version*:2026.0.3 |
-| Active as of 2026-09-02 | *Computable Name*:MII_EX_Onko_TNM_y_Praefix |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-y-praefix | *Version*:2027.0.0-ballot.rc1 |
+| Active as of 2026-09-03 | *Computable Name*:MII_EX_Onko_TNM_y_Praefix |
 
 Kennzeichnet eine TNM T-, N- oder M-Kategorie, deren Feststellung während oder nach initialer multimodaler Therapie erfolgte (UICC y-Präfix, z. B. ycT2, ypN0). Als modifierExtension zu verwenden, da das y-Präfix die Interpretation des Kategorie-Wertes verändert.
 
@@ -167,11 +167,11 @@ Other representations of profile: [CSV](../StructureDefinition-mii-ex-onko-tnm-y
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-y-praefix",
-  "version" : "2026.0.3",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_EX_Onko_TNM_y_Praefix",
   "title" : "MII EX Onkologie TNM y-Präfix",
   "status" : "active",
-  "date" : "2026-09-02T02:28:56+00:00",
+  "date" : "2026-09-03T12:57:16+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

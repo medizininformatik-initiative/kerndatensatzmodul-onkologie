@@ -1,4 +1,4 @@
-# mii-exa-onko-befund-1 - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# mii-exa-onko-befund-1 - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Onkologie Befund](StructureDefinition-mii-pr-onko-befund.md) version: 2026.0.3
+Profile: [MII PR Onkologie Befund](StructureDefinition-mii-pr-onko-befund.md) version: 2027.0.0-ballot.rc1
 
 ## Pathology report Cancer Narrative 
 
@@ -33,7 +33,7 @@ Mäßig differenziertes invasiv duktales Karzinom (8500/3), Grading G2 an der re
   "resourceType" : "DiagnosticReport",
   "id" : "mii-exa-onko-befund-1",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-befund|2026.0.3"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-befund|2027.0.0-ballot.rc1"]
   },
   "basedOn" : [{
     "reference" : "CarePlan/mii-exa-onko-tumorkonferenz-01"

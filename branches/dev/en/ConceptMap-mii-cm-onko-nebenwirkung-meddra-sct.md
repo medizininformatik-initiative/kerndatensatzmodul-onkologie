@@ -1,4 +1,4 @@
-# MII CM Onko Nebenwirkung MedDRA zu SNOMED CT (CTCAE v4.03) - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# MII CM Onko Nebenwirkung MedDRA zu SNOMED CT (CTCAE v4.03) - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-nebenwirkung-meddra-sct | *Version*:2026.0.3 |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-nebenwirkung-meddra-sct | *Version*:2027.0.0-ballot.rc1 |
 | Active as of 2026-08-28 | *Computable Name*:MII_CM_Onko_Nebenwirkung_MedDRA_SCT |
 
  
@@ -142,7 +142,7 @@ Kuratierte Zuordnung der MedDRA-Codes der CTCAE-v4.03-Nebenwirkungsterme zu SNOM
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-nebenwirkung-meddra-sct",
-  "version" : "2026.0.3",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_CM_Onko_Nebenwirkung_MedDRA_SCT",
   "title" : "MII CM Onko Nebenwirkung MedDRA zu SNOMED CT (CTCAE v4.03)",
   "status" : "active",

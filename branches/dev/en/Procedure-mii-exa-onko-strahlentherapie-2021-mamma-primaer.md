@@ -1,4 +1,4 @@
-# Beispiel Strahlentherapie oBDS 2021 - Mamma Primärzielgebiet - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# Beispiel Strahlentherapie oBDS 2021 - Mamma Primärzielgebiet - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Onkologie Strahlentherapie](StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie.md) version: 2026.0.3
+Profile: [MII PR Onkologie Strahlentherapie](StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie.md) version: 2027.0.0-ballot.rc1
 
 **MII EX Onko Strahlentherapie Bestrahlung Gesamtdosis**: 50 Gy (Details: UCUM codeGy = 'Gy')
 
@@ -43,7 +43,7 @@ Profile: [MII PR Onkologie Strahlentherapie](StructureDefinition-mii-pr-onko-str
   "resourceType" : "Procedure",
   "id" : "mii-exa-onko-strahlentherapie-2021-mamma-primaer",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie|2026.0.3"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie|2027.0.0-ballot.rc1"]
   },
   "extension" : [{
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-gesamtdosis",

@@ -1,4 +1,4 @@
-# Security and Privacy - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# Security and Privacy - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * **Security and Privacy**
@@ -21,7 +21,16 @@ This is the module's own contribution: the security and privacy properties that 
 
 > Beyond the overarching framework above — the overarching data protection concept, the Broad Consent it rests on, and DIMP — this module carries no data category that raises security or privacy aspects of its own, and it places no module-specific security or privacy requirements on implementers.
 
-> **Illustrative example — remove before the first release.** How another KDS module fills this section (**Person**): the patient identifiers are pseudonyms from the trusted third party; systems must not let record linkage re-identify a person, and the pseudonym's scope (site-wide vs project-specific) must be respected when data is combined.
+This module carries data categories that require consideration beyond the overarching framework:
 
-> [TODO: State your module's specific aspects — the data categories it carries and their sensitivity, risks that profile-level pseudonymisation does not cover, and any security- or privacy-related SHALL/SHOULD/MAY requirements this module places on implementers, each with the risk it addresses. Name residual risks that must be handled in system design, deployment or policy — or adopt the default text above if there are none.]
+* **Germline findings affecting third parties.** Predisposition syndromes ([ORPHA](ValueSet-mii-vs-onko-praedispositionssyndrome-orpha.md)) and predisposition genes ([HGNC](ValueSet-mii-vs-onko-praedispositionsgene-hgnc.md)) are statements about germline variants. They concern blood relatives who never consented to the data use. Pseudonymisation at profile level does not protect those third parties.
+* **Genetic variants are identifying in themselves.** A sufficiently specific variant profile ([Genetic variant](StructureDefinition-mii-pr-onko-genetische-variante.md)) remains traceable even after pseudonymisation. The risk lies in the datum itself, not in the linkage.
+* **Re-identification via rare entities.** The combination of a rare tumour entity (ICD-O-3 morphology), age and region can converge on an individual in small cohorts without any identifier being involved.
+* **Death data** (oBDS chapter 20) and study participation (chapter 24) connect this module to further contexts.
+
+This yields requirements for implementers:
+
+* Systems **SHOULD** subject germline and predisposition findings to a separate access decision rather than releasing them together with the remaining oncological dataset.
+* Analyses over rare entities **SHOULD** be checked for cell sizes before release; the profiles of this module do not do this.
+* These risks are **not** solvable at profile level. They must be addressed in system design, in operations and through data use policies — this module describes the structure of the data, not the conditions of its use.
 

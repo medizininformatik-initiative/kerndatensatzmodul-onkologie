@@ -1,4 +1,4 @@
-# mii-exa-onko-kim-klass3-ypT3c - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# mii-exa-onko-kim-klass3-ypT3c - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Onkologie TNM T-Kategorie](StructureDefinition-mii-pr-onko-tnm-t-kategorie.md) version: 2026.0.3
+Profile: [MII PR Onkologie TNM T-Kategorie](StructureDefinition-mii-pr-onko-tnm-t-kategorie.md) version: 2027.0.0-ballot.rc1
 
 **MII EX Onkologie TNM y-Präfix**: y
 
@@ -37,7 +37,7 @@ Profile: [MII PR Onkologie TNM T-Kategorie](StructureDefinition-mii-pr-onko-tnm-
   "resourceType" : "Observation",
   "id" : "mii-exa-onko-kim-klass3-ypT3c",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie|2026.0.3"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie|2027.0.0-ballot.rc1"]
   },
   "modifierExtension" : [{
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-y-praefix",

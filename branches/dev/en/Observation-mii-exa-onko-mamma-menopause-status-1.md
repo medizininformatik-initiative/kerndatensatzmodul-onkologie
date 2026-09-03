@@ -1,4 +1,4 @@
-# mii-exa-onko-mamma-menopause-status-1 - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# mii-exa-onko-mamma-menopause-status-1 - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Onkologie Menopausenstatus Mamma](StructureDefinition-mii-pr-onko-mamma-menopause-status.md) version: 2026.0.3
+Profile: [MII PR Onkologie Menopausenstatus Mamma](StructureDefinition-mii-pr-onko-mamma-menopause-status.md) version: 2027.0.0-ballot.rc1
 
 **status**: Final
 
@@ -33,7 +33,7 @@ Profile: [MII PR Onkologie Menopausenstatus Mamma](StructureDefinition-mii-pr-on
   "resourceType" : "Observation",
   "id" : "mii-exa-onko-mamma-menopause-status-1",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-menopause-status|2026.0.3"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-menopause-status|2027.0.0-ballot.rc1"]
   },
   "status" : "final",
   "code" : {

@@ -1,4 +1,4 @@
-# Example chemotherapy 2 - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# Example chemotherapy 2 - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Onkologie Systemische Therapie Medikation](StructureDefinition-mii-pr-onko-systemische-therapie-medikation.md) version: 2026.0.3
+Profile: [MII PR Onkologie Systemische Therapie Medikation](StructureDefinition-mii-pr-onko-systemische-therapie-medikation.md) version: 2027.0.0-ballot.rc1
 
 **partOf**: [Procedure Chemotherapie](Procedure-mii-exa-onko-systemische-therapie-1.md)
 
@@ -40,7 +40,7 @@ AC
   "resourceType" : "MedicationStatement",
   "id" : "mii-exa-onko-systemische-therapie-medikation2",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation|2026.0.3"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation|2027.0.0-ballot.rc1"]
   },
   "partOf" : [{
     "reference" : "Procedure/mii-exa-onko-systemische-therapie-1"

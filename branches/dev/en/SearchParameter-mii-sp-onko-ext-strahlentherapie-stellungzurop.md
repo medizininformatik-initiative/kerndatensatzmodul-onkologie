@@ -1,4 +1,4 @@
-# mii-sp-onko-ext-strahlentherapie-stellungzurop - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# mii-sp-onko-ext-strahlentherapie-stellungzurop - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-ext-strahlentherapie-stellungzurop | *Version*:2026.0.3 |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-ext-strahlentherapie-stellungzurop | *Version*:2027.0.0-ballot.rc1 |
 | Active as of 2024-04-15 | *Computable Name*:MII_SP_Procedure_Extension_Strahlentherapie_StellungZurOp |
 
  
@@ -127,7 +127,7 @@ SearchParameter for Procedure.extension[StellungZurOp]
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-ext-strahlentherapie-stellungzurop",
-  "version" : "2026.0.3",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_SP_Procedure_Extension_Strahlentherapie_StellungZurOp",
   "status" : "active",
   "experimental" : true,

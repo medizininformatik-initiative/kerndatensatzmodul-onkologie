@@ -1,4 +1,4 @@
-# MII VS Onkologie Systemische Therapie Art - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# MII VS Onkologie Systemische Therapie Art - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-art | *Version*:2026.0.3 |
-| Active as of 2026-09-02 | *Computable Name*:MII_VS_Onko_Systemische_Therapie_Art |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-art | *Version*:2027.0.0-ballot.rc1 |
+| Active as of 2026-09-03 | *Computable Name*:MII_VS_Onko_Systemische_Therapie_Art |
 
  
 oBDS-spezifisches ValueSet für Klassifikation der Art der systemischen oder abwartenden Therapie 
@@ -166,12 +166,12 @@ oBDS-spezifisches ValueSet für Klassifikation der Art der systemischen oder abw
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-art",
-  "version" : "2026.0.3",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_VS_Onko_Systemische_Therapie_Art",
   "title" : "MII VS Onkologie Systemische Therapie Art",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-02T02:28:56+00:00",
+  "date" : "2026-09-03T12:57:16+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

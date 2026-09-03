@@ -1,4 +1,4 @@
-# CapabilityStatements - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# CapabilityStatements - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * **CapabilityStatements**
@@ -11,7 +11,7 @@ Um eine dezentrale Datenauswertung mittels des Deutschen Forschungsdatenportals 
 
 Nachfolgend wird aufgelistet, welche Inhalte verpflichtend im CapabilityStatement angegeben werden MÜSSEN. Darüber hinaus MUSS die Konformität zu dem nachfolgenden CapabilityStatement in der jeweiligen CapabilityStatement-Instanz unter [`CapabilityStatement.instantiates`](https://www.hl7.org/fhir/R4/capabilitystatement-definitions.html#CapabilityStatement.instantiates) angegeben werden.
 
-Canonical: `https://www.medizininformatik-initiative.de/fhir/modul-onko/CapabilityStatement/metadata`
+Canonical: `https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CapabilityStatement/mii-cps-onko-capabilitystatement`
 
 Artefaktseite: [CapabilityStatement des Moduls Onkologie](CapabilityStatement-mii-cps-onko-capabilitystatement.md)
 

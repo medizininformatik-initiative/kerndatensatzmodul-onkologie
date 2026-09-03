@@ -1,4 +1,4 @@
-# MII CM Onko Therapie Typ SNOMED Mapping - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# MII CM Onko Therapie Typ SNOMED Mapping - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-therapie-typ-sct | *Version*:2026.0.3 |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-therapie-typ-sct | *Version*:2027.0.0-ballot.rc1 |
 | Active as of 2024-04-10 | *Computable Name*:MII CM Onko Therapie Typ SNOMED Mapping |
 | **Copyright/Legal**: This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. | |
 
@@ -147,7 +147,7 @@ Therapy type is coded on the one hand for systemic/watchful-waiting therapy. In 
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-therapie-typ-sct",
-  "version" : "2026.0.3",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII CM Onko Therapie Typ SNOMED Mapping",
   "title" : "MII CM Onko Therapie Typ SNOMED Mapping",
   "status" : "active",
@@ -198,7 +198,7 @@ Therapy type is coded on the one hand for systemic/watchful-waiting therapy. In 
       "code" : "IM",
       "display" : "Immun-/Antikörpertherapie",
       "target" : [{
-        "code" : "897713009",
+        "code" : "76334006",
         "display" : "Immunotherapy (procedure)",
         "equivalence" : "equivalent"
       }]

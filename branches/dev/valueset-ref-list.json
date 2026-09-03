@@ -9,12 +9,12 @@
     "systems" : ["http://fhir.de/CodeSystem/bfarm/icd-10-gm"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-onko-mamma-operation.html" : "MII PR Onkologie Mamma Operation",
-    "StructureDefinition-mii-pr-onko-mamma-sozialdienst.html" : "MII PR Onkologie Präoperative Drahtmarkierung Mamma",
-    "StructureDefinition-mii-pr-onko-melanom-exzision.html" : "MII PR Onko Melanom Exzision",
-    "StructureDefinition-mii-pr-onko-krk-operation.html" : "MII PR Onkologie Präoperative Drahtmarkierung Mamma",
     "StructureDefinition-mii-pr-onko-operation.html" : "MII PR Onkologie Operation",
-    "StructureDefinition-mii-pr-onko-prostata-operation.html" : "MII PR Onko Prostata Operation"
+    "StructureDefinition-mii-pr-onko-prostata-operation.html" : "MII PR Onko Prostata Operation",
+    "StructureDefinition-mii-pr-onko-mamma-sozialdienst.html" : "MII PR Onkologie Präoperative Drahtmarkierung Mamma",
+    "StructureDefinition-mii-pr-onko-mamma-operation.html" : "MII PR Onkologie Mamma Operation",
+    "StructureDefinition-mii-pr-onko-krk-operation.html" : "MII PR Onkologie Präoperative Drahtmarkierung Mamma",
+    "StructureDefinition-mii-pr-onko-melanom-exzision.html" : "MII PR Onko Melanom Exzision"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/condition-clinical",
@@ -73,7 +73,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-allgemeiner-leistungszustand-ecog",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Allgemeiner_Leistungszustand_ECOG",
     "title" : "MII VS Onkologie Allgemeiner Leistungszustand nach ECOG",
@@ -86,7 +86,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-allgemeiner-leistungszustand-ecog-loinc",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Allgemeiner_Leistungszustand_ECOG_LOINC",
     "title" : "MII VS Onkologie Allgemeiner Leistungszustand ECOG LOINC",
@@ -99,7 +99,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-allgemeiner-leistungszustand-karnofsky",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Allgemeiner_Leistungszustand_Karnofsky",
     "title" : "MII VS Onkologie Allgemeiner Leistungszustand nach Karnofsky",
@@ -107,12 +107,12 @@
     "systems" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-karnofsky"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-onko-allgemeiner-leistungszustand-karnofsky.html" : "MII PR Onkologie Allgemeiner Leistungszustand nach Karnofsky",
-    "ConceptMap-mii-cm-onko-allgemeiner-leistungszustand-karnofsky-loinc.html" : "Mapping oBDS Karnofsky zu LOINC"
+    "ConceptMap-mii-cm-onko-allgemeiner-leistungszustand-karnofsky-loinc.html" : "Mapping oBDS Karnofsky zu LOINC",
+    "StructureDefinition-mii-pr-onko-allgemeiner-leistungszustand-karnofsky.html" : "MII PR Onkologie Allgemeiner Leistungszustand nach Karnofsky"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-allgemeiner-leistungszustand-karnofsky-loinc",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Allgemeiner_Leistungszustand_Karnofsky_LOINC",
     "title" : "MII VS Onkologie Allgemeiner Leistungszustand Karnofsky LOINC",
@@ -120,12 +120,12 @@
     "systems" : ["http://loinc.org"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-onko-allgemeiner-leistungszustand-karnofsky.html" : "MII PR Onkologie Allgemeiner Leistungszustand nach Karnofsky",
-    "ConceptMap-mii-cm-onko-allgemeiner-leistungszustand-karnofsky-loinc.html" : "Mapping oBDS Karnofsky zu LOINC"
+    "ConceptMap-mii-cm-onko-allgemeiner-leistungszustand-karnofsky-loinc.html" : "Mapping oBDS Karnofsky zu LOINC",
+    "StructureDefinition-mii-pr-onko-allgemeiner-leistungszustand-karnofsky.html" : "MII PR Onkologie Allgemeiner Leistungszustand nach Karnofsky"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-asa-loinc",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_ASA_LOINC",
     "title" : "MII VS Onkologie ASA LOINC",
@@ -137,7 +137,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-asa-obds",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_ASA_oBDS",
     "title" : "MII VS Onkologie ASA oBDS",
@@ -145,12 +145,12 @@
     "systems" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-asa-obds"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-onko-asa-klassifikation.html" : "MII PR Onkologie ASA-Klassifikation",
-    "ConceptMap-mii-cm-onko-asa-obds-loinc.html" : "MII CM Onkologie ASA oBDS zu LOINC"
+    "ConceptMap-mii-cm-onko-asa-obds-loinc.html" : "MII CM Onkologie ASA oBDS zu LOINC",
+    "StructureDefinition-mii-pr-onko-asa-klassifikation.html" : "MII PR Onkologie ASA-Klassifikation"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-beurteilung-lokaler-residualstatus",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Beurteilung_Lokaler_Residualstatus",
     "title" : "MII VS Onkologie Beurteilung des lokalen Residualstatus",
@@ -158,16 +158,16 @@
     "systems" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-onko-mamma-operation.html" : "MII PR Onkologie Mamma Operation",
-    "StructureDefinition-mii-pr-onko-mamma-sozialdienst.html" : "MII PR Onkologie Präoperative Drahtmarkierung Mamma",
-    "StructureDefinition-mii-pr-onko-melanom-exzision.html" : "MII PR Onko Melanom Exzision",
-    "StructureDefinition-mii-pr-onko-krk-operation.html" : "MII PR Onkologie Präoperative Drahtmarkierung Mamma",
     "StructureDefinition-mii-pr-onko-operation.html" : "MII PR Onkologie Operation",
-    "StructureDefinition-mii-pr-onko-prostata-operation.html" : "MII PR Onko Prostata Operation"
+    "StructureDefinition-mii-pr-onko-prostata-operation.html" : "MII PR Onko Prostata Operation",
+    "StructureDefinition-mii-pr-onko-mamma-sozialdienst.html" : "MII PR Onkologie Präoperative Drahtmarkierung Mamma",
+    "StructureDefinition-mii-pr-onko-mamma-operation.html" : "MII PR Onkologie Mamma Operation",
+    "StructureDefinition-mii-pr-onko-krk-operation.html" : "MII PR Onkologie Präoperative Drahtmarkierung Mamma",
+    "StructureDefinition-mii-pr-onko-melanom-exzision.html" : "MII PR Onko Melanom Exzision"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-fernmetastasen",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Fernmetastasen",
     "title" : "MII VS Onkologie Fernmetastasen",
@@ -179,7 +179,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-genetische-variante-auspraegung",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Genetische_Variante_Auspraegung",
     "title" : "MII_VS Onkologie Genetische Variante Ausprägung",
@@ -191,7 +191,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-gesamtbeurteilung-residualstatus",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Gesamtbeurteilung_Residualstatus",
     "title" : "MII VS Onkologie Gesamtbeurteilung des Residualstatus",
@@ -203,7 +203,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-grading",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Grading",
     "title" : "MII VS Onkologie Grading",
@@ -215,7 +215,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-icd10-meldepflichtige-tumoren",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_ICD10_Meldepflichtige_Tumoren",
     "title" : "MII VS Onkologie ICD-10-GM Meldepflichtige Tumoren",
@@ -224,7 +224,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-icdo3-morphologie",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_ICDO3_Morphologie",
     "title" : "MII VS Onkologie ICD-O-3 Morphologie",
@@ -238,7 +238,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-icdo3-morphologie-2014",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_ICDO3_Morphologie_2014",
     "title" : "MII VS Onkologie ICD-O-3 Morphologie 2014",
@@ -250,7 +250,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-icdo3-morphologie-2019",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_ICDO3_Morphologie_2019",
     "title" : "MII VS Onkologie ICD-O-3 Morphologie 2019",
@@ -262,7 +262,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-icdo3-topographie",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_ICDO3_Topographie",
     "title" : "MII VS Onkologie ICD-O-3 Topographie",
@@ -270,14 +270,14 @@
     "systems" : ["http://terminology.hl7.org/CodeSystem/icd-o-3"],
     "uses" : {
     },
+    "StructureDefinition-mii-pr-onko-fernmetastasen.html" : "MII PR Onkologie Fernmetastasen",
     "StructureDefinition-mii-pr-onko-histologie-icdo3.html" : "MII PR Onkologie Histologie ICD-O-3",
     "StructureDefinition-mii-pr-onko-fruehere-tumorerkrankung.html" : "MII PR Onkologie Frühere Tumorerkrankung",
-    "StructureDefinition-mii-pr-onko-fernmetastasen.html" : "MII PR Onkologie Fernmetastasen",
     "StructureDefinition-mii-pr-onko-diagnose-primaertumor.html" : "MII PR Onkologie Diagnose Primärtumor"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-icdo3-topographie-2014",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_ICDO3_Topographie_2014",
     "title" : "MII VS Onkologie ICD-O-3 Topographie 2014",
@@ -286,7 +286,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-icdo3-topographie-2019",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_ICDO3_Topographie_2019",
     "title" : "MII VS Onkologie ICD-O-3 Topographie 2019",
@@ -295,7 +295,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-ighv-gensegmente-hgnc",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_IGHV_Gensegmente_HGNC",
     "title" : "MII VS Onkologie IGHV-Gensegmente HGNC",
@@ -304,7 +304,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-kdl-dokumentklassen",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_KDL_Dokumentklassen",
     "title" : "MII VS Onkologie KDL Dokumentklassen",
@@ -313,7 +313,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-koerperstruktur-sct",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Koerperstruktur_SCT",
     "title" : "MII VS Onkologie Körperstruktur (SNOMED CT)",
@@ -325,7 +325,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-krk-abstand-circumferelle-resektionsrand",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_KRK_Abstand_Circumferelle_Resektionsrand",
     "title" : "MII VS Onkologie KRK Abstand Circumferelle Resektionsrand",
@@ -337,7 +337,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-krk-abstand-resektionslinie-aboral",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_KRK_Abstand_Resektionslinie_Aboral",
     "title" : "MII VS Onkologie KRK Abstand Resektionslinie Aboral",
@@ -349,7 +349,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-krk-anastomoseninsuffizienz",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_KRK_Anastomoseninsuffizienz",
     "title" : "MII VS Onkologie KRK Anastomoseninsuffizienz",
@@ -361,7 +361,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-krk-mrt-mesorektale-faszie-status",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_KRK_MRT_Mesorektale_Faszie_Status",
     "title" : "MII VS Onkologie KRK MRT Mesorektale Faszie Status",
@@ -373,7 +373,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-krk-stoma-anzeichnung",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_KRK_Stoma_Anzeichnung",
     "title" : "MII VS Onkologie KRK Stoma Anzeichnung",
@@ -385,7 +385,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-krk-stoma-status-reason",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_KRK_Stoma_Status_Reason",
     "title" : "MII VS Onkologie KRK Stoma Status Reason",
@@ -397,7 +397,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-krk-tme-qualitaet",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_KRK_TME_Qualitaet",
     "title" : "MII VS Onkologie KRK TME Qualität",
@@ -409,7 +409,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-faerbeintensitaet",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Mamma_Faerbeintensitaet",
     "title" : "MII VS Onkologie Mamma Färbeintensität",
@@ -417,12 +417,12 @@
     "systems" : ["http://loinc.org"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-onko-mamma-rezeptorstatus-progesteron.html" : "MII PR Onkologie Rezeptorstatus Progesteron",
-    "StructureDefinition-mii-pr-onko-mamma-rezeptorstatus-estrogen.html" : "MII PR Onkologie Rezeptorstatus Estrogen"
+    "StructureDefinition-mii-pr-onko-mamma-rezeptorstatus-estrogen.html" : "MII PR Onkologie Rezeptorstatus Estrogen",
+    "StructureDefinition-mii-pr-onko-mamma-rezeptorstatus-progesteron.html" : "MII PR Onkologie Rezeptorstatus Progesteron"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-her2neu-ihc-score",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Mamma_Her2neu_IHC_Score",
     "title" : "MII VS Onkologie Mamma Her2neu IHC Score",
@@ -434,7 +434,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-her2neu-status-leitlinie",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Mamma_Her2neu_Status_Leitlinie",
     "title" : "MII VS Onkologie Mamma Her2neu Status Leitlinie",
@@ -446,7 +446,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-her2neu-status-obds",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Mamma_Her2neu_Status_oBDS",
     "title" : "MII VS Onkologie Mamma Her2neu Status oBDS",
@@ -458,7 +458,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-intraoperatives-imaging-praeparat",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Mamma_Intraoperatives_Imaging_Praeparat",
     "title" : "MII VS Onkologie Mamma Intraoperatives Imaging Präparat",
@@ -470,7 +470,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-ish-ergebnis",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Mamma_ISH_Ergebnis",
     "title" : "MII VS Onkologie Mamma ISH Ergebnis",
@@ -482,7 +482,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-menopause-status",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Mamma_Menopause_Status",
     "title" : "MII VS Onkologie Mamma Menopause Status",
@@ -494,7 +494,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-operation-ops",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Mamma_Operation_OPS",
     "title" : "MII VS Onkologie Mamma Operation OPS",
@@ -506,7 +506,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-operation-sct",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Mamma_Operation_SCT",
     "title" : "MII VS Onkologie Mamma Operation SNOMED CT",
@@ -518,7 +518,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-praeoperative-markierung-modalitaet",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Mamma_Praeoperative_Markierung_Modalitaet",
     "title" : "MII VS Onkologie Mamma Präoperative Markierung Modalität",
@@ -531,7 +531,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-rezeptorstatus-leitlinie",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Mamma_Rezeptorstatus_Leitlinie",
     "title" : "MII VS Onkologie Mamma Rezeptorstatus Leitlinie",
@@ -539,12 +539,12 @@
     "systems" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-rezeptorstatus-leitlinie"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-onko-mamma-rezeptorstatus-progesteron.html" : "MII PR Onkologie Rezeptorstatus Progesteron",
-    "StructureDefinition-mii-pr-onko-mamma-rezeptorstatus-estrogen.html" : "MII PR Onkologie Rezeptorstatus Estrogen"
+    "StructureDefinition-mii-pr-onko-mamma-rezeptorstatus-estrogen.html" : "MII PR Onkologie Rezeptorstatus Estrogen",
+    "StructureDefinition-mii-pr-onko-mamma-rezeptorstatus-progesteron.html" : "MII PR Onkologie Rezeptorstatus Progesteron"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-rezeptorstatus-obds",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Mamma_Rezeptorstatus_oBDS",
     "title" : "MII VS Onkologie Mamma Rezeptorstatus oBDS",
@@ -552,12 +552,12 @@
     "systems" : ["http://loinc.org"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-onko-mamma-rezeptorstatus-progesteron.html" : "MII PR Onkologie Rezeptorstatus Progesteron",
-    "StructureDefinition-mii-pr-onko-mamma-rezeptorstatus-estrogen.html" : "MII PR Onkologie Rezeptorstatus Estrogen"
+    "StructureDefinition-mii-pr-onko-mamma-rezeptorstatus-estrogen.html" : "MII PR Onkologie Rezeptorstatus Estrogen",
+    "StructureDefinition-mii-pr-onko-mamma-rezeptorstatus-progesteron.html" : "MII PR Onkologie Rezeptorstatus Progesteron"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-marker-gene-hgnc",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Marker_Gene_HGNC",
     "title" : "MII VS Onkologie Marker-Gene HGNC",
@@ -569,7 +569,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-melanom-exzision-snomedct",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Melanom_Exzision_SNOMEDCT",
     "title" : "MII VS Onko Melanom Exzision SNOMED CT",
@@ -581,7 +581,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-melanom-ldh",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Melanom_LDH",
     "title" : "MII VS Onkologie Melanom LDH",
@@ -593,7 +593,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-melanom-ulzeration",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Melanom_Ulzeration",
     "title" : "MII VS Onkologie Melanom Ulzeration",
@@ -605,7 +605,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-nebenwirkung-art",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Nebenwirkung_Art",
     "title" : "MII VS Onkologie Nebenwirkung nach CTCAE Art",
@@ -618,7 +618,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-nebenwirkung-ctcae-grad",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Nebenwirkung_CTCAE_Grad",
     "title" : "MII VS Onkologie Nebenwirkung nach CTCAE Grad",
@@ -630,7 +630,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-nebenwirkung-ctcae-version",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Nebenwirkung_CTCAE_Version",
     "title" : "MII VS Onkologie Nebenwirkung CTCAE-Version",
@@ -642,7 +642,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-operation-intention",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Operation_Intention",
     "title" : "MII VS Onkologie Operation Intention",
@@ -650,17 +650,17 @@
     "systems" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention"],
     "uses" : {
     },
-    "StructureDefinition-mii-ex-onko-operation-intention.html" : "MII EX Onko Operation Intention",
-    "StructureDefinition-mii-pr-onko-mamma-operation.html" : "MII PR Onkologie Mamma Operation",
-    "StructureDefinition-mii-pr-onko-mamma-sozialdienst.html" : "MII PR Onkologie Präoperative Drahtmarkierung Mamma",
-    "StructureDefinition-mii-pr-onko-melanom-exzision.html" : "MII PR Onko Melanom Exzision",
-    "StructureDefinition-mii-pr-onko-krk-operation.html" : "MII PR Onkologie Präoperative Drahtmarkierung Mamma",
     "StructureDefinition-mii-pr-onko-operation.html" : "MII PR Onkologie Operation",
-    "StructureDefinition-mii-pr-onko-prostata-operation.html" : "MII PR Onko Prostata Operation"
+    "StructureDefinition-mii-ex-onko-operation-intention.html" : "MII EX Onko Operation Intention",
+    "StructureDefinition-mii-pr-onko-prostata-operation.html" : "MII PR Onko Prostata Operation",
+    "StructureDefinition-mii-pr-onko-mamma-sozialdienst.html" : "MII PR Onkologie Präoperative Drahtmarkierung Mamma",
+    "StructureDefinition-mii-pr-onko-mamma-operation.html" : "MII PR Onkologie Mamma Operation",
+    "StructureDefinition-mii-pr-onko-krk-operation.html" : "MII PR Onkologie Präoperative Drahtmarkierung Mamma",
+    "StructureDefinition-mii-pr-onko-melanom-exzision.html" : "MII PR Onko Melanom Exzision"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-operation-komplikation",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Operation_Komplikation",
     "title" : "MII VS Onkologie Operation Komplikationen",
@@ -668,16 +668,16 @@
     "systems" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-komplikation"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-onko-mamma-operation.html" : "MII PR Onkologie Mamma Operation",
-    "StructureDefinition-mii-pr-onko-mamma-sozialdienst.html" : "MII PR Onkologie Präoperative Drahtmarkierung Mamma",
-    "StructureDefinition-mii-pr-onko-melanom-exzision.html" : "MII PR Onko Melanom Exzision",
-    "StructureDefinition-mii-pr-onko-krk-operation.html" : "MII PR Onkologie Präoperative Drahtmarkierung Mamma",
     "StructureDefinition-mii-pr-onko-operation.html" : "MII PR Onkologie Operation",
-    "StructureDefinition-mii-pr-onko-prostata-operation.html" : "MII PR Onko Prostata Operation"
+    "StructureDefinition-mii-pr-onko-prostata-operation.html" : "MII PR Onko Prostata Operation",
+    "StructureDefinition-mii-pr-onko-mamma-sozialdienst.html" : "MII PR Onkologie Präoperative Drahtmarkierung Mamma",
+    "StructureDefinition-mii-pr-onko-mamma-operation.html" : "MII PR Onkologie Mamma Operation",
+    "StructureDefinition-mii-pr-onko-krk-operation.html" : "MII PR Onkologie Präoperative Drahtmarkierung Mamma",
+    "StructureDefinition-mii-pr-onko-melanom-exzision.html" : "MII PR Onko Melanom Exzision"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-operation-urgency",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Operation_Urgency",
     "title" : "MII VS Onkologie Operation Urgency",
@@ -685,17 +685,17 @@
     "systems" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-urgency"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-onko-mamma-operation.html" : "MII PR Onkologie Mamma Operation",
-    "StructureDefinition-mii-ex-onko-operation-urgency.html" : "MII EX Onko Operation Urgency",
-    "StructureDefinition-mii-pr-onko-mamma-sozialdienst.html" : "MII PR Onkologie Präoperative Drahtmarkierung Mamma",
-    "StructureDefinition-mii-pr-onko-melanom-exzision.html" : "MII PR Onko Melanom Exzision",
-    "StructureDefinition-mii-pr-onko-krk-operation.html" : "MII PR Onkologie Präoperative Drahtmarkierung Mamma",
     "StructureDefinition-mii-pr-onko-operation.html" : "MII PR Onkologie Operation",
-    "StructureDefinition-mii-pr-onko-prostata-operation.html" : "MII PR Onko Prostata Operation"
+    "StructureDefinition-mii-pr-onko-prostata-operation.html" : "MII PR Onko Prostata Operation",
+    "StructureDefinition-mii-pr-onko-mamma-sozialdienst.html" : "MII PR Onkologie Präoperative Drahtmarkierung Mamma",
+    "StructureDefinition-mii-ex-onko-operation-urgency.html" : "MII EX Onko Operation Urgency",
+    "StructureDefinition-mii-pr-onko-mamma-operation.html" : "MII PR Onkologie Mamma Operation",
+    "StructureDefinition-mii-pr-onko-krk-operation.html" : "MII PR Onkologie Präoperative Drahtmarkierung Mamma",
+    "StructureDefinition-mii-pr-onko-melanom-exzision.html" : "MII PR Onko Melanom Exzision"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-ops-nuklearmedizin",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_OPS_Nuklearmedizin",
     "title" : "MII VS Onkologie OPS Nuklearmedizin",
@@ -707,7 +707,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-ops-strahlentherapie",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_OPS_Strahlentherapie",
     "title" : "MII VS Onkologie OPS Strahlentherapie",
@@ -719,7 +719,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-praedispositionsgene-hgnc",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Praedispositionsgene_HGNC",
     "title" : "MII VS Onkologie Krebsprädispositionsgene HGNC",
@@ -728,7 +728,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-praedispositionssyndrome-orpha",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Praedispositionssyndrome_ORPHA",
     "title" : "MII VS Onkologie Krebsprädispositionssyndrome ORPHA",
@@ -737,7 +737,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-primaertumor-diagnosesicherung",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Primaertumor_Diagnosesicherung",
     "title" : "MII VS Onkologie Primärtumor Diagnosesicherung",
@@ -749,7 +749,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-clavien-dindo",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Prostata_Clavien_Dindo",
     "title" : "MII VS Onkologie Prostata Clavien Dindo",
@@ -761,7 +761,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-gleason-pattern-loinc",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Prostata_Gleason_Pattern_LOINC",
     "title" : "MII VS Onkologie Prostata Gleason Pattern LOINC",
@@ -773,7 +773,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-gleason-patterns",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Prostata_Gleason_Patterns",
     "title" : "MII VS Onkologie Prostata Gleason Patterns",
@@ -785,7 +785,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-gleason-primary-secondary-tertiary",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Prostata_Gleason_PrimarySecondaryTertiary",
     "title" : "MII VS Onkologie Prostata Gleason Primary Secondary Tertiary",
@@ -797,7 +797,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-gleason-score",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Prostata_Gleason_Score",
     "title" : "MII VS Onkologie Prostata Gleason Score",
@@ -809,7 +809,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-gleason-score-gesamt",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Prostata_Gleason_Score_Gesamt",
     "title" : "MII VS Onkologie Prostata Gleason Score Gesamt",
@@ -821,7 +821,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-operation-snomedct",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Prostata_Operation_SNOMEDCT",
     "title" : "MII VS Onko Prostata Operation SNOMED CT",
@@ -833,7 +833,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-postsurgical-complications",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Prostata_Postsurgical_Complications",
     "title" : "MII VS Onkologie Prostata Postsurgical Complications",
@@ -845,7 +845,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-psa-loinc",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Prostata_PSA_LOINC",
     "title" : "MII VS Onko Prostata PSA LOINC",
@@ -857,7 +857,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-seitenlokalisation",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Seitenlokalisation",
     "title" : "MII VS Onkologie Primärtumor Seitenlokalisation",
@@ -866,14 +866,14 @@
     "uses" : {
     },
     "StructureDefinition-mii-pr-onko-histologie-icdo3.html" : "MII PR Onkologie Histologie ICD-O-3",
-    "StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie.html" : "MII PR Onkologie Strahlentherapie",
     "StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung-seitenlokalisation.html" : "MII EX Onko Strahlentherapie Bestrahlung Seitenlokalisation",
     "StructureDefinition-mii-pr-onko-diagnose-primaertumor.html" : "MII PR Onkologie Diagnose Primärtumor",
+    "StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie.html" : "MII PR Onkologie Strahlentherapie",
     "StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizin.html" : "MII PR Onkologie Strahlentherapie Nuklearmedizin"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-applikationsart",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Strahlentherapie_Applikationsart",
     "title" : "MII VS Onkologie Strahlentherapie Applikationsart",
@@ -886,7 +886,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-boost",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Strahlentherapie_Boosts",
     "title" : "MII VS Onkologie Strahlentherapie Boost",
@@ -894,13 +894,13 @@
     "systems" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-boost"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie.html" : "MII PR Onkologie Strahlentherapie",
     "StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung-boost.html" : "MII EX Onko Strahlentherapie Bestrahlung Boost",
+    "StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie.html" : "MII PR Onkologie Strahlentherapie",
     "StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizin.html" : "MII PR Onkologie Strahlentherapie Nuklearmedizin"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-intention",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Strahlentherapie_Intention",
     "title" : "MII VS Onkologie Strahlentherapie Intention",
@@ -908,12 +908,12 @@
     "systems" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention"],
     "uses" : {
     },
-    "StructureDefinition-mii-ex-onko-strahlentherapie-intention.html" : "MII EX Onko Strahlentherapie Intention",
-    "StructureDefinition-mii-pr-onko-strahlentherapie.html" : "MII PR Onkologie Strahlentherapie"
+    "StructureDefinition-mii-pr-onko-strahlentherapie.html" : "MII PR Onkologie Strahlentherapie",
+    "StructureDefinition-mii-ex-onko-strahlentherapie-intention.html" : "MII EX Onko Strahlentherapie Intention"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-studienteilnahme",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Studienteilnahme",
     "title" : "MII VS Onkologie Studienteilnahme",
@@ -925,7 +925,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-art",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Systemische_Therapie_Art",
     "title" : "MII VS Onkologie Systemische Therapie Art",
@@ -937,7 +937,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-intention",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Systemische_Therapie_Intention",
     "title" : "MII VS Onkologie Systemische Therapie Intention",
@@ -945,12 +945,12 @@
     "systems" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention"],
     "uses" : {
     },
-    "StructureDefinition-mii-ex-onko-systemische-therapie-intention.html" : "MII EX Onko Systemische Therapie Intention",
-    "StructureDefinition-mii-pr-onko-systemische-therapie.html" : "MII PR Onkologie Systemische Therapie"
+    "StructureDefinition-mii-pr-onko-systemische-therapie.html" : "MII PR Onkologie Systemische Therapie",
+    "StructureDefinition-mii-ex-onko-systemische-therapie-intention.html" : "MII EX Onko Systemische Therapie Intention"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-protokolle",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Systemische_Therapie_Protokolle",
     "title" : "MII VS Onkologie Systemische Therapie Protokolle",
@@ -958,12 +958,12 @@
     "systems" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-protokolle"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-onko-therapieempfehlung-kombinationstherapie.html" : "MII PR Onkologie Therapieempfehlung Kombinationstherapie",
-    "StructureDefinition-mii-pr-onko-systemische-therapie.html" : "MII PR Onkologie Systemische Therapie"
+    "StructureDefinition-mii-pr-onko-systemische-therapie.html" : "MII PR Onkologie Systemische Therapie",
+    "StructureDefinition-mii-pr-onko-therapieempfehlung-kombinationstherapie.html" : "MII PR Onkologie Therapieempfehlung Kombinationstherapie"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Systemische_Therapie_Substanzen",
     "title" : "MII VS Onkologie Systemische Therapie Substanzen",
@@ -972,7 +972,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-2018",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Systemische_Therapie_Substanzen_2018",
     "title" : "MII VS Onkologie Systemische Therapie Substanzen ATC 2018",
@@ -981,7 +981,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-2019",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Systemische_Therapie_Substanzen_2019",
     "title" : "MII VS Onkologie Systemische Therapie Substanzen ATC 2019",
@@ -990,7 +990,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-2020",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Systemische_Therapie_Substanzen_2020",
     "title" : "MII VS Onkologie Systemische Therapie Substanzen ATC 2020",
@@ -1002,7 +1002,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-2021",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Systemische_Therapie_Substanzen_2021",
     "title" : "MII VS Onkologie Systemische Therapie Substanzen ATC 2021",
@@ -1010,12 +1010,12 @@
     "systems" : ["http://fhir.de/CodeSystem/bfarm/atc"],
     "uses" : {
     },
-    "ConceptMap-mii-cm-onko-atc-transitions-2022.html" : "MII CM Onko ATC Code Changes 2021 to 2022",
-    "ConceptMap-mii-cm-onko-atc-transitions-2021.html" : "MII CM Onko ATC Code Changes 2020 to 2021"
+    "ConceptMap-mii-cm-onko-atc-transitions-2021.html" : "MII CM Onko ATC Code Changes 2020 to 2021",
+    "ConceptMap-mii-cm-onko-atc-transitions-2022.html" : "MII CM Onko ATC Code Changes 2021 to 2022"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-2022",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Systemische_Therapie_Substanzen_2022",
     "title" : "MII VS Onkologie Systemische Therapie Substanzen ATC 2022",
@@ -1023,12 +1023,12 @@
     "systems" : ["http://fhir.de/CodeSystem/bfarm/atc"],
     "uses" : {
     },
-    "ConceptMap-mii-cm-onko-atc-transitions-2023.html" : "MII CM Onko ATC Code Changes 2022 to 2023",
-    "ConceptMap-mii-cm-onko-atc-transitions-2022.html" : "MII CM Onko ATC Code Changes 2021 to 2022"
+    "ConceptMap-mii-cm-onko-atc-transitions-2022.html" : "MII CM Onko ATC Code Changes 2021 to 2022",
+    "ConceptMap-mii-cm-onko-atc-transitions-2023.html" : "MII CM Onko ATC Code Changes 2022 to 2023"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-2023",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Systemische_Therapie_Substanzen_2023",
     "title" : "MII VS Onkologie Systemische Therapie Substanzen ATC 2023",
@@ -1036,12 +1036,12 @@
     "systems" : ["http://fhir.de/CodeSystem/bfarm/atc"],
     "uses" : {
     },
-    "ConceptMap-mii-cm-onko-atc-transitions-2023.html" : "MII CM Onko ATC Code Changes 2022 to 2023",
-    "ConceptMap-mii-cm-onko-atc-transitions-2024.html" : "MII CM Onko ATC Code Changes 2023 to 2024"
+    "ConceptMap-mii-cm-onko-atc-transitions-2024.html" : "MII CM Onko ATC Code Changes 2023 to 2024",
+    "ConceptMap-mii-cm-onko-atc-transitions-2023.html" : "MII CM Onko ATC Code Changes 2022 to 2023"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-2024",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Systemische_Therapie_Substanzen_2024",
     "title" : "MII VS Onkologie Systemische Therapie Substanzen ATC 2024",
@@ -1049,12 +1049,12 @@
     "systems" : ["http://fhir.de/CodeSystem/bfarm/atc"],
     "uses" : {
     },
-    "ConceptMap-mii-cm-onko-atc-transitions-2025.html" : "MII CM Onko ATC Code Changes 2024 to 2025",
-    "ConceptMap-mii-cm-onko-atc-transitions-2024.html" : "MII CM Onko ATC Code Changes 2023 to 2024"
+    "ConceptMap-mii-cm-onko-atc-transitions-2024.html" : "MII CM Onko ATC Code Changes 2023 to 2024",
+    "ConceptMap-mii-cm-onko-atc-transitions-2025.html" : "MII CM Onko ATC Code Changes 2024 to 2025"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-2025",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Systemische_Therapie_Substanzen_2025",
     "title" : "MII VS Onkologie Systemische Therapie Substanzen ATC 2025",
@@ -1067,7 +1067,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-2026",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Systemische_Therapie_Substanzen_2026",
     "title" : "MII VS Onkologie Systemische Therapie Substanzen ATC 2026",
@@ -1079,7 +1079,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-unii",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Systemische_Therapie_Substanzen_UNII",
     "title" : "MII VS Onkologie Systemische Therapie Substanzen (UNII)",
@@ -1091,7 +1091,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-therapieabweichung",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Therapieabweichung",
     "title" : "MII VS Onkologie Therapieabweichung",
@@ -1103,7 +1103,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-therapieempfehlung-typ",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Therapieempfehlung_Typ",
     "title" : "MII VS Onkologie Therapieempfehlung Typ",
@@ -1116,7 +1116,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-therapieplanung-typ",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Therapieplanung_Typ",
     "title" : "MII VS Onkologie Therapieplanung Typ",
@@ -1128,7 +1128,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-cp-praefix",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_TNM_cp_Praefix",
     "title" : "MII VS Onkologie TNM c/p/u Praefix",
@@ -1136,14 +1136,14 @@
     "systems" : ["https://www.uicc.org/resources/tnm"],
     "uses" : {
     },
-    "StructureDefinition-mii-ex-onko-tnm-cp-praefix.html" : "MII EX Onkologie TNM c/p Präfix",
     "StructureDefinition-mii-pr-onko-tnm-n-kategorie.html" : "MII PR Onkologie TNM N-Kategorie",
-    "StructureDefinition-mii-pr-onko-tnm-m-kategorie.html" : "MII PR Onkologie TNM M-Kategorie",
-    "StructureDefinition-mii-pr-onko-tnm-t-kategorie.html" : "MII PR Onkologie TNM T-Kategorie"
+    "StructureDefinition-mii-pr-onko-tnm-t-kategorie.html" : "MII PR Onkologie TNM T-Kategorie",
+    "StructureDefinition-mii-ex-onko-tnm-cp-praefix.html" : "MII EX Onkologie TNM c/p Präfix",
+    "StructureDefinition-mii-pr-onko-tnm-m-kategorie.html" : "MII PR Onkologie TNM M-Kategorie"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-itc-suffix",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_TNM_ITC_Suffix",
     "title" : "MII VS Onkologie TNM ITC Suffix",
@@ -1155,7 +1155,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-klassifikation-typ",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_TNM_Klassifikation_Typ",
     "title" : "MII VS Onkologie TNM Klassifikation Typ",
@@ -1163,12 +1163,12 @@
     "systems" : ["http://snomed.info/sct"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-onko-tnm-klassifikation.html" : "MII PR Onkologie TNM-Klassifikation",
-    "StructureDefinition-mii-pr-onko-tnm-klassifikation-synthetisiert.html" : "MII PR Onkologie TNM-Klassifikation (synthetisiert)"
+    "StructureDefinition-mii-pr-onko-tnm-klassifikation-synthetisiert.html" : "MII PR Onkologie TNM-Klassifikation (synthetisiert)",
+    "StructureDefinition-mii-pr-onko-tnm-klassifikation.html" : "MII PR Onkologie TNM-Klassifikation"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-l-kategorie-werte",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_TNM_L_Kategorie_Werte",
     "title" : "MII VS Onkologie TNM L Kategorie Werte",
@@ -1180,7 +1180,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-m-kategorie",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_TNM_M_Kategorie",
     "title" : "MII VS Onkologie TNM M Kategorie",
@@ -1192,7 +1192,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-m-kategorie-werte",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_TNM_M_Kategorie_Werte",
     "title" : "MII VS Onkologie TNM M Kategorie Werte",
@@ -1204,7 +1204,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-m-kategorie-werte-sct",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_TNM_M_Kategorie_Werte_SCT",
     "title" : "MII VS Onkologie TNM M Kategorie Werte SNOMED CT",
@@ -1216,7 +1216,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-m-symbol",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_TNM_m_Symbol",
     "title" : "MII VS Onkologie TNM m-Symbol",
@@ -1229,7 +1229,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-n-kategorie",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_TNM_N_Kategorie",
     "title" : "MII VS Onkologie TNM N Kategorie",
@@ -1241,7 +1241,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-n-kategorie-werte",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_TNM_N_Kategorie_Werte",
     "title" : "MII VS Onkologie TNM N Kategorie Werte",
@@ -1253,7 +1253,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-n-kategorie-werte-sct",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_TNM_N_Kategorie_Werte_SCT",
     "title" : "MII VS Onkologie TNM N Kategorie Werte SNOMED CT",
@@ -1265,7 +1265,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-pn-kategorie-werte",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_TNM_Pn_Kategorie_Werte",
     "title" : "MII VS Onkologie TNM Pn Kategorie Werte",
@@ -1277,7 +1277,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-s-kategorie-werte",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_TNM_S_Kategorie_Werte",
     "title" : "MII VS Onkologie TNM S Kategorie Werte",
@@ -1289,7 +1289,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-sn-suffix",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_TNM_SN_Suffix",
     "title" : "MII VS Onkologie TNM SN Suffix",
@@ -1301,7 +1301,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-t-kategorie",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_TNM_T_Kategorie",
     "title" : "MII VS Onkologie TNM T Kategorie",
@@ -1313,7 +1313,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-t-kategorie-werte",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_TNM_T_Kategorie_Werte",
     "title" : "MII VS Onkologie TNM T Kategorie Werte",
@@ -1325,7 +1325,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-t-kategorie-werte-sct",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_TNM_T_Kategorie_Werte_SCT",
     "title" : "MII VS Onkologie TNM T Kategorie Werte SNOMED CT",
@@ -1337,7 +1337,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-uicc-stadium",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_TNM_UICC_Stadium",
     "title" : "MII VS Onkologie TNM UICC Stadium",
@@ -1345,12 +1345,12 @@
     "systems" : ["https://www.uicc.org/resources/tnm"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-onko-tnm-klassifikation.html" : "MII PR Onkologie TNM-Klassifikation",
-    "StructureDefinition-mii-pr-onko-tnm-klassifikation-synthetisiert.html" : "MII PR Onkologie TNM-Klassifikation (synthetisiert)"
+    "StructureDefinition-mii-pr-onko-tnm-klassifikation-synthetisiert.html" : "MII PR Onkologie TNM-Klassifikation (synthetisiert)",
+    "StructureDefinition-mii-pr-onko-tnm-klassifikation.html" : "MII PR Onkologie TNM-Klassifikation"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-v-kategorie-werte",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_TNM_V_Kategorie_Werte",
     "title" : "MII VS Onkologie TNM V Kategorie Werte",
@@ -1362,7 +1362,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-version",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_TNM_Version",
     "title" : "MII VS Onkologie TNM Version",
@@ -1370,19 +1370,19 @@
     "systems" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version"],
     "uses" : {
     },
+    "StructureDefinition-mii-pr-onko-tnm-pn-kategorie.html" : "MII PR Onkologie TNM Pn-Kategorie",
+    "StructureDefinition-mii-pr-onko-tnm-klassifikation-synthetisiert.html" : "MII PR Onkologie TNM-Klassifikation (synthetisiert)",
+    "StructureDefinition-mii-pr-onko-tnm-klassifikation.html" : "MII PR Onkologie TNM-Klassifikation",
+    "StructureDefinition-mii-pr-onko-tnm-v-kategorie.html" : "MII PR Onkologie TNM V-Kategorie",
+    "StructureDefinition-mii-pr-onko-tnm-l-kategorie.html" : "MII PR Onkologie TNM L-Kategorie",
     "StructureDefinition-mii-pr-onko-tnm-n-kategorie.html" : "MII PR Onkologie TNM N-Kategorie",
     "StructureDefinition-mii-pr-onko-tnm-s-kategorie.html" : "MII PR Onkologie TNM S-Kategorie",
-    "StructureDefinition-mii-pr-onko-tnm-m-kategorie.html" : "MII PR Onkologie TNM M-Kategorie",
-    "StructureDefinition-mii-pr-onko-tnm-klassifikation.html" : "MII PR Onkologie TNM-Klassifikation",
-    "StructureDefinition-mii-pr-onko-tnm-l-kategorie.html" : "MII PR Onkologie TNM L-Kategorie",
-    "StructureDefinition-mii-pr-onko-tnm-pn-kategorie.html" : "MII PR Onkologie TNM Pn-Kategorie",
     "StructureDefinition-mii-pr-onko-tnm-t-kategorie.html" : "MII PR Onkologie TNM T-Kategorie",
-    "StructureDefinition-mii-pr-onko-tnm-v-kategorie.html" : "MII PR Onkologie TNM V-Kategorie",
-    "StructureDefinition-mii-pr-onko-tnm-klassifikation-synthetisiert.html" : "MII PR Onkologie TNM-Klassifikation (synthetisiert)"
+    "StructureDefinition-mii-pr-onko-tnm-m-kategorie.html" : "MII PR Onkologie TNM M-Kategorie"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tod",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Tod",
     "title" : "MII VS Onkologie Tod",
@@ -1394,7 +1394,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tumormarker-loinc",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Tumormarker_LOINC",
     "title" : "MII VS Onkologie Tumormarker LOINC",
@@ -1406,7 +1406,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-verlauf-fernmetastasen",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Verlauf_Fernmetastasen",
     "title" : "MII VS Onkologie Verlauf Fernmetastasen",
@@ -1418,7 +1418,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-verlauf-gesamtbeurteilung",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Verlauf_Gesamtbeurteilung",
     "title" : "MII VS Onkologie Verlauf Gesamtbeurteilung",
@@ -1430,7 +1430,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-verlauf-lymphknoten",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Verlauf_Lymphknoten",
     "title" : "MII VS Onkologie Verlauf Lymphknoten",
@@ -1442,7 +1442,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-verlauf-primaertumor",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Verlauf_Primaertumor",
     "title" : "MII VS Onkologie Verlauf Primärtumor",
@@ -1454,7 +1454,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-weitere-klassifikationen",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Weitere_Klassifikationen",
     "title" : "MII Value Set Onkologie - Weitere Klassifikationen",
@@ -1467,7 +1467,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-weitere-klassifikationen-auspraegungen",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Weitere_Klassifikationen_Auspraegungen",
     "title" : "MII Value Set Onkologie - Weitere Klassifikationen - Auspraegungen",
@@ -1480,7 +1480,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-strahlentherapie-ende-grund",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Strahlentherapie_Ende_Grund",
     "title" : "MII VS Onkologie Strahlentherapie Ende Grund",
@@ -1492,7 +1492,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-strahlentherapie-stellungzurop",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Strahlentherapie_StellungZurOp",
     "title" : "MII VS Onkologie Strahlentherapie Stellung zur OP",
@@ -1500,12 +1500,12 @@
     "systems" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-stellungzurop"],
     "uses" : {
     },
-    "StructureDefinition-mii-ex-onko-strahlentherapie-stellungzurop.html" : "MII EX Onko Strahlentherapie Stellung zur OP",
-    "StructureDefinition-mii-pr-onko-strahlentherapie.html" : "MII PR Onkologie Strahlentherapie"
+    "StructureDefinition-mii-pr-onko-strahlentherapie.html" : "MII PR Onkologie Strahlentherapie",
+    "StructureDefinition-mii-ex-onko-strahlentherapie-stellungzurop.html" : "MII EX Onko Strahlentherapie Stellung zur OP"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-strahlentherapie-strahlenart",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Strahlentherapie_Strahlenart",
     "title" : "MII VS Onkologie Strahlentherapie Strahlenart",
@@ -1518,7 +1518,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-strahlentherapie-strahlungseinheit",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Strahlentherapie_Strahlungseinheit",
     "title" : "MII VS Onkologie Strahlentherapie Strahlungseinheit",
@@ -1526,14 +1526,14 @@
     "systems" : ["http://unitsofmeasure.org"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie.html" : "MII PR Onkologie Strahlentherapie",
     "StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung-gesamtdosis.html" : "MII EX Onko Strahlentherapie Bestrahlung Gesamtdosis",
     "StructureDefinition-mii-ex-onko-strahlentherapie-bestrahlung-einzeldosis.html" : "MII EX Onko Strahlentherapie Bestrahlung Einzeldosis",
+    "StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie.html" : "MII PR Onkologie Strahlentherapie",
     "StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizin.html" : "MII PR Onkologie Strahlentherapie Nuklearmedizin"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-strahlentherapie-zielgebiet",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Strahlentherapie_Zielgebiet",
     "title" : "MII VS Onkologie Strahlentherapie Zielgebiet",
@@ -1547,7 +1547,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-systemische-therapie-ende-grund",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Systemische_Therapie_Ende_Grund",
     "title" : "MII VS Onkologie Systemische Therapie Ende Grund",
@@ -1559,7 +1559,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-systemische-therapie-stellungzurop",
-    "version" : "2026.0.3",
+    "version" : "2027.0.0-ballot.rc1",
     "status" : "active",
     "name" : "MII_VS_Onko_Systemische_Therapie_StellungZurOp",
     "title" : "MII VS Onkologie Systemische Therapie Stellung",
@@ -1567,7 +1567,7 @@
     "systems" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-stellungzurop"],
     "uses" : {
     },
-    "StructureDefinition-mii-ex-onko-systemische-therapie-stellungzurop.html" : "MII EX Onko Systemische Therapie Stellung zur OP",
-    "StructureDefinition-mii-pr-onko-systemische-therapie.html" : "MII PR Onkologie Systemische Therapie"
+    "StructureDefinition-mii-pr-onko-systemische-therapie.html" : "MII PR Onkologie Systemische Therapie",
+    "StructureDefinition-mii-ex-onko-systemische-therapie-stellungzurop.html" : "MII EX Onko Systemische Therapie Stellung zur OP"
   }]
 }

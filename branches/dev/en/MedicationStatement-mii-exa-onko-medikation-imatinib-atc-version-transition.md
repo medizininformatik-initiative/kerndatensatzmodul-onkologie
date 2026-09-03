@@ -1,4 +1,4 @@
-# Medikation Imatinib (ATC Versionsübergang) - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# Medikation Imatinib (ATC Versionsübergang) - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Onkologie Systemische Therapie Medikation](StructureDefinition-mii-pr-onko-systemische-therapie-medikation.md) version: 2026.0.3
+Profile: [MII PR Onkologie Systemische Therapie Medikation](StructureDefinition-mii-pr-onko-systemische-therapie-medikation.md) version: 2027.0.0-ballot.rc1
 
 **basedOn**: [CarePlan: identifier = Tumorkonferenz_1; status = active; intent = plan; category = postoperative Tumorkonferenz (Planung der postoperativen Therapie, z. B. zur Frage adjuvante Therapie); created = 2024-01-11](CarePlan-mii-exa-onko-tumorkonferenz-01.md)
 
@@ -42,7 +42,7 @@ CML-Protokoll mit Imatinib
   "resourceType" : "MedicationStatement",
   "id" : "mii-exa-onko-medikation-imatinib-atc-version-transition",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation|2026.0.3"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation|2027.0.0-ballot.rc1"]
   },
   "basedOn" : [{
     "reference" : "CarePlan/mii-exa-onko-tumorkonferenz-01"

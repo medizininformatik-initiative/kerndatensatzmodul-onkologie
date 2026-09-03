@@ -1,4 +1,4 @@
-# ATC: Jahresversionen und Überleitungen - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# ATC: Jahresversionen und Überleitungen - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**CodeSystems**](code-systems.md)

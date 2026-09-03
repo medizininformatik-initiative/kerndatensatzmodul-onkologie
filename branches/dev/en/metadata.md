@@ -1,11 +1,9 @@
-# Metadata Overview - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# Metadata Overview - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * **Metadata Overview**
 
 ## Metadata Overview
-
-> **Optional page (0..1).** The KDS module menu lists this page as **optional** — keep it only when your module's profiles carry the metadata characteristics it documents (as, for example, the Base module does). Decide for your module: **keep** it — fill it in and delete this banner and the `OPTIONAL-PAGE` marker comment (in this file AND the German mirror) — or **remove** it, following the per-entry procedure in [`docs/optional-pages.md`](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/blob/main/docs/optional-pages.md) of this repository. A release must not ship with this banner (convention check M9).
 
 ### Metadata Overview
 
@@ -60,7 +58,22 @@ Not enabled in this scaffold, but prepared as commented blocks in `sushi-config.
 * [Artifact Related Artifact](http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-artifact-relatedArtifact.html) — a literature citation for the module.
 * [CQF Expansion Parameters](http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-cqf-expansionParameters.html) together with a [CRMI Manifest Parameters](https://hl7.org/fhir/uv/crmi/STU2/en/StructureDefinition-crmi-manifestparameters.html) resource and the `path-expansion-params` / `pin-manifest` parameters.
 
-> [TODO: Enable the blocks your module needs and then update the tables above. If your module also applies the CRMI shareable/publishable profiles to its own StructureDefinitions, CapabilityStatements, CodeSystems and ValueSets — the `kerndatensatz-basis` idiom is a shared `RuleSet` in [`input/fsh/rulesets/crmi.fsh`](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/blob/main/input/fsh/rulesets/crmi.fsh) — add the corresponding rows here.]
+This module applies the CRMI shareable/publishable profiles to its own conformance resources. The idiom comes from `kerndatensatz-basis`: shared `RuleSet`s in [`input/fsh/rulesets/crmi.fsh`](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/blob/dev/input/fsh/rulesets/crmi.fsh), inserted per resource type.
+
+Coverage in the current build:
+
+| | |
+| :--- | :--- |
+| StructureDefinition | 98 / 98 |
+| ValueSet | 121 / 121 |
+| CodeSystem | 46 / 47 |
+| ConceptMap | 42 / 42 |
+| SearchParameter | 17 / 17 |
+| CapabilityStatement | 1 / 1 |
+| Library | 1 / 1 |
+| **total** | **326 / 327** |
+
+The single exception is the RadElement fragment: an excerpt of foreign terminology for which this module claims no editorship, and therefore declares no publishable metadata either.
 
 ##### CodeSystem supplements
 
@@ -87,7 +100,7 @@ Canonical references are pinned in the built package (`pin-canonicals: pin-all` 
 
 A module that additionally wants reproducible terminology expansion adds a CRMI Manifest Parameters resource — the `kerndatensatz-basis` idiom is `Parameters/mii-param-<slug>-manifest` — links it from the `ImplementationGuide` via `cqf-expansionParameters`, and points the publisher at it with `path-expansion-params` and `pin-manifest`. Both readers and tooling then have one stable place to inspect the parameters used for expansion and package pinning.
 
-> [TODO: Add the manifest for your module (see the commented blocks in `sushi-config.yaml`) and link the generated `Parameters` resource page here, or state explicitly that this module does not pin expansion parameters.]
+This module pins its expansion parameters: the resource `mii-param-onko-manifest` ([`input/resources/Parameters-expansion-manifest.json`](https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/blob/dev/input/resources/Parameters-expansion-manifest.json)) fixes SNOMED CT to the international edition **20250701**, plus the artifact version policy codes to 3.0.0. Terminology bindings in this guide are therefore reproducible against a named state — which matters especially for SNOMED, released monthly.
 
 #### Relationship to FAIR
 
@@ -120,7 +133,7 @@ The example instances shipped with this guide demonstrate FAIR-relevant FHIR str
 | R1.3 | RDA-R1.3-01D | Data complies with a community standard | The examples declare this module's profiles. In production, conformance must be validated against the profiles, bindings and CapabilityStatement expectations. |
 | R1.3 | RDA-R1.3-02M | Metadata is machine-understandable per a community standard | CRMI-conformant FHIR metadata as JSON/XML and as a FHIR package in the NPM package format used by the IG Publisher ecosystem. |
 
-> [TODO: The table lists the indicators of priority **Essential**. If your module wants the complete self-assessment, extend it with the **Important** and **Useful** indicators — `kerndatensatz-basis` carries the full table.]
+The table lists the indicators of priority **Essential**. This module deliberately omits the **Important** and **Useful** priorities: they would carry no module-specific statement here, because they are determined by the KDS publication pipeline rather than by the individual module. `kerndatensatz-basis` carries the full table for the shared infrastructure.
 
 #### Practical use
 

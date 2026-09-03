@@ -1,4 +1,4 @@
-# mii-exa-onko-palbociclib-therapie - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# mii-exa-onko-palbociclib-therapie - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Onkologie Systemische Therapie](StructureDefinition-mii-pr-onko-systemische-therapie.md) version: 2026.0.3
+Profile: [MII PR Onkologie Systemische Therapie](StructureDefinition-mii-pr-onko-systemische-therapie.md) version: 2027.0.0-ballot.rc1
 
 **MII EX Onko Systemische Therapie Intention**: kurativ
 
@@ -46,7 +46,7 @@ Implements CarePlan activity[0]: Anti-HER2 targeted therapy
   "resourceType" : "Procedure",
   "id" : "mii-exa-onko-palbociclib-therapie",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie|2026.0.3"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie|2027.0.0-ballot.rc1"]
   },
   "extension" : [{
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-intention",

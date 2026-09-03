@@ -1,4 +1,4 @@
-# MII VS Onkologie Allgemeiner Leistungszustand nach ECOG - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# MII VS Onkologie Allgemeiner Leistungszustand nach ECOG - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-allgemeiner-leistungszustand-ecog | *Version*:2026.0.3 |
-| Active Stand: 2026-09-02 | *Maschinenlesbarer Name*:MII_VS_Onko_Allgemeiner_Leistungszustand_ECOG |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-allgemeiner-leistungszustand-ecog | *Version*:2027.0.0-ballot.rc1 |
+| Active Stand: 2026-09-03 | *Maschinenlesbarer Name*:MII_VS_Onko_Allgemeiner_Leistungszustand_ECOG |
 
  
 Value Set für oBDS-Codes für den Allgemeinen Leistungszustand nach ECOG 
@@ -166,12 +166,12 @@ Value Set für oBDS-Codes für den Allgemeinen Leistungszustand nach ECOG
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-allgemeiner-leistungszustand-ecog",
-  "version" : "2026.0.3",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_VS_Onko_Allgemeiner_Leistungszustand_ECOG",
   "title" : "MII VS Onkologie Allgemeiner Leistungszustand nach ECOG",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-02T02:28:56+00:00",
+  "date" : "2026-09-03T12:57:16+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

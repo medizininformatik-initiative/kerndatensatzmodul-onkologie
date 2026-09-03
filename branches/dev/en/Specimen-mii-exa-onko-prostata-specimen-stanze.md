@@ -1,4 +1,4 @@
-# MII EXA Onkologie Prostata Stanzbiopsie Specimen - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# MII EXA Onkologie Prostata Stanzbiopsie Specimen - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Onkologie Specimen](StructureDefinition-mii-pr-onko-specimen.md) version: 2026.0.3
+Profile: [MII PR Onkologie Specimen](StructureDefinition-mii-pr-onko-specimen.md) version: 2027.0.0-ballot.rc1
 
 **accessionIdentifier**: P-2024-000812
 
@@ -34,7 +34,7 @@ Profile: [MII PR Onkologie Specimen](StructureDefinition-mii-pr-onko-specimen.md
   "resourceType" : "Specimen",
   "id" : "mii-exa-onko-prostata-specimen-stanze",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-specimen|2026.0.3"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-specimen|2027.0.0-ballot.rc1"]
   },
   "accessionIdentifier" : {
     "value" : "P-2024-000812"

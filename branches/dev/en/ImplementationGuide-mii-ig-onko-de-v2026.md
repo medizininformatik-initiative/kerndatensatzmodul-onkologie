@@ -1,4 +1,4 @@
-# MII ImplementationGuide Resource - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# MII ImplementationGuide Resource - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * **MII ImplementationGuide Resource**
@@ -179,7 +179,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
     },
     {
       "url" : "version",
-      "valueString" : "2026.0.3"
+      "valueString" : "2027.0.0-ballot.rc1"
     },
     {
       "url" : "uri",
@@ -279,7 +279,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ImplementationGuide/mii-ig-onko-de-v2026",
-  "version" : "2026.0.3",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_IG_Onko_DE",
   "title" : "MII IG Kerndatensatz-Modul Onkologie",
   "_title" : {
@@ -351,13 +351,13 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
     "id" : "de_medizininformatikinitiative_kerndatensatz_biobank",
     "uri" : "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.biobank/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.biobank",
     "packageId" : "de.medizininformatikinitiative.kerndatensatz.biobank",
-    "version" : "2027.0.0-ballot.rc1"
+    "version" : "2027.0.0-ballot.rc2"
   },
   {
     "id" : "de_medizininformatikinitiative_kerndatensatz_laborbefund",
     "uri" : "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.laborbefund/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.laborbefund",
     "packageId" : "de.medizininformatikinitiative.kerndatensatz.laborbefund",
-    "version" : "2026.0.3"
+    "version" : "2027.0.0-ballot.rc3"
   },
   {
     "id" : "de_medizininformatikinitiative_kerndatensatz_medikation",
@@ -414,7 +414,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "value",
-        "valueString" : "release"
+        "valueString" : "ballot"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -930,7 +930,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       },
       {
         "url" : "value",
-        "valueString" : "release"
+        "valueString" : "ballot"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },

@@ -1,6 +1,6 @@
 {
   "package": "de.medizininformatikinitiative.kerndatensatz.onkologie",
-  "version": "2026.0.3",
+  "version": "2027.0.0-ballot.rc1",
   "fhirVersion": "4.0.1",
   "jurisdiction": "DE",
   "extensions": [
@@ -565,6 +565,9 @@
       "StructureDefinition",
       "ValueSet"
     ],
+    "http://hl7.org/fhir/StructureDefinition/resource-lastReviewDate": [
+      "StructureDefinition"
+    ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint": [
       "StructureDefinition.snapshot.element"
     ],
@@ -588,6 +591,7 @@
       "StructureDefinition.description",
       "StructureDefinition.differential.element.definition",
       "StructureDefinition.differential.element.short",
+      "StructureDefinition.snapshot.element.binding.description",
       "StructureDefinition.snapshot.element.definition",
       "StructureDefinition.snapshot.element.short",
       "StructureDefinition.title"

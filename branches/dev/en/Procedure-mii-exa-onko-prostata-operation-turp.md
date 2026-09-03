@@ -1,4 +1,4 @@
-# Prostata Operation TURP Beispiel - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# Prostata Operation TURP Beispiel - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Onko Prostata Operation](StructureDefinition-mii-pr-onko-prostata-operation.md) version: 2026.0.3
+Profile: [MII PR Onko Prostata Operation](StructureDefinition-mii-pr-onko-prostata-operation.md) version: 2027.0.0-ballot.rc1
 
 **MII EX Onko Operation Intention**: diagnostisch
 
@@ -39,7 +39,7 @@ Profile: [MII PR Onko Prostata Operation](StructureDefinition-mii-pr-onko-prosta
   "resourceType" : "Procedure",
   "id" : "mii-exa-onko-prostata-operation-turp",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostata-operation|2026.0.3"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostata-operation|2027.0.0-ballot.rc1"]
   },
   "extension" : [{
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention",

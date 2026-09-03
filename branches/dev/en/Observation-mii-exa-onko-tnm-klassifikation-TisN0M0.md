@@ -1,4 +1,4 @@
-# mii-exa-onko-tnm-klassifikation-TisN0M0 - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# mii-exa-onko-tnm-klassifikation-TisN0M0 - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Onkologie TNM-Klassifikation](StructureDefinition-mii-pr-onko-tnm-klassifikation.md) version: 2026.0.3
+Profile: [MII PR Onkologie TNM-Klassifikation](StructureDefinition-mii-pr-onko-tnm-klassifikation.md) version: 2027.0.0-ballot.rc1
 
 **status**: Final
 
@@ -41,7 +41,7 @@ Profile: [MII PR Onkologie TNM-Klassifikation](StructureDefinition-mii-pr-onko-t
   "resourceType" : "Observation",
   "id" : "mii-exa-onko-tnm-klassifikation-TisN0M0",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation|2026.0.3"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation|2027.0.0-ballot.rc1"]
   },
   "status" : "final",
   "code" : {

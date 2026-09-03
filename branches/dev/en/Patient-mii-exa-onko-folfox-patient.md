@@ -1,4 +1,4 @@
-# FOLFOX Patient - 65-jähriger mit Kolonkarzinom - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# FOLFOX Patient - 65-jähriger mit Kolonkarzinom - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)

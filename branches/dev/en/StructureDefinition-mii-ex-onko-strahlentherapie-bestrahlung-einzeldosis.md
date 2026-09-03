@@ -1,4 +1,4 @@
-# MII EX Onko Strahlentherapie Bestrahlung Einzeldosis - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# MII EX Onko Strahlentherapie Bestrahlung Einzeldosis - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-einzeldosis | *Version*:2026.0.3 |
-| Active as of 2026-09-02 | *Computable Name*:MII_EX_Onko_Strahlentherapie_Bestrahlung_Einzeldosis |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-einzeldosis | *Version*:2027.0.0-ballot.rc1 |
+| Active as of 2026-09-03 | *Computable Name*:MII_EX_Onko_Strahlentherapie_Bestrahlung_Einzeldosis |
 
 Strahlentherapie: Einzeldosis einer Bestrahlung
 
@@ -168,11 +168,11 @@ Other representations of profile: [CSV](../StructureDefinition-mii-ex-onko-strah
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-einzeldosis",
-  "version" : "2026.0.3",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_EX_Onko_Strahlentherapie_Bestrahlung_Einzeldosis",
   "title" : "MII EX Onko Strahlentherapie Bestrahlung Einzeldosis",
   "status" : "active",
-  "date" : "2026-09-02T02:28:56+00:00",
+  "date" : "2026-09-03T12:57:16+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

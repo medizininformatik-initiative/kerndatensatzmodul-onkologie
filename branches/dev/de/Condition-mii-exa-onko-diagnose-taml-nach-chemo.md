@@ -1,4 +1,4 @@
-# MII EXA Onkologie Diagnose t-AML nach Chemotherapie (dueTo) - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# MII EXA Onkologie Diagnose t-AML nach Chemotherapie (dueTo) - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Onkologie Diagnose Primärtumor](StructureDefinition-mii-pr-onko-diagnose-primaertumor.md) version: 2026.0.3
+Profile: [MII PR Onkologie Diagnose Primärtumor](StructureDefinition-mii-pr-onko-diagnose-primaertumor.md) version: 2027.0.0-ballot.rc1
 
 **Condition Asserted Date**: 2026-03-18
 
@@ -43,7 +43,7 @@ Profile: [MII PR Onkologie Diagnose Primärtumor](StructureDefinition-mii-pr-onk
   "resourceType" : "Condition",
   "id" : "mii-exa-onko-diagnose-taml-nach-chemo",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor|2026.0.3"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor|2027.0.0-ballot.rc1"]
   },
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",

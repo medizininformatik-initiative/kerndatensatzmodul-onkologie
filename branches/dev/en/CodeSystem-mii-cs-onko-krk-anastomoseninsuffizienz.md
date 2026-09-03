@@ -1,4 +1,4 @@
-# MII CS Onkologie KRK Anastomoseninsuffizienz - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# MII CS Onkologie KRK Anastomoseninsuffizienz - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-anastomoseninsuffizienz | *Version*:2026.0.3 |
-| Active as of 2026-09-02 | *Computable Name*:MII_CS_Onko_KRK_Anastomoseninsuffizienz |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-anastomoseninsuffizienz | *Version*:2027.0.0-ballot.rc1 |
+| Active as of 2026-09-03 | *Computable Name*:MII_CS_Onko_KRK_Anastomoseninsuffizienz |
 
  
 oBDS-spezifisches Codesystem für Anastomoseninsuffizienz beim Kolorektalen Karzinom 
@@ -155,12 +155,12 @@ This Code system is referenced in the definition of the following value sets:
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-anastomoseninsuffizienz",
-  "version" : "2026.0.3",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_CS_Onko_KRK_Anastomoseninsuffizienz",
   "title" : "MII CS Onkologie KRK Anastomoseninsuffizienz",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-02T02:28:56+00:00",
+  "date" : "2026-09-03T12:57:16+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

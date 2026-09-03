@@ -1,4 +1,4 @@
-# mii-sp-onko-observation-tnm-y-praefix - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# mii-sp-onko-observation-tnm-y-praefix - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-observation-tnm-y-praefix | *Version*:2026.0.3 |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-observation-tnm-y-praefix | *Version*:2027.0.0-ballot.rc1 |
 | Active as of 2026-08-25 | *Computable Name*:MII_SP_Observation_TNM_y_Praefix |
 
  
@@ -138,7 +138,7 @@ SearchParameter for Observation.modifierExtension[y-praefix]. Kennzeichnet TNM-K
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-observation-tnm-y-praefix",
-  "version" : "2026.0.3",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_SP_Observation_TNM_y_Praefix",
   "status" : "active",
   "experimental" : false,

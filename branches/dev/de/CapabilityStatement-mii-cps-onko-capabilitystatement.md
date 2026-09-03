@@ -1,4 +1,4 @@
-# MII CPS Onkology CapabilityStatement - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# MII CPS Onkology CapabilityStatement - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-onko/CapabilityStatement/metadata | *Version*:2026.0.3 |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CapabilityStatement/mii-cps-onko-capabilitystatement | *Version*:2027.0.0-ballot.rc1 |
 | Active Stand: 2025-12-04 | *Maschinenlesbarer Name*:MII_CPS_Onkology_CapabilityStatement |
 
  
@@ -118,8 +118,8 @@ Das vorliegende CapabilityStatement beschreibt alle verpflichtenden Interaktione
       }]
     }
   }],
-  "url" : "https://www.medizininformatik-initiative.de/fhir/modul-onko/CapabilityStatement/metadata",
-  "version" : "2026.0.3",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CapabilityStatement/mii-cps-onko-capabilitystatement",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_CPS_Onkology_CapabilityStatement",
   "title" : "MII CPS Onkology CapabilityStatement",
   "status" : "active",

@@ -1,4 +1,4 @@
-# mii-exa-onko-molecular-cdk46-protocol - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# mii-exa-onko-molecular-cdk46-protocol - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Onkologie Therapieempfehlung Kombinationstherapie](StructureDefinition-mii-pr-onko-therapieempfehlung-kombinationstherapie.md) version: 2026.0.3
+Profile: [MII PR Onkologie Therapieempfehlung Kombinationstherapie](StructureDefinition-mii-pr-onko-therapieempfehlung-kombinationstherapie.md) version: 2027.0.0-ballot.rc1
 
 **status**: Active
 
@@ -42,7 +42,7 @@ Profile: [MII PR Onkologie Therapieempfehlung Kombinationstherapie](StructureDef
   "resourceType" : "RequestGroup",
   "id" : "mii-exa-onko-molecular-cdk46-protocol",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-kombinationstherapie|2026.0.3"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-kombinationstherapie|2027.0.0-ballot.rc1"]
   },
   "status" : "active",
   "intent" : "proposal",

@@ -1,4 +1,4 @@
-# MII PR Onkologie Tumormarker - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# MII PR Onkologie Tumormarker - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumormarker | *Version*:2026.0.3 |
-| Active as of 2026-09-02 | *Computable Name*:MII_PR_Onko_Tumormarker |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumormarker | *Version*:2027.0.0-ballot.rc1 |
+| Active as of 2026-09-03 | *Computable Name*:MII_PR_Onko_Tumormarker |
 
  
 Tumormarker-Bestimmung im Rahmen einer onkologischen Erkrankung. Das Profil leitet vom Laboruntersuchungs-Profil des KDS-Moduls Laborbefund ab und schraenkt den LOINC-Code auf die kuratierte Tumormarker-Liste ein (extensible). Fachlicher Hintergrund und die Zuordnung Marker zu zulaessiger ICD-O-Morphologie nach ENCR Table 4: siehe IG-Seite Tumormarker. 
@@ -41,6 +41,14 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-tumor
     "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablestructuredefinition"]
   },
   "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
+    "valueCoding" : {
+      "system" : "http://hl7.org/fhir/version-algorithm",
+      "code" : "semver",
+      "display" : "SemVer"
+    }
+  },
+  {
     "url" : "https://www.medizininformatik-initiative.de/fhir/modul-meta/StructureDefinition/mii-ex-meta-license-codeable",
     "valueCodeableConcept" : {
       "coding" : [{
@@ -49,10 +57,6 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-tumor
         "display" : "Creative Commons Attribution 4.0 International"
       }]
     }
-  },
-  {
-    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-usage",
-    "valueMarkdown" : "Use this profile as the technical FHIR representation of the corresponding Medical Informatics Initiative logical model. The profile constrains a base FHIR resource for the MII module context by specifying how elements are used, which elements are required or not used, which extensions and terminology bindings apply, and how the resource maps to the module-specific content model. Implementers should produce and consume resource instances that conform to this profile when exchanging data for the corresponding MII module."
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
@@ -73,8 +77,8 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-tumor
     }
   },
   {
-    "url" : "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
-    "valueDate" : "2026-01-03"
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-usage",
+    "valueMarkdown" : "Use this profile as the technical FHIR representation of the corresponding Medical Informatics Initiative logical model. The profile constrains a base FHIR resource for the MII module context by specifying how elements are used, which elements are required or not used, which extensions and terminology bindings apply, and how the resource maps to the module-specific content model. Implementers should produce and consume resource instances that conform to this profile when exchanging data for the corresponding MII module."
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/artifact-topic",
@@ -82,6 +86,15 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-tumor
       "coding" : [{
         "system" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
         "code" : "C3262"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-topic",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+        "code" : "C25294"
       }]
     }
   },
@@ -139,9 +152,23 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-tumor
         "value" : "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
       }]
     }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
+    "valueDate" : "2026-01-03"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/resource-lastReviewDate",
+    "valueDate" : "2026-08-24"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+    "valuePeriod" : {
+      "start" : "2027"
+    }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumormarker",
-  "version" : "2026.0.3",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_PR_Onko_Tumormarker",
   "title" : "MII PR Onkologie Tumormarker",
   "_title" : {
@@ -158,7 +185,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-tumor
     }]
   },
   "status" : "active",
-  "date" : "2026-09-02T02:28:56+00:00",
+  "date" : "2026-09-03T12:57:16+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -196,20 +223,9 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-tumor
       }]
     },
     {
-      "id" : "Observation.code.coding",
+      "id" : "Observation.code.coding:loinc",
       "path" : "Observation.code.coding",
-      "slicing" : {
-        "discriminator" : [{
-          "type" : "pattern",
-          "path" : "system"
-        }],
-        "rules" : "open"
-      }
-    },
-    {
-      "id" : "Observation.code.coding:tumormarker-loinc",
-      "path" : "Observation.code.coding",
-      "sliceName" : "tumormarker-loinc",
+      "sliceName" : "loinc",
       "short" : "Tumormarker als LOINC-Code",
       "_short" : {
         "extension" : [{
@@ -225,18 +241,11 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-tumor
         }]
       },
       "definition" : "LOINC-Code des bestimmten Tumormarkers aus der kuratierten onkologischen Auswahlliste",
-      "min" : 0,
       "max" : "1",
-      "mustSupport" : true,
       "binding" : {
         "strength" : "extensible",
         "valueSet" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tumormarker-loinc"
       }
-    },
-    {
-      "id" : "Observation.code.coding:tumormarker-loinc.system",
-      "path" : "Observation.code.coding.system",
-      "patternUri" : "http://loinc.org"
     },
     {
       "id" : "Observation.focus",

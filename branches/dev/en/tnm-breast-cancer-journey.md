@@ -1,4 +1,4 @@
-# TNM Breast Cancer Journey (Example) - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# TNM Breast Cancer Journey (Example) - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Guidance**](guidance.md)

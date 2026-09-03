@@ -1,4 +1,4 @@
-# Strahlentherapie: Beispiel einer Nuklearmedizinischen Bestrahlungstherapie - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# Strahlentherapie: Beispiel einer Nuklearmedizinischen Bestrahlungstherapie - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Onkologie Strahlentherapie Nuklearmedizin](StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizin.md) version: 2026.0.3
+Profile: [MII PR Onkologie Strahlentherapie Nuklearmedizin](StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizin.md) version: 2027.0.0-ballot.rc1
 
 **MII EX Onko Strahlentherapie Bestrahlung Gesamtdosis**: 30 GBq
 
@@ -43,7 +43,7 @@ Profile: [MII PR Onkologie Strahlentherapie Nuklearmedizin](StructureDefinition-
   "resourceType" : "Procedure",
   "id" : "mii-exa-onko-strahlentherapie-bestrahlung-nuklearmedizin-1",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizin|2026.0.3"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizin|2027.0.0-ballot.rc1"]
   },
   "extension" : [{
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-gesamtdosis",

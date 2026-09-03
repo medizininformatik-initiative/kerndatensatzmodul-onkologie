@@ -1,4 +1,4 @@
-# ICD-O: Revisionen und Validierung - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# ICD-O: Revisionen und Validierung - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**CodeSystems**](code-systems.md)

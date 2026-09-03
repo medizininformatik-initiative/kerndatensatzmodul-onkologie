@@ -1,4 +1,4 @@
-# Guidance for Implementers - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# Guidance for Implementers - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Guidance**](guidance.md)
@@ -57,9 +57,9 @@ The following tables are generated at build time via SQL directly from this IG's
 | | |
 | :--- | :--- |
 | Relationship | Count |
-| equivalent | 1318 |
-| source-is-narrower-than-target | 80 |
-| source-is-broader-than-target | 60 |
+| source-is-narrower-than-target | `80` |
+| source-is-broader-than-target | `60` |
+| equivalent | `1318` |
 
 **All mappings of the oBDS answer lists** (module-own code systems → SNOMED CT/LOINC; the year-versioned ATC/ICD-O transitions are described on [ATC](atc-terminologie.md) and [ICD-O](icd-o-terminologie.md)):
 
@@ -397,7 +397,7 @@ The following tables are generated at build time via SQL directly from this IG's
 | oBDS-CS therapie-typ | #CIZ | source-is-broader-than-target | SNOMED CT | #897713009 |
 | oBDS-CS therapie-typ | #CZ | equivalent | SNOMED CT | #1255831008 |
 | oBDS-CS therapie-typ | #HO | equivalent | SNOMED CT | #169413002 |
-| oBDS-CS therapie-typ | #IM | equivalent | SNOMED CT | #897713009 |
+| oBDS-CS therapie-typ | #IM | equivalent | SNOMED CT | #76334006 |
 | oBDS-CS therapie-typ | #IZ | source-is-broader-than-target | SNOMED CT | #76334006 |
 | oBDS-CS therapie-typ | #KW | equivalent | SNOMED CT | #897016006 |
 | oBDS-CS therapie-typ | #OP | equivalent | SNOMED CT | #387713003 |

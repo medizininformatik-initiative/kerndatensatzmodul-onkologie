@@ -1,4 +1,4 @@
-# mii-sp-onko-procedure-strahlentherapie-lateralitaet - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# mii-sp-onko-procedure-strahlentherapie-lateralitaet - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-procedure-strahlentherapie-lateralitaet | *Version*:2026.0.3 |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-procedure-strahlentherapie-lateralitaet | *Version*:2027.0.0-ballot.rc1 |
 | Active Stand: 2025-05-17 | *Maschinenlesbarer Name*:MII_SP_Procedure_Strahlentherapie_Lateralitaet |
 
  
@@ -138,7 +138,7 @@ SearchParameter for Procedure.bodySite.extension:Seitenlokalisation
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-procedure-strahlentherapie-lateralitaet",
-  "version" : "2026.0.3",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_SP_Procedure_Strahlentherapie_Lateralitaet",
   "status" : "active",
   "experimental" : true,

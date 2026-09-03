@@ -1,4 +1,4 @@
-# Startseite - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# Startseite - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * **Startseite**
@@ -7,7 +7,7 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ImplementationGuide/mii-ig-onko-de-v2026 | *Version*:2026.0.3 |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ImplementationGuide/mii-ig-onko-de-v2026 | *Version*:2027.0.0-ballot.rc1 |
 | Active Stand: 2026-03-27 | *Maschinenlesbarer Name*:MII_IG_Onko_DE |
 
 ### Einführung

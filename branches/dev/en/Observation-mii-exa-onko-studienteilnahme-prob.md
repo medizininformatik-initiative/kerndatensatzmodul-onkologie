@@ -1,4 +1,4 @@
-# Studienteilnahme PRO-B - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# Studienteilnahme PRO-B - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Onkologie Studienteilnahme](StructureDefinition-mii-pr-onko-studienteilnahme.md) version: 2026.0.3
+Profile: [MII PR Onkologie Studienteilnahme](StructureDefinition-mii-pr-onko-studienteilnahme.md) version: 2027.0.0-ballot.rc1
 
 **status**: Final
 
@@ -45,7 +45,7 @@ Patientin mit metastasiertem Mammakarzinom in PRO-B Studie randomisiert. Teilnah
   "resourceType" : "Observation",
   "id" : "mii-exa-onko-studienteilnahme-prob",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-studienteilnahme|2026.0.3"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-studienteilnahme|2027.0.0-ballot.rc1"]
   },
   "status" : "final",
   "code" : {

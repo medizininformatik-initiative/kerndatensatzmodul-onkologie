@@ -1,4 +1,4 @@
-# MII EX Onkologie Nebenwirkung CTCAE-Version - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# MII EX Onkologie Nebenwirkung CTCAE-Version - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-nebenwirkung-ctcae-version | *Version*:2026.0.3 |
-| Active Stand: 2026-09-02 | *Maschinenlesbarer Name*:MII_EX_Onko_Nebenwirkung_CTCAE_Version |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-nebenwirkung-ctcae-version | *Version*:2027.0.0-ballot.rc1 |
+| Active Stand: 2026-09-03 | *Maschinenlesbarer Name*:MII_EX_Onko_Nebenwirkung_CTCAE_Version |
 
 Version des CTCAE-Katalogs, aus dem die Nebenwirkungsart stammt (oBDS 15.3). Nicht zu verwechseln mit der MedDRA-Version in event.coding[meddra].version: Die CTCAE fuehrt ihre Terme mit MedDRA-Codes, CTCAE v4.03 basiert auf MedDRA v12.0.
 
@@ -205,11 +205,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-ex-onko-
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-nebenwirkung-ctcae-version",
-  "version" : "2026.0.3",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_EX_Onko_Nebenwirkung_CTCAE_Version",
   "title" : "MII EX Onkologie Nebenwirkung CTCAE-Version",
   "status" : "active",
-  "date" : "2026-09-02T02:28:56+00:00",
+  "date" : "2026-09-03T12:57:16+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

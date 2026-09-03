@@ -1,4 +1,4 @@
-# MII CM Onko ATC Code Changes 2021 to 2022 - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# MII CM Onko ATC Code Changes 2021 to 2022 - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-atc-transitions-2022 | *Version*:2026.0.3 |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-atc-transitions-2022 | *Version*:2027.0.0-ballot.rc1 |
 | Active Stand: 2026-08-25 | *Maschinenlesbarer Name*:MII_CM_Onko_ATC_Transitions_2022 |
 
  
@@ -142,7 +142,7 @@ Diese ConceptMap dokumentiert die ATC-Code-Änderungen von 2021 zu 2022. In dies
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-atc-transitions-2022",
-  "version" : "2026.0.3",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_CM_Onko_ATC_Transitions_2022",
   "title" : "MII CM Onko ATC Code Changes 2021 to 2022",
   "status" : "active",

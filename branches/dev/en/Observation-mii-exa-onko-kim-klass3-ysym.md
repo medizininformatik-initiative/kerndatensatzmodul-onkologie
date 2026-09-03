@@ -1,4 +1,4 @@
-# mii-exa-onko-kim-klass3-ysym - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# mii-exa-onko-kim-klass3-ysym - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Onkologie TNM y-Symbol](StructureDefinition-mii-pr-onko-tnm-y-symbol.md) version: 2026.0.3
+Profile: [MII PR Onkologie TNM y-Symbol](StructureDefinition-mii-pr-onko-tnm-y-symbol.md) version: 2027.0.0-ballot.rc1
 
 **status**: Final
 
@@ -35,7 +35,7 @@ Profile: [MII PR Onkologie TNM y-Symbol](StructureDefinition-mii-pr-onko-tnm-y-s
   "resourceType" : "Observation",
   "id" : "mii-exa-onko-kim-klass3-ysym",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-y-symbol|2026.0.3"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-y-symbol|2027.0.0-ballot.rc1"]
   },
   "status" : "final",
   "code" : {

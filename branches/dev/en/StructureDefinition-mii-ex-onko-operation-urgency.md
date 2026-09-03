@@ -1,4 +1,4 @@
-# MII EX Onko Operation Urgency - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# MII EX Onko Operation Urgency - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-urgency | *Version*:2026.0.3 |
-| Active as of 2026-09-02 | *Computable Name*:MII_EX_Onko_Operation_Urgency |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-urgency | *Version*:2027.0.0-ballot.rc1 |
+| Active as of 2026-09-03 | *Computable Name*:MII_EX_Onko_Operation_Urgency |
 
 Modalität der Eingriffsdurchführung (Art des Eingriffs) im Rahmen des oBDS (KR6)
 
@@ -203,11 +203,11 @@ Other representations of profile: [CSV](../StructureDefinition-mii-ex-onko-opera
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-urgency",
-  "version" : "2026.0.3",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_EX_Onko_Operation_Urgency",
   "title" : "MII EX Onko Operation Urgency",
   "status" : "active",
-  "date" : "2026-09-02T02:28:56+00:00",
+  "date" : "2026-09-03T12:57:16+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

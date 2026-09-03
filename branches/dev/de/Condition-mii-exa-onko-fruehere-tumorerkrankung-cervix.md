@@ -1,4 +1,4 @@
-# Frühere Tumorerkrankung Cervix in situ - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# Frühere Tumorerkrankung Cervix in situ - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Onkologie Frühere Tumorerkrankung](StructureDefinition-mii-pr-onko-fruehere-tumorerkrankung.md) version: 2026.0.3
+Profile: [MII PR Onkologie Frühere Tumorerkrankung](StructureDefinition-mii-pr-onko-fruehere-tumorerkrankung.md) version: 2027.0.0-ballot.rc1
 
 **Condition Asserted Date**: 2013
 
@@ -37,7 +37,7 @@ Profile: [MII PR Onkologie Frühere Tumorerkrankung](StructureDefinition-mii-pr-
   "resourceType" : "Condition",
   "id" : "mii-exa-onko-fruehere-tumorerkrankung-cervix",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fruehere-tumorerkrankung|2026.0.3"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fruehere-tumorerkrankung|2027.0.0-ballot.rc1"]
   },
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",

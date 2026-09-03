@@ -6,7 +6,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Changelog - MII IG Kerndatensatz-Modul Onkologie v2026.0.3</title>
+    <title>Changelog - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -141,7 +141,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">MII IG Kerndatensatz-Modul Onkologie</span>
             <br/>
-            <span style="display:inline-block;">2026.0.3 - 
+            <span style="display:inline-block;">2027.0.0-ballot.rc1 - 
 
 
 
@@ -319,7 +319,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">MII IG Kerndatensatz-Modul Onkologie - Local Development build (v2026.0.3) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">MII IG Kerndatensatz-Modul Onkologie - Local Development build (v2027.0.0-ballot.rc1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Changelog</h2>
   
 
@@ -337,7 +337,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#changes-v202700-not-yet-released" id="markdown-toc-changes-v202700-not-yet-released">Changes v2027.0.0 (not yet released)</a></li>
+  <li><a href="#changes-v202700-ballotrc1-ballot-candidate-not-yet-released" id="markdown-toc-changes-v202700-ballotrc1-ballot-candidate-not-yet-released">Changes v2027.0.0-ballot.rc1 (ballot candidate, not yet released)</a></li>
   <li><a href="#changes-v202603-released-2026-03-27" id="markdown-toc-changes-v202603-released-2026-03-27">Changes v2026.0.3 (released 2026-03-27)</a></li>
   <li><a href="#changes-v202602-released-2026-03-10" id="markdown-toc-changes-v202602-released-2026-03-10">Changes v2026.0.2 (released 2026-03-10)</a></li>
   <li><a href="#changes-v202601-released-2026-02-05-and-v202600-released-2026-01-03" id="markdown-toc-changes-v202601-released-2026-02-05-and-v202600-released-2026-01-03">Changes v2026.0.1 (released 2026-02-05) and v2026.0.0 (released 2026-01-03)</a></li>
@@ -352,7 +352,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 history is maintained in the German edition of this page; the current release
 cycle is translated in full below.</p>
 
-<h3 id="changes-v202700-not-yet-released">Changes v2027.0.0 (not yet released)</h3>
+<h3 id="changes-v202700-ballotrc1-ballot-candidate-not-yet-released">Changes v2027.0.0-ballot.rc1 (ballot candidate, not yet released)</h3>
 
 <h4 id="️-breaking-changes">⚠️ Breaking Changes</h4>
 
@@ -416,6 +416,8 @@ cycle is translated in full below.</p>
 <h4 id="further-improvements">Further improvements</h4>
 
 <ul>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> <strong>CapabilityStatement canonical moved into the module's namespace</strong>: the URL was <code class="language-plaintext highlighter-rouge">…/fhir/modul-onko/CapabilityStatement/metadata</code> — missing the <code class="language-plaintext highlighter-rouge">ext/</code> segment, which made it the only resource of this module outside its own canonical base, and ending in <code class="language-plaintext highlighter-rouge">metadata</code> rather than its <code class="language-plaintext highlighter-rouge">id</code>. It is now <code class="language-plaintext highlighter-rouge">…/fhir/ext/modul-onko/CapabilityStatement/mii-cps-onko-capabilitystatement</code>. Formally a canonical change; in practice no profile or instance references a CapabilityStatement canonical, and the old URL pointed nowhere, since nothing is published under <code class="language-plaintext highlighter-rouge">/fhir/modul-onko/</code>.</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> <strong>SNOMED CT code for pure immunotherapy corrected</strong> (GH #267): in <code class="language-plaintext highlighter-rouge">mii-cm-onko-therapie-typ-sct</code>, oBDS therapy type <code class="language-plaintext highlighter-rouge">IM</code> (Immun-/Antikörpertherapie) mapped to <code class="language-plaintext highlighter-rouge">897713009</code> "Antineoplastic chemoimmunotherapy" — asserting a chemotherapy that does not take place in pure immunotherapy. The target is now <code class="language-plaintext highlighter-rouge">76334006</code> "Immunotherapy (procedure)". <code class="language-plaintext highlighter-rouge">897713009</code> remains correct for the combinations <code class="language-plaintext highlighter-rouge">CI</code> and <code class="language-plaintext highlighter-rouge">CIZ</code>. The ConceptMap is <code class="language-plaintext highlighter-rouge">experimental</code>, dates from 2024 and is not referenced by any profile, so no migration is required.</li>
   <li><code class="language-plaintext highlighter-rouge">documentation</code> <strong>LOINC-SNOMED anchors for the tumour markers</strong>: verified for 23 of 28 markers (seven newly determined). For gastrin, calcitonin, M-protein, IgA and IgM no "Measurement of …" grouper exists in the ontology.</li>
   <li><code class="language-plaintext highlighter-rouge">documentation</code> <strong>UICC code system: cross-edition union documented as a deliberate decision</strong> — the edition in use is carried as a separate data element (TNM version, oBDS 8.2); edition-specific validation is planned as a later stage.</li>
   <li><code class="language-plaintext highlighter-rouge">fix</code> <strong>Organ modules aligned with the official oBDS numbering</strong> (basisdatensatz.de and oBDS XSD v3.0.5): the numbers are flat (M1–M8, KR1–KR10, P1–P9, MM1–MM4); the earlier hierarchical entries do not exist officially. Misassignments corrected (PSA was P1, officially P7; Clavien-Dindo P5, officially P9) and missing fields added.</li>
@@ -485,8 +487,8 @@ page.</p>
 
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
-          Package de.medizininformatikinitiative.kerndatensatz.onkologie#2026.0.3 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Wed, Sep 2, 2026 02:28+0000">2026-09-02</span>
+          Package de.medizininformatikinitiative.kerndatensatz.onkologie#2027.0.0-ballot.rc1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated <span title="Thu, Sep 3, 2026 12:57+0000">2026-09-03</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

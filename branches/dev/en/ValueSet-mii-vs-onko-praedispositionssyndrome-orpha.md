@@ -1,4 +1,4 @@
-# MII VS Onkologie Krebsprädispositionssyndrome ORPHA - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# MII VS Onkologie Krebsprädispositionssyndrome ORPHA - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-praedispositionssyndrome-orpha | *Version*:2026.0.3 |
-| Active as of 2026-09-02 | *Computable Name*:MII_VS_Onko_Praedispositionssyndrome_ORPHA |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-praedispositionssyndrome-orpha | *Version*:2027.0.0-ballot.rc1 |
+| Active as of 2026-09-03 | *Computable Name*:MII_VS_Onko_Praedispositionssyndrome_ORPHA |
 
  
 Krebsprädispositionssyndrome der §65c-Liste (Manual Plus, Krebsprädispositionssyndrom und -gen) als Orphanet-Codes. Begleitartefakt ohne Profil-Binding (Andockung an die genetischen Profile folgt mit dem Konzept für genetische Marker); 15 genspezifische Prädispositionen der Quell-Liste haben kein Orphanet-Konzept und sind über das Gen-ValueSet mii-vs-onko-praedispositionsgene-hgnc adressierbar. Projektseitige Code-Auflösung ohne Gewähr; fachliche Prüfung vor Produktivnutzung erforderlich. 
@@ -166,12 +166,12 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-praedispositionssyndrome-orpha",
-  "version" : "2026.0.3",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_VS_Onko_Praedispositionssyndrome_ORPHA",
   "title" : "MII VS Onkologie Krebsprädispositionssyndrome ORPHA",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-02T02:28:56+00:00",
+  "date" : "2026-09-03T12:57:16+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

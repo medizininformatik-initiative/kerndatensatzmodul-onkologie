@@ -1,4 +1,4 @@
-# Frühere Tumorerkrankung nur Freitext - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# Frühere Tumorerkrankung nur Freitext - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Onkologie Frühere Tumorerkrankung](StructureDefinition-mii-pr-onko-fruehere-tumorerkrankung.md) version: 2026.0.3
+Profile: [MII PR Onkologie Frühere Tumorerkrankung](StructureDefinition-mii-pr-onko-fruehere-tumorerkrankung.md) version: 2027.0.0-ballot.rc1
 
 **Condition Asserted Date**: 2010
 
@@ -42,7 +42,7 @@ Patient berichtet von operativ entferntem Hautkrebs vor ca. 14 Jahren, keine wei
   "resourceType" : "Condition",
   "id" : "mii-exa-onko-fruehere-tumorerkrankung-freetext",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fruehere-tumorerkrankung|2026.0.3"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fruehere-tumorerkrankung|2027.0.0-ballot.rc1"]
   },
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",

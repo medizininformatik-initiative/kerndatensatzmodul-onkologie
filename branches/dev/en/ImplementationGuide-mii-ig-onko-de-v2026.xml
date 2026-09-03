@@ -35,7 +35,7 @@
       <valueId value="de.medizininformatikinitiative.kerndatensatz.onkologie"/>
     </extension>
     <extension url="version">
-      <valueString value="2026.0.3"/>
+      <valueString value="2027.0.0-ballot.rc1"/>
     </extension>
     <extension url="uri">
       <valueUri value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko"/>
@@ -121,7 +121,7 @@
     </valueCodeableConcept>
   </extension>
   <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ImplementationGuide/mii-ig-onko-de-v2026"/>
-  <version value="2026.0.3"/>
+  <version value="2027.0.0-ballot.rc1"/>
   <name value="MII_IG_Onko_DE"/>
   <title value="MII IG Kerndatensatz-Modul Onkologie"/>
   <status value="active"/>
@@ -174,12 +174,12 @@
   <dependsOn id="de_medizininformatikinitiative_kerndatensatz_biobank">
     <uri value="http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.biobank/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.biobank"/>
     <packageId value="de.medizininformatikinitiative.kerndatensatz.biobank"/>
-    <version value="2027.0.0-ballot.rc1"/>
+    <version value="2027.0.0-ballot.rc2"/>
   </dependsOn>
   <dependsOn id="de_medizininformatikinitiative_kerndatensatz_laborbefund">
     <uri value="http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.laborbefund/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.laborbefund"/>
     <packageId value="de.medizininformatikinitiative.kerndatensatz.laborbefund"/>
-    <version value="2026.0.3"/>
+    <version value="2027.0.0-ballot.rc3"/>
   </dependsOn>
   <dependsOn id="de_medizininformatikinitiative_kerndatensatz_medikation">
     <uri value="https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/ImplementationGuide/mii-ig-medikation"/>
@@ -225,7 +225,7 @@
         <valueString value="releaselabel"/>
       </extension>
       <extension url="value">
-        <valueString value="release"/>
+        <valueString value="ballot"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -601,7 +601,7 @@
         <valueCode value="releaselabel"/>
       </extension>
       <extension url="value">
-        <valueString value="release"/>
+        <valueString value="ballot"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">

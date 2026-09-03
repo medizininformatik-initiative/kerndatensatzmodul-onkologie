@@ -1,4 +1,4 @@
-# MII CM Onko ICD-O-3 Code Changes 2014 to 2019 - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# MII CM Onko ICD-O-3 Code Changes 2014 to 2019 - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-icdo3-transitions-2019 | *Version*:2026.0.3 |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-icdo3-transitions-2019 | *Version*:2027.0.0-ballot.rc1 |
 | Active Stand: 2026-08-26 | *Maschinenlesbarer Name*:MII_CM_Onko_ICDO3_Transitions_2019 |
 
  
@@ -142,7 +142,7 @@ Diese ConceptMap dokumentiert die Morphologie-Code-Änderungen der ICD-O-3 von d
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-icdo3-transitions-2019",
-  "version" : "2026.0.3",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_CM_Onko_ICDO3_Transitions_2019",
   "title" : "MII CM Onko ICD-O-3 Code Changes 2014 to 2019",
   "status" : "active",

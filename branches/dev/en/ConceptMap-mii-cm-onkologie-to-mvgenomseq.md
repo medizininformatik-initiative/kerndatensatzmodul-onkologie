@@ -1,4 +1,4 @@
-# MII Concept Map Modellvorhaben Genomsequenzierung Onkologie - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# MII Concept Map Modellvorhaben Genomsequenzierung Onkologie - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onkologie-to-mvgenomseq | *Version*:2026.0.3 |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onkologie-to-mvgenomseq | *Version*:2027.0.0-ballot.rc1 |
 | Draft as of 2025-04-25 | *Computable Name*:MII_CM_MVGenomSeq_Onkologie |
 
  
@@ -142,7 +142,7 @@ Mapping der einzelnen MII-Onkologieprofile auf den Klinischen Datenkranz der Mod
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onkologie-to-mvgenomseq",
-  "version" : "2026.0.3",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_CM_MVGenomSeq_Onkologie",
   "title" : "MII Concept Map Modellvorhaben Genomsequenzierung Onkologie",
   "status" : "draft",

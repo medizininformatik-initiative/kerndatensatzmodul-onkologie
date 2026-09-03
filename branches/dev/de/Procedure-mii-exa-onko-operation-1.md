@@ -1,4 +1,4 @@
-# Example surgical therapy - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# Example surgical therapy - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Onkologie Operation](StructureDefinition-mii-pr-onko-operation.md) version: 2026.0.3
+Profile: [MII PR Onkologie Operation](StructureDefinition-mii-pr-onko-operation.md) version: 2027.0.0-ballot.rc1
 
 **MII EX Onko Operation Intention**: kurativ
 
@@ -43,7 +43,7 @@ Profile: [MII PR Onkologie Operation](StructureDefinition-mii-pr-onko-operation.
   "resourceType" : "Procedure",
   "id" : "mii-exa-onko-operation-1",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation|2026.0.3"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation|2027.0.0-ballot.rc1"]
   },
   "extension" : [{
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention",

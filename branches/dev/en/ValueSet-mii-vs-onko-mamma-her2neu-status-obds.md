@@ -1,4 +1,4 @@
-# MII VS Onkologie Mamma Her2neu Status oBDS - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# MII VS Onkologie Mamma Her2neu Status oBDS - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-her2neu-status-obds | *Version*:2026.0.3 |
-| Active as of 2026-09-02 | *Computable Name*:MII_VS_Onko_Mamma_Her2neu_Status_oBDS |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-her2neu-status-obds | *Version*:2027.0.0-ballot.rc1 |
+| Active as of 2026-09-03 | *Computable Name*:MII_VS_Onko_Mamma_Her2neu_Status_oBDS |
 
  
 Value Set für Her2neu Status nach oBDS 
@@ -166,12 +166,12 @@ Value Set für Her2neu Status nach oBDS
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-her2neu-status-obds",
-  "version" : "2026.0.3",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_VS_Onko_Mamma_Her2neu_Status_oBDS",
   "title" : "MII VS Onkologie Mamma Her2neu Status oBDS",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-02T02:28:56+00:00",
+  "date" : "2026-09-03T12:57:16+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

@@ -1,4 +1,4 @@
-# MII PR Onkologie Tumormarker - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# MII PR Onkologie Tumormarker - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumormarker | *Version*:2026.0.3 |
-| Active Stand: 2026-09-02 | *Maschinenlesbarer Name*:MII_PR_Onko_Tumormarker |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumormarker | *Version*:2027.0.0-ballot.rc1 |
+| Active Stand: 2026-09-03 | *Maschinenlesbarer Name*:MII_PR_Onko_Tumormarker |
 
  
 Tumormarker-Bestimmung im Rahmen einer onkologischen Erkrankung. Das Profil leitet vom Laboruntersuchungs-Profil des KDS-Moduls Laborbefund ab und schraenkt den LOINC-Code auf die kuratierte Tumormarker-Liste ein (extensible). Fachlicher Hintergrund und die Zuordnung Marker zu zulaessiger ICD-O-Morphologie nach ENCR Table 4: siehe IG-Seite Tumormarker. 
@@ -34,7 +34,7 @@ You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir
 
 #### Constraints
 
-Diese Struktur ist abgeleitet von [MII_PR_Labor_Laboruntersuchung](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.laborbefund@2026.0.3&canonical=https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/ObservationLab) 
+Diese Struktur ist abgeleitet von [MII_PR_Labor_Laboruntersuchung](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.laborbefund@2027.0.0-ballot.rc3&canonical=https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/ObservationLab) 
 
 #### Terminology Bindings (Differential)
 
@@ -42,23 +42,17 @@ Diese Struktur ist abgeleitet von [MII_PR_Labor_Laboruntersuchung](https://simpl
 
 #### Constraints
 
-Diese Struktur ist abgeleitet von [MII_PR_Labor_Laboruntersuchung](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.laborbefund@2026.0.3&canonical=https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/ObservationLab) 
+Diese Struktur ist abgeleitet von [MII_PR_Labor_Laboruntersuchung](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.laborbefund@2027.0.0-ballot.rc3&canonical=https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/ObservationLab) 
 
 ** Summary **
 
-Must-Support: 2 elements
+Must-Support: 1 element
 
 **Structures**
 
 This structure refers to these other structures:
 
 * [MII PR Onkologie Diagnose Primärtumor (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor)](StructureDefinition-mii-pr-onko-diagnose-primaertumor.md)
-
-**Slices**
-
-This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
-
-* The element 1 is sliced based on the value of Observation.code.coding
 
  **Schlüsselelemente-Ansicht** 
 
@@ -68,7 +62,7 @@ This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.h
 
  **Differential-Ansicht** 
 
-Diese Struktur ist abgeleitet von [MII_PR_Labor_Laboruntersuchung](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.laborbefund@2026.0.3&canonical=https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/ObservationLab) 
+Diese Struktur ist abgeleitet von [MII_PR_Labor_Laboruntersuchung](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.laborbefund@2027.0.0-ballot.rc3&canonical=https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/ObservationLab) 
 
 #### Terminology Bindings (Differential)
 
@@ -78,23 +72,17 @@ Diese Struktur ist abgeleitet von [MII_PR_Labor_Laboruntersuchung](https://simpl
 
 #### Constraints
 
-Diese Struktur ist abgeleitet von [MII_PR_Labor_Laboruntersuchung](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.laborbefund@2026.0.3&canonical=https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/ObservationLab) 
+Diese Struktur ist abgeleitet von [MII_PR_Labor_Laboruntersuchung](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.laborbefund@2027.0.0-ballot.rc3&canonical=https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/ObservationLab) 
 
 ** Summary **
 
-Must-Support: 2 elements
+Must-Support: 1 element
 
 **Structures**
 
 This structure refers to these other structures:
 
 * [MII PR Onkologie Diagnose Primärtumor (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor)](StructureDefinition-mii-pr-onko-diagnose-primaertumor.md)
-
-**Slices**
-
-This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
-
-* The element 1 is sliced based on the value of Observation.code.coding
 
  
 
@@ -113,6 +101,14 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
     "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablestructuredefinition"]
   },
   "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
+    "valueCoding" : {
+      "system" : "http://hl7.org/fhir/version-algorithm",
+      "code" : "semver",
+      "display" : "SemVer"
+    }
+  },
+  {
     "url" : "https://www.medizininformatik-initiative.de/fhir/modul-meta/StructureDefinition/mii-ex-meta-license-codeable",
     "valueCodeableConcept" : {
       "coding" : [{
@@ -121,10 +117,6 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
         "display" : "Creative Commons Attribution 4.0 International"
       }]
     }
-  },
-  {
-    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-usage",
-    "valueMarkdown" : "Use this profile as the technical FHIR representation of the corresponding Medical Informatics Initiative logical model. The profile constrains a base FHIR resource for the MII module context by specifying how elements are used, which elements are required or not used, which extensions and terminology bindings apply, and how the resource maps to the module-specific content model. Implementers should produce and consume resource instances that conform to this profile when exchanging data for the corresponding MII module."
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
@@ -145,8 +137,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
     }
   },
   {
-    "url" : "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
-    "valueDate" : "2026-01-03"
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-usage",
+    "valueMarkdown" : "Use this profile as the technical FHIR representation of the corresponding Medical Informatics Initiative logical model. The profile constrains a base FHIR resource for the MII module context by specifying how elements are used, which elements are required or not used, which extensions and terminology bindings apply, and how the resource maps to the module-specific content model. Implementers should produce and consume resource instances that conform to this profile when exchanging data for the corresponding MII module."
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/artifact-topic",
@@ -154,6 +146,15 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
       "coding" : [{
         "system" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
         "code" : "C3262"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-topic",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+        "code" : "C25294"
       }]
     }
   },
@@ -211,9 +212,23 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
         "value" : "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
       }]
     }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
+    "valueDate" : "2026-01-03"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/resource-lastReviewDate",
+    "valueDate" : "2026-08-24"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+    "valuePeriod" : {
+      "start" : "2027"
+    }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumormarker",
-  "version" : "2026.0.3",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_PR_Onko_Tumormarker",
   "title" : "MII PR Onkologie Tumormarker",
   "_title" : {
@@ -230,7 +245,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
     }]
   },
   "status" : "active",
-  "date" : "2026-09-02T02:28:56+00:00",
+  "date" : "2026-09-03T12:57:16+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -268,20 +283,9 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
       }]
     },
     {
-      "id" : "Observation.code.coding",
+      "id" : "Observation.code.coding:loinc",
       "path" : "Observation.code.coding",
-      "slicing" : {
-        "discriminator" : [{
-          "type" : "pattern",
-          "path" : "system"
-        }],
-        "rules" : "open"
-      }
-    },
-    {
-      "id" : "Observation.code.coding:tumormarker-loinc",
-      "path" : "Observation.code.coding",
-      "sliceName" : "tumormarker-loinc",
+      "sliceName" : "loinc",
       "short" : "Tumormarker als LOINC-Code",
       "_short" : {
         "extension" : [{
@@ -297,18 +301,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
         }]
       },
       "definition" : "LOINC-Code des bestimmten Tumormarkers aus der kuratierten onkologischen Auswahlliste",
-      "min" : 0,
       "max" : "1",
-      "mustSupport" : true,
       "binding" : {
         "strength" : "extensible",
         "valueSet" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tumormarker-loinc"
       }
-    },
-    {
-      "id" : "Observation.code.coding:tumormarker-loinc.system",
-      "path" : "Observation.code.coding.system",
-      "patternUri" : "http://loinc.org"
     },
     {
       "id" : "Observation.focus",

@@ -1,4 +1,4 @@
-# mii-exa-onko-genetische-variante-braf - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# mii-exa-onko-genetische-variante-braf - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Onkologie Genetische Variante](StructureDefinition-mii-pr-onko-genetische-variante.md) version: 2026.0.3
+Profile: [MII PR Onkologie Genetische Variante](StructureDefinition-mii-pr-onko-genetische-variante.md) version: 2027.0.0-ballot.rc1
 
 **status**: Final
 
@@ -42,7 +42,7 @@ BRAF1 Class II Mutation
   "resourceType" : "Observation",
   "id" : "mii-exa-onko-genetische-variante-braf",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-genetische-variante|2026.0.3"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-genetische-variante|2027.0.0-ballot.rc1"]
   },
   "status" : "final",
   "category" : [{

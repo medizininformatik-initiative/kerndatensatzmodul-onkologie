@@ -1,4 +1,4 @@
-# MII CM Onko ATC Code Changes 2023 to 2024 - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# MII CM Onko ATC Code Changes 2023 to 2024 - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-atc-transitions-2024 | *Version*:2026.0.3 |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-atc-transitions-2024 | *Version*:2027.0.0-ballot.rc1 |
 | Active as of 2024-12-12 | *Computable Name*:MII_CM_Onko_ATC_Transitions_2024 |
 
  
@@ -142,7 +142,7 @@ Diese ConceptMap dokumentiert die ATC-Code-Änderungen von 2023 zu 2024. Mehrere
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-atc-transitions-2024",
-  "version" : "2026.0.3",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_CM_Onko_ATC_Transitions_2024",
   "title" : "MII CM Onko ATC Code Changes 2023 to 2024",
   "status" : "active",

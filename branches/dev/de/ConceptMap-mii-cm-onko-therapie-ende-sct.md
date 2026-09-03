@@ -1,4 +1,4 @@
-# MII CM Onko Therapie Ende SNOMED Mapping - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# MII CM Onko Therapie Ende SNOMED Mapping - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-therapie-ende-sct | *Version*:2026.0.3 |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-therapie-ende-sct | *Version*:2027.0.0-ballot.rc1 |
 | Active Stand: 2024-04-11 | *Maschinenlesbarer Name*:MII CM Onko Therapie Ende SNOMED Mapping |
 | **Copyright/Rechtliches**: This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. | |
 
@@ -149,7 +149,7 @@ Problematisch beim Mappen war hier vor allem das Zusammenspiel aus Outcome und G
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-therapie-ende-sct",
-  "version" : "2026.0.3",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII CM Onko Therapie Ende SNOMED Mapping",
   "title" : "MII CM Onko Therapie Ende SNOMED Mapping",
   "status" : "active",

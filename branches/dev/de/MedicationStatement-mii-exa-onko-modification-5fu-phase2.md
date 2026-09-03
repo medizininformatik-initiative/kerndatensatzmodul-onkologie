@@ -1,4 +1,4 @@
-# 5-FU Phase 2 (Zyklen 7-12) - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# 5-FU Phase 2 (Zyklen 7-12) - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)

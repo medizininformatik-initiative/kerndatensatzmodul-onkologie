@@ -1,4 +1,4 @@
-# mii-exa-onko-tumorkonferenz-mixed-approach - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# mii-exa-onko-tumorkonferenz-mixed-approach - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Onkologie Tumorkonferenz](StructureDefinition-mii-pr-onko-tumorkonferenz.md) version: 2026.0.3
+Profile: [MII PR Onkologie Tumorkonferenz](StructureDefinition-mii-pr-onko-tumorkonferenz.md) version: 2027.0.0-ballot.rc1
 
 **identifier**: Tumorkonferenz_Mixed_001
 
@@ -55,7 +55,7 @@ Molecular profiling shows HR+/HER2- status with PI3K pathway activation - CDK4/6
   "resourceType" : "CarePlan",
   "id" : "mii-exa-onko-tumorkonferenz-mixed-approach",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz|2026.0.3"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz|2027.0.0-ballot.rc1"]
   },
   "identifier" : [{
     "value" : "Tumorkonferenz_Mixed_001"

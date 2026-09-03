@@ -1,4 +1,4 @@
-# mii-exa-onko-tucatinib-option - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# mii-exa-onko-tucatinib-option - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Onkologie Therapieempfehlung Medikation](StructureDefinition-mii-pr-onko-therapieempfehlung-medikation.md) version: 2026.0.3
+Profile: [MII PR Onkologie Therapieempfehlung Medikation](StructureDefinition-mii-pr-onko-therapieempfehlung-medikation.md) version: 2027.0.0-ballot.rc1
 
 **status**: Active
 
@@ -42,7 +42,7 @@ Drittlinien-Kombination für Hirnmetastasen oder mehrfach resistente HER2+ Erkra
   "resourceType" : "MedicationRequest",
   "id" : "mii-exa-onko-tucatinib-option",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation|2026.0.3"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation|2027.0.0-ballot.rc1"]
   },
   "status" : "active",
   "intent" : "option",

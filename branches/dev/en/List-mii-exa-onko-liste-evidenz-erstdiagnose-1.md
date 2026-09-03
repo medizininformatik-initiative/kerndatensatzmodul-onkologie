@@ -1,4 +1,4 @@
-# Liste der Evidenz zum Erstdiagnosezeitpunkt - MII IG Kerndatensatz-Modul Onkologie v2026.0.3
+# Liste der Evidenz zum Erstdiagnosezeitpunkt - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Onkologie Evidenz Diagnose Primärtumor](StructureDefinition-mii-pr-onko-liste-evidenz-erstdiagnose.md) version: 2026.0.3
+Profile: [MII PR Onkologie Evidenz Diagnose Primärtumor](StructureDefinition-mii-pr-onko-liste-evidenz-erstdiagnose.md) version: 2027.0.0-ballot.rc1
 
 ## Liste der Evidenz zum Erstdiagnosezeitpunkt
 
@@ -40,7 +40,7 @@ Profile: [MII PR Onkologie Evidenz Diagnose Primärtumor](StructureDefinition-mi
   "resourceType" : "List",
   "id" : "mii-exa-onko-liste-evidenz-erstdiagnose-1",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-liste-evidenz-erstdiagnose|2026.0.3"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-liste-evidenz-erstdiagnose|2027.0.0-ballot.rc1"]
   },
   "status" : "current",
   "mode" : "snapshot",
