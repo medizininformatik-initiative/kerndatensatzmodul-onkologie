@@ -125,6 +125,12 @@ RuleSet: CRMIArtifactContributorsInstance
 
 RuleSet: CRMIShareableStructureDefinition
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablestructuredefinition"
+// crmi-shareablestructuredefinition verlangt experimental 1..1 — ohne diese
+// Zeile meldete der QA-Report 98x 'StructureDefinition.experimental: minimum
+// required = 1'. Alle Conformance-Artefakte dieses Moduls sind produktiv
+// gepflegt, daher pauschal false; ein einzelnes SD kann es nach dem insert
+// ueberschreiben.
+* ^experimental = false
 
 RuleSet: CRMIPublishableStructureDefinition
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablestructuredefinition"
@@ -328,8 +334,10 @@ RuleSet: CRMIMetaLicenseAndSource
 * ^meta.extension[+].url = "http://hl7.org/fhir/StructureDefinition/package-source"
 * ^meta.extension[=].extension[+].url = "packageId"
 * ^meta.extension[=].extension[=].valueId = "de.medizininformatikinitiative.kerndatensatz.onkologie"
+// ACHTUNG: Versionsliteral — bei /release-prepare mitziehen (steht nicht in
+// version.fsh; beim Sprung auf 2027.0.0-ballot.rc1 wurde es hier vergessen).
 * ^meta.extension[=].extension[+].url = "version"
-* ^meta.extension[=].extension[=].valueString = "2026.0.3"
+* ^meta.extension[=].extension[=].valueString = "2027.0.0-ballot.rc1"
 * ^meta.extension[=].extension[+].url = "uri"
 * ^meta.extension[=].extension[=].valueUri = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko"
 
@@ -339,8 +347,16 @@ RuleSet: CRMIMetaLicenseAndSourceInstance
 * meta.extension[+].url = "http://hl7.org/fhir/StructureDefinition/package-source"
 * meta.extension[=].extension[+].url = "packageId"
 * meta.extension[=].extension[=].valueId = "de.medizininformatikinitiative.kerndatensatz.onkologie"
-* meta.extension[+].url = "version"
-* meta.extension[=].valueString = "2026.0.3"
+// QA-Befund (60x 'Extension.url must be an absolute URL'): hier stand
+// meta.extension[+].url = "version" — das [+] legte eine NEUE Top-Level-
+// Extension mit relativem URL an, statt die zweite SUB-Extension der
+// package-source zu werden. Nesting korrigiert und die in der Caret-Variante
+// vorhandene uri-Sub-Extension nachgezogen. Versionsliteral: bei
+// /release-prepare mitziehen.
+* meta.extension[=].extension[+].url = "version"
+* meta.extension[=].extension[=].valueString = "2027.0.0-ballot.rc1"
+* meta.extension[=].extension[+].url = "uri"
+* meta.extension[=].extension[=].valueUri = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko"
 
 RuleSet: CRMIVersionAlgorithm
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm"

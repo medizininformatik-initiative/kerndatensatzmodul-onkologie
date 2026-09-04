@@ -205,6 +205,9 @@ InstanceOf: ConceptMap
 Usage: #definition
 * insert OnkoCRMIConceptMap
 * status = #draft
+// einzige CM ohne experimental (QA-Befund) — analog zur Schwester
+// mii-cm-onkologie-to-mvgenomseq als draft/experimental gekennzeichnet
+* experimental = true
 * sourceCanonical = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onkologie/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
 * targetUri = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onkologie/ConceptMap/mii-lm-mvgenomseq-onkologie"
 
