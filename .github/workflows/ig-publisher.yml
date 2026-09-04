@@ -239,6 +239,30 @@ jobs:
             curl --fail --location --silent --show-error \
               "https://raw.githubusercontent.com/medizininformatik-initiative/kerndatensatz-meta/1db2e534704d92e5ee0cde663ce3e7ccd8825fa7/.github/workflows/nginx.conf" \
               --output "${nginx_dir}/nginx.conf"
+            # tx-reg: answer the Publisher's terminology-ecosystem registry probe
+            # locally with EMPTY lists. The TerminologyClientManager asks
+            # {tx}/tx-reg/resolve for every code system; on failure it silently
+            # falls back to tx.fhir.org, whose THO ICD-O-3 is version "2000" —
+            # that fallback produced hundreds of version/value-set QA errors
+            # (ICD-O-3 2019, SNOMED 20250701). Empty lists make the client log
+            # "System not handled by any servers. Using primary server" and stay
+            # on THIS proxy. The pinned upstream nginx.conf stays untouched — we
+            # patch our downloaded copy. Companion change: .github/fhir-settings.json
+            # allowlists {tx-host}/tx-reg, or the SSRF guard refuses the http probe.
+            python3 - "${nginx_dir}/nginx.conf" <<'TXREG'
+            import io, sys
+            p = sys.argv[1]
+            t = io.open(p, encoding='utf-8').read()
+            block = """        location /tx-reg {
+                        default_type application/json;
+                        return 200 '{"formats":["application/fhir+json"],"authoritative":[],"candidates":[]}';
+                    }
+            
+            """
+            anchor = "        location / {"
+            assert anchor in t, "nginx.conf: location-Anker nicht gefunden"
+            io.open(p, 'w', encoding='utf-8').write(t.replace(anchor, block + anchor, 1))
+            TXREG
             printf '%s' "${SU_TERMSERV_CLIENT_CERT}" | base64 --decode > "${nginx_dir}/certs/client-cert.pem"
             printf '%s' "${SU_TERMSERV_CLIENT_KEY}" | base64 --decode > "${nginx_dir}/certs/client-key-encrypted.key"
             openssl rsa \
