@@ -5,7 +5,10 @@ Hier sind alle Änderungen aufgelistet.
 
 ### ⚠️ Breaking Changes
 
-Diese Änderungen erfordern möglicherweise Anpassungen in bestehenden Implementierungen:
+Diese Änderungen erfordern möglicherweise Anpassungen in bestehenden Implementierungen.
+Jeder Eintrag ist auf der Seite [Migration von v2026](migration-v2026.html) einzeln
+erläutert — mit Auswirkung auf Bestandsdaten, Auswirkung auf Implementierungen und
+konkretem Migrationsweg:
 
 - **`BREAKING`** **UICC-Präfixe y, r und a als modifierExtension auf Kategorie-Ebene**: Die Präfixe werden nicht mehr im Kategorie-Wert mitgeführt, sondern an der jeweiligen T-, N- bzw. M-Beobachtung über die neuen Extensions `mii-ex-onko-tnm-y-praefix`, `mii-ex-onko-tnm-r-praefix` und `mii-ex-onko-tnm-a-praefix` abgebildet.
   - **Warum modifierExtension**: Die Präfixe verändern die Interpretation des Kategorie-Wertes — `ypT2` (Feststellung während oder nach initialer multimodaler Therapie) ist **nicht** dasselbe wie `pT2`. Verarbeitende Systeme MÜSSEN die Extensions kennen und dürfen eine Kategorie nicht ohne Auswertung des Präfixes interpretieren.
