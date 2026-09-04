@@ -74,8 +74,8 @@ haben, verbreiten falsche Codes weiter und müssen auf die korrigierten Maps
 umstellen.
 
 **Migration.** Bestandswerte über die korrigierten ConceptMaps
-([Karnofsky](ConceptMap-mii-cm-onko-karnofsky-loinc.html),
-[ECOG](ConceptMap-mii-cm-onko-ecog-loinc.html)) umkodieren. Die Zuordnung ist
+([Karnofsky](ConceptMap-mii-cm-onko-allgemeiner-leistungszustand-karnofsky-loinc.html),
+[ECOG](ConceptMap-mii-cm-onko-allgemeiner-leistungszustand-ecog-loinc.html)) umkodieren. Die Zuordnung ist
 1:1 und verlustfrei — jeder alte Code hat genau einen korrigierten Nachfolger.
 
 #### 3. Onkologie-Kennzeichnung an der Diagnose verpflichtend

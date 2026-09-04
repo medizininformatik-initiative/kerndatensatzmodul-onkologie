@@ -72,8 +72,8 @@ value.
 propagating wrong codes and must switch to the corrected maps.
 
 **Migration.** Re-code existing values via the corrected concept maps
-([Karnofsky](ConceptMap-mii-cm-onko-karnofsky-loinc.html),
-[ECOG](ConceptMap-mii-cm-onko-ecog-loinc.html)). The mapping is 1:1 and
+([Karnofsky](ConceptMap-mii-cm-onko-allgemeiner-leistungszustand-karnofsky-loinc.html),
+[ECOG](ConceptMap-mii-cm-onko-allgemeiner-leistungszustand-ecog-loinc.html)). The mapping is 1:1 and
 lossless — every old code has exactly one corrected successor.
 
 #### 3. Oncology categorisation on the diagnosis now mandatory
