@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-onko-tumormarker-cea"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumormarker|2027.0.0-ballot.rc1"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Observation mii-exa-onko-tumormarker-cea</b></p><a name="mii-exa-onko-tumormarker-cea"> </a><a name="hcmii-exa-onko-tumormarker-cea"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-tumormarker.html">MII PR Onkologie Tumormarker</a> version: 2027.0.0-ballot.rc1</p></div><p><b>identifier</b>: Observation Instance Identifier/2039-6_M2026-0042</p><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://loinc.org 26436-6}">Laboratory studies (set)</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 2039-6}">CEA</span></p><p><b>subject</b>: <a href="Patient-example.html">Erika Beispiel  Female, DoB: 1965-04-12</a></p><p><b>focus</b>: <a href="Condition-mii-exa-onko-diagnose.html">Condition Bösartige Neubildung: Oberer äußerer Quadrant der Brustdrüse</a></p><p><b>effective</b>: 2026-03-12 09:30:00+0100</p><p><b>value</b>: 4.2 µg/L<span style="background: LightGoldenRodYellow"> (Details: UCUM  codeug/L = 'ug/L')</span></p></div><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Observation mii-exa-onko-tumormarker-cea</b></p><a name="de-mii-exa-onko-tumormarker-cea"> </a><a name="de-hcmii-exa-onko-tumormarker-cea"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-tumormarker.html">MII PR Onkologie Tumormarker</a> version: 2027.0.0-ballot.rc1</p></div><p><b>identifier</b>: Observation Instance Identifier/2039-6_M2026-0042</p><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://loinc.org 26436-6}">Laboratory studies (set)</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 2039-6}">CEA</span></p><p><b>subject</b>: <a href="Patient-example.html">Erika Beispiel  Female, DoB: 1965-04-12</a></p><p><b>focus</b>: <a href="Condition-mii-exa-onko-diagnose.html">Condition Bösartige Neubildung: Oberer äußerer Quadrant der Brustdrüse</a></p><p><b>effective</b>: 2026-03-12 09:30:00+0100</p><p><b>value</b>: 4.2 µg/L<span style="background: LightGoldenRodYellow"> (Details: UCUM  codeug/L = 'ug/L')</span></p></div></div>
+  </text>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="OBI"/>
+      </coding>
+    </type>
+    <system value="https://example.org/fhir/sid/onko-tumormarker-befunde"/>
+    <value value="2039-6_M2026-0042"/>
+    <assigner>
+      <identifier>
+        <system value="https://www.medizininformatik-initiative.de/fhir/core/CodeSystem/core-location-identifier"/>
+        <value value="DIZ-ID"/>
+      </identifier>
+    </assigner>
+  </identifier>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="26436-6"/>
+      <display value="Laboratory studies (set)"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="2039-6"/>
+      <display value="Carcinoembryonic Ag [Mass/volume] in Serum or Plasma"/>
+    </coding>
+    <text value="CEA"/>
+  </code>
+  <subject>
+    <reference value="Patient/example"/>
+  </subject>
+  <focus>
+    <reference value="Condition/mii-exa-onko-diagnose"/>
+  </focus>
+  <effectiveDateTime value="2026-03-12T09:30:00+01:00"/>
+  <valueQuantity>
+    <value value="4.2"/>
+    <unit value="µg/L"/>
+    <system value="http://unitsofmeasure.org"/>
+    <code value="ug/L"/>
+  </valueQuantity>
+</Observation>

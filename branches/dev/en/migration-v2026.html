@@ -217,6 +217,7 @@
       <li><a href="atc-terminologie.html">ATC: Annual Versions and Transitions</a></li>
       <li><a href="weitere-klassifikationen-terminologien.html">Further Classifications: Terminologies</a></li>
       <li><a href="tumormarker-loinc.html">Tumor Markers: Curated LOINC Codes</a></li>
+      <li><a href="tnm-journey.html">TNM Step by Step</a></li>
     </ul>
   </li>
   <li class="dropdown">
@@ -338,8 +339,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div>
 
   <!-- markdownlint-disable MD041 -->
-  <!-- English mirror of input/translations/de/pagecontent/migration-v2026.md
-     (German is the source language of this page) — both files must say the
+  <!-- English source page. German mirror:
+     input/translations/de/pagecontent/migration-v2026.md — both files must say the
      same thing. Per-entry structure follows the KDS module template's
      reporting scheme: what changed / effect on stored data / effect on
      implementations / migration path. -->
@@ -413,7 +414,7 @@ value.</p>
 <p><strong>Implementations.</strong> Systems that hard-coded the old concept map targets keep
 propagating wrong codes and must switch to the corrected maps.</p>
 
-<p><a name="l613">​</a><strong>Migration.</strong> Re-code existing values via the corrected concept maps
+<p><a name="l617">​</a><strong>Migration.</strong> Re-code existing values via the corrected concept maps
 (<a href="ConceptMap-mii-cm-onko-karnofsky-loinc.html">Karnofsky</a>,
 <a href="ConceptMap-mii-cm-onko-ecog-loinc.html">ECOG</a>). The mapping is 1:1 and
 lossless — every old code has exactly one corrected successor.</p>
@@ -469,16 +470,20 @@ not CTCAE. The conflation made codes unresolvable against the value set.</p>
 
 <p><strong>Stored data.</strong> Instances carrying the CTCAE version in <code class="language-plaintext highlighter-rouge">coding.version</code>
 remain formally <strong>valid</strong> (the extension is <code class="language-plaintext highlighter-rouge">0..1</code>, <code class="language-plaintext highlighter-rouge">coding.version</code> is not
-forbidden) — but oBDS field 15.3 is no longer read from there, and the value
-is factually wrong as a MedDRA version statement.</p>
+forbidden) — but oBDS field 15.3 is no longer read from there. The statement
+itself (for example "Version 4") is correct from the cancer registry's
+perspective — it names the CTCAE version — it merely sat in the wrong place:
+<code class="language-plaintext highlighter-rouge">coding.version</code> denotes the version of the MedDRA catalogue, not of the CTCAE
+catalogue.</p>
 
 <p><strong>Implementations.</strong> Systems reading or writing the CTCAE version from
 <code class="language-plaintext highlighter-rouge">coding.version</code> must switch to the extension.</p>
 
 <p><strong>Migration.</strong> Move the value from <code class="language-plaintext highlighter-rouge">event.coding[meddra].version</code> into the
-extension and remove <code class="language-plaintext highlighter-rouge">coding.version</code>. Normalise values outside the
-enumeration (for example "Version 4") to the closest enumeration value (here:
-<code class="language-plaintext highlighter-rouge">4</code>).</p>
+extension and remove <code class="language-plaintext highlighter-rouge">coding.version</code>. Registry-typical spellings such as
+"Version 4" are mapped to the code of the oBDS XSD enumeration in the process
+(here: <code class="language-plaintext highlighter-rouge">4</code>, display "CTCAE Version 4") — a format alignment, not a substantive
+correction.</p>
 
 <h4 id="6-reference-types-tightened">6. Reference types tightened</h4>
 
@@ -577,7 +582,7 @@ step.</p>
 
           IG &copy; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.onkologie#2027.0.0-ballot.rc1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Fri, Sep 4, 2026 14:14+0000">2026-09-04</span>
+          Generated <span title="Fri, Sep 4, 2026 15:21+0000">2026-09-04</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
               <!-- Branding override for the fhir2.base.template footer fragment.

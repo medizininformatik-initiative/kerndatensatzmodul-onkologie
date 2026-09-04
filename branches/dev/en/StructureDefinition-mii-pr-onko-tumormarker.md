@@ -16,7 +16,7 @@ Tumormarker-Bestimmung im Rahmen einer onkologischen Erkrankung. Das Profil leit
 
 **Usages:**
 
-* This Profile is not used by any profiles in this Specification
+* Examples for this Profile: [Observation/mii-exa-onko-tumormarker-cea](Observation-mii-exa-onko-tumormarker-cea.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.medizininformatikinitiative.kerndatensatz.onkologie|current/StructureDefinition/StructureDefinition-mii-pr-onko-tumormarker.json)
 
@@ -185,7 +185,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-tumor
     }]
   },
   "status" : "active",
-  "date" : "2026-09-04T14:14:24+00:00",
+  "date" : "2026-09-04T15:21:29+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

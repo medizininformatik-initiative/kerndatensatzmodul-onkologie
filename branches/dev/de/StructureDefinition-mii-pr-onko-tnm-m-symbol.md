@@ -243,7 +243,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "name" : "MII_PR_Onko_TNM_m_Symbol",
   "title" : "MII PR Onkologie TNM m-Symbol",
   "status" : "retired",
-  "date" : "2026-09-04T14:14:24+00:00",
+  "date" : "2026-09-04T15:21:29+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

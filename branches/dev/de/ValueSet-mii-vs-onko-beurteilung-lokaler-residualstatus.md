@@ -171,7 +171,7 @@ Value Set für oBDS-Codes für die Beurteilung des lokalen Residualstatus
   "title" : "MII VS Onkologie Beurteilung des lokalen Residualstatus",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-04T14:14:24+00:00",
+  "date" : "2026-09-04T15:21:29+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

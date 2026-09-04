@@ -62,11 +62,11 @@ From the second formal publication of this guide onwards, the IG Publisher's mac
 
 **What changed** (oBDS 15.3). The CTCAE catalogue version no longer lives in `AdverseEvent.event.coding[meddra].version` but in the new extension [`mii-ex-onko-nebenwirkung-ctcae-version`](StructureDefinition-mii-ex-onko-nebenwirkung-ctcae-version.md) with a required binding to the oBDS enumeration (`4`, `4.03`, `5.0`, `Sonstige`). Reason: `coding.version` denotes the version of the code system the code is taken from — that is MedDRA (CTCAE v4.03 builds on MedDRA v12.0), not CTCAE. The conflation made codes unresolvable against the value set.
 
-**Stored data.** Instances carrying the CTCAE version in `coding.version` remain formally **valid** (the extension is `0..1`, `coding.version` is not forbidden) — but oBDS field 15.3 is no longer read from there, and the value is factually wrong as a MedDRA version statement.
+**Stored data.** Instances carrying the CTCAE version in `coding.version` remain formally **valid** (the extension is `0..1`, `coding.version` is not forbidden) — but oBDS field 15.3 is no longer read from there. The statement itself (for example "Version 4") is correct from the cancer registry's perspective — it names the CTCAE version — it merely sat in the wrong place: `coding.version` denotes the version of the MedDRA catalogue, not of the CTCAE catalogue.
 
 **Implementations.** Systems reading or writing the CTCAE version from `coding.version` must switch to the extension.
 
-**Migration.** Move the value from `event.coding[meddra].version` into the extension and remove `coding.version`. Normalise values outside the enumeration (for example "Version 4") to the closest enumeration value (here: `4`).
+**Migration.** Move the value from `event.coding[meddra].version` into the extension and remove `coding.version`. Registry-typical spellings such as "Version 4" are mapped to the code of the oBDS XSD enumeration in the process (here: `4`, display "CTCAE Version 4") — a format alignment, not a substantive correction.
 
 #### 6. Reference types tightened
 

@@ -172,7 +172,7 @@ Value Set für Mamma-Operationen basierend auf SNOMED CT
   "title" : "MII VS Onkologie Mamma Operation SNOMED CT",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-04T14:14:24+00:00",
+  "date" : "2026-09-04T15:21:29+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -197,6 +197,22 @@ Value Set für Mamma-Operationen basierend auf SNOMED CT
         "property" : "concept",
         "op" : "is-a",
         "value" : "392090004"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "234262008"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "396487001"
       }]
     }]
   }

@@ -3655,6 +3655,18 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/mii-exa-onko-tumormarker-cea"
+      },
+      "name" : "MII EXA Onkologie Tumormarker CEA",
+      "description" : "CEA-Bestimmung im Rahmen einer onkologischen Erkrankung. Zeigt das Identifier-Muster <LOINC>_<Meldungs-ID> für Registerdaten ohne Labor-Auftragsnummer sowie den Diagnosebezug über focus.",
+      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumormarker"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:logical"
       }],
       "reference" : {
@@ -9329,6 +9341,15 @@
         }],
         "nameUrl" : "migration-v2026.html",
         "title" : "Migration from v2026",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "tnm-journey.html"
+        }],
+        "nameUrl" : "tnm-journey.html",
+        "title" : "TNM Step by Step",
         "generation" : "markdown"
       },
       {

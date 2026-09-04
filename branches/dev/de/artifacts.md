@@ -493,6 +493,7 @@ Dies sind Beispielinstanzen, die zeigen, wie Daten aussehen könnten, die von Sy
 | [ MII EXA Onkologie Prostata Stanzbiopsie Specimen  ](Specimen-mii-exa-onko-prostata-specimen-stanze.md) | Gewebeprobe einer Prostata-Stanzbiopsie, auf die sich die Befunde zum Karzinombefall der Stanze beziehen. |
 | [ MII EXA Onkologie Strahlentherapie PCI bei SCLC (prophylaktisch)  ](Procedure-mii-exa-onko-strahlentherapie-pci-sclc.md) |  |
 | [ MII EXA Onkologie TNM Klassifikation CUP (cTX cNX cM1, ohne Stadium)  ](Observation-mii-exa-onko-cup-tnm-klassifikation.md) |  |
+| [ MII EXA Onkologie Tumormarker CEA  ](Observation-mii-exa-onko-tumormarker-cea.md) | CEA-Bestimmung im Rahmen einer onkologischen Erkrankung. Zeigt das Identifier-Muster <LOINC>_<Meldungs-ID> für Registerdaten ohne Labor-Auftragsnummer sowie den Diagnosebezug über focus. |
 | [ MedicationRequest - Fluorouracil (vollständig verabreicht)  ](MedicationRequest-mii-exa-onko-modification-5fu-request.md) | Fluorouracil recommendation - completed for all 12 cycles |
 | [ MedicationRequest - Folinsäure (vollständig verabreicht)  ](MedicationRequest-mii-exa-onko-modification-leucovorin-request.md) | Leucovorin recommendation - completed for all 12 cycles |
 | [ MedicationRequest - Oxaliplatin (abgebrochen wegen Neuropathie)  ](MedicationRequest-mii-exa-onko-modification-oxaliplatin-request.md) | Oxaliplatin recommendation - stopped after cycle 6 due to grade 3 peripheral neuropathy |

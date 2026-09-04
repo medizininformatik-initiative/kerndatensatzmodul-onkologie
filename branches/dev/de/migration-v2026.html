@@ -189,6 +189,7 @@
       <li><a href="atc-terminologie.html">ATC: Jahresversionen und Überleitungen</a></li>
       <li><a href="weitere-klassifikationen-terminologien.html">Weitere Klassifikationen: Terminologien</a></li>
       <li><a href="tumormarker-loinc.html">Tumormarker: kuratierte LOINC-Codes</a></li>
+      <li><a href="tnm-journey.html">TNM Schritt für Schritt</a></li>
     </ul>
   </li>
   <li class="dropdown">
@@ -316,7 +317,7 @@ Diese Seite enthält Übersetzungen aus der Originalsprache, in der der Leitfade
 </p>
 
   <!-- markdownlint-disable MD041 -->
-  <!-- Deutsche Fassung — Quellsprache dieser Seite. Englischer Spiegel:
+  <!-- Deutsche Übersetzung der Standardsprachseite
      input/pagecontent/migration-v2026.md — beide Dateien müssen dasselbe
      aussagen. Struktur je Eintrag nach dem Berichtsschema des
      KDS-Modul-Templates: Was hat sich geändert / Was heißt das für
@@ -393,7 +394,7 @@ LOINC-Coding des Wertes.</p>
 haben, verbreiten falsche Codes weiter und müssen auf die korrigierten Maps
 umstellen.</p>
 
-<p><a name="l619">​</a><strong>Migration.</strong> Bestandswerte über die korrigierten ConceptMaps
+<p><a name="l623">​</a><strong>Migration.</strong> Bestandswerte über die korrigierten ConceptMaps
 (<a href="ConceptMap-mii-cm-onko-karnofsky-loinc.html">Karnofsky</a>,
 <a href="ConceptMap-mii-cm-onko-ecog-loinc.html">ECOG</a>) umkodieren. Die Zuordnung ist
 1:1 und verlustfrei — jeder alte Code hat genau einen korrigierten Nachfolger.</p>
@@ -451,16 +452,19 @@ CTCAE. Die Vermischung machte die Codes gegen das ValueSet unauflösbar.</p>
 
 <p><strong>Bestandsdaten.</strong> Instanzen mit CTCAE-Version in <code class="language-plaintext highlighter-rouge">coding.version</code> bleiben
 formal <strong>valide</strong> (die Extension ist <code class="language-plaintext highlighter-rouge">0..1</code>, <code class="language-plaintext highlighter-rouge">coding.version</code> ist nicht
-verboten) — aber oBDS-Feld 15.3 wird dort nicht mehr gelesen; der Wert ist als
-MedDRA-Versionsangabe inhaltlich falsch.</p>
+verboten) — aber oBDS-Feld 15.3 wird dort nicht mehr gelesen. Die Angabe selbst
+(etwa „Version 4") ist krebsregister-richtig — sie benennt die CTCAE-Version —,
+sie stand nur am falschen Ort: <code class="language-plaintext highlighter-rouge">coding.version</code> bezeichnet die Version des
+MedDRA-Katalogs, nicht des CTCAE-Katalogs.</p>
 
 <p><strong>Implementierungen.</strong> Systeme, die die CTCAE-Version aus <code class="language-plaintext highlighter-rouge">coding.version</code>
 lesen oder schreiben, müssen auf die Extension umstellen.</p>
 
 <p><strong>Migration.</strong> Den Wert aus <code class="language-plaintext highlighter-rouge">event.coding[meddra].version</code> in die Extension
-übertragen und <code class="language-plaintext highlighter-rouge">coding.version</code> entfernen. Werte außerhalb der Enumeration
-(z. B. „Version 4") auf den nächstliegenden Enumerationswert normalisieren
-(hier: <code class="language-plaintext highlighter-rouge">4</code>).</p>
+übertragen und <code class="language-plaintext highlighter-rouge">coding.version</code> entfernen. Register-übliche Schreibweisen wie
+„Version 4" werden dabei auf den Code der oBDS-XSD-Enumeration abgebildet
+(hier: <code class="language-plaintext highlighter-rouge">4</code>, Display „CTCAE Version 4") — eine Formatangleichung, keine
+inhaltliche Korrektur.</p>
 
 <h4 id="6-referenztypen-gehärtet">6. Referenztypen gehärtet</h4>
 
@@ -560,7 +564,7 @@ Datenmigrationsschritt.</p>
 
           IG &copy; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.onkologie#2027.0.0-ballot.rc1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Fri, Sep 4, 2026 14:14+0000">2026-09-04</span>
+          Erstellt <span title="Fri, Sep 4, 2026 15:21+0000">2026-09-04</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
               <!-- Branding override for the fhir2.base.template footer fragment.

@@ -172,7 +172,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-ex-onko-neben
   "name" : "MII_EX_Onko_Nebenwirkung_CTCAE_Version",
   "title" : "MII EX Onkologie Nebenwirkung CTCAE-Version",
   "status" : "active",
-  "date" : "2026-09-04T14:14:24+00:00",
+  "date" : "2026-09-04T15:21:29+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

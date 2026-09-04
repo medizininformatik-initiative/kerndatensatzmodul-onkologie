@@ -3132,6 +3132,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/mii-exa-onko-tumormarker-cea"/>
+      </reference>
+      <name value="MII EXA Onkologie Tumormarker CEA"/>
+      <description value="CEA-Bestimmung im Rahmen einer onkologischen Erkrankung. Zeigt das Identifier-Muster &lt;LOINC&gt;_&lt;Meldungs-ID&gt; für Registerdaten ohne Labor-Auftragsnummer sowie den Diagnosebezug über focus."/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumormarker"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
@@ -8001,6 +8012,14 @@
         </extension>
         <nameUrl value="migration-v2026.html"/>
         <title value="Migration from v2026"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="tnm-journey.html"/>
+        </extension>
+        <nameUrl value="tnm-journey.html"/>
+        <title value="TNM Step by Step"/>
         <generation value="markdown"/>
       </page>
       <page>
