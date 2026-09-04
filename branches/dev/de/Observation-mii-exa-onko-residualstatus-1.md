@@ -16,7 +16,7 @@ Profile: [MII PR Onkologie Residualstatus](StructureDefinition-mii-pr-onko-resid
 
 **status**: Final
 
-**code**: 84892-9
+**code**: Residual tumor classification [Type] in Cancer specimen
 
 **subject**: [Erika Beispiel Female, DoB: 1965-04-12](Patient-example.md)
 

@@ -124,6 +124,10 @@ SearchParameter for Condition.extension[morphology-behavior-icdo3]
     }
   },
   {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-title",
+    "valueString" : "MII SP Condition Extension Morphology Behavior ICD-O-3"
+  },
+  {
     "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
     "valueCoding" : {
       "system" : "http://hl7.org/fhir/version-algorithm",

@@ -16,7 +16,7 @@ Profile: [MII PR Onkologie Tod](StructureDefinition-mii-pr-onko-tod.md) version:
 
 **status**: Final
 
-**code**: 184305005
+**code**: Cause of death
 
 **subject**: [Erika Beispiel Female, DoB: 1965-04-12](Patient-example.md)
 

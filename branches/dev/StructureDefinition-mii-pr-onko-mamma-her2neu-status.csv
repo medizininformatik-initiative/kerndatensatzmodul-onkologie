@@ -90,7 +90,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Code defined by a terminology system","A reference to a code defined by a terminology system.","Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.","Allows for alternative encodings within a code system, and translations to other code systems.","","","","<valueCoding xmlns=""http://hl7.org/fhir"">
   <system value=""http://loinc.org""/>
   <code value=""48676-1""/>
-  <display value=""HER2 [Interpretation] in Tissue""/>
+  <display value=""HER2 Ag [Interpretation] in Tissue""/>
 </valueCoding>","","","",,,,,"",,,,"CodeableConcept.coding",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","C*E.1-8, C*E.10-22"
 "Observation.code.text","Observation.code.text","","","",0,1,"","","Y","string {[]} {[]}
@@ -329,7 +329,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
   <coding>
     <system value=""http://loinc.org""/>
     <code value=""85319-2""/>
-    <display value=""HER2 [Presence] in Breast cancer specimen by Immune stain""/>
+    <display value=""HER2 Ag [Presence] in Breast cancer specimen by Immune stain""/>
   </coding>
 </valueCodeableConcept>","","","",,"example","Codes identifying names of simple observations.","http://hl7.org/fhir/ValueSet/observation-codes|4.0.1","",,,,"Observation.component.code",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","< 363787002 |Observable entity| OR < 386053000 |Evaluation procedure|","OBX-3","FiveWs.what[x]"

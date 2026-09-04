@@ -16,7 +16,7 @@ Profile: [MII PR Onkologie Allgemeiner Leistungszustand nach Karnofsky](Structur
 
 **status**: Final
 
-**code**: 761869008
+**code**: KPS (Karnofsky Performance Status) score
 
 **subject**: [Erika Beispiel Female, DoB: 1965-04-12](Patient-example.md)
 

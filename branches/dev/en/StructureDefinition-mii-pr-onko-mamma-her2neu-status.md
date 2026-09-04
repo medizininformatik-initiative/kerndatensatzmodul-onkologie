@@ -283,7 +283,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-mamma
   "title" : "MII PR Onkologie Her2neu Status",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-04T16:20:32+00:00",
+  "date" : "2026-09-04T19:28:42+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -363,7 +363,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-mamma
       "patternCoding" : {
         "system" : "http://loinc.org",
         "code" : "48676-1",
-        "display" : "HER2 [Interpretation] in Tissue"
+        "display" : "HER2 Ag [Interpretation] in Tissue"
       }
     },
     {
@@ -500,7 +500,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-mamma
         "coding" : [{
           "system" : "http://loinc.org",
           "code" : "85319-2",
-          "display" : "HER2 [Presence] in Breast cancer specimen by Immune stain"
+          "display" : "HER2 Ag [Presence] in Breast cancer specimen by Immune stain"
         }]
       }
     },

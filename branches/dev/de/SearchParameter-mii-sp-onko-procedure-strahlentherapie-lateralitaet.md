@@ -124,6 +124,10 @@ SearchParameter for Procedure.bodySite.extension:Seitenlokalisation
     }
   },
   {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-title",
+    "valueString" : "MII SP Procedure Strahlentherapie Lateralitaet"
+  },
+  {
     "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
     "valueCoding" : {
       "system" : "http://hl7.org/fhir/version-algorithm",

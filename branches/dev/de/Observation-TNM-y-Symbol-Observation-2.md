@@ -18,13 +18,13 @@ Profile: [MII PR Onkologie TNM y-Symbol](StructureDefinition-mii-pr-onko-tnm-y-s
 
 **status**: Final
 
-**code**: 101658-3
+**code**: Cancer staging after multimodality therapy
 
 **subject**: [Kim Musterperson (no stated gender), DoB: 1956-03-14](Patient-PatientKimMusterperson.md)
 
 **effective**: 2021-06-22
 
-**value**: 421755005
+**value**: y
 
 **method**: 8. Auflage
 

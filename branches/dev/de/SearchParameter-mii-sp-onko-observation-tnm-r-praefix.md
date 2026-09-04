@@ -124,6 +124,10 @@ SearchParameter for Observation.modifierExtension[r-praefix]. Kennzeichnet TNM-K
     }
   },
   {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-title",
+    "valueString" : "MII SP Observation TNM r Praefix"
+  },
+  {
     "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
     "valueCoding" : {
       "system" : "http://hl7.org/fhir/version-algorithm",

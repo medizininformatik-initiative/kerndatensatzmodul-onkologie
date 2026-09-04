@@ -239,7 +239,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-mamma
   "title" : "MII PR Onkologie Präoperative Markierung Mamma",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-04T16:20:32+00:00",
+  "date" : "2026-09-04T19:28:42+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

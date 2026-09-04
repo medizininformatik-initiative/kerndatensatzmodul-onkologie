@@ -20,7 +20,7 @@ Deterministischer Algorithmus zur Synthese einer TNM-Klassifikation aus mehreren
 
 -------
 
-**Exception parsing generated Narrative (see /tmp/liquid-92bf5021-efaa-47ce-971a-ac4b7b3d2d6c.html): unexpected non-end of element null::a at line 124 column 50**
+**Exception parsing generated Narrative (see /tmp/liquid-b6a61d5f-3ccd-4a69-b019-a456115d6b6c.html): unexpected non-end of element null::a at line 134 column 50**
 
 
 
@@ -72,74 +72,6 @@ Deterministischer Algorithmus zur Synthese einer TNM-Klassifikation aus mehreren
     }
   },
   {
-    "url" : "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
-    "valueDate" : "2026-01-03"
-  },
-  {
-    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-topic",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
-        "code" : "C3262"
-      }]
-    }
-  },
-  {
-    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-author",
-    "valueContactDetail" : {
-      "telecom" : [{
-        "system" : "email",
-        "value" : "thomas.debertshaeuser@charite.de"
-      }]
-    }
-  },
-  {
-    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-editor",
-    "valueContactDetail" : {
-      "name" : "Taskforce Core Data Set"
-    }
-  },
-  {
-    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
-    "valueContactDetail" : {
-      "name" : "Interoperability Working Group",
-      "telecom" : [{
-        "system" : "url",
-        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
-      }]
-    }
-  },
-  {
-    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
-    "valueContactDetail" : {
-      "name" : "National Steering Committee",
-      "telecom" : [{
-        "system" : "url",
-        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
-      }]
-    }
-  },
-  {
-    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
-    "valueContactDetail" : {
-      "name" : "Interoperability Working Group",
-      "telecom" : [{
-        "system" : "url",
-        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
-      }]
-    }
-  },
-  {
-    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
-    "valueContactDetail" : {
-      "name" : "National Steering Committee",
-      "telecom" : [{
-        "system" : "url",
-        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
-      }]
-    }
-  },
-  {
     "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
     "valueCoding" : {
       "system" : "http://hl7.org/fhir/version-algorithm",
@@ -159,7 +91,7 @@ Deterministischer Algorithmus zur Synthese einer TNM-Klassifikation aus mehreren
       "code" : "logic-library"
     }]
   },
-  "date" : "2026-09-04T16:20:32+00:00",
+  "date" : "2026-09-04T19:28:42+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -174,6 +106,50 @@ Deterministischer Algorithmus zur Synthese einer TNM-Klassifikation aus mehreren
       "system" : "urn:iso:std:iso:3166",
       "code" : "DE",
       "display" : "Germany"
+    }]
+  }],
+  "approvalDate" : "2026-01-03",
+  "topic" : [{
+    "coding" : [{
+      "system" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+      "code" : "C3262"
+    }]
+  }],
+  "author" : [{
+    "telecom" : [{
+      "system" : "email",
+      "value" : "thomas.debertshaeuser@charite.de"
+    }]
+  }],
+  "editor" : [{
+    "name" : "Taskforce Core Data Set"
+  }],
+  "reviewer" : [{
+    "name" : "Interoperability Working Group",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+    }]
+  },
+  {
+    "name" : "National Steering Committee",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+    }]
+  }],
+  "endorser" : [{
+    "name" : "Interoperability Working Group",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+    }]
+  },
+  {
+    "name" : "National Steering Committee",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
     }]
   }],
   "relatedArtifact" : [{

@@ -124,6 +124,10 @@ SearchParameter for Procedure.extension:einzeldosis
     }
   },
   {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-title",
+    "valueString" : "MII SP Procedure Extension Strahlentherapie Bestrahlung Einzeldosis"
+  },
+  {
     "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
     "valueCoding" : {
       "system" : "http://hl7.org/fhir/version-algorithm",

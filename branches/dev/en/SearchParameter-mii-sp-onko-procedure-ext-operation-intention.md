@@ -124,6 +124,10 @@ SearchParameter for Procedure.extension[intention]
     }
   },
   {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-title",
+    "valueString" : "MII SP Procedure Extension Operation Intention"
+  },
+  {
     "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
     "valueCoding" : {
       "system" : "http://hl7.org/fhir/version-algorithm",

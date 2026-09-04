@@ -16,7 +16,7 @@ Profile: [MII PR Onkologie Her2neu Status](StructureDefinition-mii-pr-onko-mamma
 
 **status**: Final
 
-**code**: HER2 [Interpretation] in Tissue
+**code**: HER2 Ag [Interpretation] in Tissue
 
 **subject**: [Martha MammaCa (no stated gender), DoB Unknown](Patient-mii-exa-onko-mamma-bundle-patient.md)
 
@@ -31,7 +31,7 @@ Profile: [MII PR Onkologie Her2neu Status](StructureDefinition-mii-pr-onko-mamma
 | | | |
 | :--- | :--- | :--- |
 | - | **Code** | **Value[x]** |
-| * | HER2 [Presence] in Breast cancer specimen by Immune stain | 3+ |
+| * | HER2 Ag [Presence] in Breast cancer specimen by Immune stain | 3+ |
 
 
 
@@ -49,7 +49,7 @@ Profile: [MII PR Onkologie Her2neu Status](StructureDefinition-mii-pr-onko-mamma
     "coding" : [{
       "system" : "http://loinc.org",
       "code" : "48676-1",
-      "display" : "HER2 [Interpretation] in Tissue"
+      "display" : "HER2 Ag [Interpretation] in Tissue"
     }]
   },
   "subject" : {
@@ -76,7 +76,7 @@ Profile: [MII PR Onkologie Her2neu Status](StructureDefinition-mii-pr-onko-mamma
       "coding" : [{
         "system" : "http://loinc.org",
         "code" : "85319-2",
-        "display" : "HER2 [Presence] in Breast cancer specimen by Immune stain"
+        "display" : "HER2 Ag [Presence] in Breast cancer specimen by Immune stain"
       }]
     },
     "valueCodeableConcept" : {

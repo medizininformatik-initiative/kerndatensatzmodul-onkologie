@@ -160,7 +160,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "title" : "MII CS Onko Nebenwirkung MedDRA Deutsch (Supplement)",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-04T16:20:32+00:00",
+  "date" : "2026-09-04T19:28:42+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -177,6 +177,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
       "display" : "Germany"
     }]
   }],
+  "caseSensitive" : true,
   "content" : "supplement",
   "supplements" : "https://www.meddra.org",
   "property" : [{

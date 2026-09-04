@@ -16,7 +16,7 @@ Profile: [MII PR Onkologie Histologie ICD-O-3](StructureDefinition-mii-pr-onko-h
 
 **status**: Final
 
-**code**: 59847-4
+**code**: Histology and Behavior ICD-O-3 Cancer
 
 **subject**: [Erika Beispiel Female, DoB: 1965-04-12](Patient-example.md)
 
@@ -51,8 +51,9 @@ Profile: [MII PR Onkologie Histologie ICD-O-3](StructureDefinition-mii-pr-onko-h
     "coding" : [{
       "system" : "http://terminology.hl7.org/CodeSystem/icd-o-3",
       "code" : "8500/3",
-      "display" : "Invasives duktales Karzinom o.n.A."
-    }]
+      "display" : "Infiltrating duct carcinoma, NOS"
+    }],
+    "text" : "Invasives duktales Karzinom o.n.A."
   },
   "bodySite" : {
     "coding" : [{

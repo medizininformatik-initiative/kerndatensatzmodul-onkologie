@@ -16,7 +16,7 @@ Profile: [MII PR Onkologie Studienteilnahme](StructureDefinition-mii-pr-onko-stu
 
 **status**: Final
 
-**code**: 709491003
+**code**: Enrollment in clinical trial
 
 **subject**: [Erika Beispiel Female, DoB: 1965-04-12](Patient-example.md)
 

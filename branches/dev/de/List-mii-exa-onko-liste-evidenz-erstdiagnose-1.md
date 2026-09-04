@@ -21,15 +21,15 @@ Profile: [MII PR Onkologie Evidenz Diagnose Primärtumor](StructureDefinition-mi
 | Mode: Snapshot List | Status: Current |
 | Subject:[Erika Beispiel Female, DoB: 1965-04-12](Patient-example.md) | |
 
-* **Items**: [Observation 423740007](Observation-mii-exa-onko-allgemeiner-leistungszustand-ecog.md)
+* **Items**: [Observation ECOG performance status](Observation-mii-exa-onko-allgemeiner-leistungszustand-ecog.md)
 * **Items**: [Observation Clinical TNM stage grouping](Observation-mii-exa-onko-tnm-klassifikation-TisN0M0.md)
 * **Items**: [Observation cT category (observable entity)](Observation-mii-exa-onko-tnm-t-kategorie-Tis.md)
 * **Items**: [Observation cN category (observable entity)](Observation-mii-exa-onko-tnm-n-kategorie-N0.md)
 * **Items**: [Observation cM category (observable entity)](Observation-mii-exa-onko-tnm-m-kategorie-M0.md)
 * **Items**: [Observation Status of lymphatic (small vessel) invasion by tumor (observable entity)](Observation-mii-exa-onko-tnm-l-kategorie-L1.md)
-* **Items**: [Observation 385421009](Observation-mii-exa-onko-fernmetastasen-1.md)
-* **Items**: [Observation 385421009](Observation-mii-exa-onko-cup-fernmetastase-hep.md)
-* **Items**: [Diagnostic Report for '22034-3' for '->Kim Musterperson (no stated gender), DoB: 1956-03-14'](DiagnosticReport-mii-exa-onko-befund-1.md)
+* **Items**: [Observation Site of distant metastasis](Observation-mii-exa-onko-fernmetastasen-1.md)
+* **Items**: [Observation Site of distant metastasis](Observation-mii-exa-onko-cup-fernmetastase-hep.md)
+* **Items**: [Diagnostic Report for 'Pathology report Cancer Narrative' for '->Kim Musterperson (no stated gender), DoB: 1956-03-14'](DiagnosticReport-mii-exa-onko-befund-1.md)
 
 
 

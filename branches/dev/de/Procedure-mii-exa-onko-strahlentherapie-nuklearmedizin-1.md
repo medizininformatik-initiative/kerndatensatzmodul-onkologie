@@ -22,7 +22,7 @@ Profile: [MII PR Onkologie Strahlentherapie](StructureDefinition-mii-pr-onko-str
 
 **category**: Radionuclide therapy
 
-**code**: 8-53
+**code**: Nuklearmedizinische Therapie
 
 **subject**: [Erika Beispiel Female, DoB: 1965-04-12](Patient-example.md)
 

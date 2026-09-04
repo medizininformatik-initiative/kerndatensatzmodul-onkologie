@@ -18,7 +18,7 @@ Profile: [MII PR Onkologie TNM L-Kategorie](StructureDefinition-mii-pr-onko-tnm-
 
 **status**: Final
 
-**code**: 395715009
+**code**: Status of lymphatic (small vessel) invasion by tumor
 
 **subject**: [Kim Musterperson (no stated gender), DoB: 1956-03-14](Patient-PatientKimMusterperson.md)
 
