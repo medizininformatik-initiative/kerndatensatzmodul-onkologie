@@ -387,7 +387,7 @@ RuleSet: OnkoCRMIConceptMap
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod"
 * extension[=].valuePeriod.start = "2026"
 
-RuleSet: OnkoCRMISearchParameter
+RuleSet: OnkoCRMISearchParameter(title)
 * meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablesearchparameter"
 * meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablesearchparameter"
 * insert CRMIMetaLicenseAndSourceInstance
@@ -398,6 +398,11 @@ RuleSet: OnkoCRMISearchParameter
 * insert CRMIVersionPolicyStrictInstance
 * insert CRMIApprovalDateInstance(2026-01-03)
 * insert CRMIArtifactContributorsInstance
+// QA-Fix (17x 'Slice artifact-title required'): crmi-publishablesearchparameter
+// verlangt die artifact-title-Extension, weil SearchParameter kein natives
+// title-Feld hat. Der Titel kommt als RuleSet-Parameter aus jeder Instanz.
+* extension[+].url = "http://hl7.org/fhir/StructureDefinition/artifact-title"
+* extension[=].valueString = "{title}"
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm"
 * extension[=].valueCoding = http://hl7.org/fhir/version-algorithm#semver "SemVer"
 
@@ -410,9 +415,28 @@ RuleSet: OnkoCRMILibrary
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability"
 * extension[=].valueCode = #publishable
 * insert CRMIVersionPolicyStrictInstance
-* insert CRMIApprovalDateInstance(2026-01-03)
-* insert CRMIArtifactTopicInstance(http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl, C3262)
-* insert CRMIArtifactContributorsInstance
+// QA-Fix (6x 'extension not allowed at this point'): Library hat approvalDate,
+// topic, author/editor/reviewer in R4 NATIV — die resource-approvalDate- und
+// artifact-*-Extensions sind an Library nicht zulaessig. Inhalte identisch zu
+// CRMIApprovalDateInstance/ArtifactTopicInstance/ArtifactContributorsInstance,
+// nur als native Felder.
+* approvalDate = "2026-01-03"
+* topic = http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C3262
+* author.telecom[+].system = #email
+* author.telecom[=].value = "thomas.debertshaeuser@charite.de"
+* editor.name = "Taskforce Core Data Set"
+* reviewer[+].name = "Interoperability Working Group"
+* reviewer[=].telecom[+].system = #url
+* reviewer[=].telecom[=].value = "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+* reviewer[+].name = "National Steering Committee"
+* reviewer[=].telecom[+].system = #url
+* reviewer[=].telecom[=].value = "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+* endorser[+].name = "Interoperability Working Group"
+* endorser[=].telecom[+].system = #url
+* endorser[=].telecom[=].value = "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+* endorser[+].name = "National Steering Committee"
+* endorser[=].telecom[+].system = #url
+* endorser[=].telecom[=].value = "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm"
 * extension[=].valueCoding = http://hl7.org/fhir/version-algorithm#semver "SemVer"
 

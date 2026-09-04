@@ -67,8 +67,11 @@ Description: "Stage III sigmoid colon adenocarcinoma, diagnosed January 2024"
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
-* category.coding.system = "http://terminology.hl7.org/CodeSystem/condition-category"
-* category.coding.code = #encounter-diagnosis
+// QA-Fix: Der Pflicht-Slice category:onkologie (Breaking Change v2027) fehlte;
+// stattdessen klebte das Display "Neoplastic disease" am encounter-diagnosis-
+// Coding. Jetzt beides korrekt als getrennte category-Eintraege.
+* category[+] = http://terminology.hl7.org/CodeSystem/condition-category#encounter-diagnosis "Encounter Diagnosis"
+* category[+] = $SCT#55342001 "Neoplastic disease"
 * code.coding[icd10-gm] = $ICD10GM#C18.7 "Bösartige Neubildung: Colon sigmoideum"
 * code.coding[icd10-gm].version = "2024"
 * extension[Feststellungsdatum].valueDateTime = "2024-01-15"

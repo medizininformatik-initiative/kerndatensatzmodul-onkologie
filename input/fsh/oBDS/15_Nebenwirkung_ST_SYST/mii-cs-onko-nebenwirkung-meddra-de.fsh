@@ -8,6 +8,8 @@ Description: "Deutschsprachiges CodeSystem-Supplement für MedDRA-Codes der CTCA
 * insert PR_CS_VS_Version
 * insert OnkoCRMICodeSystem
 * ^status = #active
+// QA-Fix: crmi-shareablecodesystem verlangt caseSensitive 1..1
+* ^caseSensitive = true
 * ^experimental = false
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-nebenwirkung-meddra-de"
 * ^language = #de-DE

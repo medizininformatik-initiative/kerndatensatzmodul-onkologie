@@ -55,92 +55,78 @@
       }
     },
     {
-      "url": "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
-      "valueDate": "2026-01-03"
-    },
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/artifact-topic",
-      "valueCodeableConcept": {
-        "coding": [
-          {
-            "code": "C3262",
-            "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"
-          }
-        ]
-      }
-    },
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/artifact-author",
-      "valueContactDetail": {
-        "telecom": [
-          {
-            "system": "email",
-            "value": "thomas.debertshaeuser@charite.de"
-          }
-        ]
-      }
-    },
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/artifact-editor",
-      "valueContactDetail": {
-        "name": "Taskforce Core Data Set"
-      }
-    },
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
-      "valueContactDetail": {
-        "name": "Interoperability Working Group",
-        "telecom": [
-          {
-            "system": "url",
-            "value": "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
-          }
-        ]
-      }
-    },
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
-      "valueContactDetail": {
-        "name": "National Steering Committee",
-        "telecom": [
-          {
-            "system": "url",
-            "value": "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
-          }
-        ]
-      }
-    },
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
-      "valueContactDetail": {
-        "name": "Interoperability Working Group",
-        "telecom": [
-          {
-            "system": "url",
-            "value": "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
-          }
-        ]
-      }
-    },
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
-      "valueContactDetail": {
-        "name": "National Steering Committee",
-        "telecom": [
-          {
-            "system": "url",
-            "value": "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
-          }
-        ]
-      }
-    },
-    {
       "url": "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
       "valueCoding": {
         "code": "semver",
         "system": "http://hl7.org/fhir/version-algorithm",
         "display": "SemVer"
       }
+    }
+  ],
+  "approvalDate": "2026-01-03",
+  "topic": [
+    {
+      "coding": [
+        {
+          "code": "C3262",
+          "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"
+        }
+      ]
+    }
+  ],
+  "author": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "thomas.debertshaeuser@charite.de"
+        }
+      ]
+    }
+  ],
+  "editor": [
+    {
+      "name": "Taskforce Core Data Set"
+    }
+  ],
+  "reviewer": [
+    {
+      "name": "Interoperability Working Group",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+        }
+      ]
+    },
+    {
+      "name": "National Steering Committee",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+        }
+      ]
+    }
+  ],
+  "endorser": [
+    {
+      "name": "Interoperability Working Group",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+        }
+      ]
+    },
+    {
+      "name": "National Steering Committee",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+        }
+      ]
     }
   ],
   "version": "1.0.0",

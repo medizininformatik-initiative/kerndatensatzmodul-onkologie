@@ -20,7 +20,7 @@ Description: "Dieses Profil beschreibt den Her2neu Status einer pathologisch unt
 * code 1..1
 * code ^definition = "Her2neu Status, abgeleitet aus der Immunhistochemie und ggf. In-situ-Hybridisierung der Mamma-Biopsie oder des Mamma-Exzisionspräparates"
 * code ^short = "Her2neu Status"
-* code.coding = $LNC#48676-1 "HER2 [Interpretation] in Tissue"
+* code.coding = $LNC#48676-1 "HER2 Ag [Interpretation] in Tissue"
 
 * value[x] MS
 * value[x] only CodeableConcept
@@ -49,7 +49,7 @@ Description: "Dieses Profil beschreibt den Her2neu Status einer pathologisch unt
 
 * component contains IHCScore 0..1 MS and ISHResult 0..1 MS
 
-* component[IHCScore].code = $LNC#85319-2 "HER2 [Presence] in Breast cancer specimen by Immune stain"
+* component[IHCScore].code = $LNC#85319-2 "HER2 Ag [Presence] in Breast cancer specimen by Immune stain"
 * component[IHCScore].value[x] MS
 * component[IHCScore].value[x] only CodeableConcept
 * component[IHCScore].valueCodeableConcept MS

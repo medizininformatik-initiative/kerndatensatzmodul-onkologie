@@ -3,6 +3,8 @@ Id: mii-cs-onko-weitere-klassifikationen-obds
 Title: "MII CodeSystem Onkologie - Weitere Klassifikationen oBDS"
 Description: "oBDS-specific classification systems and scoring systems not yet covered by international terminologies (SNOMED CT, NCI Thesaurus). These codes supplement the existing ValueSet for additional classifications. Research required: Check if SNOMED CT or LOINC codes exist for these scoring systems before using oBDS-specific codes."
 * ^status = #active
+// QA-Fix: crmi-shareablecodesystem verlangt caseSensitive 1..1
+* ^caseSensitive = true
 * ^experimental = false
 * insert Publisher
 * insert PR_CS_VS_Version
