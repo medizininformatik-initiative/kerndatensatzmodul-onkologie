@@ -151,7 +151,8 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-prost
   "name" : "MII_PR_Onko_Prostata_Operation",
   "title" : "MII PR Onko Prostata Operation",
   "status" : "active",
-  "date" : "2026-09-04T15:21:29+00:00",
+  "experimental" : false,
+  "date" : "2026-09-04T16:20:32+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

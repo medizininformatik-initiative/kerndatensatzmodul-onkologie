@@ -20,7 +20,7 @@ Deterministischer Algorithmus zur Synthese einer TNM-Klassifikation aus mehreren
 
 -------
 
-**Exception parsing generated Narrative (see /tmp/liquid-74d966cf-aa6c-485d-95d7-12d9b2048dd1.html): unexpected non-end of element null::a at line 124 column 50**
+**Exception parsing generated Narrative (see /tmp/liquid-92bf5021-efaa-47ce-971a-ac4b7b3d2d6c.html): unexpected non-end of element null::a at line 124 column 50**
 
 
 
@@ -39,12 +39,16 @@ Deterministischer Algorithmus zur Synthese einer TNM-Klassifikation aus mehreren
       "extension" : [{
         "url" : "packageId",
         "valueId" : "de.medizininformatikinitiative.kerndatensatz.onkologie"
+      },
+      {
+        "url" : "version",
+        "valueString" : "2027.0.0-ballot.rc1"
+      },
+      {
+        "url" : "uri",
+        "valueUri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko"
       }],
       "url" : "http://hl7.org/fhir/StructureDefinition/package-source"
-    },
-    {
-      "url" : "version",
-      "valueString" : "2026.0.3"
     }],
     "profile" : ["http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablelibrary",
     "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablelibrary"]
@@ -155,7 +159,7 @@ Deterministischer Algorithmus zur Synthese einer TNM-Klassifikation aus mehreren
       "code" : "logic-library"
     }]
   },
-  "date" : "2026-09-04T15:21:29+00:00",
+  "date" : "2026-09-04T16:20:32+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

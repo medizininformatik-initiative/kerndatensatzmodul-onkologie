@@ -36,12 +36,16 @@ The radiation type covers both the kind of radiation and the kind of radioactive
       "extension" : [{
         "url" : "packageId",
         "valueId" : "de.medizininformatikinitiative.kerndatensatz.onkologie"
+      },
+      {
+        "url" : "version",
+        "valueString" : "2027.0.0-ballot.rc1"
+      },
+      {
+        "url" : "uri",
+        "valueUri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko"
       }],
       "url" : "http://hl7.org/fhir/StructureDefinition/package-source"
-    },
-    {
-      "url" : "version",
-      "valueString" : "2026.0.3"
     }],
     "profile" : ["http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableconceptmap",
     "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishableconceptmap"]

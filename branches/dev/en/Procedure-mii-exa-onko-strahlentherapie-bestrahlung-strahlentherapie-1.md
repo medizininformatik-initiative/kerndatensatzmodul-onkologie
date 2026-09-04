@@ -26,7 +26,7 @@ Profile: [MII PR Onkologie Strahlentherapie](StructureDefinition-mii-pr-onko-str
 
 **category**: Radiotherapy (procedure)
 
-**code**: Strahlentherapie
+**code**: 8-52
 
 **subject**: [Erika Beispiel Female, DoB: 1965-04-12](Patient-example.md)
 

@@ -49,7 +49,7 @@ SNOMED CT Körperstrukturen (Body structure) zur optionalen exakten Lokalisation
       },
       {
         "url" : "version",
-        "valueString" : "2026.0.3"
+        "valueString" : "2027.0.0-ballot.rc1"
       },
       {
         "url" : "uri",
@@ -171,7 +171,7 @@ SNOMED CT Körperstrukturen (Body structure) zur optionalen exakten Lokalisation
   "title" : "MII VS Onkologie Körperstruktur (SNOMED CT)",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-04T15:21:29+00:00",
+  "date" : "2026-09-04T16:20:32+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

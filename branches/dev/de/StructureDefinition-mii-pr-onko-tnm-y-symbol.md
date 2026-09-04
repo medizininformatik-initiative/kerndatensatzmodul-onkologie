@@ -116,7 +116,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
       },
       {
         "url" : "version",
-        "valueString" : "2026.0.3"
+        "valueString" : "2027.0.0-ballot.rc1"
       },
       {
         "url" : "uri",
@@ -236,7 +236,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "name" : "MII_PR_Onko_TNM_y_Symbol",
   "title" : "MII PR Onkologie TNM y-Symbol",
   "status" : "retired",
-  "date" : "2026-09-04T15:21:29+00:00",
+  "experimental" : false,
+  "date" : "2026-09-04T16:20:32+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

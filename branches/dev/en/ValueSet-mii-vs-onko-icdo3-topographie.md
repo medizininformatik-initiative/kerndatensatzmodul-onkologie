@@ -53,7 +53,7 @@ Codes für Topographie einer neoplastischen Veränderung
       },
       {
         "url" : "version",
-        "valueString" : "2026.0.3"
+        "valueString" : "2027.0.0-ballot.rc1"
       },
       {
         "url" : "uri",
@@ -176,7 +176,7 @@ Codes für Topographie einer neoplastischen Veränderung
   "title" : "MII VS Onkologie ICD-O-3 Topographie",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-04T15:21:29+00:00",
+  "date" : "2026-09-04T16:20:32+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

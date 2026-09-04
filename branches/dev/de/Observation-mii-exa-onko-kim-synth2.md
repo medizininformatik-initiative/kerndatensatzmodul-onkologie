@@ -35,7 +35,7 @@ Profile: [MII PR Onkologie TNM-Klassifikation (synthetisiert)](StructureDefiniti
 * [Observation cT category (observable entity)](Observation-mii-exa-onko-kim-klass2-ycT3c.md)
 * [Observation cN category (observable entity)](Observation-mii-exa-onko-kim-klass2-ycN1.md)
 * [Observation cM category (observable entity)](Observation-mii-exa-onko-kim-klass2-ycM1b.md)
-* [Observation Cancer staging after multimodality therapy](Observation-mii-exa-onko-kim-klass2-ysym.md)
+* [Observation 101658-3](Observation-mii-exa-onko-kim-klass2-ysym.md)
 
 **derivedFrom**: [Observation Clinical TNM stage grouping](Observation-mii-exa-onko-kim-klass2.md)
 

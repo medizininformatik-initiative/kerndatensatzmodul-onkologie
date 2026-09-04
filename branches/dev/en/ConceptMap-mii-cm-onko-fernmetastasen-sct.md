@@ -34,12 +34,16 @@ Fernmetastasen STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT Internati
       "extension" : [{
         "url" : "packageId",
         "valueId" : "de.medizininformatikinitiative.kerndatensatz.onkologie"
+      },
+      {
+        "url" : "version",
+        "valueString" : "2027.0.0-ballot.rc1"
+      },
+      {
+        "url" : "uri",
+        "valueUri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko"
       }],
       "url" : "http://hl7.org/fhir/StructureDefinition/package-source"
-    },
-    {
-      "url" : "version",
-      "valueString" : "2026.0.3"
     }],
     "profile" : ["http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableconceptmap",
     "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishableconceptmap"]
@@ -150,7 +154,7 @@ Fernmetastasen STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT Internati
   "title" : "Fernmetastasen Mapping",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-09-04T15:21:29+00:00",
+  "date" : "2026-09-04T16:20:32+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

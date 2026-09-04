@@ -84,7 +84,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-mvgen
       },
       {
         "url" : "version",
-        "valueString" : "2026.0.3"
+        "valueString" : "2027.0.0-ballot.rc1"
       },
       {
         "url" : "uri",
@@ -204,7 +204,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-mvgen
   "name" : "MII_LM_MVGenomSeq_Onkologie",
   "title" : "MII LM Modellvorhaben Genomsequenzierung Onkologie",
   "status" : "active",
-  "date" : "2026-09-04T15:21:29+00:00",
+  "experimental" : false,
+  "date" : "2026-09-04T16:20:32+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

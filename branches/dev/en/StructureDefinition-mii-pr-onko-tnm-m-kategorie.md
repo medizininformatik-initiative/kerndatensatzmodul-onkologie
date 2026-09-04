@@ -62,7 +62,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-tnm-m
       },
       {
         "url" : "version",
-        "valueString" : "2026.0.3"
+        "valueString" : "2027.0.0-ballot.rc1"
       },
       {
         "url" : "uri",
@@ -182,7 +182,8 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-tnm-m
   "name" : "MII_PR_Onko_TNM_M_Kategorie",
   "title" : "MII PR Onkologie TNM M-Kategorie",
   "status" : "active",
-  "date" : "2026-09-04T15:21:29+00:00",
+  "experimental" : false,
+  "date" : "2026-09-04T16:20:32+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

@@ -16,7 +16,7 @@ Profile: [MII PR Onkologie Histologie ICD-O-3](StructureDefinition-mii-pr-onko-h
 
 **status**: Final
 
-**code**: Histology and Behavior ICD-O-3 Cancer
+**code**: 59847-4
 
 **subject**: [Erika Beispiel Female, DoB: 1965-04-12](Patient-example.md)
 

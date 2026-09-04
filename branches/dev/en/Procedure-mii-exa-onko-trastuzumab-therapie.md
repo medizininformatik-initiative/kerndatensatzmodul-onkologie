@@ -20,7 +20,7 @@ Profile: [MII PR Onkologie Systemische Therapie](StructureDefinition-mii-pr-onko
 
 **status**: Preparation
 
-**category**: Administration of medication
+**category**: 18629005
 
 **code**: Trastuzumab
 

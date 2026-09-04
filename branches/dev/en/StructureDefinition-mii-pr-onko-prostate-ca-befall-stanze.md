@@ -78,7 +78,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-prost
       },
       {
         "url" : "version",
-        "valueString" : "2026.0.3"
+        "valueString" : "2027.0.0-ballot.rc1"
       },
       {
         "url" : "uri",
@@ -198,7 +198,8 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-prost
   "name" : "MII_PR_Onko_Prostata_CA_Befall_Stanze",
   "title" : "MII PR Onkologie Ca-Befall Stanze",
   "status" : "active",
-  "date" : "2026-09-04T15:21:29+00:00",
+  "experimental" : false,
+  "date" : "2026-09-04T16:20:32+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

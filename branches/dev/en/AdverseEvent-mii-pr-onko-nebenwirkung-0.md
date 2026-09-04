@@ -29,7 +29,7 @@ Profile: [MII PR Onkologie Nebenwirkung von Strahlentherapie und systemische The
 | | |
 | :--- | :--- |
 | - | **Instance** |
-| * | [Procedure Strahlentherapie](Procedure-mii-exa-onko-strahlentherapie-strahlentherapie-1.md) |
+| * | [Procedure 8-52](Procedure-mii-exa-onko-strahlentherapie-strahlentherapie-1.md) |
 
 
 

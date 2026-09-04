@@ -35,7 +35,7 @@ Profile: [MII PR Onkologie TNM-Klassifikation](StructureDefinition-mii-pr-onko-t
 * [Observation Status of lymphatic (small vessel) invasion by tumor (observable entity)](Observation-mii-exa-onko-kim-klass3-L1.md)
 * [Observation Status of venous (large vessel) invasion by tumor (observable entity)](Observation-mii-exa-onko-kim-klass3-V0.md)
 * [Observation Presence of direct invasion by primary malignant neoplasm to nerve (observable entity)](Observation-mii-exa-onko-kim-klass3-Pn0.md)
-* [Observation Cancer staging after multimodality therapy](Observation-mii-exa-onko-kim-klass3-ysym.md)
+* [Observation 101658-3](Observation-mii-exa-onko-kim-klass3-ysym.md)
 
 
 

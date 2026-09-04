@@ -18,7 +18,7 @@ Profile: [MII PR Onkologie TNM Pn-Kategorie](StructureDefinition-mii-pr-onko-tnm
 
 **status**: Final
 
-**code**: Presence of direct invasion by primary malignant neoplasm to nerve
+**code**: 371513001
 
 **subject**: [Kim Musterperson (no stated gender), DoB: 1956-03-14](Patient-PatientKimMusterperson.md)
 

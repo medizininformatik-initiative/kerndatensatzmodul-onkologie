@@ -48,7 +48,7 @@ Das ValueSet enthält die TNM Codes für Serumtumormarker aus der UICC TNM - Kla
       },
       {
         "url" : "version",
-        "valueString" : "2026.0.3"
+        "valueString" : "2027.0.0-ballot.rc1"
       },
       {
         "url" : "uri",
@@ -171,7 +171,7 @@ Das ValueSet enthält die TNM Codes für Serumtumormarker aus der UICC TNM - Kla
   "title" : "MII VS Onkologie TNM S Kategorie Werte",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-04T15:21:29+00:00",
+  "date" : "2026-09-04T16:20:32+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

@@ -18,7 +18,7 @@ Profile: [MII PR Onkologie Genetische Variante](StructureDefinition-mii-pr-onko-
 
 **category**: Laboratory, Genetik
 
-**code**: Genetic variant assessment
+**code**: 69548-6
 
 **subject**: [Erika Beispiel Female, DoB: 1965-04-12](Patient-example.md)
 

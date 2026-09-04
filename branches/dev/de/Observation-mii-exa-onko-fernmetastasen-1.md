@@ -16,7 +16,7 @@ Profile: [MII PR Onkologie Fernmetastasen](StructureDefinition-mii-pr-onko-fernm
 
 **status**: Final
 
-**code**: Site of distant metastasis
+**code**: 385421009
 
 **subject**: [Erika Beispiel Female, DoB: 1965-04-12](Patient-example.md)
 

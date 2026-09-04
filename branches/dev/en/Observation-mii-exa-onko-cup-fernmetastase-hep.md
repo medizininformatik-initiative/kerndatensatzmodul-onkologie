@@ -16,7 +16,7 @@ Profile: [MII PR Onkologie Fernmetastasen](StructureDefinition-mii-pr-onko-fernm
 
 **status**: Final
 
-**code**: Site of distant metastasis
+**code**: 385421009
 
 **subject**: [CUP Musterfall Male, DoB: 1958-11-02](Patient-mii-exa-onko-cup-patient.md)
 

@@ -14,7 +14,7 @@
 
 Profile: [MII PR Onkologie Befund](StructureDefinition-mii-pr-onko-befund.md) version: 2027.0.0-ballot.rc1
 
-## Pathology report Cancer Narrative 
+## 22034-3 
 
 | | |
 | :--- | :--- |
