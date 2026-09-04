@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-rezeptorstatus-estrogen | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-03 | *Computable Name*:MII_PR_Onko_Mamma_Rezeptorstatus_Estrogen |
+| Active as of 2026-09-04 | *Computable Name*:MII_PR_Onko_Mamma_Rezeptorstatus_Estrogen |
 
  
 Dieses Profil beschreibt den diagnostischen Estrogen-Rezeptorstatus eines pathologisch untersuchten Probe beim Mamma-Karzinom in der Onkologie 
@@ -233,7 +233,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-mamma
   "name" : "MII_PR_Onko_Mamma_Rezeptorstatus_Estrogen",
   "title" : "MII PR Onkologie Rezeptorstatus Estrogen",
   "status" : "active",
-  "date" : "2026-09-03T20:25:33+00:00",
+  "date" : "2026-09-04T14:14:24+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

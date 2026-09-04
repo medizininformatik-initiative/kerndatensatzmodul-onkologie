@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-stellungzurop | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-03 | *Computable Name*:MII_CS_Onko_Therapie_StellungZurOp |
+| Active as of 2026-09-04 | *Computable Name*:MII_CS_Onko_Therapie_StellungZurOp |
 
  
 oBDS-spezifisches Codesystem für Klassifikation von Stellung zur OP 
@@ -161,7 +161,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "MII CS Onkologie Therapie Stellung",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-03T20:25:33+00:00",
+  "date" : "2026-09-04T14:14:24+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-anzahl-untersuchte-sentinel-lymphknoten | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-03 | *Computable Name*:MII_PR_Onko_Anzahl_Untersuchte_Sentinel_Lymphknoten |
+| Active as of 2026-09-04 | *Computable Name*:MII_PR_Onko_Anzahl_Untersuchte_Sentinel_Lymphknoten |
 
  
 Histologie: Anzahl der untersuchten Sentinel-Lymphknoten. Gibt an, wie viele Sentinel-Lymphknoten untersucht wurden. 
@@ -170,7 +170,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-anzah
   "name" : "MII_PR_Onko_Anzahl_Untersuchte_Sentinel_Lymphknoten",
   "title" : "MII PR Onkologie Anzahl der untersuchten Sentinel-Lymphknoten",
   "status" : "active",
-  "date" : "2026-09-03T20:25:33+00:00",
+  "date" : "2026-09-04T14:14:24+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

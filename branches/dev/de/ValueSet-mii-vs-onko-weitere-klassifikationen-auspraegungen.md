@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-weitere-klassifikationen-auspraegungen | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-03 | *Maschinenlesbarer Name*:MII_VS_Onko_Weitere_Klassifikationen_Auspraegungen |
+| Active Stand: 2026-09-04 | *Maschinenlesbarer Name*:MII_VS_Onko_Weitere_Klassifikationen_Auspraegungen |
 | **Copyright/Rechtliches**: This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. | |
 
  
@@ -171,7 +171,7 @@ Comprehensive collection of cancer staging systems and classification schemes us
   "title" : "MII Value Set Onkologie - Weitere Klassifikationen - Auspraegungen",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-03T20:25:33+00:00",
+  "date" : "2026-09-04T14:14:24+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

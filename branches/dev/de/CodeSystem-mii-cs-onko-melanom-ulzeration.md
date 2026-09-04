@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-melanom-ulzeration | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-03 | *Maschinenlesbarer Name*:MII_CS_Onko_Melanom_Ulzeration |
+| Active Stand: 2026-09-04 | *Maschinenlesbarer Name*:MII_CS_Onko_Melanom_Ulzeration |
 
  
 Codes für die Ulzeration beim Malignen Melanom der Haut nach oBDS 
@@ -159,7 +159,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "title" : "MII CS Onkologie Melanom Ulzeration",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-03T20:25:33+00:00",
+  "date" : "2026-09-04T14:14:24+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

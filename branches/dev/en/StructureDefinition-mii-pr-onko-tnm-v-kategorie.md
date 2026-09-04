@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-v-kategorie | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-03 | *Computable Name*:MII_PR_Onko_TNM_V_Kategorie |
+| Active as of 2026-09-04 | *Computable Name*:MII_PR_Onko_TNM_V_Kategorie |
 
  
 TNM-Klassifikation: TNM V-Kategorie. Veneninvasion. 
@@ -178,7 +178,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-tnm-v
   "name" : "MII_PR_Onko_TNM_V_Kategorie",
   "title" : "MII PR Onkologie TNM V-Kategorie",
   "status" : "active",
-  "date" : "2026-09-03T20:25:33+00:00",
+  "date" : "2026-09-04T14:14:24+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

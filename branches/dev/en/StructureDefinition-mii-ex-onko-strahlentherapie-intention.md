@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-intention | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-03 | *Computable Name*:MII_EX_Onko_Strahlentherapie_Intention |
+| Active as of 2026-09-04 | *Computable Name*:MII_EX_Onko_Strahlentherapie_Intention |
 
 Strahlentherapie Intention
 
@@ -174,7 +174,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-ex-onko-strah
   "name" : "MII_EX_Onko_Strahlentherapie_Intention",
   "title" : "MII EX Onko Strahlentherapie Intention",
   "status" : "active",
-  "date" : "2026-09-03T20:25:33+00:00",
+  "date" : "2026-09-04T14:14:24+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

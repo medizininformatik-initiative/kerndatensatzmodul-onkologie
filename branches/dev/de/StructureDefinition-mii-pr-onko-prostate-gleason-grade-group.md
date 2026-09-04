@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-grade-group | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-03 | *Maschinenlesbarer Name*:MII_PR_Onko_Prostata_Gleason_Grade_Group |
+| Active Stand: 2026-09-04 | *Maschinenlesbarer Name*:MII_PR_Onko_Prostata_Gleason_Grade_Group |
 
  
 Dieses Profil beschreibt einen Gleasonscore in der Onkologie 
@@ -293,7 +293,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "name" : "MII_PR_Onko_Prostata_Gleason_Grade_Group",
   "title" : "MII PR Onkologie Prostata Gleason Grade Group",
   "status" : "active",
-  "date" : "2026-09-03T20:25:33+00:00",
+  "date" : "2026-09-04T14:14:24+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

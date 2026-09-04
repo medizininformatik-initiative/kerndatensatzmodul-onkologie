@@ -11,7 +11,7 @@ All changes to this module are listed here. The complete, detailed release histo
 
 #### ⚠️ Breaking Changes
 
-These changes may require adjustments in existing implementations:
+These changes may require adjustments in existing implementations. Each entry is explained individually on the [Migration from v2026](migration-v2026.md) page — with its effect on stored data, its effect on implementations, and a concrete migration path:
 
 * **`BREAKING`** **UICC prefixes y, r and a as modifierExtension at category level**: The prefixes are no longer carried inside the category value but are represented on the respective T, N or M observation via the new extensions `mii-ex-onko-tnm-y-praefix`, `mii-ex-onko-tnm-r-praefix` and `mii-ex-onko-tnm-a-praefix`. 
 * **Why modifierExtension**: The prefixes change the interpretation of the category value — `ypT2` (assessment during or after initial multimodal therapy) is **not** the same as `pT2`. Processing systems MUST know these extensions and must not interpret a category without evaluating the prefix.

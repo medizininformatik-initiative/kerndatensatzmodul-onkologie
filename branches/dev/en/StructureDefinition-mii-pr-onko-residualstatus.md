@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-residualstatus | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-03 | *Computable Name*:MII_PR_Onko_Residualstatus |
+| Active as of 2026-09-04 | *Computable Name*:MII_PR_Onko_Residualstatus |
 
  
 Umfang eines Residualtumors nach einer Therapie 
@@ -182,7 +182,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-resid
   "name" : "MII_PR_Onko_Residualstatus",
   "title" : "MII PR Onkologie Residualstatus",
   "status" : "active",
-  "date" : "2026-09-03T20:25:33+00:00",
+  "date" : "2026-09-04T14:14:24+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

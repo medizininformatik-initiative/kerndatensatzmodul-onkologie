@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-intention | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-03 | *Computable Name*:MII_VS_Onko_Systemische_Therapie_Intention |
+| Active as of 2026-09-04 | *Computable Name*:MII_VS_Onko_Systemische_Therapie_Intention |
 
  
 Value Set für oBDS-Codes für Klassifikation von Intention der Systemischen Therapie 
@@ -171,7 +171,7 @@ Value Set für oBDS-Codes für Klassifikation von Intention der Systemischen The
   "title" : "MII VS Onkologie Systemische Therapie Intention",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-03T20:25:33+00:00",
+  "date" : "2026-09-04T14:14:24+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

@@ -12020,6 +12020,15 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "migration-v2026.html"
+        }],
+        "nameUrl" : "migration-v2026.html",
+        "title" : "Migration from v2026",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
           "valueUrl" : "metadata.html"
         }],
         "nameUrl" : "metadata.html",

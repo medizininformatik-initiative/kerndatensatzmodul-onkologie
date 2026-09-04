@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-operation-ops | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-03 | *Computable Name*:MII_VS_Onko_Mamma_Operation_OPS |
+| Active as of 2026-09-04 | *Computable Name*:MII_VS_Onko_Mamma_Operation_OPS |
 
  
 Value Set für Mamma-Operationen basierend auf OPS 
@@ -171,7 +171,7 @@ Value Set für Mamma-Operationen basierend auf OPS
   "title" : "MII VS Onkologie Mamma Operation OPS",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-03T20:25:33+00:00",
+  "date" : "2026-09-04T14:14:24+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
