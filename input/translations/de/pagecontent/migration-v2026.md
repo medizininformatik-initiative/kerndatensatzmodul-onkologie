@@ -131,16 +131,19 @@ CTCAE. Die Vermischung machte die Codes gegen das ValueSet unauflösbar.
 
 **Bestandsdaten.** Instanzen mit CTCAE-Version in `coding.version` bleiben
 formal **valide** (die Extension ist `0..1`, `coding.version` ist nicht
-verboten) — aber oBDS-Feld 15.3 wird dort nicht mehr gelesen; der Wert ist als
-MedDRA-Versionsangabe inhaltlich falsch.
+verboten) — aber oBDS-Feld 15.3 wird dort nicht mehr gelesen. Die Angabe selbst
+(etwa „Version 4") ist krebsregister-richtig — sie benennt die CTCAE-Version —,
+sie stand nur am falschen Ort: `coding.version` bezeichnet die Version des
+MedDRA-Katalogs, nicht des CTCAE-Katalogs.
 
 **Implementierungen.** Systeme, die die CTCAE-Version aus `coding.version`
 lesen oder schreiben, müssen auf die Extension umstellen.
 
 **Migration.** Den Wert aus `event.coding[meddra].version` in die Extension
-übertragen und `coding.version` entfernen. Werte außerhalb der Enumeration
-(z. B. „Version 4") auf den nächstliegenden Enumerationswert normalisieren
-(hier: `4`).
+übertragen und `coding.version` entfernen. Register-übliche Schreibweisen wie
+„Version 4" werden dabei auf den Code der oBDS-XSD-Enumeration abgebildet
+(hier: `4`, Display „CTCAE Version 4") — eine Formatangleichung, keine
+inhaltliche Korrektur.
 
 #### 6. Referenztypen gehärtet
 
