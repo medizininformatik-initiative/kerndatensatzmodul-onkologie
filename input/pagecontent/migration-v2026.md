@@ -1,6 +1,6 @@
 <!-- markdownlint-disable MD041 -->
-<!-- English mirror of input/translations/de/pagecontent/migration-v2026.md
-     (German is the source language of this page) — both files must say the
+<!-- English source page. German mirror:
+     input/translations/de/pagecontent/migration-v2026.md — both files must say the
      same thing. Per-entry structure follows the KDS module template's
      reporting scheme: what changed / effect on stored data / effect on
      implementations / migration path. -->

@@ -1,6 +1,6 @@
 <!-- markdownlint-disable MD041 -->
-<!-- English mirror of input/translations/de/pagecontent/tnm-journey.md
-     (German is the source language of this page) — both files must say the
+<!-- English source page. German mirror:
+     input/translations/de/pagecontent/tnm-journey.md — both files must say the
      same thing. Based on the end-to-end example "TNM Breast Cancer Journey"
      (input/fsh/oBDS/08_TNMKlassifikation/mii-exa-onko-tnm-breast-cancer-journey.fsh,
      23 instances). -->

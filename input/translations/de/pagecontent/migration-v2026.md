@@ -1,5 +1,5 @@
 <!-- markdownlint-disable MD041 -->
-<!-- Deutsche Fassung — Quellsprache dieser Seite. Englischer Spiegel:
+<!-- Deutsche Übersetzung der Standardsprachseite
      input/pagecontent/migration-v2026.md — beide Dateien müssen dasselbe
      aussagen. Struktur je Eintrag nach dem Berichtsschema des
      KDS-Modul-Templates: Was hat sich geändert / Was heißt das für
