@@ -171,7 +171,7 @@ Versionsbezeichnungen des CTCAE-Katalogs nach oBDS 15.3.
   "title" : "MII VS Onkologie Nebenwirkung CTCAE-Version",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-05T05:33:13+00:00",
+  "date" : "2026-09-05T06:32:59+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

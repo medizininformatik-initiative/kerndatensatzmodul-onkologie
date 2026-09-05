@@ -171,7 +171,7 @@ Value Set für oBDS-Codes für die Gesamtbeurteilung des Residualstatus
   "title" : "MII VS Onkologie Gesamtbeurteilung des Residualstatus",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-05T05:33:13+00:00",
+  "date" : "2026-09-05T06:32:59+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

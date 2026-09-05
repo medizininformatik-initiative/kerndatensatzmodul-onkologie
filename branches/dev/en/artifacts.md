@@ -350,6 +350,7 @@ These define new code systems used by systems conforming to this implementation 
 | [ MII CS Onkologie Verlauf Lymphknoten  ](CodeSystem-mii-cs-onko-verlauf-lymphknoten.md) | oBDS-spezifisches Codesystem für die Beurteilung von Lymphknoten im Behandlungsverlauf |
 | [ MII CS Onkologie Verlauf Primärtumor  ](CodeSystem-mii-cs-onko-verlauf-primaertumor.md) | oBDS-spezifisches Codesystem für die Beurteilung des Primärtumors im Behandlungsverlauf |
 | [ MII CodeSystem Onkologie - Weitere Klassifikationen oBDS  ](CodeSystem-mii-cs-onko-weitere-klassifikationen-obds.md) | oBDS-specific classification systems and scoring systems not yet covered by international terminologies (SNOMED CT, NCI Thesaurus). These codes supplement the existing ValueSet for additional classifications. Research required: Check if SNOMED CT or LOINC codes exist for these scoring systems before using oBDS-specific codes. |
+| [ MedDRA (Fragment, nur Codes)  ](CodeSystem-meddra.md) | Fragment des MedDRA-Systems (https://www.meddra.org): ausschliesslich die in diesem Modul verwendeten Code-IDs der CTCAE-v4.03-Terme, ohne Terms und ohne Hierarchie (MedDRA-Lizenz). Displays und deutsche Bezeichnungen liefert das Supplement mii-cs-onko-nebenwirkung-meddra-de. |
 | [ RSNA RadElement Common Data Elements (Fragment)  ](CodeSystem-radelement.md) | Fragment des RSNA-RadElement-Systems (Common Data Elements, https://www.radelement.org). Enthält nur die im MII-Modul Onkologie verwendeten Datenelemente. Quelle: RSNA RadElement API. |
 
 ### Terminology: Concept Maps 

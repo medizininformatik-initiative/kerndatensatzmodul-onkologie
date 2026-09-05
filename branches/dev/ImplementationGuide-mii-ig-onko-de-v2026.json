@@ -484,6 +484,17 @@
       },
       {
         "url" : "value",
+        "valueString" : "https://www.meddra.org"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "special-url"
+      },
+      {
+        "url" : "value",
         "valueString" : "https://www.uicc.org/resources/tnm"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -990,6 +1001,17 @@
       {
         "url" : "value",
         "valueString" : "https://radelement.org"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "https://www.meddra.org"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -1862,6 +1884,18 @@
       },
       "name" : "Mapping oBDS Stoma-Anzeichnung zu SNOMED CT",
       "description" : "Mapping der oBDS-Codes für präoperative Stoma-Anzeichnung zu SNOMED CT",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/meddra"
+      },
+      "name" : "MedDRA (Fragment, nur Codes)",
+      "description" : "Fragment des MedDRA-Systems (https://www.meddra.org): ausschliesslich die in diesem Modul verwendeten Code-IDs der CTCAE-v4.03-Terme, ohne Terms und ohne Hierarchie (MedDRA-Lizenz). Displays und deutsche Bezeichnungen liefert das Supplement mii-cs-onko-nebenwirkung-meddra-de.",
       "exampleBoolean" : false
     },
     {

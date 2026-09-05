@@ -24,8 +24,6 @@ Alle MedDRA-Codes der CTCAE v4.03 (Art der Nebenwirkung). Deutsche/englische Dis
 
 ### Expansion
 
-No Expansion for this valueset (Unknown Code System)
-
 -------
 
  [Description of the above table(s)](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#terminology). 
@@ -172,7 +170,7 @@ No Expansion for this valueset (Unknown Code System)
   "title" : "MII VS Onkologie Nebenwirkung nach CTCAE Art",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-05T05:33:13+00:00",
+  "date" : "2026-09-05T06:32:59+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

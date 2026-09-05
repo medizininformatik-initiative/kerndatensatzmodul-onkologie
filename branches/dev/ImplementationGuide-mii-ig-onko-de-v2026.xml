@@ -387,6 +387,14 @@
         <valueString value="special-url"/>
       </extension>
       <extension url="value">
+        <valueString value="https://www.meddra.org"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="special-url"/>
+      </extension>
+      <extension url="value">
         <valueString value="https://www.uicc.org/resources/tnm"/>
       </extension>
     </extension>
@@ -756,6 +764,14 @@
       </extension>
       <extension url="value">
         <valueString value="https://radelement.org"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="https://www.meddra.org"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -1500,6 +1516,17 @@
       </reference>
       <name value="Mapping oBDS Stoma-Anzeichnung zu SNOMED CT"/>
       <description value="Mapping der oBDS-Codes für präoperative Stoma-Anzeichnung zu SNOMED CT"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/meddra"/>
+      </reference>
+      <name value="MedDRA (Fragment, nur Codes)"/>
+      <description value="Fragment des MedDRA-Systems (https://www.meddra.org): ausschliesslich die in diesem Modul verwendeten Code-IDs der CTCAE-v4.03-Terme, ohne Terms und ohne Hierarchie (MedDRA-Lizenz). Displays und deutsche Bezeichnungen liefert das Supplement mii-cs-onko-nebenwirkung-meddra-de."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
