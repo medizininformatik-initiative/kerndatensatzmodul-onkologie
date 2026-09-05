@@ -22,3 +22,14 @@ The value provided ('en-US') was not found in the value set 'All Languages' (htt
 # resolve inside the HL7 IG. Inherited via molgen into our genetic variant profile;
 # not fixable here without forking foreign element documentation.
 The link 'sequencing.html#variant-assessment' for "here" cannot be resolved
+
+# MedDRA display names cannot be validated: the base CodeSystem is shipped as a
+# deliberately DISPLAY-LESS fragment (MedDRA licence protects the terms, not the
+# numeric IDs), so the validator finds "no valid display names" for ANY display.
+# The displays below are correct per MedDRA/its German 65c translation; the
+# German designations live in the supplement mii-cs-onko-nebenwirkung-meddra-de.
+Wrong Display Name 'Anämie' for https://www.meddra.org#10002272. There are no valid display names found for language(s) 'en'. Default display is 'null' (INVALID)
+Wrong Display Name 'Fatigue' for https://www.meddra.org#10016256. There are no valid display names found for language(s) 'en'. Default display is 'null' (INVALID)
+Wrong Display Name 'Peripheral sensory neuropathy' for https://www.meddra.org#10034620. There are no valid display names found for language(s) 'en'. Default display is 'null' (INVALID)
+Wrong Display Name 'Rektale Mukositis' for https://www.meddra.org#10063190. There are no valid display names found for language(s) 'en'. Default display is 'null' (INVALID)
+Wrong Display Name 'Zytokin-Freisetzungs-Syndrom' for https://www.meddra.org#10052015. There are no valid display names found for language(s) 'en'. Default display is 'null' (INVALID)

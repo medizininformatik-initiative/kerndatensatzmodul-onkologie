@@ -8,8 +8,11 @@
 // (b) das ValueSet mii-vs-onko-nebenwirkung-art lokal aufloest.
 // Muster nach dem RadElement-Praezedenzfall (radelement.fsh); special-url
 // in sushi-config.yaml traegt https://www.meddra.org.
-// Codeliste maschinell aus der Supplement-Quelle abgeleitet (gleiche Basis:
-// input/examples-source/ctcae/, CTCAE v4.03 auf MedDRA v12.0).
+// Codeliste: UNION aus ValueSet mii-vs-onko-nebenwirkung-art (790 Codes, die
+// massgebliche Liste) und Supplement (789 — dem Supplement fehlt 10016778,
+// weil die 65c-Quelle dafuer keine deutsche Zeile hatte). Lehrstueck: das
+// Fragment muss ALLE referenzierten Codes tragen, nicht nur die uebersetzten.
+// Basis: input/examples-source/ctcae/, CTCAE v4.03 auf MedDRA v12.0.
 CodeSystem: MedDRAFragment
 Id: meddra
 Title: "MedDRA (Fragment, nur Codes)"
@@ -195,6 +198,7 @@ Description: "Fragment des MedDRA-Systems (https://www.meddra.org): ausschliessl
 * #10016750
 * #10016757
 * #10016766
+* #10016778
 * #10016791
 * #10016825
 * #10016987

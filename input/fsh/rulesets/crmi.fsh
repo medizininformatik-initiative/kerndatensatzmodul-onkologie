@@ -266,6 +266,23 @@ RuleSet: OnkoCRMIValueSet
 * insert CRMIVersionAlgorithm
 * insert CRMIEffectivePeriod(2026)
 
+// Variante fuer SUPPLEMENTS: ohne den shareable-Claim. Der Publisher verlangt
+// bei crmi-shareablecodesystem caseSensitive 1..1, verbietet caseSensitive aber
+// zugleich an Supplements ('CodeSysteme SOLLTEN KEINEN Wert fuer caseSensitive
+// haben, wenn sie ein Supplement sind' — es erbt vom Basis-CodeSystem). Beide
+// Regeln zusammen sind fuer ein Supplement unerfuellbar; der Supplement-Regel
+// gehoert der Vorrang, also kein shareable-Claim fuer Supplements.
+RuleSet: OnkoCRMICodeSystemSupplement
+* insert CRMIPublishableCodeSystem
+* insert CRMIKnowledgeCapabilitiesCodeSystem
+* insert CRMIVersionPolicyStrict
+* insert CRMIApprovalDate(2026-01-03)
+* insert CRMIArtifactTopic(http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl, C3262)
+* insert CRMIArtifactContributors
+* insert CRMIMetaLicenseAndSource
+* insert CRMIVersionAlgorithm
+* insert CRMIEffectivePeriod(2026)
+
 RuleSet: OnkoCRMICodeSystem
 * insert CRMIShareableCodeSystem
 * insert CRMIPublishableCodeSystem
