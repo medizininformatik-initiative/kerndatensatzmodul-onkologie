@@ -663,6 +663,14 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/meddra"
+        },
+        "name": "MedDRA (Fragment, nur Codes)",
+        "description": "Fragment des MedDRA-Systems (https://www.meddra.org): ausschliesslich die in diesem Modul verwendeten Code-IDs der CTCAE-v4.03-Terme, ohne Terms und ohne Hierarchie (MedDRA-Lizenz). Displays und deutsche Bezeichnungen liefert das Supplement mii-cs-onko-nebenwirkung-meddra-de.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "MedicationRequest/mii-exa-onko-modification-5fu-request"
         },
         "name": "MedicationRequest - Fluorouracil (vollständig verabreicht)",
@@ -5466,6 +5474,10 @@
       {
         "code": "special-url",
         "value": "https://radelement.org"
+      },
+      {
+        "code": "special-url",
+        "value": "https://www.meddra.org"
       },
       {
         "code": "special-url",
