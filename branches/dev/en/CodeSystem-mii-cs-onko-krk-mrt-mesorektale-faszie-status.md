@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-mrt-mesorektale-faszie-status | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-04 | *Computable Name*:MII_CS_Onko_KRK_MRT_Mesorektale_Faszie_Status |
+| Active as of 2026-09-05 | *Computable Name*:MII_CS_Onko_KRK_MRT_Mesorektale_Faszie_Status |
 
  
 oBDS-basiertes Codesystem für den Status der MRT/CT Untersuchung zur mesorektalen Faszie beim Kolorektalen Karzinom (KR5) 
@@ -160,7 +160,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "MII CS Onkologie KRK MRT Mesorektale Faszie Status",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-04T19:28:42+00:00",
+  "date" : "2026-09-05T05:33:13+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

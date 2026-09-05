@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-gleason-pattern-loinc | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-04 | *Maschinenlesbarer Name*:MII_VS_Onko_Prostata_Gleason_Pattern_LOINC |
+| Active Stand: 2026-09-05 | *Maschinenlesbarer Name*:MII_VS_Onko_Prostata_Gleason_Pattern_LOINC |
 
  
 Value Set der LOINC-Codes für Primär-, Sekundär- und Tertiär-Gleason-Pattern. Dient als optionale LOINC-Zweitkodierung zum verpflichtenden SNOMED-CT-Slice im Profil MII_PR_Onko_Prostata_Gleason_Pattern (GitHub-Issue #259). 
@@ -171,7 +171,7 @@ Value Set der LOINC-Codes für Primär-, Sekundär- und Tertiär-Gleason-Pattern
   "title" : "MII VS Onkologie Prostata Gleason Pattern LOINC",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-04T19:28:42+00:00",
+  "date" : "2026-09-05T05:33:13+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

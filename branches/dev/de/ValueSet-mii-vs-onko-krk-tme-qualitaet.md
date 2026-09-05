@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-krk-tme-qualitaet | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-04 | *Maschinenlesbarer Name*:MII_VS_Onko_KRK_TME_Qualitaet |
+| Active Stand: 2026-09-05 | *Maschinenlesbarer Name*:MII_VS_Onko_KRK_TME_Qualitaet |
 
  
 Value Set für semantische Kodierung des oBDS-Abstand des Tumorrandes zur aboralen Resektionslinie im Kolorektalen Karzinom 
@@ -171,7 +171,7 @@ Value Set für semantische Kodierung des oBDS-Abstand des Tumorrandes zur aboral
   "title" : "MII VS Onkologie KRK TME Qualität",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-04T19:28:42+00:00",
+  "date" : "2026-09-05T05:33:13+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

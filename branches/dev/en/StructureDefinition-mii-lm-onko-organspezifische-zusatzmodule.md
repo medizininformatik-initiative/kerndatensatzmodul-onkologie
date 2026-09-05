@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/LogicalModel/OrganspezifischeZusatzmodule | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-04 | *Computable Name*:MII_LM_Onko_Organspezifische_Zusatzmodule |
+| Active as of 2026-09-05 | *Computable Name*:MII_LM_Onko_Organspezifische_Zusatzmodule |
 
  
 Logisches Modell für die organspezifischen Zusatzmodule des oBDS. Feldnummern und Struktur folgen dem amtlichen oBDS-XML-Schema (oBDS v3.0.5, Modul_Mamma/Darm/Prostata/Malignes_Melanom/Allgemein) sowie dem Feldkatalog auf basisdatensatz.de. 
@@ -169,7 +169,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-lm-onko-organ
   "title" : "MII LM Onkologie Organspezifische Zusatzmodule",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-04T19:28:42+00:00",
+  "date" : "2026-09-05T05:33:13+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

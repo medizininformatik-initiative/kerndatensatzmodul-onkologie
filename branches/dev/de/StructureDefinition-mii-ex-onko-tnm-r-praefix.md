@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-r-praefix | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-04 | *Maschinenlesbarer Name*:MII_EX_Onko_TNM_r_Praefix |
+| Active Stand: 2026-09-05 | *Maschinenlesbarer Name*:MII_EX_Onko_TNM_r_Praefix |
 
 Kennzeichnet eine TNM T-, N- oder M-Kategorie, deren Feststellung zur Beurteilung eines Rezidivs erfolgte (UICC r-Präfix, z. B. rcT2). Als modifierExtension zu verwenden, da das r-Präfix die Interpretation des Kategorie-Wertes verändert.
 
@@ -201,7 +201,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-ex-onko-
   "title" : "MII EX Onkologie TNM r-Präfix",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-04T19:28:42+00:00",
+  "date" : "2026-09-05T05:33:13+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

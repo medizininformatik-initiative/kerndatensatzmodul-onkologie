@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-04 | *Computable Name*:MII_CS_Onko_Primaertumor_Diagnosesicherung |
+| Active as of 2026-09-05 | *Computable Name*:MII_CS_Onko_Primaertumor_Diagnosesicherung |
 
  
 Codes für Primärtumor Diagnosesicherung, d.h. die höchste erreichte Diagnosesicherheit der Diagnose. 
@@ -160,7 +160,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "MII CS Onkologie Primärtumor Diagnosesicherung",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-04T19:28:42+00:00",
+  "date" : "2026-09-05T05:33:13+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

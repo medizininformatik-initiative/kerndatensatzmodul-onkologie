@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-anzahl-befallene-sentinel-lymphknoten | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-04 | *Computable Name*:MII_PR_Onko_Anzahl_Befallene_Sentinel_Lymphknoten |
+| Active as of 2026-09-05 | *Computable Name*:MII_PR_Onko_Anzahl_Befallene_Sentinel_Lymphknoten |
 
  
 Histologie: Anzahl der befallenen Sentinel-Lymphknoten. Gibt an, wie viele Sentinel-Lymphknoten befallen sind. 
@@ -171,7 +171,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-anzah
   "title" : "MII PR Onkologie Anzahl der befallenen Sentinel-Lymphknoten",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-04T19:28:42+00:00",
+  "date" : "2026-09-05T05:33:13+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

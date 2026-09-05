@@ -38,7 +38,7 @@ Ab der zweiten formalen Publikation dieses Leitfadens wird der maschinell erzeug
 
 **Implementierungen.** Systeme, die die alten ConceptMap-Ziele einkodiert haben, verbreiten falsche Codes weiter und müssen auf die korrigierten Maps umstellen.
 
-**Migration.** Bestandswerte über die korrigierten ConceptMaps ([Karnofsky](ConceptMap-mii-cm-onko-karnofsky-loinc.md), [ECOG](ConceptMap-mii-cm-onko-ecog-loinc.md)) umkodieren. Die Zuordnung ist 1:1 und verlustfrei — jeder alte Code hat genau einen korrigierten Nachfolger.
+**Migration.** Bestandswerte über die korrigierten ConceptMaps ([Karnofsky](ConceptMap-mii-cm-onko-allgemeiner-leistungszustand-karnofsky-loinc.md), [ECOG](ConceptMap-mii-cm-onko-allgemeiner-leistungszustand-ecog-loinc.md)) umkodieren. Die Zuordnung ist 1:1 und verlustfrei — jeder alte Code hat genau einen korrigierten Nachfolger.
 
 #### 3. Onkologie-Kennzeichnung an der Diagnose verpflichtend
 

@@ -36,7 +36,7 @@ From the second formal publication of this guide onwards, the IG Publisher's mac
 
 **Implementations.** Systems that hard-coded the old concept map targets keep propagating wrong codes and must switch to the corrected maps.
 
-**Migration.** Re-code existing values via the corrected concept maps ([Karnofsky](ConceptMap-mii-cm-onko-karnofsky-loinc.md), [ECOG](ConceptMap-mii-cm-onko-ecog-loinc.md)). The mapping is 1:1 and lossless — every old code has exactly one corrected successor.
+**Migration.** Re-code existing values via the corrected concept maps ([Karnofsky](ConceptMap-mii-cm-onko-allgemeiner-leistungszustand-karnofsky-loinc.md), [ECOG](ConceptMap-mii-cm-onko-allgemeiner-leistungszustand-ecog-loinc.md)). The mapping is 1:1 and lossless — every old code has exactly one corrected successor.
 
 #### 3. Oncology categorisation on the diagnosis now mandatory
 

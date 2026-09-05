@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-boost | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-04 | *Maschinenlesbarer Name*:MII_CS_Onko_Strahlentherapie_Boost |
+| Active Stand: 2026-09-05 | *Maschinenlesbarer Name*:MII_CS_Onko_Strahlentherapie_Boost |
 
  
 oBDS-spezifisches Codesystem für Klassifikation von Strahlentherapie-Boosts 
@@ -160,7 +160,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "title" : "MII CS Onkologie Strahlentherapie Boost",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-04T19:28:42+00:00",
+  "date" : "2026-09-05T05:33:13+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

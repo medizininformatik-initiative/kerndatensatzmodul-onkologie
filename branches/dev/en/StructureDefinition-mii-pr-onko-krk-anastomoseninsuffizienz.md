@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-anastomoseninsuffizienz | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-04 | *Computable Name*:MII_PR_Onko_KRK_Anastomoseninsuffizienz |
+| Active as of 2026-09-05 | *Computable Name*:MII_PR_Onko_KRK_Anastomoseninsuffizienz |
 
  
 Dieses Profil beschreibt die Bewertung der Anastomoseninsuffizienz nach einer Operation beim Kolorektalen Karzinom 
@@ -219,7 +219,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-krk-a
   "title" : "MII PR Onkologie KRK Anastomoseninsuffizienz",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-04T19:28:42+00:00",
+  "date" : "2026-09-05T05:33:13+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

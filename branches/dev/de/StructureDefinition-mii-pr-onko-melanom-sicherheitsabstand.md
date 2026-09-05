@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-sicherheitsabstand | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-04 | *Maschinenlesbarer Name*:MII_PR_Onko_Melanom_Sicherheitsabstand |
+| Active Stand: 2026-09-05 | *Maschinenlesbarer Name*:MII_PR_Onko_Melanom_Sicherheitsabstand |
 
  
 Dieses Profil beschreibt den minimalen Sicherheitsabstand zum Primärtumor beim Malignen Melanom basierend auf oBDS Feld MM1. Bei nicht beurteilbaren Fällen (oBDS Wert -1) wird dataAbsentReason verwendet statt valueQuantity. 
@@ -284,7 +284,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "title" : "MII PR Onkologie Melanom Sicherheitsabstand",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-04T19:28:42+00:00",
+  "date" : "2026-09-05T05:33:13+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

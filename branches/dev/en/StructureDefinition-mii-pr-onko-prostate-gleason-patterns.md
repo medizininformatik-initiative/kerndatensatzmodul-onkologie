@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-patterns | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-04 | *Computable Name*:MII_PR_Onko_Prostata_Gleason_Pattern |
+| Active as of 2026-09-05 | *Computable Name*:MII_PR_Onko_Prostata_Gleason_Pattern |
 
  
 Dieses Profil beschreibt ein Gleason Pattern in der Onkologie. Es wird für das primäre, das sekundäre und das tertiäre Pattern gleichermaßen verwendet; welches Pattern gemeint ist, ergibt sich aus Observation.code. 
@@ -221,7 +221,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-prost
   "title" : "MII PR Onkologie Prostata Gleason Pattern",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-04T19:28:42+00:00",
+  "date" : "2026-09-05T05:33:13+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

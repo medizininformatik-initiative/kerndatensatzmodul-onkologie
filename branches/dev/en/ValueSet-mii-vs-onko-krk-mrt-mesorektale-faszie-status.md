@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-krk-mrt-mesorektale-faszie-status | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-04 | *Computable Name*:MII_VS_Onko_KRK_MRT_Mesorektale_Faszie_Status |
+| Active as of 2026-09-05 | *Computable Name*:MII_VS_Onko_KRK_MRT_Mesorektale_Faszie_Status |
 
  
 Value Set für semantische Kodierung des oBDS-Status der MRT/CT Untersuchung zur mesorektalen Faszie beim Kolorektalen Karzinom (KR5) 
@@ -171,7 +171,7 @@ Value Set für semantische Kodierung des oBDS-Status der MRT/CT Untersuchung zur
   "title" : "MII VS Onkologie KRK MRT Mesorektale Faszie Status",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-04T19:28:42+00:00",
+  "date" : "2026-09-05T05:33:13+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
