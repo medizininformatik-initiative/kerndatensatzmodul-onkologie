@@ -220,7 +220,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-prost
   "title" : "MII PR Onkologie Prostata Gleason Grade Group",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-05T06:32:59+00:00",
+  "date" : "2026-09-05T07:29:05+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

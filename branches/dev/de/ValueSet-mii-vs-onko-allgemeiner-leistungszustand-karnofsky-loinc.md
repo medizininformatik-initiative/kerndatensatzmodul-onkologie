@@ -171,7 +171,7 @@ LOINC-Answer-Codes für den Karnofsky Performance Status. Enumerierte Fassung de
   "title" : "MII VS Onkologie Allgemeiner Leistungszustand Karnofsky LOINC",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-05T06:32:59+00:00",
+  "date" : "2026-09-05T07:29:05+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

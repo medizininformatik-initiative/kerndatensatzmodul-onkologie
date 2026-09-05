@@ -37,7 +37,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "MedDRA (Fragment, nur Codes)",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-05T06:32:59+00:00",
+  "date" : "2026-09-05T07:29:05+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -578,6 +578,9 @@ This Code system is referenced in the definition of the following value sets:
   },
   {
     "code" : "10016766"
+  },
+  {
+    "code" : "10016778"
   },
   {
     "code" : "10016791"

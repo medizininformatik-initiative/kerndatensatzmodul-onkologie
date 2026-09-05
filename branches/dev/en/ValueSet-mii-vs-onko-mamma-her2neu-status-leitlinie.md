@@ -171,7 +171,7 @@ Value Set für Her2neu Status nach S3-Leitlinie und ASCO/CAP Guidelines
   "title" : "MII VS Onkologie Mamma Her2neu Status Leitlinie",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-05T06:32:59+00:00",
+  "date" : "2026-09-05T07:29:05+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

@@ -284,7 +284,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-weite
   "title" : "MII PR Onkologie Weitere Klassifikationen",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-05T06:32:59+00:00",
+  "date" : "2026-09-05T07:29:05+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
