@@ -518,20 +518,11 @@ jobs:
             # on THIS proxy. The pinned upstream nginx.conf stays untouched — we
             # patch our downloaded copy. Companion change: .github/fhir-settings.json
             # allowlists {tx-host}/tx-reg, or the SSRF guard refuses the http probe.
-            python3 - "${nginx_dir}/nginx.conf" <<'TXREG'
-            import io, sys
-            p = sys.argv[1]
-            t = io.open(p, encoding='utf-8').read()
-            block = """        location /tx-reg {
-                        default_type application/json;
-                        return 200 '{"formats":["application/fhir+json"],"authoritative":[],"candidates":[]}';
-                    }
-            
-            """
-            anchor = "        location / {"
-            assert anchor in t, "nginx.conf: location-Anker nicht gefunden"
-            io.open(p, 'w', encoding='utf-8').write(t.replace(anchor, block + anchor, 1))
-            TXREG
+            # (Warnung aus eigener Erfahrung: KEIN Heredoc hier — der Terminator
+            # muss auf Skript-Spalte 0 stehen, und die YAML-Einrueckung verschob ihn;
+            # das brach den Step mit 'unexpected end of file'. sed ist einrueckungsfest.)
+            sed -i 's|^\( *\)location / {|\1location /tx-reg {\n\1    default_type application/json;\n\1    return 200 \x27{"formats":["application/fhir+json"],"authoritative":[],"candidates":[]}\x27;\n\1}\n\n\1location / {|' "${nginx_dir}/nginx.conf"
+            grep -q "location /tx-reg" "${nginx_dir}/nginx.conf"
             printf '%s' "${SU_TERMSERV_CLIENT_CERT}" | base64 --decode > "${nginx_dir}/certs/client-cert.pem"
             printf '%s' "${SU_TERMSERV_CLIENT_KEY}" | base64 --decode > "${nginx_dir}/certs/client-key-encrypted.key"
             openssl rsa \
