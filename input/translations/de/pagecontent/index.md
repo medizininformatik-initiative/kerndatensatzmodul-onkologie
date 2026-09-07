@@ -15,10 +15,14 @@ diagnostische und histologische Parameter sowie Angaben zu Behandlung,
 Tumor-Staging zu Beginn und im Verlauf, die Erfassung von Nebenwirkungen und
 die Erkennung von Metastasen.
 
+<!-- Version über Template-Variable, nie als Literal: das Literal war stale,
+     sobald v2027.0.0-ballot.rc1 auslief und hier noch 2026.0.3 stand. Das
+     Publikationsdatum steht im generierten Kopfkasten ("Active Stand") und
+     wird hier bewusst nicht wiederholt. -->
+
 | Veröffentlichung |               |
 |------------------|---------------|
-| Datum            | 2026-03-27    |
-| Version          | 2026.0.3 (CalVer `YYYY.n.n`) |
+| Version          | {{site.data.fhir.igVer}} (CalVer `YYYY.n.n`) |
 | Status           | active        |
 | Realm            | DE            |
 

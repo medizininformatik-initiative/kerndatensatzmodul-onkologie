@@ -15,10 +15,14 @@ diagnostic and histological parameters as well as information on treatment,
 tumor staging at baseline and during follow-up, the recording of adverse
 events and the detection of metastases.
 
+<!-- Version via template variable, never a literal: the literal went stale
+     the moment v2027.0.0-ballot.rc1 shipped while this table still said
+     2026.0.3. The publication date lives in the generated header box
+     ("Active as of ...") and is deliberately not repeated here. -->
+
 | Publication |               |
 |-------------|---------------|
-| Date        | 2026-03-27    |
-| Version     | 2026.0.3 (CalVer `YYYY.n.n`) |
+| Version     | {{site.data.fhir.igVer}} (CalVer `YYYY.n.n`) |
 | Status      | active        |
 | Realm       | DE            |
 
