@@ -18,8 +18,7 @@ Das Modul Onkologie orientiert sich am **onkologischen Basisdatensatz (oBDS)**, 
 
 | | |
 | :--- | :--- |
-| Datum | 2026-03-27 |
-| Version | 2026.0.3 (CalVer`YYYY.n.n`) |
+| Version | 2027.0.0-ballot.rc1 (CalVer`YYYY.n.n`) |
 | Status | active |
 | Realm | DE |
 

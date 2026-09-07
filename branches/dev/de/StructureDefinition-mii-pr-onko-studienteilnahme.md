@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-studienteilnahme | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-05 | *Maschinenlesbarer Name*:MII_PR_Onko_Studienteilnahme |
+| Active Stand: 2026-09-07 | *Maschinenlesbarer Name*:MII_PR_Onko_Studienteilnahme |
 
  
 Dieses Profil beschreibt Studienteilnahmen in der Onkologie 
@@ -308,7 +308,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "title" : "MII PR Onkologie Studienteilnahme",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-05T07:29:05+00:00",
+  "date" : "2026-09-07T08:59:25+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

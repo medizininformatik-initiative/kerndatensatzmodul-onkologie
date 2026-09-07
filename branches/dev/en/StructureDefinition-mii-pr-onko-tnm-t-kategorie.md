@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-05 | *Computable Name*:MII_PR_Onko_TNM_T_Kategorie |
+| Active as of 2026-09-07 | *Computable Name*:MII_PR_Onko_TNM_T_Kategorie |
 
  
 TNM-Klassifikation: TNM T-Kategorie. Ausbreitung des Primärtumors, erfolgt gemäß Tumorentität nach TNM. 
@@ -183,7 +183,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-tnm-t
   "title" : "MII PR Onkologie TNM T-Kategorie",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-05T07:29:05+00:00",
+  "date" : "2026-09-07T08:59:25+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

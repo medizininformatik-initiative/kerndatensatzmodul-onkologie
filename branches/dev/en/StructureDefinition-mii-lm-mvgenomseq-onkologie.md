@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/LogicalModel/mii-lm-mvgenomseq-onkologie | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-05 | *Computable Name*:MII_LM_MVGenomSeq_Onkologie |
+| Active as of 2026-09-07 | *Computable Name*:MII_LM_MVGenomSeq_Onkologie |
 
  
 MII LogicalModel Modellvorhaben Genomsequenzierung Onkologie 
@@ -169,7 +169,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-lm-mvgenomseq
   "title" : "MII LM Modellvorhaben Genomsequenzierung Onkologie",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-05T07:29:05+00:00",
+  "date" : "2026-09-07T08:59:25+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
