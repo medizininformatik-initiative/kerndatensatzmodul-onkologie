@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-krk-abstand-circumferelle-resektionsrand | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-07 | *Maschinenlesbarer Name*:MII_VS_Onko_KRK_Abstand_Circumferelle_Resektionsrand |
+| Active Stand: 2026-09-08 | *Maschinenlesbarer Name*:MII_VS_Onko_KRK_Abstand_Circumferelle_Resektionsrand |
 
  
 Value Set für semantische Kodierung des oBDS-Abstand des Tumorrandes zur circumferellen Resektionsrand im Kolorektalen Karzinom 
@@ -171,7 +171,7 @@ Value Set für semantische Kodierung des oBDS-Abstand des Tumorrandes zur circum
   "title" : "MII VS Onkologie KRK Abstand Circumferelle Resektionsrand",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-07T08:59:25+00:00",
+  "date" : "2026-09-08T11:16:16+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

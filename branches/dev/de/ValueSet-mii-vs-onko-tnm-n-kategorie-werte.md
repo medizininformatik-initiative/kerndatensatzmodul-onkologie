@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-n-kategorie-werte | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-07 | *Maschinenlesbarer Name*:MII_VS_Onko_TNM_N_Kategorie_Werte |
+| Active Stand: 2026-09-08 | *Maschinenlesbarer Name*:MII_VS_Onko_TNM_N_Kategorie_Werte |
 
  
 Das ValueSet enthält die TNM N-Kategorie Codes aus der UICC TNM - Klassifikation maligner Tumoren Achte Auflage. 
@@ -171,7 +171,7 @@ Das ValueSet enthält die TNM N-Kategorie Codes aus der UICC TNM - Klassifikatio
   "title" : "MII VS Onkologie TNM N Kategorie Werte",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-07T08:59:25+00:00",
+  "date" : "2026-09-08T11:16:16+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

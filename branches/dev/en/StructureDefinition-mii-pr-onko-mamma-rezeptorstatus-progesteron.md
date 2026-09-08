@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-rezeptorstatus-progesteron | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-07 | *Computable Name*:MII_PR_Onko_Mamma_Rezeptorstatus_Progesteron |
+| Active as of 2026-09-08 | *Computable Name*:MII_PR_Onko_Mamma_Rezeptorstatus_Progesteron |
 
  
 Dieses Profil beschreibt den diagnostischen Progesteron-Rezeptorstatus eines pathologisch untersuchten Probe beim Mamma-Karzinom in der Onkologie 
@@ -234,7 +234,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-mamma
   "title" : "MII PR Onkologie Rezeptorstatus Progesteron",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-07T08:59:25+00:00",
+  "date" : "2026-09-08T11:16:16+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

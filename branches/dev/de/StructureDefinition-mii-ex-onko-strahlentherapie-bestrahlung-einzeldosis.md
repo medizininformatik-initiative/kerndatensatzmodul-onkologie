@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-einzeldosis | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-07 | *Maschinenlesbarer Name*:MII_EX_Onko_Strahlentherapie_Bestrahlung_Einzeldosis |
+| Active Stand: 2026-09-08 | *Maschinenlesbarer Name*:MII_EX_Onko_Strahlentherapie_Bestrahlung_Einzeldosis |
 
 Strahlentherapie: Einzeldosis einer Bestrahlung
 
@@ -210,7 +210,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-ex-onko-
   "title" : "MII EX Onko Strahlentherapie Bestrahlung Einzeldosis",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-07T08:59:25+00:00",
+  "date" : "2026-09-08T11:16:16+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

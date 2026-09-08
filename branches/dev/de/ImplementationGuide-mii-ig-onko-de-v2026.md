@@ -372,9 +372,9 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
   },
   {
     "id" : "de_medizininformatikinitiative_kerndatensatz_molgen",
-    "uri" : "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.molgen/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.molgen",
+    "uri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ImplementationGuide/mii-ig-molgen",
     "packageId" : "de.medizininformatikinitiative.kerndatensatz.molgen",
-    "version" : "2026.0.4"
+    "version" : "2027.0.0-ballot.rc2"
   },
   {
     "id" : "hl7_fhir_uv_genomics_reporting",

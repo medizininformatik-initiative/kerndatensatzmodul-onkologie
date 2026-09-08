@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-uicc-stadium | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-07 | *Maschinenlesbarer Name*:MII_VS_Onko_TNM_UICC_Stadium |
+| Active Stand: 2026-09-08 | *Maschinenlesbarer Name*:MII_VS_Onko_TNM_UICC_Stadium |
 
  
 The ValueSet enthält Codes für die TNM-Stadien zur prognostischen Gruppeneinteilung von Patienten. 
@@ -171,7 +171,7 @@ The ValueSet enthält Codes für die TNM-Stadien zur prognostischen Gruppeneinte
   "title" : "MII VS Onkologie TNM UICC Stadium",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-07T08:59:25+00:00",
+  "date" : "2026-09-08T11:16:16+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

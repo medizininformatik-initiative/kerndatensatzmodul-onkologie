@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-operation-komplikation | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-07 | *Maschinenlesbarer Name*:MII_VS_Onko_Operation_Komplikation |
+| Active Stand: 2026-09-08 | *Maschinenlesbarer Name*:MII_VS_Onko_Operation_Komplikation |
 
  
 Value Set für oBDS-Codes für Klassifikation von Komplikationen während der OP 
@@ -171,7 +171,7 @@ Value Set für oBDS-Codes für Klassifikation von Komplikationen während der OP
   "title" : "MII VS Onkologie Operation Komplikationen",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-07T08:59:25+00:00",
+  "date" : "2026-09-08T11:16:16+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

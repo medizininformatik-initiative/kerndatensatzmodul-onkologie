@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-breslow-tiefe | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-07 | *Computable Name*:MII_PR_Onko_Melanom_Breslow_Tiefe |
+| Active as of 2026-09-08 | *Computable Name*:MII_PR_Onko_Melanom_Breslow_Tiefe |
 
  
 Dieses Profil beschreibt die Breslow-Tumordicke beim Malignen Melanom der Haut 
@@ -212,7 +212,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-melan
   "title" : "MII PR Onkologie Melanom Breslow Tiefe",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-07T08:59:25+00:00",
+  "date" : "2026-09-08T11:16:16+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-melanom-ulzeration | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-07 | *Maschinenlesbarer Name*:MII_VS_Onko_Melanom_Ulzeration |
+| Active Stand: 2026-09-08 | *Maschinenlesbarer Name*:MII_VS_Onko_Melanom_Ulzeration |
 
  
 Codes für die Ulzeration beim Malignen Melanom der Haut 
@@ -170,7 +170,7 @@ Codes für die Ulzeration beim Malignen Melanom der Haut
   "title" : "MII VS Onkologie Melanom Ulzeration",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-07T08:59:25+00:00",
+  "date" : "2026-09-08T11:16:16+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
