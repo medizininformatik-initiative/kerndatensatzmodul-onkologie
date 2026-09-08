@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Procedure xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-onko-melanom-exzision-ruecken"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-exzision|2027.0.0-ballot.rc1"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Procedure mii-exa-onko-melanom-exzision-ruecken</b></p><a name="mii-exa-onko-melanom-exzision-ruecken"> </a><a name="hcmii-exa-onko-melanom-exzision-ruecken"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-melanom-exzision.html">MII PR Onko Melanom Exzision</a> version: 2027.0.0-ballot.rc1</p></div><p><b>MII EX Onko Operation Intention</b>: <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention K}">kurativ</span></p><p><b>status</b>: Completed</p><p><b>category</b>: <span title="Codes:{http://snomed.info/sct 387713003}">Surgical procedure</span></p><p><b>code</b>: <span title="Codes:{http://fhir.de/CodeSystem/bfarm/ops 5-894.0a}, {http://snomed.info/sct 177281002}">Lokale Exzision von erkranktem Gewebe an Haut und Unterhaut: Ohne primären Wundverschluss: Brustwand und Rücken</span></p><p><b>subject</b>: <a href="Patient-mii-exa-onko-melanom-bundle-patient.html">Maria Melanom  (no stated gender), DoB Unknown</a></p><p><b>performed</b>: 2024-04-05</p><p><b>reasonReference</b>: <a href="Condition-mii-exa-onko-melanom-diagnose.html">Condition Bösartiges Melanom der Haut, nicht näher bezeichnet</a></p><p><b>bodySite</b>: <span title="Codes:{http://snomed.info/sct 304036007}">Structure of posterior region of neck</span></p><p><b>outcome</b>: <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus R0}">Kein Residualtumor</span></p><p><b>note</b>: </p><blockquote><div><p>Nachexzision mit 2cm Sicherheitsabstand</p>
+</div></blockquote></div><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Procedure mii-exa-onko-melanom-exzision-ruecken</b></p><a name="de-mii-exa-onko-melanom-exzision-ruecken"> </a><a name="de-hcmii-exa-onko-melanom-exzision-ruecken"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-melanom-exzision.html">MII PR Onko Melanom Exzision</a> version: 2027.0.0-ballot.rc1</p></div><p><b>MII EX Onko Operation Intention</b>: <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention K}">kurativ</span></p><p><b>status</b>: Completed</p><p><b>category</b>: <span title="Codes:{http://snomed.info/sct 387713003}">Surgical procedure</span></p><p><b>code</b>: <span title="Codes:{http://fhir.de/CodeSystem/bfarm/ops 5-894.0a}, {http://snomed.info/sct 177281002}">Lokale Exzision von erkranktem Gewebe an Haut und Unterhaut: Ohne primären Wundverschluss: Brustwand und Rücken</span></p><p><b>subject</b>: <a href="Patient-mii-exa-onko-melanom-bundle-patient.html">Maria Melanom  (no stated gender), DoB Unknown</a></p><p><b>performed</b>: 2024-04-05</p><p><b>reasonReference</b>: <a href="Condition-mii-exa-onko-melanom-diagnose.html">Condition Bösartiges Melanom der Haut, nicht näher bezeichnet</a></p><p><b>bodySite</b>: <span title="Codes:{http://snomed.info/sct 304036007}">Structure of posterior region of neck</span></p><p><b>outcome</b>: <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus R0}">Kein Residualtumor</span></p><p><b>note</b>: </p><blockquote><div><p>Nachexzision mit 2cm Sicherheitsabstand</p>
+</div></blockquote></div></div>
+  </text>
+  <extension url="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention">
+    <valueCodeableConcept>
+      <coding>
+        <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention"/>
+        <code value="K"/>
+        <display value="kurativ"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <status value="completed"/>
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="387713003"/>
+      <display value="Surgical procedure"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://fhir.de/CodeSystem/bfarm/ops"/>
+      <version value="2024"/>
+      <code value="5-894.0a"/>
+      <display value="Lokale Exzision von erkranktem Gewebe an Haut und Unterhaut: Ohne primären Wundverschluss: Brustwand und Rücken"/>
+    </coding>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="177281002"/>
+      <display value="Excision of melanoma (procedure)"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/mii-exa-onko-melanom-bundle-patient"/>
+  </subject>
+  <performedDateTime value="2024-04-05"/>
+  <reasonReference>
+    <reference value="Condition/mii-exa-onko-melanom-diagnose"/>
+  </reasonReference>
+  <bodySite>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="304036007"/>
+      <display value="Structure of posterior region of neck"/>
+    </coding>
+  </bodySite>
+  <outcome>
+    <coding>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus"/>
+      <code value="R0"/>
+      <display value="Kein Residualtumor"/>
+    </coding>
+  </outcome>
+  <note>
+    <text value="Nachexzision mit 2cm Sicherheitsabstand"/>
+  </note>
+</Procedure>

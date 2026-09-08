@@ -1,0 +1,74 @@
+# mii-exa-onko-weitere-klassifikationen-2 - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
+
+* [**Inhaltsverzeichnis**](toc.md)
+* [**Artefaktübersicht**](artifacts.md)
+* **mii-exa-onko-weitere-klassifikationen-2**
+
+## Beispiel Observation: mii-exa-onko-weitere-klassifikationen-2
+
+-------
+
+**German**
+
+-------
+
+Profile: [MII PR Onkologie Weitere Klassifikationen](StructureDefinition-mii-pr-onko-weitere-klassifikationen.md) version: 2027.0.0-ballot.rc1
+
+**status**: Final
+
+**code**: Ann Arbor Klassifikation
+
+**subject**: [Erika Beispiel Female, DoB: 1965-04-12](Patient-example.md)
+
+**focus**: [Condition Bösartige Neubildung: Brustdrüse, nicht näher bezeichnet](Condition-primaertumor-example.md)
+
+**effective**: 2024-01-12
+
+**value**: Ann Arbor Stadium IIIX
+
+**method**: Ann Arbor Hodgkin's disease tumor staging system
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Observation",
+  "id" : "mii-exa-onko-weitere-klassifikationen-2",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-weitere-klassifikationen|2027.0.0-ballot.rc1"]
+  },
+  "status" : "final",
+  "code" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "254372002",
+      "display" : "Ann Arbor lymphoma staging system"
+    }],
+    "text" : "Ann Arbor Klassifikation"
+  },
+  "subject" : {
+    "reference" : "Patient/example"
+  },
+  "focus" : [{
+    "reference" : "Condition/primaertumor-example"
+  }],
+  "effectiveDateTime" : "2024-01-12",
+  "valueCodeableConcept" : {
+    "coding" : [{
+      "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds",
+      "code" : "ann-arbor-iiix"
+    }],
+    "text" : "Ann Arbor Stadium IIIX"
+  },
+  "method" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "254373007",
+      "display" : "Ann Arbor Hodgkin's disease tumor staging system"
+    }]
+  }
+}
+
+```

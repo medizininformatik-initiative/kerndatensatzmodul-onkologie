@@ -1,0 +1,79 @@
+# Example Primaertumor Condition for Extended Examples - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **Example Primaertumor Condition for Extended Examples**
+
+## Example Condition: Example Primaertumor Condition for Extended Examples
+
+-------
+
+**English**
+
+-------
+
+Profile: [MII PR Onkologie Diagnose Primärtumor](StructureDefinition-mii-pr-onko-diagnose-primaertumor.md) version: 2027.0.0-ballot.rc1
+
+**Condition Asserted Date**: 2024-01-10
+
+**clinicalStatus**: Active
+
+**verificationStatus**: Confirmed
+
+**category**: Neoplastic disease
+
+**code**: Bösartige Neubildung: Brustdrüse, nicht näher bezeichnet
+
+**subject**: [Maria Müller Female, DoB: 1968-07-22 ( https://www.medizininformatik-initiative.de/fhir/sid/patienten#MTB-2024-001)](Patient-mii-exa-onko-molecular-board-patient.md)
+
+**recordedDate**: 2024-01-10
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Condition",
+  "id" : "primaertumor-example",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor|2027.0.0-ballot.rc1"]
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
+    "valueDateTime" : "2024-01-10"
+  }],
+  "clinicalStatus" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
+      "code" : "active"
+    }]
+  },
+  "verificationStatus" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+      "code" : "confirmed"
+    }]
+  },
+  "category" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "55342001",
+      "display" : "Neoplastic disease"
+    }]
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+      "version" : "2024",
+      "code" : "C50.9",
+      "display" : "Bösartige Neubildung: Brustdrüse, nicht näher bezeichnet"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/mii-exa-onko-molecular-board-patient"
+  },
+  "recordedDate" : "2024-01-10"
+}
+
+```

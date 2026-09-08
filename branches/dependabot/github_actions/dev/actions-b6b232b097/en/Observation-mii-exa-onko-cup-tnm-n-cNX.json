@@ -1,0 +1,51 @@
+{
+  "resourceType" : "Observation",
+  "id" : "mii-exa-onko-cup-tnm-n-cNX",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie|2027.0.0-ballot.rc1"]
+  },
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-onko-cup-tnm-n-cNX</b></p><a name=\"mii-exa-onko-cup-tnm-n-cNX\"> </a><a name=\"hcmii-exa-onko-cup-tnm-n-cNX\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-tnm-n-kategorie.html\">MII PR Onkologie TNM N-Kategorie</a> version: 2027.0.0-ballot.rc1</p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 399534004}\">cN category (observable entity)</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-onko-cup-patient.html\">CUP Musterfall  Male, DoB: 1958-11-02</a></p><p><b>focus</b>: <a href=\"Condition-mii-exa-onko-cup-diagnose.html\">Condition Bösartige Neubildung, primäre Lokalisation unbekannt, so bezeichnet</a></p><p><b>effective</b>: 2026-02-11</p><p><b>value</b>: <span title=\"Codes:{https://www.uicc.org/resources/tnm NX}\">Nx</span></p><p><b>method</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version 8}\">8. Auflage</span></p></div>"
+  },
+  "status" : "final",
+  "code" : {
+    "extension" : [{
+      "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://www.uicc.org/resources/tnm",
+          "code" : "c",
+          "display" : "c"
+        }]
+      }
+    }],
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "399534004",
+      "display" : "cN category (observable entity)"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/mii-exa-onko-cup-patient"
+  },
+  "focus" : [{
+    "reference" : "Condition/mii-exa-onko-cup-diagnose"
+  }],
+  "effectiveDateTime" : "2026-02-11",
+  "valueCodeableConcept" : {
+    "coding" : [{
+      "system" : "https://www.uicc.org/resources/tnm",
+      "code" : "NX",
+      "display" : "Nx"
+    }]
+  },
+  "method" : {
+    "coding" : [{
+      "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version",
+      "code" : "8",
+      "display" : "8. Auflage"
+    }]
+  }
+}

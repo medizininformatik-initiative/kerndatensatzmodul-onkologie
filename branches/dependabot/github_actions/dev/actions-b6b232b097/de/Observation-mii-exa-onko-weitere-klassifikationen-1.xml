@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-onko-weitere-klassifikationen-1"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-weitere-klassifikationen|2027.0.0-ballot.rc1"/>
+  </meta>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Observation mii-exa-onko-weitere-klassifikationen-1</b></p><a name="de-mii-exa-onko-weitere-klassifikationen-1"> </a><a name="de-hcmii-exa-onko-weitere-klassifikationen-1"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-weitere-klassifikationen.html">MII PR Onkologie Weitere Klassifikationen</a> version: 2027.0.0-ballot.rc1</p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 385361009}">FIGO Klassifikation für ovariale Tumore</span></p><p><b>subject</b>: <a href="Patient-example.html">Erika Beispiel  Female, DoB: 1965-04-12</a></p><p><b>focus</b>: <a href="Condition-primaertumor-example.html">Condition Bösartige Neubildung: Brustdrüse, nicht näher bezeichnet</a></p><p><b>effective</b>: 2024-01-11</p><p><b>value</b>: <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds figo-ivb}">FIGO Stadium IVB</span></p><p><b>method</b>: <span title="Codes:{http://snomed.info/sct 254386003}">International Federation of Gynecology and Obstetrics ovarian tumor staging system (tumor staging)</span></p></div>
+  </text>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="385361009"/>
+      <display value="International Federation of Gynecology and Obstetrics stage for gynecological malignancy (observable entity)"/>
+    </coding>
+    <text value="FIGO Klassifikation für ovariale Tumore"/>
+  </code>
+  <subject>
+    <reference value="Patient/example"/>
+  </subject>
+  <focus>
+    <reference value="Condition/primaertumor-example"/>
+  </focus>
+  <effectiveDateTime value="2024-01-11"/>
+  <valueCodeableConcept>
+    <coding>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds"/>
+      <code value="figo-ivb"/>
+      <display value="FIGO IVB"/>
+    </coding>
+    <text value="FIGO Stadium IVB"/>
+  </valueCodeableConcept>
+  <method>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="254386003"/>
+      <display value="International Federation of Gynecology and Obstetrics ovarian tumor staging system (tumor staging)"/>
+    </coding>
+  </method>
+</Observation>

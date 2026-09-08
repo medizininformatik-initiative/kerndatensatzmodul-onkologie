@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MedicationStatement xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-onko-systemische-therapie-medikation2"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation|2027.0.0-ballot.rc1"/>
+  </meta>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: MedicationStatement mii-exa-onko-systemische-therapie-medikation2</b></p><a name="de-mii-exa-onko-systemische-therapie-medikation2"> </a><a name="de-hcmii-exa-onko-systemische-therapie-medikation2"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-systemische-therapie-medikation.html">MII PR Onkologie Systemische Therapie Medikation</a> version: 2027.0.0-ballot.rc1</p></div><p><b>partOf</b>: <a href="Procedure-mii-exa-onko-systemische-therapie-1.html">Procedure Chemotherapie</a></p><p><b>status</b>: Completed</p><p><b>medication</b>: <span title="Codes:{http://fhir.de/CodeSystem/bfarm/atc L01DB01}">Doxorubicin</span></p><p><b>subject</b>: <a href="Patient-example.html">Erika Beispiel  Female, DoB: 1965-04-12</a></p><p><b>effective</b>: 2021-12-04 --&gt; 2022-04-06</p><p><b>note</b>: </p><blockquote><div><p>AC</p>
+</div></blockquote></div>
+  </text>
+  <partOf>
+    <reference value="Procedure/mii-exa-onko-systemische-therapie-1"/>
+  </partOf>
+  <status value="completed"/>
+  <medicationCodeableConcept>
+    <coding>
+      <system value="http://fhir.de/CodeSystem/bfarm/atc"/>
+      <version value="2022"/>
+      <code value="L01DB01"/>
+      <display value="Doxorubicin"/>
+    </coding>
+  </medicationCodeableConcept>
+  <subject>
+    <reference value="Patient/example"/>
+  </subject>
+  <effectivePeriod>
+    <start value="2021-12-04"/>
+    <end value="2022-04-06"/>
+  </effectivePeriod>
+  <note>
+    <text value="AC"/>
+  </note>
+</MedicationStatement>

@@ -1,0 +1,70 @@
+# mii-exa-onko-weitere-klassifikationen-4 - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **mii-exa-onko-weitere-klassifikationen-4**
+
+## Example Observation: mii-exa-onko-weitere-klassifikationen-4
+
+-------
+
+**English**
+
+-------
+
+Profile: [MII PR Onkologie Weitere Klassifikationen](StructureDefinition-mii-pr-onko-weitere-klassifikationen.md) version: 2027.0.0-ballot.rc1
+
+**status**: Final
+
+**code**: BINET Klassifikation für chronische lymphatische Leukämie
+
+**subject**: [Erika Beispiel Female, DoB: 1965-04-12](Patient-example.md)
+
+**focus**: [Condition Bösartige Neubildung: Brustdrüse, nicht näher bezeichnet](Condition-primaertumor-example.md)
+
+**effective**: 2024-01-13
+
+**value**: BINET B - Intermediäres Stadium mit Lymphknotenvergrößerung oder Organomegalie
+
+**note**: 
+
+> 
+
+BINET-Klassifikation wird spezifisch für chronische lymphatische Leukämie (CLL, ICD-10: C91.1) verwendet. Stadium B indiziert Lymphknotenvergrößerung in ≥3 Regionen oder Splenomegalie/Hepatomegalie ohne Anämie oder Thrombozytopenie.
+
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Observation",
+  "id" : "mii-exa-onko-weitere-klassifikationen-4",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-weitere-klassifikationen|2027.0.0-ballot.rc1"]
+  },
+  "status" : "final",
+  "code" : {
+    "text" : "BINET Klassifikation für chronische lymphatische Leukämie"
+  },
+  "subject" : {
+    "reference" : "Patient/example"
+  },
+  "focus" : [{
+    "reference" : "Condition/primaertumor-example"
+  }],
+  "effectiveDateTime" : "2024-01-13",
+  "valueCodeableConcept" : {
+    "coding" : [{
+      "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-weitere-klassifikationen-obds",
+      "code" : "binet-b"
+    }],
+    "text" : "BINET B - Intermediäres Stadium mit Lymphknotenvergrößerung oder Organomegalie"
+  },
+  "note" : [{
+    "text" : "BINET-Klassifikation wird spezifisch für chronische lymphatische Leukämie (CLL, ICD-10: C91.1) verwendet. Stadium B indiziert Lymphknotenvergrößerung in ≥3 Regionen oder Splenomegalie/Hepatomegalie ohne Anämie oder Thrombozytopenie."
+  }]
+}
+
+```

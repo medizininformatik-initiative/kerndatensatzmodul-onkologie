@@ -1,0 +1,83 @@
+# mii-exa-onko-cup-tnm-n-cNX - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **mii-exa-onko-cup-tnm-n-cNX**
+
+## Example Observation: mii-exa-onko-cup-tnm-n-cNX
+
+-------
+
+**English**
+
+-------
+
+Profile: [MII PR Onkologie TNM N-Kategorie](StructureDefinition-mii-pr-onko-tnm-n-kategorie.md) version: 2027.0.0-ballot.rc1
+
+**status**: Final
+
+**code**: cN category (observable entity)
+
+**subject**: [CUP Musterfall Male, DoB: 1958-11-02](Patient-mii-exa-onko-cup-patient.md)
+
+**focus**: [Condition Bösartige Neubildung, primäre Lokalisation unbekannt, so bezeichnet](Condition-mii-exa-onko-cup-diagnose.md)
+
+**effective**: 2026-02-11
+
+**value**: Nx
+
+**method**: 8. Auflage
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Observation",
+  "id" : "mii-exa-onko-cup-tnm-n-cNX",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie|2027.0.0-ballot.rc1"]
+  },
+  "status" : "final",
+  "code" : {
+    "extension" : [{
+      "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://www.uicc.org/resources/tnm",
+          "code" : "c",
+          "display" : "c"
+        }]
+      }
+    }],
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "399534004",
+      "display" : "cN category (observable entity)"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/mii-exa-onko-cup-patient"
+  },
+  "focus" : [{
+    "reference" : "Condition/mii-exa-onko-cup-diagnose"
+  }],
+  "effectiveDateTime" : "2026-02-11",
+  "valueCodeableConcept" : {
+    "coding" : [{
+      "system" : "https://www.uicc.org/resources/tnm",
+      "code" : "NX",
+      "display" : "Nx"
+    }]
+  },
+  "method" : {
+    "coding" : [{
+      "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version",
+      "code" : "8",
+      "display" : "8. Auflage"
+    }]
+  }
+}
+
+```

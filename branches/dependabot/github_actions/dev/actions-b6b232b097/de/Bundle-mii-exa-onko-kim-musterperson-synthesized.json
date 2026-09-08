@@ -1,0 +1,1598 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "mii-exa-onko-kim-musterperson-synthesized",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/StructureDefinition/Bundle"]
+  },
+  "language" : "de",
+  "identifier" : {
+    "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko",
+    "value" : "kim-musterperson-synthesized-2026-001"
+  },
+  "type" : "transaction",
+  "timestamp" : "2026-05-06T14:00:00+02:00",
+  "entry" : [{
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-kim-synth-patient",
+    "resource" : {
+      "resourceType" : "Patient",
+      "id" : "mii-exa-onko-kim-synth-patient",
+      "language" : "de",
+      "text" : {
+        "status" : "generated"
+      },
+      "name" : [{
+        "family" : "Musterperson",
+        "given" : ["Kim"]
+      }],
+      "gender" : "female",
+      "birthDate" : "1956-03-14"
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Patient"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-kim-synth-diagnose",
+    "resource" : {
+      "resourceType" : "Condition",
+      "id" : "mii-exa-onko-kim-synth-diagnose",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor|2027.0.0-ballot.rc1"]
+      },
+      "language" : "de",
+      "text" : {
+        "status" : "extensions"
+      },
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
+        "valueDateTime" : "2021-06-22"
+      }],
+      "clinicalStatus" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code" : "active"
+        }]
+      },
+      "verificationStatus" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+          "code" : "confirmed"
+        }]
+      },
+      "category" : [{
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "55342001",
+          "display" : "Neoplastic disease"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+          "version" : "2024",
+          "code" : "C48.2",
+          "display" : "Bösartige Neubildung: Peritoneum, nicht näher bezeichnet"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-kim-synth-patient"
+      },
+      "recordedDate" : "2021-06-22"
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Condition"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-kim-klass1-cT3c",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "mii-exa-onko-kim-klass1-cT3c",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie|2027.0.0-ballot.rc1"]
+      },
+      "language" : "de",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "final",
+      "code" : {
+        "extension" : [{
+          "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix",
+          "valueCodeableConcept" : {
+            "coding" : [{
+              "system" : "https://www.uicc.org/resources/tnm",
+              "code" : "c",
+              "display" : "c"
+            }]
+          }
+        }],
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "399504009",
+          "display" : "cT category (observable entity)"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-kim-synth-patient"
+      },
+      "effectiveDateTime" : "2021-06-22",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://www.uicc.org/resources/tnm",
+          "code" : "T3c",
+          "display" : "T3c"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "1352976004",
+          "display" : "Union for International Cancer Control cT3c (qualifier value)"
+        }]
+      },
+      "method" : {
+        "coding" : [{
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version",
+          "code" : "8",
+          "display" : "8. Auflage"
+        }]
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-kim-klass1-cN1",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "mii-exa-onko-kim-klass1-cN1",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie|2027.0.0-ballot.rc1"]
+      },
+      "language" : "de",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "final",
+      "code" : {
+        "extension" : [{
+          "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix",
+          "valueCodeableConcept" : {
+            "coding" : [{
+              "system" : "https://www.uicc.org/resources/tnm",
+              "code" : "c",
+              "display" : "c"
+            }]
+          }
+        }],
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "399534004",
+          "display" : "cN category (observable entity)"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-kim-synth-patient"
+      },
+      "effectiveDateTime" : "2021-06-22",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://www.uicc.org/resources/tnm",
+          "code" : "N1",
+          "display" : "N1"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "1353043007",
+          "display" : "Union for International Cancer Control cN1 (qualifier value)"
+        }]
+      },
+      "method" : {
+        "coding" : [{
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version",
+          "code" : "8",
+          "display" : "8. Auflage"
+        }]
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-kim-klass1-cM1",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "mii-exa-onko-kim-klass1-cM1",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-kategorie|2027.0.0-ballot.rc1"]
+      },
+      "language" : "de",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "final",
+      "code" : {
+        "extension" : [{
+          "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix",
+          "valueCodeableConcept" : {
+            "coding" : [{
+              "system" : "https://www.uicc.org/resources/tnm",
+              "code" : "c",
+              "display" : "c"
+            }]
+          }
+        }],
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "399387003",
+          "display" : "cM category (observable entity)"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-kim-synth-patient"
+      },
+      "effectiveDateTime" : "2021-06-22",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://www.uicc.org/resources/tnm",
+          "code" : "M1",
+          "display" : "M1"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "1352513006",
+          "display" : "Union for International Cancer Control cM1 (qualifier value)"
+        }]
+      },
+      "method" : {
+        "coding" : [{
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version",
+          "code" : "8",
+          "display" : "8. Auflage"
+        }]
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-kim-klass1",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "mii-exa-onko-kim-klass1",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation|2027.0.0-ballot.rc1"]
+      },
+      "language" : "de",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "399537006",
+          "display" : "Clinical TNM stage grouping"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-kim-synth-patient"
+      },
+      "focus" : [{
+        "reference" : "Condition/mii-exa-onko-kim-synth-diagnose"
+      }],
+      "effectiveDateTime" : "2021-06-22",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://www.uicc.org/resources/tnm",
+          "code" : "IV",
+          "display" : "Stadium IV"
+        }]
+      },
+      "method" : {
+        "coding" : [{
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version",
+          "code" : "8",
+          "display" : "8. Auflage"
+        }]
+      },
+      "hasMember" : [{
+        "reference" : "Observation/mii-exa-onko-kim-klass1-cT3c"
+      },
+      {
+        "reference" : "Observation/mii-exa-onko-kim-klass1-cN1"
+      },
+      {
+        "reference" : "Observation/mii-exa-onko-kim-klass1-cM1"
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-kim-klass2-ycT3c",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "mii-exa-onko-kim-klass2-ycT3c",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie|2027.0.0-ballot.rc1"]
+      },
+      "language" : "de",
+      "text" : {
+        "status" : "extensions"
+      },
+      "modifierExtension" : [{
+        "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-y-praefix",
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "https://www.uicc.org/resources/tnm",
+            "code" : "y",
+            "display" : "y"
+          }]
+        }
+      }],
+      "status" : "final",
+      "code" : {
+        "extension" : [{
+          "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix",
+          "valueCodeableConcept" : {
+            "coding" : [{
+              "system" : "https://www.uicc.org/resources/tnm",
+              "code" : "c",
+              "display" : "c"
+            }]
+          }
+        }],
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "399504009",
+          "display" : "cT category (observable entity)"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-kim-synth-patient"
+      },
+      "effectiveDateTime" : "2021-09-15",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://www.uicc.org/resources/tnm",
+          "code" : "T3c",
+          "display" : "T3c"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "1352976004",
+          "display" : "Union for International Cancer Control cT3c (qualifier value)"
+        }]
+      },
+      "method" : {
+        "coding" : [{
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version",
+          "code" : "8",
+          "display" : "8. Auflage"
+        }]
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-kim-klass2-ycN1",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "mii-exa-onko-kim-klass2-ycN1",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie|2027.0.0-ballot.rc1"]
+      },
+      "language" : "de",
+      "text" : {
+        "status" : "extensions"
+      },
+      "modifierExtension" : [{
+        "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-y-praefix",
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "https://www.uicc.org/resources/tnm",
+            "code" : "y",
+            "display" : "y"
+          }]
+        }
+      }],
+      "status" : "final",
+      "code" : {
+        "extension" : [{
+          "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix",
+          "valueCodeableConcept" : {
+            "coding" : [{
+              "system" : "https://www.uicc.org/resources/tnm",
+              "code" : "c",
+              "display" : "c"
+            }]
+          }
+        }],
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "399534004",
+          "display" : "cN category (observable entity)"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-kim-synth-patient"
+      },
+      "effectiveDateTime" : "2021-09-15",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://www.uicc.org/resources/tnm",
+          "code" : "N1",
+          "display" : "N1"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "1353043007",
+          "display" : "Union for International Cancer Control cN1 (qualifier value)"
+        }]
+      },
+      "method" : {
+        "coding" : [{
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version",
+          "code" : "8",
+          "display" : "8. Auflage"
+        }]
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-kim-klass2-ycM1b",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "mii-exa-onko-kim-klass2-ycM1b",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-kategorie|2027.0.0-ballot.rc1"]
+      },
+      "language" : "de",
+      "text" : {
+        "status" : "extensions"
+      },
+      "modifierExtension" : [{
+        "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-y-praefix",
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "https://www.uicc.org/resources/tnm",
+            "code" : "y",
+            "display" : "y"
+          }]
+        }
+      }],
+      "status" : "final",
+      "code" : {
+        "extension" : [{
+          "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix",
+          "valueCodeableConcept" : {
+            "coding" : [{
+              "system" : "https://www.uicc.org/resources/tnm",
+              "code" : "c",
+              "display" : "c"
+            }]
+          }
+        }],
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "399387003",
+          "display" : "cM category (observable entity)"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-kim-synth-patient"
+      },
+      "effectiveDateTime" : "2021-09-15",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://www.uicc.org/resources/tnm",
+          "code" : "M1b",
+          "display" : "M1b"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "1352514000",
+          "display" : "Union for International Cancer Control cM1b (qualifier value)"
+        }]
+      },
+      "method" : {
+        "coding" : [{
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version",
+          "code" : "8",
+          "display" : "8. Auflage"
+        }]
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-kim-klass2-ysym",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "mii-exa-onko-kim-klass2-ysym",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-y-symbol|2027.0.0-ballot.rc1"]
+      },
+      "language" : "de",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "101658-3"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-kim-synth-patient"
+      },
+      "effectiveDateTime" : "2021-09-15",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "421755005",
+          "display" : "Tumor staging descriptor y (tumor staging)"
+        }]
+      },
+      "method" : {
+        "coding" : [{
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version",
+          "code" : "8",
+          "display" : "8. Auflage"
+        }]
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-kim-klass2",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "mii-exa-onko-kim-klass2",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation|2027.0.0-ballot.rc1"]
+      },
+      "language" : "de",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "399537006",
+          "display" : "Clinical TNM stage grouping"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-kim-synth-patient"
+      },
+      "focus" : [{
+        "reference" : "Condition/mii-exa-onko-kim-synth-diagnose"
+      }],
+      "effectiveDateTime" : "2021-09-15",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://www.uicc.org/resources/tnm",
+          "code" : "IV",
+          "display" : "Stadium IV"
+        }]
+      },
+      "method" : {
+        "coding" : [{
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version",
+          "code" : "8",
+          "display" : "8. Auflage"
+        }]
+      },
+      "hasMember" : [{
+        "reference" : "Observation/mii-exa-onko-kim-klass2-ycT3c"
+      },
+      {
+        "reference" : "Observation/mii-exa-onko-kim-klass2-ycN1"
+      },
+      {
+        "reference" : "Observation/mii-exa-onko-kim-klass2-ycM1b"
+      },
+      {
+        "reference" : "Observation/mii-exa-onko-kim-klass2-ysym"
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-kim-klass3-ypT3c",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "mii-exa-onko-kim-klass3-ypT3c",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie|2027.0.0-ballot.rc1"]
+      },
+      "language" : "de",
+      "text" : {
+        "status" : "extensions"
+      },
+      "modifierExtension" : [{
+        "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-y-praefix",
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "https://www.uicc.org/resources/tnm",
+            "code" : "y",
+            "display" : "y"
+          }]
+        }
+      }],
+      "status" : "final",
+      "code" : {
+        "extension" : [{
+          "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix",
+          "valueCodeableConcept" : {
+            "coding" : [{
+              "system" : "https://www.uicc.org/resources/tnm",
+              "code" : "p",
+              "display" : "p"
+            }]
+          }
+        }],
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "384625004",
+          "display" : "pT category (observable entity)"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-kim-synth-patient"
+      },
+      "effectiveDateTime" : "2021-10-15",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://www.uicc.org/resources/tnm",
+          "code" : "T3c",
+          "display" : "T3c"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "1352556001",
+          "display" : "Union for International Cancer Control pT3c (qualifier value)"
+        }]
+      },
+      "method" : {
+        "coding" : [{
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version",
+          "code" : "8",
+          "display" : "8. Auflage"
+        }]
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-kim-klass3-ypM1b",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "mii-exa-onko-kim-klass3-ypM1b",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-kategorie|2027.0.0-ballot.rc1"]
+      },
+      "language" : "de",
+      "text" : {
+        "status" : "extensions"
+      },
+      "modifierExtension" : [{
+        "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-y-praefix",
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "https://www.uicc.org/resources/tnm",
+            "code" : "y",
+            "display" : "y"
+          }]
+        }
+      }],
+      "status" : "final",
+      "code" : {
+        "extension" : [{
+          "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix",
+          "valueCodeableConcept" : {
+            "coding" : [{
+              "system" : "https://www.uicc.org/resources/tnm",
+              "code" : "p",
+              "display" : "p"
+            }]
+          }
+        }],
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "371497001",
+          "display" : "pM category (observable entity)"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-kim-synth-patient"
+      },
+      "effectiveDateTime" : "2021-10-15",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://www.uicc.org/resources/tnm",
+          "code" : "M1b",
+          "display" : "M1b"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "1352578008",
+          "display" : "Union for International Cancer Control pM1b (qualifier value)"
+        }]
+      },
+      "method" : {
+        "coding" : [{
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version",
+          "code" : "8",
+          "display" : "8. Auflage"
+        }]
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-kim-klass3-L1",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "mii-exa-onko-kim-klass3-L1",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-l-kategorie|2027.0.0-ballot.rc1"]
+      },
+      "language" : "de",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "395715009",
+          "display" : "Status of lymphatic (small vessel) invasion by tumor (observable entity)"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-kim-synth-patient"
+      },
+      "effectiveDateTime" : "2021-10-15",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://www.uicc.org/resources/tnm",
+          "code" : "L1",
+          "display" : "L1"
+        }]
+      },
+      "method" : {
+        "coding" : [{
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version",
+          "code" : "8",
+          "display" : "8. Auflage"
+        }]
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-kim-klass3-V0",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "mii-exa-onko-kim-klass3-V0",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-v-kategorie|2027.0.0-ballot.rc1"]
+      },
+      "language" : "de",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "371493002",
+          "display" : "Status of venous (large vessel) invasion by tumor (observable entity)"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-kim-synth-patient"
+      },
+      "effectiveDateTime" : "2021-10-15",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://www.uicc.org/resources/tnm",
+          "code" : "V0",
+          "display" : "V0"
+        }]
+      },
+      "method" : {
+        "coding" : [{
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version",
+          "code" : "8",
+          "display" : "8. Auflage"
+        }]
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-kim-klass3-Pn0",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "mii-exa-onko-kim-klass3-Pn0",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-pn-kategorie|2027.0.0-ballot.rc1"]
+      },
+      "language" : "de",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "371513001",
+          "display" : "Presence of direct invasion by primary malignant neoplasm to nerve (observable entity)"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-kim-synth-patient"
+      },
+      "effectiveDateTime" : "2021-10-15",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://www.uicc.org/resources/tnm",
+          "code" : "Pn0",
+          "display" : "Pn0"
+        }]
+      },
+      "method" : {
+        "coding" : [{
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version",
+          "code" : "8",
+          "display" : "8. Auflage"
+        }]
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-kim-klass3-ysym",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "mii-exa-onko-kim-klass3-ysym",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-y-symbol|2027.0.0-ballot.rc1"]
+      },
+      "language" : "de",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "101658-3"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-kim-synth-patient"
+      },
+      "effectiveDateTime" : "2021-10-15",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "421755005",
+          "display" : "Tumor staging descriptor y (tumor staging)"
+        }]
+      },
+      "method" : {
+        "coding" : [{
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version",
+          "code" : "8",
+          "display" : "8. Auflage"
+        }]
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-kim-klass3",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "mii-exa-onko-kim-klass3",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation|2027.0.0-ballot.rc1"]
+      },
+      "language" : "de",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "399588009",
+          "display" : "Pathologic TNM stage grouping"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-kim-synth-patient"
+      },
+      "focus" : [{
+        "reference" : "Condition/mii-exa-onko-kim-synth-diagnose"
+      }],
+      "effectiveDateTime" : "2021-10-15",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://www.uicc.org/resources/tnm",
+          "code" : "IV",
+          "display" : "Stadium IV"
+        }]
+      },
+      "method" : {
+        "coding" : [{
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version",
+          "code" : "8",
+          "display" : "8. Auflage"
+        }]
+      },
+      "hasMember" : [{
+        "reference" : "Observation/mii-exa-onko-kim-klass3-ypT3c"
+      },
+      {
+        "reference" : "Observation/mii-exa-onko-kim-klass3-ypM1b"
+      },
+      {
+        "reference" : "Observation/mii-exa-onko-kim-klass3-L1"
+      },
+      {
+        "reference" : "Observation/mii-exa-onko-kim-klass3-V0"
+      },
+      {
+        "reference" : "Observation/mii-exa-onko-kim-klass3-Pn0"
+      },
+      {
+        "reference" : "Observation/mii-exa-onko-kim-klass3-ysym"
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-kim-synth1",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "mii-exa-onko-kim-synth1",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation-synthetisiert|2027.0.0-ballot.rc1"]
+      },
+      "language" : "de",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "399703000",
+          "display" : "Integrated TNM category"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-kim-synth-patient"
+      },
+      "focus" : [{
+        "reference" : "Condition/mii-exa-onko-kim-synth-diagnose"
+      }],
+      "effectiveDateTime" : "2021-06-25",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://www.uicc.org/resources/tnm",
+          "code" : "IV",
+          "display" : "Stadium IV"
+        }]
+      },
+      "method" : {
+        "coding" : [{
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version",
+          "code" : "8",
+          "display" : "8. Auflage"
+        }]
+      },
+      "device" : {
+        "reference" : "Device/mii-exa-onko-kim-synthesis-device"
+      },
+      "hasMember" : [{
+        "reference" : "Observation/mii-exa-onko-kim-klass1-cT3c"
+      },
+      {
+        "reference" : "Observation/mii-exa-onko-kim-klass1-cN1"
+      },
+      {
+        "reference" : "Observation/mii-exa-onko-kim-klass1-cM1"
+      }],
+      "derivedFrom" : [{
+        "reference" : "Observation/mii-exa-onko-kim-klass1"
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-kim-synth2",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "mii-exa-onko-kim-synth2",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation-synthetisiert|2027.0.0-ballot.rc1"]
+      },
+      "language" : "de",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "399703000",
+          "display" : "Integrated TNM category"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-kim-synth-patient"
+      },
+      "focus" : [{
+        "reference" : "Condition/mii-exa-onko-kim-synth-diagnose"
+      }],
+      "effectiveDateTime" : "2021-09-16",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://www.uicc.org/resources/tnm",
+          "code" : "IV",
+          "display" : "Stadium IV"
+        }]
+      },
+      "method" : {
+        "coding" : [{
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version",
+          "code" : "8",
+          "display" : "8. Auflage"
+        }]
+      },
+      "device" : {
+        "reference" : "Device/mii-exa-onko-kim-synthesis-device"
+      },
+      "hasMember" : [{
+        "reference" : "Observation/mii-exa-onko-kim-klass2-ycT3c"
+      },
+      {
+        "reference" : "Observation/mii-exa-onko-kim-klass2-ycN1"
+      },
+      {
+        "reference" : "Observation/mii-exa-onko-kim-klass2-ycM1b"
+      },
+      {
+        "reference" : "Observation/mii-exa-onko-kim-klass2-ysym"
+      }],
+      "derivedFrom" : [{
+        "reference" : "Observation/mii-exa-onko-kim-klass2"
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-kim-synth3",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "mii-exa-onko-kim-synth3",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation-synthetisiert|2027.0.0-ballot.rc1"]
+      },
+      "language" : "de",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "399703000",
+          "display" : "Integrated TNM category"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-kim-synth-patient"
+      },
+      "focus" : [{
+        "reference" : "Condition/mii-exa-onko-kim-synth-diagnose"
+      }],
+      "effectiveDateTime" : "2021-10-25",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://www.uicc.org/resources/tnm",
+          "code" : "IV",
+          "display" : "Stadium IV"
+        }]
+      },
+      "method" : {
+        "coding" : [{
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version",
+          "code" : "8",
+          "display" : "8. Auflage"
+        }]
+      },
+      "device" : {
+        "reference" : "Device/mii-exa-onko-kim-synthesis-device"
+      },
+      "hasMember" : [{
+        "reference" : "Observation/mii-exa-onko-kim-klass3-ypT3c"
+      },
+      {
+        "reference" : "Observation/mii-exa-onko-kim-klass2-ycN1"
+      },
+      {
+        "reference" : "Observation/mii-exa-onko-kim-klass3-ypM1b"
+      },
+      {
+        "reference" : "Observation/mii-exa-onko-kim-klass3-L1"
+      },
+      {
+        "reference" : "Observation/mii-exa-onko-kim-klass3-V0"
+      },
+      {
+        "reference" : "Observation/mii-exa-onko-kim-klass3-Pn0"
+      },
+      {
+        "reference" : "Observation/mii-exa-onko-kim-klass3-ysym"
+      }],
+      "derivedFrom" : [{
+        "reference" : "Observation/mii-exa-onko-kim-klass2"
+      },
+      {
+        "reference" : "Observation/mii-exa-onko-kim-klass3"
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-kim-synth4",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "mii-exa-onko-kim-synth4",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation-synthetisiert|2027.0.0-ballot.rc1"]
+      },
+      "language" : "de",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "399703000",
+          "display" : "Integrated TNM category"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-kim-synth-patient"
+      },
+      "focus" : [{
+        "reference" : "Condition/mii-exa-onko-kim-synth-diagnose"
+      }],
+      "effectiveDateTime" : "2022-01-15",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://www.uicc.org/resources/tnm",
+          "code" : "IV",
+          "display" : "Stadium IV"
+        }]
+      },
+      "method" : {
+        "coding" : [{
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version",
+          "code" : "8",
+          "display" : "8. Auflage"
+        }]
+      },
+      "device" : {
+        "reference" : "Device/mii-exa-onko-kim-synthesis-device"
+      },
+      "hasMember" : [{
+        "reference" : "Observation/mii-exa-onko-kim-klass3-ypT3c"
+      },
+      {
+        "reference" : "Observation/mii-exa-onko-kim-klass2-ycN1"
+      },
+      {
+        "reference" : "Observation/mii-exa-onko-kim-klass3-ypM1b"
+      },
+      {
+        "reference" : "Observation/mii-exa-onko-kim-klass3-L1"
+      },
+      {
+        "reference" : "Observation/mii-exa-onko-kim-klass3-V0"
+      },
+      {
+        "reference" : "Observation/mii-exa-onko-kim-klass3-Pn0"
+      },
+      {
+        "reference" : "Observation/mii-exa-onko-kim-klass3-ysym"
+      }],
+      "derivedFrom" : [{
+        "reference" : "Observation/mii-exa-onko-kim-klass2"
+      },
+      {
+        "reference" : "Observation/mii-exa-onko-kim-klass3"
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CarePlan/mii-exa-onko-kim-tk1",
+    "resource" : {
+      "resourceType" : "CarePlan",
+      "id" : "mii-exa-onko-kim-tk1",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz|2027.0.0-ballot.rc1"]
+      },
+      "language" : "de",
+      "text" : {
+        "status" : "generated"
+      },
+      "identifier" : [{
+        "value" : "kim-tk-2021-06-25"
+      }],
+      "status" : "completed",
+      "intent" : "plan",
+      "category" : [{
+        "coding" : [{
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ",
+          "code" : "praeth"
+        }]
+      }],
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-kim-synth-patient"
+      },
+      "created" : "2021-06-25",
+      "addresses" : [{
+        "reference" : "Condition/mii-exa-onko-kim-synth-diagnose"
+      }],
+      "supportingInfo" : [{
+        "reference" : "Observation/mii-exa-onko-kim-synth1"
+      }],
+      "activity" : [{
+        "detail" : {
+          "code" : {
+            "coding" : [{
+              "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ",
+              "code" : "CH",
+              "display" : "Chemotherapie"
+            }]
+          },
+          "status" : "completed"
+        }
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "CarePlan"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CarePlan/mii-exa-onko-kim-tk2",
+    "resource" : {
+      "resourceType" : "CarePlan",
+      "id" : "mii-exa-onko-kim-tk2",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz|2027.0.0-ballot.rc1"]
+      },
+      "language" : "de",
+      "text" : {
+        "status" : "generated"
+      },
+      "identifier" : [{
+        "value" : "kim-tk-2021-09-16"
+      }],
+      "status" : "completed",
+      "intent" : "plan",
+      "category" : [{
+        "coding" : [{
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ",
+          "code" : "praeth"
+        }]
+      }],
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-kim-synth-patient"
+      },
+      "created" : "2021-09-16",
+      "addresses" : [{
+        "reference" : "Condition/mii-exa-onko-kim-synth-diagnose"
+      }],
+      "supportingInfo" : [{
+        "reference" : "Observation/mii-exa-onko-kim-synth2"
+      }],
+      "activity" : [{
+        "detail" : {
+          "code" : {
+            "coding" : [{
+              "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ",
+              "code" : "OP"
+            }]
+          },
+          "status" : "completed"
+        }
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "CarePlan"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CarePlan/mii-exa-onko-kim-tk3",
+    "resource" : {
+      "resourceType" : "CarePlan",
+      "id" : "mii-exa-onko-kim-tk3",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz|2027.0.0-ballot.rc1"]
+      },
+      "language" : "de",
+      "text" : {
+        "status" : "generated"
+      },
+      "identifier" : [{
+        "value" : "kim-tk-2021-10-25"
+      }],
+      "status" : "completed",
+      "intent" : "plan",
+      "category" : [{
+        "coding" : [{
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ",
+          "code" : "postop"
+        }]
+      }],
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-kim-synth-patient"
+      },
+      "created" : "2021-10-25",
+      "addresses" : [{
+        "reference" : "Condition/mii-exa-onko-kim-synth-diagnose"
+      }],
+      "supportingInfo" : [{
+        "reference" : "Observation/mii-exa-onko-kim-synth3"
+      }],
+      "activity" : [{
+        "detail" : {
+          "code" : {
+            "coding" : [{
+              "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ",
+              "code" : "CH",
+              "display" : "Chemotherapie"
+            }]
+          },
+          "status" : "scheduled"
+        }
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "CarePlan"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CarePlan/mii-exa-onko-kim-tk4",
+    "resource" : {
+      "resourceType" : "CarePlan",
+      "id" : "mii-exa-onko-kim-tk4",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz|2027.0.0-ballot.rc1"]
+      },
+      "language" : "de",
+      "text" : {
+        "status" : "generated"
+      },
+      "identifier" : [{
+        "value" : "kim-tk-2022-01-15"
+      }],
+      "replaces" : [{
+        "reference" : "CarePlan/mii-exa-onko-kim-tk3"
+      }],
+      "status" : "active",
+      "intent" : "plan",
+      "category" : [{
+        "coding" : [{
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ",
+          "code" : "postop"
+        }]
+      }],
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-kim-synth-patient"
+      },
+      "created" : "2022-01-15",
+      "addresses" : [{
+        "reference" : "Condition/mii-exa-onko-kim-synth-diagnose"
+      }],
+      "supportingInfo" : [{
+        "reference" : "Observation/mii-exa-onko-kim-synth4"
+      }],
+      "activity" : [{
+        "detail" : {
+          "code" : {
+            "coding" : [{
+              "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ",
+              "code" : "CH",
+              "display" : "Chemotherapie"
+            }]
+          },
+          "status" : "in-progress"
+        }
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "CarePlan"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Device/mii-exa-onko-kim-synthesis-device",
+    "resource" : {
+      "resourceType" : "Device",
+      "id" : "mii-exa-onko-kim-synthesis-device",
+      "language" : "de",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "active",
+      "deviceName" : [{
+        "name" : "mii-lib-onko-synthesize-tnm",
+        "type" : "model-name"
+      }],
+      "version" : [{
+        "value" : "1.0.0"
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Device"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Provenance/mii-exa-onko-kim-synthesis-provenance",
+    "resource" : {
+      "resourceType" : "Provenance",
+      "id" : "mii-exa-onko-kim-synthesis-provenance",
+      "language" : "de",
+      "text" : {
+        "status" : "generated"
+      },
+      "target" : [{
+        "reference" : "Observation/mii-exa-onko-kim-synth1"
+      },
+      {
+        "reference" : "Observation/mii-exa-onko-kim-synth2"
+      },
+      {
+        "reference" : "Observation/mii-exa-onko-kim-synth3"
+      },
+      {
+        "reference" : "Observation/mii-exa-onko-kim-synth4"
+      }],
+      "occurredPeriod" : {
+        "start" : "2021-06-25",
+        "end" : "2022-01-15"
+      },
+      "recorded" : "2026-05-06T14:00:00+02:00",
+      "activity" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/w3c-provenance-activity-type",
+          "code" : "Derivation",
+          "display" : "wasDerivedFrom"
+        }]
+      },
+      "agent" : [{
+        "type" : {
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+            "code" : "performer"
+          }]
+        },
+        "who" : {
+          "reference" : "Device/mii-exa-onko-kim-synthesis-device",
+          "display" : "ETL-Pipeline (synthesize_tnm v1.0.0)"
+        }
+      }],
+      "entity" : [{
+        "role" : "source",
+        "what" : {
+          "reference" : "Library/mii-lib-onko-synthesize-tnm",
+          "identifier" : {
+            "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Library/mii-lib-onko-synthesize-tnm",
+            "value" : "1.0.0"
+          },
+          "display" : "synthesize_tnm v1.0.0"
+        }
+      },
+      {
+        "role" : "source",
+        "what" : {
+          "reference" : "Observation/mii-exa-onko-kim-klass1"
+        }
+      },
+      {
+        "role" : "source",
+        "what" : {
+          "reference" : "Observation/mii-exa-onko-kim-klass2"
+        }
+      },
+      {
+        "role" : "source",
+        "what" : {
+          "reference" : "Observation/mii-exa-onko-kim-klass3"
+        }
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Provenance"
+    }
+  }]
+}

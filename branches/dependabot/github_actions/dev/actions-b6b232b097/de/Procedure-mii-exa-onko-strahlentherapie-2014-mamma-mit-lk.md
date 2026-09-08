@@ -1,0 +1,102 @@
+# Beispiel Strahlentherapie oBDS 2014 - Mamma mit Lymphknoten (3.1.+) - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
+
+* [**Inhaltsverzeichnis**](toc.md)
+* [**Artefaktübersicht**](artifacts.md)
+* **Beispiel Strahlentherapie oBDS 2014 - Mamma mit Lymphknoten (3.1.+)**
+
+## Beispiel Procedure: Beispiel Strahlentherapie oBDS 2014 - Mamma mit Lymphknoten (3.1.+)
+
+-------
+
+**German**
+
+-------
+
+Profile: [MII PR Onkologie Strahlentherapie](StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie.md) version: 2027.0.0-ballot.rc1
+
+**MII EX Onko Strahlentherapie Bestrahlung Gesamtdosis**: 50 Gy (Details: UCUM codeGy = 'Gy')
+
+**MII EX Onko Strahlentherapie Bestrahlung Einzeldosis**: 2 Gy (Details: UCUM codeGy = 'Gy')
+
+**status**: Completed
+
+**category**: Radiotherapy (procedure)
+
+**code**: Hochvoltstrahlentherapie
+
+**subject**: [Erika Beispiel Female, DoB: 1965-04-12](Patient-example.md)
+
+**encounter**: [Encounter: status = finished; class = ambulatory (ActCode#AMB)](Encounter-example.md)
+
+**performed**: 2023-03-15 --> 2023-04-20
+
+**reasonReference**: [Condition Bösartige Neubildung: Brustdrüse, nicht näher bezeichnet](Condition-primaertumor-example.md)
+
+**bodySite**: Mamma als Ganzbrust mit Lk
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Procedure",
+  "id" : "mii-exa-onko-strahlentherapie-2014-mamma-mit-lk",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie|2027.0.0-ballot.rc1"]
+  },
+  "extension" : [{
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-gesamtdosis",
+    "valueQuantity" : {
+      "value" : 50,
+      "system" : "http://unitsofmeasure.org",
+      "code" : "Gy"
+    }
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-einzeldosis",
+    "valueQuantity" : {
+      "value" : 2,
+      "system" : "http://unitsofmeasure.org",
+      "code" : "Gy"
+    }
+  }],
+  "status" : "completed",
+  "category" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "1287742003",
+      "display" : "Radiotherapy (procedure)"
+    }]
+  },
+  "code" : {
+    "coding" : [{
+      "system" : "http://fhir.de/CodeSystem/bfarm/ops",
+      "version" : "2024",
+      "code" : "8-522",
+      "display" : "Hochvoltstrahlentherapie"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/example"
+  },
+  "encounter" : {
+    "reference" : "Encounter/example"
+  },
+  "performedPeriod" : {
+    "start" : "2023-03-15",
+    "end" : "2023-04-20"
+  },
+  "reasonReference" : [{
+    "reference" : "Condition/primaertumor-example"
+  }],
+  "bodySite" : [{
+    "coding" : [{
+      "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet-2014",
+      "code" : "3.1.+",
+      "display" : "Mamma als Ganzbrust mit Lk"
+    }]
+  }]
+}
+
+```
