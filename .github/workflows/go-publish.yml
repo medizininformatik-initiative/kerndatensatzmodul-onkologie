@@ -1108,6 +1108,15 @@ jobs:
             -exec rm -rf '{}' +
           tar -xf candidate/artifact.tar -C site
 
+          # GitHub's pre-receive hook rejects files >100 MB — the first real
+          # publication died here: full-ig.zip (186 MB, at the site root AND
+          # under <version>/) got the whole push declined (run 34343869800,
+          # 2026-09-09). Same guard as the preview deploy in ig-publisher.yml;
+          # the Downloads page keeps package.tgz, only the oversized archives
+          # disappear. NOTE deliberately after tar and before git add, so it
+          # covers every future oversized artifact, not just full-ig.zip.
+          find site -path site/.git -prune -o -type f -size +99M -print -exec rm -f '{}' +
+
           git -C site config user.name "github-actions[bot]"
           git -C site config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git -C site add --all
