@@ -1,0 +1,24 @@
+{
+  "list" : [{
+    "version" : "current",
+    "path" : "https://medizininformatik-initiative.github.io/kerndatensatzmodul-onkologie/branches/dev/",
+    "status" : "ci-build",
+    "sequence" : "ci-build",
+    "desc" : "Continuous Integration Build (latest in version control) - Content subject to frequent changes"
+  },
+  {
+    "version" : "2027.0.0-ballot.rc2",
+    "path" : "https://medizininformatik-initiative.github.io/kerndatensatzmodul-onkologie/2027.0.0-ballot.rc2",
+    "status" : "release",
+    "sequence" : "2027",
+    "fhirversion" : "4.0.1",
+    "date" : "2026-09-09",
+    "current" : true,
+    "desc" : "Ballot-Kandidat der 2027er Linie: Umzug auf den HL7 IG Publisher (MII-KDS-Modul-Template), 9 Breaking Changes (u.a. TNM-Praefixe als modifierExtension, verpflichtende Onkologie-Kennzeichnung an der Diagnose, CTCAE-Version als eigene Extension), MedDRA-zu-SNOMED-Mapping fuer alle 790 CTCAE-Terme, Tumormarker-Profil, CRMI-Metadaten modulweit."
+  }],
+  "package-id" : "de.medizininformatikinitiative.kerndatensatz.onkologie",
+  "canonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko",
+  "title" : "MII IG Kerndatensatz-Modul Onkologie",
+  "category" : "Research",
+  "introduction" : "FHIR profiles for representing oncological data based on the German oBDS specification, part of the MII core data set (Kerndatensatz)."
+}

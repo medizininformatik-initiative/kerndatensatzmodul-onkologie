@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Procedure xmlns="http://hl7.org/fhir">
+  <id value="PatientKimMusterperson-Procedure-2"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Procedure"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Procedure PatientKimMusterperson-Procedure-2</b></p><a name="PatientKimMusterperson-Procedure-2"> </a><a name="hcPatientKimMusterperson-Procedure-2"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="https://medizininformatik-initiative.github.io/kerndatensatz-basis/2027.0.0-ballot.rc1/StructureDefinition-mii-pr-prozedur-procedure.html">MII PR Prozedur Procedure</a></p></div><p><b>status</b>: Completed</p><p><b>category</b>: <span title="Codes:{http://snomed.info/sct 165197003}">Diagnostic assessment (procedure)</span></p><p><b>code</b>: <span title="Codes:{http://fhir.de/CodeSystem/bfarm/ops 1-853.2}">Diagnostische (perkutane) Punktion und Aspiration der Bauchhöhle: Aszitespunktion</span></p><p><b>subject</b>: <a href="Patient-PatientKimMusterperson.html">Kim Musterperson  (no stated gender), DoB: 1956-03-14</a></p><p><b>performed</b>: 2021-06-15</p></div>
+  </text>
+  <status value="completed"/>
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="165197003"/>
+      <display value="Diagnostic assessment (procedure)"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://fhir.de/CodeSystem/bfarm/ops"/>
+      <version value="2021"/>
+      <code value="1-853.2"/>
+      <display value="Diagnostische (perkutane) Punktion und Aspiration der Bauchhöhle: Aszitespunktion"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/PatientKimMusterperson"/>
+  </subject>
+  <performedDateTime value="2021-06-15"/>
+</Procedure>
