@@ -171,7 +171,7 @@ oBDS-spezifisches ValueSet für Klassifikation des Grundes der Beendigung der St
   "title" : "MII VS Onkologie Strahlentherapie Ende Grund",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T11:12:15+00:00",
+  "date" : "2026-09-09T13:30:31+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

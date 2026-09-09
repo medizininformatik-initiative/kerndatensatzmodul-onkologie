@@ -152,7 +152,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-melan
   "title" : "MII PR Onko Melanom Exzision",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T11:12:15+00:00",
+  "date" : "2026-09-09T13:30:31+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
