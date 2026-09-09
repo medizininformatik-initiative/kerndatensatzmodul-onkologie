@@ -1,4 +1,4 @@
-# Home - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
+# Home - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2
 
 * [**Table of Contents**](toc.md)
 * **Home**
@@ -7,8 +7,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ImplementationGuide/mii-ig-onko-de-v2026 | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-03 | *Computable Name*:MII_IG_Onko_DE |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ImplementationGuide/mii-ig-onko-de-v2026 | *Version*:2027.0.0-ballot.rc2 |
+| Active as of 2026-09-09 | *Computable Name*:MII_IG_Onko_DE |
 
 ### Introduction
 
@@ -18,7 +18,7 @@ The Oncology module is based on the **German oncology base dataset (oBDS)**, whi
 
 | | |
 | :--- | :--- |
-| Version | 2027.0.0-ballot.rc1 (CalVer`YYYY.n.n`) |
+| Version | 2027.0.0-ballot.rc2 (CalVer`YYYY.n.n`) |
 | Status | active |
 | Realm | DE |
 

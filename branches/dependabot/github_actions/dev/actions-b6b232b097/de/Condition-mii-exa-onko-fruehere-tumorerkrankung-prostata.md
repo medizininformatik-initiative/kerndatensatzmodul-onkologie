@@ -1,4 +1,4 @@
-# Frühere Tumorerkrankung Prostata - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
+# Frühere Tumorerkrankung Prostata - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Onkologie Frühere Tumorerkrankung](StructureDefinition-mii-pr-onko-fruehere-tumorerkrankung.md) version: 2027.0.0-ballot.rc1
+Profile: [MII PR Onkologie Frühere Tumorerkrankung](StructureDefinition-mii-pr-onko-fruehere-tumorerkrankung.md) version: 2027.0.0-ballot.rc2
 
 **Condition Asserted Date**: 2018-03-15
 
@@ -46,7 +46,7 @@ Z.n. radikaler Prostatektomie 2018, PSA aktuell <0.1 ng/ml
   "resourceType" : "Condition",
   "id" : "mii-exa-onko-fruehere-tumorerkrankung-prostata",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fruehere-tumorerkrankung|2027.0.0-ballot.rc1"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fruehere-tumorerkrankung|2027.0.0-ballot.rc2"]
   },
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",

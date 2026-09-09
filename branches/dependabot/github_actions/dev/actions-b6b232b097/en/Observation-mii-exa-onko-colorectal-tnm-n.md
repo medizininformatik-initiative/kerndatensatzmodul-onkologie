@@ -1,4 +1,4 @@
-# TNM N-Kategorie - pN1 - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
+# TNM N-Kategorie - pN1 - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Onkologie TNM N-Kategorie](StructureDefinition-mii-pr-onko-tnm-n-kategorie.md) version: 2027.0.0-ballot.rc1
+Profile: [MII PR Onkologie TNM N-Kategorie](StructureDefinition-mii-pr-onko-tnm-n-kategorie.md) version: 2027.0.0-ballot.rc2
 
 **status**: Final
 
@@ -37,7 +37,7 @@ Profile: [MII PR Onkologie TNM N-Kategorie](StructureDefinition-mii-pr-onko-tnm-
   "resourceType" : "Observation",
   "id" : "mii-exa-onko-colorectal-tnm-n",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie|2027.0.0-ballot.rc1"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie|2027.0.0-ballot.rc2"]
   },
   "status" : "final",
   "code" : {

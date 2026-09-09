@@ -1,4 +1,4 @@
-# mii-exa-onko-tumorkonferenz-molekular - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
+# mii-exa-onko-tumorkonferenz-molekular - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Onkologie Tumorkonferenz](StructureDefinition-mii-pr-onko-tumorkonferenz.md) version: 2027.0.0-ballot.rc1
+Profile: [MII PR Onkologie Tumorkonferenz](StructureDefinition-mii-pr-onko-tumorkonferenz.md) version: 2027.0.0-ballot.rc2
 
 **status**: Active
 
@@ -65,7 +65,7 @@ Profile: [MII PR Onkologie Tumorkonferenz](StructureDefinition-mii-pr-onko-tumor
   "resourceType" : "CarePlan",
   "id" : "mii-exa-onko-tumorkonferenz-molekular",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz|2027.0.0-ballot.rc1"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz|2027.0.0-ballot.rc2"]
   },
   "status" : "active",
   "intent" : "plan",

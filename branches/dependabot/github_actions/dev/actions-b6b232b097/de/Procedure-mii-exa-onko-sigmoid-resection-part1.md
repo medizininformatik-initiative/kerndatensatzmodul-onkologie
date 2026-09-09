@@ -1,4 +1,4 @@
-# Sigmaresektion Teil 1 - Resektion und Anastomose - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
+# Sigmaresektion Teil 1 - Resektion und Anastomose - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)

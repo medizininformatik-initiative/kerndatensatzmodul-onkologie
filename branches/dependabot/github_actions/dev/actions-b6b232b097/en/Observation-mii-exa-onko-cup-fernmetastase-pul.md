@@ -1,4 +1,4 @@
-# mii-exa-onko-cup-fernmetastase-pul - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
+# mii-exa-onko-cup-fernmetastase-pul - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Onkologie Fernmetastasen](StructureDefinition-mii-pr-onko-fernmetastasen.md) version: 2027.0.0-ballot.rc1
+Profile: [MII PR Onkologie Fernmetastasen](StructureDefinition-mii-pr-onko-fernmetastasen.md) version: 2027.0.0-ballot.rc2
 
 **status**: Final
 
@@ -35,7 +35,7 @@ Profile: [MII PR Onkologie Fernmetastasen](StructureDefinition-mii-pr-onko-fernm
   "resourceType" : "Observation",
   "id" : "mii-exa-onko-cup-fernmetastase-pul",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fernmetastasen|2027.0.0-ballot.rc1"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fernmetastasen|2027.0.0-ballot.rc2"]
   },
   "status" : "final",
   "code" : {

@@ -1,4 +1,4 @@
-# mii-sp-onko-observation-ext-tnm-n-sn-suffix - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
+# mii-sp-onko-observation-ext-tnm-n-sn-suffix - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-observation-ext-tnm-n-sn-suffix | *Version*:2027.0.0-ballot.rc1 |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-observation-ext-tnm-n-sn-suffix | *Version*:2027.0.0-ballot.rc2 |
 | Active as of 2024-04-15 | *Computable Name*:MII_SP_Observation_Extension_TNM_N__SN_Suffix |
 
  
@@ -34,7 +34,7 @@ SearchParameter for Observation.extension[sn-suffix]
       },
       {
         "url" : "version",
-        "valueString" : "2027.0.0-ballot.rc1"
+        "valueString" : "2027.0.0-ballot.rc2"
       },
       {
         "url" : "uri",
@@ -146,7 +146,7 @@ SearchParameter for Observation.extension[sn-suffix]
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-observation-ext-tnm-n-sn-suffix",
-  "version" : "2027.0.0-ballot.rc1",
+  "version" : "2027.0.0-ballot.rc2",
   "name" : "MII_SP_Observation_Extension_TNM_N__SN_Suffix",
   "status" : "active",
   "experimental" : true,

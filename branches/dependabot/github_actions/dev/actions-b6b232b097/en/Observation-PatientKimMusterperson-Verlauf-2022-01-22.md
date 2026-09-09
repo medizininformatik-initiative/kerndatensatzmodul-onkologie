@@ -1,4 +1,4 @@
-# PatientKimMusterperson-Verlauf-2022-01-22 - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
+# PatientKimMusterperson-Verlauf-2022-01-22 - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)

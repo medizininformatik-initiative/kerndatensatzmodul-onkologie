@@ -1,4 +1,4 @@
-# mii-exa-onko-weitere-klassifikationen-4 - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
+# mii-exa-onko-weitere-klassifikationen-4 - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Onkologie Weitere Klassifikationen](StructureDefinition-mii-pr-onko-weitere-klassifikationen.md) version: 2027.0.0-ballot.rc1
+Profile: [MII PR Onkologie Weitere Klassifikationen](StructureDefinition-mii-pr-onko-weitere-klassifikationen.md) version: 2027.0.0-ballot.rc2
 
 **status**: Final
 
@@ -42,7 +42,7 @@ BINET-Klassifikation wird spezifisch für chronische lymphatische Leukämie (CLL
   "resourceType" : "Observation",
   "id" : "mii-exa-onko-weitere-klassifikationen-4",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-weitere-klassifikationen|2027.0.0-ballot.rc1"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-weitere-klassifikationen|2027.0.0-ballot.rc2"]
   },
   "status" : "final",
   "code" : {

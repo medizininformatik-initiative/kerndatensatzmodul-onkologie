@@ -1,4 +1,4 @@
-# Migration from v2026 - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
+# Migration from v2026 - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2
 
 * [**Table of Contents**](toc.md)
 * **Migration from v2026**
@@ -96,7 +96,7 @@ From the second formal publication of this guide onwards, the IG Publisher's mac
 
 #### 9. Dependencies moved to the 2027 ballot line
 
-**What changed.** `kerndatensatz.meta` 2027.0.0-ballot.rc3, `kerndatensatz.base` 2027.0.0-ballot.rc1, `de.basisprofil.r4` 1.6.0, `kerndatensatz.biobank` 2027.0.0-ballot.rc2, `kerndatensatz.studie` 2027.0.0-ballot.rc1, `kerndatensatz.laborbefund` 2027.0.0-ballot.rc3 (new, for the tumour marker profile) and `hl7.fhir.uv.genomics-reporting` 3.0.0 (new).
+**What changed.** `kerndatensatz.meta` 2027.0.0-ballot.rc3, `kerndatensatz.base` 2027.0.0-ballot.rc1, `de.basisprofil.r4` 1.6.0, `kerndatensatz.biobank` and `kerndatensatz.molgen` 2027.0.0-ballot.rc2 each, `kerndatensatz.studie` 2027.0.0-ballot.rc1, `kerndatensatz.laborbefund` 2027.0.0-ballot.rc3 (new, for the tumour marker profile) and `hl7.fhir.uv.genomics-reporting` 3.0.0 (new).
 
 **Stored data.** Generally no direct effect; the base modules' changelogs are authoritative — tightenings there propagate here through inheritance.
 

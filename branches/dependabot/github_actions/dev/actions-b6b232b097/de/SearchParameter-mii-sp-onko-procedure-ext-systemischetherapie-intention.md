@@ -1,4 +1,4 @@
-# mii-sp-onko-procedure-ext-systemischetherapie-intention - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
+# mii-sp-onko-procedure-ext-systemischetherapie-intention - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-procedure-ext-systemischetherapie-intention | *Version*:2027.0.0-ballot.rc1 |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-procedure-ext-systemischetherapie-intention | *Version*:2027.0.0-ballot.rc2 |
 | Active Stand: 2024-04-15 | *Maschinenlesbarer Name*:MII_SP_Procedure_Extension_Systemischetherapie_Intention |
 
  
@@ -34,7 +34,7 @@ SearchParameter for Procedure.extension[intention]
       },
       {
         "url" : "version",
-        "valueString" : "2027.0.0-ballot.rc1"
+        "valueString" : "2027.0.0-ballot.rc2"
       },
       {
         "url" : "uri",
@@ -146,7 +146,7 @@ SearchParameter for Procedure.extension[intention]
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-procedure-ext-systemischetherapie-intention",
-  "version" : "2027.0.0-ballot.rc1",
+  "version" : "2027.0.0-ballot.rc2",
   "name" : "MII_SP_Procedure_Extension_Systemischetherapie_Intention",
   "status" : "active",
   "experimental" : true,
