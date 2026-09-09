@@ -5,7 +5,7 @@ All changes to this module are listed here. The complete, detailed release
 history is maintained in the German edition of this page; the current release
 cycle is translated in full below.
 
-### Changes v2027.0.0-ballot.rc1 (ballot candidate, not yet released)
+### Changes v2027.0.0-ballot.rc2 (ballot candidate)
 
 #### ⚠️ Breaking Changes
 
@@ -24,7 +24,7 @@ migration path:
 - **`BREAKING`** **Reference types hardened**: previously generic references are now restricted to the clinically valid profiles — `Verlauf.hasMember`, `AdverseEvent.suspectEntity.instance`, `Condition.extension:dueTo.valueReference`, `Residualstatus.partOf`, `TNM-synthesised.device` and `Tumorkonferenz.activity[extended].reference`. Instances with other target types become invalid.
 - **`BREAKING`** **TNM symbol profiles deprecated**: `mii-pr-onko-tnm-y-symbol`, `-r-symbol`, `-a-symbol` and `-m-symbol` are `retired`. The y/r/a prefixes are carried as `modifierExtension` on the category profiles, the m suffix as the new `component[multipleTumoren]` on the T category (component code LOINC `42030-7`, value still from the UICC code system). Legacy data remains readable; new implementations should use the extensions and the component.
 - **`BREAKING`** **Legacy artefacts removed**: the commented-out radiotherapy "alt" family and the never-activated ECOG/Karnofsky quantity profiles.
-- **`BREAKING`** **Dependencies moved to the 2027 ballot line**: `kerndatensatz.meta` 2027.0.0-ballot.rc3, `kerndatensatz.base` 2027.0.0-ballot.rc1, `de.basisprofil.r4` 1.6.0, `kerndatensatz.biobank` and `kerndatensatz.studie` 2027.0.0-ballot.rc1 each. Newly added: `kerndatensatz.laborbefund` 2026.0.3 and `hl7.fhir.uv.genomics-reporting` 3.0.0.
+- **`BREAKING`** **Dependencies moved to the 2027 ballot line**: `kerndatensatz.meta` 2027.0.0-ballot.rc3, `kerndatensatz.base` 2027.0.0-ballot.rc1, `de.basisprofil.r4` 1.6.0, `kerndatensatz.biobank` and `kerndatensatz.molgen` 2027.0.0-ballot.rc2 each, `kerndatensatz.studie` 2027.0.0-ballot.rc1. Newly added: `kerndatensatz.laborbefund` 2027.0.0-ballot.rc3 (for the tumour marker profile) and `hl7.fhir.uv.genomics-reporting` 3.0.0.
 
 #### New profiles and functionality
 

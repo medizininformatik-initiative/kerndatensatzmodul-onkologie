@@ -354,7 +354,7 @@ RuleSet: CRMIMetaLicenseAndSource
 // ACHTUNG: Versionsliteral — bei /release-prepare mitziehen (steht nicht in
 // version.fsh; beim Sprung auf 2027.0.0-ballot.rc1 wurde es hier vergessen).
 * ^meta.extension[=].extension[+].url = "version"
-* ^meta.extension[=].extension[=].valueString = "2027.0.0-ballot.rc1"
+* ^meta.extension[=].extension[=].valueString = "2027.0.0-ballot.rc2"
 * ^meta.extension[=].extension[+].url = "uri"
 * ^meta.extension[=].extension[=].valueUri = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko"
 
@@ -371,7 +371,7 @@ RuleSet: CRMIMetaLicenseAndSourceInstance
 // vorhandene uri-Sub-Extension nachgezogen. Versionsliteral: bei
 // /release-prepare mitziehen.
 * meta.extension[=].extension[+].url = "version"
-* meta.extension[=].extension[=].valueString = "2027.0.0-ballot.rc1"
+* meta.extension[=].extension[=].valueString = "2027.0.0-ballot.rc2"
 * meta.extension[=].extension[+].url = "uri"
 * meta.extension[=].extension[=].valueUri = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko"
 
