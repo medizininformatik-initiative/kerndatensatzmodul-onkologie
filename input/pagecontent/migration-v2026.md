@@ -201,7 +201,8 @@ provided.**
 **What changed.** `kerndatensatz.meta` 2027.0.0-ballot.rc3,
 `kerndatensatz.base` 2027.0.0-ballot.rc1, `de.basisprofil.r4` 1.6.0,
 `kerndatensatz.biobank` and `kerndatensatz.molgen` 2027.0.0-ballot.rc2 each,
-`kerndatensatz.studie` 2027.0.0-ballot.rc1, `kerndatensatz.laborbefund` 2027.0.0-ballot.rc3 (new, for
+`kerndatensatz.studie` 2027.0.0-ballot.rc1, `kerndatensatz.medikation`
+2027.0.0-ballot.rc5, `kerndatensatz.laborbefund` 2027.0.0-ballot.rc3 (new, for
 the tumour marker profile) and `hl7.fhir.uv.genomics-reporting` 3.0.0 (new).
 
 **Stored data.** Generally no direct effect; the base modules' changelogs are
