@@ -1,4 +1,4 @@
-# MII CS Onkologie Residualstatus - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
+# MII CS Onkologie Residualstatus - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-08 | *Computable Name*:MII_CS_Onko_Residualstatus |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus | *Version*:2027.0.0-ballot.rc2 |
+| Active as of 2026-09-09 | *Computable Name*:MII_CS_Onko_Residualstatus |
 
  
 oBDS-spezifisches Codesystem für R-Klassifikation 
@@ -43,7 +43,7 @@ This Code system is referenced in the definition of the following value sets:
       },
       {
         "url" : "version",
-        "valueString" : "2027.0.0-ballot.rc1"
+        "valueString" : "2027.0.0-ballot.rc2"
       },
       {
         "url" : "uri",
@@ -156,12 +156,12 @@ This Code system is referenced in the definition of the following value sets:
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-residualstatus",
-  "version" : "2027.0.0-ballot.rc1",
+  "version" : "2027.0.0-ballot.rc2",
   "name" : "MII_CS_Onko_Residualstatus",
   "title" : "MII CS Onkologie Residualstatus",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-08T11:16:16+00:00",
+  "date" : "2026-09-09T11:12:15+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

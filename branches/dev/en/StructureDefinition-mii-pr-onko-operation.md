@@ -1,4 +1,4 @@
-# MII PR Onkologie Operation - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
+# MII PR Onkologie Operation - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-08 | *Computable Name*:MII_PR_Onko_Operation |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation | *Version*:2027.0.0-ballot.rc2 |
+| Active as of 2026-09-09 | *Computable Name*:MII_PR_Onko_Operation |
 
  
 Operation nach OPS inklusive Intention, Datum und Komplikationen: 
@@ -275,12 +275,12 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-opera
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation",
-  "version" : "2027.0.0-ballot.rc1",
+  "version" : "2027.0.0-ballot.rc2",
   "name" : "MII_PR_Onko_Operation",
   "title" : "MII PR Onkologie Operation",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-08T11:16:16+00:00",
+  "date" : "2026-09-09T11:12:15+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

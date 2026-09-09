@@ -1,4 +1,4 @@
-# mii-exa-onko-weitere-klassifikationen-1 - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
+# mii-exa-onko-weitere-klassifikationen-1 - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Onkologie Weitere Klassifikationen](StructureDefinition-mii-pr-onko-weitere-klassifikationen.md) version: 2027.0.0-ballot.rc1
+Profile: [MII PR Onkologie Weitere Klassifikationen](StructureDefinition-mii-pr-onko-weitere-klassifikationen.md) version: 2027.0.0-ballot.rc2
 
 **status**: Final
 
@@ -37,7 +37,7 @@ Profile: [MII PR Onkologie Weitere Klassifikationen](StructureDefinition-mii-pr-
   "resourceType" : "Observation",
   "id" : "mii-exa-onko-weitere-klassifikationen-1",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-weitere-klassifikationen|2027.0.0-ballot.rc1"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-weitere-klassifikationen|2027.0.0-ballot.rc2"]
   },
   "status" : "final",
   "code" : {

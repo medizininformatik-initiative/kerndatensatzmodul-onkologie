@@ -1,4 +1,4 @@
-# MII PR Onkologie Strahlentherapie Nuklearmedizin - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
+# MII PR Onkologie Strahlentherapie Nuklearmedizin - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizin | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-08 | *Maschinenlesbarer Name*:MII_PR_Onko_Strahlentherapie_Bestrahlung_Nuklearmedizin |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizin | *Version*:2027.0.0-ballot.rc2 |
+| Active Stand: 2026-09-09 | *Maschinenlesbarer Name*:MII_PR_Onko_Strahlentherapie_Bestrahlung_Nuklearmedizin |
 
  
 Strahlentherapie. Dieses Profil beschreibt eine Nuklearmedizinische in der Onkologie. 
@@ -276,12 +276,12 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-nuklearmedizin",
-  "version" : "2027.0.0-ballot.rc1",
+  "version" : "2027.0.0-ballot.rc2",
   "name" : "MII_PR_Onko_Strahlentherapie_Bestrahlung_Nuklearmedizin",
   "title" : "MII PR Onkologie Strahlentherapie Nuklearmedizin",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-08T11:16:16+00:00",
+  "date" : "2026-09-09T11:12:15+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

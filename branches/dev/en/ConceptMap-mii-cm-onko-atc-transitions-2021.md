@@ -1,4 +1,4 @@
-# MII CM Onko ATC Code Changes 2020 to 2021 - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
+# MII CM Onko ATC Code Changes 2020 to 2021 - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-atc-transitions-2021 | *Version*:2027.0.0-ballot.rc1 |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-atc-transitions-2021 | *Version*:2027.0.0-ballot.rc2 |
 | Active as of 2024-12-12 | *Computable Name*:MII_CM_Onko_ATC_Transitions_2021 |
 
  
@@ -34,7 +34,7 @@ Diese ConceptMap dokumentiert ausschließlich die ATC-Code-Änderungen von 2020 
       },
       {
         "url" : "version",
-        "valueString" : "2027.0.0-ballot.rc1"
+        "valueString" : "2027.0.0-ballot.rc2"
       },
       {
         "url" : "uri",
@@ -146,7 +146,7 @@ Diese ConceptMap dokumentiert ausschließlich die ATC-Code-Änderungen von 2020 
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-atc-transitions-2021",
-  "version" : "2027.0.0-ballot.rc1",
+  "version" : "2027.0.0-ballot.rc2",
   "name" : "MII_CM_Onko_ATC_Transitions_2021",
   "title" : "MII CM Onko ATC Code Changes 2020 to 2021",
   "status" : "active",

@@ -1,4 +1,4 @@
-# MII VS Onkologie Prostata Gleason Pattern LOINC - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
+# MII VS Onkologie Prostata Gleason Pattern LOINC - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-gleason-pattern-loinc | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-08 | *Maschinenlesbarer Name*:MII_VS_Onko_Prostata_Gleason_Pattern_LOINC |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-gleason-pattern-loinc | *Version*:2027.0.0-ballot.rc2 |
+| Active Stand: 2026-09-09 | *Maschinenlesbarer Name*:MII_VS_Onko_Prostata_Gleason_Pattern_LOINC |
 
  
 Value Set der LOINC-Codes für Primär-, Sekundär- und Tertiär-Gleason-Pattern. Dient als optionale LOINC-Zweitkodierung zum verpflichtenden SNOMED-CT-Slice im Profil MII_PR_Onko_Prostata_Gleason_Pattern (GitHub-Issue #259). 
@@ -48,7 +48,7 @@ Value Set der LOINC-Codes für Primär-, Sekundär- und Tertiär-Gleason-Pattern
       },
       {
         "url" : "version",
-        "valueString" : "2027.0.0-ballot.rc1"
+        "valueString" : "2027.0.0-ballot.rc2"
       },
       {
         "url" : "uri",
@@ -166,12 +166,12 @@ Value Set der LOINC-Codes für Primär-, Sekundär- und Tertiär-Gleason-Pattern
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-gleason-pattern-loinc",
-  "version" : "2027.0.0-ballot.rc1",
+  "version" : "2027.0.0-ballot.rc2",
   "name" : "MII_VS_Onko_Prostata_Gleason_Pattern_LOINC",
   "title" : "MII VS Onkologie Prostata Gleason Pattern LOINC",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-08T11:16:16+00:00",
+  "date" : "2026-09-09T11:12:15+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

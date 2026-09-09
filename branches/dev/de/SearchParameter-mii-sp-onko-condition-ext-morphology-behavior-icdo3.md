@@ -1,4 +1,4 @@
-# mii-sp-onko-condition-ext-morphology-behavior-icdo3 - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
+# mii-sp-onko-condition-ext-morphology-behavior-icdo3 - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-condition-ext-morphology-behavior-icdo3 | *Version*:2027.0.0-ballot.rc1 |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-condition-ext-morphology-behavior-icdo3 | *Version*:2027.0.0-ballot.rc2 |
 | Active Stand: 2026-08-25 | *Maschinenlesbarer Name*:MII_SP_Condition_Extension_Morphology_Behavior_ICD-O-3 |
 
  
@@ -34,7 +34,7 @@ SearchParameter for Condition.extension[morphology-behavior-icdo3]
       },
       {
         "url" : "version",
-        "valueString" : "2027.0.0-ballot.rc1"
+        "valueString" : "2027.0.0-ballot.rc2"
       },
       {
         "url" : "uri",
@@ -146,7 +146,7 @@ SearchParameter for Condition.extension[morphology-behavior-icdo3]
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-condition-ext-morphology-behavior-icdo3",
-  "version" : "2027.0.0-ballot.rc1",
+  "version" : "2027.0.0-ballot.rc2",
   "name" : "MII_SP_Condition_Extension_Morphology_Behavior_ICD-O-3",
   "status" : "active",
   "experimental" : false,

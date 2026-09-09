@@ -1,4 +1,4 @@
-# mii-exa-onko-prostata-anzahl-positiver-stanzen-1 - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
+# mii-exa-onko-prostata-anzahl-positiver-stanzen-1 - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Onkologie Prostata Anzahl positiver Stanzen](StructureDefinition-mii-pr-onko-prostate-anzahl-positive-stanzen.md) version: 2027.0.0-ballot.rc1
+Profile: [MII PR Onkologie Prostata Anzahl positiver Stanzen](StructureDefinition-mii-pr-onko-prostate-anzahl-positive-stanzen.md) version: 2027.0.0-ballot.rc2
 
 **status**: Final
 
@@ -35,7 +35,7 @@ Profile: [MII PR Onkologie Prostata Anzahl positiver Stanzen](StructureDefinitio
   "resourceType" : "Observation",
   "id" : "mii-exa-onko-prostata-anzahl-positiver-stanzen-1",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-anzahl-positive-stanzen|2027.0.0-ballot.rc1"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-anzahl-positive-stanzen|2027.0.0-ballot.rc2"]
   },
   "status" : "final",
   "code" : {

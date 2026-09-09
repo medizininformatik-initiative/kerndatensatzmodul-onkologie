@@ -1,4 +1,4 @@
-# MII EX Onko Strahlentherapie Bestrahlung Boost - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
+# MII EX Onko Strahlentherapie Bestrahlung Boost - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-boost | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-08 | *Computable Name*:MII_EX_Onko_Strahlentherapie_Bestrahlung_Boost |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-boost | *Version*:2027.0.0-ballot.rc2 |
+| Active as of 2026-09-09 | *Computable Name*:MII_EX_Onko_Strahlentherapie_Bestrahlung_Boost |
 
 Strahlentherapie: Boost einer Bestrahlung
 
@@ -52,7 +52,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-ex-onko-strah
       },
       {
         "url" : "version",
-        "valueString" : "2027.0.0-ballot.rc1"
+        "valueString" : "2027.0.0-ballot.rc2"
       },
       {
         "url" : "uri",
@@ -168,12 +168,12 @@ Other representations of profile: [CSV](../StructureDefinition-mii-ex-onko-strah
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-boost",
-  "version" : "2027.0.0-ballot.rc1",
+  "version" : "2027.0.0-ballot.rc2",
   "name" : "MII_EX_Onko_Strahlentherapie_Bestrahlung_Boost",
   "title" : "MII EX Onko Strahlentherapie Bestrahlung Boost",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-08T11:16:16+00:00",
+  "date" : "2026-09-09T11:12:15+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

@@ -1,4 +1,4 @@
-# mii-exa-onko-cdk46-class-medication - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
+# mii-exa-onko-cdk46-class-medication - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Onkologie Therapieempfehlung Medikation](StructureDefinition-mii-pr-onko-therapieempfehlung-medikation.md) version: 2027.0.0-ballot.rc1
+Profile: [MII PR Onkologie Therapieempfehlung Medikation](StructureDefinition-mii-pr-onko-therapieempfehlung-medikation.md) version: 2027.0.0-ballot.rc2
 
 **status**: Active
 
@@ -42,7 +42,7 @@ Molekulares Tumorboard empfiehlt beliebigen CDK4/6 Inhibitor basierend auf HR+/H
   "resourceType" : "MedicationRequest",
   "id" : "mii-exa-onko-cdk46-class-medication",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation|2027.0.0-ballot.rc1"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation|2027.0.0-ballot.rc2"]
   },
   "status" : "active",
   "intent" : "option",

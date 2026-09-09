@@ -1,4 +1,4 @@
-# MII CM Onko Studienteilnahme SNOMED Mapping - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
+# MII CM Onko Studienteilnahme SNOMED Mapping - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-studienteilnahme-sct | *Version*:2027.0.0-ballot.rc1 |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-studienteilnahme-sct | *Version*:2027.0.0-ballot.rc2 |
 | Active as of 2024-08-01 | *Computable Name*:MII CM Onko Studienteilnahme SCT Mapping |
 | **Copyright/Legal**: This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. | |
 
@@ -37,7 +37,7 @@ Mapping Studienteilnahme Status Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024
       },
       {
         "url" : "version",
-        "valueString" : "2027.0.0-ballot.rc1"
+        "valueString" : "2027.0.0-ballot.rc2"
       },
       {
         "url" : "uri",
@@ -149,7 +149,7 @@ Mapping Studienteilnahme Status Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-studienteilnahme-sct",
-  "version" : "2027.0.0-ballot.rc1",
+  "version" : "2027.0.0-ballot.rc2",
   "name" : "MII CM Onko Studienteilnahme SCT Mapping",
   "title" : "MII CM Onko Studienteilnahme SNOMED Mapping",
   "status" : "active",

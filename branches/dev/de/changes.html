@@ -6,7 +6,7 @@
 <html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Änderungshistorie - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1</title>
+    <title>Änderungshistorie - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -141,7 +141,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">MII IG Kerndatensatz-Modul Onkologie</span>
             <br/>
-            <span style="display:inline-block;">2027.0.0-ballot.rc1 - 
+            <span style="display:inline-block;">2027.0.0-ballot.rc2 - 
 
 
 
@@ -293,7 +293,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">MII IG Kerndatensatz-Modul Onkologie - Local Development build (v2027.0.0-ballot.rc1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">MII IG Kerndatensatz-Modul Onkologie - Local Development build (v2027.0.0-ballot.rc2) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Änderungshistorie</h2>
   
 
@@ -311,7 +311,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#änderungen-v202700-ballotrc1-ballot-kandidat-noch-nicht-veröffentlicht" id="markdown-toc-änderungen-v202700-ballotrc1-ballot-kandidat-noch-nicht-veröffentlicht">Änderungen v2027.0.0-ballot.rc1 (Ballot-Kandidat, noch nicht veröffentlicht)</a>    <ul>
+  <li><a href="#änderungen-v202700-ballotrc2-ballot-kandidat" id="markdown-toc-änderungen-v202700-ballotrc2-ballot-kandidat">Änderungen v2027.0.0-ballot.rc2 (Ballot-Kandidat)</a>    <ul>
       <li><a href="#️-breaking-changes" id="markdown-toc-️-breaking-changes">⚠️ Breaking Changes</a></li>
       <li><a href="#neue-profile-und-funktionalität" id="markdown-toc-neue-profile-und-funktionalität">Neue Profile und Funktionalität</a></li>
       <li><a href="#refaktorierungen" id="markdown-toc-refaktorierungen">Refaktorierungen</a></li>
@@ -371,7 +371,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Hier sind alle Änderungen aufgelistet.</p>
 
-<h2 id="änderungen-v202700-ballotrc1-ballot-kandidat-noch-nicht-veröffentlicht">Änderungen v2027.0.0-ballot.rc1 (Ballot-Kandidat, noch nicht veröffentlicht)</h2>
+<h2 id="änderungen-v202700-ballotrc2-ballot-kandidat">Änderungen v2027.0.0-ballot.rc2 (Ballot-Kandidat)</h2>
 
 <h3 id="️-breaking-changes">⚠️ Breaking Changes</h3>
 
@@ -394,7 +394,7 @@ konkretem Migrationsweg:</p>
   <li><strong><code class="language-plaintext highlighter-rouge">BREAKING</code></strong> <strong>Referenztypen gehärtet</strong>: Bisher generische Referenzen sind jetzt auf die fachlich zulässigen Profile eingeschränkt — <code class="language-plaintext highlighter-rouge">Verlauf.hasMember</code> (statt beliebiger Observation nur die sieben definierten Mitglieder), <code class="language-plaintext highlighter-rouge">AdverseEvent.suspectEntity.instance</code> (Strahlentherapie / Systemische Therapie / Medikation), <code class="language-plaintext highlighter-rouge">Condition.extension:dueTo.valueReference</code>, <code class="language-plaintext highlighter-rouge">Residualstatus.partOf</code> (Operation), <code class="language-plaintext highlighter-rouge">TNM-synthetisiert.device</code> (Device) sowie <code class="language-plaintext highlighter-rouge">Tumorkonferenz.activity[extended].reference</code> (die drei Therapieempfehlungs-Profile). Instanzen mit anderen Zieltypen werden ungültig.</li>
   <li><strong><code class="language-plaintext highlighter-rouge">BREAKING</code></strong> <strong>Symbol-Profile der TNM-Klassifikation deprecated</strong>: <code class="language-plaintext highlighter-rouge">mii-pr-onko-tnm-y-symbol</code>, <code class="language-plaintext highlighter-rouge">-r-symbol</code>, <code class="language-plaintext highlighter-rouge">-a-symbol</code> und <code class="language-plaintext highlighter-rouge">-m-symbol</code> stehen auf <code class="language-plaintext highlighter-rouge">retired</code>. Die Präfixe y/r/a laufen als <code class="language-plaintext highlighter-rouge">modifierExtension</code> an den Kategorie-Profilen; das m-Suffix als neue <code class="language-plaintext highlighter-rouge">component[multipleTumoren]</code> an der T-Kategorie (Component-Code LOINC <code class="language-plaintext highlighter-rouge">42030-7</code>, Wert weiterhin aus dem UICC-CodeSystem). Bestandsdaten bleiben lesbar — <code class="language-plaintext highlighter-rouge">hasMember</code> am Panel nennt die Profile weiterhin —, für Neuimplementierungen sind die Extensions bzw. die Component zu verwenden.</li>
   <li><strong><code class="language-plaintext highlighter-rouge">BREAKING</code></strong> <strong>Legacy-Artefakte entfernt</strong>: die auskommentierte Strahlentherapie-Alt-Familie (Profil, Extension, Beispiel) sowie die nie aktivierten Quantity-Profile für ECOG und Karnofsky.</li>
-  <li><strong><code class="language-plaintext highlighter-rouge">BREAKING</code></strong> <strong>Abhängigkeiten auf die 2027-Ballot-Linie</strong>: <code class="language-plaintext highlighter-rouge">kerndatensatz.meta</code> 2027.0.0-ballot.rc3, <code class="language-plaintext highlighter-rouge">kerndatensatz.base</code> 2027.0.0-ballot.rc1, <code class="language-plaintext highlighter-rouge">de.basisprofil.r4</code> 1.6.0, <code class="language-plaintext highlighter-rouge">kerndatensatz.biobank</code> und <code class="language-plaintext highlighter-rouge">kerndatensatz.studie</code> je 2027.0.0-ballot.rc1. Neu hinzugekommen: <code class="language-plaintext highlighter-rouge">kerndatensatz.laborbefund</code> 2026.0.3 (für das Tumormarker-Profil) und <code class="language-plaintext highlighter-rouge">hl7.fhir.uv.genomics-reporting</code> 3.0.0.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">BREAKING</code></strong> <strong>Abhängigkeiten auf die 2027-Ballot-Linie</strong>: <code class="language-plaintext highlighter-rouge">kerndatensatz.meta</code> 2027.0.0-ballot.rc3, <code class="language-plaintext highlighter-rouge">kerndatensatz.base</code> 2027.0.0-ballot.rc1, <code class="language-plaintext highlighter-rouge">de.basisprofil.r4</code> 1.6.0, <code class="language-plaintext highlighter-rouge">kerndatensatz.biobank</code> und <code class="language-plaintext highlighter-rouge">kerndatensatz.molgen</code> je 2027.0.0-ballot.rc2, <code class="language-plaintext highlighter-rouge">kerndatensatz.studie</code> 2027.0.0-ballot.rc1. Neu hinzugekommen: <code class="language-plaintext highlighter-rouge">kerndatensatz.laborbefund</code> 2027.0.0-ballot.rc3 (für das Tumormarker-Profil) und <code class="language-plaintext highlighter-rouge">hl7.fhir.uv.genomics-reporting</code> 3.0.0.</li>
 </ul>
 
 <h3 id="neue-profile-und-funktionalität">Neue Profile und Funktionalität</h3>
@@ -951,8 +951,8 @@ konkretem Migrationsweg:</p>
 
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
-          Package de.medizininformatikinitiative.kerndatensatz.onkologie#2027.0.0-ballot.rc1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Tue, Sep 8, 2026 11:16+0000">2026-09-08</span>
+          Package de.medizininformatikinitiative.kerndatensatz.onkologie#2027.0.0-ballot.rc2 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Erstellt <span title="Wed, Sep 9, 2026 11:12+0000">2026-09-09</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

@@ -1,4 +1,4 @@
-# MII VS Onkologie Mamma ISH Ergebnis - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
+# MII VS Onkologie Mamma ISH Ergebnis - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-ish-ergebnis | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-08 | *Computable Name*:MII_VS_Onko_Mamma_ISH_Ergebnis |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-ish-ergebnis | *Version*:2027.0.0-ballot.rc2 |
+| Active as of 2026-09-09 | *Computable Name*:MII_VS_Onko_Mamma_ISH_Ergebnis |
 
  
 Ergebnis der In-situ-Hybridisierung (ISH/FISH): Positive, Negative, Equivocal (LOINC-Answer-Codes). 
@@ -48,7 +48,7 @@ Ergebnis der In-situ-Hybridisierung (ISH/FISH): Positive, Negative, Equivocal (L
       },
       {
         "url" : "version",
-        "valueString" : "2027.0.0-ballot.rc1"
+        "valueString" : "2027.0.0-ballot.rc2"
       },
       {
         "url" : "uri",
@@ -166,12 +166,12 @@ Ergebnis der In-situ-Hybridisierung (ISH/FISH): Positive, Negative, Equivocal (L
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-ish-ergebnis",
-  "version" : "2027.0.0-ballot.rc1",
+  "version" : "2027.0.0-ballot.rc2",
   "name" : "MII_VS_Onko_Mamma_ISH_Ergebnis",
   "title" : "MII VS Onkologie Mamma ISH Ergebnis",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-08T11:16:16+00:00",
+  "date" : "2026-09-09T11:12:15+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

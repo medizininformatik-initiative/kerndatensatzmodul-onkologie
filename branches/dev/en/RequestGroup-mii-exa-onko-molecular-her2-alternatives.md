@@ -1,4 +1,4 @@
-# mii-exa-onko-molecular-her2-alternatives - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
+# mii-exa-onko-molecular-her2-alternatives - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Onkologie Therapieempfehlung Kombinationstherapie](StructureDefinition-mii-pr-onko-therapieempfehlung-kombinationstherapie.md) version: 2027.0.0-ballot.rc1
+Profile: [MII PR Onkologie Therapieempfehlung Kombinationstherapie](StructureDefinition-mii-pr-onko-therapieempfehlung-kombinationstherapie.md) version: 2027.0.0-ballot.rc2
 
 **status**: Active
 
@@ -46,7 +46,7 @@ Profile: [MII PR Onkologie Therapieempfehlung Kombinationstherapie](StructureDef
   "resourceType" : "RequestGroup",
   "id" : "mii-exa-onko-molecular-her2-alternatives",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-kombinationstherapie|2027.0.0-ballot.rc1"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-kombinationstherapie|2027.0.0-ballot.rc2"]
   },
   "status" : "active",
   "intent" : "proposal",

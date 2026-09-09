@@ -1,4 +1,4 @@
-# MolGen-Abbildung der Variantentypen - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
+# MolGen-Abbildung der Variantentypen - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Anleitung**](guidance.md)

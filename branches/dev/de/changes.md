@@ -1,4 +1,4 @@
-# Änderungshistorie - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
+# Änderungshistorie - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2
 
 * [**Inhaltsverzeichnis**](toc.md)
 * **Änderungshistorie**
@@ -7,7 +7,7 @@
 
 Hier sind alle Änderungen aufgelistet.
 
-## Änderungen v2027.0.0-ballot.rc1 (Ballot-Kandidat, noch nicht veröffentlicht)
+## Änderungen v2027.0.0-ballot.rc2 (Ballot-Kandidat)
 
 ### ⚠️ Breaking Changes
 
@@ -24,7 +24,7 @@ Diese Änderungen erfordern möglicherweise Anpassungen in bestehenden Implement
 * **`BREAKING`** **Referenztypen gehärtet**: Bisher generische Referenzen sind jetzt auf die fachlich zulässigen Profile eingeschränkt — `Verlauf.hasMember` (statt beliebiger Observation nur die sieben definierten Mitglieder), `AdverseEvent.suspectEntity.instance` (Strahlentherapie / Systemische Therapie / Medikation), `Condition.extension:dueTo.valueReference`, `Residualstatus.partOf` (Operation), `TNM-synthetisiert.device` (Device) sowie `Tumorkonferenz.activity[extended].reference` (die drei Therapieempfehlungs-Profile). Instanzen mit anderen Zieltypen werden ungültig.
 * **`BREAKING`** **Symbol-Profile der TNM-Klassifikation deprecated**: `mii-pr-onko-tnm-y-symbol`, `-r-symbol`, `-a-symbol` und `-m-symbol` stehen auf `retired`. Die Präfixe y/r/a laufen als `modifierExtension` an den Kategorie-Profilen; das m-Suffix als neue `component[multipleTumoren]` an der T-Kategorie (Component-Code LOINC `42030-7`, Wert weiterhin aus dem UICC-CodeSystem). Bestandsdaten bleiben lesbar — `hasMember` am Panel nennt die Profile weiterhin —, für Neuimplementierungen sind die Extensions bzw. die Component zu verwenden.
 * **`BREAKING`** **Legacy-Artefakte entfernt**: die auskommentierte Strahlentherapie-Alt-Familie (Profil, Extension, Beispiel) sowie die nie aktivierten Quantity-Profile für ECOG und Karnofsky.
-* **`BREAKING`** **Abhängigkeiten auf die 2027-Ballot-Linie**: `kerndatensatz.meta` 2027.0.0-ballot.rc3, `kerndatensatz.base` 2027.0.0-ballot.rc1, `de.basisprofil.r4` 1.6.0, `kerndatensatz.biobank` und `kerndatensatz.studie` je 2027.0.0-ballot.rc1. Neu hinzugekommen: `kerndatensatz.laborbefund` 2026.0.3 (für das Tumormarker-Profil) und `hl7.fhir.uv.genomics-reporting` 3.0.0.
+* **`BREAKING`** **Abhängigkeiten auf die 2027-Ballot-Linie**: `kerndatensatz.meta` 2027.0.0-ballot.rc3, `kerndatensatz.base` 2027.0.0-ballot.rc1, `de.basisprofil.r4` 1.6.0, `kerndatensatz.biobank` und `kerndatensatz.molgen` je 2027.0.0-ballot.rc2, `kerndatensatz.studie` 2027.0.0-ballot.rc1. Neu hinzugekommen: `kerndatensatz.laborbefund` 2027.0.0-ballot.rc3 (für das Tumormarker-Profil) und `hl7.fhir.uv.genomics-reporting` 3.0.0.
 
 ### Neue Profile und Funktionalität
 

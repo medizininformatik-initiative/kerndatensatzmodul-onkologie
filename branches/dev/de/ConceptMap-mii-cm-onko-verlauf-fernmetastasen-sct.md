@@ -1,4 +1,4 @@
-# MII CM Onko Verlauf Fernmetastasen SNOMED Mapping - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
+# MII CM Onko Verlauf Fernmetastasen SNOMED Mapping - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-verlauf-fernmetastasen-sct | *Version*:2027.0.0-ballot.rc1 |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-verlauf-fernmetastasen-sct | *Version*:2027.0.0-ballot.rc2 |
 | Active Stand: 2024-04-10 | *Maschinenlesbarer Name*:MII CM Onko Verlauf Fernmetastasen SCT Mapping |
 | **Copyright/Rechtliches**: This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. | |
 
@@ -39,7 +39,7 @@ Fernmetastasen im Verlauf. Zu beachten ist, dass bei Auftreten von neuen Fernmet
       },
       {
         "url" : "version",
-        "valueString" : "2027.0.0-ballot.rc1"
+        "valueString" : "2027.0.0-ballot.rc2"
       },
       {
         "url" : "uri",
@@ -151,7 +151,7 @@ Fernmetastasen im Verlauf. Zu beachten ist, dass bei Auftreten von neuen Fernmet
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-verlauf-fernmetastasen-sct",
-  "version" : "2027.0.0-ballot.rc1",
+  "version" : "2027.0.0-ballot.rc2",
   "name" : "MII CM Onko Verlauf Fernmetastasen SCT Mapping",
   "title" : "MII CM Onko Verlauf Fernmetastasen SNOMED Mapping",
   "status" : "active",

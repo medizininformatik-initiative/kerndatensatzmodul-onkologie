@@ -1,4 +1,4 @@
-# MII EXA Onkologie Tumormarker CEA - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
+# MII EXA Onkologie Tumormarker CEA - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Onkologie Tumormarker](StructureDefinition-mii-pr-onko-tumormarker.md) version: 2027.0.0-ballot.rc1
+Profile: [MII PR Onkologie Tumormarker](StructureDefinition-mii-pr-onko-tumormarker.md) version: 2027.0.0-ballot.rc2
 
 **identifier**: Observation Instance Identifier/2039-6_M2026-0042
 
@@ -39,7 +39,7 @@ Profile: [MII PR Onkologie Tumormarker](StructureDefinition-mii-pr-onko-tumormar
   "resourceType" : "Observation",
   "id" : "mii-exa-onko-tumormarker-cea",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumormarker|2027.0.0-ballot.rc1"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumormarker|2027.0.0-ballot.rc2"]
   },
   "identifier" : [{
     "type" : {

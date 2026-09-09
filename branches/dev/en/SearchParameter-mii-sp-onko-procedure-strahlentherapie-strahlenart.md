@@ -1,4 +1,4 @@
-# mii-sp-onko-procedure-strahlentherapie-strahlenart - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc1
+# mii-sp-onko-procedure-strahlentherapie-strahlenart - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-procedure-strahlentherapie-strahlenart | *Version*:2027.0.0-ballot.rc1 |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-procedure-strahlentherapie-strahlenart | *Version*:2027.0.0-ballot.rc2 |
 | Active as of 2024-04-15 | *Computable Name*:MII_SP_Procedure_Strahlentherapie_Strahlenart |
 
  
@@ -34,7 +34,7 @@ SearchParameter for Procedure.usedCode:Strahlenart
       },
       {
         "url" : "version",
-        "valueString" : "2027.0.0-ballot.rc1"
+        "valueString" : "2027.0.0-ballot.rc2"
       },
       {
         "url" : "uri",
@@ -146,7 +146,7 @@ SearchParameter for Procedure.usedCode:Strahlenart
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-procedure-strahlentherapie-strahlenart",
-  "version" : "2027.0.0-ballot.rc1",
+  "version" : "2027.0.0-ballot.rc2",
   "name" : "MII_SP_Procedure_Strahlentherapie_Strahlenart",
   "status" : "active",
   "experimental" : true,
