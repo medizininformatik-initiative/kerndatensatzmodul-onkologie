@@ -170,7 +170,7 @@ Alle MedDRA-Codes der CTCAE v4.03 (Art der Nebenwirkung). Deutsche/englische Dis
   "title" : "MII VS Onkologie Nebenwirkung nach CTCAE Art",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T13:30:31+00:00",
+  "date" : "2026-09-09T15:05:53+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

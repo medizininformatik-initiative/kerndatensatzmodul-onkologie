@@ -256,7 +256,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-thera
   "title" : "MII PR Onkologie Therapieempfehlung Medikation",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T13:30:31+00:00",
+  "date" : "2026-09-09T15:05:53+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -277,6 +277,26 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-thera
   "mapping" : [{
     "identity" : "oBDS",
     "name" : "Mapping FHIR zu oBDS"
+  },
+  {
+    "identity" : "workflow",
+    "uri" : "http://hl7.org/fhir/workflow",
+    "name" : "Workflow Pattern"
+  },
+  {
+    "identity" : "script10.6",
+    "uri" : "http://ncpdp.org/SCRIPT10_6",
+    "name" : "Mapping to NCPDP SCRIPT 10.6"
+  },
+  {
+    "identity" : "w5",
+    "uri" : "http://hl7.org/fhir/fivews",
+    "name" : "FiveWs Pattern Mapping"
+  },
+  {
+    "identity" : "v2",
+    "uri" : "http://hl7.org/v2",
+    "name" : "HL7 v2 Mapping"
   }],
   "kind" : "resource",
   "abstract" : false,

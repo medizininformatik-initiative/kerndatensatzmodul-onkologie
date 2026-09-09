@@ -98,7 +98,7 @@ Ab der zweiten formalen Publikation dieses Leitfadens wird der maschinell erzeug
 
 #### 9. Abhängigkeiten auf die 2027-Ballot-Linie
 
-**Was sich geändert hat.** `kerndatensatz.meta` 2027.0.0-ballot.rc3, `kerndatensatz.base` 2027.0.0-ballot.rc1, `de.basisprofil.r4` 1.6.0, `kerndatensatz.biobank` und `kerndatensatz.molgen` je 2027.0.0-ballot.rc2, `kerndatensatz.studie` 2027.0.0-ballot.rc1, `kerndatensatz.laborbefund` 2027.0.0-ballot.rc3 (neu, für das Tumormarker-Profil) und `hl7.fhir.uv.genomics-reporting` 3.0.0 (neu).
+**Was sich geändert hat.** `kerndatensatz.meta` 2027.0.0-ballot.rc3, `kerndatensatz.base` 2027.0.0-ballot.rc1, `de.basisprofil.r4` 1.6.0, `kerndatensatz.biobank` und `kerndatensatz.molgen` je 2027.0.0-ballot.rc2, `kerndatensatz.studie` 2027.0.0-ballot.rc1, `kerndatensatz.medikation` 2027.0.0-ballot.rc5, `kerndatensatz.laborbefund` 2027.0.0-ballot.rc3 (neu, für das Tumormarker-Profil) und `hl7.fhir.uv.genomics-reporting` 3.0.0 (neu).
 
 **Bestandsdaten.** In aller Regel keine direkte Auswirkung; maßgeblich sind die Changelogs der Basismodule — Verschärfungen dort wirken über die Vererbung auch hier.
 

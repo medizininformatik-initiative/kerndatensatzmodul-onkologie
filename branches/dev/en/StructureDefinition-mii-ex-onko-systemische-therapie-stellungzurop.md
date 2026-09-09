@@ -173,7 +173,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-ex-onko-syste
   "title" : "MII EX Onko Systemische Therapie Stellung zur OP",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T13:30:31+00:00",
+  "date" : "2026-09-09T15:05:53+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
