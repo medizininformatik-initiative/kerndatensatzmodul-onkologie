@@ -80,7 +80,7 @@ accordingly.
 - **[Profiles](profiles.html)** and the further
   **[artifact pages](artifacts.html)** — the technical artifacts.
 - **[Examples](examples.html)** — example instances.
-- **[Dependencies](ImplementationGuide-mii-ig-onko-de-v2026.html)** — the
+- **[Dependencies](ImplementationGuide-mii-ig-onko-de.html)** — the
   ImplementationGuide resource with the dependency table and copyright
   statements.
 

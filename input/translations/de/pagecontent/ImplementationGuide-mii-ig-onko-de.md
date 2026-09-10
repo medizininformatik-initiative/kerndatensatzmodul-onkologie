@@ -10,8 +10,8 @@
 Diese ImplementationGuide-Ressource definiert die technischen Details dieser
 Publikation, einschließlich Abhängigkeiten und Veröffentlichungsparametern.
 
-- [XML](../ImplementationGuide-mii-ig-onko-de-v2026.xml)
-- [JSON](../ImplementationGuide-mii-ig-onko-de-v2026.json)
+- [XML](../ImplementationGuide-mii-ig-onko-de.xml)
+- [JSON](../ImplementationGuide-mii-ig-onko-de.json)
 
 ### Versionsübergreifende Analyse
 

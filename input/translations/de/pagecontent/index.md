@@ -83,7 +83,7 @@ Mapping entsprechend aktualisiert.
 - **[Profile](profiles.html)** und die weiteren
   **[Artefakt-Seiten](artifacts.html)** — die technischen Artefakte.
 - **[Beispiele](examples.html)** — Beispielinstanzen.
-- **[Abhängigkeiten](ImplementationGuide-mii-ig-onko-de-v2026.html)** — die
+- **[Abhängigkeiten](ImplementationGuide-mii-ig-onko-de.html)** — die
   ImplementationGuide-Ressource mit Abhängigkeitstabelle und
   Copyright-Angaben.
 
