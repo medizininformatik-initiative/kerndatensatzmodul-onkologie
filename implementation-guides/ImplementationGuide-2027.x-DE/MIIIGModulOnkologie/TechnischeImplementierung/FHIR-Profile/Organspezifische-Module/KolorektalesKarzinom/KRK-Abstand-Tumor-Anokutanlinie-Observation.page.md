@@ -77,7 +77,7 @@ Mapping Datensatz zu FHIR
 
 @```
 from StructureDefinition 
-where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/LogicalModel/OrganspezifischeZusatzmodule'
+where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-lm-onko-organspezifische-zusatzmodule'
     for differential.element where id.contains('KolorektalesKarzinom.TumorLokalisation.AbstandAnokutanlinie')
     select 
         Datensatz: short,

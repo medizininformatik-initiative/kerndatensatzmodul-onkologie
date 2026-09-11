@@ -214,3 +214,33 @@ base modules) are untested.
 
 **Migration.** Raise dependencies together with the module; no data migration
 step.
+
+#### 10. Canonical URLs aligned with the naming convention (10 artefacts)
+
+**What changed.** Seven therapy ValueSets carried canonicals without the
+`onko-` segment, three logical models the Simplifier-era path
+`…/StructureDefinition/LogicalModel/<Name>`. All ten now follow the module
+convention `…/modul-onko/<Type>/<id>`:
+
+| old | new |
+|---|---|
+| `ValueSet/mii-vs-strahlentherapie-zielgebiet` | `ValueSet/mii-vs-onko-strahlentherapie-zielgebiet` |
+| `ValueSet/mii-vs-strahlentherapie-strahlenart` | `ValueSet/mii-vs-onko-strahlentherapie-strahlenart` |
+| `ValueSet/mii-vs-strahlentherapie-strahlungseinheit` | `ValueSet/mii-vs-onko-strahlentherapie-strahlungseinheit` |
+| `ValueSet/mii-vs-strahlentherapie-stellungzurop` | `ValueSet/mii-vs-onko-strahlentherapie-stellungzurop` |
+| `ValueSet/mii-vs-strahlentherapie-ende-grund` | `ValueSet/mii-vs-onko-strahlentherapie-ende-grund` |
+| `ValueSet/mii-vs-systemische-therapie-stellungzurop` | `ValueSet/mii-vs-onko-systemische-therapie-stellungzurop` |
+| `ValueSet/mii-vs-systemische-therapie-ende-grund` | `ValueSet/mii-vs-onko-systemische-therapie-ende-grund` |
+| `StructureDefinition/LogicalModel/Onkologie` | `StructureDefinition/mii-lm-onko` |
+| `StructureDefinition/LogicalModel/OrganspezifischeZusatzmodule` | `StructureDefinition/mii-lm-onko-organspezifische-zusatzmodule` |
+| `StructureDefinition/LogicalModel/mii-lm-mvgenomseq-onkologie` | `StructureDefinition/mii-lm-mvgenomseq-onkologie` |
+
+**Stored data.** No effect — instances never carry ValueSet or logical-model
+canonicals; bindings live in the profiles, which reference the new URLs.
+
+**Implementations.** Only systems that address these ten canonicals
+*directly* (terminology-server requests, validation configurations,
+documentation links) must switch to the new URLs; everything that resolves
+them through the module's profiles follows automatically.
+
+**Migration.** Text replacement old → new; the table above is complete.

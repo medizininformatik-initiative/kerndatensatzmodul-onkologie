@@ -218,3 +218,34 @@ Basismodule 2026) sind nicht getestet.
 
 **Migration.** Abhängigkeiten gemeinsam mit dem Modul anheben; kein
 Datenmigrationsschritt.
+
+#### 10. Canonical-URLs an die Namenskonvention angeglichen (10 Artefakte)
+
+**Was sich geändert hat.** Sieben Therapie-ValueSets trugen Canonicals ohne
+das `onko-`-Segment, drei logische Modelle den Simplifier-Altpfad
+`…/StructureDefinition/LogicalModel/<Name>`. Alle zehn folgen jetzt der
+Modulkonvention `…/modul-onko/<Typ>/<id>`:
+
+| alt | neu |
+|---|---|
+| `ValueSet/mii-vs-strahlentherapie-zielgebiet` | `ValueSet/mii-vs-onko-strahlentherapie-zielgebiet` |
+| `ValueSet/mii-vs-strahlentherapie-strahlenart` | `ValueSet/mii-vs-onko-strahlentherapie-strahlenart` |
+| `ValueSet/mii-vs-strahlentherapie-strahlungseinheit` | `ValueSet/mii-vs-onko-strahlentherapie-strahlungseinheit` |
+| `ValueSet/mii-vs-strahlentherapie-stellungzurop` | `ValueSet/mii-vs-onko-strahlentherapie-stellungzurop` |
+| `ValueSet/mii-vs-strahlentherapie-ende-grund` | `ValueSet/mii-vs-onko-strahlentherapie-ende-grund` |
+| `ValueSet/mii-vs-systemische-therapie-stellungzurop` | `ValueSet/mii-vs-onko-systemische-therapie-stellungzurop` |
+| `ValueSet/mii-vs-systemische-therapie-ende-grund` | `ValueSet/mii-vs-onko-systemische-therapie-ende-grund` |
+| `StructureDefinition/LogicalModel/Onkologie` | `StructureDefinition/mii-lm-onko` |
+| `StructureDefinition/LogicalModel/OrganspezifischeZusatzmodule` | `StructureDefinition/mii-lm-onko-organspezifische-zusatzmodule` |
+| `StructureDefinition/LogicalModel/mii-lm-mvgenomseq-onkologie` | `StructureDefinition/mii-lm-mvgenomseq-onkologie` |
+
+**Bestandsdaten.** Keine Auswirkung — Instanzen tragen weder ValueSet- noch
+LogicalModel-Canonicals; die Bindings liegen in den Profilen, die auf die
+neuen URLs verweisen.
+
+**Implementierungen.** Nur Systeme, die diese zehn Canonicals *direkt*
+adressieren (Terminologieserver-Anfragen, Validierungskonfigurationen,
+Dokumentationslinks), müssen auf die neuen URLs wechseln; alles, was sie
+über die Profile des Moduls auflöst, folgt automatisch.
+
+**Migration.** Textersetzung alt → neu; die Tabelle oben ist vollständig.

@@ -3,7 +3,7 @@ Id: mii-vs-onko-systemische-therapie-ende-grund
 Title: "MII VS Onkologie Systemische Therapie Ende Grund"
 Description: "oBDS-spezifisches ValueSet für Klassifikation des Grundes der Beendigung der Systemischen Therapie"
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
-* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-systemische-therapie-ende-grund"
+* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-ende-grund"
 * ^status = #active
 * ^experimental = false
 * insert Publisher

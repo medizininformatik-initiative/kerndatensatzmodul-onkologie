@@ -42,7 +42,7 @@ Der Datenkranz beinhaltet dabei Informationen zur diagnostischen und therapeutis
 
 
 Es gibt einen ähnlichen Datenkranz für Seltene Erkrankungen, der zukünftig im Modul Seltene Erkrankungen abgebildet wird. 
-{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/LogicalModel/mii-lm-mvgenomseq-onkologie}}
+{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-lm-mvgenomseq-onkologie}}
 
 Ein Mapping der Datenelemente auf den MII KDS ist derzeit in Arbeit, hier ein erster Ausschnitt. 
 @```

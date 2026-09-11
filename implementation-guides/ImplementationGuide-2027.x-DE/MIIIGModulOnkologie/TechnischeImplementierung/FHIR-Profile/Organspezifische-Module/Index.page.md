@@ -47,7 +47,7 @@ Spezifische Melanom-Parameter:
 #### Logisches Modell
 Die Struktur aller organspezifischen Module ist im zentralen **Logischen Modell für Organspezifische Zusatzmodule** formal definiert:
 
-{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/LogicalModel/OrganspezifischeZusatzmodule}}
+{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-lm-onko-organspezifische-zusatzmodule}}
 
 #### FHIR-Mappings
 Jedes organspezifische Datenelement verfügt über präzise FHIR-Mappings, die eine eindeutige Zuordnung zu den entsprechenden FHIR-Ressourcen ermöglichen. Die Mappings verwenden semantische Annotationen mit SNOMED CT und LOINC zur eindeutigen Identifikation.

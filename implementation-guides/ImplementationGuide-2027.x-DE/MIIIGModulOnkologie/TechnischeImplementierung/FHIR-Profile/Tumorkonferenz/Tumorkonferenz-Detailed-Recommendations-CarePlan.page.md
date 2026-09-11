@@ -135,7 +135,7 @@ Mapping Datensatz zu FHIR
 
 @```
 from StructureDefinition 
-where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/LogicalModel/Onkologie'
+where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-lm-onko'
     for differential.element where id.contains('Tumorkonferenz')
     select 
         Datensatz: short,

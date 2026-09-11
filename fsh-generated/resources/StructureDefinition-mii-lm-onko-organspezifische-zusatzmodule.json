@@ -150,7 +150,7 @@
       }
     }
   ],
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/LogicalModel/OrganspezifischeZusatzmodule",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-lm-onko-organspezifische-zusatzmodule",
   "version": "2027.0.0-ballot.rc2",
   "name": "MII_LM_Onko_Organspezifische_Zusatzmodule",
   "title": "MII LM Onkologie Organspezifische Zusatzmodule",
@@ -181,20 +181,20 @@
   ],
   "kind": "logical",
   "abstract": false,
-  "type": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/LogicalModel/OrganspezifischeZusatzmodule",
+  "type": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-lm-onko-organspezifische-zusatzmodule",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation": "specialization",
   "differential": {
     "element": [
       {
-        "id": "OrganspezifischeZusatzmodule",
-        "path": "OrganspezifischeZusatzmodule",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule",
         "short": "MII LM Onkologie Organspezifische Zusatzmodule",
         "definition": "Logisches Modell für die organspezifischen Zusatzmodule des oBDS. Feldnummern und Struktur folgen dem amtlichen oBDS-XML-Schema (oBDS v3.0.5, Modul_Mamma/Darm/Prostata/Malignes_Melanom/Allgemein) sowie dem Feldkatalog auf basisdatensatz.de."
       },
       {
-        "id": "OrganspezifischeZusatzmodule.Mamma",
-        "path": "OrganspezifischeZusatzmodule.Mamma",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.Mamma",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.Mamma",
         "short": "Mamma",
         "definition": "Organspezifisches Modul Mammakarzinom, oBDS M1–M8 (XSD Modul_Mamma_Typ)",
         "min": 0,
@@ -217,8 +217,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.Mamma.Menopausenstatus",
-        "path": "OrganspezifischeZusatzmodule.Mamma.Menopausenstatus",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.Mamma.Menopausenstatus",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.Mamma.Menopausenstatus",
         "short": "Menopausenstatus",
         "definition": "Prätherapeutischer Menopausenstatus einer Patientin mit Mamma-Karzinom. oBDS M1",
         "min": 0,
@@ -241,8 +241,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.Mamma.RezeptorstatusEstrogen",
-        "path": "OrganspezifischeZusatzmodule.Mamma.RezeptorstatusEstrogen",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.Mamma.RezeptorstatusEstrogen",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.Mamma.RezeptorstatusEstrogen",
         "short": "Rezeptorstatus Estrogen",
         "definition": "Hormonrezeptorstatus Östrogen. oBDS M2 (XSD: HormonrezeptorStatus_Oestrogen)",
         "min": 0,
@@ -265,8 +265,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.Mamma.RezeptorstatusEstrogen.Status",
-        "path": "OrganspezifischeZusatzmodule.Mamma.RezeptorstatusEstrogen.Status",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.Mamma.RezeptorstatusEstrogen.Status",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.Mamma.RezeptorstatusEstrogen.Status",
         "short": "Estrogen-Rezeptorstatus",
         "definition": "Kategoriale Bewertung des Estrogen-Rezeptorstatus: positiv/negativ. oBDS M2",
         "min": 0,
@@ -289,8 +289,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.Mamma.RezeptorstatusEstrogen.AnteilPositiveZellen",
-        "path": "OrganspezifischeZusatzmodule.Mamma.RezeptorstatusEstrogen.AnteilPositiveZellen",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.Mamma.RezeptorstatusEstrogen.AnteilPositiveZellen",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.Mamma.RezeptorstatusEstrogen.AnteilPositiveZellen",
         "short": "Anteil positive Zellen",
         "definition": "Quantitative Bestimmung in Prozent. Komponente zu oBDS M2 (keine eigene Feldnummer, S3-Leitlinie).",
         "min": 0,
@@ -313,8 +313,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.Mamma.RezeptorstatusEstrogen.Faerbeintensitaet",
-        "path": "OrganspezifischeZusatzmodule.Mamma.RezeptorstatusEstrogen.Faerbeintensitaet",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.Mamma.RezeptorstatusEstrogen.Faerbeintensitaet",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.Mamma.RezeptorstatusEstrogen.Faerbeintensitaet",
         "short": "Färbeintensität",
         "definition": "Qualitative Bewertung der Färbeintensität. Komponente zu oBDS M2 (keine eigene Feldnummer, S3-Leitlinie).",
         "min": 0,
@@ -337,8 +337,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.Mamma.RezeptorstatusProgesteron",
-        "path": "OrganspezifischeZusatzmodule.Mamma.RezeptorstatusProgesteron",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.Mamma.RezeptorstatusProgesteron",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.Mamma.RezeptorstatusProgesteron",
         "short": "Rezeptorstatus Progesteron",
         "definition": "Hormonrezeptorstatus Progesteron. oBDS M3 (XSD: HormonrezeptorStatus_Progesteron)",
         "min": 0,
@@ -361,8 +361,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.Mamma.RezeptorstatusProgesteron.Status",
-        "path": "OrganspezifischeZusatzmodule.Mamma.RezeptorstatusProgesteron.Status",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.Mamma.RezeptorstatusProgesteron.Status",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.Mamma.RezeptorstatusProgesteron.Status",
         "short": "Progesteron-Rezeptorstatus",
         "definition": "Kategoriale Bewertung des Progesteron-Rezeptorstatus: positiv/negativ. oBDS M3",
         "min": 0,
@@ -385,8 +385,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.Mamma.RezeptorstatusProgesteron.AnteilPositiveZellen",
-        "path": "OrganspezifischeZusatzmodule.Mamma.RezeptorstatusProgesteron.AnteilPositiveZellen",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.Mamma.RezeptorstatusProgesteron.AnteilPositiveZellen",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.Mamma.RezeptorstatusProgesteron.AnteilPositiveZellen",
         "short": "Anteil positive Zellen",
         "definition": "Quantitative Bestimmung in Prozent. Komponente zu oBDS M3 (keine eigene Feldnummer, S3-Leitlinie).",
         "min": 0,
@@ -409,8 +409,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.Mamma.RezeptorstatusProgesteron.Faerbeintensitaet",
-        "path": "OrganspezifischeZusatzmodule.Mamma.RezeptorstatusProgesteron.Faerbeintensitaet",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.Mamma.RezeptorstatusProgesteron.Faerbeintensitaet",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.Mamma.RezeptorstatusProgesteron.Faerbeintensitaet",
         "short": "Färbeintensität",
         "definition": "Qualitative Bewertung der Färbeintensität. Komponente zu oBDS M3 (keine eigene Feldnummer, S3-Leitlinie).",
         "min": 0,
@@ -433,8 +433,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.Mamma.StatusHer2neu",
-        "path": "OrganspezifischeZusatzmodule.Mamma.StatusHer2neu",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.Mamma.StatusHer2neu",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.Mamma.StatusHer2neu",
         "short": "Her2neu-Status",
         "definition": "Her2neu-Status des Tumorgewebes. oBDS M4 (XSD: Her2neuStatus)",
         "min": 0,
@@ -457,8 +457,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.Mamma.PraeoperativeMarkierung",
-        "path": "OrganspezifischeZusatzmodule.Mamma.PraeoperativeMarkierung",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.Mamma.PraeoperativeMarkierung",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.Mamma.PraeoperativeMarkierung",
         "short": "Präoperative Markierung",
         "definition": "Präoperative Drahtmarkierung durch Bildgebung gesteuert. oBDS M5 (XSD: PraeopDrahtmarkierung)",
         "min": 0,
@@ -481,8 +481,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.Mamma.PraeoperativeMarkierung.Modalitaet",
-        "path": "OrganspezifischeZusatzmodule.Mamma.PraeoperativeMarkierung.Modalitaet",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.Mamma.PraeoperativeMarkierung.Modalitaet",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.Mamma.PraeoperativeMarkierung.Modalitaet",
         "short": "Markierungsmodalität",
         "definition": "Art/Steuerung der präoperativen Markierung. Komponente zu oBDS M5.",
         "min": 0,
@@ -505,8 +505,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.Mamma.MammaOperation",
-        "path": "OrganspezifischeZusatzmodule.Mamma.MammaOperation",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.Mamma.MammaOperation",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.Mamma.MammaOperation",
         "short": "Mamma-Operation",
         "definition": "Operative Therapie; kein eigenes oBDS-Modulfeld (Abbildung über oBDS Kapitel 13/OPS).",
         "min": 0,
@@ -529,8 +529,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.Mamma.MammaOperation.Operationstyp",
-        "path": "OrganspezifischeZusatzmodule.Mamma.MammaOperation.Operationstyp",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.Mamma.MammaOperation.Operationstyp",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.Mamma.MammaOperation.Operationstyp",
         "short": "Operationstyp",
         "definition": "Art der Mamma-Operation. Kein oBDS-Modulfeld (OPS, oBDS Kapitel 13).",
         "min": 0,
@@ -553,8 +553,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.Mamma.MammaOperation.IntraoperativesImaging",
-        "path": "OrganspezifischeZusatzmodule.Mamma.MammaOperation.IntraoperativesImaging",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.Mamma.MammaOperation.IntraoperativesImaging",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.Mamma.MammaOperation.IntraoperativesImaging",
         "short": "Intraoperatives Präparatröntgen/Sonografie",
         "definition": "Intraoperative Präparatkontrolle mittels Röntgen/Sonografie. oBDS M6 (XSD: IntraopPraeparatkontrolle)",
         "min": 0,
@@ -577,8 +577,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.Mamma.TumorgroesseInvasiv",
-        "path": "OrganspezifischeZusatzmodule.Mamma.TumorgroesseInvasiv",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.Mamma.TumorgroesseInvasiv",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.Mamma.TumorgroesseInvasiv",
         "short": "Tumorgröße invasives Karzinom",
         "definition": "Größte Ausdehnung des invasiven Karzinoms in mm. oBDS M7 (XSD: TumorgroesseInvasiv)",
         "min": 0,
@@ -601,8 +601,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.Mamma.TumorgroesseDCIS",
-        "path": "OrganspezifischeZusatzmodule.Mamma.TumorgroesseDCIS",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.Mamma.TumorgroesseDCIS",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.Mamma.TumorgroesseDCIS",
         "short": "Tumorgröße DCIS",
         "definition": "Größte Ausdehnung des duktalen Carcinoma in situ in mm. oBDS M8 (XSD: TumorgroesseDCIS)",
         "min": 0,
@@ -625,8 +625,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom",
-        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.KolorektalesKarzinom",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.KolorektalesKarzinom",
         "short": "Kolorektales Karzinom",
         "definition": "Organspezifisches Modul Kolorektales Karzinom, oBDS KR1–KR10 (XSD Modul_Darm_Typ)",
         "min": 0,
@@ -649,8 +649,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.TumorLokalisation",
-        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.TumorLokalisation",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.KolorektalesKarzinom.TumorLokalisation",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.KolorektalesKarzinom.TumorLokalisation",
         "short": "Tumor Lokalisation",
         "definition": "Tumor Lokalisation",
         "min": 0,
@@ -673,8 +673,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.TumorLokalisation.AbstandAnokutanlinie",
-        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.TumorLokalisation.AbstandAnokutanlinie",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.KolorektalesKarzinom.TumorLokalisation.AbstandAnokutanlinie",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.KolorektalesKarzinom.TumorLokalisation.AbstandAnokutanlinie",
         "short": "Abstand Anokutanlinie",
         "definition": "Höhe des Sitzes des Rektumkarzinoms ab Anokutanlinie in cm. oBDS KR1 (XSD: RektumAbstandAnokutanlinie)",
         "min": 0,
@@ -697,8 +697,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.BildgebendeVerfahren",
-        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.BildgebendeVerfahren",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.KolorektalesKarzinom.BildgebendeVerfahren",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.KolorektalesKarzinom.BildgebendeVerfahren",
         "short": "Bildgebende Verfahren",
         "definition": "Bildgebende Verfahren",
         "min": 0,
@@ -721,8 +721,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.BildgebendeVerfahren.MRTMesorektale",
-        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.BildgebendeVerfahren.MRTMesorektale",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.KolorektalesKarzinom.BildgebendeVerfahren.MRTMesorektale",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.KolorektalesKarzinom.BildgebendeVerfahren.MRTMesorektale",
         "short": "MRT/CT Mesorektale Faszie",
         "definition": "MRT oder Dünnschicht-CT mit Angabe Abstand mesorektale Faszie. oBDS KR5 (XSD: RektumMRTDuennschichtAngabemesorektaleFaszie)",
         "min": 0,
@@ -745,8 +745,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.BildgebendeVerfahren.MRTMesorektale.AbstandMesorektale",
-        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.BildgebendeVerfahren.MRTMesorektale.AbstandMesorektale",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.KolorektalesKarzinom.BildgebendeVerfahren.MRTMesorektale.AbstandMesorektale",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.KolorektalesKarzinom.BildgebendeVerfahren.MRTMesorektale.AbstandMesorektale",
         "short": "Abstand Mesorektale Faszie",
         "definition": "Abstand des Tumors zur mesorektalen Faszie in mm bei MRT/CT. oBDS KR5",
         "min": 0,
@@ -769,8 +769,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.BildgebendeVerfahren.MRTMesorektale.AbstandNichtVerfuegbarGrund",
-        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.BildgebendeVerfahren.MRTMesorektale.AbstandNichtVerfuegbarGrund",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.KolorektalesKarzinom.BildgebendeVerfahren.MRTMesorektale.AbstandNichtVerfuegbarGrund",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.KolorektalesKarzinom.BildgebendeVerfahren.MRTMesorektale.AbstandNichtVerfuegbarGrund",
         "short": "Grund für fehlende Abstandsmessung",
         "definition": "Grund, warum der Abstand zur mesorektalen Faszie nicht verfügbar ist (nicht durchgeführt/nicht angegeben/unbekannt). Statusangabe zu oBDS KR5.",
         "min": 0,
@@ -793,8 +793,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.Operation",
-        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.Operation",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.KolorektalesKarzinom.Operation",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.KolorektalesKarzinom.Operation",
         "short": "KRK Operation",
         "definition": "KRK Operation",
         "min": 0,
@@ -817,8 +817,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.Operation.Operationstyp",
-        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.Operation.Operationstyp",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.KolorektalesKarzinom.Operation.Operationstyp",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.KolorektalesKarzinom.Operation.Operationstyp",
         "short": "Art des Eingriffs",
         "definition": "Art des Eingriffs beim kolorektalen Karzinom. oBDS KR6 (XSD: ArtEingriff)",
         "min": 0,
@@ -841,8 +841,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.Operation.ASAKlassifikation",
-        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.Operation.ASAKlassifikation",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.KolorektalesKarzinom.Operation.ASAKlassifikation",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.KolorektalesKarzinom.Operation.ASAKlassifikation",
         "short": "ASA-Klassifikation",
         "definition": "American Society of Anesthesiologists Physical Status Classification System. oBDS KR9 (XSD: ASA)",
         "min": 0,
@@ -865,8 +865,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.Operation.StomaMarkierung",
-        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.Operation.StomaMarkierung",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.KolorektalesKarzinom.Operation.StomaMarkierung",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.KolorektalesKarzinom.Operation.StomaMarkierung",
         "short": "Stoma Markierung",
         "definition": "Präoperative Anzeichnung der Stomaposition. oBDS KR7 (XSD: RektumAnzeichnungStomaposition)",
         "min": 0,
@@ -889,8 +889,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.Operation.StomaMarkierung.Status",
-        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.Operation.StomaMarkierung.Status",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.KolorektalesKarzinom.Operation.StomaMarkierung.Status",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.KolorektalesKarzinom.Operation.StomaMarkierung.Status",
         "short": "Markierungsstatus",
         "definition": "Status der präoperativen Stoma-Markierung. oBDS KR7",
         "min": 0,
@@ -913,8 +913,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.Operation.StomaMarkierung.StatusGrund",
-        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.Operation.StomaMarkierung.StatusGrund",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.KolorektalesKarzinom.Operation.StomaMarkierung.StatusGrund",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.KolorektalesKarzinom.Operation.StomaMarkierung.StatusGrund",
         "short": "Status Grund",
         "definition": "Grund für Markierungsstatus (geplant/nicht geplant/abgelehnt). Komponente zu oBDS KR7.",
         "min": 0,
@@ -937,8 +937,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.PathologischeBewertung",
-        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.PathologischeBewertung",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.KolorektalesKarzinom.PathologischeBewertung",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.KolorektalesKarzinom.PathologischeBewertung",
         "short": "Pathologische Bewertung",
         "definition": "Pathologische Bewertung",
         "min": 0,
@@ -961,8 +961,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.PathologischeBewertung.ResektionsraenderAboral",
-        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.PathologischeBewertung.ResektionsraenderAboral",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.KolorektalesKarzinom.PathologischeBewertung.ResektionsraenderAboral",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.KolorektalesKarzinom.PathologischeBewertung.ResektionsraenderAboral",
         "short": "Resektionsrand aboral",
         "definition": "Minimaler Abstand des aboralen Tumorrandes zum aboralen Resektionsrand in mm. oBDS KR2 (XSD: RektumAbstandAboralerResektionsrand)",
         "min": 0,
@@ -985,8 +985,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.PathologischeBewertung.ResektionsraenderCircumferell",
-        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.PathologischeBewertung.ResektionsraenderCircumferell",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.KolorektalesKarzinom.PathologischeBewertung.ResektionsraenderCircumferell",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.KolorektalesKarzinom.PathologischeBewertung.ResektionsraenderCircumferell",
         "short": "Resektionsrand circumferell",
         "definition": "Minimaler Abstand des Tumors zur circumferentiellen Resektionsebene in mm. oBDS KR3 (XSD: RektumAbstandCircResektionsebene)",
         "min": 0,
@@ -1009,8 +1009,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.PathologischeBewertung.TMEQualitaet",
-        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.PathologischeBewertung.TMEQualitaet",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.KolorektalesKarzinom.PathologischeBewertung.TMEQualitaet",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.KolorektalesKarzinom.PathologischeBewertung.TMEQualitaet",
         "short": "TME Qualität",
         "definition": "Qualität des TME-Präparats (Grad 1-3). oBDS KR4 (XSD: RektumQualitaetTME)",
         "min": 0,
@@ -1033,8 +1033,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.PathologischeBewertung.RASMutation",
-        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.PathologischeBewertung.RASMutation",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.KolorektalesKarzinom.PathologischeBewertung.RASMutation",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.KolorektalesKarzinom.PathologischeBewertung.RASMutation",
         "short": "RAS-Mutation",
         "definition": "Mutation des K-ras-Onkogens. oBDS KR10 (XSD: RASMutation)",
         "min": 0,
@@ -1057,8 +1057,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.PostoperativeKomplikationen",
-        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.PostoperativeKomplikationen",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.KolorektalesKarzinom.PostoperativeKomplikationen",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.KolorektalesKarzinom.PostoperativeKomplikationen",
         "short": "Postoperative Komplikationen",
         "definition": "Postoperative Komplikationen",
         "min": 0,
@@ -1081,8 +1081,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.PostoperativeKomplikationen.Anastomoseninsuffizienz",
-        "path": "OrganspezifischeZusatzmodule.KolorektalesKarzinom.PostoperativeKomplikationen.Anastomoseninsuffizienz",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.KolorektalesKarzinom.PostoperativeKomplikationen.Anastomoseninsuffizienz",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.KolorektalesKarzinom.PostoperativeKomplikationen.Anastomoseninsuffizienz",
         "short": "Anastomoseninsuffizienz",
         "definition": "Grad der Anastomoseninsuffizienz beim Rektumkarzinom (Grad A/B/C). oBDS KR8 (XSD: GradRektumAnastomoseninsuffizienz)",
         "min": 0,
@@ -1105,8 +1105,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.Prostata",
-        "path": "OrganspezifischeZusatzmodule.Prostata",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.Prostata",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.Prostata",
         "short": "Prostata",
         "definition": "Organspezifisches Modul Prostatakarzinom, oBDS P1–P9 (XSD Modul_Prostata_Typ)",
         "min": 0,
@@ -1129,8 +1129,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.Prostata.GleasonScore",
-        "path": "OrganspezifischeZusatzmodule.Prostata.GleasonScore",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.Prostata.GleasonScore",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.Prostata.GleasonScore",
         "short": "Gleason Score",
         "definition": "Gleason-Score. oBDS P1 (XSD: GleasonScore)",
         "min": 0,
@@ -1153,8 +1153,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.Prostata.GleasonScore.Score",
-        "path": "OrganspezifischeZusatzmodule.Prostata.GleasonScore.Score",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.Prostata.GleasonScore.Score",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.Prostata.GleasonScore.Score",
         "short": "Gleason Score",
         "definition": "Summe aus primärem und sekundärem Pattern. oBDS P1",
         "min": 0,
@@ -1177,8 +1177,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.Prostata.GleasonScore.GradeGroup",
-        "path": "OrganspezifischeZusatzmodule.Prostata.GleasonScore.GradeGroup",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.Prostata.GleasonScore.GradeGroup",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.Prostata.GleasonScore.GradeGroup",
         "short": "Grade Group",
         "definition": "Internationale Standard Grade Group (1-5). Keine eigene oBDS-Feldnummer (ISUP-Ableitung aus P1).",
         "min": 0,
@@ -1201,8 +1201,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.Prostata.GleasonPattern",
-        "path": "OrganspezifischeZusatzmodule.Prostata.GleasonPattern",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.Prostata.GleasonPattern",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.Prostata.GleasonPattern",
         "short": "Gleason Pattern",
         "definition": "Gleason Patterns (primär/sekundär/tertiär). Komponenten zu oBDS P1 (keine eigene Feldnummer).",
         "min": 0,
@@ -1225,8 +1225,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.Prostata.GleasonPattern.PatternTyp",
-        "path": "OrganspezifischeZusatzmodule.Prostata.GleasonPattern.PatternTyp",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.Prostata.GleasonPattern.PatternTyp",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.Prostata.GleasonPattern.PatternTyp",
         "short": "Pattern Typ",
         "definition": "Primäres, sekundäres oder tertiäres Gleason Pattern.",
         "min": 0,
@@ -1249,8 +1249,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.Prostata.GleasonPattern.PatternWert",
-        "path": "OrganspezifischeZusatzmodule.Prostata.GleasonPattern.PatternWert",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.Prostata.GleasonPattern.PatternWert",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.Prostata.GleasonPattern.PatternWert",
         "short": "Pattern Wert",
         "definition": "Gleason Pattern Wert (1-5, ab 3 als maligne).",
         "min": 0,
@@ -1273,8 +1273,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.Prostata.AnlassGleasonScore",
-        "path": "OrganspezifischeZusatzmodule.Prostata.AnlassGleasonScore",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.Prostata.AnlassGleasonScore",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.Prostata.AnlassGleasonScore",
         "short": "Anlass Gleason-Score",
         "definition": "Anlass der Gleason-Score-Bestimmung (Stanze/OP). oBDS P2 (XSD: AnlassGleasonScore)",
         "min": 0,
@@ -1297,8 +1297,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.Prostata.BiopsieErgebnisse",
-        "path": "OrganspezifischeZusatzmodule.Prostata.BiopsieErgebnisse",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.Prostata.BiopsieErgebnisse",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.Prostata.BiopsieErgebnisse",
         "short": "Biopsie Ergebnisse",
         "definition": "Prostatastanzbiopsie-Ergebnisse. oBDS P3–P6",
         "min": 0,
@@ -1321,8 +1321,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.Prostata.BiopsieErgebnisse.DatumStanzen",
-        "path": "OrganspezifischeZusatzmodule.Prostata.BiopsieErgebnisse.DatumStanzen",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.Prostata.BiopsieErgebnisse.DatumStanzen",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.Prostata.BiopsieErgebnisse.DatumStanzen",
         "short": "Datum der Stanzen",
         "definition": "Datum der Entnahme der Stanzen. oBDS P3 (XSD: DatumStanzen)",
         "min": 0,
@@ -1345,8 +1345,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.Prostata.BiopsieErgebnisse.AnzahlStanzen",
-        "path": "OrganspezifischeZusatzmodule.Prostata.BiopsieErgebnisse.AnzahlStanzen",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.Prostata.BiopsieErgebnisse.AnzahlStanzen",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.Prostata.BiopsieErgebnisse.AnzahlStanzen",
         "short": "Anzahl Stanzen",
         "definition": "Gesamtanzahl der entnommenen Biopsie-Stanzen. oBDS P4 (XSD: AnzahlStanzen)",
         "min": 0,
@@ -1369,8 +1369,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.Prostata.BiopsieErgebnisse.AnzahlPositiverStanzen",
-        "path": "OrganspezifischeZusatzmodule.Prostata.BiopsieErgebnisse.AnzahlPositiverStanzen",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.Prostata.BiopsieErgebnisse.AnzahlPositiverStanzen",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.Prostata.BiopsieErgebnisse.AnzahlPositiverStanzen",
         "short": "Anzahl positive Stanzen",
         "definition": "Anzahl der tumorpositiven Stanzen. oBDS P5 (XSD: AnzahlPosStanzen)",
         "min": 0,
@@ -1393,8 +1393,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.Prostata.BiopsieErgebnisse.KarzinomBefallStanze",
-        "path": "OrganspezifischeZusatzmodule.Prostata.BiopsieErgebnisse.KarzinomBefallStanze",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.Prostata.BiopsieErgebnisse.KarzinomBefallStanze",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.Prostata.BiopsieErgebnisse.KarzinomBefallStanze",
         "short": "Karzinom-Befall je Stanze",
         "definition": "Prozentuale Ausdehnung des Karzinoms in der am stärksten befallenen Stanze. oBDS P6 (XSD: CaBefallStanze)",
         "min": 0,
@@ -1417,8 +1417,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.Prostata.PSAWert",
-        "path": "OrganspezifischeZusatzmodule.Prostata.PSAWert",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.Prostata.PSAWert",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.Prostata.PSAWert",
         "short": "PSA-Wert",
         "definition": "Prostataspezifisches Antigen in ng/ml für Diagnostik und Verlaufskontrolle. oBDS P7 (XSD: PSA)",
         "min": 0,
@@ -1441,8 +1441,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.Prostata.DatumPSA",
-        "path": "OrganspezifischeZusatzmodule.Prostata.DatumPSA",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.Prostata.DatumPSA",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.Prostata.DatumPSA",
         "short": "Datum PSA-Wert",
         "definition": "Datum der Blutentnahme zur PSA-Bestimmung. oBDS P8 (XSD: DatumPSA)",
         "min": 0,
@@ -1465,8 +1465,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.Prostata.ChirurgischeKomplikationen",
-        "path": "OrganspezifischeZusatzmodule.Prostata.ChirurgischeKomplikationen",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.Prostata.ChirurgischeKomplikationen",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.Prostata.ChirurgischeKomplikationen",
         "short": "Chirurgische Komplikationen",
         "definition": "Postoperative Komplikation Clavien-Dindo Grad III/IV innerhalb der ersten 6 Monate. oBDS P9 (XSD: KomplPostOP_ClavienDindo)",
         "min": 0,
@@ -1489,8 +1489,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.Prostata.ChirurgischeKomplikationen.ClavienDindoGrad",
-        "path": "OrganspezifischeZusatzmodule.Prostata.ChirurgischeKomplikationen.ClavienDindoGrad",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.Prostata.ChirurgischeKomplikationen.ClavienDindoGrad",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.Prostata.ChirurgischeKomplikationen.ClavienDindoGrad",
         "short": "Clavien-Dindo Grad",
         "definition": "Graduierung postoperativer Komplikationen nach Clavien-Dindo. oBDS P9",
         "min": 0,
@@ -1513,8 +1513,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.Prostata.ChirurgischeKomplikationen.KomplikationsArt",
-        "path": "OrganspezifischeZusatzmodule.Prostata.ChirurgischeKomplikationen.KomplikationsArt",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.Prostata.ChirurgischeKomplikationen.KomplikationsArt",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.Prostata.ChirurgischeKomplikationen.KomplikationsArt",
         "short": "Komplikationsart",
         "definition": "Spezifische Art der postoperativen Komplikation. Komponente zu oBDS P9 (keine eigene Feldnummer).",
         "min": 0,
@@ -1537,8 +1537,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.MalignesMelanom",
-        "path": "OrganspezifischeZusatzmodule.MalignesMelanom",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.MalignesMelanom",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.MalignesMelanom",
         "short": "Malignes Melanom",
         "definition": "Organspezifisches Modul Malignes Melanom, oBDS MM1–MM4 (XSD Modul_Malignes_Melanom_Typ)",
         "min": 0,
@@ -1561,8 +1561,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.MalignesMelanom.Sicherheitsabstand",
-        "path": "OrganspezifischeZusatzmodule.MalignesMelanom.Sicherheitsabstand",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.MalignesMelanom.Sicherheitsabstand",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.MalignesMelanom.Sicherheitsabstand",
         "short": "Sicherheitsabstand Primärtumor",
         "definition": "Minimaler Sicherheitsabstand zum Primärtumor in mm. oBDS MM1 (XSD: Sicherheitsabstand_Primaertumor)",
         "min": 0,
@@ -1585,8 +1585,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.MalignesMelanom.BreslowTiefe",
-        "path": "OrganspezifischeZusatzmodule.MalignesMelanom.BreslowTiefe",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.MalignesMelanom.BreslowTiefe",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.MalignesMelanom.BreslowTiefe",
         "short": "Tumordicke (Breslow)",
         "definition": "Breslow-Tumordicke in mm beim Malignen Melanom der Haut. oBDS MM2 (XSD: Tumordicke)",
         "min": 0,
@@ -1609,8 +1609,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.MalignesMelanom.LDH",
-        "path": "OrganspezifischeZusatzmodule.MalignesMelanom.LDH",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.MalignesMelanom.LDH",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.MalignesMelanom.LDH",
         "short": "Laktatdehydrogenase",
         "definition": "Laktatdehydrogenase als prognostischer Marker. oBDS MM3 (XSD: LDH)",
         "min": 0,
@@ -1633,8 +1633,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.MalignesMelanom.LDH.Wert",
-        "path": "OrganspezifischeZusatzmodule.MalignesMelanom.LDH.Wert",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.MalignesMelanom.LDH.Wert",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.MalignesMelanom.LDH.Wert",
         "short": "LDH-Wert",
         "definition": "Laktatdehydrogenase Aktivität in U/L als prognostischer Marker. oBDS MM3",
         "min": 0,
@@ -1657,8 +1657,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.MalignesMelanom.LDH.Bewertung",
-        "path": "OrganspezifischeZusatzmodule.MalignesMelanom.LDH.Bewertung",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.MalignesMelanom.LDH.Bewertung",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.MalignesMelanom.LDH.Bewertung",
         "short": "LDH-Bewertung",
         "definition": "Klinische Bewertung des LDH-Werts (normal/erhöht). Komponente zu oBDS MM3.",
         "min": 0,
@@ -1681,8 +1681,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.MalignesMelanom.Ulzeration",
-        "path": "OrganspezifischeZusatzmodule.MalignesMelanom.Ulzeration",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.MalignesMelanom.Ulzeration",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.MalignesMelanom.Ulzeration",
         "short": "Ulzeration",
         "definition": "Pathologisches Kriterium der Ulzeration beim Malignen Melanom der Haut. oBDS MM4 (XSD: Ulzeration)",
         "min": 0,
@@ -1705,8 +1705,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.ModulAllgemein",
-        "path": "OrganspezifischeZusatzmodule.ModulAllgemein",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.ModulAllgemein",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.ModulAllgemein",
         "short": "Modul Allgemein",
         "definition": "Organübergreifende Zusatzitems (XSD Modul_Allgemein_Typ). Im Feldkatalog auf basisdatensatz.de noch organbezogen geführt (M9/M10 bzw. KR11/KR12), im oBDS-XML-Schema zentralisiert.",
         "min": 0,
@@ -1729,8 +1729,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.ModulAllgemein.Sozialdienstkontakt",
-        "path": "OrganspezifischeZusatzmodule.ModulAllgemein.Sozialdienstkontakt",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.ModulAllgemein.Sozialdienstkontakt",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.ModulAllgemein.Sozialdienstkontakt",
         "short": "Datum des Sozialdienstkontaktes",
         "definition": "Datum des Sozialdienstkontaktes. Web-Feldkatalog: M9 (Mamma) / KR11 (Kolorektal); XSD: Modul_Allgemein.Sozialdienstkontakt",
         "min": 0,
@@ -1753,8 +1753,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.ModulAllgemein.Psychoonkologiekontakt",
-        "path": "OrganspezifischeZusatzmodule.ModulAllgemein.Psychoonkologiekontakt",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.ModulAllgemein.Psychoonkologiekontakt",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.ModulAllgemein.Psychoonkologiekontakt",
         "short": "Datum des Psychoonkologiekontaktes",
         "definition": "Datum des Psychoonkologiekontaktes. XSD: Modul_Allgemein.Psychoonkologiekontakt (kein Feld im Web-Feldkatalog der Organmodule)",
         "min": 0,
@@ -1777,8 +1777,8 @@
         ]
       },
       {
-        "id": "OrganspezifischeZusatzmodule.ModulAllgemein.Studienteilnahme",
-        "path": "OrganspezifischeZusatzmodule.ModulAllgemein.Studienteilnahme",
+        "id": "mii-lm-onko-organspezifische-zusatzmodule.ModulAllgemein.Studienteilnahme",
+        "path": "mii-lm-onko-organspezifische-zusatzmodule.ModulAllgemein.Studienteilnahme",
         "short": "Datum der Studienrekrutierung",
         "definition": "Datum der Studienrekrutierung. Web-Feldkatalog: M10 (Mamma) / KR12 (Kolorektal); XSD: Modul_Allgemein.Studienteilnahme",
         "min": 0,

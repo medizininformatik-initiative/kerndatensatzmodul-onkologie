@@ -6,7 +6,7 @@ Description: "Logisches Modell für die organspezifischen Zusatzmodule des oBDS.
 * insert Publisher
 * insert PR_CS_VS_Version
 * insert OnkoCRMILogicalModel
-* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/LogicalModel/OrganspezifischeZusatzmodule"
+* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-lm-onko-organspezifische-zusatzmodule"
 
 * Mamma 0..* BackboneElement "Mamma" "Organspezifisches Modul Mammakarzinom, oBDS M1–M8 (XSD Modul_Mamma_Typ)"
   * Menopausenstatus 0..1 CodeableConcept "Menopausenstatus" "Prätherapeutischer Menopausenstatus einer Patientin mit Mamma-Karzinom. oBDS M1"
