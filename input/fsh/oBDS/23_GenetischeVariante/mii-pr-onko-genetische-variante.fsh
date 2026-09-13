@@ -5,7 +5,10 @@ Title: "MII PR Onkologie Genetische Variante"
 Description: "Genetische Variante wie im oBDS beschrieben"
 * insert PR_CS_VS_Version
 * insert Publisher
-* insert OnkoCRMIProfile
+// UK-Variante noetig, seit molgen 2027.0.0-ballot selbst CRMI-Extensions am
+// Parent variante traegt (SUSHI vererbt Root-Extensions partiell; der normale
+// [+]-Komposit kollidiert — 'multiple choice value assignments', beads pxy).
+* insert OnkoCRMIProfileUK
 * ^status = #active
 * meta.profile 0..* MS
 * encounter 0..1 MS

@@ -335,6 +335,16 @@ RuleSet: OnkoCRMIProfileUK
 * insert CRMIPublishableStructureDefinition
 * insert CRMIArtifactUsageProfileUK
 * insert CRMIMetadataStructureDefinitionUK(2026-01-03, http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl, C3262)
+// Ergaenzt 2026-09-13 (Lektion aus dem molgen-CRMI-Einbau): SUSHI vererbt vom
+// CRMI-tragenden Parent NUR contributors/topic/usage/versionPolicy/
+// versionAlgorithm/knowledgeCapability — meta.profile, meta.extension
+// (license/package-source), effectivePeriod und experimental fehlen den
+// UK-Profilen bisher. meta.* kollidiert nicht (nicht vererbt), der Rest
+// URL-keyed. Die Werte ueberschreiben zugleich geerbte Fremdmodul-Werte.
+* insert CRMIMetaLicenseAndSource
+* ^extension[http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm].valueCoding = http://hl7.org/fhir/version-algorithm#semver "SemVer"
+* ^extension[http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod].valuePeriod.start = "2026"
+* ^experimental = false
 
 RuleSet: CRMIArtifactUsageProfileUK
 * ^extension[http://hl7.org/fhir/StructureDefinition/artifact-usage].valueMarkdown = "Use this profile as the technical FHIR representation of the corresponding Medical Informatics Initiative logical model. The profile constrains a base FHIR resource for the MII module context by specifying how elements are used, which elements are required or not used, which extensions and terminology bindings apply, and how the resource maps to the module-specific content model. Implementers should produce and consume resource instances that conform to this profile when exchanging data for the corresponding MII module."
