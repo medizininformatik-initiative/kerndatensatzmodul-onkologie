@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-krk-stoma-obds-sct | *Version*:2027.0.0-ballot.rc2 |
-| Active Stand: 2026-09-09 | *Maschinenlesbarer Name*: |
+| Active Stand: 2026-09-14 | *Maschinenlesbarer Name*: |
 | **Copyright/Rechtliches**: This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. | |
 
  
@@ -66,7 +66,7 @@ Mapping der oBDS-Codes für präoperative Stoma-Anzeichnung zu SNOMED CT
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
-    "valueDate" : "2026-01-03"
+    "valueDate" : "2026-09-15"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/artifact-topic",
@@ -143,7 +143,7 @@ Mapping der oBDS-Codes für präoperative Stoma-Anzeichnung zu SNOMED CT
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
     "valuePeriod" : {
-      "start" : "2026"
+      "start" : "2027"
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-krk-stoma-obds-sct",
@@ -151,7 +151,7 @@ Mapping der oBDS-Codes für präoperative Stoma-Anzeichnung zu SNOMED CT
   "title" : "Mapping oBDS Stoma-Anzeichnung zu SNOMED CT",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-09-09T15:05:53+00:00",
+  "date" : "2026-09-14T06:56:03+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

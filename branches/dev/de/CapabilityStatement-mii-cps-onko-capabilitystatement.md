@@ -52,7 +52,7 @@ Das vorliegende CapabilityStatement beschreibt alle verpflichtenden Interaktione
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
-    "valueDate" : "2026-01-03"
+    "valueDate" : "2026-09-15"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/artifact-topic",

@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/LogicalModel/mii-lm-mvgenomseq-onkologie | *Version*:2027.0.0-ballot.rc2 |
-| Active Stand: 2026-09-09 | *Maschinenlesbarer Name*:MII_LM_MVGenomSeq_Onkologie |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-lm-mvgenomseq-onkologie | *Version*:2027.0.0-ballot.rc2 |
+| Active Stand: 2026-09-14 | *Maschinenlesbarer Name*:MII_LM_MVGenomSeq_Onkologie |
 
  
 MII LogicalModel Modellvorhaben Genomsequenzierung Onkologie 
@@ -119,7 +119,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-mvgen
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
-    "valueDate" : "2026-01-03"
+    "valueDate" : "2026-09-15"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/artifact-topic",
@@ -196,16 +196,16 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-mvgen
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
     "valuePeriod" : {
-      "start" : "2026"
+      "start" : "2027"
     }
   }],
-  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/LogicalModel/mii-lm-mvgenomseq-onkologie",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-lm-mvgenomseq-onkologie",
   "version" : "2027.0.0-ballot.rc2",
   "name" : "MII_LM_MVGenomSeq_Onkologie",
   "title" : "MII LM Modellvorhaben Genomsequenzierung Onkologie",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T15:05:53+00:00",
+  "date" : "2026-09-14T06:56:03+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -229,7 +229,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-mvgen
   }],
   "kind" : "logical",
   "abstract" : false,
-  "type" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/LogicalModel/mii-lm-mvgenomseq-onkologie",
+  "type" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-lm-mvgenomseq-onkologie",
   "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation" : "specialization",
   "differential" : {

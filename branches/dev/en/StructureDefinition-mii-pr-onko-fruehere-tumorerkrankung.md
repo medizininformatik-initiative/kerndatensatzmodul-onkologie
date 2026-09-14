@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fruehere-tumorerkrankung | *Version*:2027.0.0-ballot.rc2 |
-| Active as of 2026-09-09 | *Computable Name*:MII_PR_Onko_Fruehere_Tumorerkrankung |
+| Active as of 2026-09-14 | *Computable Name*:MII_PR_Onko_Fruehere_Tumorerkrankung |
 
  
 Dieses Profil beschreibt frühere Tumorerkrankungen, die in der Anamnese zu einem früheren Zeitpunkt diagnostiziert/behandelt wurden. Basiert auf FHIR Condition, da historische Daten oft nur als Freitext vorliegen. 
@@ -194,7 +194,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-frueh
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
-    "valueDate" : "2026-01-03"
+    "valueDate" : "2026-09-15"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/artifact-topic",
@@ -271,7 +271,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-frueh
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
     "valuePeriod" : {
-      "start" : "2026"
+      "start" : "2027"
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fruehere-tumorerkrankung",
@@ -293,7 +293,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-frueh
   },
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T15:05:53+00:00",
+  "date" : "2026-09-14T06:56:03+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

@@ -625,9 +625,9 @@
   "name" : "MII_CM_MVGenomSeq_Onkologie"
 },
 {
-  "id" : "mii-ig-onko-de-v2026",
+  "id" : "mii-ig-onko-de",
   "type" : "ImplementationGuide",
-  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ImplementationGuide/mii-ig-onko-de-v2026",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ImplementationGuide/mii-ig-onko-de",
   "version" : "2027.0.0-ballot.rc2",
   "name" : "MII_IG_Onko_DE"
 },
@@ -756,27 +756,6 @@
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-procedure-strahlentherapie-strahlenart",
   "version" : "2027.0.0-ballot.rc2",
   "name" : "MII_SP_Procedure_Strahlentherapie_Strahlenart"
-},
-{
-  "id" : "mii-lm-onko",
-  "type" : "StructureDefinition",
-  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/LogicalModel/Onkologie",
-  "version" : "2027.0.0-ballot.rc2",
-  "name" : "MII_LM_Onko"
-},
-{
-  "id" : "mii-lm-onko-organspezifische-zusatzmodule",
-  "type" : "StructureDefinition",
-  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/LogicalModel/OrganspezifischeZusatzmodule",
-  "version" : "2027.0.0-ballot.rc2",
-  "name" : "MII_LM_Onko_Organspezifische_Zusatzmodule"
-},
-{
-  "id" : "mii-lm-mvgenomseq-onkologie",
-  "type" : "StructureDefinition",
-  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/LogicalModel/mii-lm-mvgenomseq-onkologie",
-  "version" : "2027.0.0-ballot.rc2",
-  "name" : "MII_LM_MVGenomSeq_Onkologie"
 },
 {
   "id" : "mii-ex-onko-histology-morphology-behavior-icdo3",
@@ -910,6 +889,27 @@
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-transformation-von",
   "version" : "2027.0.0-ballot.rc2",
   "name" : "MII_EX_Onko_Transformation_Von"
+},
+{
+  "id" : "mii-lm-mvgenomseq-onkologie",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-lm-mvgenomseq-onkologie",
+  "version" : "2027.0.0-ballot.rc2",
+  "name" : "MII_LM_MVGenomSeq_Onkologie"
+},
+{
+  "id" : "mii-lm-onko",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-lm-onko",
+  "version" : "2027.0.0-ballot.rc2",
+  "name" : "MII_LM_Onko"
+},
+{
+  "id" : "mii-lm-onko-organspezifische-zusatzmodule",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-lm-onko-organspezifische-zusatzmodule",
+  "version" : "2027.0.0-ballot.rc2",
+  "name" : "MII_LM_Onko_Organspezifische_Zusatzmodule"
 },
 {
   "id" : "mii-pr-onko-allgemeiner-leistungszustand-ecog",
@@ -1913,11 +1913,46 @@
   "name" : "MII_VS_Onko_Strahlentherapie_Boosts"
 },
 {
+  "id" : "mii-vs-onko-strahlentherapie-ende-grund",
+  "type" : "ValueSet",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-ende-grund",
+  "version" : "2027.0.0-ballot.rc2",
+  "name" : "MII_VS_Onko_Strahlentherapie_Ende_Grund"
+},
+{
   "id" : "mii-vs-onko-strahlentherapie-intention",
   "type" : "ValueSet",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-intention",
   "version" : "2027.0.0-ballot.rc2",
   "name" : "MII_VS_Onko_Strahlentherapie_Intention"
+},
+{
+  "id" : "mii-vs-onko-strahlentherapie-stellungzurop",
+  "type" : "ValueSet",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-stellungzurop",
+  "version" : "2027.0.0-ballot.rc2",
+  "name" : "MII_VS_Onko_Strahlentherapie_StellungZurOp"
+},
+{
+  "id" : "mii-vs-onko-strahlentherapie-strahlenart",
+  "type" : "ValueSet",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-strahlenart",
+  "version" : "2027.0.0-ballot.rc2",
+  "name" : "MII_VS_Onko_Strahlentherapie_Strahlenart"
+},
+{
+  "id" : "mii-vs-onko-strahlentherapie-strahlungseinheit",
+  "type" : "ValueSet",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-strahlungseinheit",
+  "version" : "2027.0.0-ballot.rc2",
+  "name" : "MII_VS_Onko_Strahlentherapie_Strahlungseinheit"
+},
+{
+  "id" : "mii-vs-onko-strahlentherapie-zielgebiet",
+  "type" : "ValueSet",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-zielgebiet",
+  "version" : "2027.0.0-ballot.rc2",
+  "name" : "MII_VS_Onko_Strahlentherapie_Zielgebiet"
 },
 {
   "id" : "mii-vs-onko-studienteilnahme",
@@ -1934,6 +1969,13 @@
   "name" : "MII_VS_Onko_Systemische_Therapie_Art"
 },
 {
+  "id" : "mii-vs-onko-systemische-therapie-ende-grund",
+  "type" : "ValueSet",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-ende-grund",
+  "version" : "2027.0.0-ballot.rc2",
+  "name" : "MII_VS_Onko_Systemische_Therapie_Ende_Grund"
+},
+{
   "id" : "mii-vs-onko-systemische-therapie-intention",
   "type" : "ValueSet",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-intention",
@@ -1946,6 +1988,13 @@
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-protokolle",
   "version" : "2027.0.0-ballot.rc2",
   "name" : "MII_VS_Onko_Systemische_Therapie_Protokolle"
+},
+{
+  "id" : "mii-vs-onko-systemische-therapie-stellungzurop",
+  "type" : "ValueSet",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-stellungzurop",
+  "version" : "2027.0.0-ballot.rc2",
+  "name" : "MII_VS_Onko_Systemische_Therapie_StellungZurOp"
 },
 {
   "id" : "mii-vs-onko-systemische-therapie-substanzen",
@@ -2240,55 +2289,6 @@
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-weitere-klassifikationen-auspraegungen",
   "version" : "2027.0.0-ballot.rc2",
   "name" : "MII_VS_Onko_Weitere_Klassifikationen_Auspraegungen"
-},
-{
-  "id" : "mii-vs-onko-strahlentherapie-ende-grund",
-  "type" : "ValueSet",
-  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-strahlentherapie-ende-grund",
-  "version" : "2027.0.0-ballot.rc2",
-  "name" : "MII_VS_Onko_Strahlentherapie_Ende_Grund"
-},
-{
-  "id" : "mii-vs-onko-strahlentherapie-stellungzurop",
-  "type" : "ValueSet",
-  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-strahlentherapie-stellungzurop",
-  "version" : "2027.0.0-ballot.rc2",
-  "name" : "MII_VS_Onko_Strahlentherapie_StellungZurOp"
-},
-{
-  "id" : "mii-vs-onko-strahlentherapie-strahlenart",
-  "type" : "ValueSet",
-  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-strahlentherapie-strahlenart",
-  "version" : "2027.0.0-ballot.rc2",
-  "name" : "MII_VS_Onko_Strahlentherapie_Strahlenart"
-},
-{
-  "id" : "mii-vs-onko-strahlentherapie-strahlungseinheit",
-  "type" : "ValueSet",
-  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-strahlentherapie-strahlungseinheit",
-  "version" : "2027.0.0-ballot.rc2",
-  "name" : "MII_VS_Onko_Strahlentherapie_Strahlungseinheit"
-},
-{
-  "id" : "mii-vs-onko-strahlentherapie-zielgebiet",
-  "type" : "ValueSet",
-  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-strahlentherapie-zielgebiet",
-  "version" : "2027.0.0-ballot.rc2",
-  "name" : "MII_VS_Onko_Strahlentherapie_Zielgebiet"
-},
-{
-  "id" : "mii-vs-onko-systemische-therapie-ende-grund",
-  "type" : "ValueSet",
-  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-systemische-therapie-ende-grund",
-  "version" : "2027.0.0-ballot.rc2",
-  "name" : "MII_VS_Onko_Systemische_Therapie_Ende_Grund"
-},
-{
-  "id" : "mii-vs-onko-systemische-therapie-stellungzurop",
-  "type" : "ValueSet",
-  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-systemische-therapie-stellungzurop",
-  "version" : "2027.0.0-ballot.rc2",
-  "name" : "MII_VS_Onko_Systemische_Therapie_StellungZurOp"
 },
 {
   "id" : "mii-cs-onko-tnm-uicc",

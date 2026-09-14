@@ -19,7 +19,7 @@
   },
   "parameter" : [{
     "name" : "system-version",
-    "valueCanonical" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250701"
+    "valueCanonical" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701"
   },
   {
     "name" : "system-version",
@@ -380,6 +380,10 @@
   {
     "name" : "default-canonical-version",
     "valueCanonical" : "http://hl7.org/fhir/SearchParameter/Condition-recorded-date|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-condition-asserted-date|2027.0.0-ballot"
   },
   {
     "name" : "default-canonical-version",
@@ -975,7 +979,7 @@
   },
   {
     "name" : "default-valueset-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-strahlentherapie-strahlungseinheit|2027.0.0-ballot.rc2"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-strahlungseinheit|2027.0.0-ballot.rc2"
   },
   {
     "name" : "default-valueset-version",
@@ -987,7 +991,7 @@
   },
   {
     "name" : "default-valueset-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-strahlentherapie-stellungzurop|2027.0.0-ballot.rc2"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-stellungzurop|2027.0.0-ballot.rc2"
   },
   {
     "name" : "default-valueset-version",
@@ -995,7 +999,7 @@
   },
   {
     "name" : "default-valueset-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-systemische-therapie-stellungzurop|2027.0.0-ballot.rc2"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-stellungzurop|2027.0.0-ballot.rc2"
   },
   {
     "name" : "default-valueset-version",
@@ -1147,7 +1151,7 @@
   },
   {
     "name" : "default-canonical-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante|2027.0.0-ballot.rc2"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante|2027.0.0-ballot"
   },
   {
     "name" : "default-valueset-version",
@@ -1531,7 +1535,7 @@
   },
   {
     "name" : "default-valueset-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-strahlentherapie-zielgebiet|2027.0.0-ballot.rc2"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-zielgebiet|2027.0.0-ballot.rc2"
   },
   {
     "name" : "default-canonical-version",
@@ -1539,7 +1543,7 @@
   },
   {
     "name" : "default-valueset-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-strahlentherapie-strahlenart|2027.0.0-ballot.rc2"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-strahlenart|2027.0.0-ballot.rc2"
   },
   {
     "name" : "default-valueset-version",
@@ -1555,11 +1559,7 @@
   },
   {
     "name" : "default-valueset-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-strahlentherapie-ende-grund|2027.0.0-ballot.rc2"
-  },
-  {
-    "name" : "default-canonical-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-studie|2027.0.0-ballot.rc1"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-ende-grund|2027.0.0-ballot.rc2"
   },
   {
     "name" : "default-canonical-version",
@@ -1571,7 +1571,7 @@
   },
   {
     "name" : "default-canonical-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationStatement|2027.0.0-ballot.rc5"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationStatement|2027.0.0-ballot"
   },
   {
     "name" : "default-valueset-version",
@@ -1579,15 +1579,15 @@
   },
   {
     "name" : "default-valueset-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/ValueSet/fallkontext|2027.0.0-ballot.rc5"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/ValueSet/fallkontext|2027.0.0-ballot"
   },
   {
     "name" : "default-canonical-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/Medication|2027.0.0-ballot.rc5"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/Medication|2027.0.0-ballot"
   },
   {
     "name" : "default-valueset-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/ValueSet/mii-vs-medikation-atc|2027.0.0-ballot.rc5"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/ValueSet/mii-vs-medikation-atc|2027.0.0-ballot"
   },
   {
     "name" : "default-valueset-version",
@@ -1604,6 +1604,10 @@
   {
     "name" : "default-canonical-version",
     "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/Timing|4.0.1"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "http://hl7.org/fhir/uv/ips/ValueSet/body-site-uv-ips|2.0.1"
   },
   {
     "name" : "default-valueset-version",
@@ -1627,7 +1631,7 @@
   },
   {
     "name" : "default-valueset-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-systemische-therapie-ende-grund|2027.0.0-ballot.rc2"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-ende-grund|2027.0.0-ballot.rc2"
   },
   {
     "name" : "default-valueset-version",
@@ -1643,7 +1647,7 @@
   },
   {
     "name" : "default-canonical-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationRequest|2027.0.0-ballot.rc5"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationRequest|2027.0.0-ballot"
   },
   {
     "name" : "default-valueset-version",
@@ -1763,7 +1767,7 @@
   },
   {
     "name" : "default-canonical-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/ObservationLab|2027.0.0-ballot.rc3"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/ObservationLab|2027.0.0-ballot.rc4"
   },
   {
     "name" : "default-canonical-version",
@@ -1779,11 +1783,11 @@
   },
   {
     "name" : "default-canonical-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/InterpretationsbeeinflussendeEigenschaft|2027.0.0-ballot.rc3"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/InterpretationsbeeinflussendeEigenschaft|2027.0.0-ballot.rc4"
   },
   {
     "name" : "default-valueset-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/ValueSet/mii-vs-labor-identifier-type-codes|2027.0.0-ballot.rc3"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/ValueSet/mii-vs-labor-identifier-type-codes|2027.0.0-ballot.rc4"
   },
   {
     "name" : "default-canonical-version",
@@ -1811,7 +1815,7 @@
   },
   {
     "name" : "default-canonical-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/QuelleKlinischesBezugsdatum|2027.0.0-ballot.rc3"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/QuelleKlinischesBezugsdatum|2027.0.0-ballot.rc4"
   },
   {
     "name" : "default-canonical-version",
@@ -1823,11 +1827,11 @@
   },
   {
     "name" : "default-valueset-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/ValueSet/Laborergebnis-codiert|2027.0.0-ballot.rc3"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/ValueSet/Laborergebnis-codiert|2027.0.0-ballot.rc4"
   },
   {
     "name" : "default-valueset-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/ValueSet/Interpretation|2027.0.0-ballot.rc3"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/ValueSet/Interpretation|2027.0.0-ballot.rc4"
   },
   {
     "name" : "default-valueset-version",

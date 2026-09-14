@@ -7,7 +7,7 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ImplementationGuide/mii-ig-onko-de-v2026 | *Version*:2027.0.0-ballot.rc2 |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ImplementationGuide/mii-ig-onko-de | *Version*:2027.0.0-ballot.rc2 |
 | Active Stand: 2026-09-09 | *Maschinenlesbarer Name*:MII_IG_Onko_DE |
 
 ### Einführung
@@ -52,7 +52,7 @@ Wissenschaftler:innen, die KDS-Daten für die medizinische Forschung nutzen.
 * **Konformität** — die KDS-weiten Konformitätsregeln (Verbindlichkeitssprache, Must Support, Umgang mit fehlenden Daten) pflegt zentral das [Meta-Modul](https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance); die modulspezifischen Hinweise zu [Sicherheit und Datenschutz](security-and-privacy.md) sind Teil dieses Leitfadens.
 * **[Profile](profiles.md)** und die weiteren **[Artefakt-Seiten](artifacts.md)** — die technischen Artefakte.
 * **[Beispiele](examples.md)** — Beispielinstanzen.
-* **[Abhängigkeiten](ImplementationGuide-mii-ig-onko-de-v2026.md)** — die ImplementationGuide-Ressource mit Abhängigkeitstabelle und Copyright-Angaben.
+* **[Abhängigkeiten](ImplementationGuide-mii-ig-onko-de.md)** — die ImplementationGuide-Ressource mit Abhängigkeitstabelle und Copyright-Angaben.
 
 ### Verwandte Leitfäden
 

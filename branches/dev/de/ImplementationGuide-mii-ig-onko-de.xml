@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <ImplementationGuide xmlns="http://hl7.org/fhir">
-  <id value="mii-ig-onko-de-v2026"/>
+  <id value="mii-ig-onko-de"/>
   <meta>
     <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableimplementationguide"/>
     <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishableimplementationguide"/>
     <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-implementationguide"/>
   </meta>
-  <language value="en"/>
+  <language value="de"/>
   <text>
-    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ImplementationGuide mii-ig-onko-de-v2026</b></p><a name="mii-ig-onko-de-v2026"> </a><a name="hcmii-ig-onko-de-v2026"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: en</p><p style="margin-bottom: 0px">Profiles: <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-shareableimplementationguide.html">CRMI Shareable ImplementationGuide</a>, <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-publishableimplementationguide.html">CRMI Publishable ImplementationGuide</a>, <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-implementationguide.html">CRMI ImplementationGuide</a></p></div><h2>MII_IG_Onko_DE</h2><p>The official URL for this implementation guide is: </p><pre>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ImplementationGuide/mii-ig-onko-de-v2026</pre><div><p>FHIR profiles for representing oncological data based on the German oBDS (Onkologischer Basisdatensatz) specification, part of the MII core dataset.</p>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ImplementationGuide mii-ig-onko-de</b></p><a name="de-mii-ig-onko-de"> </a><a name="de-hcmii-ig-onko-de"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: en</p><p style="margin-bottom: 0px">Profiles: <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-shareableimplementationguide.html">CRMI Shareable ImplementationGuide</a>, <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-publishableimplementationguide.html">CRMI Publishable ImplementationGuide</a>, <a href="http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-implementationguide.html">CRMI ImplementationGuide</a></p></div><h2>MII_IG_Onko_DE</h2><p>The official URL for this implementation guide is: </p><pre>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ImplementationGuide/mii-ig-onko-de</pre><div><p>FHIR profiles for representing oncological data based on the German oBDS (Onkologischer Basisdatensatz) specification, part of the MII core dataset.</p>
 </div></div>
   </text>
   <extension url="http://hl7.org/fhir/StructureDefinition/resource-approvalDate">
-    <valueDate value="2026-03-27"/>
+    <valueDate value="2026-09-15"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability">
     <valueCode value="shareable"/>
@@ -43,7 +43,7 @@
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
     <valuePeriod>
-      <start value="2026"/>
+      <start value="2027"/>
     </valuePeriod>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/artifact-author">
@@ -120,7 +120,7 @@
       </coding>
     </valueCodeableConcept>
   </extension>
-  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ImplementationGuide/mii-ig-onko-de-v2026"/>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ImplementationGuide/mii-ig-onko-de"/>
   <version value="2027.0.0-ballot.rc2"/>
   <name value="MII_IG_Onko_DE"/>
   <title value="MII IG Kerndatensatz-Modul Onkologie"/>
@@ -154,7 +154,7 @@
   <dependsOn id="de_medizininformatikinitiative_kerndatensatz_meta">
     <uri value="https://www.medizininformatik-initiative.de/fhir/modul-meta/ImplementationGuide/mii-ig-meta"/>
     <packageId value="de.medizininformatikinitiative.kerndatensatz.meta"/>
-    <version value="2027.0.0-ballot.rc3"/>
+    <version value="2027.0.0-ballot"/>
   </dependsOn>
   <dependsOn id="hl7_fhir_uv_xver_r5_r4">
     <uri value="http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4"/>
@@ -169,27 +169,27 @@
   <dependsOn id="de_medizininformatikinitiative_kerndatensatz_base">
     <uri value="https://www.medizininformatik-initiative.de/fhir/modul-base/ImplementationGuide/mii-ig-base"/>
     <packageId value="de.medizininformatikinitiative.kerndatensatz.base"/>
-    <version value="2027.0.0-ballot.rc1"/>
+    <version value="2027.0.0-ballot"/>
   </dependsOn>
   <dependsOn id="de_medizininformatikinitiative_kerndatensatz_biobank">
-    <uri value="http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.biobank/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.biobank"/>
+    <uri value="https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/ImplementationGuide/mii-ig-biobank"/>
     <packageId value="de.medizininformatikinitiative.kerndatensatz.biobank"/>
-    <version value="2027.0.0-ballot.rc2"/>
+    <version value="2027.0.0-ballot"/>
   </dependsOn>
   <dependsOn id="de_medizininformatikinitiative_kerndatensatz_laborbefund">
     <uri value="http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.laborbefund/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.laborbefund"/>
     <packageId value="de.medizininformatikinitiative.kerndatensatz.laborbefund"/>
-    <version value="2027.0.0-ballot.rc3"/>
+    <version value="2027.0.0-ballot.rc4"/>
   </dependsOn>
   <dependsOn id="de_medizininformatikinitiative_kerndatensatz_medikation">
     <uri value="https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/ImplementationGuide/mii-ig-medikation"/>
     <packageId value="de.medizininformatikinitiative.kerndatensatz.medikation"/>
-    <version value="2027.0.0-ballot.rc5"/>
+    <version value="2027.0.0-ballot"/>
   </dependsOn>
   <dependsOn id="de_medizininformatikinitiative_kerndatensatz_molgen">
     <uri value="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ImplementationGuide/mii-ig-molgen"/>
     <packageId value="de.medizininformatikinitiative.kerndatensatz.molgen"/>
-    <version value="2027.0.0-ballot.rc2"/>
+    <version value="2027.0.0-ballot"/>
   </dependsOn>
   <dependsOn id="hl7_fhir_uv_genomics_reporting">
     <uri value="http://hl7.org/fhir/uv/genomics-reporting/ImplementationGuide/hl7.fhir.uv.genomics-reporting"/>
@@ -3112,7 +3112,7 @@
         <reference value="AdverseEvent/mii-exa-onko-nebenwirkung-crs-grad4"/>
       </reference>
       <name value="MII EXA Onkologie Nebenwirkung Cytokine-Release-Syndrom CTCAE Grad 4"/>
-      <description value="Cytokine-Release-Syndrom CTCAE Grad 4 (MedDRA 10052015) unter medikamentöser systemischer Therapie — SNOMED-Zweitkodierung gemäß ConceptMap gegen die im Expansions-Manifest gepinnte SNOMED-Version (International 20250701)."/>
+      <description value="Cytokine-Release-Syndrom CTCAE Grad 4 (MedDRA 10052015) unter medikamentöser systemischer Therapie — SNOMED-Zweitkodierung gemäß ConceptMap gegen die im Expansions-Manifest gepinnte SNOMED-Version (International 20260701)."/>
       <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung-adverse-event"/>
     </resource>
     <resource>
@@ -7823,14 +7823,14 @@
         <valueUrl value="toc.html"/>
       </extension>
       <nameUrl value="toc.html"/>
-      <title value="Table of Contents"/>
+      <title value="Inhaltsverzeichnis"/>
       <generation value="html"/>
       <page>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
           <valueUrl value="index.html"/>
         </extension>
         <nameUrl value="index.html"/>
-        <title value="Home"/>
+        <title value="Startseite"/>
         <generation value="markdown"/>
       </page>
       <page>
@@ -7838,14 +7838,14 @@
           <valueUrl value="guidance.html"/>
         </extension>
         <nameUrl value="guidance.html"/>
-        <title value="Guidance"/>
+        <title value="Anleitung"/>
         <generation value="markdown"/>
         <page>
           <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
             <valueUrl value="anwendungsfaelle-informationsmodell.html"/>
           </extension>
           <nameUrl value="anwendungsfaelle-informationsmodell.html"/>
-          <title value="Use Cases and Information Model"/>
+          <title value="Anwendungsfälle und Informationsmodell"/>
           <generation value="markdown"/>
         </page>
         <page>
@@ -7853,7 +7853,7 @@
             <valueUrl value="datasets-and-descriptions.html"/>
           </extension>
           <nameUrl value="datasets-and-descriptions.html"/>
-          <title value="Datasets and Descriptions"/>
+          <title value="Logische Modelle"/>
           <generation value="markdown"/>
         </page>
         <page>
@@ -7861,7 +7861,7 @@
             <valueUrl value="tnm-breast-cancer-journey.html"/>
           </extension>
           <nameUrl value="tnm-breast-cancer-journey.html"/>
-          <title value="TNM Breast Cancer Journey (Example)"/>
+          <title value="TNM Mammakarzinom-Patientenreise (Beispiel)"/>
           <generation value="markdown"/>
         </page>
         <page>
@@ -7869,7 +7869,7 @@
             <valueUrl value="toronto-klassifikation.html"/>
           </extension>
           <nameUrl value="toronto-klassifikation.html"/>
-          <title value="Toronto Classification (Pediatric Oncology)"/>
+          <title value="Toronto-Klassifikation (pädiatrische Onkologie)"/>
           <generation value="markdown"/>
         </page>
         <page>
@@ -7877,7 +7877,7 @@
             <valueUrl value="molgen-variantentypen.html"/>
           </extension>
           <nameUrl value="molgen-variantentypen.html"/>
-          <title value="MolGen Mapping of Variant Types"/>
+          <title value="MolGen-Abbildung der Variantentypen"/>
           <generation value="markdown"/>
         </page>
         <page>
@@ -7885,7 +7885,7 @@
             <valueUrl value="researcher-guidance.html"/>
           </extension>
           <nameUrl value="researcher-guidance.html"/>
-          <title value="Guidance for Researchers"/>
+          <title value="Anleitung für Forschende"/>
           <generation value="markdown"/>
         </page>
         <page>
@@ -7893,7 +7893,7 @@
             <valueUrl value="implementer-guidance.html"/>
           </extension>
           <nameUrl value="implementer-guidance.html"/>
-          <title value="Guidance for Implementers"/>
+          <title value="Anleitung für Implementierende"/>
           <generation value="markdown"/>
         </page>
         <page>
@@ -7901,7 +7901,7 @@
             <valueUrl value="uml-diagrams.html"/>
           </extension>
           <nameUrl value="uml-diagrams.html"/>
-          <title value="UML Diagrams"/>
+          <title value="UML-Diagramme"/>
           <generation value="markdown"/>
         </page>
       </page>
@@ -7910,7 +7910,7 @@
           <valueUrl value="security-and-privacy.html"/>
         </extension>
         <nameUrl value="security-and-privacy.html"/>
-        <title value="Security and Privacy"/>
+        <title value="Sicherheit und Datenschutz"/>
         <generation value="markdown"/>
       </page>
       <page>
@@ -7918,7 +7918,7 @@
           <valueUrl value="profiles.html"/>
         </extension>
         <nameUrl value="profiles.html"/>
-        <title value="Profiles"/>
+        <title value="Profile"/>
         <generation value="markdown"/>
       </page>
       <page>
@@ -7934,7 +7934,7 @@
           <valueUrl value="capability-statements.html"/>
         </extension>
         <nameUrl value="capability-statements.html"/>
-        <title value="Capability Statements"/>
+        <title value="CapabilityStatements"/>
         <generation value="markdown"/>
       </page>
       <page>
@@ -7942,7 +7942,7 @@
           <valueUrl value="search-parameters.html"/>
         </extension>
         <nameUrl value="search-parameters.html"/>
-        <title value="Search Parameters"/>
+        <title value="Suchparameter"/>
         <generation value="markdown"/>
       </page>
       <page>
@@ -7950,7 +7950,7 @@
           <valueUrl value="logical-models.html"/>
         </extension>
         <nameUrl value="logical-models.html"/>
-        <title value="Logical Models"/>
+        <title value="Logische Modelle"/>
         <generation value="markdown"/>
       </page>
       <page>
@@ -7958,7 +7958,7 @@
           <valueUrl value="value-sets.html"/>
         </extension>
         <nameUrl value="value-sets.html"/>
-        <title value="Value Sets"/>
+        <title value="ValueSets"/>
         <generation value="markdown"/>
       </page>
       <page>
@@ -7966,14 +7966,14 @@
           <valueUrl value="code-systems.html"/>
         </extension>
         <nameUrl value="code-systems.html"/>
-        <title value="Code Systems"/>
+        <title value="CodeSystems"/>
         <generation value="markdown"/>
         <page>
           <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
             <valueUrl value="icd-o-terminologie.html"/>
           </extension>
           <nameUrl value="icd-o-terminologie.html"/>
-          <title value="ICD-O: Revisions and Validation"/>
+          <title value="ICD-O: Revisionen und Validierung"/>
           <generation value="markdown"/>
         </page>
         <page>
@@ -7981,7 +7981,7 @@
             <valueUrl value="atc-terminologie.html"/>
           </extension>
           <nameUrl value="atc-terminologie.html"/>
-          <title value="ATC: Annual Versions and Transitions"/>
+          <title value="ATC: Jahresversionen und Überleitungen"/>
           <generation value="markdown"/>
         </page>
         <page>
@@ -7989,7 +7989,7 @@
             <valueUrl value="weitere-klassifikationen-terminologien.html"/>
           </extension>
           <nameUrl value="weitere-klassifikationen-terminologien.html"/>
-          <title value="Further Classifications: Terminologies"/>
+          <title value="Weitere Klassifikationen: Terminologien"/>
           <generation value="markdown"/>
         </page>
         <page>
@@ -7997,7 +7997,7 @@
             <valueUrl value="tumormarker-loinc.html"/>
           </extension>
           <nameUrl value="tumormarker-loinc.html"/>
-          <title value="Tumor Markers: Curated LOINC Codes"/>
+          <title value="Tumormarker: kuratierte LOINC-Codes"/>
           <generation value="markdown"/>
         </page>
         <page>
@@ -8014,7 +8014,7 @@
           <valueUrl value="examples.html"/>
         </extension>
         <nameUrl value="examples.html"/>
-        <title value="Examples"/>
+        <title value="Beispiele"/>
         <generation value="markdown"/>
       </page>
       <page>
@@ -8030,7 +8030,7 @@
           <valueUrl value="changes.html"/>
         </extension>
         <nameUrl value="changes.html"/>
-        <title value="Changelog"/>
+        <title value="Änderungshistorie"/>
         <generation value="markdown"/>
       </page>
       <page>
@@ -8051,10 +8051,18 @@
       </page>
       <page>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="therapieziele.html"/>
+        </extension>
+        <nameUrl value="therapieziele.html"/>
+        <title value="Therapy Goals"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
           <valueUrl value="metadata.html"/>
         </extension>
         <nameUrl value="metadata.html"/>
-        <title value="Metadata Overview"/>
+        <title value="Metadaten-Übersicht"/>
         <generation value="markdown"/>
       </page>
       <page>
@@ -8062,15 +8070,15 @@
           <valueUrl value="version-history.html"/>
         </extension>
         <nameUrl value="version-history.html"/>
-        <title value="Versioning"/>
+        <title value="Versionierung"/>
         <generation value="markdown"/>
       </page>
       <page>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="ImplementationGuide-mii-ig-onko-de-v2026.html"/>
+          <valueUrl value="ImplementationGuide-mii-ig-onko-de.html"/>
         </extension>
-        <nameUrl value="ImplementationGuide-mii-ig-onko-de-v2026.html"/>
-        <title value="MII ImplementationGuide Resource"/>
+        <nameUrl value="ImplementationGuide-mii-ig-onko-de.html"/>
+        <title value="MII ImplementationGuide Ressource"/>
         <generation value="markdown"/>
       </page>
       <page>
@@ -8078,7 +8086,7 @@
           <valueUrl value="translationinfo.html"/>
         </extension>
         <nameUrl value="translationinfo.html"/>
-        <title value="Translation Information"/>
+        <title value="Hinweise zur Übersetzung"/>
         <generation value="markdown"/>
       </page>
     </page>

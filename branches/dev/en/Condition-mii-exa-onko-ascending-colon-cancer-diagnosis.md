@@ -20,7 +20,7 @@ Profile: [MII PR Onkologie Diagnose Primärtumor](StructureDefinition-mii-pr-onk
 
 **verificationStatus**: Confirmed
 
-**category**: Neoplastic disease
+**category**: Neoplastic disease, Neoplastic disease
 
 **code**: Bösartige Neubildung: Colon ascendens
 
@@ -70,6 +70,13 @@ Adenokarzinom des Colon ascendens, Stadium III (T3N1M0)
     "coding" : [{
       "system" : "http://terminology.hl7.org/CodeSystem/condition-category",
       "code" : "encounter-diagnosis",
+      "display" : "Neoplastic disease"
+    }]
+  },
+  {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "55342001",
       "display" : "Neoplastic disease"
     }]
   }],

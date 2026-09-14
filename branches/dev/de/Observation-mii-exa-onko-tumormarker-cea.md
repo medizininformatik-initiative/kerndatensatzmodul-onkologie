@@ -18,7 +18,7 @@ Profile: [MII PR Onkologie Tumormarker](StructureDefinition-mii-pr-onko-tumormar
 
 **status**: Final
 
-**category**: Laboratory studies (set)
+**category**: Laboratory
 
 **code**: CEA
 
@@ -60,6 +60,11 @@ Profile: [MII PR Onkologie Tumormarker](StructureDefinition-mii-pr-onko-tumormar
   "status" : "final",
   "category" : [{
     "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+      "code" : "laboratory",
+      "display" : "Laboratory"
+    },
+    {
       "system" : "http://loinc.org",
       "code" : "26436-6",
       "display" : "Laboratory studies (set)"

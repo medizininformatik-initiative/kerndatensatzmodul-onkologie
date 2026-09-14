@@ -1,19 +1,19 @@
 {
   "resourceType" : "ImplementationGuide",
-  "id" : "mii-ig-onko-de-v2026",
+  "id" : "mii-ig-onko-de",
   "meta" : {
     "profile" : ["http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableimplementationguide",
     "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishableimplementationguide",
     "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-implementationguide"]
   },
-  "language" : "de",
+  "language" : "en",
   "text" : {
     "status" : "generated",
-    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide mii-ig-onko-de-v2026</b></p><a name=\"de-mii-ig-onko-de-v2026\"> </a><a name=\"de-hcmii-ig-onko-de-v2026\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: en</p><p style=\"margin-bottom: 0px\">Profiles: <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-shareableimplementationguide.html\">CRMI Shareable ImplementationGuide</a>, <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-publishableimplementationguide.html\">CRMI Publishable ImplementationGuide</a>, <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-implementationguide.html\">CRMI ImplementationGuide</a></p></div><h2>MII_IG_Onko_DE</h2><p>The official URL for this implementation guide is: </p><pre>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ImplementationGuide/mii-ig-onko-de-v2026</pre><div><p>FHIR profiles for representing oncological data based on the German oBDS (Onkologischer Basisdatensatz) specification, part of the MII core dataset.</p>\n</div></div>"
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide mii-ig-onko-de</b></p><a name=\"mii-ig-onko-de\"> </a><a name=\"hcmii-ig-onko-de\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: en</p><p style=\"margin-bottom: 0px\">Profiles: <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-shareableimplementationguide.html\">CRMI Shareable ImplementationGuide</a>, <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-publishableimplementationguide.html\">CRMI Publishable ImplementationGuide</a>, <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-implementationguide.html\">CRMI ImplementationGuide</a></p></div><h2>MII_IG_Onko_DE</h2><p>The official URL for this implementation guide is: </p><pre>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ImplementationGuide/mii-ig-onko-de</pre><div><p>FHIR profiles for representing oncological data based on the German oBDS (Onkologischer Basisdatensatz) specification, part of the MII core dataset.</p>\n</div></div>"
   },
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
-    "valueDate" : "2026-03-27"
+    "valueDate" : "2026-09-15"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
@@ -51,7 +51,7 @@
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
     "valuePeriod" : {
-      "start" : "2026"
+      "start" : "2027"
     }
   },
   {
@@ -139,7 +139,7 @@
       }]
     }
   }],
-  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ImplementationGuide/mii-ig-onko-de-v2026",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ImplementationGuide/mii-ig-onko-de",
   "version" : "2027.0.0-ballot.rc2",
   "name" : "MII_IG_Onko_DE",
   "title" : "MII IG Kerndatensatz-Modul Onkologie",
@@ -175,7 +175,7 @@
     "id" : "de_medizininformatikinitiative_kerndatensatz_meta",
     "uri" : "https://www.medizininformatik-initiative.de/fhir/modul-meta/ImplementationGuide/mii-ig-meta",
     "packageId" : "de.medizininformatikinitiative.kerndatensatz.meta",
-    "version" : "2027.0.0-ballot.rc3"
+    "version" : "2027.0.0-ballot"
   },
   {
     "id" : "hl7_fhir_uv_xver_r5_r4",
@@ -193,31 +193,31 @@
     "id" : "de_medizininformatikinitiative_kerndatensatz_base",
     "uri" : "https://www.medizininformatik-initiative.de/fhir/modul-base/ImplementationGuide/mii-ig-base",
     "packageId" : "de.medizininformatikinitiative.kerndatensatz.base",
-    "version" : "2027.0.0-ballot.rc1"
+    "version" : "2027.0.0-ballot"
   },
   {
     "id" : "de_medizininformatikinitiative_kerndatensatz_biobank",
-    "uri" : "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.biobank/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.biobank",
+    "uri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/ImplementationGuide/mii-ig-biobank",
     "packageId" : "de.medizininformatikinitiative.kerndatensatz.biobank",
-    "version" : "2027.0.0-ballot.rc2"
+    "version" : "2027.0.0-ballot"
   },
   {
     "id" : "de_medizininformatikinitiative_kerndatensatz_laborbefund",
     "uri" : "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.laborbefund/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.laborbefund",
     "packageId" : "de.medizininformatikinitiative.kerndatensatz.laborbefund",
-    "version" : "2027.0.0-ballot.rc3"
+    "version" : "2027.0.0-ballot.rc4"
   },
   {
     "id" : "de_medizininformatikinitiative_kerndatensatz_medikation",
     "uri" : "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/ImplementationGuide/mii-ig-medikation",
     "packageId" : "de.medizininformatikinitiative.kerndatensatz.medikation",
-    "version" : "2027.0.0-ballot.rc5"
+    "version" : "2027.0.0-ballot"
   },
   {
     "id" : "de_medizininformatikinitiative_kerndatensatz_molgen",
     "uri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ImplementationGuide/mii-ig-molgen",
     "packageId" : "de.medizininformatikinitiative.kerndatensatz.molgen",
-    "version" : "2027.0.0-ballot.rc2"
+    "version" : "2027.0.0-ballot"
   },
   {
     "id" : "hl7_fhir_uv_genomics_reporting",
@@ -3624,7 +3624,7 @@
         "reference" : "AdverseEvent/mii-exa-onko-nebenwirkung-crs-grad4"
       },
       "name" : "MII EXA Onkologie Nebenwirkung Cytokine-Release-Syndrom CTCAE Grad 4",
-      "description" : "Cytokine-Release-Syndrom CTCAE Grad 4 (MedDRA 10052015) unter medikamentöser systemischer Therapie — SNOMED-Zweitkodierung gemäß ConceptMap gegen die im Expansions-Manifest gepinnte SNOMED-Version (International 20250701).",
+      "description" : "Cytokine-Release-Syndrom CTCAE Grad 4 (MedDRA 10052015) unter medikamentöser systemischer Therapie — SNOMED-Zweitkodierung gemäß ConceptMap gegen die im Expansions-Manifest gepinnte SNOMED-Version (International 20260701).",
       "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-nebenwirkung-adverse-event"
     },
     {
@@ -8781,7 +8781,7 @@
         "valueUrl" : "toc.html"
       }],
       "nameUrl" : "toc.html",
-      "title" : "Inhaltsverzeichnis",
+      "title" : "Table of Contents",
       "generation" : "html",
       "page" : [{
         "extension" : [{
@@ -8789,7 +8789,7 @@
           "valueUrl" : "index.html"
         }],
         "nameUrl" : "index.html",
-        "title" : "Startseite",
+        "title" : "Home",
         "generation" : "markdown"
       },
       {
@@ -8798,7 +8798,7 @@
           "valueUrl" : "guidance.html"
         }],
         "nameUrl" : "guidance.html",
-        "title" : "Anleitung",
+        "title" : "Guidance",
         "generation" : "markdown",
         "page" : [{
           "extension" : [{
@@ -8806,7 +8806,7 @@
             "valueUrl" : "anwendungsfaelle-informationsmodell.html"
           }],
           "nameUrl" : "anwendungsfaelle-informationsmodell.html",
-          "title" : "Anwendungsfälle und Informationsmodell",
+          "title" : "Use Cases and Information Model",
           "generation" : "markdown"
         },
         {
@@ -8815,7 +8815,7 @@
             "valueUrl" : "datasets-and-descriptions.html"
           }],
           "nameUrl" : "datasets-and-descriptions.html",
-          "title" : "Logische Modelle",
+          "title" : "Datasets and Descriptions",
           "generation" : "markdown"
         },
         {
@@ -8824,7 +8824,7 @@
             "valueUrl" : "tnm-breast-cancer-journey.html"
           }],
           "nameUrl" : "tnm-breast-cancer-journey.html",
-          "title" : "TNM Mammakarzinom-Patientenreise (Beispiel)",
+          "title" : "TNM Breast Cancer Journey (Example)",
           "generation" : "markdown"
         },
         {
@@ -8833,7 +8833,7 @@
             "valueUrl" : "toronto-klassifikation.html"
           }],
           "nameUrl" : "toronto-klassifikation.html",
-          "title" : "Toronto-Klassifikation (pädiatrische Onkologie)",
+          "title" : "Toronto Classification (Pediatric Oncology)",
           "generation" : "markdown"
         },
         {
@@ -8842,7 +8842,7 @@
             "valueUrl" : "molgen-variantentypen.html"
           }],
           "nameUrl" : "molgen-variantentypen.html",
-          "title" : "MolGen-Abbildung der Variantentypen",
+          "title" : "MolGen Mapping of Variant Types",
           "generation" : "markdown"
         },
         {
@@ -8851,7 +8851,7 @@
             "valueUrl" : "researcher-guidance.html"
           }],
           "nameUrl" : "researcher-guidance.html",
-          "title" : "Anleitung für Forschende",
+          "title" : "Guidance for Researchers",
           "generation" : "markdown"
         },
         {
@@ -8860,7 +8860,7 @@
             "valueUrl" : "implementer-guidance.html"
           }],
           "nameUrl" : "implementer-guidance.html",
-          "title" : "Anleitung für Implementierende",
+          "title" : "Guidance for Implementers",
           "generation" : "markdown"
         },
         {
@@ -8869,7 +8869,7 @@
             "valueUrl" : "uml-diagrams.html"
           }],
           "nameUrl" : "uml-diagrams.html",
-          "title" : "UML-Diagramme",
+          "title" : "UML Diagrams",
           "generation" : "markdown"
         }]
       },
@@ -8879,7 +8879,7 @@
           "valueUrl" : "security-and-privacy.html"
         }],
         "nameUrl" : "security-and-privacy.html",
-        "title" : "Sicherheit und Datenschutz",
+        "title" : "Security and Privacy",
         "generation" : "markdown"
       },
       {
@@ -8888,7 +8888,7 @@
           "valueUrl" : "profiles.html"
         }],
         "nameUrl" : "profiles.html",
-        "title" : "Profile",
+        "title" : "Profiles",
         "generation" : "markdown"
       },
       {
@@ -8906,7 +8906,7 @@
           "valueUrl" : "capability-statements.html"
         }],
         "nameUrl" : "capability-statements.html",
-        "title" : "CapabilityStatements",
+        "title" : "Capability Statements",
         "generation" : "markdown"
       },
       {
@@ -8915,7 +8915,7 @@
           "valueUrl" : "search-parameters.html"
         }],
         "nameUrl" : "search-parameters.html",
-        "title" : "Suchparameter",
+        "title" : "Search Parameters",
         "generation" : "markdown"
       },
       {
@@ -8924,7 +8924,7 @@
           "valueUrl" : "logical-models.html"
         }],
         "nameUrl" : "logical-models.html",
-        "title" : "Logische Modelle",
+        "title" : "Logical Models",
         "generation" : "markdown"
       },
       {
@@ -8933,7 +8933,7 @@
           "valueUrl" : "value-sets.html"
         }],
         "nameUrl" : "value-sets.html",
-        "title" : "ValueSets",
+        "title" : "Value Sets",
         "generation" : "markdown"
       },
       {
@@ -8942,7 +8942,7 @@
           "valueUrl" : "code-systems.html"
         }],
         "nameUrl" : "code-systems.html",
-        "title" : "CodeSystems",
+        "title" : "Code Systems",
         "generation" : "markdown",
         "page" : [{
           "extension" : [{
@@ -8950,7 +8950,7 @@
             "valueUrl" : "icd-o-terminologie.html"
           }],
           "nameUrl" : "icd-o-terminologie.html",
-          "title" : "ICD-O: Revisionen und Validierung",
+          "title" : "ICD-O: Revisions and Validation",
           "generation" : "markdown"
         },
         {
@@ -8959,7 +8959,7 @@
             "valueUrl" : "atc-terminologie.html"
           }],
           "nameUrl" : "atc-terminologie.html",
-          "title" : "ATC: Jahresversionen und Überleitungen",
+          "title" : "ATC: Annual Versions and Transitions",
           "generation" : "markdown"
         },
         {
@@ -8968,7 +8968,7 @@
             "valueUrl" : "weitere-klassifikationen-terminologien.html"
           }],
           "nameUrl" : "weitere-klassifikationen-terminologien.html",
-          "title" : "Weitere Klassifikationen: Terminologien",
+          "title" : "Further Classifications: Terminologies",
           "generation" : "markdown"
         },
         {
@@ -8977,7 +8977,7 @@
             "valueUrl" : "tumormarker-loinc.html"
           }],
           "nameUrl" : "tumormarker-loinc.html",
-          "title" : "Tumormarker: kuratierte LOINC-Codes",
+          "title" : "Tumor Markers: Curated LOINC Codes",
           "generation" : "markdown"
         },
         {
@@ -8996,7 +8996,7 @@
           "valueUrl" : "examples.html"
         }],
         "nameUrl" : "examples.html",
-        "title" : "Beispiele",
+        "title" : "Examples",
         "generation" : "markdown"
       },
       {
@@ -9014,7 +9014,7 @@
           "valueUrl" : "changes.html"
         }],
         "nameUrl" : "changes.html",
-        "title" : "Änderungshistorie",
+        "title" : "Changelog",
         "generation" : "markdown"
       },
       {
@@ -9038,10 +9038,19 @@
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "therapieziele.html"
+        }],
+        "nameUrl" : "therapieziele.html",
+        "title" : "Therapy Goals",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
           "valueUrl" : "metadata.html"
         }],
         "nameUrl" : "metadata.html",
-        "title" : "Metadaten-Übersicht",
+        "title" : "Metadata Overview",
         "generation" : "markdown"
       },
       {
@@ -9050,16 +9059,16 @@
           "valueUrl" : "version-history.html"
         }],
         "nameUrl" : "version-history.html",
-        "title" : "Versionierung",
+        "title" : "Versioning",
         "generation" : "markdown"
       },
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "ImplementationGuide-mii-ig-onko-de-v2026.html"
+          "valueUrl" : "ImplementationGuide-mii-ig-onko-de.html"
         }],
-        "nameUrl" : "ImplementationGuide-mii-ig-onko-de-v2026.html",
-        "title" : "MII ImplementationGuide Ressource",
+        "nameUrl" : "ImplementationGuide-mii-ig-onko-de.html",
+        "title" : "MII ImplementationGuide Resource",
         "generation" : "markdown"
       },
       {
@@ -9068,7 +9077,7 @@
           "valueUrl" : "translationinfo.html"
         }],
         "nameUrl" : "translationinfo.html",
-        "title" : "Hinweise zur Übersetzung",
+        "title" : "Translation Information",
         "generation" : "markdown"
       }]
     },

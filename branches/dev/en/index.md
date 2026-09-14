@@ -7,7 +7,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ImplementationGuide/mii-ig-onko-de-v2026 | *Version*:2027.0.0-ballot.rc2 |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ImplementationGuide/mii-ig-onko-de | *Version*:2027.0.0-ballot.rc2 |
 | Active as of 2026-09-09 | *Computable Name*:MII_IG_Onko_DE |
 
 ### Introduction
@@ -52,7 +52,7 @@ Scientists using KDS data for medical research.
 * **Conformance** — the KDS-wide conformance rules (requirements language, Must Support, handling missing data) are maintained centrally by the [Meta module](https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance); the module-specific [Security and Privacy](security-and-privacy.md) considerations are part of this guide.
 * **[Profiles](profiles.md)** and the further **[artifact pages](artifacts.md)** — the technical artifacts.
 * **[Examples](examples.md)** — example instances.
-* **[Dependencies](ImplementationGuide-mii-ig-onko-de-v2026.md)** — the ImplementationGuide resource with the dependency table and copyright statements.
+* **[Dependencies](ImplementationGuide-mii-ig-onko-de.md)** — the ImplementationGuide resource with the dependency table and copyright statements.
 
 ### Related guides
 

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.uicc.org/resources/tnm | *Version*:2027.0.0-ballot.rc2 |
-| Active Stand: 2026-09-09 | *Maschinenlesbarer Name*:MII_CS_Onko_TNM_UICC |
+| Active Stand: 2026-09-14 | *Maschinenlesbarer Name*:MII_CS_Onko_TNM_UICC |
 | **Copyright/Rechtliches**: Die TNM-Klassifikation maligner Tumoren ist urheberrechtlich geschuetzt: TNM Classification of Malignant Tumours © Union for International Cancer Control (UICC). Die hier gefuehrten Codes sind eine Zusammenstellung der im MII-Kerndatensatzmodul Onkologie verwendeten TNM-Kategorien und -Werte zum Zweck der FHIR-Validierung; sie ersetzen nicht die amtliche UICC-Ausgabe und begruenden keine eigenen Rechte an der Klassifikation. Nutzende benoetigen fuer den produktiven Einsatz die entsprechende UICC-Berechtigung. | |
 
  
@@ -67,7 +67,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
-    "valueDate" : "2026-01-03"
+    "valueDate" : "2026-09-15"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/artifact-topic",
@@ -144,7 +144,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
     "valuePeriod" : {
-      "start" : "2026"
+      "start" : "2027"
     }
   }],
   "url" : "https://www.uicc.org/resources/tnm",
@@ -153,7 +153,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "title" : "MII CS Onkologie TNM UICC",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T15:05:53+00:00",
+  "date" : "2026-09-14T06:56:03+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

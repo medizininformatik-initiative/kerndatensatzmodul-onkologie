@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-r-symbol | *Version*:2027.0.0-ballot.rc2 |
-| Retired as of 2026-09-09 | *Computable Name*:MII_PR_Onko_TNM_r_Symbol |
+| Retired as of 2026-09-14 | *Computable Name*:MII_PR_Onko_TNM_r_Symbol |
 
  
 DEPRECATED seit v2027: Die eigenständigen Symbol-Profile sind abgelöst — das r-Symbol wird als modifierExtension an den T-/N-/M-Kategorien erfasst (oBDS 8.3–8.5). Dieses Profil bleibt zum Lesen von Bestandsdaten definiert. — TNM-Klassifikation: TNM r-Symbol. Gibt an, ob die Klassifikation ein Rezidiv beurteilt. 
@@ -88,7 +88,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-tnm-r
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
-    "valueDate" : "2026-01-03"
+    "valueDate" : "2026-09-15"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/artifact-topic",
@@ -165,7 +165,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-tnm-r
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
     "valuePeriod" : {
-      "start" : "2026"
+      "start" : "2027"
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-r-symbol",
@@ -174,7 +174,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-tnm-r
   "title" : "MII PR Onkologie TNM r-Symbol",
   "status" : "retired",
   "experimental" : false,
-  "date" : "2026-09-09T15:05:53+00:00",
+  "date" : "2026-09-14T06:56:03+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

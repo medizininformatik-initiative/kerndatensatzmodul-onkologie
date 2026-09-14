@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-a-symbol | *Version*:2027.0.0-ballot.rc2 |
-| Retired as of 2026-09-09 | *Computable Name*:MII_PR_Onko_TNM_a_Symbol |
+| Retired as of 2026-09-14 | *Computable Name*:MII_PR_Onko_TNM_a_Symbol |
 
  
 DEPRECATED seit v2027: Die eigenständigen Symbol-Profile sind abgelöst — das a-Symbol wird als modifierExtension an den T-/N-/M-Kategorien erfasst (oBDS 8.3–8.5). Dieses Profil bleibt zum Lesen von Bestandsdaten definiert. — TNM-Klassifikation: TNM a-Symbol. Gibt an, ob die Klassifikation aus Anlass einer Autopsie erfolgte. 
@@ -90,7 +90,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-tnm-a
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
-    "valueDate" : "2026-01-03"
+    "valueDate" : "2026-09-15"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/artifact-topic",
@@ -167,7 +167,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-tnm-a
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
     "valuePeriod" : {
-      "start" : "2026"
+      "start" : "2027"
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-a-symbol",
@@ -176,7 +176,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-tnm-a
   "title" : "MII PR Onkologie TNM a-Symbol",
   "status" : "retired",
   "experimental" : false,
-  "date" : "2026-09-09T15:05:53+00:00",
+  "date" : "2026-09-14T06:56:03+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
