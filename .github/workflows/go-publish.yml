@@ -582,6 +582,21 @@ jobs:
           sed -i '/^parameters:/a\  version-comparison: n/a' source/sushi-config.yaml
           echo "::notice::version comparison disabled via ENABLE_VERSION_COMPARISON (set to the publisher-native n/a)."
 
+      # Terminologie-Cache (siehe ig-publisher.yml): der -go-publish-Lauf stellt
+      # dieselben Tausenden TermServ-Anfragen wie der Preview — mit geteiltem
+      # restore-key profitiert er von jedem frueheren Lauf beider Workflows.
+      # save mit if: always(): auch ein Timeout-Lauf hinterlaesst seine
+      # Antworten fuer den Retry. Der "clean build" bleibt clean — gecacht
+      # werden externe Server-ANTWORTEN, kein Build-Zustand.
+      - name: Restore terminology cache
+        uses: actions/cache/restore@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
+        with:
+          path: source/input-cache/txcache
+          key: txcache-v1-${{ github.run_id }}
+          restore-keys: |
+            txcache-v1-
+            txcache-preview-v1-
+
       - name: Run clean release build
         shell: bash
         env:
@@ -770,6 +785,13 @@ jobs:
             -tx "${TX_URL}" \
             -fhir-settings "${GITHUB_WORKSPACE}/automation/.github/fhir-settings.json" \
             2>&1 | tee "${RUNNER_TEMP}/go-publish.log"
+
+      - name: Save terminology cache
+        if: always()
+        uses: actions/cache/save@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
+        with:
+          path: source/input-cache/txcache
+          key: txcache-v1-${{ github.run_id }}
 
       - name: Correct and validate FHIR IG registry entry
         shell: bash

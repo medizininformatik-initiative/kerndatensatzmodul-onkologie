@@ -284,6 +284,23 @@ jobs:
             echo "Terminology: public HL7 fallback (https://tx.fhir.org)" >> "${GITHUB_STEP_SUMMARY}"
           fi
 
+      # Terminologie-Cache des IG Publishers (input-cache/txcache): persistiert
+      # die Antworten des TermServ ueber Laeufe hinweg — der groesste einzelne
+      # Zeitfresser des Builds sind Tausende wiederholte validate-code/expand-
+      # Anfragen. restore/save sind GETRENNT, save laeuft mit if: always():
+      # auch ein fehlgeschlagener oder getimeouteter Lauf hinterlaesst seine
+      # bereits gesammelten Antworten fuer den naechsten Versuch. Stale-Risiko
+      # ist das inhaerente txCache-Verhalten (HL7-Praxis: Caches werden sogar
+      # committet); Refresh durch Bump des v1-Suffixes im Key.
+      - name: Restore terminology cache
+        uses: actions/cache/restore@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
+        with:
+          path: input-cache/txcache
+          key: txcache-preview-v1-${{ github.run_id }}
+          restore-keys: |
+            txcache-preview-v1-
+            txcache-v1-
+
       - name: Seed the comparison cache (previous-version packages)
         # No-op unless sushi-config.yaml activates `version-comparison`; then
         # the previous release's package.tgz (a GitHub Release asset) is placed
@@ -430,6 +447,13 @@ jobs:
             rm -rf output/comparison-demo
             echo "::warning::comparison demo skipped — the validator compare produced no report; the preview deploys without it."
           fi
+
+      - name: Save terminology cache
+        if: always()
+        uses: actions/cache/save@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
+        with:
+          path: input-cache/txcache
+          key: txcache-preview-v1-${{ github.run_id }}
 
       - name: Stop terminology proxy
         if: ${{ always() && steps.build.outputs.mode == 'full' }}
