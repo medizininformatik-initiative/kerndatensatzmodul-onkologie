@@ -1,4 +1,4 @@
-# MII Onkologie TNM-Synthese Algorithmus - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2
+# MII Onkologie TNM-Synthese Algorithmus - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Library/mii-lib-onko-synthesize-tnm | *Version*:2027.0.0-ballot.rc2 |
-| Active as of 2026-09-09 | *Computable Name*:MIIOnkoSynthesizeTNM |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Library/mii-lib-onko-synthesize-tnm | *Version*:2027.0.0-ballot |
+| Active as of 2026-09-14 | *Computable Name*:MIIOnkoSynthesizeTNM |
 
  
 Deterministischer Algorithmus zur Synthese einer TNM-Klassifikation aus mehreren Meldungs-bezogenen Quell-Klassifikationen. Implementiert UICC General Rules nach Manual der Krebsregistrierung Kap. 6 (Stegmaier 2019). Drei Phasen: primary (kein y/r), post-neoadjuvant (y), recurrence (r). Symbol-Lesen aus hasMember (mii-pr-onko-tnm-{y,r,a,m}-symbol). Pre-therapeutic intentional NICHT Phase: nicht aus TNM-Daten ableitbar (Biopsien können pTNM ergeben), gehört in Workflow-Kontext (Tumorkonferenz.category=praeth). 
@@ -20,7 +20,7 @@ Deterministischer Algorithmus zur Synthese einer TNM-Klassifikation aus mehreren
 
 -------
 
-**Exception parsing generated Narrative (see /tmp/liquid-191f283d-8751-44a2-8c9f-66629c469f42.html): unexpected non-end of element null::a at line 134 column 50**
+**Exception parsing generated Narrative (see /tmp/liquid-dcd1fa7f-318c-43c5-b751-2e6de3964583.html): unexpected non-end of element null::a at line 134 column 50**
 
 
 
@@ -42,7 +42,7 @@ Deterministischer Algorithmus zur Synthese einer TNM-Klassifikation aus mehreren
       },
       {
         "url" : "version",
-        "valueString" : "2027.0.0-ballot.rc2"
+        "valueString" : "2027.0.0-ballot"
       },
       {
         "url" : "uri",
@@ -80,7 +80,7 @@ Deterministischer Algorithmus zur Synthese einer TNM-Klassifikation aus mehreren
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Library/mii-lib-onko-synthesize-tnm",
-  "version" : "2027.0.0-ballot.rc2",
+  "version" : "2027.0.0-ballot",
   "name" : "MIIOnkoSynthesizeTNM",
   "title" : "MII Onkologie TNM-Synthese Algorithmus",
   "status" : "active",
@@ -91,7 +91,7 @@ Deterministischer Algorithmus zur Synthese einer TNM-Klassifikation aus mehreren
       "code" : "logic-library"
     }]
   },
-  "date" : "2026-09-09T16:49:31+00:00",
+  "date" : "2026-09-14T12:58:08+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -108,7 +108,7 @@ Deterministischer Algorithmus zur Synthese einer TNM-Klassifikation aus mehreren
       "display" : "Germany"
     }]
   }],
-  "approvalDate" : "2026-01-03",
+  "approvalDate" : "2026-09-15",
   "topic" : [{
     "coding" : [{
       "system" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",

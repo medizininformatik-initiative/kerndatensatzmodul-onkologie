@@ -1,4 +1,4 @@
-# MII PR Onkologie Studienteilnahme - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2
+# MII PR Onkologie Studienteilnahme - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-studienteilnahme | *Version*:2027.0.0-ballot.rc2 |
-| Active Stand: 2026-09-09 | *Maschinenlesbarer Name*:MII_PR_Onko_Studienteilnahme |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-studienteilnahme | *Version*:2027.0.0-ballot |
+| Active Stand: 2026-09-14 | *Maschinenlesbarer Name*:MII_PR_Onko_Studienteilnahme |
 
  
 Dieses Profil beschreibt Studienteilnahmen in der Onkologie 
@@ -117,7 +117,6 @@ Mandatory: 2 elements(1 nested mandatory element)
 This structure refers to these other structures:
 
 * [MII PR Onkologie Diagnose Primärtumor (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor)](StructureDefinition-mii-pr-onko-diagnose-primaertumor.md)
-* [MII PR Studie Studie (https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-studie)](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.studie@2027.0.0-ballot.rc1&canonical=https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-studie)
 
 **Slices**
 
@@ -155,7 +154,6 @@ Mandatory: 2 elements(1 nested mandatory element)
 This structure refers to these other structures:
 
 * [MII PR Onkologie Diagnose Primärtumor (https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor)](StructureDefinition-mii-pr-onko-diagnose-primaertumor.md)
-* [MII PR Studie Studie (https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-studie)](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.studie@2027.0.0-ballot.rc1&canonical=https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-studie)
 
 **Slices**
 
@@ -187,7 +185,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
       },
       {
         "url" : "version",
-        "valueString" : "2027.0.0-ballot.rc2"
+        "valueString" : "2027.0.0-ballot"
       },
       {
         "url" : "uri",
@@ -222,7 +220,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
-    "valueDate" : "2026-01-03"
+    "valueDate" : "2026-09-15"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/artifact-topic",
@@ -299,16 +297,16 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
     "valuePeriod" : {
-      "start" : "2026"
+      "start" : "2027"
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-studienteilnahme",
-  "version" : "2027.0.0-ballot.rc2",
+  "version" : "2027.0.0-ballot",
   "name" : "MII_PR_Onko_Studienteilnahme",
   "title" : "MII PR Onkologie Studienteilnahme",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T16:49:31+00:00",
+  "date" : "2026-09-14T12:58:08+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -449,8 +447,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
       "max" : "1",
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-studie",
-        "http://hl7.org/fhir/StructureDefinition/ResearchStudy"]
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/ResearchStudy"]
       }],
       "mustSupport" : true
     },

@@ -1,4 +1,4 @@
-# MII VS Onkologie ICD-10-GM Meldepflichtige Tumoren - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2
+# MII VS Onkologie ICD-10-GM Meldepflichtige Tumoren - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-icd10-meldepflichtige-tumoren | *Version*:2027.0.0-ballot.rc2 |
-| Active Stand: 2026-09-09 | *Maschinenlesbarer Name*:MII_VS_Onko_ICD10_Meldepflichtige_Tumoren |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-icd10-meldepflichtige-tumoren | *Version*:2027.0.0-ballot |
+| Active Stand: 2026-09-14 | *Maschinenlesbarer Name*:MII_VS_Onko_ICD10_Meldepflichtige_Tumoren |
 
  
 ICD-10-GM-Codes der nach KFRG/§65c krebsregister-meldepflichtigen Neubildungen: bösartige Neubildungen (C00-C97), In-situ-Neubildungen (D00-D09), gutartige Neubildungen der Meningen, des Gehirns/ZNS und intrakranieller endokriner Strukturen (D32, D33, D35.2-D35.4) sowie Neubildungen unsicheren oder unbekannten Verhaltens (D37-D48, einschließlich hämatologischer Entitäten D45-D47). 
@@ -23,8 +23,6 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
  
 
 ### Expansion
-
-No Expansion for this valueset (Unsupported Code System Version)
 
 -------
 
@@ -50,7 +48,7 @@ No Expansion for this valueset (Unsupported Code System Version)
       },
       {
         "url" : "version",
-        "valueString" : "2027.0.0-ballot.rc2"
+        "valueString" : "2027.0.0-ballot"
       },
       {
         "url" : "uri",
@@ -87,7 +85,7 @@ No Expansion for this valueset (Unsupported Code System Version)
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
-    "valueDate" : "2026-01-03"
+    "valueDate" : "2026-09-15"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/artifact-topic",
@@ -164,16 +162,16 @@ No Expansion for this valueset (Unsupported Code System Version)
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
     "valuePeriod" : {
-      "start" : "2026"
+      "start" : "2027"
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-icd10-meldepflichtige-tumoren",
-  "version" : "2027.0.0-ballot.rc2",
+  "version" : "2027.0.0-ballot",
   "name" : "MII_VS_Onko_ICD10_Meldepflichtige_Tumoren",
   "title" : "MII VS Onkologie ICD-10-GM Meldepflichtige Tumoren",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T16:49:31+00:00",
+  "date" : "2026-09-14T12:58:08+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

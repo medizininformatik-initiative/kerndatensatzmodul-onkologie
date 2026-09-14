@@ -1,4 +1,4 @@
-# MII VS Onkologie ICD-O-3 Topographie - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2
+# MII VS Onkologie ICD-O-3 Topographie - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,15 +8,16 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-icdo3-topographie | *Version*:2027.0.0-ballot.rc2 |
-| Active as of 2026-09-09 | *Computable Name*:MII_VS_Onko_ICDO3_Topographie |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-icdo3-topographie | *Version*:2027.0.0-ballot |
+| Active as of 2026-09-14 | *Computable Name*:MII_VS_Onko_ICDO3_Topographie |
 
  
 Codes für Topographie einer neoplastischen Veränderung 
 
  **References** 
 
-* [MII PR Biobank Specimen Bioprobe Core](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.biobank@2027.0.0-ballot.rc2&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore)
+* [MII PR Biobank Specimen Bioprobe Core](file:///home/runner/work/kerndatensatzmodul-biobank/kerndatensatzmodul-biobank/output/StructureDefinition-mii-pr-biobank-specimen-core.html)
+* [MII PR Biobank Specimen Bioprobe Core](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.molgen@2027.0.0-ballot&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore)
 * [MII PR Onkologie Diagnose Primärtumor](StructureDefinition-mii-pr-onko-diagnose-primaertumor.md)
 * [MII PR Onkologie Fernmetastasen](StructureDefinition-mii-pr-onko-fernmetastasen.md)
 * [MII PR Onkologie Frühere Tumorerkrankung](StructureDefinition-mii-pr-onko-fruehere-tumorerkrankung.md)
@@ -27,8 +28,6 @@ Codes für Topographie einer neoplastischen Veränderung
  
 
 ### Expansion
-
-No Expansion for this valueset (Unsupported Code System Version)
 
 -------
 
@@ -54,7 +53,7 @@ No Expansion for this valueset (Unsupported Code System Version)
       },
       {
         "url" : "version",
-        "valueString" : "2027.0.0-ballot.rc2"
+        "valueString" : "2027.0.0-ballot"
       },
       {
         "url" : "uri",
@@ -91,7 +90,7 @@ No Expansion for this valueset (Unsupported Code System Version)
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
-    "valueDate" : "2026-01-03"
+    "valueDate" : "2026-09-15"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/artifact-topic",
@@ -168,16 +167,16 @@ No Expansion for this valueset (Unsupported Code System Version)
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
     "valuePeriod" : {
-      "start" : "2026"
+      "start" : "2027"
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-icdo3-topographie",
-  "version" : "2027.0.0-ballot.rc2",
+  "version" : "2027.0.0-ballot",
   "name" : "MII_VS_Onko_ICDO3_Topographie",
   "title" : "MII VS Onkologie ICD-O-3 Topographie",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T16:49:31+00:00",
+  "date" : "2026-09-14T12:58:08+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

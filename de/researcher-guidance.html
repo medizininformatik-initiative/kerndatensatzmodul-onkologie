@@ -6,7 +6,7 @@
 <html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Anleitung für Forschende - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2</title>
+    <title>Anleitung für Forschende - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -141,11 +141,11 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">MII IG Kerndatensatz-Modul Onkologie</span>
             <br/>
-            <span style="display:inline-block;">2027.0.0-ballot.rc2 - 
+            <span style="display:inline-block;">2027.0.0-ballot - 
 
 
 
-  <img alt="Germany Flagge" src="assets/images/deu.svg" height="16" title="Germany"/>
+  Germany
 
 
             </span>
@@ -182,7 +182,7 @@
     <ul class="dropdown-menu">
       <li><a href="guidance.html">Anleitung</a></li>
       <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
-      <li><a href="researcher-guidance.html">Anleitung für Forschende (optional)</a></li>
+      <li><a href="researcher-guidance.html">Anleitung für Forschende</a></li>
       <li><a href="implementer-guidance.html">Anleitung für Implementierende</a></li>
       <!-- Nur-Link-Eintrag: die Seite "Logische Modelle" (Begründung im Quell-Menü) -->
       <li><a href="datasets-and-descriptions.html">Datensätze inkl. Beschreibungen</a></li>
@@ -193,6 +193,7 @@
       <li><a href="weitere-klassifikationen-terminologien.html">Weitere Klassifikationen: Terminologien</a></li>
       <li><a href="tumormarker-loinc.html">Tumormarker: kuratierte LOINC-Codes</a></li>
       <li><a href="tnm-journey.html">TNM Schritt für Schritt</a></li>
+      <li><a href="therapieziele.html">Therapieziele</a></li>
     </ul>
   </li>
   <li class="dropdown">
@@ -293,7 +294,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">This page is part of the MII IG Kerndatensatz-Modul Onkologie (v2027.0.0-ballot.rc2: Release) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-onkologie/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the MII IG Kerndatensatz-Modul Onkologie (v2027.0.0-ballot: Release) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-onkologie/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Anleitung für Forschende</h2>
   
 
@@ -320,14 +321,62 @@ Diese Seite enthält Übersetzungen aus der Originalsprache, in der der Leitfade
 </p>
 
 <!-- markdownlint-disable MD041 -->
+<!-- Deutscher Spiegel der EN-Quellseite input/pagecontent/researcher-guidance.md —
+     beide Dateien muessen dasselbe sagen. -->
 
 <h3 id="anleitung-für-forschende">Anleitung für Forschende</h3>
 
-<p>Hinweise für Forschende, die die Daten des Moduls <strong>Onkologie</strong> für Forschungszwecke nutzen — z. B. welche Datenelemente für welche Fragestellungen relevant sind und wie sie interpretiert werden.</p>
+<p>Die Daten dieses Moduls entstammen der <strong>onkologischen Tumordokumentation
+entlang der oBDS-Meldeanlässe</strong> (Diagnose, Operation, Beginn/Ende von
+Strahlen- und Systemtherapie, Verlauf, Tod) — demselben Dokumentationsstrom,
+der die deutschen Krebsregister speist. Zwei Konsequenzen dieser Herkunft
+sind für jede Analyse relevant:</p>
 
-<blockquote class="ig-highlight ig-highlight-grey">
-  <p>[TODO: Beschreiben Sie die forschungsrelevanten Aspekte des Moduls.]</p>
-</blockquote>
+<h4 id="1-die-daten-kommen-mit-meldeverzug">1. Die Daten kommen mit Meldeverzug</h4>
+
+<p>Meldeanlässe werden mit Verzögerung dokumentiert und weitergeleitet —
+gesetzliche Meldefristen, hausinterne Dokumentationsrückstände und die
+Verarbeitung im Register summieren sich auf Monate. Für die Forschung heißt
+das:</p>
+
+<ul>
+  <li><strong>Jüngere Zeiträume sind systematisch unvollständig.</strong> Ein Einbruch der
+Fall- oder Therapiezahlen in den letzten Monaten ist in aller Regel ein
+Melde-Artefakt, kein epidemiologisches Signal.</li>
+  <li><strong>Kohorten-Stichtage konservativ wählen</strong> (Data-Freeze deutlich vor dem
+Analysedatum) und den Freeze-Zeitpunkt zu jedem Ergebnis mit angeben.</li>
+  <li>Das <strong>Fehlen eines jungen Ereignisses ist schwache Evidenz</strong>: ein fehlender
+Verlauf oder ein fehlendes Therapieende kann schlicht noch nicht
+eingetroffen sein.</li>
+</ul>
+
+<h4 id="2-der-auszug-eines-einzelnen-standorts-kann-unvollständig-sein">2. Der Auszug eines einzelnen Standorts kann unvollständig sein</h4>
+
+<p>Onkologische Versorgung ist verteilt: Die Resektion findet im Zentrum statt,
+während <strong>Follow-up und adjuvante Therapie an anderen Standorten</strong> erfolgen
+(Praxen, Häuser der Regelversorgung, Reha). Ein Datenauszug eines Standorts
+dokumentiert daher dessen Anteil am Krankheitsverlauf — nicht notwendig den
+ganzen Verlauf:</p>
+
+<ul>
+  <li><strong>Das Fehlen eines Eintrags ist kein Fehlen einer Behandlung.</strong> Eine
+Patientin ohne dokumentierte Systemtherapie kann sie andernorts erhalten
+haben.</li>
+  <li>Signale in den Daten können auf externe Behandlung hinweisen — etwa eine
+TNM-Klassifikation mit <strong>y-Präfix</strong> (Zustand während/nach neoadjuvanter
+Therapie) ohne dokumentierte Systemtherapie-Episode.</li>
+  <li>Vorsicht bei <strong>Nennern</strong>: „Patienten ohne adjuvante Therapie" aus einem
+Einzelstandort-Auszug vermischt tatsächlich Unbehandelte mit extern
+Behandelten. Fragestellungen robust dagegen wählen — oder für
+Gesamtverlaufs-Fragen die bevölkerungsbezogenen Landeskrebsregister nutzen,
+deren standortübergreifende Konsolidierung die vollständigere Quelle ist.</li>
+  <li>In MII-Projekten mit mehreren Standorten mildert <strong>Record Linkage</strong> die
+Fragmentierung — beseitigt sie aber nicht.</li>
+</ul>
+
+<p>Beide Eigenschaften sind der registergespeisten klinischen Krebsdokumentation
+inhärent; sie sind keine Datenqualitätsmängel eines einzelnen Standorts.
+Analysen sollten sie im Limitations-Abschnitt benennen.</p>
 
 
 
@@ -353,8 +402,8 @@ Diese Seite enthält Übersetzungen aus der Originalsprache, in der der Leitfade
 
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
-          Package de.medizininformatikinitiative.kerndatensatz.onkologie#2027.0.0-ballot.rc2 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Wed, Sep 9, 2026 16:49+0000">2026-09-09</span>
+          Package de.medizininformatikinitiative.kerndatensatz.onkologie#2027.0.0-ballot basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Erstellt <span title="Mon, Sep 14, 2026 12:58+0000">2026-09-14</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

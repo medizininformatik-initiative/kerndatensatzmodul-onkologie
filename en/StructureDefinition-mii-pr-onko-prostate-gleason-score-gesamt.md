@@ -1,4 +1,4 @@
-# MII PR Onkologie Prostata Gleason Score Gesamt - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2
+# MII PR Onkologie Prostata Gleason Score Gesamt - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-score-gesamt | *Version*:2027.0.0-ballot.rc2 |
-| Active as of 2026-09-09 | *Computable Name*:MII_PR_Onko_Prostata_Gleason_Score_Gesamt |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-score-gesamt | *Version*:2027.0.0-ballot |
+| Active as of 2026-09-14 | *Computable Name*:MII_PR_Onko_Prostata_Gleason_Score_Gesamt |
 
  
 Dieses Profil beschreibt den Gleason-Gesamtscore als Summe aus primärem und sekundärem Pattern. Es wird verwendet, wenn im Befund nur das Score-Ergebnis dokumentiert ist und keine Aufschlüsselung in Primär-/Sekundär-Pattern und keine ISUP Grade Group vorliegt. Für die detaillierte Dokumentation mit Grade Group ist MII_PR_Onko_Prostata_Gleason_Grade_Group zu verwenden, für die einzelnen Patterns MII_PR_Onko_Prostata_Gleason_Pattern. 
@@ -48,7 +48,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-prost
       },
       {
         "url" : "version",
-        "valueString" : "2027.0.0-ballot.rc2"
+        "valueString" : "2027.0.0-ballot"
       },
       {
         "url" : "uri",
@@ -83,7 +83,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-prost
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
-    "valueDate" : "2026-01-03"
+    "valueDate" : "2026-09-15"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/artifact-topic",
@@ -160,16 +160,16 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-prost
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
     "valuePeriod" : {
-      "start" : "2026"
+      "start" : "2027"
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-gleason-score-gesamt",
-  "version" : "2027.0.0-ballot.rc2",
+  "version" : "2027.0.0-ballot",
   "name" : "MII_PR_Onko_Prostata_Gleason_Score_Gesamt",
   "title" : "MII PR Onkologie Prostata Gleason Score Gesamt",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T16:49:31+00:00",
+  "date" : "2026-09-14T12:58:08+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -272,6 +272,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-prost
       "id" : "Observation.code.coding:snomed.system",
       "path" : "Observation.code.coding.system",
       "min" : 1,
+      "patternUri" : "http://snomed.info/sct",
       "mustSupport" : true
     },
     {
@@ -297,6 +298,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-prost
       "id" : "Observation.code.coding:loinc.system",
       "path" : "Observation.code.coding.system",
       "min" : 1,
+      "patternUri" : "http://loinc.org",
       "mustSupport" : true
     },
     {

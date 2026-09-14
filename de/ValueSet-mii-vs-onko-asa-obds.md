@@ -1,4 +1,4 @@
-# MII VS Onkologie ASA oBDS - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2
+# MII VS Onkologie ASA oBDS - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-asa-obds | *Version*:2027.0.0-ballot.rc2 |
-| Active Stand: 2026-09-09 | *Maschinenlesbarer Name*:MII_VS_Onko_ASA_oBDS |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-asa-obds | *Version*:2027.0.0-ballot |
+| Active Stand: 2026-09-14 | *Maschinenlesbarer Name*:MII_VS_Onko_ASA_oBDS |
 
  
 Value Set für oBDS ASA-Klassifikation (ursprünglich KR9 aus Kolorektales Karzinom Modul, generalisiert für alle onkologischen Indikationen) 
@@ -48,7 +48,7 @@ Value Set für oBDS ASA-Klassifikation (ursprünglich KR9 aus Kolorektales Karzi
       },
       {
         "url" : "version",
-        "valueString" : "2027.0.0-ballot.rc2"
+        "valueString" : "2027.0.0-ballot"
       },
       {
         "url" : "uri",
@@ -85,7 +85,7 @@ Value Set für oBDS ASA-Klassifikation (ursprünglich KR9 aus Kolorektales Karzi
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
-    "valueDate" : "2026-01-03"
+    "valueDate" : "2026-09-15"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/artifact-topic",
@@ -162,16 +162,16 @@ Value Set für oBDS ASA-Klassifikation (ursprünglich KR9 aus Kolorektales Karzi
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
     "valuePeriod" : {
-      "start" : "2026"
+      "start" : "2027"
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-asa-obds",
-  "version" : "2027.0.0-ballot.rc2",
+  "version" : "2027.0.0-ballot",
   "name" : "MII_VS_Onko_ASA_oBDS",
   "title" : "MII VS Onkologie ASA oBDS",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T16:49:31+00:00",
+  "date" : "2026-09-14T12:58:08+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

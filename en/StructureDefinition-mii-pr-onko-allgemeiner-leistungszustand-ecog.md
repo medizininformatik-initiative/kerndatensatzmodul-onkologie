@@ -1,4 +1,4 @@
-# MII PR Onkologie Allgemeiner Leistungszustand ECOG - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2
+# MII PR Onkologie Allgemeiner Leistungszustand ECOG - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-ecog | *Version*:2027.0.0-ballot.rc2 |
-| Active as of 2026-09-09 | *Computable Name*:MII_PR_Onko_Allgemeiner_Leistungszustand_ECOG |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-ecog | *Version*:2027.0.0-ballot |
+| Active as of 2026-09-14 | *Computable Name*:MII_PR_Onko_Allgemeiner_Leistungszustand_ECOG |
 
  
 OBDS Beschreibung des allgemeines Leistungszustandes nach ECOG 
@@ -100,7 +100,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-allge
       },
       {
         "url" : "version",
-        "valueString" : "2027.0.0-ballot.rc2"
+        "valueString" : "2027.0.0-ballot"
       },
       {
         "url" : "uri",
@@ -135,7 +135,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-allge
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
-    "valueDate" : "2026-01-03"
+    "valueDate" : "2026-09-15"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/artifact-topic",
@@ -212,16 +212,16 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-allge
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
     "valuePeriod" : {
-      "start" : "2026"
+      "start" : "2027"
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-ecog",
-  "version" : "2027.0.0-ballot.rc2",
+  "version" : "2027.0.0-ballot",
   "name" : "MII_PR_Onko_Allgemeiner_Leistungszustand_ECOG",
   "title" : "MII PR Onkologie Allgemeiner Leistungszustand ECOG",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T16:49:31+00:00",
+  "date" : "2026-09-14T12:58:08+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

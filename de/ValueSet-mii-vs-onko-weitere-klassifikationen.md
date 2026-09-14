@@ -1,4 +1,4 @@
-# MII Value Set Onkologie - Weitere Klassifikationen - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2
+# MII Value Set Onkologie - Weitere Klassifikationen - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-weitere-klassifikationen | *Version*:2027.0.0-ballot.rc2 |
-| Active Stand: 2026-09-09 | *Maschinenlesbarer Name*:MII_VS_Onko_Weitere_Klassifikationen |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-weitere-klassifikationen | *Version*:2027.0.0-ballot |
+| Active Stand: 2026-09-14 | *Maschinenlesbarer Name*:MII_VS_Onko_Weitere_Klassifikationen |
 | **Copyright/Rechtliches**: This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. | |
 
  
@@ -24,8 +24,6 @@ Comprehensive collection of cancer staging systems and classification schemes us
  
 
 ### Expansion
-
-No Expansion for this valueset (Unsupported Code System Version)
 
 -------
 
@@ -51,7 +49,7 @@ No Expansion for this valueset (Unsupported Code System Version)
       },
       {
         "url" : "version",
-        "valueString" : "2027.0.0-ballot.rc2"
+        "valueString" : "2027.0.0-ballot"
       },
       {
         "url" : "uri",
@@ -87,7 +85,7 @@ No Expansion for this valueset (Unsupported Code System Version)
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
-    "valueDate" : "2026-01-03"
+    "valueDate" : "2026-09-15"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/artifact-topic",
@@ -164,16 +162,16 @@ No Expansion for this valueset (Unsupported Code System Version)
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
     "valuePeriod" : {
-      "start" : "2026"
+      "start" : "2027"
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-weitere-klassifikationen",
-  "version" : "2027.0.0-ballot.rc2",
+  "version" : "2027.0.0-ballot",
   "name" : "MII_VS_Onko_Weitere_Klassifikationen",
   "title" : "MII Value Set Onkologie - Weitere Klassifikationen",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T16:49:31+00:00",
+  "date" : "2026-09-14T12:58:08+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

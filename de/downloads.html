@@ -6,7 +6,7 @@
 <html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Downloads - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2</title>
+    <title>Downloads - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -141,11 +141,11 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">MII IG Kerndatensatz-Modul Onkologie</span>
             <br/>
-            <span style="display:inline-block;">2027.0.0-ballot.rc2 - 
+            <span style="display:inline-block;">2027.0.0-ballot - 
 
 
 
-  <img alt="Germany Flagge" src="assets/images/deu.svg" height="16" title="Germany"/>
+  Germany
 
 
             </span>
@@ -182,7 +182,7 @@
     <ul class="dropdown-menu">
       <li><a href="guidance.html">Anleitung</a></li>
       <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
-      <li><a href="researcher-guidance.html">Anleitung für Forschende (optional)</a></li>
+      <li><a href="researcher-guidance.html">Anleitung für Forschende</a></li>
       <li><a href="implementer-guidance.html">Anleitung für Implementierende</a></li>
       <!-- Nur-Link-Eintrag: die Seite "Logische Modelle" (Begründung im Quell-Menü) -->
       <li><a href="datasets-and-descriptions.html">Datensätze inkl. Beschreibungen</a></li>
@@ -193,6 +193,7 @@
       <li><a href="weitere-klassifikationen-terminologien.html">Weitere Klassifikationen: Terminologien</a></li>
       <li><a href="tumormarker-loinc.html">Tumormarker: kuratierte LOINC-Codes</a></li>
       <li><a href="tnm-journey.html">TNM Schritt für Schritt</a></li>
+      <li><a href="therapieziele.html">Therapieziele</a></li>
     </ul>
   </li>
   <li class="dropdown">
@@ -293,7 +294,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">This page is part of the MII IG Kerndatensatz-Modul Onkologie (v2027.0.0-ballot.rc2: Release) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-onkologie/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the MII IG Kerndatensatz-Modul Onkologie (v2027.0.0-ballot: Release) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-onkologie/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Downloads</h2>
   
 
@@ -355,7 +356,10 @@ um eine konforme Umsetzung zu bauen — siehe die FHIR-Dokumentation zur
 <p>Eine herunterladbare Fassung des gerenderten Leitfadens für den lokalen Betrieb:</p>
 
 <ul>
-  <li><a href="../full-ig.zip">Herunterladbare Kopie (komprimierter Ordner)</a></li>
+  <li><a href="../full-ig.zip">Herunterladbare Kopie (komprimierter Ordner)</a> — <strong>nur
+CI-Builds und Previews</strong>: In formalen Publikationen überschreitet dieses
+Archiv GitHubs 100-MB-Dateigrenze und wird daher nicht ausgeliefert; nutzen
+Sie das <a href="../package.tgz">Package</a> oder die publizierte Site direkt.</li>
 </ul>
 
 <h4 id="beispiele">Beispiele</h4>
@@ -390,28 +394,16 @@ profilübergreifend in einer Tabelle sichten wollen:</p>
 Veröffentlichung einschließlich ihrer Abhängigkeiten und
 Veröffentlichungsparameter.</p>
 
-<blockquote class="ig-highlight ig-highlight-grey">
-  <p>[TODO: Diese Vorlage liefert keine Seite für diese Ressource aus, hier ist
-also noch nichts zu verlinken. <code class="language-plaintext highlighter-rouge">kerndatensatz-basis</code> veröffentlicht eine
-solche Seite als <code class="language-plaintext highlighter-rouge">input/pagecontent/ImplementationGuide-mii-ig-base.md</code>,
-eingetragen unter <code class="language-plaintext highlighter-rouge">pages:</code> in <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code>. Legen Sie das Gegenstück
-für Ihr Modul in beiden Sprachen an und verlinken Sie es hier. Der Dateiname
-muss Ihren Slug wörtlich enthalten: ein <code class="language-plaintext highlighter-rouge">pages:</code>-Dateiname kann keinen
-Platzhalter tragen, weil die Platzhalter-Ersetzung Dateiinhalte ersetzt, nicht
-Dateinamen.]</p>
-</blockquote>
+<p>Mit Abhängigkeiten und Publikationsparametern gerendert auf der Seite
+<a href="ImplementationGuide-mii-ig-onko-de.html">Abhängigkeiten</a>; Rohform:
+<a href="../ImplementationGuide-mii-ig-onko-de.xml">XML</a> ·
+<a href="../ImplementationGuide-mii-ig-onko-de.json">JSON</a>.</p>
 
 <h4 id="versionshistorie">Versionshistorie</h4>
 
 <p>Frühere Versionen und die ausführliche Änderungshistorie stehen auf den Seiten
 <a href="version-history.html">Versionierung</a> und
 <a href="changes.html">Änderungshistorie</a>.</p>
-
-<blockquote class="ig-highlight ig-highlight-grey">
-  <p>[TODO: Ergänzen Sie weitere Downloads Ihres Moduls — etwa ein Beispiel-Bundle,
-ein Datenwörterbuch oder eine Mapping-Tabelle — und entfernen Sie die oben
-aufgeführten Einträge, die Ihr Build nicht erzeugt.]</p>
-</blockquote>
 
 
 
@@ -437,8 +429,8 @@ aufgeführten Einträge, die Ihr Build nicht erzeugt.]</p>
 
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
-          Package de.medizininformatikinitiative.kerndatensatz.onkologie#2027.0.0-ballot.rc2 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Wed, Sep 9, 2026 16:49+0000">2026-09-09</span>
+          Package de.medizininformatikinitiative.kerndatensatz.onkologie#2027.0.0-ballot basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Erstellt <span title="Mon, Sep 14, 2026 12:58+0000">2026-09-14</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

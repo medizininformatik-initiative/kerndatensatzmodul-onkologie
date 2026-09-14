@@ -6,7 +6,7 @@
 <html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Änderungshistorie - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2</title>
+    <title>Änderungshistorie - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -141,11 +141,11 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">MII IG Kerndatensatz-Modul Onkologie</span>
             <br/>
-            <span style="display:inline-block;">2027.0.0-ballot.rc2 - 
+            <span style="display:inline-block;">2027.0.0-ballot - 
 
 
 
-  <img alt="Germany Flagge" src="assets/images/deu.svg" height="16" title="Germany"/>
+  Germany
 
 
             </span>
@@ -182,7 +182,7 @@
     <ul class="dropdown-menu">
       <li><a href="guidance.html">Anleitung</a></li>
       <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
-      <li><a href="researcher-guidance.html">Anleitung für Forschende (optional)</a></li>
+      <li><a href="researcher-guidance.html">Anleitung für Forschende</a></li>
       <li><a href="implementer-guidance.html">Anleitung für Implementierende</a></li>
       <!-- Nur-Link-Eintrag: die Seite "Logische Modelle" (Begründung im Quell-Menü) -->
       <li><a href="datasets-and-descriptions.html">Datensätze inkl. Beschreibungen</a></li>
@@ -193,6 +193,7 @@
       <li><a href="weitere-klassifikationen-terminologien.html">Weitere Klassifikationen: Terminologien</a></li>
       <li><a href="tumormarker-loinc.html">Tumormarker: kuratierte LOINC-Codes</a></li>
       <li><a href="tnm-journey.html">TNM Schritt für Schritt</a></li>
+      <li><a href="therapieziele.html">Therapieziele</a></li>
     </ul>
   </li>
   <li class="dropdown">
@@ -293,7 +294,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">This page is part of the MII IG Kerndatensatz-Modul Onkologie (v2027.0.0-ballot.rc2: Release) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-onkologie/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the MII IG Kerndatensatz-Modul Onkologie (v2027.0.0-ballot: Release) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-onkologie/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Änderungshistorie</h2>
   
 
@@ -311,6 +312,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
+  <li><a href="#änderungen-v202700-ballot-ballot" id="markdown-toc-änderungen-v202700-ballot-ballot">Änderungen v2027.0.0-ballot (Ballot)</a></li>
   <li><a href="#änderungen-v202700-ballotrc2-ballot-kandidat" id="markdown-toc-änderungen-v202700-ballotrc2-ballot-kandidat">Änderungen v2027.0.0-ballot.rc2 (Ballot-Kandidat)</a>    <ul>
       <li><a href="#️-breaking-changes" id="markdown-toc-️-breaking-changes">⚠️ Breaking Changes</a></li>
       <li><a href="#neue-profile-und-funktionalität" id="markdown-toc-neue-profile-und-funktionalität">Neue Profile und Funktionalität</a></li>
@@ -370,6 +372,20 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div>
 
 <p>Hier sind alle Änderungen aufgelistet.</p>
+
+<h2 id="änderungen-v202700-ballot-ballot">Änderungen v2027.0.0-ballot (Ballot)</h2>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">kerndatensatz.studie</code> als harte Dependency entfernt</strong>: Kein Artefakt dieses Moduls referenziert einen studie-Canonical — das Studienteilnahme-Profil bindet <code class="language-plaintext highlighter-rouge">focus[studie]</code> auf schlichtes <code class="language-plaintext highlighter-rouge">Reference(ResearchStudy)</code>, die SOLL-Empfehlung auf <code class="language-plaintext highlighter-rouge">MII_PR_Studie_Studie</code> steht in der Elementdefinition. studie ist das letzte Modul auf einer rc; ohne den Pin blockiert es diese Ballot-Linie nicht mehr.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">BREAKING</code></strong> <strong>Canonical-URLs an die Namenskonvention angeglichen (10 Artefakte)</strong>: sieben Therapie-ValueSets erhielten das fehlende <code class="language-plaintext highlighter-rouge">onko-</code>-Segment, drei logische Modelle verloren den Simplifier-Altpfad <code class="language-plaintext highlighter-rouge">…/LogicalModel/&lt;Name&gt;</code> — vollständige Alt→Neu-Tabelle und Migrationshinweise auf der Seite <a href="migration-v2026.html">Migration von v2026</a>, Eintrag 10. Instanzen sind nicht betroffen (sie tragen diese Canonicals nie); Profil-Bindings folgen automatisch.</li>
+  <li><strong>Abhängigkeiten komplett auf der 2027-Ballot-Linie</strong>: <code class="language-plaintext highlighter-rouge">kerndatensatz.meta</code>, <code class="language-plaintext highlighter-rouge">.base</code>, <code class="language-plaintext highlighter-rouge">.biobank</code>, <code class="language-plaintext highlighter-rouge">.medikation</code> und <code class="language-plaintext highlighter-rouge">.molgen</code> jetzt auf plain <code class="language-plaintext highlighter-rouge">2027.0.0-ballot</code>; <code class="language-plaintext highlighter-rouge">kerndatensatz.laborbefund</code> ebenfalls auf plain <code class="language-plaintext highlighter-rouge">2027.0.0-ballot</code>. Vorab auf Snapshot-/Slicing-Kompatibilität geprüft.</li>
+  <li><strong>SNOMED-CT-Expansions-Pin auf International 20260701 gehoben</strong> (Expansions-Manifest, <code class="language-plaintext highlighter-rouge">$sct</code>-Alias, CalVer-Tabelle): alle 166 pin-relevanten Codes aktiv verifiziert, 19 Filter-Wurzeln verlustfrei, versionierter <code class="language-plaintext highlighter-rouge">$lookup</code>/<code class="language-plaintext highlighter-rouge">$expand</code> auf dem MII-Terminologieserver bestätigt. ConceptMap-<code class="language-plaintext highlighter-rouge">targetVersion</code> behält bewusst die Kurations-Provenienz.</li>
+  <li><strong>CRMI-Governance-Metadaten im Ballot-Takt</strong>: <code class="language-plaintext highlighter-rouge">approvalDate</code> 2026-09-15 und <code class="language-plaintext highlighter-rouge">effectivePeriod</code> 2027 über alle ~330 Artefakte (RuleSets, Library, IG-Ressource); das Profil Genetische Variante trägt jetzt beide Topics (Neoplasm C3262 + Genetik C17457); die URL-keyed-Profilvariante vervollständigt (License/package-source, versionAlgorithm, effectivePeriod, experimental).</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> <strong>QA-Slicing-Gruppen aufgelöst</strong>: Gleason-Score-/Grade-Group-Diskriminatoren (explizite <code class="language-plaintext highlighter-rouge">.system</code>-Werte), Studienteilnahme-<code class="language-plaintext highlighter-rouge">focus[studie]</code> auf ein resolve()-Zielprofil reduziert, Pflicht-Slices in den FOLFOX- und Tumormarker-Beispielen vervollständigt (12+3+5 QA-Fehler).</li>
+  <li><code class="language-plaintext highlighter-rouge">fix</code> Known Issue dokumentiert: Der SU-Terminologieserver führt die historischen ATC-Jahrgänge 2018–2026 nicht, daher erzeugen die jährlichen Substanzen-ValueSets derzeit nicht-handelbare QA-Fehler (<code class="language-plaintext highlighter-rouge">bfarm/atc version JJJJ</code>).</li>
+  <li><strong>Neue Seiten</strong>: <a href="therapieziele.html">Therapieziele</a> (Verhältnis zur BIH-CEI-Therapieziele-Spezifikation) und die vervollständigte <a href="researcher-guidance.html">Anleitung für Forschende</a> (Meldeverzug, Standort-Fragmentierung); alle Template-TODO-Boxen entfernt (Security &amp; Privacy, Übersetzungsstand, Versionierung, Downloads).</li>
+  <li><code class="language-plaintext highlighter-rouge">chore</code> IG-Ressourcen-id umbenannt <code class="language-plaintext highlighter-rouge">mii-ig-onko-de-v2026</code> → <code class="language-plaintext highlighter-rouge">mii-ig-onko-de</code> (die Version lebt im version-Feld); Package-id und Modul-Canonical unverändert.</li>
+</ul>
 
 <h2 id="änderungen-v202700-ballotrc2-ballot-kandidat">Änderungen v2027.0.0-ballot.rc2 (Ballot-Kandidat)</h2>
 
@@ -951,8 +967,8 @@ konkretem Migrationsweg:</p>
 
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
-          Package de.medizininformatikinitiative.kerndatensatz.onkologie#2027.0.0-ballot.rc2 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Wed, Sep 9, 2026 16:49+0000">2026-09-09</span>
+          Package de.medizininformatikinitiative.kerndatensatz.onkologie#2027.0.0-ballot basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Erstellt <span title="Mon, Sep 14, 2026 12:58+0000">2026-09-14</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

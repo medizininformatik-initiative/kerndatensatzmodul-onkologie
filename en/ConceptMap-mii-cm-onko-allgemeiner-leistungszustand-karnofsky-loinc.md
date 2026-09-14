@@ -1,4 +1,4 @@
-# Mapping oBDS Karnofsky zu LOINC - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2
+# Mapping oBDS Karnofsky zu LOINC - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-allgemeiner-leistungszustand-karnofsky-loinc | *Version*:2027.0.0-ballot.rc2 |
-| Active as of 2026-09-09 | *Computable Name*: |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-allgemeiner-leistungszustand-karnofsky-loinc | *Version*:2027.0.0-ballot |
+| Active as of 2026-09-14 | *Computable Name*: |
 
  
 Mapping der oBDS-Codes für Karnofsky Performance Status zu LOINC Answer List LL4986-7 
@@ -34,7 +34,7 @@ Mapping der oBDS-Codes für Karnofsky Performance Status zu LOINC Answer List LL
       },
       {
         "url" : "version",
-        "valueString" : "2027.0.0-ballot.rc2"
+        "valueString" : "2027.0.0-ballot"
       },
       {
         "url" : "uri",
@@ -65,7 +65,7 @@ Mapping der oBDS-Codes für Karnofsky Performance Status zu LOINC Answer List LL
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
-    "valueDate" : "2026-01-03"
+    "valueDate" : "2026-09-15"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/artifact-topic",
@@ -142,15 +142,15 @@ Mapping der oBDS-Codes für Karnofsky Performance Status zu LOINC Answer List LL
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
     "valuePeriod" : {
-      "start" : "2026"
+      "start" : "2027"
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-allgemeiner-leistungszustand-karnofsky-loinc",
-  "version" : "2027.0.0-ballot.rc2",
+  "version" : "2027.0.0-ballot",
   "title" : "Mapping oBDS Karnofsky zu LOINC",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T16:49:31+00:00",
+  "date" : "2026-09-14T12:58:08+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

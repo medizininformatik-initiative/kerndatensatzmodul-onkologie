@@ -6,7 +6,7 @@
 <html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Migration from v2026 - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2</title>
+    <title>Migration from v2026 - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -141,11 +141,11 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">MII IG Kerndatensatz-Modul Onkologie</span>
             <br/>
-            <span style="display:inline-block;">2027.0.0-ballot.rc2 - 
+            <span style="display:inline-block;">2027.0.0-ballot - 
 
 
 
-  <img alt="Germany Flagge" src="assets/images/deu.svg" height="16" title="Germany"/>
+  Germany
 
 
             </span>
@@ -182,7 +182,7 @@
     <ul class="dropdown-menu">
       <li><a href="guidance.html">Anleitung</a></li>
       <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
-      <li><a href="researcher-guidance.html">Anleitung für Forschende (optional)</a></li>
+      <li><a href="researcher-guidance.html">Anleitung für Forschende</a></li>
       <li><a href="implementer-guidance.html">Anleitung für Implementierende</a></li>
       <!-- Nur-Link-Eintrag: die Seite "Logische Modelle" (Begründung im Quell-Menü) -->
       <li><a href="datasets-and-descriptions.html">Datensätze inkl. Beschreibungen</a></li>
@@ -193,6 +193,7 @@
       <li><a href="weitere-klassifikationen-terminologien.html">Weitere Klassifikationen: Terminologien</a></li>
       <li><a href="tumormarker-loinc.html">Tumormarker: kuratierte LOINC-Codes</a></li>
       <li><a href="tnm-journey.html">TNM Schritt für Schritt</a></li>
+      <li><a href="therapieziele.html">Therapieziele</a></li>
     </ul>
   </li>
   <li class="dropdown">
@@ -293,7 +294,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">This page is part of the MII IG Kerndatensatz-Modul Onkologie (v2027.0.0-ballot.rc2: Release) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-onkologie/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the MII IG Kerndatensatz-Modul Onkologie (v2027.0.0-ballot: Release) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-onkologie/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Migration from v2026</h2>
   
 
@@ -543,6 +544,75 @@ Basismodule 2026) sind nicht getestet.</p>
 <p><strong>Migration.</strong> Abhängigkeiten gemeinsam mit dem Modul anheben; kein
 Datenmigrationsschritt.</p>
 
+<h4 id="10-canonical-urls-an-die-namenskonvention-angeglichen-10-artefakte">10. Canonical-URLs an die Namenskonvention angeglichen (10 Artefakte)</h4>
+
+<p><strong>Was sich geändert hat.</strong> Sieben Therapie-ValueSets trugen Canonicals ohne
+das <code class="language-plaintext highlighter-rouge">onko-</code>-Segment, drei logische Modelle den Simplifier-Altpfad
+<code class="language-plaintext highlighter-rouge">…/StructureDefinition/LogicalModel/&lt;Name&gt;</code>. Alle zehn folgen jetzt der
+Modulkonvention <code class="language-plaintext highlighter-rouge">…/modul-onko/&lt;Typ&gt;/&lt;id&gt;</code>:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>alt</th>
+      <th>neu</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ValueSet/mii-vs-strahlentherapie-zielgebiet</code></td>
+      <td><code class="language-plaintext highlighter-rouge">ValueSet/mii-vs-onko-strahlentherapie-zielgebiet</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ValueSet/mii-vs-strahlentherapie-strahlenart</code></td>
+      <td><code class="language-plaintext highlighter-rouge">ValueSet/mii-vs-onko-strahlentherapie-strahlenart</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ValueSet/mii-vs-strahlentherapie-strahlungseinheit</code></td>
+      <td><code class="language-plaintext highlighter-rouge">ValueSet/mii-vs-onko-strahlentherapie-strahlungseinheit</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ValueSet/mii-vs-strahlentherapie-stellungzurop</code></td>
+      <td><code class="language-plaintext highlighter-rouge">ValueSet/mii-vs-onko-strahlentherapie-stellungzurop</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ValueSet/mii-vs-strahlentherapie-ende-grund</code></td>
+      <td><code class="language-plaintext highlighter-rouge">ValueSet/mii-vs-onko-strahlentherapie-ende-grund</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ValueSet/mii-vs-systemische-therapie-stellungzurop</code></td>
+      <td><code class="language-plaintext highlighter-rouge">ValueSet/mii-vs-onko-systemische-therapie-stellungzurop</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ValueSet/mii-vs-systemische-therapie-ende-grund</code></td>
+      <td><code class="language-plaintext highlighter-rouge">ValueSet/mii-vs-onko-systemische-therapie-ende-grund</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">StructureDefinition/LogicalModel/Onkologie</code></td>
+      <td><code class="language-plaintext highlighter-rouge">StructureDefinition/mii-lm-onko</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">StructureDefinition/LogicalModel/OrganspezifischeZusatzmodule</code></td>
+      <td><code class="language-plaintext highlighter-rouge">StructureDefinition/mii-lm-onko-organspezifische-zusatzmodule</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">StructureDefinition/LogicalModel/mii-lm-mvgenomseq-onkologie</code></td>
+      <td><code class="language-plaintext highlighter-rouge">StructureDefinition/mii-lm-mvgenomseq-onkologie</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Bestandsdaten.</strong> Keine Auswirkung — Instanzen tragen weder ValueSet- noch
+LogicalModel-Canonicals; die Bindings liegen in den Profilen, die auf die
+neuen URLs verweisen.</p>
+
+<p><strong>Implementierungen.</strong> Nur Systeme, die diese zehn Canonicals <em>direkt</em>
+adressieren (Terminologieserver-Anfragen, Validierungskonfigurationen,
+Dokumentationslinks), müssen auf die neuen URLs wechseln; alles, was sie
+über die Profile des Moduls auflöst, folgt automatisch.</p>
+
+<p><strong>Migration.</strong> Textersetzung alt → neu; die Tabelle oben ist vollständig.</p>
+
 
 
 
@@ -567,8 +637,8 @@ Datenmigrationsschritt.</p>
 
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
-          Package de.medizininformatikinitiative.kerndatensatz.onkologie#2027.0.0-ballot.rc2 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Wed, Sep 9, 2026 16:49+0000">2026-09-09</span>
+          Package de.medizininformatikinitiative.kerndatensatz.onkologie#2027.0.0-ballot basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Erstellt <span title="Mon, Sep 14, 2026 12:58+0000">2026-09-14</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

@@ -7,7 +7,7 @@
 <html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>MII PR Onkologie Tumorkonferenz - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2</title>
+    <title>MII PR Onkologie Tumorkonferenz - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -68,8 +68,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"20.95"}
-    h3,h4,h5,h6{--heading-prefix:"20.95"}</style>
+    <style type="text/css">h2{--heading-prefix:"21.95"}
+    h3,h4,h5,h6{--heading-prefix:"21.95"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -142,11 +142,11 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">MII IG Kerndatensatz-Modul Onkologie</span>
             <br/>
-            <span style="display:inline-block;">2027.0.0-ballot.rc2 - 
+            <span style="display:inline-block;">2027.0.0-ballot - 
 
 
 
-  <img alt="Germany Flagge" src="assets/images/deu.svg" height="16" title="Germany"/>
+  Germany
 
 
             </span>
@@ -183,7 +183,7 @@
     <ul class="dropdown-menu">
       <li><a href="guidance.html">Anleitung</a></li>
       <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
-      <li><a href="researcher-guidance.html">Anleitung für Forschende (optional)</a></li>
+      <li><a href="researcher-guidance.html">Anleitung für Forschende</a></li>
       <li><a href="implementer-guidance.html">Anleitung für Implementierende</a></li>
       <!-- Nur-Link-Eintrag: die Seite "Logische Modelle" (Begründung im Quell-Menü) -->
       <li><a href="datasets-and-descriptions.html">Datensätze inkl. Beschreibungen</a></li>
@@ -194,6 +194,7 @@
       <li><a href="weitere-klassifikationen-terminologien.html">Weitere Klassifikationen: Terminologien</a></li>
       <li><a href="tumormarker-loinc.html">Tumormarker: kuratierte LOINC-Codes</a></li>
       <li><a href="tnm-journey.html">TNM Schritt für Schritt</a></li>
+      <li><a href="therapieziele.html">Therapieziele</a></li>
     </ul>
   </li>
   <li class="dropdown">
@@ -288,7 +289,7 @@
 
 <!-- layouts\layout-profile -->
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">This page is part of the MII IG Kerndatensatz-Modul Onkologie (v2027.0.0-ballot.rc2: Release) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-onkologie/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the MII IG Kerndatensatz-Modul Onkologie (v2027.0.0-ballot: Release) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-onkologie/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   
 
 
@@ -374,7 +375,7 @@ MII PR Onkologie Tumorkonferenz
       <td colspan="4"><i>Offizielle URL</i>: <span class="copy-text">https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz<button title="Klicken zum Kopieren der URL" class="btn-copy" data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz"/></span>
       </td>
       <td><i>Version</i>:
-      <span class="copy-text">2027.0.0-ballot.rc2<button title="Klicken zum Kopieren der versionierten URL" class="btn-copy" data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz|2027.0.0-ballot.rc2"/></span>
+      <span class="copy-text">2027.0.0-ballot<button title="Klicken zum Kopieren der versionierten URL" class="btn-copy" data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz|2027.0.0-ballot"/></span>
       </td>
     </tr>
 
@@ -392,7 +393,7 @@ MII PR Onkologie Tumorkonferenz
           
 
             Stand: 
-2026-09-09
+2026-09-14
 
           
         
@@ -795,7 +796,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="StructureDefinition-mii-pr-onko-therapieempfehlung-kombinationstherapie.html">MII PR Onkologie Therapieempfehlung Kombinationstherapie</a> | <a href="StructureDefinition-mii-pr-onko-therapieempfehlung-medikation.html">MII PR Onkologie Therapieempfehlung Medikation</a> | <a href="StructureDefinition-mii-pr-onko-therapieempfehlung-operation.html">MII PR Onkologie Therapieempfehlung Operation</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Detailed therapy recommendation - RequestGroup, MedicationRequest, or ServiceRequest</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // bb1abbba-e990-42a2-8496-656c18963282
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 1e37b3e8-ee05-46d3-a6bc-a243e1cf4fde
 document.getElementById('cbmii-pr-onko-tumorkonferenzK-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-onko-tumorkonferenzK'), 'binding', document.getElementById('cbmii-pr-onko-tumorkonferenzK-binding').checked, document.getElementById('ppmii-pr-onko-tumorkonferenzK'));
 document.getElementById('cbmii-pr-onko-tumorkonferenzK-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -883,7 +884,7 @@ filterDesc(document.getElementById('mii-pr-onko-tumorkonferenzK'), 'obligation',
       <a style="opacity: 1.0" href="ValueSet-mii-vs-onko-therapieplanung-typ.html">MII VS Onkologie Therapieplanung Typ</a>
       <button data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-therapieplanung-typ" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot.rc2</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot</td>
     <td>This IG</td>
   </tr>
   <tr>
@@ -896,7 +897,7 @@ filterDesc(document.getElementById('mii-pr-onko-tumorkonferenzK'), 'obligation',
       <a style="opacity: 1.0" href="ValueSet-mii-vs-onko-therapieempfehlung-typ.html">MII VS Onkologie Therapieempfehlung Typ</a>
       <button data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-therapieempfehlung-typ" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot.rc2</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot</td>
     <td>This IG</td>
   </tr>
   <tr>
@@ -924,7 +925,7 @@ filterDesc(document.getElementById('mii-pr-onko-tumorkonferenzK'), 'obligation',
       <a style="opacity: 1.0" href="ValueSet-mii-vs-onko-therapieabweichung.html">MII VS Onkologie Therapieabweichung</a>
       <button data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-therapieabweichung" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot.rc2</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot</td>
     <td>This IG</td>
   </tr>
   <tr>
@@ -1223,7 +1224,7 @@ filterDesc(document.getElementById('mii-pr-onko-tumorkonferenzK'), 'obligation',
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="text-decoration:line-through"></span><span style="text-decoration:line-through">0</span><span style="text-decoration:line-through">..</span><span style="text-decoration:line-through">0</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="font-style: italic">In-line definition of activity</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // bb1abbba-e990-42a2-8496-656c18963282
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 1e37b3e8-ee05-46d3-a6bc-a243e1cf4fde
 document.getElementById('cbmii-pr-onko-tumorkonferenzD-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-onko-tumorkonferenzD'), 'binding', document.getElementById('cbmii-pr-onko-tumorkonferenzD-binding').checked, document.getElementById('ppmii-pr-onko-tumorkonferenzD'));
 document.getElementById('cbmii-pr-onko-tumorkonferenzD-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1268,7 +1269,7 @@ filterDesc(document.getElementById('mii-pr-onko-tumorkonferenzD'), 'obligation',
       <a style="opacity: 0.5" href="ValueSet-mii-vs-onko-therapieplanung-typ.html">MII VS Onkologie Therapieplanung Typ</a>
       <button data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-therapieplanung-typ" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot.rc2</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot</td>
     <td>This IG</td>
   </tr>
   <tr>
@@ -1281,7 +1282,7 @@ filterDesc(document.getElementById('mii-pr-onko-tumorkonferenzD'), 'obligation',
       <a style="opacity: 0.5" href="ValueSet-mii-vs-onko-therapieempfehlung-typ.html">MII VS Onkologie Therapieempfehlung Typ</a>
       <button data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-therapieempfehlung-typ" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot.rc2</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot</td>
     <td>This IG</td>
   </tr>
   <tr>
@@ -1294,7 +1295,7 @@ filterDesc(document.getElementById('mii-pr-onko-tumorkonferenzD'), 'obligation',
       <a style="opacity: 0.5" href="ValueSet-mii-vs-onko-therapieabweichung.html">MII VS Onkologie Therapieabweichung</a>
       <button data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-therapieabweichung" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot.rc2</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot</td>
     <td>This IG</td>
   </tr>
 </table>
@@ -2099,7 +2100,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Annotation">Annotation</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Comments about the plan<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // bb1abbba-e990-42a2-8496-656c18963282
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 1e37b3e8-ee05-46d3-a6bc-a243e1cf4fde
 document.getElementById('cbmii-pr-onko-tumorkonferenzS-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-onko-tumorkonferenzS'), 'binding', document.getElementById('cbmii-pr-onko-tumorkonferenzS-binding').checked, document.getElementById('ppmii-pr-onko-tumorkonferenzS'));
 document.getElementById('cbmii-pr-onko-tumorkonferenzS-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2233,7 +2234,7 @@ filterDesc(document.getElementById('mii-pr-onko-tumorkonferenzS'), 'obligation',
       <a style="opacity: 1.0" href="ValueSet-mii-vs-onko-therapieplanung-typ.html">MII VS Onkologie Therapieplanung Typ</a>
       <button data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-therapieplanung-typ" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot.rc2</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot</td>
     <td>This IG</td>
   </tr>
   <tr>
@@ -2366,7 +2367,7 @@ filterDesc(document.getElementById('mii-pr-onko-tumorkonferenzS'), 'obligation',
       <a style="opacity: 1.0" href="ValueSet-mii-vs-onko-therapieempfehlung-typ.html">MII VS Onkologie Therapieempfehlung Typ</a>
       <button data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-therapieempfehlung-typ" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot.rc2</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot</td>
     <td>This IG</td>
   </tr>
   <tr>
@@ -2409,7 +2410,7 @@ filterDesc(document.getElementById('mii-pr-onko-tumorkonferenzS'), 'obligation',
       <a style="opacity: 1.0" href="ValueSet-mii-vs-onko-therapieabweichung.html">MII VS Onkologie Therapieabweichung</a>
       <button data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-therapieabweichung" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot.rc2</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot</td>
     <td>This IG</td>
   </tr>
   <tr>
@@ -3023,7 +3024,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="StructureDefinition-mii-pr-onko-therapieempfehlung-kombinationstherapie.html">MII PR Onkologie Therapieempfehlung Kombinationstherapie</a> | <a href="StructureDefinition-mii-pr-onko-therapieempfehlung-medikation.html">MII PR Onkologie Therapieempfehlung Medikation</a> | <a href="StructureDefinition-mii-pr-onko-therapieempfehlung-operation.html">MII PR Onkologie Therapieempfehlung Operation</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Detailed therapy recommendation - RequestGroup, MedicationRequest, or ServiceRequest</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // bb1abbba-e990-42a2-8496-656c18963282
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 1e37b3e8-ee05-46d3-a6bc-a243e1cf4fde
 document.getElementById('cbmii-pr-onko-tumorkonferenzKA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-onko-tumorkonferenzKA'), 'binding', document.getElementById('cbmii-pr-onko-tumorkonferenzKA-binding').checked, document.getElementById('ppmii-pr-onko-tumorkonferenzKA'));
 document.getElementById('cbmii-pr-onko-tumorkonferenzKA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -3110,7 +3111,7 @@ filterDesc(document.getElementById('mii-pr-onko-tumorkonferenzKA'), 'obligation'
       <a style="opacity: 1.0" href="ValueSet-mii-vs-onko-therapieplanung-typ.html">MII VS Onkologie Therapieplanung Typ</a>
       <button data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-therapieplanung-typ" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot.rc2</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot</td>
     <td>This IG</td>
   </tr>
   <tr>
@@ -3123,7 +3124,7 @@ filterDesc(document.getElementById('mii-pr-onko-tumorkonferenzKA'), 'obligation'
       <a style="opacity: 1.0" href="ValueSet-mii-vs-onko-therapieempfehlung-typ.html">MII VS Onkologie Therapieempfehlung Typ</a>
       <button data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-therapieempfehlung-typ" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot.rc2</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot</td>
     <td>This IG</td>
   </tr>
   <tr>
@@ -3151,7 +3152,7 @@ filterDesc(document.getElementById('mii-pr-onko-tumorkonferenzKA'), 'obligation'
       <a style="opacity: 1.0" href="ValueSet-mii-vs-onko-therapieabweichung.html">MII VS Onkologie Therapieabweichung</a>
       <button data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-therapieabweichung" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot.rc2</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot</td>
     <td>This IG</td>
   </tr>
   <tr>
@@ -3450,7 +3451,7 @@ filterDesc(document.getElementById('mii-pr-onko-tumorkonferenzKA'), 'obligation'
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="text-decoration:line-through"></span><span style="text-decoration:line-through">0</span><span style="text-decoration:line-through">..</span><span style="text-decoration:line-through">0</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="font-style: italic">In-line definition of activity</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // bb1abbba-e990-42a2-8496-656c18963282
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 1e37b3e8-ee05-46d3-a6bc-a243e1cf4fde
 document.getElementById('cbmii-pr-onko-tumorkonferenzDA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-onko-tumorkonferenzDA'), 'binding', document.getElementById('cbmii-pr-onko-tumorkonferenzDA-binding').checked, document.getElementById('ppmii-pr-onko-tumorkonferenzDA'));
 document.getElementById('cbmii-pr-onko-tumorkonferenzDA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -3492,7 +3493,7 @@ filterDesc(document.getElementById('mii-pr-onko-tumorkonferenzDA'), 'obligation'
       <a style="opacity: 0.5" href="ValueSet-mii-vs-onko-therapieplanung-typ.html">MII VS Onkologie Therapieplanung Typ</a>
       <button data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-therapieplanung-typ" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot.rc2</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot</td>
     <td>This IG</td>
   </tr>
   <tr>
@@ -3505,7 +3506,7 @@ filterDesc(document.getElementById('mii-pr-onko-tumorkonferenzDA'), 'obligation'
       <a style="opacity: 0.5" href="ValueSet-mii-vs-onko-therapieempfehlung-typ.html">MII VS Onkologie Therapieempfehlung Typ</a>
       <button data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-therapieempfehlung-typ" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot.rc2</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot</td>
     <td>This IG</td>
   </tr>
   <tr>
@@ -3518,7 +3519,7 @@ filterDesc(document.getElementById('mii-pr-onko-tumorkonferenzDA'), 'obligation'
       <a style="opacity: 0.5" href="ValueSet-mii-vs-onko-therapieabweichung.html">MII VS Onkologie Therapieabweichung</a>
       <button data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-therapieabweichung" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot.rc2</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot</td>
     <td>This IG</td>
   </tr>
 </table>
@@ -4323,7 +4324,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Annotation">Annotation</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Comments about the plan<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // bb1abbba-e990-42a2-8496-656c18963282
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 1e37b3e8-ee05-46d3-a6bc-a243e1cf4fde
 document.getElementById('cbmii-pr-onko-tumorkonferenzSA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-onko-tumorkonferenzSA'), 'binding', document.getElementById('cbmii-pr-onko-tumorkonferenzSA-binding').checked, document.getElementById('ppmii-pr-onko-tumorkonferenzSA'));
 document.getElementById('cbmii-pr-onko-tumorkonferenzSA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -4455,7 +4456,7 @@ filterDesc(document.getElementById('mii-pr-onko-tumorkonferenzSA'), 'obligation'
       <a style="opacity: 1.0" href="ValueSet-mii-vs-onko-therapieplanung-typ.html">MII VS Onkologie Therapieplanung Typ</a>
       <button data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-therapieplanung-typ" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot.rc2</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot</td>
     <td>This IG</td>
   </tr>
   <tr>
@@ -4588,7 +4589,7 @@ filterDesc(document.getElementById('mii-pr-onko-tumorkonferenzSA'), 'obligation'
       <a style="opacity: 1.0" href="ValueSet-mii-vs-onko-therapieempfehlung-typ.html">MII VS Onkologie Therapieempfehlung Typ</a>
       <button data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-therapieempfehlung-typ" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot.rc2</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot</td>
     <td>This IG</td>
   </tr>
   <tr>
@@ -4631,7 +4632,7 @@ filterDesc(document.getElementById('mii-pr-onko-tumorkonferenzSA'), 'obligation'
       <a style="opacity: 1.0" href="ValueSet-mii-vs-onko-therapieabweichung.html">MII VS Onkologie Therapieabweichung</a>
       <button data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-therapieabweichung" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot.rc2</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;2027.0.0-ballot</td>
     <td>This IG</td>
   </tr>
   <tr>
@@ -5076,8 +5077,8 @@ Summary
 
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
-          Package de.medizininformatikinitiative.kerndatensatz.onkologie#2027.0.0-ballot.rc2 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Wed, Sep 9, 2026 16:49+0000">2026-09-09</span>
+          Package de.medizininformatikinitiative.kerndatensatz.onkologie#2027.0.0-ballot basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Erstellt <span title="Mon, Sep 14, 2026 12:58+0000">2026-09-14</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

@@ -1,4 +1,4 @@
-# MII LM Onkologie - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2
+# MII LM Onkologie - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/LogicalModel/Onkologie | *Version*:2027.0.0-ballot.rc2 |
-| Active Stand: 2026-09-09 | *Maschinenlesbarer Name*:MII_LM_Onko |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-lm-onko | *Version*:2027.0.0-ballot |
+| Active Stand: 2026-09-14 | *Maschinenlesbarer Name*:MII_LM_Onko |
 
  
 MII LogicalModel Modul Onkologie 
@@ -84,7 +84,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       },
       {
         "url" : "version",
-        "valueString" : "2027.0.0-ballot.rc2"
+        "valueString" : "2027.0.0-ballot"
       },
       {
         "url" : "uri",
@@ -119,7 +119,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
-    "valueDate" : "2026-01-03"
+    "valueDate" : "2026-09-15"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/artifact-topic",
@@ -196,16 +196,16 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
     "valuePeriod" : {
-      "start" : "2026"
+      "start" : "2027"
     }
   }],
-  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/LogicalModel/Onkologie",
-  "version" : "2027.0.0-ballot.rc2",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-lm-onko",
+  "version" : "2027.0.0-ballot",
   "name" : "MII_LM_Onko",
   "title" : "MII LM Onkologie",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T16:49:31+00:00",
+  "date" : "2026-09-14T12:58:08+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -233,19 +233,19 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
   }],
   "kind" : "logical",
   "abstract" : false,
-  "type" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/LogicalModel/Onkologie",
+  "type" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-lm-onko",
   "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation" : "specialization",
   "differential" : {
     "element" : [{
-      "id" : "Onkologie",
-      "path" : "Onkologie",
+      "id" : "mii-lm-onko",
+      "path" : "mii-lm-onko",
       "short" : "MII LM Onkologie",
       "definition" : "MII LogicalModel Modul Onkologie"
     },
     {
-      "id" : "Onkologie.Diagnose",
-      "path" : "Onkologie.Diagnose",
+      "id" : "mii-lm-onko.Diagnose",
+      "path" : "mii-lm-onko.Diagnose",
       "short" : "Diagnose",
       "definition" : "Diagnose",
       "min" : 0,
@@ -264,8 +264,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Diagnose.PrimaertumorTumordiagnoseICDCode",
-      "path" : "Onkologie.Diagnose.PrimaertumorTumordiagnoseICDCode",
+      "id" : "mii-lm-onko.Diagnose.PrimaertumorTumordiagnoseICDCode",
+      "path" : "mii-lm-onko.Diagnose.PrimaertumorTumordiagnoseICDCode",
       "short" : "Primärtumor Tumordiagnose ICD Code",
       "definition" : "Kodierung einer meldepflichtigen Erkrankung nach der aktuellen ICD-GM Version.",
       "min" : 0,
@@ -284,8 +284,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Diagnose.PrimaertumorTumordiagnoseICDVersion",
-      "path" : "Onkologie.Diagnose.PrimaertumorTumordiagnoseICDVersion",
+      "id" : "mii-lm-onko.Diagnose.PrimaertumorTumordiagnoseICDVersion",
+      "path" : "mii-lm-onko.Diagnose.PrimaertumorTumordiagnoseICDVersion",
       "short" : "Primärtumor Tumordiagnose ICD-Version",
       "definition" : "Bezeichnung der zur Kodierung verwendeten ICD-GM Version.",
       "min" : 0,
@@ -304,8 +304,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Diagnose.PrimaertumorTumordiagnoseText",
-      "path" : "Onkologie.Diagnose.PrimaertumorTumordiagnoseText",
+      "id" : "mii-lm-onko.Diagnose.PrimaertumorTumordiagnoseText",
+      "path" : "mii-lm-onko.Diagnose.PrimaertumorTumordiagnoseText",
       "short" : "Primärtumor Tumordiagnose Text",
       "definition" : "Bezeichnung einer meldepflichtigen Erkrankung.",
       "min" : 0,
@@ -324,8 +324,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Diagnose.PrimaertumorTopographieICDO",
-      "path" : "Onkologie.Diagnose.PrimaertumorTopographieICDO",
+      "id" : "mii-lm-onko.Diagnose.PrimaertumorTopographieICDO",
+      "path" : "mii-lm-onko.Diagnose.PrimaertumorTopographieICDO",
       "short" : "Primärtumor Topographie ICD-O",
       "definition" : "Bezeichnung der Topographie einer Erkrankung nach der aktuellen ICD-O Version.",
       "min" : 0,
@@ -344,8 +344,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Diagnose.PrimaertumorTopographieICDOVersion",
-      "path" : "Onkologie.Diagnose.PrimaertumorTopographieICDOVersion",
+      "id" : "mii-lm-onko.Diagnose.PrimaertumorTopographieICDOVersion",
+      "path" : "mii-lm-onko.Diagnose.PrimaertumorTopographieICDOVersion",
       "short" : "Primärtumor Topographie ICD-O-Version",
       "definition" : "Bezeichnung der zur Kodierung verwendeten ICD-O Version.",
       "min" : 0,
@@ -364,8 +364,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Diagnose.PrimaertumorDiagnosedatum",
-      "path" : "Onkologie.Diagnose.PrimaertumorDiagnosedatum",
+      "id" : "mii-lm-onko.Diagnose.PrimaertumorDiagnosedatum",
+      "path" : "mii-lm-onko.Diagnose.PrimaertumorDiagnosedatum",
       "short" : "Primärtumor Diagnosedatum",
       "definition" : "Datum, angegeben in Tag, Monat und Jahr, an dem die meldepflichtige Diagnose erstmals durch einen Arzt klinisch oder mikroskopisch diagnostiziert wurde.",
       "min" : 0,
@@ -384,8 +384,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Diagnose.PrimaertumorDiagnosesicherung",
-      "path" : "Onkologie.Diagnose.PrimaertumorDiagnosesicherung",
+      "id" : "mii-lm-onko.Diagnose.PrimaertumorDiagnosesicherung",
+      "path" : "mii-lm-onko.Diagnose.PrimaertumorDiagnosesicherung",
       "short" : "Primärtumor Diagnosesicherung",
       "definition" : "Höchste erreichte Diagnosesicherheit der Diagnose.",
       "min" : 0,
@@ -404,8 +404,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Diagnose.PrimaertumorSeitenlokalisation",
-      "path" : "Onkologie.Diagnose.PrimaertumorSeitenlokalisation",
+      "id" : "mii-lm-onko.Diagnose.PrimaertumorSeitenlokalisation",
+      "path" : "mii-lm-onko.Diagnose.PrimaertumorSeitenlokalisation",
       "short" : "Primärtumor Seitenlokalisation",
       "definition" : "Organspezifische Angabe der betroffenen Seite.",
       "min" : 0,
@@ -424,8 +424,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Diagnose.FruehereTumorerkrankungen",
-      "path" : "Onkologie.Diagnose.FruehereTumorerkrankungen",
+      "id" : "mii-lm-onko.Diagnose.FruehereTumorerkrankungen",
+      "path" : "mii-lm-onko.Diagnose.FruehereTumorerkrankungen",
       "short" : "Frühere Tumorerkrankungen",
       "definition" : "Tumorerkrankungen, die in der Anamnese zu einem früheren Zeitpunkt diagnostiziert/behandelt wurden.",
       "min" : 0,
@@ -444,8 +444,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Histologie",
-      "path" : "Onkologie.Histologie",
+      "id" : "mii-lm-onko.Histologie",
+      "path" : "mii-lm-onko.Histologie",
       "short" : "Histologie",
       "definition" : "Histologie",
       "min" : 0,
@@ -460,8 +460,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Histologie.TumorHistologiedatum",
-      "path" : "Onkologie.Histologie.TumorHistologiedatum",
+      "id" : "mii-lm-onko.Histologie.TumorHistologiedatum",
+      "path" : "mii-lm-onko.Histologie.TumorHistologiedatum",
       "short" : "Tumor Histologiedatum",
       "definition" : "Datum, an dem die Gewebeprobe entnommen wurde.",
       "min" : 0,
@@ -480,8 +480,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Histologie.HistologieEinsendenummer",
-      "path" : "Onkologie.Histologie.HistologieEinsendenummer",
+      "id" : "mii-lm-onko.Histologie.HistologieEinsendenummer",
+      "path" : "mii-lm-onko.Histologie.HistologieEinsendenummer",
       "short" : "Histologie-Einsendenummer",
       "definition" : "Die Histologie-Einsendenummer/Auftragsnummer wird vom Pathologischen Institut beim Eingang des Präparates vergeben.",
       "min" : 0,
@@ -500,8 +500,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Histologie.MorphologieCode",
-      "path" : "Onkologie.Histologie.MorphologieCode",
+      "id" : "mii-lm-onko.Histologie.MorphologieCode",
+      "path" : "mii-lm-onko.Histologie.MorphologieCode",
       "short" : "Morphologie-Code",
       "definition" : "Gibt an, welche Histologie der Tumor aufweist.",
       "min" : 0,
@@ -520,8 +520,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Histologie.MorphologieICDOBlueBookVersion",
-      "path" : "Onkologie.Histologie.MorphologieICDOBlueBookVersion",
+      "id" : "mii-lm-onko.Histologie.MorphologieICDOBlueBookVersion",
+      "path" : "mii-lm-onko.Histologie.MorphologieICDOBlueBookVersion",
       "short" : "Morphologie ICD-O/Blue Book Version",
       "definition" : "Bezeichnung der zur Kodierung verwendeten ICD-O/Blue Book Version.",
       "min" : 0,
@@ -540,8 +540,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Histologie.MorphologieFreitext",
-      "path" : "Onkologie.Histologie.MorphologieFreitext",
+      "id" : "mii-lm-onko.Histologie.MorphologieFreitext",
+      "path" : "mii-lm-onko.Histologie.MorphologieFreitext",
       "short" : "Morphologie-Freitext",
       "definition" : "Gibt die Originalbezeichnung der morphologischen Diagnose an.",
       "min" : 0,
@@ -560,8 +560,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Histologie.Grading",
-      "path" : "Onkologie.Histologie.Grading",
+      "id" : "mii-lm-onko.Histologie.Grading",
+      "path" : "mii-lm-onko.Histologie.Grading",
       "short" : "Grading",
       "definition" : "Gibt den Differenzierungsgrad des Tumors entsprechend der aktuellen TNM-Auflage an.",
       "min" : 0,
@@ -580,8 +580,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Histologie.AnzahlUntersuchteLymphknoten",
-      "path" : "Onkologie.Histologie.AnzahlUntersuchteLymphknoten",
+      "id" : "mii-lm-onko.Histologie.AnzahlUntersuchteLymphknoten",
+      "path" : "mii-lm-onko.Histologie.AnzahlUntersuchteLymphknoten",
       "short" : "Anzahl der untersuchten Lymphknoten",
       "definition" : "Gibt an, wie viele Lymphknoten untersucht wurden (einschließlich Sentinel).",
       "min" : 0,
@@ -600,8 +600,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Histologie.AnzahlBefalleneLymphknoten",
-      "path" : "Onkologie.Histologie.AnzahlBefalleneLymphknoten",
+      "id" : "mii-lm-onko.Histologie.AnzahlBefalleneLymphknoten",
+      "path" : "mii-lm-onko.Histologie.AnzahlBefalleneLymphknoten",
       "short" : "Anzahl der befallenen Lymphknoten",
       "definition" : "Gibt an, wie viele Lymphknoten befallen sind (einschließlich Sentinel).",
       "min" : 0,
@@ -620,8 +620,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Histologie.AnzahlUntersuchteSentinelLymphknoten",
-      "path" : "Onkologie.Histologie.AnzahlUntersuchteSentinelLymphknoten",
+      "id" : "mii-lm-onko.Histologie.AnzahlUntersuchteSentinelLymphknoten",
+      "path" : "mii-lm-onko.Histologie.AnzahlUntersuchteSentinelLymphknoten",
       "short" : "Anzahl der untersuchten Sentinel-Lymphknoten",
       "definition" : "Gibt an, wie viele Sentinel-Lymphknoten untersucht wurden.",
       "min" : 0,
@@ -640,8 +640,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Histologie.AnzahlBefalleneSentinelLymphknoten",
-      "path" : "Onkologie.Histologie.AnzahlBefalleneSentinelLymphknoten",
+      "id" : "mii-lm-onko.Histologie.AnzahlBefalleneSentinelLymphknoten",
+      "path" : "mii-lm-onko.Histologie.AnzahlBefalleneSentinelLymphknoten",
       "short" : "Anzahl der befallenen Sentinel-Lymphknoten",
       "definition" : "Gibt an, wie viele Sentinel-Lymphknoten befallen sind.",
       "min" : 0,
@@ -660,8 +660,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Histologie.Befund",
-      "path" : "Onkologie.Histologie.Befund",
+      "id" : "mii-lm-onko.Histologie.Befund",
+      "path" : "mii-lm-onko.Histologie.Befund",
       "short" : "Befund",
       "definition" : "Vollständiger Befundbericht des Pathologen.",
       "min" : 0,
@@ -680,8 +680,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.TNMKlassifikation",
-      "path" : "Onkologie.TNMKlassifikation",
+      "id" : "mii-lm-onko.TNMKlassifikation",
+      "path" : "mii-lm-onko.TNMKlassifikation",
       "short" : "TNM-Klassifikation",
       "definition" : "TNM-Klassifikation",
       "min" : 0,
@@ -696,8 +696,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.TNMKlassifikation.TNMDatum",
-      "path" : "Onkologie.TNMKlassifikation.TNMDatum",
+      "id" : "mii-lm-onko.TNMKlassifikation.TNMDatum",
+      "path" : "mii-lm-onko.TNMKlassifikation.TNMDatum",
       "short" : "TNM Datum",
       "definition" : "Gibt an, auf welches Datum sich die TNM-Klassifikation bezieht.",
       "min" : 1,
@@ -716,8 +716,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.TNMKlassifikation.TNMVersion",
-      "path" : "Onkologie.TNMKlassifikation.TNMVersion",
+      "id" : "mii-lm-onko.TNMKlassifikation.TNMVersion",
+      "path" : "mii-lm-onko.TNMKlassifikation.TNMVersion",
       "short" : "TNM Version",
       "definition" : "Gibt an, nach welcher Version des TNM klassifiziert wurde.",
       "min" : 1,
@@ -736,8 +736,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.TNMKlassifikation.TNMySymbol",
-      "path" : "Onkologie.TNMKlassifikation.TNMySymbol",
+      "id" : "mii-lm-onko.TNMKlassifikation.TNMySymbol",
+      "path" : "mii-lm-onko.TNMKlassifikation.TNMySymbol",
       "code" : [{
         "system" : "http://loinc.org",
         "code" : "101658-3",
@@ -761,8 +761,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.TNMKlassifikation.TNMrSymbol",
-      "path" : "Onkologie.TNMKlassifikation.TNMrSymbol",
+      "id" : "mii-lm-onko.TNMKlassifikation.TNMrSymbol",
+      "path" : "mii-lm-onko.TNMKlassifikation.TNMrSymbol",
       "code" : [{
         "system" : "http://loinc.org",
         "code" : "101659-1",
@@ -786,8 +786,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.TNMKlassifikation.TNMaSymbol",
-      "path" : "Onkologie.TNMKlassifikation.TNMaSymbol",
+      "id" : "mii-lm-onko.TNMKlassifikation.TNMaSymbol",
+      "path" : "mii-lm-onko.TNMKlassifikation.TNMaSymbol",
       "code" : [{
         "system" : "http://loinc.org",
         "code" : "101660-9",
@@ -811,8 +811,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.TNMKlassifikation.TNMcpuPraefixT",
-      "path" : "Onkologie.TNMKlassifikation.TNMcpuPraefixT",
+      "id" : "mii-lm-onko.TNMKlassifikation.TNMcpuPraefixT",
+      "path" : "mii-lm-onko.TNMKlassifikation.TNMcpuPraefixT",
       "short" : "TNM c/p-Präfix T",
       "definition" : "Gibt an, ob die Klassifikation klinisch oder pathologisch erfolgte.",
       "min" : 0,
@@ -831,8 +831,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.TNMKlassifikation.TNMcpuPraefixN",
-      "path" : "Onkologie.TNMKlassifikation.TNMcpuPraefixN",
+      "id" : "mii-lm-onko.TNMKlassifikation.TNMcpuPraefixN",
+      "path" : "mii-lm-onko.TNMKlassifikation.TNMcpuPraefixN",
       "short" : "TNM c/p-Präfix N",
       "definition" : "Gibt an, ob die Klassifikation klinisch oder pathologisch erfolgte.",
       "min" : 0,
@@ -851,8 +851,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.TNMKlassifikation.TNMcpuPraefixM",
-      "path" : "Onkologie.TNMKlassifikation.TNMcpuPraefixM",
+      "id" : "mii-lm-onko.TNMKlassifikation.TNMcpuPraefixM",
+      "path" : "mii-lm-onko.TNMKlassifikation.TNMcpuPraefixM",
       "short" : "TNM c/p-Präfix M",
       "definition" : "Gibt an, ob die Klassifikation klinisch oder pathologisch erfolgte.",
       "min" : 0,
@@ -871,8 +871,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.TNMKlassifikation.TNMTKategorie",
-      "path" : "Onkologie.TNMKlassifikation.TNMTKategorie",
+      "id" : "mii-lm-onko.TNMKlassifikation.TNMTKategorie",
+      "path" : "mii-lm-onko.TNMKlassifikation.TNMTKategorie",
       "short" : "TNM T-Kategorie",
       "definition" : "Ausbreitung des Primärtumors, erfolgt gemäß Tumorentität nach TNM.",
       "min" : 0,
@@ -891,8 +891,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.TNMKlassifikation.TNMmSymbol",
-      "path" : "Onkologie.TNMKlassifikation.TNMmSymbol",
+      "id" : "mii-lm-onko.TNMKlassifikation.TNMmSymbol",
+      "path" : "mii-lm-onko.TNMKlassifikation.TNMmSymbol",
       "short" : "TNM m-Symbol",
       "definition" : "Kennzeichnet Vorhandensein multipler Primärtumoren in einem anatomischen Bezirk.",
       "min" : 0,
@@ -911,8 +911,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.TNMKlassifikation.TNMMKategorie",
-      "path" : "Onkologie.TNMKlassifikation.TNMMKategorie",
+      "id" : "mii-lm-onko.TNMKlassifikation.TNMMKategorie",
+      "path" : "mii-lm-onko.TNMKlassifikation.TNMMKategorie",
       "short" : "TNM M-Kategorie",
       "definition" : "Fehlen oder Vorhandensein von Fernmetastasen, gemäß Tumorentität nach TNM.",
       "min" : 0,
@@ -931,8 +931,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.TNMKlassifikation.TNMNKategorie",
-      "path" : "Onkologie.TNMKlassifikation.TNMNKategorie",
+      "id" : "mii-lm-onko.TNMKlassifikation.TNMNKategorie",
+      "path" : "mii-lm-onko.TNMKlassifikation.TNMNKategorie",
       "short" : "TNM N-Kategorie",
       "definition" : "Ausbreitung von regionären Lymphknotenmetastasen, erfolgt gemäß Tumorentität nach TNM.",
       "min" : 0,
@@ -951,8 +951,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.TNMKlassifikation.TNMLKategorie",
-      "path" : "Onkologie.TNMKlassifikation.TNMLKategorie",
+      "id" : "mii-lm-onko.TNMKlassifikation.TNMLKategorie",
+      "path" : "mii-lm-onko.TNMKlassifikation.TNMLKategorie",
       "code" : [{
         "system" : "http://snomed.info/sct",
         "code" : "395715009",
@@ -976,8 +976,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.TNMKlassifikation.TNMVKategorie",
-      "path" : "Onkologie.TNMKlassifikation.TNMVKategorie",
+      "id" : "mii-lm-onko.TNMKlassifikation.TNMVKategorie",
+      "path" : "mii-lm-onko.TNMKlassifikation.TNMVKategorie",
       "code" : [{
         "system" : "http://snomed.info/sct",
         "code" : "371493002",
@@ -1001,8 +1001,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.TNMKlassifikation.TNMPnKategorie",
-      "path" : "Onkologie.TNMKlassifikation.TNMPnKategorie",
+      "id" : "mii-lm-onko.TNMKlassifikation.TNMPnKategorie",
+      "path" : "mii-lm-onko.TNMKlassifikation.TNMPnKategorie",
       "code" : [{
         "system" : "http://snomed.info/sct",
         "code" : "371513001",
@@ -1026,8 +1026,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.TNMKlassifikation.TNMSKategorie",
-      "path" : "Onkologie.TNMKlassifikation.TNMSKategorie",
+      "id" : "mii-lm-onko.TNMKlassifikation.TNMSKategorie",
+      "path" : "mii-lm-onko.TNMKlassifikation.TNMSKategorie",
       "code" : [{
         "system" : "http://snomed.info/sct",
         "code" : "399424006",
@@ -1051,8 +1051,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.TNMKlassifikation.UICCStadium",
-      "path" : "Onkologie.TNMKlassifikation.UICCStadium",
+      "id" : "mii-lm-onko.TNMKlassifikation.UICCStadium",
+      "path" : "mii-lm-onko.TNMKlassifikation.UICCStadium",
       "short" : "UICC Stadium",
       "definition" : "Stadium nach aktuell gültiger TNM-Klassifikation.",
       "min" : 0,
@@ -1071,8 +1071,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.WeitereKlassifikationen",
-      "path" : "Onkologie.WeitereKlassifikationen",
+      "id" : "mii-lm-onko.WeitereKlassifikationen",
+      "path" : "mii-lm-onko.WeitereKlassifikationen",
       "min" : 0,
       "max" : "*",
       "type" : [{
@@ -1089,8 +1089,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.WeitereKlassifikationen.WeitereKlassifikationDatum",
-      "path" : "Onkologie.WeitereKlassifikationen.WeitereKlassifikationDatum",
+      "id" : "mii-lm-onko.WeitereKlassifikationen.WeitereKlassifikationDatum",
+      "path" : "mii-lm-onko.WeitereKlassifikationen.WeitereKlassifikationDatum",
       "short" : "Hämatoonkologische und sonstige Klassifikationen Datum",
       "definition" : "Gibt an, auf welches Datum sich die Klassifikation bezieht.",
       "min" : 1,
@@ -1109,8 +1109,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.WeitereKlassifikationen.WeitereKlassifikationName",
-      "path" : "Onkologie.WeitereKlassifikationen.WeitereKlassifikationName",
+      "id" : "mii-lm-onko.WeitereKlassifikationen.WeitereKlassifikationName",
+      "path" : "mii-lm-onko.WeitereKlassifikationen.WeitereKlassifikationName",
       "short" : "Hämatoonkologische und sonstige Klassifikationen Name",
       "definition" : "Name der hämatologischen oder sonstigen Klassifikation. Art der Klassifikation.",
       "min" : 1,
@@ -1129,8 +1129,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.WeitereKlassifikationen.WeitereKlassifikationEinstufung",
-      "path" : "Onkologie.WeitereKlassifikationen.WeitereKlassifikationEinstufung",
+      "id" : "mii-lm-onko.WeitereKlassifikationen.WeitereKlassifikationEinstufung",
+      "path" : "mii-lm-onko.WeitereKlassifikationen.WeitereKlassifikationEinstufung",
       "short" : "Hämatoonkologische und sonstige Klassifikationen Einstufung",
       "definition" : "Einstufung gemäß der verwendeten hämatoonkologischen oder sonstigen Klassifikationen.",
       "min" : 1,
@@ -1149,8 +1149,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Residualstatus",
-      "path" : "Onkologie.Residualstatus",
+      "id" : "mii-lm-onko.Residualstatus",
+      "path" : "mii-lm-onko.Residualstatus",
       "short" : "Residualstatus",
       "definition" : "Residualstatus",
       "min" : 0,
@@ -1165,8 +1165,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Residualstatus.LokalerResidualstatus",
-      "path" : "Onkologie.Residualstatus.LokalerResidualstatus",
+      "id" : "mii-lm-onko.Residualstatus.LokalerResidualstatus",
+      "path" : "mii-lm-onko.Residualstatus.LokalerResidualstatus",
       "short" : "Beurteilung des lokalen Residualstatus nach Abschluss der Operation",
       "definition" : "Lokale Beurteilung der Residualklassifikation nach Resektion, bezieht sich auf das, was reseziert wurde, meist Primärtumor, aber z. B. auch Lebermetastasen.",
       "min" : 0,
@@ -1185,8 +1185,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Residualstatus.GlobalerResidualstatus",
-      "path" : "Onkologie.Residualstatus.GlobalerResidualstatus",
+      "id" : "mii-lm-onko.Residualstatus.GlobalerResidualstatus",
+      "path" : "mii-lm-onko.Residualstatus.GlobalerResidualstatus",
       "short" : "Gesamtbeurteilung des Residualstatus",
       "definition" : "Gesamtbeurteilung der Residualklassifikation der Erkrankung einschließlich etwaiger Fernmetastasen.",
       "min" : 0,
@@ -1205,8 +1205,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Fernmetastasen",
-      "path" : "Onkologie.Fernmetastasen",
+      "id" : "mii-lm-onko.Fernmetastasen",
+      "path" : "mii-lm-onko.Fernmetastasen",
       "short" : "Fernmetastasen",
       "definition" : "Fernmetastasen",
       "min" : 0,
@@ -1221,8 +1221,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Fernmetastasen.LokalisationFernmetastase",
-      "path" : "Onkologie.Fernmetastasen.LokalisationFernmetastase",
+      "id" : "mii-lm-onko.Fernmetastasen.LokalisationFernmetastase",
+      "path" : "mii-lm-onko.Fernmetastasen.LokalisationFernmetastase",
       "short" : "Lokalisation von Fernmetastase(n)",
       "definition" : "Lokalisation der Fernmetastase(n).",
       "min" : 1,
@@ -1241,8 +1241,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Fernmetastasen.DatumFernmetase",
-      "path" : "Onkologie.Fernmetastasen.DatumFernmetase",
+      "id" : "mii-lm-onko.Fernmetastasen.DatumFernmetase",
+      "path" : "mii-lm-onko.Fernmetastasen.DatumFernmetase",
       "short" : "Datum der diagnostischen Sicherung von Fernmetastasen",
       "definition" : "Gibt an, wann die Fernmetastase festgestellt wurde.",
       "min" : 1,
@@ -1261,8 +1261,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.AllgemeinerLeistungszustand",
-      "path" : "Onkologie.AllgemeinerLeistungszustand",
+      "id" : "mii-lm-onko.AllgemeinerLeistungszustand",
+      "path" : "mii-lm-onko.AllgemeinerLeistungszustand",
       "short" : "Allgemeiner Leistungszustand",
       "definition" : "Allgemeiner Leistungszustand",
       "min" : 0,
@@ -1277,8 +1277,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.AllgemeinerLeistungszustand.ECOGKarnofsky",
-      "path" : "Onkologie.AllgemeinerLeistungszustand.ECOGKarnofsky",
+      "id" : "mii-lm-onko.AllgemeinerLeistungszustand.ECOGKarnofsky",
+      "path" : "mii-lm-onko.AllgemeinerLeistungszustand.ECOGKarnofsky",
       "short" : "ECOG oder Karnofsky",
       "definition" : "ECOG oder Karnofsky",
       "min" : 1,
@@ -1297,8 +1297,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Operation",
-      "path" : "Onkologie.Operation",
+      "id" : "mii-lm-onko.Operation",
+      "path" : "mii-lm-onko.Operation",
       "short" : "Operation",
       "definition" : "Operation",
       "min" : 0,
@@ -1313,8 +1313,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Operation.OPIntention",
-      "path" : "Onkologie.Operation.OPIntention",
+      "id" : "mii-lm-onko.Operation.OPIntention",
+      "path" : "mii-lm-onko.Operation.OPIntention",
       "short" : "Intention",
       "definition" : "Gibt an, mit welchem Ziel die Operation geplant wurde",
       "min" : 1,
@@ -1333,8 +1333,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Operation.OPDatum",
-      "path" : "Onkologie.Operation.OPDatum",
+      "id" : "mii-lm-onko.Operation.OPDatum",
+      "path" : "mii-lm-onko.Operation.OPDatum",
       "short" : "OP Datum",
       "definition" : "Datum der OP",
       "min" : 1,
@@ -1353,8 +1353,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Operation.OPSCode",
-      "path" : "Onkologie.Operation.OPSCode",
+      "id" : "mii-lm-onko.Operation.OPSCode",
+      "path" : "mii-lm-onko.Operation.OPSCode",
       "short" : "OPS Code",
       "definition" : "Gibt an, welche Operation durchgeführ wurde. OPS (5-*), so genau wie möglich. Bei paaringen Organen mit Seitenangabe",
       "min" : 1,
@@ -1373,8 +1373,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Operation.OPSVersion",
-      "path" : "Onkologie.Operation.OPSVersion",
+      "id" : "mii-lm-onko.Operation.OPSVersion",
+      "path" : "mii-lm-onko.Operation.OPSVersion",
       "short" : "OPS Version",
       "definition" : "Gibt an, nach welcher Version (Jahr) des OPS klassifiziert wurde (Gültige Bezeichnung nach BfArM)",
       "min" : 1,
@@ -1393,8 +1393,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Operation.OPKomplikation",
-      "path" : "Onkologie.Operation.OPKomplikation",
+      "id" : "mii-lm-onko.Operation.OPKomplikation",
+      "path" : "mii-lm-onko.Operation.OPKomplikation",
       "short" : "OP Komplikationen",
       "definition" : "Gibt an, ob eine oder keine Komplikation aufgetreten ist, bzw. wenn eine aufgetreten ist welche.",
       "min" : 0,
@@ -1413,8 +1413,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Strahlentherapie",
-      "path" : "Onkologie.Strahlentherapie",
+      "id" : "mii-lm-onko.Strahlentherapie",
+      "path" : "mii-lm-onko.Strahlentherapie",
       "short" : "Strahlentherapie",
       "definition" : "Strahlentherapie",
       "min" : 0,
@@ -1429,8 +1429,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Strahlentherapie.StrahlentherapieIntention",
-      "path" : "Onkologie.Strahlentherapie.StrahlentherapieIntention",
+      "id" : "mii-lm-onko.Strahlentherapie.StrahlentherapieIntention",
+      "path" : "mii-lm-onko.Strahlentherapie.StrahlentherapieIntention",
       "short" : "Intention der Strahlentherapie",
       "definition" : "Gibt an, mit welcher Intention die Strahlentherapie geplant wurde.",
       "min" : 1,
@@ -1449,8 +1449,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Strahlentherapie.StrahlentherapieStellung",
-      "path" : "Onkologie.Strahlentherapie.StrahlentherapieStellung",
+      "id" : "mii-lm-onko.Strahlentherapie.StrahlentherapieStellung",
+      "path" : "mii-lm-onko.Strahlentherapie.StrahlentherapieStellung",
       "short" : "Strahlentherapie Stellung zu operativer Therapie",
       "definition" : "Gibt an, in welchem Bezug zu einer operativen Therapie die Bestrahlung steht.",
       "min" : 1,
@@ -1469,8 +1469,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Strahlentherapie.StrahlentherapieEndeGrund",
-      "path" : "Onkologie.Strahlentherapie.StrahlentherapieEndeGrund",
+      "id" : "mii-lm-onko.Strahlentherapie.StrahlentherapieEndeGrund",
+      "path" : "mii-lm-onko.Strahlentherapie.StrahlentherapieEndeGrund",
       "short" : "Strahlentherapie Ende Grund",
       "definition" : "Gibt den Grund an, warum die Strahlentherapie beendet wurde.",
       "min" : 0,
@@ -1489,8 +1489,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Strahlentherapie.StrahlentherapieBestrahlung",
-      "path" : "Onkologie.Strahlentherapie.StrahlentherapieBestrahlung",
+      "id" : "mii-lm-onko.Strahlentherapie.StrahlentherapieBestrahlung",
+      "path" : "mii-lm-onko.Strahlentherapie.StrahlentherapieBestrahlung",
       "short" : "Bestrahlung",
       "definition" : "Dieser Abschnitt entspricht einer Bestrahlung mit spezifischem Zielgebiet, Methodik und Dosis ",
       "min" : 1,
@@ -1509,8 +1509,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieZielgebiet",
-      "path" : "Onkologie.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieZielgebiet",
+      "id" : "mii-lm-onko.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieZielgebiet",
+      "path" : "mii-lm-onko.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieZielgebiet",
       "short" : "Strahlentherapie Zielgebiet",
       "definition" : "Gibt an, an welcher anatomischen Region die Bestrahlung durchgeführt wurde.",
       "min" : 1,
@@ -1529,8 +1529,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieSeiteZielgebiet",
-      "path" : "Onkologie.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieSeiteZielgebiet",
+      "id" : "mii-lm-onko.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieSeiteZielgebiet",
+      "path" : "mii-lm-onko.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieSeiteZielgebiet",
       "short" : "Strahlentherapie Seite Zielgebiet",
       "definition" : "Bei Zielgebieten, die durch \"(r, l)\" gekennzeichnet sind, ist eine Seitenangabe Pflicht.",
       "min" : 0,
@@ -1549,8 +1549,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieBeginn",
-      "path" : "Onkologie.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieBeginn",
+      "id" : "mii-lm-onko.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieBeginn",
+      "path" : "mii-lm-onko.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieBeginn",
       "short" : "Strahlentherapie Beginn",
       "definition" : "Gibt an, wann die Strahlentherapie begonnen wurde.",
       "min" : 1,
@@ -1569,8 +1569,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieEnde",
-      "path" : "Onkologie.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieEnde",
+      "id" : "mii-lm-onko.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieEnde",
+      "path" : "mii-lm-onko.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieEnde",
       "short" : "Strahlentherapie Ende",
       "definition" : "Gibt an, wann die Strahlentherapie beendet wurde.",
       "min" : 0,
@@ -1589,8 +1589,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieApplikationsart",
-      "path" : "Onkologie.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieApplikationsart",
+      "id" : "mii-lm-onko.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieApplikationsart",
+      "path" : "mii-lm-onko.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieApplikationsart",
       "short" : "Strahlentherapie Applikationsart",
       "definition" : "Gibt an, mit welcher Technik die Strahlentherapie durchgeführt wurde.",
       "min" : 1,
@@ -1609,8 +1609,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieStrahlenart",
-      "path" : "Onkologie.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieStrahlenart",
+      "id" : "mii-lm-onko.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieStrahlenart",
+      "path" : "mii-lm-onko.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieStrahlenart",
       "short" : "Strahlenart",
       "definition" : "Angewandte Strahlenart (Strahlung oder metabolische Nuklide)",
       "min" : 1,
@@ -1629,8 +1629,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieGesamtdosis",
-      "path" : "Onkologie.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieGesamtdosis",
+      "id" : "mii-lm-onko.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieGesamtdosis",
+      "path" : "mii-lm-onko.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieGesamtdosis",
       "short" : "Strahlentherapie Gesamtdosis",
       "definition" : "Gibt an, mit welcher Gesamtdosis das Zielgebiet bestrahlt wurde (inklusive Boost).",
       "min" : 0,
@@ -1649,8 +1649,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieEinzeldosis",
-      "path" : "Onkologie.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieEinzeldosis",
+      "id" : "mii-lm-onko.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieEinzeldosis",
+      "path" : "mii-lm-onko.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieEinzeldosis",
       "short" : "Strahlentherapie Einzeldosis",
       "definition" : "Strahlentherapie Einzeldosis pro Tag (Dosis)",
       "min" : 0,
@@ -1669,8 +1669,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieEinheit",
-      "path" : "Onkologie.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieEinheit",
+      "id" : "mii-lm-onko.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieEinheit",
+      "path" : "mii-lm-onko.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieEinheit",
       "short" : "Strahlentherapie Einheit",
       "definition" : "Gibt die Einheit zu der Einzel- oder Gesamtdosis an, mit welcher das Zielgebiet bestrahlt wurde, bzw. bei metabolischer Therapie die Aktivität des verwendeten Radionuklids.",
       "min" : 0,
@@ -1689,8 +1689,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieBoost",
-      "path" : "Onkologie.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieBoost",
+      "id" : "mii-lm-onko.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieBoost",
+      "path" : "mii-lm-onko.Strahlentherapie.StrahlentherapieBestrahlung.StrahlentherapieBoost",
       "short" : "Boost",
       "definition" : "Angabe, ob ein Boost und falls ja, welche Art von Boost appliziert wurde.",
       "min" : 0,
@@ -1709,8 +1709,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.SystemischeTherapie",
-      "path" : "Onkologie.SystemischeTherapie",
+      "id" : "mii-lm-onko.SystemischeTherapie",
+      "path" : "mii-lm-onko.SystemischeTherapie",
       "short" : "Systemische Therapie",
       "definition" : "Systemische Therapie",
       "min" : 0,
@@ -1725,8 +1725,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.SystemischeTherapie.SystemischeTherapieIntention",
-      "path" : "Onkologie.SystemischeTherapie.SystemischeTherapieIntention",
+      "id" : "mii-lm-onko.SystemischeTherapie.SystemischeTherapieIntention",
+      "path" : "mii-lm-onko.SystemischeTherapie.SystemischeTherapieIntention",
       "short" : "Intention der systemischen Therapie",
       "definition" : "Intention der systemischen Therapie",
       "min" : 1,
@@ -1745,8 +1745,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.SystemischeTherapie.SystemischeTherapieStellung",
-      "path" : "Onkologie.SystemischeTherapie.SystemischeTherapieStellung",
+      "id" : "mii-lm-onko.SystemischeTherapie.SystemischeTherapieStellung",
+      "path" : "mii-lm-onko.SystemischeTherapie.SystemischeTherapieStellung",
       "short" : "Systemische Therapie Stellung zu operativer Therapie",
       "definition" : "Gibt an, in welchem Bezug zu einer operativen Therapie die systemische Therapie steht.",
       "min" : 1,
@@ -1765,8 +1765,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.SystemischeTherapie.SystemischeTherapieArtTherapie",
-      "path" : "Onkologie.SystemischeTherapie.SystemischeTherapieArtTherapie",
+      "id" : "mii-lm-onko.SystemischeTherapie.SystemischeTherapieArtTherapie",
+      "path" : "mii-lm-onko.SystemischeTherapie.SystemischeTherapieArtTherapie",
       "short" : "Art der systemischen oder abwartenden Therapie",
       "definition" : "Gibt an, welche Art der Therapie bzw. abwartende Strategie durchgeführt wurde.",
       "min" : 1,
@@ -1785,8 +1785,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.SystemischeTherapie.SystemischeTherapieProtokoll",
-      "path" : "Onkologie.SystemischeTherapie.SystemischeTherapieProtokoll",
+      "id" : "mii-lm-onko.SystemischeTherapie.SystemischeTherapieProtokoll",
+      "path" : "mii-lm-onko.SystemischeTherapie.SystemischeTherapieProtokoll",
       "short" : "Systemische Therapie Protokoll",
       "definition" : "Gibt an, nach welchem Protokoll die Systemtherapie durchgeführt wurde.",
       "min" : 0,
@@ -1805,8 +1805,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.SystemischeTherapie.SystemischeTherapieSubstanz",
-      "path" : "Onkologie.SystemischeTherapie.SystemischeTherapieSubstanz",
+      "id" : "mii-lm-onko.SystemischeTherapie.SystemischeTherapieSubstanz",
+      "path" : "mii-lm-onko.SystemischeTherapie.SystemischeTherapieSubstanz",
       "short" : "Systemische Therapie Substanz",
       "definition" : "Gibt an, mit welcher Substanz die Systemtherapie durchgeführt wurde. Nach Möglichkeit ATC kodiert. Mehrere Substanzen sind jeweils einzeln zu kodieren. ",
       "min" : 0,
@@ -1825,8 +1825,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.SystemischeTherapie.SystemischeTherapieBeginn",
-      "path" : "Onkologie.SystemischeTherapie.SystemischeTherapieBeginn",
+      "id" : "mii-lm-onko.SystemischeTherapie.SystemischeTherapieBeginn",
+      "path" : "mii-lm-onko.SystemischeTherapie.SystemischeTherapieBeginn",
       "short" : "Systemische Therapie Beginn",
       "definition" : "Gibt an, wann die systemische Therapie begonnen wurde.",
       "min" : 0,
@@ -1845,8 +1845,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.SystemischeTherapie.SystemischeTherapieEnde",
-      "path" : "Onkologie.SystemischeTherapie.SystemischeTherapieEnde",
+      "id" : "mii-lm-onko.SystemischeTherapie.SystemischeTherapieEnde",
+      "path" : "mii-lm-onko.SystemischeTherapie.SystemischeTherapieEnde",
       "short" : "Systemische Therapie Ende Grund",
       "definition" : "Gibt den Grund an, warum die Systemtherapie beendet wurde.",
       "min" : 0,
@@ -1865,8 +1865,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.SystemischeTherapie.SystemischeTherapieEndeGrund",
-      "path" : "Onkologie.SystemischeTherapie.SystemischeTherapieEndeGrund",
+      "id" : "mii-lm-onko.SystemischeTherapie.SystemischeTherapieEndeGrund",
+      "path" : "mii-lm-onko.SystemischeTherapie.SystemischeTherapieEndeGrund",
       "short" : "Systemische Therapie Ende",
       "definition" : "Gibt an, wann die systemische Therapie beendet wurde.",
       "min" : 0,
@@ -1885,8 +1885,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Nebenwirkungen",
-      "path" : "Onkologie.Nebenwirkungen",
+      "id" : "mii-lm-onko.Nebenwirkungen",
+      "path" : "mii-lm-onko.Nebenwirkungen",
       "short" : "Nebenwirkungen",
       "definition" : "Nebenwirkungen",
       "min" : 0,
@@ -1901,8 +1901,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Nebenwirkungen.NebenwirkungenCTCAEGrad",
-      "path" : "Onkologie.Nebenwirkungen.NebenwirkungenCTCAEGrad",
+      "id" : "mii-lm-onko.Nebenwirkungen.NebenwirkungenCTCAEGrad",
+      "path" : "mii-lm-onko.Nebenwirkungen.NebenwirkungenCTCAEGrad",
       "short" : "Nebenwirkungen nach CTCAE-Grad",
       "definition" : "Gibt an, zu welchem Schweregrad von Nebenwirkungen es bei der Bestrahlung oder der systemischen Therapie gekommen ist.",
       "min" : 1,
@@ -1921,8 +1921,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Nebenwirkungen.NebenwirkungenCTCAEArt",
-      "path" : "Onkologie.Nebenwirkungen.NebenwirkungenCTCAEArt",
+      "id" : "mii-lm-onko.Nebenwirkungen.NebenwirkungenCTCAEArt",
+      "path" : "mii-lm-onko.Nebenwirkungen.NebenwirkungenCTCAEArt",
       "short" : "Nebenwirkungen nach CTCAE Art",
       "definition" : "Gibt an, zu welcher Nebenwirkung es bei der Bestrahlung oder der systemischen Therapie gekommen ist. Bei der Bestrahlung sind sogenannte akute Nebenwirkungen bis zum 90. Tag nach Bestrahlungsbeginn gemeint.",
       "min" : 1,
@@ -1941,8 +1941,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Nebenwirkungen.NebenwirkungenCTCAEVersion",
-      "path" : "Onkologie.Nebenwirkungen.NebenwirkungenCTCAEVersion",
+      "id" : "mii-lm-onko.Nebenwirkungen.NebenwirkungenCTCAEVersion",
+      "path" : "mii-lm-onko.Nebenwirkungen.NebenwirkungenCTCAEVersion",
       "short" : "Nebenwirkungen nach CTCAE Version",
       "definition" : "Für den medizinischen Katalog gültige Versionsbezeichnungen (4, 4.03, 5.0, Sonstige). Gemeint ist die Version des CTCAE-Katalogs, nicht die des MedDRA-Katalogs, aus dem die Codes stammen — CTCAE v4.03 basiert auf MedDRA v12.0.",
       "min" : 1,
@@ -1961,8 +1961,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Verlauf",
-      "path" : "Onkologie.Verlauf",
+      "id" : "mii-lm-onko.Verlauf",
+      "path" : "mii-lm-onko.Verlauf",
       "short" : "Verlauf",
       "definition" : "Verlauf",
       "min" : 0,
@@ -1977,8 +1977,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Verlauf.VerlaufDatum",
-      "path" : "Onkologie.Verlauf.VerlaufDatum",
+      "id" : "mii-lm-onko.Verlauf.VerlaufDatum",
+      "path" : "mii-lm-onko.Verlauf.VerlaufDatum",
       "short" : "Untersuchungsdatum Verlauf",
       "definition" : "Datum, an dem die letzte Untersuchung durchgeführt wurde, die zur Einschätzung des Tumorstatus geführt hat.",
       "min" : 0,
@@ -1993,8 +1993,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Verlauf.VerlaufBeurteilungTumorstatus",
-      "path" : "Onkologie.Verlauf.VerlaufBeurteilungTumorstatus",
+      "id" : "mii-lm-onko.Verlauf.VerlaufBeurteilungTumorstatus",
+      "path" : "mii-lm-onko.Verlauf.VerlaufBeurteilungTumorstatus",
       "short" : "Gesamtbeurteilung des Tumorstatus",
       "definition" : "Gesamtbeurteilung der Erkrankung unter Berücksichtigung aller Manifestationen.",
       "min" : 0,
@@ -2009,8 +2009,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Verlauf.VerlaufTumorstatusPrimaertumor",
-      "path" : "Onkologie.Verlauf.VerlaufTumorstatusPrimaertumor",
+      "id" : "mii-lm-onko.Verlauf.VerlaufTumorstatusPrimaertumor",
+      "path" : "mii-lm-onko.Verlauf.VerlaufTumorstatusPrimaertumor",
       "short" : "Tumorstatus Primärtumor",
       "definition" : "Beurteilung der Situation im Primärtumorbereich.",
       "min" : 0,
@@ -2025,8 +2025,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Verlauf.VerlaufTumorstatusLymphknoten",
-      "path" : "Onkologie.Verlauf.VerlaufTumorstatusLymphknoten",
+      "id" : "mii-lm-onko.Verlauf.VerlaufTumorstatusLymphknoten",
+      "path" : "mii-lm-onko.Verlauf.VerlaufTumorstatusLymphknoten",
       "short" : "Tumorstatus Lymphknoten",
       "definition" : "Beurteilung der Situation im Bereich der regionären Lymphknoten.",
       "min" : 0,
@@ -2041,8 +2041,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Verlauf.VerlaufTumorstatusMetastasen",
-      "path" : "Onkologie.Verlauf.VerlaufTumorstatusMetastasen",
+      "id" : "mii-lm-onko.Verlauf.VerlaufTumorstatusMetastasen",
+      "path" : "mii-lm-onko.Verlauf.VerlaufTumorstatusMetastasen",
       "short" : "Tumorstatus Fernmetastasen",
       "definition" : "Beurteilung der Situation im Bereich der Fernmetastasen.",
       "min" : 0,
@@ -2057,8 +2057,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Tumorkonferenz",
-      "path" : "Onkologie.Tumorkonferenz",
+      "id" : "mii-lm-onko.Tumorkonferenz",
+      "path" : "mii-lm-onko.Tumorkonferenz",
       "short" : "Tumorkonferenz und Therapieempfehlung",
       "definition" : "Tumorkonferenz und Therapieempfehlung",
       "min" : 0,
@@ -2073,8 +2073,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Tumorkonferenz.TumorkonferenzTherapieplanungDatum",
-      "path" : "Onkologie.Tumorkonferenz.TumorkonferenzTherapieplanungDatum",
+      "id" : "mii-lm-onko.Tumorkonferenz.TumorkonferenzTherapieplanungDatum",
+      "path" : "mii-lm-onko.Tumorkonferenz.TumorkonferenzTherapieplanungDatum",
       "short" : "Tumorkonferenz Therapieplanung Datum",
       "definition" : "Datum der Durchführung der Tumorkonferenz bzw. der sonstigen Therapieplanung.",
       "min" : 1,
@@ -2093,8 +2093,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Tumorkonferenz.TumorkonferenzTherapieplanungTyp",
-      "path" : "Onkologie.Tumorkonferenz.TumorkonferenzTherapieplanungTyp",
+      "id" : "mii-lm-onko.Tumorkonferenz.TumorkonferenzTherapieplanungTyp",
+      "path" : "mii-lm-onko.Tumorkonferenz.TumorkonferenzTherapieplanungTyp",
       "short" : "Tumorkonferenz Therapieplanung Typ",
       "definition" : "Typ der Tumorkonferenz bzw. der sonstigen Therapieplanung.",
       "min" : 1,
@@ -2113,8 +2113,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Tumorkonferenz.TumorkonferenzTherapieempfehlungTyp",
-      "path" : "Onkologie.Tumorkonferenz.TumorkonferenzTherapieempfehlungTyp",
+      "id" : "mii-lm-onko.Tumorkonferenz.TumorkonferenzTherapieempfehlungTyp",
+      "path" : "mii-lm-onko.Tumorkonferenz.TumorkonferenzTherapieempfehlungTyp",
       "short" : "Tumorkonferenz Therapieempfehlung Typ",
       "definition" : "Typ der Therapieempfehlung der Tumorkonferenz (z.B. CH, OP, ST).",
       "min" : 1,
@@ -2133,8 +2133,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Tumorkonferenz.TumorkonferenzTherapieempfehlungProtokoll",
-      "path" : "Onkologie.Tumorkonferenz.TumorkonferenzTherapieempfehlungProtokoll",
+      "id" : "mii-lm-onko.Tumorkonferenz.TumorkonferenzTherapieempfehlungProtokoll",
+      "path" : "mii-lm-onko.Tumorkonferenz.TumorkonferenzTherapieempfehlungProtokoll",
       "short" : "Tumorkonferenz Therapieempfehlung Protokoll",
       "definition" : "Empfohlenes Therapieprotokoll bei systemischer Therapie (z.B. FOLFOX4, R-CHOP, AC). Optional, insbesondere bei Kombinationstherapien.",
       "min" : 0,
@@ -2153,8 +2153,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Tumorkonferenz.TumorkonferenzTherapieempfehlungMedikation",
-      "path" : "Onkologie.Tumorkonferenz.TumorkonferenzTherapieempfehlungMedikation",
+      "id" : "mii-lm-onko.Tumorkonferenz.TumorkonferenzTherapieempfehlungMedikation",
+      "path" : "mii-lm-onko.Tumorkonferenz.TumorkonferenzTherapieempfehlungMedikation",
       "short" : "Tumorkonferenz Therapieempfehlung Medikation",
       "definition" : "Einzelne empfohlene Medikamente/Substanzen der Therapie (z.B. ATC-kodiert). Bei Kombinationstherapien werden mehrere Medikamente angegeben.",
       "min" : 0,
@@ -2173,8 +2173,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Tumorkonferenz.TumorkonferenzTherapieAbweichungPatientenwunsch",
-      "path" : "Onkologie.Tumorkonferenz.TumorkonferenzTherapieAbweichungPatientenwunsch",
+      "id" : "mii-lm-onko.Tumorkonferenz.TumorkonferenzTherapieAbweichungPatientenwunsch",
+      "path" : "mii-lm-onko.Tumorkonferenz.TumorkonferenzTherapieAbweichungPatientenwunsch",
       "short" : "Tumorkonferenz/Therapieempfehlung Therapieabweichung auf Wunsch des Patienten",
       "definition" : "Abweichung auf Wunsch des Patienten.",
       "min" : 1,
@@ -2193,8 +2193,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Tod",
-      "path" : "Onkologie.Tod",
+      "id" : "mii-lm-onko.Tod",
+      "path" : "mii-lm-onko.Tod",
       "short" : "Tod",
       "definition" : "Tod",
       "min" : 0,
@@ -2209,8 +2209,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Tod.Sterbedatum",
-      "path" : "Onkologie.Tod.Sterbedatum",
+      "id" : "mii-lm-onko.Tod.Sterbedatum",
+      "path" : "mii-lm-onko.Tod.Sterbedatum",
       "short" : "Sterbedatum",
       "definition" : "Datum des Todes",
       "min" : 0,
@@ -2229,8 +2229,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Tod.TodTumorbedingt",
-      "path" : "Onkologie.Tod.TodTumorbedingt",
+      "id" : "mii-lm-onko.Tod.TodTumorbedingt",
+      "path" : "mii-lm-onko.Tod.TodTumorbedingt",
       "short" : "Tod tumorbedingt",
       "definition" : "Krebs-Tod-Relation",
       "min" : 0,
@@ -2249,8 +2249,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Tod.TodesursacheICD",
-      "path" : "Onkologie.Tod.TodesursacheICD",
+      "id" : "mii-lm-onko.Tod.TodesursacheICD",
+      "path" : "mii-lm-onko.Tod.TodesursacheICD",
       "short" : "Todesursache ICD",
       "definition" : "Todesursache im Sinne des Grundleidens",
       "min" : 0,
@@ -2269,8 +2269,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Tod.TodesursacheICDVersion",
-      "path" : "Onkologie.Tod.TodesursacheICDVersion",
+      "id" : "mii-lm-onko.Tod.TodesursacheICDVersion",
+      "path" : "mii-lm-onko.Tod.TodesursacheICDVersion",
       "short" : "Todesursache ICD Version",
       "definition" : "Bezeichnung der zur Kodierung verwendeten ICD-GM-Version",
       "min" : 0,
@@ -2289,8 +2289,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.GenetischeVariante",
-      "path" : "Onkologie.GenetischeVariante",
+      "id" : "mii-lm-onko.GenetischeVariante",
+      "path" : "mii-lm-onko.GenetischeVariante",
       "short" : "Genetische Variante",
       "definition" : "Genetische Variante",
       "min" : 0,
@@ -2309,8 +2309,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.GenetischeVariante.GenetischeVarianteName",
-      "path" : "Onkologie.GenetischeVariante.GenetischeVarianteName",
+      "id" : "mii-lm-onko.GenetischeVariante.GenetischeVarianteName",
+      "path" : "mii-lm-onko.GenetischeVariante.GenetischeVarianteName",
       "short" : "Genetische Variante Name",
       "definition" : "Name der genetischen Variante (z.B. K-ras, BRAFV600, NRAS, C-KIT)",
       "min" : 0,
@@ -2329,8 +2329,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.GenetischeVariante.GenetischeVarianteAuspraegung",
-      "path" : "Onkologie.GenetischeVariante.GenetischeVarianteAuspraegung",
+      "id" : "mii-lm-onko.GenetischeVariante.GenetischeVarianteAuspraegung",
+      "path" : "mii-lm-onko.GenetischeVariante.GenetischeVarianteAuspraegung",
       "short" : "Genetische Variante Ausprägung",
       "definition" : "Ausprägung der genetischen Variante nach oBDS",
       "min" : 0,
@@ -2349,8 +2349,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Studienteilnahme",
-      "path" : "Onkologie.Studienteilnahme",
+      "id" : "mii-lm-onko.Studienteilnahme",
+      "path" : "mii-lm-onko.Studienteilnahme",
       "short" : "Studienteilnahme",
       "definition" : "Studienteilnahme",
       "min" : 0,
@@ -2369,8 +2369,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Studienteilnahme.StudienteilnahmeStatus",
-      "path" : "Onkologie.Studienteilnahme.StudienteilnahmeStatus",
+      "id" : "mii-lm-onko.Studienteilnahme.StudienteilnahmeStatus",
+      "path" : "mii-lm-onko.Studienteilnahme.StudienteilnahmeStatus",
       "short" : "Studienteilnahme Status",
       "definition" : "Einschluss in eine Studie mit Ethikvotum",
       "min" : 0,
@@ -2389,8 +2389,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Studienteilnahme.StudienteilnahmeDatum",
-      "path" : "Onkologie.Studienteilnahme.StudienteilnahmeDatum",
+      "id" : "mii-lm-onko.Studienteilnahme.StudienteilnahmeDatum",
+      "path" : "mii-lm-onko.Studienteilnahme.StudienteilnahmeDatum",
       "short" : "Studienteilnahme Datum",
       "definition" : "Erstes Einschlussdatum einer Studie mit Ethikvotum",
       "min" : 0,
@@ -2409,8 +2409,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko.
       }]
     },
     {
-      "id" : "Onkologie.Studienteilnahme.StudienteilnahmeStudienreferenz",
-      "path" : "Onkologie.Studienteilnahme.StudienteilnahmeStudienreferenz",
+      "id" : "mii-lm-onko.Studienteilnahme.StudienteilnahmeStudienreferenz",
+      "path" : "mii-lm-onko.Studienteilnahme.StudienteilnahmeStudienreferenz",
       "short" : "Studienteilnahme Studienreferenz",
       "definition" : "Referenz zur konkreten Studie (ResearchStudy)",
       "min" : 0,
