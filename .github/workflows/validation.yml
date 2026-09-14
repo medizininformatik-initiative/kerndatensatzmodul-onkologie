@@ -149,7 +149,15 @@ jobs:
       # (verified at the pinned SHA); without this the advisor.json shipped at
       # the repo root would be read by NOTHING and the "suppressed via
       # advisor.json" contract in this file's header would be false.
-      JAVA_VALIDATION_OPTIONS: "-advisor-file advisor.json"
+      # -output validation.json: the pinned reusable NEVER writes the report
+      # file itself (no -output anywhere at SHA 1db2e534), but its own
+      # "Convert Validation Report" step and artifact upload expect it —
+      # without this flag every run dies with ENOENT ./validation.json even
+      # when validation is clean (found via kerndatensatzmodul-studie PR #69,
+      # where 0 real errors made the ENOENT the only failure; here it was
+      # masked by real validation errors). Options are passed verbatim; with a
+      # single conformance path the file is written exactly once.
+      JAVA_VALIDATION_OPTIONS: "-advisor-file advisor.json -output validation.json"
       VALIDATION_REPORT_FILTERS: |
         filename | messageId | detailsWildcard | location
     # Secret-name reconciliation: the MII reusable workflow declares
