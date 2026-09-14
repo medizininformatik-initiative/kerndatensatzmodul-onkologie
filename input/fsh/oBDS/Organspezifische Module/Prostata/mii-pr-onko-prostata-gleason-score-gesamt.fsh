@@ -30,9 +30,14 @@ Description: "Dieses Profil beschreibt den Gleason-Gesamtscore als Summe aus pri
     snomed 1..1 MS and
     loinc 0..1 MS
 * code.coding[snomed] = $SCT#372278000 "Gleason score (observable entity)"
+// QA-Fix (Slicing cannot be evaluated): der pattern-Diskriminator zeigt auf
+// 'system' — das Kind-Element braucht einen EIGENEN Wert; die Coding-Zuweisung
+// am Slice-Root reicht dem Validator nicht (12x im QA-Report).
+* code.coding[snomed].system = $SCT
 * code.coding[snomed].system 1.. MS
 * code.coding[snomed].code 1.. MS
 * code.coding[loinc] = $LNC#35266-6 "Gleason score in Specimen Qualitative"
+* code.coding[loinc].system = $LNC
 * code.coding[loinc].system 1.. MS
 * code.coding[loinc].code 1.. MS
 

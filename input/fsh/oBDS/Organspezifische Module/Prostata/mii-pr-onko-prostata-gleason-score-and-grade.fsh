@@ -28,9 +28,13 @@ Description: "Dieses Profil beschreibt einen Gleasonscore in der Onkologie"
     snomed 1..1 MS and
     loinc 0..1 MS
 * code.coding[snomed] = $SCT#1812491000004107 "Histologic grade of primary malignant neoplasm of prostate by International Society of Urological Pathology technique (observable entity)"
+// QA-Fix wie im Schwesterprofil score-gesamt: Diskriminator 'system' braucht
+// den Wert am Kind-Element, nicht nur in der Root-Zuweisung.
+* code.coding[snomed].system = $SCT
 * code.coding[snomed].system 1.. MS
 * code.coding[snomed].code 1.. MS
 * code.coding[loinc] = $LNC#94734-1 "Prostate cancer grade group [Score] in Prostate tumor Qualitative"
+* code.coding[loinc].system = $LNC
 * code.coding[loinc].system 1.. MS
 * code.coding[loinc].code 1.. MS
 

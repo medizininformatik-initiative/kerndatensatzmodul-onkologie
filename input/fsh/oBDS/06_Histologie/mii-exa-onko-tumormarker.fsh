@@ -22,8 +22,11 @@ Description: "CEA-Bestimmung im Rahmen einer onkologischen Erkrankung. Zeigt das
 * identifier[analyseBefundCode].assigner.identifier.system = "https://www.medizininformatik-initiative.de/fhir/core/CodeSystem/core-location-identifier"
 * identifier[analyseBefundCode].assigner.identifier.value = "DIZ-ID"
 * status = #final
-* category[0] = http://terminology.hl7.org/CodeSystem/observation-category#laboratory "Laboratory"
-* category[=].coding[+] = http://loinc.org#26436-6 "Laboratory studies (set)"
+// QA-Fix (Pflicht-Slice observation-category nicht gematcht): die Kombination
+// 'category[0] = system#code' + 'category[=].coding[+] = ...' verschluckt in
+// SUSHI das erste Coding — im JSON stand NUR noch LOINC. Explizite Indizes.
+* category[0].coding[0] = http://terminology.hl7.org/CodeSystem/observation-category#laboratory "Laboratory"
+* category[0].coding[1] = http://loinc.org#26436-6 "Laboratory studies (set)"
 * code.coding[loinc] = http://loinc.org#2039-6 "Carcinoembryonic Ag [Mass/volume] in Serum or Plasma"
 * code.text = "CEA"
 * subject = Reference(Patient/example)

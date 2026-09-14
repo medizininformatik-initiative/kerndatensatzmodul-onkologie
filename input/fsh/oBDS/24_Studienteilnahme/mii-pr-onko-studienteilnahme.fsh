@@ -27,7 +27,11 @@ Description: "Dieses Profil beschreibt Studienteilnahmen in der Onkologie"
 // Forschungsvorhaben (Paket kerndatensatz.studie); der generische
 // ResearchStudy-Typ bleibt als Fallback zulässig, solange Standorte das
 // Modul nicht führen.
-* focus[studie] only Reference(https://www.medizininformatik-initiative.de/fhir/modul-studie/StructureDefinition/mii-pr-studie-studie or ResearchStudy)
+// QA-Fix (Invalid use of resolve() in discriminator): der type-Diskriminator
+// mit $this.resolve() vertraegt nur EIN Zielprofil je Slice. ResearchStudy als
+// Typ genuegt — die SOLL-Empfehlung auf MII_PR_Studie_Studie steht in der
+// definition und bleibt inhaltlich unveraendert (das Profil IST ResearchStudy).
+* focus[studie] only Reference(ResearchStudy)
 * focus[studie] ^short = "Referenz zur Studie (KDS-Modul Medizinisches Forschungsvorhaben)"
 * focus[studie] ^definition = "Referenz zur konkreten Studie, an der die Patientin oder der Patient teilnimmt. SOLL auf das Profil MII_PR_Studie_Studie des KDS-Moduls Medizinisches Forschungsvorhaben verweisen; eine generische ResearchStudy-Ressource ist zulässig, wenn das Modul am Standort nicht geführt wird."
 * insert Translation(focus[studie] ^short, de-DE, Referenz zur Studie - KDS-Modul Medizinisches Forschungsvorhaben)
