@@ -46,15 +46,7 @@ by the DIMP configuration, not by this guide.
 #### 3. Module-specific aspects
 
 This is the module's own contribution: the security and privacy properties
-that follow from the *kind of data this module carries*. **Its content is
-optional** — not every module has aspects of its own. If yours does not, the
-whole section body becomes the following default text (delete the example and
-TODO boxes below and adopt it verbatim):
-
-> Beyond the overarching framework above — the overarching data protection
-> concept, the Broad Consent it rests on, and DIMP — this module carries no
-> data category that raises security or privacy aspects of its own, and it
-> places no module-specific security or privacy requirements on implementers.
+that follow from the *kind of data this module carries*.
 
 This module carries data categories that require consideration beyond the
 overarching framework:

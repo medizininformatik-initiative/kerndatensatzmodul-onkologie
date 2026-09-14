@@ -82,7 +82,7 @@ The repository variable `ENABLE_VERSION_COMPARISON=false` switches the whole
 feature off — the publisher's comparison in every build workflow and this
 demonstration alike; a created module never renders the demonstration.
 
-> [TODO: If your module has a versioning policy of its own beyond the KDS scheme
-> — for example a support window for older versions, or a deprecation policy for
-> profiles — describe it here. Delete this prompt afterwards.]
-{: .ig-highlight .ig-highlight-grey}
+This module follows the KDS scheme without additions: no support window
+beyond the current release and no profile-level deprecation policy of its
+own (deprecations are release-note entries, see the
+[Changelog](changes.html)).

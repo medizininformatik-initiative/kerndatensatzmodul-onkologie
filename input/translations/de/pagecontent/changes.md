@@ -1,6 +1,17 @@
 
 Hier sind alle Änderungen aufgelistet. 
 
+## Änderungen v2027.0.0-ballot.rc3 (Ballot-Kandidat)
+
+- **`BREAKING`** **Canonical-URLs an die Namenskonvention angeglichen (10 Artefakte)**: sieben Therapie-ValueSets erhielten das fehlende `onko-`-Segment, drei logische Modelle verloren den Simplifier-Altpfad `…/LogicalModel/<Name>` — vollständige Alt→Neu-Tabelle und Migrationshinweise auf der Seite [Migration von v2026](migration-v2026.html), Eintrag 10. Instanzen sind nicht betroffen (sie tragen diese Canonicals nie); Profil-Bindings folgen automatisch.
+- **Abhängigkeiten komplett auf der 2027-Ballot-Linie**: `kerndatensatz.meta`, `.base`, `.biobank`, `.medikation` und `.molgen` jetzt auf plain `2027.0.0-ballot`; `kerndatensatz.laborbefund` auf rc4. Vorab auf Snapshot-/Slicing-Kompatibilität geprüft.
+- **SNOMED-CT-Expansions-Pin auf International 20260701 gehoben** (Expansions-Manifest, `$sct`-Alias, CalVer-Tabelle): alle 166 pin-relevanten Codes aktiv verifiziert, 19 Filter-Wurzeln verlustfrei, versionierter `$lookup`/`$expand` auf dem MII-Terminologieserver bestätigt. ConceptMap-`targetVersion` behält bewusst die Kurations-Provenienz.
+- **CRMI-Governance-Metadaten im Ballot-Takt**: `approvalDate` 2026-09-15 und `effectivePeriod` 2027 über alle ~330 Artefakte (RuleSets, Library, IG-Ressource); das Profil Genetische Variante trägt jetzt beide Topics (Neoplasm C3262 + Genetik C17457); die URL-keyed-Profilvariante vervollständigt (License/package-source, versionAlgorithm, effectivePeriod, experimental).
+- `fix` **QA-Slicing-Gruppen aufgelöst**: Gleason-Score-/Grade-Group-Diskriminatoren (explizite `.system`-Werte), Studienteilnahme-`focus[studie]` auf ein resolve()-Zielprofil reduziert, Pflicht-Slices in den FOLFOX- und Tumormarker-Beispielen vervollständigt (12+3+5 QA-Fehler).
+- `fix` Known Issue dokumentiert: Der SU-Terminologieserver führt die historischen ATC-Jahrgänge 2018–2026 nicht, daher erzeugen die jährlichen Substanzen-ValueSets derzeit nicht-handelbare QA-Fehler (`bfarm/atc version JJJJ`).
+- **Neue Seiten**: [Therapieziele](therapieziele.html) (Verhältnis zur BIH-CEI-Therapieziele-Spezifikation) und die vervollständigte [Anleitung für Forschende](researcher-guidance.html) (Meldeverzug, Standort-Fragmentierung); alle Template-TODO-Boxen entfernt (Security & Privacy, Übersetzungsstand, Versionierung, Downloads).
+- `chore` IG-Ressourcen-id umbenannt `mii-ig-onko-de-v2026` → `mii-ig-onko-de` (die Version lebt im version-Feld); Package-id und Modul-Canonical unverändert.
+
 ## Änderungen v2027.0.0-ballot.rc2 (Ballot-Kandidat)
 
 ### ⚠️ Breaking Changes

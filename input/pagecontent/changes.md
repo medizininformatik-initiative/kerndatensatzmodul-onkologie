@@ -5,6 +5,17 @@ All changes to this module are listed here. The complete, detailed release
 history is maintained in the German edition of this page; the current release
 cycle is translated in full below.
 
+### Changes v2027.0.0-ballot.rc3 (ballot candidate)
+
+- **`BREAKING`** **Canonical URLs aligned with the naming convention (10 artefacts)**: seven therapy ValueSets gained the missing `onko-` segment, three logical models lost the Simplifier-era `…/LogicalModel/<Name>` path — complete old→new table and migration guidance in [Migration from v2026](migration-v2026.html), entry 10. Instances are unaffected (they never carry these canonicals); profile bindings follow automatically.
+- **Dependencies completed on the 2027 ballot line**: `kerndatensatz.meta`, `.base`, `.biobank`, `.medikation` and `.molgen` now at plain `2027.0.0-ballot`; `kerndatensatz.laborbefund` at rc4. Pre-checked for snapshot/slicing compatibility.
+- **SNOMED CT expansion pin raised to International 20260701** (expansion manifest, `$sct` alias, CalVer table): all 166 pin-relevant codes verified active, 19 filter roots expand loss-free, versioned `$lookup`/`$expand` confirmed on the MII terminology server. ConceptMap `targetVersion` deliberately keeps its curation provenance.
+- **CRMI governance metadata on the ballot cadence**: `approvalDate` 2026-09-15 and `effectivePeriod` 2027 across all ~330 artifacts (rulesets, Library, IG resource); the genetic-variant profile now carries both topics (Neoplasm C3262 + Genetics C17457); the URL-keyed profile variant completed (license/package-source, versionAlgorithm, effectivePeriod, experimental).
+- `fix` **QA slicing groups resolved**: Gleason score/grade-group discriminators (explicit `.system` values), study-participation `focus[studie]` reduced to one resolve() target type, mandatory slices completed in the FOLFOX and tumour-marker examples (12+3+5 QA errors).
+- `fix` Known issue documented: the SU terminology server does not host the historical ATC year editions 2018–2026, so the yearly substance ValueSets currently produce non-actionable QA errors (`bfarm/atc version YYYY`).
+- **New pages**: [Therapy Goals](therapieziele.html) (relationship to the BIH-CEI Therapieziele specification) and the completed [Guidance for Researchers](researcher-guidance.html) (registry reporting lag, cross-site incompleteness); all template TODO boxes removed (security & privacy, translation info, version history, downloads).
+- `chore` IG resource id renamed `mii-ig-onko-de-v2026` → `mii-ig-onko-de` (version lives in the version field); package id and module canonical unchanged.
+
 ### Changes v2027.0.0-ballot.rc2 (ballot candidate)
 
 #### ⚠️ Breaking Changes
