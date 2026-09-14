@@ -19,7 +19,7 @@ description: "FHIR profiles for representing oncological data based on the Germa
 status: active # draft | active | retired | unknown
 # MII modules use CalVer YYYY.n.n (e.g. 2026.0.1) per the MII Module Release
 # Workflow — NOT SemVer. Only the template tooling repos use SemVer.
-version: "2027.0.0-ballot.rc3"
+version: "2027.0.0-ballot"
 # packageId pattern per the MII naming convention:
 # de.medizininformatikinitiative.kerndatensatz.<slug> (for example,
 # kerndatensatz-basis uses de.medizininformatikinitiative.kerndatensatz.base).
@@ -72,7 +72,7 @@ extension:
       - url: packageId
         valueId: de.medizininformatikinitiative.kerndatensatz.onkologie
       - url: version
-        valueString: "2027.0.0-ballot.rc3"
+        valueString: "2027.0.0-ballot"
       - url: uri
         valueUri: https://www.medizininformatik-initiative.de/fhir/ext/modul-onko
   # Year this release sequence became effective
@@ -183,7 +183,12 @@ dependencies:
   # Explizit (transitiv ohnehin via molgen): benötigt, damit SUSHI die
   # Basiskette der molgen-variante auflösen kann (Reference-Typprüfung, agi).
   hl7.fhir.uv.genomics-reporting: 3.0.0
-  de.medizininformatikinitiative.kerndatensatz.studie: 2027.0.0-ballot.rc1
+  # kerndatensatz.studie ist seit 2027.0.0-ballot KEINE harte Dependency mehr
+  # (Entscheidung Modulverantwortlicher 2026-09-14): kein FSH-Artefakt
+  # referenziert einen studie-Canonical — focus[studie] der Studienteilnahme
+  # bindet Reference(ResearchStudy), die SOLL-Empfehlung auf MII_PR_Studie_Studie
+  # steht als Prosa in der definition. studie haengt als einziges Modul noch
+  # auf einer rc; ohne den Pin blockiert es die Ballot-Linie nicht.
   # HL7 Terminology (THO) — pinned DIRECTLY on purpose. The IG Publisher's
   # auto-add guard reads only THIS IG's own dependsOn (PublisherIGLoader,
   # verified at the pinned 2.2.11): without a direct pin every build silently

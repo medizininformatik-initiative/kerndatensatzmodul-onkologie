@@ -6,8 +6,9 @@ topic: ReleaseNotes
 ## {{page-title}}
 Hier sind alle Änderungen aufgelistet. 
 
-## Änderungen v2027.0.0-ballot.rc3 (Ballot-Kandidat)
+## Änderungen v2027.0.0-ballot (Ballot)
 
+- **`kerndatensatz.studie` als harte Dependency entfernt**: Kein Artefakt dieses Moduls referenziert einen studie-Canonical — das Studienteilnahme-Profil bindet `focus[studie]` auf schlichtes `Reference(ResearchStudy)`, die SOLL-Empfehlung auf `MII_PR_Studie_Studie` steht in der Elementdefinition. studie ist das letzte Modul auf einer rc; ohne den Pin blockiert es diese Ballot-Linie nicht mehr.
 - **`BREAKING`** **Canonical-URLs an die Namenskonvention angeglichen (10 Artefakte)**: sieben Therapie-ValueSets erhielten das fehlende `onko-`-Segment, drei logische Modelle verloren den Simplifier-Altpfad `…/LogicalModel/<Name>` — vollständige Alt→Neu-Tabelle und Migrationshinweise auf der Seite [Migration von v2026](migration-v2026.html), Eintrag 10. Instanzen sind nicht betroffen (sie tragen diese Canonicals nie); Profil-Bindings folgen automatisch.
 - **Abhängigkeiten komplett auf der 2027-Ballot-Linie**: `kerndatensatz.meta`, `.base`, `.biobank`, `.medikation` und `.molgen` jetzt auf plain `2027.0.0-ballot`; `kerndatensatz.laborbefund` ebenfalls auf plain `2027.0.0-ballot`. Vorab auf Snapshot-/Slicing-Kompatibilität geprüft.
 - **SNOMED-CT-Expansions-Pin auf International 20260701 gehoben** (Expansions-Manifest, `$sct`-Alias, CalVer-Tabelle): alle 166 pin-relevanten Codes aktiv verifiziert, 19 Filter-Wurzeln verlustfrei, versionierter `$lookup`/`$expand` auf dem MII-Terminologieserver bestätigt. ConceptMap-`targetVersion` behält bewusst die Kurations-Provenienz.

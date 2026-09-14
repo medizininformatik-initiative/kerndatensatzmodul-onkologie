@@ -5,8 +5,9 @@ All changes to this module are listed here. The complete, detailed release
 history is maintained in the German edition of this page; the current release
 cycle is translated in full below.
 
-### Changes v2027.0.0-ballot.rc3 (ballot candidate)
+### Changes v2027.0.0-ballot (ballot)
 
+- **`kerndatensatz.studie` removed as a hard dependency**: no artefact of this module references a studie canonical — the study-participation profile binds `focus[studie]` to plain `Reference(ResearchStudy)`, with the SHOULD-recommendation to `MII_PR_Studie_Studie` documented in the element definition. studie is the last module still on an rc; without the pin it no longer gates this ballot line.
 - **`BREAKING`** **Canonical URLs aligned with the naming convention (10 artefacts)**: seven therapy ValueSets gained the missing `onko-` segment, three logical models lost the Simplifier-era `…/LogicalModel/<Name>` path — complete old→new table and migration guidance in [Migration from v2026](migration-v2026.html), entry 10. Instances are unaffected (they never carry these canonicals); profile bindings follow automatically.
 - **Dependencies completed on the 2027 ballot line**: `kerndatensatz.meta`, `.base`, `.biobank`, `.medikation` and `.molgen` now at plain `2027.0.0-ballot`; `kerndatensatz.laborbefund` also at plain `2027.0.0-ballot`. Pre-checked for snapshot/slicing compatibility.
 - **SNOMED CT expansion pin raised to International 20260701** (expansion manifest, `$sct` alias, CalVer table): all 166 pin-relevant codes verified active, 19 filter roots expand loss-free, versioned `$lookup`/`$expand` confirmed on the MII terminology server. ConceptMap `targetVersion` deliberately keeps its curation provenance.
