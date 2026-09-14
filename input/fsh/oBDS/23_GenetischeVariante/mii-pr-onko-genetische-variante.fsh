@@ -9,6 +9,9 @@ Description: "Genetische Variante wie im oBDS beschrieben"
 // Parent variante traegt (SUSHI vererbt Root-Extensions partiell; der normale
 // [+]-Komposit kollidiert — 'multiple choice value assignments', beads pxy).
 * insert OnkoCRMIProfileUK
+// Schnittstellen-Artefakt: onkologisch UND genetisch — zweites artifact-topic
+// Genetik (C17457, das Topic des molgen-Moduls) neben Neoplasm (C3262).
+* ^extension[http://hl7.org/fhir/StructureDefinition/artifact-topic][1].valueCodeableConcept.coding = http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17457
 * ^status = #active
 * meta.profile 0..* MS
 * encounter 0..1 MS
