@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Procedure xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-onko-krk-operation"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-operation"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Procedure mii-exa-onko-krk-operation</b></p><a name="mii-exa-onko-krk-operation"> </a><a name="hcmii-exa-onko-krk-operation"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-krk-operation.html">MII PR Onkologie Präoperative Drahtmarkierung Mamma</a></p></div><p><b>MII EX Onko Operation Intention</b>: <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention K}">kurativ</span></p><p><b>status</b>: Completed</p><p><b>category</b>: <span title="Codes:{http://snomed.info/sct 387713003}">Surgical procedure</span></p><p><b>code</b>: <span title="Codes:{http://fhir.de/CodeSystem/bfarm/ops 5-484.55}">Rektumresektion unter Sphinktererhaltung: Tiefe anteriore Resektion: Laparoskopisch mit Anastomose</span></p><p><b>subject</b>: <a href="Patient-mii-exa-onko-krk-bundle-patient.html">Klaus KolorektalCa  (no stated gender), DoB Unknown</a></p><p><b>encounter</b>: <a href="Encounter-mii-exa-onko-krk-bundle-encounter.html">Encounter: status = finished; class = inpatient encounter (ActCode#IMP)</a></p><p><b>performed</b>: 2024-03-22 08:00:00+0100</p><p><b>reasonReference</b>: <a href="Condition-mii-exa-onko-krk-diagnose.html">Condition Bösartige Neubildung des Kolons</a></p><p><b>note</b>: </p><blockquote><div><p>Laparoskopische Resektion beim kolorektalen Karzinom</p>
+</div></blockquote></div><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Procedure mii-exa-onko-krk-operation</b></p><a name="de-mii-exa-onko-krk-operation"> </a><a name="de-hcmii-exa-onko-krk-operation"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-krk-operation.html">MII PR Onkologie Präoperative Drahtmarkierung Mamma</a></p></div><p><b>MII EX Onko Operation Intention</b>: <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention K}">kurativ</span></p><p><b>status</b>: Completed</p><p><b>category</b>: <span title="Codes:{http://snomed.info/sct 387713003}">Surgical procedure</span></p><p><b>code</b>: <span title="Codes:{http://fhir.de/CodeSystem/bfarm/ops 5-484.55}">Rektumresektion unter Sphinktererhaltung: Tiefe anteriore Resektion: Laparoskopisch mit Anastomose</span></p><p><b>subject</b>: <a href="Patient-mii-exa-onko-krk-bundle-patient.html">Klaus KolorektalCa  (no stated gender), DoB Unknown</a></p><p><b>encounter</b>: <a href="Encounter-mii-exa-onko-krk-bundle-encounter.html">Encounter: status = finished; class = inpatient encounter (ActCode#IMP)</a></p><p><b>performed</b>: 2024-03-22 08:00:00+0100</p><p><b>reasonReference</b>: <a href="Condition-mii-exa-onko-krk-diagnose.html">Condition Bösartige Neubildung des Kolons</a></p><p><b>note</b>: </p><blockquote><div><p>Laparoskopische Resektion beim kolorektalen Karzinom</p>
+</div></blockquote></div></div>
+  </text>
+  <extension url="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention">
+    <valueCodeableConcept>
+      <coding>
+        <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention"/>
+        <code value="K"/>
+        <display value="kurativ"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <status value="completed"/>
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="387713003"/>
+      <display value="Surgical procedure"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://fhir.de/CodeSystem/bfarm/ops"/>
+      <version value="2024"/>
+      <code value="5-484.55"/>
+      <display value="Rektumresektion unter Sphinktererhaltung: Tiefe anteriore Resektion: Laparoskopisch mit Anastomose"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/mii-exa-onko-krk-bundle-patient"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/mii-exa-onko-krk-bundle-encounter"/>
+  </encounter>
+  <performedDateTime value="2024-03-22T08:00:00+01:00"/>
+  <reasonReference>
+    <reference value="Condition/mii-exa-onko-krk-diagnose"/>
+  </reasonReference>
+  <note>
+    <text value="Laparoskopische Resektion beim kolorektalen Karzinom"/>
+  </note>
+</Procedure>
