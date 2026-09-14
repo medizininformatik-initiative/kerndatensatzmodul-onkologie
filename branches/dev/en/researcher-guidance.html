@@ -6,7 +6,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Guidance for Researchers - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2</title>
+    <title>Guidance for Researchers - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc3</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -141,7 +141,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">MII IG Kerndatensatz-Modul Onkologie</span>
             <br/>
-            <span style="display:inline-block;">2027.0.0-ballot.rc2 - 
+            <span style="display:inline-block;">2027.0.0-ballot.rc3 - 
 
 
 
@@ -210,7 +210,7 @@
     <ul class="dropdown-menu">
       <li><a href="guidance.html">Guidance</a></li>
       <!-- OPTIONAL (0..1) — see docs/optional-pages.md -->
-      <li><a href="researcher-guidance.html">Guidance for Researchers (optional)</a></li>
+      <li><a href="researcher-guidance.html">Guidance for Researchers</a></li>
       <li><a href="implementer-guidance.html">Guidance for Implementers</a></li>
       <!-- link-only entry: Logical-Models section of the Artifacts Summary (see header note) -->
       <li><a href="datasets-and-descriptions.html">Datasets and Descriptions</a></li>
@@ -322,7 +322,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">MII IG Kerndatensatz-Modul Onkologie - Local Development build (v2027.0.0-ballot.rc2) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">MII IG Kerndatensatz-Modul Onkologie - Local Development build (v2027.0.0-ballot.rc3) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Guidance for Researchers</h2>
   
 
@@ -344,15 +344,60 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <!-- markdownlint-disable MD041 -->
 <!-- Source: kerndatensatz-basis input/pagecontent/researcher-guidance.md.
-     German mirror: input/translations/de/pagecontent/researcher-guidance.md. -->
+     German mirror: input/translations/de/pagecontent/researcher-guidance.md —
+     both files must say the same thing. Content per module lead (2026-09-14):
+     registry-data character — reporting lag and cross-site incompleteness. -->
 
 <h3 id="guidance-for-researchers">Guidance for Researchers</h3>
 
-<p>Guidance for researchers using the data of the <strong>Oncology</strong> module for research purposes — e.g. which data elements are relevant to which research questions, and how they are to be interpreted.</p>
+<p>The data of this module originates from <strong>oncological tumour documentation
+along the oBDS reporting events</strong> (diagnosis, surgery, start/end of radio- and
+systemic therapy, follow-up, death) — the same documentation stream that feeds
+the German cancer registries. Two consequences of this origin matter for
+every analysis:</p>
 
-<blockquote class="ig-highlight ig-highlight-grey">
-  <p>[TODO: Describe the research-relevant aspects of your module.]</p>
-</blockquote>
+<h4 id="1-the-data-arrives-with-a-reporting-lag">1. The data arrives with a reporting lag</h4>
+
+<p>Reporting events are documented and forwarded with delay — legal reporting
+deadlines, site-internal documentation backlogs and registry processing add
+up to months. For research this means:</p>
+
+<ul>
+  <li><strong>Recent time periods are systematically incomplete.</strong> A drop in case
+counts or therapy events in the most recent months is usually a reporting
+artefact, not an epidemiological signal.</li>
+  <li>Define <strong>cohort cut-offs conservatively</strong> (data-freeze date well before the
+analysis date) and state the freeze date alongside every result.</li>
+  <li>The <strong>absence of a recent event is weak evidence</strong>: a missing follow-up or
+therapy-end record may simply not have arrived yet.</li>
+</ul>
+
+<h4 id="2-a-single-sites-extract-can-be-incomplete">2. A single site's extract can be incomplete</h4>
+
+<p>Oncological care is distributed: the resection may happen at a centre while
+<strong>follow-up and adjuvant therapy take place at other sites</strong> (practices,
+community hospitals, rehabilitation). A data extract drawn from one site
+therefore documents that site's share of the course of disease, not
+necessarily all of it:</p>
+
+<ul>
+  <li><strong>Absence of a record is not absence of treatment.</strong> A patient without a
+documented systemic therapy may have received it elsewhere.</li>
+  <li>Signals inside the data can point to external treatment — for example a
+TNM classification carrying the <strong>y prefix</strong> (state during/after
+neoadjuvant therapy) without any documented systemic therapy episode.</li>
+  <li>Be careful with <strong>denominators</strong>: "patients without adjuvant therapy" from
+a single-site extract mixes truly untreated patients with
+externally-treated ones. Prefer research questions robust to this, or use
+the population-based state cancer registries (Landeskrebsregister), whose
+cross-site consolidation is the completer source for full-course questions.</li>
+  <li>In multi-site MII projects, <strong>record linkage across sites</strong> mitigates — but
+does not eliminate — this fragmentation.</li>
+</ul>
+
+<p>Both properties are inherent to registry-fed clinical cancer documentation;
+they are not data-quality defects of an individual site. Analyses should name
+them in their limitations section.</p>
 
 
 
@@ -378,8 +423,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
-          Package de.medizininformatikinitiative.kerndatensatz.onkologie#2027.0.0-ballot.rc2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Mon, Sep 14, 2026 06:56+0000">2026-09-14</span>
+          Package de.medizininformatikinitiative.kerndatensatz.onkologie#2027.0.0-ballot.rc3 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated <span title="Mon, Sep 14, 2026 08:15+0000">2026-09-14</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

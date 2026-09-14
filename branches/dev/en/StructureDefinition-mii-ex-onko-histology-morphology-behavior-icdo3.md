@@ -1,4 +1,4 @@
-# MII EX Onko Histology Morphology Behavior ICDO3 - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2
+# MII EX Onko Histology Morphology Behavior ICDO3 - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc3
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-histology-morphology-behavior-icdo3 | *Version*:2027.0.0-ballot.rc2 |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-histology-morphology-behavior-icdo3 | *Version*:2027.0.0-ballot.rc3 |
 | Active as of 2026-09-14 | *Computable Name*:MII_EX_Onko_Histology_Morphology_Behavior_ICDO3 |
 
 Extension zur Erfassung von ICDO3 da Morphology nicht als Condition.code. Orientiert sich an mcode-stu3.0.
@@ -57,7 +57,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-ex-onko-histo
       },
       {
         "url" : "version",
-        "valueString" : "2027.0.0-ballot.rc2"
+        "valueString" : "2027.0.0-ballot.rc3"
       },
       {
         "url" : "uri",
@@ -173,12 +173,12 @@ Other representations of profile: [CSV](../StructureDefinition-mii-ex-onko-histo
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-histology-morphology-behavior-icdo3",
-  "version" : "2027.0.0-ballot.rc2",
+  "version" : "2027.0.0-ballot.rc3",
   "name" : "MII_EX_Onko_Histology_Morphology_Behavior_ICDO3",
   "title" : "MII EX Onko Histology Morphology Behavior ICDO3",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T06:56:03+00:00",
+  "date" : "2026-09-14T08:15:57+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

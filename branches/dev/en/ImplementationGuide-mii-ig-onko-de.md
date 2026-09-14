@@ -1,4 +1,4 @@
-# MII ImplementationGuide Resource - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2
+# MII ImplementationGuide Resource - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc3
 
 * [**Table of Contents**](toc.md)
 * **MII ImplementationGuide Resource**
@@ -167,7 +167,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
     },
     {
       "url" : "version",
-      "valueString" : "2027.0.0-ballot.rc2"
+      "valueString" : "2027.0.0-ballot.rc3"
     },
     {
       "url" : "uri",
@@ -267,7 +267,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ImplementationGuide/mii-ig-onko-de",
-  "version" : "2027.0.0-ballot.rc2",
+  "version" : "2027.0.0-ballot.rc3",
   "name" : "MII_IG_Onko_DE",
   "title" : "MII IG Kerndatensatz-Modul Onkologie",
   "_title" : {
@@ -285,7 +285,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
   },
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09",
+  "date" : "2026-09-14",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -345,7 +345,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
     "id" : "de_medizininformatikinitiative_kerndatensatz_laborbefund",
     "uri" : "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.laborbefund/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.laborbefund",
     "packageId" : "de.medizininformatikinitiative.kerndatensatz.laborbefund",
-    "version" : "2027.0.0-ballot.rc4"
+    "version" : "2027.0.0-ballot"
   },
   {
     "id" : "de_medizininformatikinitiative_kerndatensatz_medikation",

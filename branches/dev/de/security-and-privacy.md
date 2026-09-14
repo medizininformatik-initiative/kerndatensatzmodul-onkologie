@@ -1,4 +1,4 @@
-# Sicherheit und Datenschutz - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2
+# Sicherheit und Datenschutz - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc3
 
 * [**Inhaltsverzeichnis**](toc.md)
 * **Sicherheit und Datenschutz**
@@ -19,9 +19,7 @@ Wie Daten, die ein Datenintegrationszentrum verlassen, praktisch de-identifizier
 
 #### 3. Modul-spezifische Aspekte
 
-Dies ist der eigene Beitrag des Moduls: die Sicherheits- und Datenschutz-Eigenschaften, die aus der **Art der Daten dieses Moduls** folgen. **Der Inhalt dieses Abschnitts ist optional** — nicht jedes Modul hat eigene Aspekte. Hat Ihres keine, besteht der gesamte Abschnitt aus dem folgenden Standardtext (löschen Sie die Beispiel- und TODO-Boxen unten und übernehmen Sie ihn wörtlich):
-
-> Über den oben verlinkten übergreifenden Rahmen hinaus — das übergreifende Datenschutzkonzept, den ihm zugrunde liegenden Broad Consent und DIMP — führt dieses Modul keine Datenkategorie, die eigene Sicherheits- oder Datenschutzaspekte aufwirft, und stellt keine modulspezifischen Sicherheits- oder Datenschutzanforderungen an Implementierende.
+Dies ist der eigene Beitrag des Moduls: die Sicherheits- und Datenschutz-Eigenschaften, die aus der **Art der Daten dieses Moduls** folgen.
 
 Dieses Modul führt Datenkategorien, die über den übergreifenden Rahmen hinaus eigene Betrachtung verlangen:
 

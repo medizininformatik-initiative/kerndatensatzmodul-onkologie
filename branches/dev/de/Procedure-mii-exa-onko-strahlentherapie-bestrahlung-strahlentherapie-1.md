@@ -1,4 +1,4 @@
-# Strahlentherapie: Beispiel einer Strahlentherapie mit allgemeinem OPS-Code 8-52 - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2
+# Strahlentherapie: Beispiel einer Strahlentherapie mit allgemeinem OPS-Code 8-52 - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc3
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Onkologie Strahlentherapie](StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie.md) version: 2027.0.0-ballot.rc2
+Profile: [MII PR Onkologie Strahlentherapie](StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie.md) version: 2027.0.0-ballot.rc3
 
 **Procedure Method**: perkutan mit Chemotherapie/Sensitizer
 
@@ -45,7 +45,7 @@ Profile: [MII PR Onkologie Strahlentherapie](StructureDefinition-mii-pr-onko-str
   "resourceType" : "Procedure",
   "id" : "mii-exa-onko-strahlentherapie-bestrahlung-strahlentherapie-1",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie|2027.0.0-ballot.rc2"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie|2027.0.0-ballot.rc3"]
   },
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/procedure-method",

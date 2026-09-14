@@ -1,4 +1,4 @@
-# Downloads - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2
+# Downloads - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc3
 
 * [**Table of Contents**](toc.md)
 * **Downloads**
@@ -17,7 +17,7 @@ The package file is an NPM-format FHIR package used by most FHIR tooling. It con
 
 A downloadable copy of the rendered guide, for hosting locally:
 
-* [Downloadable copy (compressed folder)](../full-ig.zip)
+* [Downloadable copy (compressed folder)](../full-ig.zip) — **CI builds and previews only**: in formal publications this archive exceeds GitHub's 100 MB file limit and is therefore not shipped; use the [package](../package.tgz) or browse the published site directly.
 
 #### Examples
 
@@ -41,11 +41,9 @@ The profile information of the whole guide in a single CSV or Excel file — use
 
 The `ImplementationGuide` resource carries the technical details of this publication, including its dependencies and publication parameters.
 
-> [TODO: This template ships no page for that resource, so there is nothing to link here yet. `kerndatensatz-basis` publishes one as `input/pagecontent/ImplementationGuide-mii-ig-base.md`, registered under `pages:` in `sushi-config.yaml`. Add the equivalent for your module in both languages and link it from here. The file name must carry your slug literally: a `pages:` file name cannot hold a placeholder, because the placeholder substitution rewrites file contents, not file names.]
+Rendered with its dependencies and publication parameters on the [Dependencies](ImplementationGuide-mii-ig-onko-de.md) page; raw form: [XML](../ImplementationGuide-mii-ig-onko-de.xml) · [JSON](../ImplementationGuide-mii-ig-onko-de.json).
 
 #### Version history
 
 Earlier versions and the detailed change history are on the [Versioning](version-history.md) and [Changelog](changes.md) pages.
-
-> [TODO: Add any further downloads your module offers — for example an example bundle, a data dictionary or a mapping table — and remove the entries above that your build does not produce.]
 

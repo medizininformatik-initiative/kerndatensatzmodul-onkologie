@@ -1,4 +1,4 @@
-# Melanom Exzision Oberarm Beispiel - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2
+# Melanom Exzision Oberarm Beispiel - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc3
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Onko Melanom Exzision](StructureDefinition-mii-pr-onko-melanom-exzision.md) version: 2027.0.0-ballot.rc2
+Profile: [MII PR Onko Melanom Exzision](StructureDefinition-mii-pr-onko-melanom-exzision.md) version: 2027.0.0-ballot.rc3
 
 **MII EX Onko Operation Intention**: kurativ
 
@@ -41,7 +41,7 @@ Profile: [MII PR Onko Melanom Exzision](StructureDefinition-mii-pr-onko-melanom-
   "resourceType" : "Procedure",
   "id" : "mii-exa-onko-melanom-exzision-oberarm",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-exzision|2027.0.0-ballot.rc2"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-melanom-exzision|2027.0.0-ballot.rc3"]
   },
   "extension" : [{
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention",

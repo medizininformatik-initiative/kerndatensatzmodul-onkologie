@@ -1,4 +1,4 @@
-# MII VS Onkologie Nebenwirkung CTCAE-Version - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2
+# MII VS Onkologie Nebenwirkung CTCAE-Version - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc3
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-nebenwirkung-ctcae-version | *Version*:2027.0.0-ballot.rc2 |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-nebenwirkung-ctcae-version | *Version*:2027.0.0-ballot.rc3 |
 | Active as of 2026-09-14 | *Computable Name*:MII_VS_Onko_Nebenwirkung_CTCAE_Version |
 
  
@@ -48,7 +48,7 @@ Versionsbezeichnungen des CTCAE-Katalogs nach oBDS 15.3.
       },
       {
         "url" : "version",
-        "valueString" : "2027.0.0-ballot.rc2"
+        "valueString" : "2027.0.0-ballot.rc3"
       },
       {
         "url" : "uri",
@@ -166,12 +166,12 @@ Versionsbezeichnungen des CTCAE-Katalogs nach oBDS 15.3.
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-nebenwirkung-ctcae-version",
-  "version" : "2027.0.0-ballot.rc2",
+  "version" : "2027.0.0-ballot.rc3",
   "name" : "MII_VS_Onko_Nebenwirkung_CTCAE_Version",
   "title" : "MII VS Onkologie Nebenwirkung CTCAE-Version",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T06:56:03+00:00",
+  "date" : "2026-09-14T08:15:57+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

@@ -1,4 +1,4 @@
-# MII CS Onko Therapie Typ - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2
+# MII CS Onko Therapie Typ - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc3
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ | *Version*:2027.0.0-ballot.rc2 |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ | *Version*:2027.0.0-ballot.rc3 |
 | Active Stand: 2026-09-14 | *Maschinenlesbarer Name*:MII_CS_Onko_Therapie_Typ |
 
  
@@ -43,7 +43,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
       },
       {
         "url" : "version",
-        "valueString" : "2027.0.0-ballot.rc2"
+        "valueString" : "2027.0.0-ballot.rc3"
       },
       {
         "url" : "uri",
@@ -156,12 +156,12 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ",
-  "version" : "2027.0.0-ballot.rc2",
+  "version" : "2027.0.0-ballot.rc3",
   "name" : "MII_CS_Onko_Therapie_Typ",
   "title" : "MII CS Onko Therapie Typ",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T06:56:03+00:00",
+  "date" : "2026-09-14T08:15:57+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

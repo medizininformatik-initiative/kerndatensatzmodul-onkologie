@@ -1,4 +1,4 @@
-# mii-exa-onko-trastuzumab-therapie - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2
+# mii-exa-onko-trastuzumab-therapie - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc3
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Onkologie Systemische Therapie](StructureDefinition-mii-pr-onko-systemische-therapie.md) version: 2027.0.0-ballot.rc2
+Profile: [MII PR Onkologie Systemische Therapie](StructureDefinition-mii-pr-onko-systemische-therapie.md) version: 2027.0.0-ballot.rc3
 
 **MII EX Onko Systemische Therapie Intention**: kurativ
 
@@ -37,7 +37,7 @@ Profile: [MII PR Onkologie Systemische Therapie](StructureDefinition-mii-pr-onko
   "resourceType" : "Procedure",
   "id" : "mii-exa-onko-trastuzumab-therapie",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie|2027.0.0-ballot.rc2"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie|2027.0.0-ballot.rc3"]
   },
   "extension" : [{
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-intention",

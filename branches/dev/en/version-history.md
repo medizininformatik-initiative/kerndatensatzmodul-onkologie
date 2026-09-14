@@ -1,4 +1,4 @@
-# Versioning - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2
+# Versioning - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc3
 
 * [**Table of Contents**](toc.md)
 * **Versioning**
@@ -41,5 +41,5 @@ From the second **formal publication** on, this guide also publishes a **machine
 
 **The demonstration below** (this template repository's preview only) shows the same kind of report before any formal publication exists: the build compares itself against the previous `dev` preview using the FHIR validator's `-compare` command and publishes the result at `comparison-demo/index.html`. The repository variable `ENABLE_VERSION_COMPARISON=false` switches the whole feature off — the publisher's comparison in every build workflow and this demonstration alike; a created module never renders the demonstration.
 
-> [TODO: If your module has a versioning policy of its own beyond the KDS scheme — for example a support window for older versions, or a deprecation policy for profiles — describe it here. Delete this prompt afterwards.]
+This module follows the KDS scheme without additions: no support window beyond the current release and no profile-level deprecation policy of its own (deprecations are release-note entries, see the [Changelog](changes.md)).
 

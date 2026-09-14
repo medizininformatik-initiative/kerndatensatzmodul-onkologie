@@ -1,4 +1,4 @@
-# MedDRA (Fragment, nur Codes) - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2
+# MedDRA (Fragment, nur Codes) - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc3
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.meddra.org | *Version*:2027.0.0-ballot.rc2 |
+| *Offizielle URL*:https://www.meddra.org | *Version*:2027.0.0-ballot.rc3 |
 | Active Stand: 2026-09-14 | *Maschinenlesbarer Name*:MedDRAFragment |
 | **Copyright/Rechtliches**: MedDRA® trademark is registered by ICH. Dieses Fragment enthaelt keine MedDRA-Terms, nur die im Modul verwendeten numerischen Code-IDs. | |
 
@@ -32,12 +32,12 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "resourceType" : "CodeSystem",
   "id" : "meddra",
   "url" : "https://www.meddra.org",
-  "version" : "2027.0.0-ballot.rc2",
+  "version" : "2027.0.0-ballot.rc3",
   "name" : "MedDRAFragment",
   "title" : "MedDRA (Fragment, nur Codes)",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T06:56:03+00:00",
+  "date" : "2026-09-14T08:15:57+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

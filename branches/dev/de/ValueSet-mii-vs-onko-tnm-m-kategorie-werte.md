@@ -1,4 +1,4 @@
-# MII VS Onkologie TNM M Kategorie Werte - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2
+# MII VS Onkologie TNM M Kategorie Werte - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc3
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-m-kategorie-werte | *Version*:2027.0.0-ballot.rc2 |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-m-kategorie-werte | *Version*:2027.0.0-ballot.rc3 |
 | Active Stand: 2026-09-14 | *Maschinenlesbarer Name*:MII_VS_Onko_TNM_M_Kategorie_Werte |
 
  
@@ -48,7 +48,7 @@ Das ValueSet enthält die TNM M-Kategorie Codes aus der UICC TNM - Klassifikatio
       },
       {
         "url" : "version",
-        "valueString" : "2027.0.0-ballot.rc2"
+        "valueString" : "2027.0.0-ballot.rc3"
       },
       {
         "url" : "uri",
@@ -166,12 +166,12 @@ Das ValueSet enthält die TNM M-Kategorie Codes aus der UICC TNM - Klassifikatio
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-m-kategorie-werte",
-  "version" : "2027.0.0-ballot.rc2",
+  "version" : "2027.0.0-ballot.rc3",
   "name" : "MII_VS_Onko_TNM_M_Kategorie_Werte",
   "title" : "MII VS Onkologie TNM M Kategorie Werte",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T06:56:03+00:00",
+  "date" : "2026-09-14T08:15:57+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

@@ -1,4 +1,4 @@
-# MII CM Onko Clincal TNM UICC SNOMED - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2
+# MII CM Onko Clincal TNM UICC SNOMED - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc3
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-tnm-uicc-sct-clinical | *Version*:2027.0.0-ballot.rc2 |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-tnm-uicc-sct-clinical | *Version*:2027.0.0-ballot.rc3 |
 | Active as of 2024-01-05 | *Computable Name*:MII CM Onko Clincal TNM UICC SCT Mapping |
 | **Copyright/Legal**: This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. | |
 
@@ -41,7 +41,7 @@ The table below represents one possible mapping to the clinical TNMs (cTNMs).
       },
       {
         "url" : "version",
-        "valueString" : "2027.0.0-ballot.rc2"
+        "valueString" : "2027.0.0-ballot.rc3"
       },
       {
         "url" : "uri",
@@ -153,7 +153,7 @@ The table below represents one possible mapping to the clinical TNMs (cTNMs).
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-tnm-uicc-sct-clinical",
-  "version" : "2027.0.0-ballot.rc2",
+  "version" : "2027.0.0-ballot.rc3",
   "name" : "MII CM Onko Clincal TNM UICC SCT Mapping",
   "title" : "MII CM Onko Clincal TNM UICC SNOMED",
   "status" : "active",

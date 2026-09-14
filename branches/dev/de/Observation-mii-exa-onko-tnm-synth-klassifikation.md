@@ -1,4 +1,4 @@
-# mii-exa-onko-tnm-synth-klassifikation - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2
+# mii-exa-onko-tnm-synth-klassifikation - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc3
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Onkologie TNM-Klassifikation (synthetisiert)](StructureDefinition-mii-pr-onko-tnm-klassifikation-synthetisiert.md) version: 2027.0.0-ballot.rc2
+Profile: [MII PR Onkologie TNM-Klassifikation (synthetisiert)](StructureDefinition-mii-pr-onko-tnm-klassifikation-synthetisiert.md) version: 2027.0.0-ballot.rc3
 
 **status**: Final
 
@@ -55,7 +55,7 @@ Profile: [MII PR Onkologie TNM-Klassifikation (synthetisiert)](StructureDefiniti
   "resourceType" : "Observation",
   "id" : "mii-exa-onko-tnm-synth-klassifikation",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation-synthetisiert|2027.0.0-ballot.rc2"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation-synthetisiert|2027.0.0-ballot.rc3"]
   },
   "status" : "final",
   "code" : {

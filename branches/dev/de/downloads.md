@@ -1,4 +1,4 @@
-# Downloads - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2
+# Downloads - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc3
 
 * [**Inhaltsverzeichnis**](toc.md)
 * **Downloads**
@@ -19,7 +19,7 @@ Die Paketdatei ist ein FHIR-Paket im NPM-Format, wie es die meisten FHIR-Werkzeu
 
 Eine herunterladbare Fassung des gerenderten Leitfadens für den lokalen Betrieb:
 
-* [Herunterladbare Kopie (komprimierter Ordner)](../full-ig.zip)
+* [Herunterladbare Kopie (komprimierter Ordner)](../full-ig.zip) — **nur CI-Builds und Previews**: In formalen Publikationen überschreitet dieses Archiv GitHubs 100-MB-Dateigrenze und wird daher nicht ausgeliefert; nutzen Sie das [Package](../package.tgz) oder die publizierte Site direkt.
 
 #### Beispiele
 
@@ -43,11 +43,9 @@ Die Profilinformationen des gesamten Leitfadens in einer einzigen CSV- oder Exce
 
 Die `ImplementationGuide`-Ressource trägt die technischen Details dieser Veröffentlichung einschließlich ihrer Abhängigkeiten und Veröffentlichungsparameter.
 
-> [TODO: Diese Vorlage liefert keine Seite für diese Ressource aus, hier ist also noch nichts zu verlinken. `kerndatensatz-basis` veröffentlicht eine solche Seite als `input/pagecontent/ImplementationGuide-mii-ig-base.md`, eingetragen unter `pages:` in `sushi-config.yaml`. Legen Sie das Gegenstück für Ihr Modul in beiden Sprachen an und verlinken Sie es hier. Der Dateiname muss Ihren Slug wörtlich enthalten: ein `pages:`-Dateiname kann keinen Platzhalter tragen, weil die Platzhalter-Ersetzung Dateiinhalte ersetzt, nicht Dateinamen.]
+Mit Abhängigkeiten und Publikationsparametern gerendert auf der Seite [Abhängigkeiten](ImplementationGuide-mii-ig-onko-de.md); Rohform: [XML](../ImplementationGuide-mii-ig-onko-de.xml) · [JSON](../ImplementationGuide-mii-ig-onko-de.json).
 
 #### Versionshistorie
 
 Frühere Versionen und die ausführliche Änderungshistorie stehen auf den Seiten [Versionierung](version-history.md) und [Änderungshistorie](changes.md).
-
-> [TODO: Ergänzen Sie weitere Downloads Ihres Moduls — etwa ein Beispiel-Bundle, ein Datenwörterbuch oder eine Mapping-Tabelle — und entfernen Sie die oben aufgeführten Einträge, die Ihr Build nicht erzeugt.]
 

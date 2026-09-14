@@ -6,7 +6,7 @@
 <html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Hinweise zur Übersetzung - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2</title>
+    <title>Hinweise zur Übersetzung - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc3</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -141,7 +141,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">MII IG Kerndatensatz-Modul Onkologie</span>
             <br/>
-            <span style="display:inline-block;">2027.0.0-ballot.rc2 - 
+            <span style="display:inline-block;">2027.0.0-ballot.rc3 - 
 
 
 
@@ -182,7 +182,7 @@
     <ul class="dropdown-menu">
       <li><a href="guidance.html">Anleitung</a></li>
       <!-- OPTIONAL (0..1) — siehe docs/optional-pages.md -->
-      <li><a href="researcher-guidance.html">Anleitung für Forschende (optional)</a></li>
+      <li><a href="researcher-guidance.html">Anleitung für Forschende</a></li>
       <li><a href="implementer-guidance.html">Anleitung für Implementierende</a></li>
       <!-- Nur-Link-Eintrag: die Seite "Logische Modelle" (Begründung im Quell-Menü) -->
       <li><a href="datasets-and-descriptions.html">Datensätze inkl. Beschreibungen</a></li>
@@ -294,7 +294,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">MII IG Kerndatensatz-Modul Onkologie - Local Development build (v2027.0.0-ballot.rc2) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">MII IG Kerndatensatz-Modul Onkologie - Local Development build (v2027.0.0-ballot.rc3) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Hinweise zur Übersetzung</h2>
   
 
@@ -336,10 +336,15 @@ Dateiname wie die englische Seite); Ressourcen-Übersetzungen als <code class="l
 unter <code class="language-plaintext highlighter-rouge">input/translations/de/</code>. Details:
 <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/blob/main/docs/recipes/add-translation.md"><code class="language-plaintext highlighter-rouge">docs/recipes/add-translation.md</code></a> in diesem Repository.</p>
 
-<blockquote class="ig-highlight ig-highlight-grey">
-  <p>[TODO: Vermerken Sie, welche Teile des Moduls bereits ins Deutsche übersetzt
-sind.]</p>
-</blockquote>
+<p><strong>Übersetzungsstand dieses Moduls:</strong> Jede erzählende Seite dieses Leitfadens
+existiert in beiden Sprachen (englische Quelle, deutscher Spiegel — inklusive
+der Migrations-, TNM-, Therapieziele- und Forschenden-Seiten). Auf
+Artefaktebene tragen Profile, Extensions, ValueSets und CodeSysteme deutsche
+<code class="language-plaintext highlighter-rouge">short</code>-/<code class="language-plaintext highlighter-rouge">definition</code>-Übersetzungen über die Translation-RuleSets des Moduls;
+die ImplementationGuide-Ressource selbst ist über ihre <code class="language-plaintext highlighter-rouge">.po</code>-Datei übersetzt.
+Die deutsche Ausgabe ist damit inhaltlich vollständig; sprachlicher Feinschliff
+maschinell unterstützter Passagen wird als interne Review-Kommentare in den
+Quellen nachgehalten.</p>
 
 
 
@@ -365,8 +370,8 @@ sind.]</p>
 
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
-          Package de.medizininformatikinitiative.kerndatensatz.onkologie#2027.0.0-ballot.rc2 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Mon, Sep 14, 2026 06:56+0000">2026-09-14</span>
+          Package de.medizininformatikinitiative.kerndatensatz.onkologie#2027.0.0-ballot.rc3 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Erstellt <span title="Mon, Sep 14, 2026 08:15+0000">2026-09-14</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

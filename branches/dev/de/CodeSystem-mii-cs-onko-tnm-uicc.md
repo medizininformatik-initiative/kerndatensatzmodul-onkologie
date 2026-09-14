@@ -1,4 +1,4 @@
-# MII CS Onkologie TNM UICC - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2
+# MII CS Onkologie TNM UICC - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc3
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.uicc.org/resources/tnm | *Version*:2027.0.0-ballot.rc2 |
+| *Offizielle URL*:https://www.uicc.org/resources/tnm | *Version*:2027.0.0-ballot.rc3 |
 | Active Stand: 2026-09-14 | *Maschinenlesbarer Name*:MII_CS_Onko_TNM_UICC |
 | **Copyright/Rechtliches**: Die TNM-Klassifikation maligner Tumoren ist urheberrechtlich geschuetzt: TNM Classification of Malignant Tumours © Union for International Cancer Control (UICC). Die hier gefuehrten Codes sind eine Zusammenstellung der im MII-Kerndatensatzmodul Onkologie verwendeten TNM-Kategorien und -Werte zum Zweck der FHIR-Validierung; sie ersetzen nicht die amtliche UICC-Ausgabe und begruenden keine eigenen Rechte an der Klassifikation. Nutzende benoetigen fuer den produktiven Einsatz die entsprechende UICC-Berechtigung. | |
 
@@ -148,12 +148,12 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
     }
   }],
   "url" : "https://www.uicc.org/resources/tnm",
-  "version" : "2027.0.0-ballot.rc2",
+  "version" : "2027.0.0-ballot.rc3",
   "name" : "MII_CS_Onko_TNM_UICC",
   "title" : "MII CS Onkologie TNM UICC",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T06:56:03+00:00",
+  "date" : "2026-09-14T08:15:57+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

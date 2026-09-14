@@ -1,4 +1,4 @@
-# MII EXA Onkologie Bestrahlung PCI Ganzhirn (Zielgebiet 1.1) - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2
+# MII EXA Onkologie Bestrahlung PCI Ganzhirn (Zielgebiet 1.1) - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc3
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Onkologie Strahlentherapie](StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie.md) version: 2027.0.0-ballot.rc2
+Profile: [MII PR Onkologie Strahlentherapie](StructureDefinition-mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie.md) version: 2027.0.0-ballot.rc3
 
 **Procedure Method**: perkutan ohne Chemotherapie/Sensitizer
 
@@ -45,7 +45,7 @@ Profile: [MII PR Onkologie Strahlentherapie](StructureDefinition-mii-pr-onko-str
   "resourceType" : "Procedure",
   "id" : "mii-exa-onko-strahlentherapie-bestrahlung-pci-sclc",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie|2027.0.0-ballot.rc2"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-strahlentherapie-bestrahlung-strahlentherapie|2027.0.0-ballot.rc3"]
   },
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/procedure-method",

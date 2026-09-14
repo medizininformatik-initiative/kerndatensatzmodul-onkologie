@@ -1,4 +1,4 @@
-# mii-sp-onko-procedure-ext-strahlentherapie-bs-einzeldosis - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc2
+# mii-sp-onko-procedure-ext-strahlentherapie-bs-einzeldosis - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc3
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-procedure-ext-strahlentherapie-bs-einzeldosis | *Version*:2027.0.0-ballot.rc2 |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-procedure-ext-strahlentherapie-bs-einzeldosis | *Version*:2027.0.0-ballot.rc3 |
 | Active as of 2024-04-15 | *Computable Name*:MII_SP_Procedure_Extension_Strahlentherapie_Bestrahlung_Einzeldosis |
 
  
@@ -34,7 +34,7 @@ SearchParameter for Procedure.extension:einzeldosis
       },
       {
         "url" : "version",
-        "valueString" : "2027.0.0-ballot.rc2"
+        "valueString" : "2027.0.0-ballot.rc3"
       },
       {
         "url" : "uri",
@@ -146,7 +146,7 @@ SearchParameter for Procedure.extension:einzeldosis
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/SearchParameter/mii-sp-onko-procedure-ext-strahlentherapie-bs-einzeldosis",
-  "version" : "2027.0.0-ballot.rc2",
+  "version" : "2027.0.0-ballot.rc3",
   "name" : "MII_SP_Procedure_Extension_Strahlentherapie_Bestrahlung_Einzeldosis",
   "status" : "active",
   "experimental" : true,
