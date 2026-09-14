@@ -15,6 +15,6 @@ Description: "Value Set für Mamma-Operationen basierend auf SNOMED CT"
 // werden die Lymphknoten haeufig mit entfernt; die Brust-Wurzel 392090004 deckt
 // das nicht ab. 234262008 ist die Obermenge der axillaeren Exzisionen (Einzel-
 // und Gruppen-Exzision, Lymphadenektomien, Level-1-3-Clearance, 22 Konzepte im
-// Pin 20250701); 396487001 deckt die Sentinel-Node-Biopsie samt Spezialisierungen.
+// Pin 20260701); 396487001 deckt die Sentinel-Node-Biopsie samt Spezialisierungen.
 * include codes from system $SCT where concept is-a #234262008 //Excision of axillary lymph node (procedure)
 * include codes from system $SCT where concept is-a #396487001 //Sentinel lymph node biopsy (procedure)

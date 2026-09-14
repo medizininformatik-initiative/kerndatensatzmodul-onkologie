@@ -23,7 +23,7 @@ Instance: mii-exa-onko-nebenwirkung-crs-grad4
 InstanceOf: mii-pr-onko-nebenwirkung-adverse-event
 Usage: #example
 Title: "MII EXA Onkologie Nebenwirkung Cytokine-Release-Syndrom CTCAE Grad 4"
-Description: "Cytokine-Release-Syndrom CTCAE Grad 4 (MedDRA 10052015) unter medikamentöser systemischer Therapie — SNOMED-Zweitkodierung gemäß ConceptMap gegen die im Expansions-Manifest gepinnte SNOMED-Version (International 20250701)."
+Description: "Cytokine-Release-Syndrom CTCAE Grad 4 (MedDRA 10052015) unter medikamentöser systemischer Therapie — SNOMED-Zweitkodierung gemäß ConceptMap gegen die im Expansions-Manifest gepinnte SNOMED-Version (International 20260701)."
 * actuality = #actual
 * event.coding[meddra].system = "https://www.meddra.org"
 * event.coding[meddra].code = #10052015

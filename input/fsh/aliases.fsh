@@ -112,7 +112,7 @@ Alias: $spdx-license = http://hl7.org/fhir/spdx-license
 Alias: $KDL = http://dvmd.de/fhir/CodeSystem/kdl
 
 // --- Template-Scaffold-Aliases (mii-kds-module-template v0.11.1), per-Definition gemerged ---
-Alias: $sct = http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250701
+Alias: $sct = http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701
 Alias: $sct-no-ver = http://snomed.info/sct
 Alias: $loinc = http://loinc.org
 Alias: $icd-10 = http://hl7.org/fhir/sid/icd-10

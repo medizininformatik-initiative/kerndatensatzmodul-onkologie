@@ -24,7 +24,7 @@ Usage: #definition
 // ConceptMap.target MUSS ein ValueSet sein — hier das implizite SNOMED-CT-VS der
 // Version, GEGEN DIE kuratiert wurde (International 20260501); group.targetVersion
 // trägt dieselbe Angabe. Das ist Provenienz, nicht Validierungsvorgabe: Der
-// Expansions-Pin des IG (20250701) ist eine andere Achse; wer gegen eine ältere
+// Expansions-Pin des IG (20260701) ist eine andere Achse; wer gegen eine ältere
 // Version validiert, findet die jüngsten Konzepte erwartungsgemäß nicht.
 * targetUri = "http://snomed.info/sct/900000000000207008/version/20260501?fhir_vs"
 
