@@ -599,8 +599,14 @@ jobs:
             # local SU-TermServ proxy against publisher 2.3.1+ SSRF hardening
             # (basis idiom). Path is workspace-absolute because this build runs
             # inside the source/ checkout.
+            # -no-sushi: SUSHI ist eine Zeile weiter oben bereits explizit
+            # gelaufen (ohne Zeitlimit). Ohne das Flag startet der Publisher
+            # SUSHI intern ERNEUT — mit hartem 300-s-Timeout im FSHRunner, an
+            # dem der rc3-Publish scheiterte (Exit 143, Run 34826874752), seit
+            # der SUSHI-Lauf des Moduls die 5 Minuten reisst.
             java -Xmx6g -jar "${RUNNER_TEMP}/publisher.jar" \
               -ig ig.ini \
+              -no-sushi \
               -tx "${TX_URL}" \
               -fhir-settings "${GITHUB_WORKSPACE}/automation/.github/fhir-settings.json"
           )
@@ -760,6 +766,7 @@ jobs:
             -templates "${GITHUB_WORKSPACE}/publication/templates" \
             -zips "${RUNNER_TEMP}/publication-zips" \
             -date "${PUBLICATION_DATE}" \
+            -no-sushi \
             -tx "${TX_URL}" \
             -fhir-settings "${GITHUB_WORKSPACE}/automation/.github/fhir-settings.json" \
             2>&1 | tee "${RUNNER_TEMP}/go-publish.log"

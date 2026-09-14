@@ -310,7 +310,10 @@ jobs:
           # publisher 2.3.1+ SSRF hardening can refuse plain-HTTP/private-
           # network -tx targets without it (basis idiom, kerndatensatz-basis
           # @190a3a18). Inert on the tx.fhir.org fallback path.
-          java -Xmx6g -jar "${RUNNER_TEMP}/publisher.jar" -ig ig.ini -tx "${TX_URL}" \
+          # -no-sushi: SUSHI lief bereits als eigener Schritt (Stepname sagt es);
+          # der interne FSHRunner-Neustart traegt ein 300-s-Timeout, das der
+          # Modul-SUSHI inzwischen reissen kann (rc3-Publish-Lektion).
+          java -Xmx6g -jar "${RUNNER_TEMP}/publisher.jar" -ig ig.ini -no-sushi -tx "${TX_URL}" \
             -fhir-settings "${GITHUB_WORKSPACE}/.github/fhir-settings.json"
           test -s output/index.html
           jq empty output/qa.json
