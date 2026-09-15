@@ -1,4 +1,4 @@
-# MII VS Onkologie Krebsprädispositionssyndrome ORPHA - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot
+# MII VS Onkologie Krebsprädispositionssyndrome ORPHA - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-praedispositionssyndrome-orpha | *Version*:2027.0.0-ballot |
-| Active Stand: 2026-09-14 | *Maschinenlesbarer Name*:MII_VS_Onko_Praedispositionssyndrome_ORPHA |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-praedispositionssyndrome-orpha | *Version*:2027.0.0-ballot.1 |
+| Active Stand: 2026-09-15 | *Maschinenlesbarer Name*:MII_VS_Onko_Praedispositionssyndrome_ORPHA |
 
  
 Krebsprädispositionssyndrome der §65c-Liste (Manual Plus, Krebsprädispositionssyndrom und -gen) als Orphanet-Codes. Begleitartefakt ohne Profil-Binding (Andockung an die genetischen Profile folgt mit dem Konzept für genetische Marker); 15 genspezifische Prädispositionen der Quell-Liste haben kein Orphanet-Konzept und sind über das Gen-ValueSet mii-vs-onko-praedispositionsgene-hgnc adressierbar. Projektseitige Code-Auflösung ohne Gewähr; fachliche Prüfung vor Produktivnutzung erforderlich. 
@@ -48,7 +48,7 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
       },
       {
         "url" : "version",
-        "valueString" : "2027.0.0-ballot"
+        "valueString" : "2027.0.0-ballot.1"
       },
       {
         "url" : "uri",
@@ -166,12 +166,12 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-praedispositionssyndrome-orpha",
-  "version" : "2027.0.0-ballot",
+  "version" : "2027.0.0-ballot.1",
   "name" : "MII_VS_Onko_Praedispositionssyndrome_ORPHA",
   "title" : "MII VS Onkologie Krebsprädispositionssyndrome ORPHA",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T12:58:08+00:00",
+  "date" : "2026-09-15T07:11:34+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

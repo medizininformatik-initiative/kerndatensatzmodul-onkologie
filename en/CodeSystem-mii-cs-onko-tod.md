@@ -1,4 +1,4 @@
-# MII CS Onkologie Tod - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot
+# MII CS Onkologie Tod - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tod | *Version*:2027.0.0-ballot |
-| Active as of 2026-09-14 | *Computable Name*:MII_CS_Onko_Tod |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tod | *Version*:2027.0.0-ballot.1 |
+| Active as of 2026-09-15 | *Computable Name*:MII_CS_Onko_Tod |
 
  
 oBDS-spezifisches Codesystem tumorbedingter Tod 
@@ -42,7 +42,7 @@ This Code system is referenced in the definition of the following value sets:
       },
       {
         "url" : "version",
-        "valueString" : "2027.0.0-ballot"
+        "valueString" : "2027.0.0-ballot.1"
       },
       {
         "url" : "uri",
@@ -155,12 +155,12 @@ This Code system is referenced in the definition of the following value sets:
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tod",
-  "version" : "2027.0.0-ballot",
+  "version" : "2027.0.0-ballot.1",
   "name" : "MII_CS_Onko_Tod",
   "title" : "MII CS Onkologie Tod",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T12:58:08+00:00",
+  "date" : "2026-09-15T07:11:34+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

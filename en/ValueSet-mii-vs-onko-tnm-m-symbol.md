@@ -1,4 +1,4 @@
-# MII VS Onkologie TNM m-Symbol - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot
+# MII VS Onkologie TNM m-Symbol - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-m-symbol | *Version*:2027.0.0-ballot |
-| Active as of 2026-09-14 | *Computable Name*:MII_VS_Onko_TNM_m_Symbol |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-m-symbol | *Version*:2027.0.0-ballot.1 |
+| Active as of 2026-09-15 | *Computable Name*:MII_VS_Onko_TNM_m_Symbol |
 
  
 Kennzeichnet Vorhandensein multipler Primärtumoren in einem anatomischen Bezirk. 
@@ -49,7 +49,7 @@ Kennzeichnet Vorhandensein multipler Primärtumoren in einem anatomischen Bezirk
       },
       {
         "url" : "version",
-        "valueString" : "2027.0.0-ballot"
+        "valueString" : "2027.0.0-ballot.1"
       },
       {
         "url" : "uri",
@@ -167,12 +167,12 @@ Kennzeichnet Vorhandensein multipler Primärtumoren in einem anatomischen Bezirk
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-m-symbol",
-  "version" : "2027.0.0-ballot",
+  "version" : "2027.0.0-ballot.1",
   "name" : "MII_VS_Onko_TNM_m_Symbol",
   "title" : "MII VS Onkologie TNM m-Symbol",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T12:58:08+00:00",
+  "date" : "2026-09-15T07:11:34+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Procedure xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-onko-lv5fu2-phase2"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="extensions"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Procedure mii-exa-onko-lv5fu2-phase2</b></p><a name="mii-exa-onko-lv5fu2-phase2"> </a><a name="hcmii-exa-onko-lv5fu2-phase2"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-systemische-therapie.html">MII PR Onkologie Systemische Therapie</a></p></div><p><b>MII EX Onko Systemische Therapie Intention</b>: <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention K}">Kurativ</span></p><p><b>MII EX Onko Systemische Therapie Stellung zur OP</b>: <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-stellungzurop A}">Adjuvant</span></p><p><b>basedOn</b>: <a href="CarePlan-mii-exa-onko-tumorkonferenz-folfox-modification.html">CarePlan: identifier = Tumorkonferenz_FOLFOX_Modification_001; status = active; intent = plan; category = prätherapeutische Tumorkonferenz (Festlegung der Therapiestrategie); created = 2024-03-05</a></p><p><b>partOf</b>: <a href="Procedure-mii-exa-onko-folfox-phase1.html">Procedure Nicht komplexe Chemotherapie</a></p><p><b>status</b>: Completed</p><p><b>category</b>: <span title="Codes:{http://snomed.info/sct 18629005}">Administration of medication</span></p><p><b>code</b>: <span title="Codes:{http://fhir.de/CodeSystem/bfarm/ops 8-542}, {https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-art CH}">Nicht komplexe Chemotherapie</span></p><p><b>subject</b>: <a href="Patient-example-modification.html">Martin Beispiel  Male, DoB: 1958-11-03</a></p><p><b>encounter</b>: <a href="Encounter-example-chemo-phase2.html">Encounter: status = finished; class = ambulatory (ActCode#AMB)</a></p><p><b>performed</b>: 2024-06-17 --&gt; 2024-09-10</p><p><b>reasonReference</b>: <a href="Condition-mii-exa-onko-ascending-colon-cancer-diagnosis.html">Condition Bösartige Neubildung: Colon ascendens</a></p><p><b>outcome</b>: <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-ende-grund E}">Reguläres Ende</span></p><p><b>note</b>: </p><blockquote><div><p>Modified protocol: LV5FU2 (5-FU/Leucovorin) for cycles 7-12. Oxaliplatin omitted due to persistent neuropathy. Patient tolerated modified regimen well. Completed all planned cycles.</p>
+</div></blockquote><p><b>usedCode</b>: <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-protokolle LV5FU2}">LV5FU2</span></p></div>
+  </text>
+  <extension url="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-intention">
+    <valueCodeableConcept>
+      <coding>
+        <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention"/>
+        <code value="K"/>
+        <display value="Kurativ"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-stellungzurop">
+    <valueCodeableConcept>
+      <coding>
+        <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-stellungzurop"/>
+        <code value="A"/>
+        <display value="Adjuvant"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <basedOn>
+    <reference value="CarePlan/mii-exa-onko-tumorkonferenz-folfox-modification"/>
+  </basedOn>
+  <partOf>
+    <reference value="Procedure/mii-exa-onko-folfox-phase1"/>
+  </partOf>
+  <status value="completed"/>
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="18629005"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://fhir.de/CodeSystem/bfarm/ops"/>
+      <version value="2024"/>
+      <code value="8-542"/>
+      <display value="Nicht komplexe Chemotherapie"/>
+    </coding>
+    <coding>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-art"/>
+      <code value="CH"/>
+      <display value="Chemotherapie"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/example-modification"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/example-chemo-phase2"/>
+  </encounter>
+  <performedPeriod>
+    <start value="2024-06-17"/>
+    <end value="2024-09-10"/>
+  </performedPeriod>
+  <reasonReference>
+    <reference value="Condition/mii-exa-onko-ascending-colon-cancer-diagnosis"/>
+  </reasonReference>
+  <outcome>
+    <coding>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-ende-grund"/>
+      <code value="E"/>
+      <display value="Reguläres Ende"/>
+    </coding>
+  </outcome>
+  <note>
+    <text value="Modified protocol: LV5FU2 (5-FU/Leucovorin) for cycles 7-12. Oxaliplatin omitted due to persistent neuropathy. Patient tolerated modified regimen well. Completed all planned cycles."/>
+  </note>
+  <usedCode>
+    <coding>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-protokolle"/>
+      <code value="LV5FU2"/>
+      <display value="LV5FU2"/>
+    </coding>
+  </usedCode>
+</Procedure>

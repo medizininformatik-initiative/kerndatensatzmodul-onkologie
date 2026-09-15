@@ -1,4 +1,4 @@
-# MII VS Onkologie OPS Strahlentherapie - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot
+# MII VS Onkologie OPS Strahlentherapie - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-ops-strahlentherapie | *Version*:2027.0.0-ballot |
-| Active Stand: 2026-09-14 | *Maschinenlesbarer Name*:MII_VS_Onko_OPS_Strahlentherapie |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-ops-strahlentherapie | *Version*:2027.0.0-ballot.1 |
+| Active Stand: 2026-09-15 | *Maschinenlesbarer Name*:MII_VS_Onko_OPS_Strahlentherapie |
 
  
 OPS-Codes für Strahlentherapie 
@@ -48,7 +48,7 @@ OPS-Codes für Strahlentherapie
       },
       {
         "url" : "version",
-        "valueString" : "2027.0.0-ballot"
+        "valueString" : "2027.0.0-ballot.1"
       },
       {
         "url" : "uri",
@@ -166,12 +166,12 @@ OPS-Codes für Strahlentherapie
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-ops-strahlentherapie",
-  "version" : "2027.0.0-ballot",
+  "version" : "2027.0.0-ballot.1",
   "name" : "MII_VS_Onko_OPS_Strahlentherapie",
   "title" : "MII VS Onkologie OPS Strahlentherapie",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T12:58:08+00:00",
+  "date" : "2026-09-15T07:11:34+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

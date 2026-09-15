@@ -1,4 +1,4 @@
-# MII VS Onkologie Prostata Gleason Primary Secondary Tertiary - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot
+# MII VS Onkologie Prostata Gleason Primary Secondary Tertiary - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-gleason-primary-secondary-tertiary | *Version*:2027.0.0-ballot |
-| Active Stand: 2026-09-14 | *Maschinenlesbarer Name*:MII_VS_Onko_Prostata_Gleason_PrimarySecondaryTertiary |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-gleason-primary-secondary-tertiary | *Version*:2027.0.0-ballot.1 |
+| Active Stand: 2026-09-15 | *Maschinenlesbarer Name*:MII_VS_Onko_Prostata_Gleason_PrimarySecondaryTertiary |
 | **Copyright/Rechtliches**: This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. | |
 
  
@@ -49,7 +49,7 @@ Value Set für Primär-, Sekundär- und Tertiär-Gleason Patterns in der Onkolog
       },
       {
         "url" : "version",
-        "valueString" : "2027.0.0-ballot"
+        "valueString" : "2027.0.0-ballot.1"
       },
       {
         "url" : "uri",
@@ -167,12 +167,12 @@ Value Set für Primär-, Sekundär- und Tertiär-Gleason Patterns in der Onkolog
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-gleason-primary-secondary-tertiary",
-  "version" : "2027.0.0-ballot",
+  "version" : "2027.0.0-ballot.1",
   "name" : "MII_VS_Onko_Prostata_Gleason_PrimarySecondaryTertiary",
   "title" : "MII VS Onkologie Prostata Gleason Primary Secondary Tertiary",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T12:58:08+00:00",
+  "date" : "2026-09-15T07:11:34+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

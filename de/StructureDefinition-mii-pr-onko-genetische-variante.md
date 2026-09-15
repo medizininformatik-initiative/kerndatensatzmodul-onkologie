@@ -1,4 +1,4 @@
-# MII PR Onkologie Genetische Variante - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot
+# MII PR Onkologie Genetische Variante - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-genetische-variante | *Version*:2027.0.0-ballot |
-| Active Stand: 2026-09-14 | *Maschinenlesbarer Name*:MII_PR_Onko_Genetische_Variante |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-genetische-variante | *Version*:2027.0.0-ballot.1 |
+| Active Stand: 2026-09-15 | *Maschinenlesbarer Name*:MII_PR_Onko_Genetische_Variante |
 
  
 Genetische Variante wie im oBDS beschrieben 
@@ -99,7 +99,7 @@ You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir
 
 #### Constraints
 
-Diese Struktur ist abgeleitet von [MII_PR_MolGen_Variante](https://medizininformatik-initiative.github.io/kerndatensatzmodul-GenetischeTests/2027.0.0-ballot/StructureDefinition-mii-pr-molgen-variante.html) 
+Diese Struktur ist abgeleitet von [MII_PR_MolGen_Variante](https://medizininformatik-initiative.github.io/kerndatensatzmodul-GenetischeTests/2027.0.0-ballot.1/StructureDefinition-mii-pr-molgen-variante.html) 
 
 #### Terminology Bindings (Differential)
 
@@ -107,7 +107,7 @@ Diese Struktur ist abgeleitet von [MII_PR_MolGen_Variante](https://medizininform
 
 #### Constraints
 
-Diese Struktur ist abgeleitet von [MII_PR_MolGen_Variante](https://medizininformatik-initiative.github.io/kerndatensatzmodul-GenetischeTests/2027.0.0-ballot/StructureDefinition-mii-pr-molgen-variante.html) 
+Diese Struktur ist abgeleitet von [MII_PR_MolGen_Variante](https://medizininformatik-initiative.github.io/kerndatensatzmodul-GenetischeTests/2027.0.0-ballot.1/StructureDefinition-mii-pr-molgen-variante.html) 
 
 ** Summary **
 
@@ -134,7 +134,7 @@ This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.h
 
  **Differential-Ansicht** 
 
-Diese Struktur ist abgeleitet von [MII_PR_MolGen_Variante](https://medizininformatik-initiative.github.io/kerndatensatzmodul-GenetischeTests/2027.0.0-ballot/StructureDefinition-mii-pr-molgen-variante.html) 
+Diese Struktur ist abgeleitet von [MII_PR_MolGen_Variante](https://medizininformatik-initiative.github.io/kerndatensatzmodul-GenetischeTests/2027.0.0-ballot.1/StructureDefinition-mii-pr-molgen-variante.html) 
 
 #### Terminology Bindings (Differential)
 
@@ -144,7 +144,7 @@ Diese Struktur ist abgeleitet von [MII_PR_MolGen_Variante](https://medizininform
 
 #### Constraints
 
-Diese Struktur ist abgeleitet von [MII_PR_MolGen_Variante](https://medizininformatik-initiative.github.io/kerndatensatzmodul-GenetischeTests/2027.0.0-ballot/StructureDefinition-mii-pr-molgen-variante.html) 
+Diese Struktur ist abgeleitet von [MII_PR_MolGen_Variante](https://medizininformatik-initiative.github.io/kerndatensatzmodul-GenetischeTests/2027.0.0-ballot.1/StructureDefinition-mii-pr-molgen-variante.html) 
 
 ** Summary **
 
@@ -187,7 +187,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
       },
       {
         "url" : "version",
-        "valueString" : "2027.0.0-ballot"
+        "valueString" : "2027.0.0-ballot.1"
       },
       {
         "url" : "uri",
@@ -313,12 +313,12 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-genetische-variante",
-  "version" : "2027.0.0-ballot",
+  "version" : "2027.0.0-ballot.1",
   "name" : "MII_PR_Onko_Genetische_Variante",
   "title" : "MII PR Onkologie Genetische Variante",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T12:58:08+00:00",
+  "date" : "2026-09-15T07:11:34+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

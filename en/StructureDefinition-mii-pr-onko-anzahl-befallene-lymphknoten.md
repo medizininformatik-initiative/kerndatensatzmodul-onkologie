@@ -1,4 +1,4 @@
-# MII PR Onkologie Anzahl der befallenen Lymphknoten - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot
+# MII PR Onkologie Anzahl der befallenen Lymphknoten - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-anzahl-befallene-lymphknoten | *Version*:2027.0.0-ballot |
-| Active as of 2026-09-14 | *Computable Name*:MII_PR_Onko_Anzahl_Befallene_Lymphknoten |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-anzahl-befallene-lymphknoten | *Version*:2027.0.0-ballot.1 |
+| Active as of 2026-09-15 | *Computable Name*:MII_PR_Onko_Anzahl_Befallene_Lymphknoten |
 
  
 Histologie: Anzahl der befallenen Lymphknoten. Gibt an, wie viele Lymphknoten befallen sind (einschließlich Sentinel). 
@@ -50,7 +50,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-anzah
       },
       {
         "url" : "version",
-        "valueString" : "2027.0.0-ballot"
+        "valueString" : "2027.0.0-ballot.1"
       },
       {
         "url" : "uri",
@@ -166,12 +166,12 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-anzah
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-anzahl-befallene-lymphknoten",
-  "version" : "2027.0.0-ballot",
+  "version" : "2027.0.0-ballot.1",
   "name" : "MII_PR_Onko_Anzahl_Befallene_Lymphknoten",
   "title" : "MII PR Onkologie Anzahl der befallenen Lymphknoten",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T12:58:08+00:00",
+  "date" : "2026-09-15T07:11:34+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

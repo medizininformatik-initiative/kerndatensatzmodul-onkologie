@@ -7,13 +7,22 @@
     "desc" : "Continuous Integration Build (latest in version control) - Content subject to frequent changes"
   },
   {
+    "version" : "2027.0.0-ballot.1",
+    "path" : "https://medizininformatik-initiative.github.io/kerndatensatzmodul-onkologie/2027.0.0-ballot.1",
+    "status" : "release",
+    "sequence" : "2027",
+    "fhirversion" : "4.0.1",
+    "date" : "2026-09-15",
+    "current" : true,
+    "desc" : "Dependency-Hygiene-Patch der Ballot-Version: molgen auf 2027.0.0-ballot.1, damit der transitive Abhaengigkeitsbaum einheitlich auf den plain-Ballot-Staenden liegt (molgen ballot zog noch meta rc3 / base rc1 / biobank rc2). Keine inhaltlichen Aenderungen."
+  },
+  {
     "version" : "2027.0.0-ballot",
     "path" : "https://medizininformatik-initiative.github.io/kerndatensatzmodul-onkologie/2027.0.0-ballot",
     "status" : "release",
     "sequence" : "2027",
     "fhirversion" : "4.0.1",
     "date" : "2026-09-14",
-    "current" : true,
     "desc" : "Ballot-Version der 2027er Linie: Abhaengigkeiten komplett auf 2027.0.0-ballot (meta/base/biobank/medikation/molgen/laborbefund; studie als harte Dependency entfernt), SNOMED-Pin International 20260701, 10 Canonical-URLs auf Namenskonvention (BREAKING, Migrationseintrag 10), CRMI-Governance im Ballot-Takt, Seiten Therapieziele und Forschenden-Anleitung, QA-Slicing-Fixes."
   },
   {

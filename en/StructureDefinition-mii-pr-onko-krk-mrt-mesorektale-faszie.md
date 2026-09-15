@@ -1,4 +1,4 @@
-# MII PR Onkologie KRK MRT/CT Abstand Mesorektale Faszie - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot
+# MII PR Onkologie KRK MRT/CT Abstand Mesorektale Faszie - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-mrt-mesorektale-faszie | *Version*:2027.0.0-ballot |
-| Active as of 2026-09-14 | *Computable Name*:MII_PR_Onko_KRK_MRT_Mesorektale_Faszie |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-mrt-mesorektale-faszie | *Version*:2027.0.0-ballot.1 |
+| Active as of 2026-09-15 | *Computable Name*:MII_PR_Onko_KRK_MRT_Mesorektale_Faszie |
 
  
 Dieses Profil beschreibt den Abstand des Tumors zur mesorektalen Faszie bei MRT oder Dünnschicht-CT Untersuchung beim Kolorektalen Karzinom (oBDS KR5) 
@@ -97,7 +97,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-krk-m
       },
       {
         "url" : "version",
-        "valueString" : "2027.0.0-ballot"
+        "valueString" : "2027.0.0-ballot.1"
       },
       {
         "url" : "uri",
@@ -213,12 +213,12 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-krk-m
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-mrt-mesorektale-faszie",
-  "version" : "2027.0.0-ballot",
+  "version" : "2027.0.0-ballot.1",
   "name" : "MII_PR_Onko_KRK_MRT_Mesorektale_Faszie",
   "title" : "MII PR Onkologie KRK MRT/CT Abstand Mesorektale Faszie",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T12:58:08+00:00",
+  "date" : "2026-09-15T07:11:34+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

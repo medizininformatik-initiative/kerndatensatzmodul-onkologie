@@ -1,4 +1,4 @@
-# MII PR Onkologie Diagnose Primärtumor - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot
+# MII PR Onkologie Diagnose Primärtumor - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor | *Version*:2027.0.0-ballot |
-| Active Stand: 2026-09-14 | *Maschinenlesbarer Name*:MII_PR_Onko_Diagnose_Primaertumor |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor | *Version*:2027.0.0-ballot.1 |
+| Active Stand: 2026-09-15 | *Maschinenlesbarer Name*:MII_PR_Onko_Diagnose_Primaertumor |
 
  
 Diagnose des Primärtumors bzw. der primären hämatologisch-myeloneoplastischen Erkrankung im Rahmen einer onkologischen Erkrankung, basierend auf dem MII KDS Modul Diagnose 
@@ -101,7 +101,7 @@ You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir
 
 #### Constraints
 
-Diese Struktur ist abgeleitet von [MII_PR_Diagnose_Condition](https://medizininformatik-initiative.github.io/kerndatensatz-basis/2027.0.0-ballot.rc1/StructureDefinition-mii-pr-diagnose-condition.html) 
+Diese Struktur ist abgeleitet von [MII_PR_Diagnose_Condition](https://medizininformatik-initiative.github.io/kerndatensatz-basis/2027.0.0-ballot/StructureDefinition-mii-pr-diagnose-condition.html) 
 
 #### Terminology Bindings (Differential)
 
@@ -111,7 +111,7 @@ Diese Struktur ist abgeleitet von [MII_PR_Diagnose_Condition](https://medizininf
 
 #### Constraints
 
-Diese Struktur ist abgeleitet von [MII_PR_Diagnose_Condition](https://medizininformatik-initiative.github.io/kerndatensatz-basis/2027.0.0-ballot.rc1/StructureDefinition-mii-pr-diagnose-condition.html) 
+Diese Struktur ist abgeleitet von [MII_PR_Diagnose_Condition](https://medizininformatik-initiative.github.io/kerndatensatz-basis/2027.0.0-ballot/StructureDefinition-mii-pr-diagnose-condition.html) 
 
 ** Summary **
 
@@ -154,7 +154,7 @@ This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.h
 
  **Differential-Ansicht** 
 
-Diese Struktur ist abgeleitet von [MII_PR_Diagnose_Condition](https://medizininformatik-initiative.github.io/kerndatensatz-basis/2027.0.0-ballot.rc1/StructureDefinition-mii-pr-diagnose-condition.html) 
+Diese Struktur ist abgeleitet von [MII_PR_Diagnose_Condition](https://medizininformatik-initiative.github.io/kerndatensatz-basis/2027.0.0-ballot/StructureDefinition-mii-pr-diagnose-condition.html) 
 
 #### Terminology Bindings (Differential)
 
@@ -166,7 +166,7 @@ Diese Struktur ist abgeleitet von [MII_PR_Diagnose_Condition](https://medizininf
 
 #### Constraints
 
-Diese Struktur ist abgeleitet von [MII_PR_Diagnose_Condition](https://medizininformatik-initiative.github.io/kerndatensatz-basis/2027.0.0-ballot.rc1/StructureDefinition-mii-pr-diagnose-condition.html) 
+Diese Struktur ist abgeleitet von [MII_PR_Diagnose_Condition](https://medizininformatik-initiative.github.io/kerndatensatz-basis/2027.0.0-ballot/StructureDefinition-mii-pr-diagnose-condition.html) 
 
 ** Summary **
 
@@ -225,7 +225,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
       },
       {
         "url" : "version",
-        "valueString" : "2027.0.0-ballot"
+        "valueString" : "2027.0.0-ballot.1"
       },
       {
         "url" : "uri",
@@ -342,7 +342,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor",
-  "version" : "2027.0.0-ballot",
+  "version" : "2027.0.0-ballot.1",
   "name" : "MII_PR_Onko_Diagnose_Primaertumor",
   "title" : "MII PR Onkologie Diagnose Primärtumor",
   "_title" : {
@@ -360,7 +360,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   },
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T12:58:08+00:00",
+  "date" : "2026-09-15T07:11:34+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

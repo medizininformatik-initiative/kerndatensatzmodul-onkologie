@@ -1,4 +1,4 @@
-# MII VS Onkologie Allgemeiner Leistungszustand Karnofsky LOINC - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot
+# MII VS Onkologie Allgemeiner Leistungszustand Karnofsky LOINC - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-allgemeiner-leistungszustand-karnofsky-loinc | *Version*:2027.0.0-ballot |
-| Active as of 2026-09-14 | *Computable Name*:MII_VS_Onko_Allgemeiner_Leistungszustand_Karnofsky_LOINC |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-allgemeiner-leistungszustand-karnofsky-loinc | *Version*:2027.0.0-ballot.1 |
+| Active as of 2026-09-15 | *Computable Name*:MII_VS_Onko_Allgemeiner_Leistungszustand_Karnofsky_LOINC |
 
  
 LOINC-Answer-Codes für den Karnofsky Performance Status. Enumerierte Fassung der LOINC-Answer-List LL4986-7. 
@@ -48,7 +48,7 @@ LOINC-Answer-Codes für den Karnofsky Performance Status. Enumerierte Fassung de
       },
       {
         "url" : "version",
-        "valueString" : "2027.0.0-ballot"
+        "valueString" : "2027.0.0-ballot.1"
       },
       {
         "url" : "uri",
@@ -166,12 +166,12 @@ LOINC-Answer-Codes für den Karnofsky Performance Status. Enumerierte Fassung de
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-allgemeiner-leistungszustand-karnofsky-loinc",
-  "version" : "2027.0.0-ballot",
+  "version" : "2027.0.0-ballot.1",
   "name" : "MII_VS_Onko_Allgemeiner_Leistungszustand_Karnofsky_LOINC",
   "title" : "MII VS Onkologie Allgemeiner Leistungszustand Karnofsky LOINC",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T12:58:08+00:00",
+  "date" : "2026-09-15T07:11:34+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

@@ -1,4 +1,4 @@
-# MII CM Onko Fernmetastasen SCT Mapping - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot
+# MII CM Onko Fernmetastasen SCT Mapping - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-fernmetastasen-sct | *Version*:2027.0.0-ballot |
-| Active as of 2026-09-14 | *Computable Name*:mii-cm-onko-fernmetastasen-sct-mapping |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-fernmetastasen-sct | *Version*:2027.0.0-ballot.1 |
+| Active as of 2026-09-15 | *Computable Name*:mii-cm-onko-fernmetastasen-sct-mapping |
 | **Copyright/Legal**: This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. | |
 
  
@@ -37,7 +37,7 @@ Fernmetastasen STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT Internati
       },
       {
         "url" : "version",
-        "valueString" : "2027.0.0-ballot"
+        "valueString" : "2027.0.0-ballot.1"
       },
       {
         "url" : "uri",
@@ -149,12 +149,12 @@ Fernmetastasen STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT Internati
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-fernmetastasen-sct",
-  "version" : "2027.0.0-ballot",
+  "version" : "2027.0.0-ballot.1",
   "name" : "mii-cm-onko-fernmetastasen-sct-mapping",
   "title" : "Fernmetastasen Mapping",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-09-14T12:58:08+00:00",
+  "date" : "2026-09-15T07:11:34+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
