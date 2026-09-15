@@ -5,6 +5,10 @@ All changes to this module are listed here. The complete, detailed release
 history is maintained in the German edition of this page; the current release
 cycle is translated in full below.
 
+### Changes v2027.0.0-ballot.1 (ballot, dependency patch)
+
+- **`kerndatensatz.molgen` raised to `2027.0.0-ballot.1`**: molgen's own dependency-hygiene patch (its ballot still pulled meta rc3 / base rc1 / biobank rc2 transitively; no structural changes — all StructureDefinitions verified identical). The dependency tree of this module is now uniformly on the plain ballot line. No content changes in this module.
+
 ### Changes v2027.0.0-ballot (ballot)
 
 - **`kerndatensatz.studie` removed as a hard dependency**: no artefact of this module references a studie canonical — the study-participation profile binds `focus[studie]` to plain `Reference(ResearchStudy)`, with the SHOULD-recommendation to `MII_PR_Studie_Studie` documented in the element definition. studie is the last module still on an rc; without the pin it no longer gates this ballot line.

@@ -6,6 +6,10 @@ topic: ReleaseNotes
 ## {{page-title}}
 Hier sind alle Änderungen aufgelistet. 
 
+## Änderungen v2027.0.0-ballot.1 (Ballot, Dependency-Patch)
+
+- **`kerndatensatz.molgen` auf `2027.0.0-ballot.1` gehoben**: molgens eigener Dependency-Hygiene-Patch (dessen ballot zog transitiv noch meta rc3 / base rc1 / biobank rc2; keine strukturellen Änderungen — alle StructureDefinitions als identisch verifiziert). Der Abhängigkeitsbaum dieses Moduls liegt damit einheitlich auf der plain-Ballot-Linie. Keine inhaltlichen Änderungen in diesem Modul.
+
 ## Änderungen v2027.0.0-ballot (Ballot)
 
 - **`kerndatensatz.studie` als harte Dependency entfernt**: Kein Artefakt dieses Moduls referenziert einen studie-Canonical — das Studienteilnahme-Profil bindet `focus[studie]` auf schlichtes `Reference(ResearchStudy)`, die SOLL-Empfehlung auf `MII_PR_Studie_Studie` steht in der Elementdefinition. studie ist das letzte Modul auf einer rc; ohne den Pin blockiert es diese Ballot-Linie nicht mehr.
