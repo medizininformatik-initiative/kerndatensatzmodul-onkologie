@@ -1,0 +1,39 @@
+{
+  "resourceType" : "Observation",
+  "id" : "TNM-V-Observation-2",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-v-kategorie"]
+  },
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Observation TNM-V-Observation-2</b></p><a name=\"de-TNM-V-Observation-2\"> </a><a name=\"de-hcTNM-V-Observation-2\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-tnm-v-kategorie.html\">MII PR Onkologie TNM V-Kategorie</a></p></div><p><b>partOf</b>: <a href=\"Procedure-PatientKimMusterperson-Procedure-4.html\">Procedure Laparotomy (procedure)</a></p><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 371493002}\">Status of venous (large vessel) invasion by tumor</span></p><p><b>subject</b>: <a href=\"Patient-PatientKimMusterperson.html\">Kim Musterperson  (no stated gender), DoB: 1956-03-14</a></p><p><b>effective</b>: 2021-06-22</p><p><b>value</b>: <span title=\"Codes:{https://www.uicc.org/resources/tnm V0}\">V0</span></p><p><b>method</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version 8}\">8. Auflage</span></p></div>"
+  },
+  "partOf" : [{
+    "reference" : "Procedure/PatientKimMusterperson-Procedure-4"
+  }],
+  "status" : "final",
+  "code" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "371493002"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/PatientKimMusterperson"
+  },
+  "effectiveDateTime" : "2021-06-22",
+  "valueCodeableConcept" : {
+    "coding" : [{
+      "system" : "https://www.uicc.org/resources/tnm",
+      "code" : "V0"
+    }]
+  },
+  "method" : {
+    "coding" : [{
+      "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version",
+      "code" : "8",
+      "display" : "8. Auflage"
+    }]
+  }
+}
