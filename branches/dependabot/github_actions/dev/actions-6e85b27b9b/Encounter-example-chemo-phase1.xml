@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Encounter xmlns="http://hl7.org/fhir">
+  <id value="example-chemo-phase1"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Encounter example-chemo-phase1</b></p><a name="example-chemo-phase1"> </a><a name="hcexample-chemo-phase1"> </a><p><b>status</b>: Finished</p><p><b>class</b>: <a href="http://terminology.hl7.org/7.3.0/CodeSystem-v3-ActCode.html#v3-ActCode-AMB">ActCode: AMB</a> (ambulatory)</p><p><b>subject</b>: <a href="Patient-example-modification.html">Martin Beispiel  Male, DoB: 1958-11-03</a></p></div><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Encounter example-chemo-phase1</b></p><a name="de-example-chemo-phase1"> </a><a name="de-hcexample-chemo-phase1"> </a><p><b>status</b>: Finished</p><p><b>class</b>: <a href="http://terminology.hl7.org/7.3.0/CodeSystem-v3-ActCode.html#v3-ActCode-AMB">ActCode: AMB</a> (ambulatory)</p><p><b>subject</b>: <a href="Patient-example-modification.html">Martin Beispiel  Male, DoB: 1958-11-03</a></p></div></div>
+  </text>
+  <status value="finished"/>
+  <class>
+    <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+    <code value="AMB"/>
+    <display value="ambulatory"/>
+  </class>
+  <subject>
+    <reference value="Patient/example-modification"/>
+  </subject>
+</Encounter>
