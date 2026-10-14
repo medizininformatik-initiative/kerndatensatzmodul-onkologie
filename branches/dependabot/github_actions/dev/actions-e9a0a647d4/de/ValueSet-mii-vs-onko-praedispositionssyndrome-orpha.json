@@ -1,0 +1,386 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "mii-vs-onko-praedispositionssyndrome-orpha",
+  "meta" : {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-license",
+      "valueCode" : "CC-BY-4.0"
+    },
+    {
+      "extension" : [{
+        "url" : "packageId",
+        "valueId" : "de.medizininformatikinitiative.kerndatensatz.onkologie"
+      },
+      {
+        "url" : "version",
+        "valueString" : "2027.0.0-ballot.1"
+      },
+      {
+        "url" : "uri",
+        "valueUri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/package-source"
+    }],
+    "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablevalueset",
+    "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset",
+    "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset",
+    "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-computablevalueset"]
+  },
+  "language" : "de",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-onko-praedispositionssyndrome-orpha</b></p><a name=\"de-mii-vs-onko-praedispositionssyndrome-orpha\"> </a><a name=\"de-hcmii-vs-onko-praedispositionssyndrome-orpha\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-shareablevalueset.html\">Shareable ValueSet</a>, <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-shareablevalueset.html\">CRMI Shareable ValueSet</a>, <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-publishablevalueset.html\">CRMI Publishable ValueSet</a>, <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-crmi-computablevalueset.html\">CRMI Computable ValueSet</a></p></div><ul><li>Include these codes as defined in <a href=\"https://tx.fhir.de/fhir\"><code>http://www.orpha.net</code></a><span style=\"opacity: 0.5\" title=\"Version is not explicitly stated. When building this specification, the most recent version 2026.0.0 has been used\"> version ⏿2026.0.0</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"https://tx.fhir.de/fhir/ValueSet/902e42e3-0c0a-5080-8309-3b2dfbbc8dcb#902e42e3-0c0a-5080-8309-3b2dfbbc8dcb-100\">100</a></td><td>Ataxia-telangiectasia</td><td>Eine seltene autosomal-rezessive zerebelläre Ataxie, die auf einem DNA-Reparaturdefekt beruht und durch fortschreitende neurologische Beeinträchtigungen mit Kleinhirnsyndrom, okulokutane Teleangiektasien, Defekte in der B- und T-Zell-vermittelten Immunität und eine erhöhte Anfälligkeit für maligne Neoplasien (vor allem lymphoide Neoplasien) gekennzeichnet ist. Die hohe Empfindlichkeit gegenüber ionisierender Strahlung schränkt die Behandlungsmöglichkeiten der Patienten ein.</td></tr><tr><td><a href=\"https://tx.fhir.de/fhir/ValueSet/902e42e3-0c0a-5080-8309-3b2dfbbc8dcb#902e42e3-0c0a-5080-8309-3b2dfbbc8dcb-116\">116</a></td><td>Beckwith-Wiedemann syndrome</td><td>Eine seltene Imprinting-Störung, die durch prä- und postnatales Größenwachstum, Makroglossie, Bauchwanddefekte und ein erhöhtes Tumorrisiko gekennzeichnet ist. Die klinische Ausprägung ist variabel und reicht von seitlichem Überwachsen bis hin zu einer ausgeprägten klinischen Präsentation.</td></tr><tr><td><a href=\"https://tx.fhir.de/fhir/ValueSet/902e42e3-0c0a-5080-8309-3b2dfbbc8dcb#902e42e3-0c0a-5080-8309-3b2dfbbc8dcb-125\">125</a></td><td>Bloom syndrome</td><td>Das Bloom-Syndrom (BSyn) ist eine seltene Erkrankung, die mit prä- und postnatalem Wachstumsmangel, einem telangiektatischen erythematösen Ausschlag im Gesicht und anderen sonnenexponierten Bereichen, Insulinresistenz und einer Prädisposition für früh einsetzenden und wiederkehrenden Krebs in verschiedenen Organsystemen einhergeht.</td></tr><tr><td><a href=\"https://tx.fhir.de/fhir/ValueSet/902e42e3-0c0a-5080-8309-3b2dfbbc8dcb#902e42e3-0c0a-5080-8309-3b2dfbbc8dcb-97297\">97297</a></td><td>Bohring-Opitz syndrome</td><td>Ein seltenes Syndrom mit multiplen kongenitalen Anomalien, das durch intrauterine Wachstumsretardierung (IUGR), postnatale Gedeihstörung, schwere Fütterungsprobleme, Mikrozephalie/Trigonozephalie, Gesichtsdysmorphien, eine charakteristische Ausrichtung der oberen Gliedmaßen (Innenrotation der Schultern, Ellbogenflexion und Ulnardeviation der Handgelenke und/oder der Zehengrundgelenke).und schwere Entwicklungsverzögerungen gekennzeichnet ist.</td></tr><tr><td><a href=\"https://tx.fhir.de/fhir/ValueSet/902e42e3-0c0a-5080-8309-3b2dfbbc8dcb#902e42e3-0c0a-5080-8309-3b2dfbbc8dcb-363972\">363972</a></td><td>Noonan syndrome-like disorder with juvenile myelomonocytic leukemia</td><td>Ein genetisch bedingtes polymalformatives Syndrom, das durch einen Noonan-ähnlichen Phänotyp gekennzeichnet ist und mit einem erhöhten Risiko für die Entwicklung einer juvenilen myelomonozytären Leukämie (JMML) einhergeht. Der Noonan-ähnliche (NS) Phänotyp umfasst Gesichtsdysmorphien (d. h. hohe Stirn, Hypertelorismus, schräg abwärts verlaufende Lidspalten, Ptosis, tief angesetzte Ohren, ausgeprägtes Philtrum und kurzer Hals mit oder ohne Pterygium colli), Entwicklungsverzögerung, Hypotonie und kleinen Kopfumfang. Es kann mit kongenitalen Herzfehlern oder Kardiomyopathie, ektodermalen Anomalien und Kleinwuchs einhergehen. Der NS-Phänotyp ist bei einem großen Teil der Betroffenen unauffällig oder sogar inapparent, kann aber gelegentlich auch schwerwiegend sein. Leukämie kann die einzige klinische Manifestation des Syndroms sein.</td></tr><tr><td><a href=\"https://tx.fhir.de/fhir/ValueSet/902e42e3-0c0a-5080-8309-3b2dfbbc8dcb#902e42e3-0c0a-5080-8309-3b2dfbbc8dcb-319465\">319465</a></td><td>Inherited acute myeloid leukemia</td><td>Die vererbte akute myeloische Leukämie (AML) ist eine seltene, bösartige hämatopologische Erkrankung, die durch klonale Proliferation myeloischer Blasten gekennzeichnet ist, die hauptsächlich das Knochenmark betrifft und mit angeborenen Störungen (z. B. Fanconi-Anämie, Dyskeratosis congenita, Bloom-Syndrom, Down-Syndrom, kongenitale Neutropenie, Neurofibromatose usw.) und genetischen Defekten einhergeht, die für AML prädisponieren. Die Patienten präsentieren sich mit Anzeichen und Symptomen im Zusammenhang mit einer ineffektiven Hämatopoese (Müdigkeit, Blutungen und Blutergüsse, rezidivierende Infektionen, Knochenschmerzen) und/oder einer Beteiligung extramedullärer Areale (Gingivitis, Splenomegalie usw.). Je nach zugrundeliegendem Gendefekt können zusätzliche Krebsrisiken und andere gesundheitliche Probleme vorhanden sein.</td></tr><tr><td><a href=\"https://tx.fhir.de/fhir/ValueSet/902e42e3-0c0a-5080-8309-3b2dfbbc8dcb#902e42e3-0c0a-5080-8309-3b2dfbbc8dcb-626\">626</a></td><td>Large/giant congenital melanocytic nevus</td><td>Ein seltenes Haut-Hamartom, das durch mindestens eine pigmentierte Hautläsion gekennzeichnet ist, die bei der Geburt vorhanden ist und im Erwachsenenalter einen projizierten Durchmesser von mehr als 20 cm (großer kongenitaler melanozytärer Nävus; LCMN) oder 40 cm (riesiger; GCMN) aufweist. Die primäre Läsion besteht aus mutierten Melanozyten und oft lokal desorganisierten epidermalen Anhängen oder der Dermis und weist ein erhöhtes Risiko einer malignen Transformation in ein Melanom oder, seltener, in andere Neoplasien der Haut oder des zentralen Nervensystems auf.</td></tr><tr><td><a href=\"https://tx.fhir.de/fhir/ValueSet/902e42e3-0c0a-5080-8309-3b2dfbbc8dcb#902e42e3-0c0a-5080-8309-3b2dfbbc8dcb-252202\">252202</a></td><td>Constitutional mismatch repair deficiency syndrome</td><td>Das konstitutionelle Mismatch-Reparatur-Defizienz-Syndrom ist ein seltenes, vererbtes krebsprädisponierendes Syndrom, das durch die Entwicklung eines breiten Spektrums von Malignomen im Kindesalter gekennzeichnet ist, darunter hauptsächlich Hirntumore, hämatologische und gastrointestinale Karzinome, obwohl gelegentlich auch embryonale und andere Tumore berichtet wurden. Nicht-neoplastische Merkmale, insbesondere Manifestationen, die an Neurofibromatose Typ 1 erinnern (z. B. Café-au-lait-Flecken, Sommersprossen, Neurofibrome), sowie prämaligne und nicht-maligne Läsionen (z. B. Adenome/Polyps) sind häufig vor der Entwicklung von Malignomen vorhanden.</td></tr><tr><td><a href=\"https://tx.fhir.de/fhir/ValueSet/902e42e3-0c0a-5080-8309-3b2dfbbc8dcb#902e42e3-0c0a-5080-8309-3b2dfbbc8dcb-3071\">3071</a></td><td>Costello syndrome</td><td>Ein seltenes Syndrom mit Intelligenzminderung, gekennzeichnet durch Gedeihstörung, Kleinwuchs, Gelenklaxität, weiche Haut und ausgeprägte Gesichtszüge. Eine kardiale und neurologische Beteiligung ist häufig und es besteht ein erhöhtes Lebenszeitrisiko für bestimmte Tumore. Das Costello-Syndrom gehört zu den RASopathien, einer Gruppe von Erkrankungen, die aus Keimbahn-Punktmutationen resultieren, die den RAS-Mitogen-aktivierten Proteinkinase-Signalweg betreffen.</td></tr><tr><td><a href=\"https://tx.fhir.de/fhir/ValueSet/902e42e3-0c0a-5080-8309-3b2dfbbc8dcb#902e42e3-0c0a-5080-8309-3b2dfbbc8dcb-1553\">1553</a></td><td>Curry-Jones syndrome</td><td>Das Curry-Jones-Syndrom ist eine Form der syndromalen Kraniosynostose, die durch einseitige koronale oder multiple Kraniosynostose gekennzeichnet ist, die mit einer vollständigen oder teilweisen Corpus callosum-Agenesie, präaxialer Polysyndaktie und Syndaktylie von Händen und/oder Füßen einhergeht. Weitere Kennzeichen sind Anomalien der Haut (charakteristische perlweiße Bereiche, die vernarbt und atrophisch werden, abnormaler Haarwuchs um die Augen und/oder Wangen herum und an den Gliedmaßen), der Augen (Iriscolobome, Mikrophthalmie,) und des Darms (angeborener Kurzdarm, Malrotation, Dysmotilität, chronische Verstopfung, Blutungen und Myofibrome). Entwicklungsverzögerungen und unterschiedliche Grade der Intelligenzminderung können auftreten. Auch multiple intraabdominale Hamartome der glatten Muskeln, Trichoblastome der Haut, okzipitale Meningokel und die Entwicklung eines desmoplastischen Medulloblastoms wurden beschrieben.</td></tr><tr><td><a href=\"https://tx.fhir.de/fhir/ValueSet/902e42e3-0c0a-5080-8309-3b2dfbbc8dcb#902e42e3-0c0a-5080-8309-3b2dfbbc8dcb-124\">124</a></td><td>Diamond-Blackfan anemia</td><td>Die Blackfan-Diamond-Anämie (DBA) ist eine kongenitale aplastische und oft makrozytäre Anämie mit verminderter Zahl der Erythroblasten.</td></tr><tr><td><a href=\"https://tx.fhir.de/fhir/ValueSet/902e42e3-0c0a-5080-8309-3b2dfbbc8dcb#902e42e3-0c0a-5080-8309-3b2dfbbc8dcb-284343\">284343</a></td><td>DICER1 tumor-predisposition syndrome</td><td/></tr><tr><td><a href=\"https://tx.fhir.de/fhir/ValueSet/902e42e3-0c0a-5080-8309-3b2dfbbc8dcb#902e42e3-0c0a-5080-8309-3b2dfbbc8dcb-870\">870</a></td><td>Down syndrome</td><td>Eine totale autosomale Trisomie, die durch das Vorhandensein einer dritten (partiellen oder vollständigen) Kopie des Chromosoms 21 verursacht wird und die durch eine variable Intelligenzminderung, Muskelhypotonie und Gelenklaxität gekennzeichnet ist, oft verbunden mit einem charakteristischen Gesichtsdysmorphismus und verschiedenen Anomalien wie kardialen, gastrointestinalen, neurosensorischen oder endokrinen Defekten.</td></tr><tr><td><a href=\"https://tx.fhir.de/fhir/ValueSet/902e42e3-0c0a-5080-8309-3b2dfbbc8dcb#902e42e3-0c0a-5080-8309-3b2dfbbc8dcb-733\">733</a></td><td>Familial adenomatous polyposis</td><td>Ein seltenes intestinales Polyposis-Syndrom, das durch die Entwicklung von Hunderten bis Tausenden von Adenomen im Dickdarm gekennzeichnet ist. Es handelt sich um eine Multisystemerkrankung mit wichtigen extrakolonischen Manifestationen.</td></tr><tr><td><a href=\"https://tx.fhir.de/fhir/ValueSet/902e42e3-0c0a-5080-8309-3b2dfbbc8dcb#902e42e3-0c0a-5080-8309-3b2dfbbc8dcb-84\">84</a></td><td>Fanconi anemia</td><td>Eine seltene genetische Multisystemstörung, die durch eine fortschreitende Panzytopenie mit Knochenmarkversagen, variable angeborene Fehlbildungen und eine Prädisposition für die Entwicklung hämatologischer oder solider Tumore gekennzeichnet ist.</td></tr><tr><td><a href=\"https://tx.fhir.de/fhir/ValueSet/902e42e3-0c0a-5080-8309-3b2dfbbc8dcb#902e42e3-0c0a-5080-8309-3b2dfbbc8dcb-404476\">404476</a></td><td>Global developmental delay-lung cysts-overgrowth-Wilms tumor syndrome</td><td/></tr><tr><td><a href=\"https://tx.fhir.de/fhir/ValueSet/902e42e3-0c0a-5080-8309-3b2dfbbc8dcb#902e42e3-0c0a-5080-8309-3b2dfbbc8dcb-377\">377</a></td><td>Gorlin syndrome</td><td>Eine seltene, autosomal-dominant vererbte Erbkrankheit mit Hamartose, die durch multiple, früh auftretende Basalzellkarzinome (BCC), multiple Kieferkeratozysten und Skelettanomalien gekennzeichnet ist.</td></tr><tr><td><a href=\"https://tx.fhir.de/fhir/ValueSet/902e42e3-0c0a-5080-8309-3b2dfbbc8dcb#902e42e3-0c0a-5080-8309-3b2dfbbc8dcb-29072\">29072</a></td><td>Hereditary pheochromocytoma-paraganglioma</td><td>Die Hereditären Paragangliome-Phäochromozytome (PGL/PCC) sind seltene neuroendokrine Tumoren, die als Paragangliome (in beliebigen Paraganglien zwischen Schädelbasis und Beckenboden) und als Phäochromozytome (Nebennierenmark-Paragangliome; s. dort) in Erscheinung treten.</td></tr><tr><td><a href=\"https://tx.fhir.de/fhir/ValueSet/902e42e3-0c0a-5080-8309-3b2dfbbc8dcb#902e42e3-0c0a-5080-8309-3b2dfbbc8dcb-357027\">357027</a></td><td>Hereditary retinoblastoma</td><td/></tr><tr><td><a href=\"https://tx.fhir.de/fhir/ValueSet/902e42e3-0c0a-5080-8309-3b2dfbbc8dcb#902e42e3-0c0a-5080-8309-3b2dfbbc8dcb-2929\">2929</a></td><td>Juvenile polyposis syndrome</td><td>Ein seltenes hereditäres Krebsprädisposition-Syndrom, das durch das Vorhandensein juveniler hamartomatöser Polypen im Magen-Darm-Trakt gekennzeichnet ist.</td></tr><tr><td><a href=\"https://tx.fhir.de/fhir/ValueSet/902e42e3-0c0a-5080-8309-3b2dfbbc8dcb#902e42e3-0c0a-5080-8309-3b2dfbbc8dcb-524\">524</a></td><td>Li-Fraumeni syndrome</td><td>Das Li-Fraumeni-Syndrom (LFS) ist ein seltenes Krebsprädispositionssyndrom, das durch das frühe Auftreten mehrerer primärer Krebsarten wie Brustkrebs, Weichteil- und Knochensarkome (s. dort), Hirntumore und Nebennierenrindenkarzinom (ACC) (s.dort), Leukämien und andere Krebsarten gekennzeichnet ist.</td></tr><tr><td><a href=\"https://tx.fhir.de/fhir/ValueSet/902e42e3-0c0a-5080-8309-3b2dfbbc8dcb#902e42e3-0c0a-5080-8309-3b2dfbbc8dcb-144\">144</a></td><td>Lynch syndrome</td><td>Eine seltene Form des hereditären nicht-polypösen Kolonkarzinoms (HNPCC), die durch eine Prädisposition für eine Vielzahl von Krebsarten gekennzeichnet ist, darunter Neoplasien des Verdauungstrakts, der Harnwege, der Gebärmutterschleimhaut, der Eierstöcke, des Gehirns und der Prostata sowie Talgdrüsentumore der Haut. Lynch-Syndrom (LS)-assoziierte Tumoren sind typischerweise durch das Vorhandensein von Mikrosatelliteninstabilität (MSI) und den Verlust der Expression von MMR-Proteinen im Tumorgewebe gekennzeichnet.</td></tr><tr><td><a href=\"https://tx.fhir.de/fhir/ValueSet/902e42e3-0c0a-5080-8309-3b2dfbbc8dcb#902e42e3-0c0a-5080-8309-3b2dfbbc8dcb-634461\">634461</a></td><td>Mosaic neurofibromatosis type 1</td><td>Eine seltene Mosaikform der Neurofibromatose Typ 1 (NF1), die durch NF1-typische Befunde wie multiple Café-au-lait-Flecken (CALMs), kutane Neurofibrome, Hautfalten-Sommersprossen/Lentigines, Iris-Lisch-Knötchen und Tumoren des Nervensystems gekennzeichnet ist. Die Mosaikform wird durch postzygotische pathogene Varianten des NF1-Gens verursacht. Bei der Mosaikform von NF1 ist die Allel-/Gewebeverteilung der pathogenen NF1-Variante eindeutig mosaikartig und/oder die Verteilung von CALMs und kutanen Neurofibromen ist segmental. Der Phänotyp kann milder sein als bei NF1.</td></tr><tr><td><a href=\"https://tx.fhir.de/fhir/ValueSet/902e42e3-0c0a-5080-8309-3b2dfbbc8dcb#902e42e3-0c0a-5080-8309-3b2dfbbc8dcb-1052\">1052</a></td><td>Mosaic variegated aneuploidy syndrome</td><td>Das Syndrom der Gemischten Mosaik-Aneuploidie (mosaic variegated aneuploidy; MVA) ist eine Chromosomenanomalie mit multiplen Mosaik-Aneuploidien, die zu unterschiedlichen Symptomen und zu Krebsdisposition führt.</td></tr><tr><td><a href=\"https://tx.fhir.de/fhir/ValueSet/902e42e3-0c0a-5080-8309-3b2dfbbc8dcb#902e42e3-0c0a-5080-8309-3b2dfbbc8dcb-2576\">2576</a></td><td>Mulibrey nanism</td><td>Ein seltener Entwicklungsdefekt während der Embryogenese, der durch Wachstumsverzögerung und Multiorganmanifestationen gekennzeichnet ist. Das Akronym Mulibrey bezeichnet Organe, die bei diesem Syndrom betroffen sind: Muskel (muscle), Leber (liver), Hirn (brain) und Auge (eye).</td></tr><tr><td><a href=\"https://tx.fhir.de/fhir/ValueSet/902e42e3-0c0a-5080-8309-3b2dfbbc8dcb#902e42e3-0c0a-5080-8309-3b2dfbbc8dcb-652\">652</a></td><td>Multiple endocrine neoplasia type 1</td><td>Ein seltenes erbliches Tumor-Syndrom, das durch die Entwicklung multipler neuroendokriner Tumoren der Nebenschilddrüsen, des Magen-Darm-Trakts und des Hypophysenvorderlappens sowie seltener der Nebennierenrinde, der Thymusdrüse und der Bronchien gekennzeichnet ist, wobei bei einigen Patienten auch andere nicht-endokrine Tumoren auftreten.</td></tr><tr><td><a href=\"https://tx.fhir.de/fhir/ValueSet/902e42e3-0c0a-5080-8309-3b2dfbbc8dcb#902e42e3-0c0a-5080-8309-3b2dfbbc8dcb-247698\">247698</a></td><td>Multiple endocrine neoplasia type 2A</td><td>Eine Form der multiplen endokrinen Neoplasie Typ 2 (MEN2), die durch ein medulläres Schilddrüsenkarzinom in Kombination mit einem Phäochromozytom (eine oder beide Nebennieren können betroffen sein) und/oder einem primären Hyperparathyreoidismus (verursacht durch ein Adenom der Nebenschilddrüse) gekennzeichnet ist. Die Erkrankung beginnt in der Regel später als bei MEN2B, vor dem 35. Lebensjahr. Das häufigste systemische Symptom ist Durchfall. Die Patienten können einen Morbus Hirschsprung entwickeln, seltener eine Lichen amyloidosus cutanus oder eine übermäßige Produktion von adrenocorticotropem Hormon.</td></tr><tr><td><a href=\"https://tx.fhir.de/fhir/ValueSet/902e42e3-0c0a-5080-8309-3b2dfbbc8dcb#902e42e3-0c0a-5080-8309-3b2dfbbc8dcb-247709\">247709</a></td><td>Multiple endocrine neoplasia type 2B</td><td>Eine seltene Unterform der multiplen endokrinen Neoplasien vom Typ 2 (MEN2), die durch ein aggressives medulläres Schilddrüsenkarzinom in Kombination mit anderen endokrinen Tumoren, insbesondere dem Phäochromozytom, gekennzeichnet ist (eine oder beide Nebennieren können betroffen sein). Die Erkrankung beginnt meist im Säuglings- oder Kindesalter und die Patienten zeigen häufig typische faziale Merkmale (Schleimhautneurinome an Lippen und Zunge und höckerige Lippen), ophthalmologische Anomalien (Alakrima im Säuglingsalter, verdickte und hängende Augenlider, leichte Ptosis und hervortretende Hornhautnerven), Skelettanomalien (marfanoider Habitus, schmales, langes Gesicht, Pes cavus, Pectus excavatum, hochgewölbter Gaumen, Skoliose, hyperextensive Gelenke und verrutschte Epiphysen der Oberschenkelknochen) und generalisierte Ganglioneuromatose des gesamten Aerodigestivtraktes. Chronische Obstipation, Blähungen, Diarrhoe oder ein Megakolon bei der Geburt sind häufig die ersten Anzeichen.</td></tr><tr><td><a href=\"https://tx.fhir.de/fhir/ValueSet/902e42e3-0c0a-5080-8309-3b2dfbbc8dcb#902e42e3-0c0a-5080-8309-3b2dfbbc8dcb-636\">636</a></td><td>Neurofibromatosis type 1</td><td>Neurofibromatose Typ 1 (NF1) ist eine klinisch heterogene, neurokutane genetische Erkrankung, die durch Café-au-lait-Flecken, Irisknötchen, axilläre und inguinale Sommersprossen und multiple Neurofibrome gekennzeichnet ist.</td></tr><tr><td><a href=\"https://tx.fhir.de/fhir/ValueSet/902e42e3-0c0a-5080-8309-3b2dfbbc8dcb#902e42e3-0c0a-5080-8309-3b2dfbbc8dcb-647\">647</a></td><td>Nijmegen breakage syndrome</td><td>Ein seltenes Chromosomeninstabilitätssyndrom, das bei der Geburt mit Mikrozephalie, Gesichtsdysmorphien, die mit zunehmendem Alter deutlicher werden, Wachstumsverzögerung, wiederkehrenden sinopulmonalen Infektionen und einer extrem hohen Häufigkeit von Malignomen einhergeht.</td></tr><tr><td><a href=\"https://tx.fhir.de/fhir/ValueSet/902e42e3-0c0a-5080-8309-3b2dfbbc8dcb#902e42e3-0c0a-5080-8309-3b2dfbbc8dcb-648\">648</a></td><td>Noonan syndrome</td><td>Eine seltene, hochvariable, multisystemische Erkrankung, die gekennzeichnet ist durch Kleinwuchs, typische faziale Dysmorphien, angeborene Herzfehler, Kardiomyopathie und ein erhöhtes Risiko, im Kindesalter Tumore zu entwickeln.</td></tr><tr><td><a href=\"https://tx.fhir.de/fhir/ValueSet/902e42e3-0c0a-5080-8309-3b2dfbbc8dcb#902e42e3-0c0a-5080-8309-3b2dfbbc8dcb-296\">296</a></td><td>Ollier disease</td><td>Eine seltene primäre Knochendysplasie, die durch multiple Enchondrome (gutartige knorpelbildende Tumore) gekennzeichnet ist. Die Läsionen sind im Allgemeinen unilateral oder asymmetrisch verteilt. Die häufigste betroffene Stelle ist das appendikuläre Skelett.</td></tr><tr><td><a href=\"https://tx.fhir.de/fhir/ValueSet/902e42e3-0c0a-5080-8309-3b2dfbbc8dcb#902e42e3-0c0a-5080-8309-3b2dfbbc8dcb-163634\">163634</a></td><td>Maffucci syndrome</td><td>Eine seltenes Syndrom, das durch multiple Enchondromatose in Verbindung mit multiplen (dunklen, unregelmäßig geformten) Hämangiomen gekennzeichnet ist. Seltener wird auch von Lymphangiomen berichtet.</td></tr><tr><td><a href=\"https://tx.fhir.de/fhir/ValueSet/902e42e3-0c0a-5080-8309-3b2dfbbc8dcb#902e42e3-0c0a-5080-8309-3b2dfbbc8dcb-2780\">2780</a></td><td>Osteopathia striata-cranial sclerosis syndrome</td><td>Die Osteopathia striata mit kranialer Sklerose (OS-CS) ist eine Knochendysplasie und gekennzeichnet durch longitudinale Streifung der Metaphysen der langen Knochen, Sklerose der Schädel-und Gesichtsknochen, Makrozephalie, Gaumenspalte und Schwerhörigkeit.</td></tr><tr><td><a href=\"https://tx.fhir.de/fhir/ValueSet/902e42e3-0c0a-5080-8309-3b2dfbbc8dcb#902e42e3-0c0a-5080-8309-3b2dfbbc8dcb-324299\">324299</a></td><td>Multiple paragangliomas associated with polycythemia</td><td>Eine seltene, endokrine Erkrankung, die durch eine früh einsetzende Polyzythämie und später auftretende multiple Paragangliome gekennzeichnet ist. Zu den klinischen Symptomen gehören Bluthochdruck, Kopfschmerzen, Müdigkeit, Übelkeit, Angstzustände und eine hohe Konzentration roter Blutkörperchen, infolgedessen ein erhöhtes Risiko für Schlaganfälle und pulmonale Thromboembolien besteht.</td></tr><tr><td><a href=\"https://tx.fhir.de/fhir/ValueSet/902e42e3-0c0a-5080-8309-3b2dfbbc8dcb#902e42e3-0c0a-5080-8309-3b2dfbbc8dcb-2849\">2849</a></td><td>Perlman syndrome</td><td>Ein seltenes Grosswuchssyndrom, das durch Polyhydramnion, prä- und postnatale Makrosomie, Muskelhypotonie, Nierenanomalien, Organomegalie, abdominale Distension, Kryptorchismus, typische Gesichtsdysmorphien, neurologische Entwicklungsverzögerung und hohe neonatale Mortalität gekennzeichnet ist. Personen, die das Säuglingsalter überleben, weisen ein hohes Risiko auf, einen Wilms-Tumor zu entwickeln.</td></tr><tr><td><a href=\"https://tx.fhir.de/fhir/ValueSet/902e42e3-0c0a-5080-8309-3b2dfbbc8dcb#902e42e3-0c0a-5080-8309-3b2dfbbc8dcb-2869\">2869</a></td><td>Peutz-Jeghers syndrome</td><td>Ein genetisch bedingtes intestinales Polyposis-Syndrom, das durch die Entwicklung charakteristischer hamartomatöser Polypen im gesamten Magen-Darm-Trakt und durch mukokutane Pigmentierung gekennzeichnet ist. Diese Erkrankung birgt ein deutlich erhöhtes Risiko für gastrointestinale und extraintestinale Malignome.</td></tr><tr><td><a href=\"https://tx.fhir.de/fhir/ValueSet/902e42e3-0c0a-5080-8309-3b2dfbbc8dcb#902e42e3-0c0a-5080-8309-3b2dfbbc8dcb-661\">661</a></td><td>Congenital central hypoventilation syndrome</td><td>Das Kongenitale zentrale Hypoventilationssyndrom (CCHS) ist eine seltene Krankheit mit schwerer Beeinträchtigung der zentralen autonomen Atmungskontrolle. Ursache ist eine Funktionsstörung des autonomen Nervensystems.</td></tr><tr><td><a href=\"https://tx.fhir.de/fhir/ValueSet/902e42e3-0c0a-5080-8309-3b2dfbbc8dcb#902e42e3-0c0a-5080-8309-3b2dfbbc8dcb-530313\">530313</a></td><td>PIK3CA-related overgrowth syndrome</td><td/></tr><tr><td><a href=\"https://tx.fhir.de/fhir/ValueSet/902e42e3-0c0a-5080-8309-3b2dfbbc8dcb#902e42e3-0c0a-5080-8309-3b2dfbbc8dcb-306498\">306498</a></td><td>PTEN hamartoma tumor syndrome</td><td>Eine Gruppe seltener Hauttumor- oder Hamartom-Erkrankungen, die durch eine PTEN-Keimbahnmutation und klinische Manifestationen von Hamartomen, Überwuchs und ein erhöhtes Neoplasierisiko gekennzeichnet sind, insbesondere Brustkarzinome, epitheliale Schilddrüsenkarzinome, Endometriumkarzinome, Nierenzellkarzinome und kolorektale Karzinome. Zu den nicht-malignen Manifestationen gehören Makrozephalie, gutartige Schilddrüsenerkrankungen (insbesondere Hashimoto-Thyreoiditis), mukokutane Hamartome, Kolonpolypen und vaskuläre Fehlbildungen. Unterformen des PTEN-Hamartom-Tumor-Syndroms (PHTS) sind das Cowden-Syndrom, das Bannayan-Riley-Ruvalcaba-Syndrom, das Proteus-ähnliche Syndrom, die Lhermitte-Duclos-Krankheit und das SOLAMEN-Syndrom.</td></tr><tr><td><a href=\"https://tx.fhir.de/fhir/ValueSet/902e42e3-0c0a-5080-8309-3b2dfbbc8dcb#902e42e3-0c0a-5080-8309-3b2dfbbc8dcb-231108\">231108</a></td><td>Rhabdoid tumor predisposition syndrome</td><td/></tr><tr><td><a href=\"https://tx.fhir.de/fhir/ValueSet/902e42e3-0c0a-5080-8309-3b2dfbbc8dcb#902e42e3-0c0a-5080-8309-3b2dfbbc8dcb-2909\">2909</a></td><td>Rothmund-Thomson syndrome</td><td>Ein seltenes Syndrom, das durch Gesichtsausschlag (Poikiloderma) in Verbindung mit Kleinwuchs aufgrund von prä- und postnataler Wachstumsverzögerung, spärlichem Kopfhaar, spärlichen oder fehlenden Wimpern und/oder Augenbrauen, jugendlichem Katarakt, Skelettanomalien, Radialstrahlendefekten, vorzeitigem Altern und Krebsanfälligkeit gekennzeichnet ist.</td></tr><tr><td><a href=\"https://tx.fhir.de/fhir/ValueSet/902e42e3-0c0a-5080-8309-3b2dfbbc8dcb#902e42e3-0c0a-5080-8309-3b2dfbbc8dcb-71290\">71290</a></td><td>Familial platelet disorder with associated myeloid malignancy</td><td>Eine seltene, genetisch bedingte, konstitutionelle Blutplättchen-Störung, die durch eine leichte bis mittelschwere Thrombozytopenie, eine abnorme Thrombozytenfunktion und eine Neigung zur Entwicklung hämatologischer Malignome, hauptsächlich myeloischen Ursprungs, gekennzeichnet ist.</td></tr><tr><td><a href=\"https://tx.fhir.de/fhir/ValueSet/902e42e3-0c0a-5080-8309-3b2dfbbc8dcb#902e42e3-0c0a-5080-8309-3b2dfbbc8dcb-494433\">494433</a></td><td>MIRAGE syndrome</td><td>Eine seltene genetische Störung mit prä- und postnataler Wachstums- und Entwicklungsverzögerung, Nebennierenhypoplasie, Genitalanomalien (z. B. Mikrophallus, Hypospadie oder Kryptorchismus), Thrombozytopenie und/oder Anämie, wiederkehrenden schweren invasiven Infektionen und Enteropathie mit chronischer Diarrhoe. Weitere Merkmale umfassen myelodysplastische Syndrome sowie dysmorphe Merkmale (z. B. schräg nach unten verlaufende Lidspalten, tief angesetzte und nach hinten gedrehte Ohren, antevertierte Nasenlöcher, Kamptodaktylie und Arachnodaktylie).</td></tr><tr><td><a href=\"https://tx.fhir.de/fhir/ValueSet/902e42e3-0c0a-5080-8309-3b2dfbbc8dcb#902e42e3-0c0a-5080-8309-3b2dfbbc8dcb-2585\">2585</a></td><td>Ataxia-pancytopenia syndrome</td><td/></tr><tr><td><a href=\"https://tx.fhir.de/fhir/ValueSet/902e42e3-0c0a-5080-8309-3b2dfbbc8dcb#902e42e3-0c0a-5080-8309-3b2dfbbc8dcb-42738\">42738</a></td><td>Severe congenital neutropenia</td><td>Ein seltener primärer Immundefekt, der nicht mit einem Lymphozytendefizit einhergeht und durch eine gestörte Neutrophilenreifung und/oder -funktion gekennzeichnet ist, die mit schweren Infektionen, verschiedenen Begleiterkrankungen und/oder einem erhöhten Risiko einer leukämischen Transformation einhergeht.</td></tr><tr><td><a href=\"https://tx.fhir.de/fhir/ValueSet/902e42e3-0c0a-5080-8309-3b2dfbbc8dcb#902e42e3-0c0a-5080-8309-3b2dfbbc8dcb-373\">373</a></td><td>Simpson-Golabi-Behmel syndrome</td><td>Ein seltenes X-chromosomales Syndrom mit multiplen kongenitalen Anomalien, gekennzeichnet durch prä- und postnatales Grosswuchssyndrom, ausgeprägte kraniofaziale Merkmale, variable kongenitale Fehlbildungen, Organomegalie und ein erhöhtes Tumorrisiko.</td></tr><tr><td><a href=\"https://tx.fhir.de/fhir/ValueSet/902e42e3-0c0a-5080-8309-3b2dfbbc8dcb#902e42e3-0c0a-5080-8309-3b2dfbbc8dcb-821\">821</a></td><td>Sotos syndrome</td><td>Ein seltenes genetisches Großwuchs-Syndrom, das durch charakteristische Gesichtsform, Überwuchs mit Makrozephalie und variable intellektuelle Beeinträchtigung gekennzeichnet ist.</td></tr><tr><td><a href=\"https://tx.fhir.de/fhir/ValueSet/902e42e3-0c0a-5080-8309-3b2dfbbc8dcb#902e42e3-0c0a-5080-8309-3b2dfbbc8dcb-1775\">1775</a></td><td>Dyskeratosis congenita</td><td>Ein seltenes Syndrom aus der Gruppe der ektodermalen Dysplasien, das sich häufig mit der klassischen Trias aus Nageldysplasie, Hautpigmentveränderungen und oraler Leukoplakie präsentiert, verbunden mit einem hohen Risiko für Knochenmarkversagen (BMF) und Krebs.</td></tr><tr><td><a href=\"https://tx.fhir.de/fhir/ValueSet/902e42e3-0c0a-5080-8309-3b2dfbbc8dcb#902e42e3-0c0a-5080-8309-3b2dfbbc8dcb-3380\">3380</a></td><td>Trisomy 18 syndrome</td><td>Eine seltene Chromosomenanomalie, die durch das Vorhandensein eines zusätzlichen Chromosoms (18) gekennzeichnet ist und sich durch eine schwere Intelligenzminderung, Wachstumsverzögerung und extrem variable multiple kongenitale Anomalien auszeichnet, einschließlich kleinerer Fehlbildungen (kranio-faziale Dysmorphie, kurzes Brustbein, überlappende Finger) und größerer Fehlbildungen, insbesondere kardialer und zerebraler Art. Eine neurologische Beteiligung kann zu Krampfanfällen und Hypotonie führen.</td></tr><tr><td><a href=\"https://tx.fhir.de/fhir/ValueSet/902e42e3-0c0a-5080-8309-3b2dfbbc8dcb#902e42e3-0c0a-5080-8309-3b2dfbbc8dcb-805\">805</a></td><td>Tuberous sclerosis complex</td><td>Eine seltene neurokutane Erkrankung, die durch Multisystem-Hamartome gekennzeichnet ist, die am häufigsten die Haut, das Gehirn, die Nieren, die Lunge, das Auge und das Herz betreffen und mit neuropsychiatrischen Störungen einhergehen.</td></tr><tr><td><a href=\"https://tx.fhir.de/fhir/ValueSet/902e42e3-0c0a-5080-8309-3b2dfbbc8dcb#902e42e3-0c0a-5080-8309-3b2dfbbc8dcb-892\">892</a></td><td>Von Hippel-Lindau disease</td><td>Ein familiäres Krebsprädispositionssyndrom, das mit einer Vielzahl verschiedener maligner und benigner Neoplasmen einhergeht, am häufigsten retinale, zerebelläre und spinale, Hämangioblastome, Nierenzellkarzinome (RCC) und Phäochromozytome.</td></tr><tr><td><a href=\"https://tx.fhir.de/fhir/ValueSet/902e42e3-0c0a-5080-8309-3b2dfbbc8dcb#902e42e3-0c0a-5080-8309-3b2dfbbc8dcb-893\">893</a></td><td>WAGR syndrome</td><td>Eine seltene genetische Störung, die durch die Kombination von vollständiger oder partieller kongenitaler Aniridie (und damit verbundenen Augenanomalien), urogenitalen Anomalien (von sexueller Ambiguität bis hin zu ektopischen Hoden), unterschiedlich starker Intelligenzminderung und einem erhöhten Risiko für die Entwicklung von Wilms-Tumoren gekennzeichnet ist. Eine Minderheit der Patienten entwickelt Nierenversagen. Weitere mögliche Befunde sind Adipositas und doppelte Großzehen.</td></tr><tr><td><a href=\"https://tx.fhir.de/fhir/ValueSet/902e42e3-0c0a-5080-8309-3b2dfbbc8dcb#902e42e3-0c0a-5080-8309-3b2dfbbc8dcb-3447\">3447</a></td><td>Weaver syndrome</td><td>Das Weaver-Syndrom (WVS) ist eine seltene, multisystemische Erkrankung, die sich durch eine hohe Statur, ein charakteristischen Erscheinungsbild im Gesicht (Hypertelorismus, Retrognathie) und eine variable geistige Behinderung auszeichnet. Weitere Symptome sind Kamptodaktylie, rauhe und tiefe Stimme, Muskelhypertonie, Nabel- und Leistenhernie und überschüssige, schlaffe Haut.</td></tr><tr><td><a href=\"https://tx.fhir.de/fhir/ValueSet/902e42e3-0c0a-5080-8309-3b2dfbbc8dcb#902e42e3-0c0a-5080-8309-3b2dfbbc8dcb-910\">910</a></td><td>Xeroderma pigmentosum</td><td>Das Xeroderma pigmentosum (XP) ist eine seltene Genodermatose mit extrem erhöhtem Risiko für das Auftreten Ultraviolett (UV)- induzierter Veränderungen der Haut und der Augen und multipler Karzinome der Haut. Das XP wird in 8 Komplementationsgruppen mit unterschiedlichen beteiligten Genen unterteilt: XPA bis XPG und XP-Varianten (XPV).</td></tr></table></li></ul></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+    "valueCode" : "shareable"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+    "valueCode" : "publishable"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+    "valueCode" : "computable"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes",
+        "code" : "package",
+        "display" : "Package"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
+    "valueDate" : "2026-09-15"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-topic",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+        "code" : "C3262"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-author",
+    "valueContactDetail" : {
+      "telecom" : [{
+        "system" : "email",
+        "value" : "thomas.debertshaeuser@charite.de"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-editor",
+    "valueContactDetail" : {
+      "name" : "Taskforce Core Data Set"
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
+    "valueContactDetail" : {
+      "name" : "Interoperability Working Group",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-reviewer",
+    "valueContactDetail" : {
+      "name" : "National Steering Committee",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
+    "valueContactDetail" : {
+      "name" : "Interoperability Working Group",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-endorser",
+    "valueContactDetail" : {
+      "name" : "National Steering Committee",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
+    "valueCoding" : {
+      "system" : "http://hl7.org/fhir/version-algorithm",
+      "code" : "semver",
+      "display" : "SemVer"
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+    "valuePeriod" : {
+      "start" : "2027"
+    }
+  }],
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-praedispositionssyndrome-orpha",
+  "version" : "2027.0.0-ballot.1",
+  "name" : "MII_VS_Onko_Praedispositionssyndrome_ORPHA",
+  "title" : "MII VS Onkologie Krebsprädispositionssyndrome ORPHA",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-10-14T10:24:16+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "Krebsprädispositionssyndrome der §65c-Liste (Manual Plus, Krebsprädispositionssyndrom und -gen) als Orphanet-Codes. Begleitartefakt ohne Profil-Binding (Andockung an die genetischen Profile folgt mit dem Konzept für genetische Marker); 15 genspezifische Prädispositionen der Quell-Liste haben kein Orphanet-Konzept und sind über das Gen-ValueSet mii-vs-onko-praedispositionsgene-hgnc adressierbar. Projektseitige Code-Auflösung ohne Gewähr; fachliche Prüfung vor Produktivnutzung erforderlich.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://www.orpha.net",
+      "concept" : [{
+        "code" : "100",
+        "display" : "Ataxia-telangiectasia"
+      },
+      {
+        "code" : "116",
+        "display" : "Beckwith-Wiedemann syndrome"
+      },
+      {
+        "code" : "125",
+        "display" : "Bloom syndrome"
+      },
+      {
+        "code" : "97297",
+        "display" : "Bohring-Opitz syndrome"
+      },
+      {
+        "code" : "363972",
+        "display" : "Noonan syndrome-like disorder with juvenile myelomonocytic leukemia"
+      },
+      {
+        "code" : "319465",
+        "display" : "Inherited acute myeloid leukemia"
+      },
+      {
+        "code" : "626",
+        "display" : "Large/giant congenital melanocytic nevus"
+      },
+      {
+        "code" : "252202",
+        "display" : "Constitutional mismatch repair deficiency syndrome"
+      },
+      {
+        "code" : "3071",
+        "display" : "Costello syndrome"
+      },
+      {
+        "code" : "1553",
+        "display" : "Curry-Jones syndrome"
+      },
+      {
+        "code" : "124",
+        "display" : "Diamond-Blackfan anemia"
+      },
+      {
+        "code" : "284343",
+        "display" : "DICER1 tumor-predisposition syndrome"
+      },
+      {
+        "code" : "870",
+        "display" : "Down syndrome"
+      },
+      {
+        "code" : "733",
+        "display" : "Familial adenomatous polyposis"
+      },
+      {
+        "code" : "84",
+        "display" : "Fanconi anemia"
+      },
+      {
+        "code" : "404476",
+        "display" : "Global developmental delay-lung cysts-overgrowth-Wilms tumor syndrome"
+      },
+      {
+        "code" : "377",
+        "display" : "Gorlin syndrome"
+      },
+      {
+        "code" : "29072",
+        "display" : "Hereditary pheochromocytoma-paraganglioma"
+      },
+      {
+        "code" : "357027",
+        "display" : "Hereditary retinoblastoma"
+      },
+      {
+        "code" : "2929",
+        "display" : "Juvenile polyposis syndrome"
+      },
+      {
+        "code" : "524",
+        "display" : "Li-Fraumeni syndrome"
+      },
+      {
+        "code" : "144",
+        "display" : "Lynch syndrome"
+      },
+      {
+        "code" : "634461",
+        "display" : "Mosaic neurofibromatosis type 1"
+      },
+      {
+        "code" : "1052",
+        "display" : "Mosaic variegated aneuploidy syndrome"
+      },
+      {
+        "code" : "2576",
+        "display" : "Mulibrey nanism"
+      },
+      {
+        "code" : "652",
+        "display" : "Multiple endocrine neoplasia type 1"
+      },
+      {
+        "code" : "247698",
+        "display" : "Multiple endocrine neoplasia type 2A"
+      },
+      {
+        "code" : "247709",
+        "display" : "Multiple endocrine neoplasia type 2B"
+      },
+      {
+        "code" : "636",
+        "display" : "Neurofibromatosis type 1"
+      },
+      {
+        "code" : "647",
+        "display" : "Nijmegen breakage syndrome"
+      },
+      {
+        "code" : "648",
+        "display" : "Noonan syndrome"
+      },
+      {
+        "code" : "296",
+        "display" : "Ollier disease"
+      },
+      {
+        "code" : "163634",
+        "display" : "Maffucci syndrome"
+      },
+      {
+        "code" : "2780",
+        "display" : "Osteopathia striata-cranial sclerosis syndrome"
+      },
+      {
+        "code" : "324299",
+        "display" : "Multiple paragangliomas associated with polycythemia"
+      },
+      {
+        "code" : "2849",
+        "display" : "Perlman syndrome"
+      },
+      {
+        "code" : "2869",
+        "display" : "Peutz-Jeghers syndrome"
+      },
+      {
+        "code" : "661",
+        "display" : "Congenital central hypoventilation syndrome"
+      },
+      {
+        "code" : "530313",
+        "display" : "PIK3CA-related overgrowth syndrome"
+      },
+      {
+        "code" : "306498",
+        "display" : "PTEN hamartoma tumor syndrome"
+      },
+      {
+        "code" : "231108",
+        "display" : "Rhabdoid tumor predisposition syndrome"
+      },
+      {
+        "code" : "2909",
+        "display" : "Rothmund-Thomson syndrome"
+      },
+      {
+        "code" : "71290",
+        "display" : "Familial platelet disorder with associated myeloid malignancy"
+      },
+      {
+        "code" : "494433",
+        "display" : "MIRAGE syndrome"
+      },
+      {
+        "code" : "2585",
+        "display" : "Ataxia-pancytopenia syndrome"
+      },
+      {
+        "code" : "42738",
+        "display" : "Severe congenital neutropenia"
+      },
+      {
+        "code" : "373",
+        "display" : "Simpson-Golabi-Behmel syndrome"
+      },
+      {
+        "code" : "821",
+        "display" : "Sotos syndrome"
+      },
+      {
+        "code" : "1775",
+        "display" : "Dyskeratosis congenita"
+      },
+      {
+        "code" : "3380",
+        "display" : "Trisomy 18 syndrome"
+      },
+      {
+        "code" : "805",
+        "display" : "Tuberous sclerosis complex"
+      },
+      {
+        "code" : "892",
+        "display" : "Von Hippel-Lindau disease"
+      },
+      {
+        "code" : "893",
+        "display" : "WAGR syndrome"
+      },
+      {
+        "code" : "3447",
+        "display" : "Weaver syndrome"
+      },
+      {
+        "code" : "910",
+        "display" : "Xeroderma pigmentosum"
+      }]
+    }]
+  }
+}

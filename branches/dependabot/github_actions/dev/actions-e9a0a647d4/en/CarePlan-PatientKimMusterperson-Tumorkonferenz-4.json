@@ -1,0 +1,50 @@
+{
+  "resourceType" : "CarePlan",
+  "id" : "PatientKimMusterperson-Tumorkonferenz-4",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tumorkonferenz"]
+  },
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CarePlan PatientKimMusterperson-Tumorkonferenz-4</b></p><a name=\"PatientKimMusterperson-Tumorkonferenz-4\"> </a><a name=\"hcPatientKimMusterperson-Tumorkonferenz-4\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-onko-tumorkonferenz.html\">MII PR Onkologie Tumorkonferenz</a></p></div><p><b>replaces</b>: <a href=\"CarePlan-PatientKimMusterperson-Tumorkonferenz-3.html\">CarePlan: status = completed; intent = plan; category = postoperative Tumorkonferenz (Planung der postoperativen Therapie, z. B. zur Frage adjuvante Therapie); created = 2021-10-25</a></p><p><b>status</b>: Active</p><p><b>intent</b>: Plan</p><p><b>category</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ postop}\">postoperative Tumorkonferenz (Planung der postoperativen Therapie, z. B. zur Frage adjuvante Therapie)</span></p><p><b>description</b>: Erhaltungstherapie mit Niraparib bei BRCAwt</p><p><b>subject</b>: <a href=\"Patient-PatientKimMusterperson.html\">Kim Musterperson  (no stated gender), DoB: 1956-03-14</a></p><p><b>created</b>: 2022-01-20</p><p><b>addresses</b>: <a href=\"Condition-PatientKimMusterperson-PrimaryDiagnosis-2.html\">Condition Bösartige Neubildung: Peritoneum, nicht näher bezeichnet</a></p><blockquote><p><b>activity</b></p><h3>Details</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Code</b></td><td><b>Status</b></td><td><b>StatusReason</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ ZS}\">zielgerichtete Substanzen</span></td><td>In Progress</td><td><span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieabweichung U}\">unbekannt</span></td></tr></table></blockquote></div>"
+  },
+  "replaces" : [{
+    "reference" : "CarePlan/PatientKimMusterperson-Tumorkonferenz-3"
+  }],
+  "status" : "active",
+  "intent" : "plan",
+  "category" : [{
+    "coding" : [{
+      "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieplanung-typ",
+      "code" : "postop",
+      "display" : "postoperative Tumorkonferenz (Planung der postoperativen Therapie, z. B. zur Frage adjuvante Therapie)"
+    }]
+  }],
+  "description" : "Erhaltungstherapie mit Niraparib bei BRCAwt",
+  "subject" : {
+    "reference" : "Patient/PatientKimMusterperson"
+  },
+  "created" : "2022-01-20",
+  "addresses" : [{
+    "reference" : "Condition/PatientKimMusterperson-PrimaryDiagnosis-2"
+  }],
+  "activity" : [{
+    "detail" : {
+      "code" : {
+        "coding" : [{
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ",
+          "code" : "ZS"
+        }]
+      },
+      "status" : "in-progress",
+      "statusReason" : {
+        "coding" : [{
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapieabweichung",
+          "code" : "U",
+          "display" : "unbekannt"
+        }]
+      }
+    }
+  }]
+}
