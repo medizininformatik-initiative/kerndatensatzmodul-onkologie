@@ -1,4 +1,4 @@
-# mii-exa-onko-grading-1 - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc3
+# mii-exa-onko-grading-1 - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Onkologie Grading](StructureDefinition-mii-pr-onko-grading.md) version: 2027.0.0-ballot.rc3
+Profile: [MII PR Onkologie Grading](StructureDefinition-mii-pr-onko-grading.md) version: 2027.0.0-ballot.1
 
 **status**: Final
 
@@ -37,7 +37,7 @@ Profile: [MII PR Onkologie Grading](StructureDefinition-mii-pr-onko-grading.md) 
   "resourceType" : "Observation",
   "id" : "mii-exa-onko-grading-1",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-grading|2027.0.0-ballot.rc3"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-grading|2027.0.0-ballot.1"]
   },
   "status" : "final",
   "category" : [{

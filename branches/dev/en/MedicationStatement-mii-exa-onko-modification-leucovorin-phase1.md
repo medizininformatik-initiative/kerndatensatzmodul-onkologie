@@ -1,4 +1,4 @@
-# Folinsäure Phase 1 (Zyklen 1-6) - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc3
+# Folinsäure Phase 1 (Zyklen 1-6) - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)

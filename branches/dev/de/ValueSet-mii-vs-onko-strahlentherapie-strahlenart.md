@@ -1,4 +1,4 @@
-# MII VS Onkologie Strahlentherapie Strahlenart - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc3
+# MII VS Onkologie Strahlentherapie Strahlenart - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-strahlenart | *Version*:2027.0.0-ballot.rc3 |
-| Active Stand: 2026-09-14 | *Maschinenlesbarer Name*:MII_VS_Onko_Strahlentherapie_Strahlenart |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-strahlenart | *Version*:2027.0.0-ballot.1 |
+| Active Stand: 2026-10-14 | *Maschinenlesbarer Name*:MII_VS_Onko_Strahlentherapie_Strahlenart |
 
  
 oBDS-spezifisches ValueSet für Klassifikation von Strahlenart bei Strahlentherapie 
@@ -49,7 +49,7 @@ oBDS-spezifisches ValueSet für Klassifikation von Strahlenart bei Strahlenthera
       },
       {
         "url" : "version",
-        "valueString" : "2027.0.0-ballot.rc3"
+        "valueString" : "2027.0.0-ballot.1"
       },
       {
         "url" : "uri",
@@ -167,12 +167,12 @@ oBDS-spezifisches ValueSet für Klassifikation von Strahlenart bei Strahlenthera
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-strahlenart",
-  "version" : "2027.0.0-ballot.rc3",
+  "version" : "2027.0.0-ballot.1",
   "name" : "MII_VS_Onko_Strahlentherapie_Strahlenart",
   "title" : "MII VS Onkologie Strahlentherapie Strahlenart",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T08:15:57+00:00",
+  "date" : "2026-10-14T15:44:38+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

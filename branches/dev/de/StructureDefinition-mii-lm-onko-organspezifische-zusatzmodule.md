@@ -1,4 +1,4 @@
-# MII LM Onkologie Organspezifische Zusatzmodule - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc3
+# MII LM Onkologie Organspezifische Zusatzmodule - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-lm-onko-organspezifische-zusatzmodule | *Version*:2027.0.0-ballot.rc3 |
-| Active Stand: 2026-09-14 | *Maschinenlesbarer Name*:MII_LM_Onko_Organspezifische_Zusatzmodule |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-lm-onko-organspezifische-zusatzmodule | *Version*:2027.0.0-ballot.1 |
+| Active Stand: 2026-10-14 | *Maschinenlesbarer Name*:MII_LM_Onko_Organspezifische_Zusatzmodule |
 
  
 Logisches Modell für die organspezifischen Zusatzmodule des oBDS. Feldnummern und Struktur folgen dem amtlichen oBDS-XML-Schema (oBDS v3.0.5, Modul_Mamma/Darm/Prostata/Malignes_Melanom/Allgemein) sowie dem Feldkatalog auf basisdatensatz.de. 
@@ -80,7 +80,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
       },
       {
         "url" : "version",
-        "valueString" : "2027.0.0-ballot.rc3"
+        "valueString" : "2027.0.0-ballot.1"
       },
       {
         "url" : "uri",
@@ -196,12 +196,12 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-onko-
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-lm-onko-organspezifische-zusatzmodule",
-  "version" : "2027.0.0-ballot.rc3",
+  "version" : "2027.0.0-ballot.1",
   "name" : "MII_LM_Onko_Organspezifische_Zusatzmodule",
   "title" : "MII LM Onkologie Organspezifische Zusatzmodule",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T08:15:57+00:00",
+  "date" : "2026-10-14T15:44:38+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

@@ -1,4 +1,4 @@
-# MII VS Onkologie ICD-O-3 Morphologie 2019 - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc3
+# MII VS Onkologie ICD-O-3 Morphologie 2019 - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-icdo3-morphologie-2019 | *Version*:2027.0.0-ballot.rc3 |
-| Active as of 2026-09-14 | *Computable Name*:MII_VS_Onko_ICDO3_Morphologie_2019 |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-icdo3-morphologie-2019 | *Version*:2027.0.0-ballot.1 |
+| Active as of 2026-10-14 | *Computable Name*:MII_VS_Onko_ICDO3_Morphologie_2019 |
 
  
 Codes für histologische Morphologie und Verhalten einer neoplastischen Veränderung gemäß ICD-O-3 Zweite Revision (deutsche Ausgabe 2019). 
@@ -48,7 +48,7 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
       },
       {
         "url" : "version",
-        "valueString" : "2027.0.0-ballot.rc3"
+        "valueString" : "2027.0.0-ballot.1"
       },
       {
         "url" : "uri",
@@ -166,12 +166,12 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-icdo3-morphologie-2019",
-  "version" : "2027.0.0-ballot.rc3",
+  "version" : "2027.0.0-ballot.1",
   "name" : "MII_VS_Onko_ICDO3_Morphologie_2019",
   "title" : "MII VS Onkologie ICD-O-3 Morphologie 2019",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T08:15:57+00:00",
+  "date" : "2026-10-14T15:44:38+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

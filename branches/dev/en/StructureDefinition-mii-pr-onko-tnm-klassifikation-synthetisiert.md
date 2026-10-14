@@ -1,4 +1,4 @@
-# MII PR Onkologie TNM-Klassifikation (synthetisiert) - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc3
+# MII PR Onkologie TNM-Klassifikation (synthetisiert) - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation-synthetisiert | *Version*:2027.0.0-ballot.rc3 |
-| Active as of 2026-09-14 | *Computable Name*:MII_PR_Onko_TNM_Klassifikation_Synthetisiert |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation-synthetisiert | *Version*:2027.0.0-ballot.1 |
+| Active as of 2026-10-14 | *Computable Name*:MII_PR_Onko_TNM_Klassifikation_Synthetisiert |
 
  
 Synthetisierte TNM-Klassifikation: Aggregat aus mehreren Meldungs-bezogenen TNM-Klassifikationen, das den Stand zum Entscheidungszeitpunkt (z. B. Tumorkonferenz) zusammenfasst. UICC-Regeln zur Stage-Auswahl (pTNM > cTNM, jüngste Bewertung innerhalb derselben Krankheitsphase, r-Präfix als Bruchpunkt) werden vom erzeugenden System angewendet. Provenienz wird über derivedFrom auf die Quell-Klassifikationen abgebildet. 
@@ -48,7 +48,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-tnm-k
       },
       {
         "url" : "version",
-        "valueString" : "2027.0.0-ballot.rc3"
+        "valueString" : "2027.0.0-ballot.1"
       },
       {
         "url" : "uri",
@@ -164,12 +164,12 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-tnm-k
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation-synthetisiert",
-  "version" : "2027.0.0-ballot.rc3",
+  "version" : "2027.0.0-ballot.1",
   "name" : "MII_PR_Onko_TNM_Klassifikation_Synthetisiert",
   "title" : "MII PR Onkologie TNM-Klassifikation (synthetisiert)",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T08:15:57+00:00",
+  "date" : "2026-10-14T15:44:38+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

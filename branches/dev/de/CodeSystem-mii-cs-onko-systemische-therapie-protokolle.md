@@ -1,4 +1,4 @@
-# MII CS Onkologie Systemische Therapie Protokolle - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc3
+# MII CS Onkologie Systemische Therapie Protokolle - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-protokolle | *Version*:2027.0.0-ballot.rc3 |
-| Active Stand: 2026-09-14 | *Maschinenlesbarer Name*:MII_CS_Onko_Systemische_Therapie_Protokolle |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-protokolle | *Version*:2027.0.0-ballot.1 |
+| Active Stand: 2026-10-14 | *Maschinenlesbarer Name*:MII_CS_Onko_Systemische_Therapie_Protokolle |
 
  
 oBDS-spezifisches Codesystem für Protokolle systemischer Therapien 
@@ -42,7 +42,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
       },
       {
         "url" : "version",
-        "valueString" : "2027.0.0-ballot.rc3"
+        "valueString" : "2027.0.0-ballot.1"
       },
       {
         "url" : "uri",
@@ -155,12 +155,12 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-protokolle",
-  "version" : "2027.0.0-ballot.rc3",
+  "version" : "2027.0.0-ballot.1",
   "name" : "MII_CS_Onko_Systemische_Therapie_Protokolle",
   "title" : "MII CS Onkologie Systemische Therapie Protokolle",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T08:15:57+00:00",
+  "date" : "2026-10-14T15:44:38+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

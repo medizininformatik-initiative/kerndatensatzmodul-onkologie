@@ -1,4 +1,4 @@
-# MedicationRequest - Oxaliplatin (abgebrochen wegen Neuropathie) - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc3
+# MedicationRequest - Oxaliplatin (abgebrochen wegen Neuropathie) - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Onkologie Therapieempfehlung Medikation](StructureDefinition-mii-pr-onko-therapieempfehlung-medikation.md) version: 2027.0.0-ballot.rc3
+Profile: [MII PR Onkologie Therapieempfehlung Medikation](StructureDefinition-mii-pr-onko-therapieempfehlung-medikation.md) version: 2027.0.0-ballot.1
 
 **status**: Stopped
 
@@ -44,7 +44,7 @@ Administered for cycles 1-6 only. Stopped due to cumulative neurotoxicity.
   "resourceType" : "MedicationRequest",
   "id" : "mii-exa-onko-modification-oxaliplatin-request",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation|2027.0.0-ballot.rc3"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-therapieempfehlung-medikation|2027.0.0-ballot.1"]
   },
   "status" : "stopped",
   "statusReason" : {

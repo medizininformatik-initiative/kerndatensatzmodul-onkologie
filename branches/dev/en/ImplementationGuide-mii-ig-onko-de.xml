@@ -35,7 +35,7 @@
       <valueId value="de.medizininformatikinitiative.kerndatensatz.onkologie"/>
     </extension>
     <extension url="version">
-      <valueString value="2027.0.0-ballot.rc3"/>
+      <valueString value="2027.0.0-ballot.1"/>
     </extension>
     <extension url="uri">
       <valueUri value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko"/>
@@ -121,12 +121,12 @@
     </valueCodeableConcept>
   </extension>
   <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ImplementationGuide/mii-ig-onko-de"/>
-  <version value="2027.0.0-ballot.rc3"/>
+  <version value="2027.0.0-ballot.1"/>
   <name value="MII_IG_Onko_DE"/>
   <title value="MII IG Kerndatensatz-Modul Onkologie"/>
   <status value="active"/>
   <experimental value="false"/>
-  <date value="2026-09-14"/>
+  <date value="2026-09-15"/>
   <publisher value="Medizininformatik Initiative"/>
   <contact>
     <name value="Medizininformatik Initiative"/>
@@ -189,17 +189,12 @@
   <dependsOn id="de_medizininformatikinitiative_kerndatensatz_molgen">
     <uri value="https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ImplementationGuide/mii-ig-molgen"/>
     <packageId value="de.medizininformatikinitiative.kerndatensatz.molgen"/>
-    <version value="2027.0.0-ballot"/>
+    <version value="2027.0.0-ballot.1"/>
   </dependsOn>
   <dependsOn id="hl7_fhir_uv_genomics_reporting">
     <uri value="http://hl7.org/fhir/uv/genomics-reporting/ImplementationGuide/hl7.fhir.uv.genomics-reporting"/>
     <packageId value="hl7.fhir.uv.genomics-reporting"/>
     <version value="3.0.0"/>
-  </dependsOn>
-  <dependsOn id="de_medizininformatikinitiative_kerndatensatz_studie">
-    <uri value="https://www.medizininformatik-initiative.de/fhir/modul-studie/ImplementationGuide/mii-ig-studie"/>
-    <packageId value="de.medizininformatikinitiative.kerndatensatz.studie"/>
-    <version value="2027.0.0-ballot.rc1"/>
   </dependsOn>
   <dependsOn id="hl7_terminology_r4">
     <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>

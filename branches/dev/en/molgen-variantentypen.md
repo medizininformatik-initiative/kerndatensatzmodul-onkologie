@@ -1,4 +1,4 @@
-# MolGen Mapping of Variant Types - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc3
+# MolGen Mapping of Variant Types - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.1
 
 * [**Table of Contents**](toc.md)
 * [**Guidance**](guidance.md)

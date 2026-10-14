@@ -1,4 +1,4 @@
-# RSNA RadElement Common Data Elements (Fragment) - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc3
+# RSNA RadElement Common Data Elements (Fragment) - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://radelement.org | *Version*:2027.0.0-ballot.rc3 |
-| Active Stand: 2026-09-14 | *Maschinenlesbarer Name*:RadElement |
+| *Offizielle URL*:https://radelement.org | *Version*:2027.0.0-ballot.1 |
+| Active Stand: 2026-10-14 | *Maschinenlesbarer Name*:RadElement |
 | **Copyright/Rechtliches**: RadElement Common Data Elements © Radiological Society of North America (RSNA). | |
 
  
@@ -32,12 +32,12 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "resourceType" : "CodeSystem",
   "id" : "radelement",
   "url" : "https://radelement.org",
-  "version" : "2027.0.0-ballot.rc3",
+  "version" : "2027.0.0-ballot.1",
   "name" : "RadElement",
   "title" : "RSNA RadElement Common Data Elements (Fragment)",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T08:15:57+00:00",
+  "date" : "2026-10-14T15:44:38+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

@@ -1,4 +1,4 @@
-# MII CS Onkologie Strahlentherapie Zielgebiet oBDS 2014 (Legacy) - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc3
+# MII CS Onkologie Strahlentherapie Zielgebiet oBDS 2014 (Legacy) - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet-2014 | *Version*:2027.0.0-ballot.rc3 |
-| Active as of 2026-09-14 | *Computable Name*:MII_CS_Onko_Strahlentherapie_Zielgebiet_2014 |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet-2014 | *Version*:2027.0.0-ballot.1 |
+| Active as of 2026-10-14 | *Computable Name*:MII_CS_Onko_Strahlentherapie_Zielgebiet_2014 |
 
  
 oBDS 2014 Legacy-Codesystem für Klassifikation von Zielgebiet von Strahlentherapie - nur für Datenimport und Migration 
@@ -42,7 +42,7 @@ This Code system is referenced in the definition of the following value sets:
       },
       {
         "url" : "version",
-        "valueString" : "2027.0.0-ballot.rc3"
+        "valueString" : "2027.0.0-ballot.1"
       },
       {
         "url" : "uri",
@@ -155,12 +155,12 @@ This Code system is referenced in the definition of the following value sets:
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-zielgebiet-2014",
-  "version" : "2027.0.0-ballot.rc3",
+  "version" : "2027.0.0-ballot.1",
   "name" : "MII_CS_Onko_Strahlentherapie_Zielgebiet_2014",
   "title" : "MII CS Onkologie Strahlentherapie Zielgebiet oBDS 2014 (Legacy)",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T08:15:57+00:00",
+  "date" : "2026-10-14T15:44:38+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

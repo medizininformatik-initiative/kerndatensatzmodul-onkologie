@@ -1,4 +1,4 @@
-# MII VS Onkologie Mamma Färbeintensität - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc3
+# MII VS Onkologie Mamma Färbeintensität - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-faerbeintensitaet | *Version*:2027.0.0-ballot.rc3 |
-| Active as of 2026-09-14 | *Computable Name*:MII_VS_Onko_Mamma_Faerbeintensitaet |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-faerbeintensitaet | *Version*:2027.0.0-ballot.1 |
+| Active as of 2026-10-14 | *Computable Name*:MII_VS_Onko_Mamma_Faerbeintensitaet |
 
  
 Färbeintensität der immunhistochemischen Rezeptorbestimmung (Weak, Moderate, Strong). Enumerierte Fassung der LOINC-Answer-List LL4358-9. 
@@ -49,7 +49,7 @@ Färbeintensität der immunhistochemischen Rezeptorbestimmung (Weak, Moderate, S
       },
       {
         "url" : "version",
-        "valueString" : "2027.0.0-ballot.rc3"
+        "valueString" : "2027.0.0-ballot.1"
       },
       {
         "url" : "uri",
@@ -167,12 +167,12 @@ Färbeintensität der immunhistochemischen Rezeptorbestimmung (Weak, Moderate, S
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-faerbeintensitaet",
-  "version" : "2027.0.0-ballot.rc3",
+  "version" : "2027.0.0-ballot.1",
   "name" : "MII_VS_Onko_Mamma_Faerbeintensitaet",
   "title" : "MII VS Onkologie Mamma Färbeintensität",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T08:15:57+00:00",
+  "date" : "2026-10-14T15:44:38+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

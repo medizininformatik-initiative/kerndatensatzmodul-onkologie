@@ -1,4 +1,4 @@
-# MII ImplementationGuide Resource - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc3
+# MII ImplementationGuide Resource - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.1
 
 * [**Table of Contents**](toc.md)
 * **MII ImplementationGuide Resource**
@@ -17,12 +17,6 @@ This is an R4 IG. None of the features it uses are changed in R4B, so it can be 
 ### IG Dependencies
 
 This IG contains the following dependencies on other IGs.
-
-
-
-
-
-
 
 
 
@@ -167,7 +161,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
     },
     {
       "url" : "version",
-      "valueString" : "2027.0.0-ballot.rc3"
+      "valueString" : "2027.0.0-ballot.1"
     },
     {
       "url" : "uri",
@@ -267,7 +261,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ImplementationGuide/mii-ig-onko-de",
-  "version" : "2027.0.0-ballot.rc3",
+  "version" : "2027.0.0-ballot.1",
   "name" : "MII_IG_Onko_DE",
   "title" : "MII IG Kerndatensatz-Modul Onkologie",
   "_title" : {
@@ -285,7 +279,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
   },
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14",
+  "date" : "2026-09-15",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -357,19 +351,13 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
     "id" : "de_medizininformatikinitiative_kerndatensatz_molgen",
     "uri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/ImplementationGuide/mii-ig-molgen",
     "packageId" : "de.medizininformatikinitiative.kerndatensatz.molgen",
-    "version" : "2027.0.0-ballot"
+    "version" : "2027.0.0-ballot.1"
   },
   {
     "id" : "hl7_fhir_uv_genomics_reporting",
     "uri" : "http://hl7.org/fhir/uv/genomics-reporting/ImplementationGuide/hl7.fhir.uv.genomics-reporting",
     "packageId" : "hl7.fhir.uv.genomics-reporting",
     "version" : "3.0.0"
-  },
-  {
-    "id" : "de_medizininformatikinitiative_kerndatensatz_studie",
-    "uri" : "https://www.medizininformatik-initiative.de/fhir/modul-studie/ImplementationGuide/mii-ig-studie",
-    "packageId" : "de.medizininformatikinitiative.kerndatensatz.studie",
-    "version" : "2027.0.0-ballot.rc1"
   },
   {
     "id" : "hl7_terminology_r4",

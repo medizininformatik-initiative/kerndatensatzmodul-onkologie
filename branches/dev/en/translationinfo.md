@@ -1,4 +1,4 @@
-# Translation Information - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc3
+# Translation Information - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.1
 
 * [**Table of Contents**](toc.md)
 * **Translation Information**

@@ -1,4 +1,4 @@
-# MII EXA Onko KRK Specimen - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.rc3
+# MII EXA Onko KRK Specimen - MII IG Kerndatensatz-Modul Onkologie v2027.0.0-ballot.1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
