@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-intention | *Version*:2027.0.0-ballot.1 |
-| Active as of 2026-09-19 | *Computable Name*:MII_VS_Onko_Strahlentherapie_Intention |
+| Active as of 2026-10-17 | *Computable Name*:MII_VS_Onko_Strahlentherapie_Intention |
 
  
 Value Set für oBDS-Codes für Klassifikation von Intention der Strahlentherapie 
@@ -171,7 +171,7 @@ Value Set für oBDS-Codes für Klassifikation von Intention der Strahlentherapie
   "title" : "MII VS Onkologie Strahlentherapie Intention",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-19T19:10:10+00:00",
+  "date" : "2026-10-17T20:05:14+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

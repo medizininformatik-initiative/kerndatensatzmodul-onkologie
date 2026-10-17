@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-therapieplanung-typ | *Version*:2027.0.0-ballot.1 |
-| Active as of 2026-09-19 | *Computable Name*:MII_VS_Onko_Therapieplanung_Typ |
+| Active as of 2026-10-17 | *Computable Name*:MII_VS_Onko_Therapieplanung_Typ |
 
  
 oBDS-spezifisches ValueSet für den Therapieplanungstyp 
@@ -171,7 +171,7 @@ oBDS-spezifisches ValueSet für den Therapieplanungstyp
   "title" : "MII VS Onkologie Therapieplanung Typ",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-19T19:10:10+00:00",
+  "date" : "2026-10-17T20:05:14+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

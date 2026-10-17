@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tod | *Version*:2027.0.0-ballot.1 |
-| Active Stand: 2026-09-19 | *Maschinenlesbarer Name*:MII_CS_Onko_Tod |
+| Active Stand: 2026-10-17 | *Maschinenlesbarer Name*:MII_CS_Onko_Tod |
 
  
 oBDS-spezifisches Codesystem tumorbedingter Tod 
@@ -160,7 +160,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "title" : "MII CS Onkologie Tod",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-19T19:10:10+00:00",
+  "date" : "2026-10-17T20:05:14+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

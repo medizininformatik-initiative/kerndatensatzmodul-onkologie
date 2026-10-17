@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-mamma-menopause-status | *Version*:2027.0.0-ballot.1 |
-| Active Stand: 2026-09-19 | *Maschinenlesbarer Name*:MII_PR_Onko_Mamma_Menopausenstatus |
+| Active Stand: 2026-10-17 | *Maschinenlesbarer Name*:MII_PR_Onko_Mamma_Menopausenstatus |
 
  
 Dieses Profil beschreibt den (prätherapeutischen) Menopausenstatus einer Patientin mit Mamma-Karzinom in der Onkologie 
@@ -280,7 +280,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "title" : "MII PR Onkologie Menopausenstatus Mamma",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-19T19:10:10+00:00",
+  "date" : "2026-10-17T20:05:14+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

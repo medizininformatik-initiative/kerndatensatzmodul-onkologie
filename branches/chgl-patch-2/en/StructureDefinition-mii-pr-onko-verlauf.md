@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-verlauf | *Version*:2027.0.0-ballot.1 |
-| Active as of 2026-09-19 | *Computable Name*:MII_PR_Onko_Verlauf |
+| Active as of 2026-10-17 | *Computable Name*:MII_PR_Onko_Verlauf |
 
  
 Dieses Profil beschreibt die Verlaufskontrolle und verweist ggfs. auf andere verlaufsrelevante diagnostische Maßnahmen 
@@ -205,7 +205,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-verla
   "title" : "MII PR Onkologie Verlauf",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-19T19:10:10+00:00",
+  "date" : "2026-10-17T20:05:14+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
