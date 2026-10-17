@@ -14,6 +14,7 @@ Description: "The ValueSet enthält Codes für die TNM-Stadien zur prognostische
 * $UICC#0a	"Stadium 0a"
 * $UICC#0is	"Stadium 0is"
 * $UICC#I	    "Stadium I"
+* $UICC#IA	"Stadium IA"
 * $UICC#IA1	"Stadium IA1"
 * $UICC#IA2	"Stadium IA2"
 * $UICC#IA3   "Stadium IA3"
