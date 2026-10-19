@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-m-kategorie-werte-sct | *Version*:2027.0.0-ballot.1 |
-| Active Stand: 2026-10-14 | *Maschinenlesbarer Name*:MII_VS_Onko_TNM_M_Kategorie_Werte_SCT |
+| Active Stand: 2026-10-19 | *Maschinenlesbarer Name*:MII_VS_Onko_TNM_M_Kategorie_Werte_SCT |
 | **Copyright/Rechtliches**: This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. | |
 
  
@@ -172,7 +172,7 @@ SNOMED CT Codes für die TNM M-Kategorie (alle Präfix-Kombinationen: cM, pM, rc
   "title" : "MII VS Onkologie TNM M Kategorie Werte SNOMED CT",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-10-14T15:44:38+00:00",
+  "date" : "2026-10-19T22:30:48+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

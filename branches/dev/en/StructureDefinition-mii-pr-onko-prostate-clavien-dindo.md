@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-prostate-clavien-dindo | *Version*:2027.0.0-ballot.1 |
-| Active as of 2026-10-14 | *Computable Name*:MII_PR_Onko_Prostata_Clavien_Dindo |
+| Active as of 2026-10-19 | *Computable Name*:MII_PR_Onko_Prostata_Clavien_Dindo |
 
  
 Dieses Profil beschreibt den Clavien-Dindo-Score für die Prostatektomie in der Onkologie 
@@ -234,7 +234,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-prost
   "title" : "MII PR Onkologie Clavien Dindo",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-10-14T15:44:38+00:00",
+  "date" : "2026-10-19T22:30:48+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

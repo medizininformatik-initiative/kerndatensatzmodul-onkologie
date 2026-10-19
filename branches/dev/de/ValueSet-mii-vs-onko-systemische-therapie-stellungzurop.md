@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-stellungzurop | *Version*:2027.0.0-ballot.1 |
-| Active Stand: 2026-10-14 | *Maschinenlesbarer Name*:MII_VS_Onko_Systemische_Therapie_StellungZurOp |
+| Active Stand: 2026-10-19 | *Maschinenlesbarer Name*:MII_VS_Onko_Systemische_Therapie_StellungZurOp |
 
  
 oBDS-spezifisches ValueSet für Klassifikation von Stellung zur OP 
@@ -171,7 +171,7 @@ oBDS-spezifisches ValueSet für Klassifikation von Stellung zur OP
   "title" : "MII VS Onkologie Systemische Therapie Stellung",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-10-14T15:44:38+00:00",
+  "date" : "2026-10-19T22:30:48+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

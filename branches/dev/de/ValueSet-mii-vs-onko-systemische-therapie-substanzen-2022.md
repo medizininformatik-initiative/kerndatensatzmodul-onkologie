@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-substanzen-2022 | *Version*:2027.0.0-ballot.1 |
-| Active Stand: 2026-10-14 | *Maschinenlesbarer Name*:MII_VS_Onko_Systemische_Therapie_Substanzen_2022 |
+| Active Stand: 2026-10-19 | *Maschinenlesbarer Name*:MII_VS_Onko_Systemische_Therapie_Substanzen_2022 |
 
  
 ATC-Codes für Substanzen der systemischen Therapie, validiert gegen ATC-DE Version 2022. Für historische Datenvalidierung. 
@@ -171,7 +171,7 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
   "title" : "MII VS Onkologie Systemische Therapie Substanzen ATC 2022",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-10-14T15:44:38+00:00",
+  "date" : "2026-10-19T22:30:48+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

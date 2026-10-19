@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-nebenwirkung-ctcae-version | *Version*:2027.0.0-ballot.1 |
-| Active Stand: 2026-10-14 | *Maschinenlesbarer Name*:MII_VS_Onko_Nebenwirkung_CTCAE_Version |
+| Active Stand: 2026-10-19 | *Maschinenlesbarer Name*:MII_VS_Onko_Nebenwirkung_CTCAE_Version |
 
  
 Versionsbezeichnungen des CTCAE-Katalogs nach oBDS 15.3. 
@@ -171,7 +171,7 @@ Versionsbezeichnungen des CTCAE-Katalogs nach oBDS 15.3.
   "title" : "MII VS Onkologie Nebenwirkung CTCAE-Version",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-10-14T15:44:38+00:00",
+  "date" : "2026-10-19T22:30:48+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
