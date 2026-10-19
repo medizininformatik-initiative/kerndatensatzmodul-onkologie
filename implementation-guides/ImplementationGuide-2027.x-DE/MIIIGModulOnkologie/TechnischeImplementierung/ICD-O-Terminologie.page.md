@@ -190,6 +190,9 @@ Die dreistelligen Topographie-Codes mit einer Dezimalstelle (`C00.0`–`C80.9`,
   ist wegen der abweichenden Code-Syntax nicht sinnvoll. Validierungs- und
   ETL-Regeln, die auf vier Ziffern plus Dignität prüfen, müssen auf das
   alphanumerische Muster `[0-9]{4}[0-9A-K]/[0-9]` erweitert werden.
-- **Zeitplan**: offen. Bis zur deutschen Ausgabe und zur oBDS-Anpassung bleibt
-  die ICD-O-3 (Zweite Revision) verbindlich; dieses Modul nimmt keine
-  ICD-O-4-Artefakte vorweg.
+- **Zeitplan**: offen. Die Aufnahme der ICD-O-4 in das oBDS ist wegen des
+  geänderten Code-Musters nicht als Patch der 3.0.x-Linie möglich und wird
+  voraussichtlich mit einer **oBDS-Version 4.0** erfolgen; ein Termin ist nicht
+  bekannt. Bis zur deutschen Ausgabe und zur oBDS-Anpassung bleibt die ICD-O-3
+  (Zweite Revision) verbindlich; dieses Modul nimmt keine ICD-O-4-Artefakte
+  vorweg.
