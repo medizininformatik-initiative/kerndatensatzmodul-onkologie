@@ -87,13 +87,110 @@ quality, ETL) the per-year ValueSets are available.
 | [`mii-vs-onko-icdo3-topographie-2014`](ValueSet-mii-vs-onko-icdo3-topographie-2014.html) / [`-2019`](ValueSet-mii-vs-onko-icdo3-topographie-2019.html) | Topography, revision-specific | DQ checks, ETL |
 | [`mii-cm-onko-icdo3-transitions-2019`](ConceptMap-mii-cm-onko-icdo3-transitions-2019.html) | 56 morphology transitions 3.1 → 3.2 | Migration of legacy data |
 
-### Outlook: ICD-O-4
+### ICD-O-4: New Structure and Changes Compared with ICD-O-3.2
 
-IARC published the final tables of **ICD-O-4** in early 2026 (WHO Classification
-of Tumours Online): a new morphology structure with **five-digit** morphology
-codes based on the 5th edition of the WHO Blue Books, harmonised with ICD-11.
-The book is in preparation; a German edition by the BfArM as well as a migration
-roadmap of the cancer registries are still pending. As soon as a German ICD-O-4
-is published it will be integrated following the pattern established here:
-a revision-specific ValueSet plus a transition ConceptMap — whereby the move to
-five-digit codes will be a structurally larger step than the previous revisions.
+IARC presented **ICD-O-4** in early 2026 (Znaor et al., *Cancer Epidemiology*,
+online 22 January 2026) and released the final topography and morphology tables
+in July 2026 via *WHO Classification of Tumours Online*. ICD-O-4 is based on the
+5th edition of the WHO Blue Books (including the molecularly defined entities)
+and is harmonised with ICD-11. The book is in preparation at WHO; a **German
+edition by the BfArM** as well as a migration roadmap for the cancer registries
+and the oBDS are still pending. The description below is based on an analysis
+of the English IARC tables (`ICD-O-4.xlsx`, `Morphology_annexes.xlsx`,
+`Topography_annexes.xlsx`, as of 16 July 2026); the figures are derived from
+them and are not official IARC statements.
+
+#### Morphology: Five-Character Codes
+
+The morphology code is extended from `XXXX/B` to **`XXXXY/B`**:
+
+- The first four characters correspond to the previous ICD-O-3 code; the
+  behaviour digit `/B` is unchanged (`/0`, `/1`, `/2`, `/3`, `/6`, `/9`).
+- The **fifth character `Y`** distinguishes entities that ICD-O-3 grouped under
+  one code as *related terms*. `Y = 0` is the generic successor of the ICD-O-3
+  code (`8140/3` → `81400/3`); `1`–`9` are sub-entities. Once the digits are
+  exhausted, **letters** follow (`A`–`K`, without `I`), e.g. `8140A/3`…`8140G/3`,
+  `9680A/3`…`9680K/3`. The code is therefore alphanumeric and no longer purely
+  numeric.
+- Scope: about **2,390 codes** (ICD-O-3.2: 1,143) on 842 four-character stems;
+  roughly half of the codes have a fifth character ≠ 0. The most strongly
+  expanded stems are `8770` (Spitz tumours, 34 codes), `8140` (adenocarcinomas,
+  24), `8720` (melanomas, 24), `9680` (DLBCL, 21), `9120`
+  (haemangiomas/angiosarcomas, 19) and `9385` (diffuse gliomas, 16).
+- The table structure is unchanged from ICD-O-3.2: term levels *Preferred*,
+  *Synonym*, *Related*, group headings (levels 1–3), a *Code reference* column
+  with topography restriction (e.g. `(C73.9)`), and the `[obs]` marker for
+  obsolete terms (455 terms).
+
+Changes on the morphology axis according to the IARC annexes:
+
+| Type of change | Scope | Examples |
+|---|---|---|
+| New four-character combinations (stem + behaviour new) | 109 codes | `80040/1` spindle cell tumour of uncertain malignant potential, `80850/2` squamous cell carcinoma in situ, HPV-associated |
+| New sub-codes (fifth character ≠ 0 under an existing stem) | 1,175 codes | `80202/3` anaplastic thyroid carcinoma, `88421/3` pulmonary myxoid sarcoma with EWSR1::CREB1 |
+| Deleted ICD-O-3.2 codes | 29 codes | 28 of them "terms moved" to another stem, `8150/0` without successor (no benign pancreatic NET any more) |
+| Stem changes (terms under a new four-character stem) | 19 → 17 codes | `8042/3`, `8043/3`, `8044/3` → `80410/3` (small cell variants merged), `8081/2` Bowen disease → `80700/2`, `9440/3` diffuse midline glioma → `93850/3`, `9727/3` → `98350/3`, `9014`/`9015` adenofibromas → `8441`/`8442`/`8472` |
+| Behaviour changes | 48 terms, 24 codes | `0 → 3` (16): pituitary adenomas `8271/0`, `8272/0`, `8280/0`, `8281/0`, `8300/0` become PitNET `/3`; `1 → 3` (10): apudoma `8248/1`, chondrosarcoma grade 1 `9222/1`, melanotic schwannoma `9560/1` → `95401/3`; `3 → 1` (7): keratoacanthoma `8071/3` → `80710/1`, eosinophilic granuloma `9751/3` → `97510/1`; `0 → 1` (10): pancreatic microadenoma `8150/0` → `81500/1`; `3 → 0`: cylindroma `8200/3` → `82000/0`; `1 → 2`: `8480/1` → `84800/2` |
+| New terms | 1,848 terms at 1,301 codes | — |
+| Changed terms | 935 terms | 540× US → WHO spelling (*tumor* → *tumour*, *leukemia* → *leukaemia*), 130× WHO style, 120× addition of "NOS", 23× genomic nomenclature (fusions now `BCR::ABL1` instead of `BCR-ABL1`) |
+| Deleted terms | 23 terms | ambiguous or no longer recognised terms, e.g. *Bronchial adenoma, NOS*, *Diffuse astrocytoma, IDH-wildtype* |
+
+**Transition ICD-O-3.2 → ICD-O-4.** For 1,105 of the 1,143 codes of the Second
+Revision the successor is the code with an appended `0` and the same
+behaviour. 38 codes cannot be transitioned this way: 27 were deleted or moved
+to another stem (see table), 11 were **renumbered within their stem** because
+position `0` went to a different entity (`8121/1` → `81211/1`, `8163/2` →
+`81631/2`, `8261/2` → `82611/2`, `8263/2` → `82632/2`, `8453/2` → `84531/2`,
+`8453/3` → `84531/3`, `8631/0` → `86311/0`, `8631/3` → `86311/3`, `9538/3` →
+`95383/3`, `9591/1` → `95911/1`, `8210/2` → `82111/2`). In addition there are
+the behaviour changes, where the appended code exists but carries a different
+behaviour. Naively appending a `0` is therefore not sufficient as an ETL rule;
+the transition needs a ConceptMap following the pattern of
+[`mii-cm-onko-icdo3-transitions-2019`](ConceptMap-mii-cm-onko-icdo3-transitions-2019.html).
+
+#### Topography: Stem Codes Unchanged, Optional Fourth Digit
+
+The three-character topography codes with one decimal (`C00.0`–`C80.9`, 337
+codes) are retained. New are:
+
+- **Optional four-digit codes** `CXX.YZ` (381 codes) for selected sites; `Z = 0`
+  is the default, 44 codes have `Z ≠ 0`: caecum/ileocaecal valve (`C18.01`,
+  `C18.02`), soft tissues and peripheral nerves by trunk/limb/viscera
+  (`C47.31`–`C47.53`, `C49.31`–`C49.52`), urethra (`C68.02` Littré gland,
+  `C68.03` prostatic urethra), eye (`C69.4x`, `C69.5x`), brain stem (`C71.70`),
+  thyroid/thyroglossal duct (`C73.90`), `C76.01` *Head and neck neoplasm,
+  primary site unknown*.
+- **New codes** by splitting: `C06.3` minor salivary gland (from `C06.9`),
+  `C16.7` oesophagogastric junction (from `C16.0`), `C21.3` perianal skin (from
+  `C44.5`), `C24.1` sphincter of Oddi, `C24.2` distal, `C24.3` perihilar
+  (Klatskin) and `C24.4` cystic duct (all from `C24.0`), `C68.1` Skene gland;
+  `C71.0` takes over the suprasellar region, corpus callosum and tapetum from
+  `C71.8`/`C71.9`.
+- **Term changes**: WHO spelling (*caecum*, *oesophagus*, *coeliac*), `C80.9` is
+  now *Primary site unspecified*, alongside `C80.0`/`C80.00` *Primary site
+  unknown, so stated*; `C72.4` gains *Vestibulocochlear nerve*.
+- New presentation levels *Related list*/*Bullet* for enumerations ("Skin of:
+  cheek, chin, …").
+
+#### Consequences for the oBDS and This Module
+
+- **oBDS**: the XSD (v3.0.5) enforces the pattern `\d\d\d\d/\d` for
+  `Morphologie_ICD_O/Code` and only knows `31`, `32`, `33` as `Version`;
+  five-character, alphanumeric codes therefore cannot be reported. The
+  topography pattern (`C\d\d\.\d(\d)?`) already admits the optional fourth
+  digit.
+- **FHIR**: the ICD-O-3 artefacts of this module (extension
+  `mii-ex-onko-histology-morphology-behavior-icdo3`, ValueSets
+  `mii-vs-onko-icdo3-*`, canonical `http://terminology.hl7.org/CodeSystem/icd-o-3`)
+  are bound to the third edition by name and by `system`. ICD-O-4 will need its
+  own CodeSystem (canonical not yet defined), its own revision-specific
+  ValueSets and a transition ConceptMap `3.2 → 4` following the pattern
+  established above; a union ValueSet across editions is not meaningful because
+  of the different code syntax. Validation and ETL rules that check for four
+  digits plus behaviour must be extended to the alphanumeric pattern
+  `[0-9]{4}[0-9A-K]/[0-9]`.
+- **Timeline**: open. Because of the changed code pattern, adopting ICD-O-4 in
+  the oBDS is not possible as a patch of the 3.0.x line and is expected to come
+  with an **oBDS version 4.0**; no date is known. Until the German edition and
+  the oBDS adaptation, ICD-O-3 (Second Revision) remains binding; this module
+  does not anticipate any ICD-O-4 artefacts.
