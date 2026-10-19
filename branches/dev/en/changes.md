@@ -7,6 +7,12 @@
 
 All changes to this module are listed here. The complete, detailed release history is maintained in the German edition of this page; the current release cycle is translated in full below.
 
+### Changes since v2027.0.0-ballot.1 (unreleased)
+
+#### Further Improvements
+
+* `documentation` **ICD-O-4 described on the page [ICD-O Terminology](icd-o-terminologie.md)**: analysis of the IARC tables of 16 July 2026 — five-character, alphanumeric morphology codes (`XXXXY/B`, fifth character `0`–`9` and `A`–`K`), change table against ICD-O-3.2 (109 new stem/behaviour combinations, 1,175 new sub-codes, 29 deleted codes, 19 stem changes, 24 behaviour changes, 935 term changes), transition rule 3.2 → 4 with the 38 codes that cannot be transitioned by appending `0`, optional four-digit topography, consequences for the oBDS XSD and the FHIR artefacts. No ICD-O-4 artefacts, since the German BfArM edition is still pending; adoption in the oBDS is expected only with oBDS 4.0.
+
 ### Changes v2027.0.0-ballot.1 (ballot, dependency patch)
 
 * **`kerndatensatz.molgen` raised to `2027.0.0-ballot.1`**: molgen's own dependency-hygiene patch (its ballot still pulled meta rc3 / base rc1 / biobank rc2 transitively; no structural changes — all StructureDefinitions verified identical). The dependency tree of this module is now uniformly on the plain ballot line. No content changes in this module.

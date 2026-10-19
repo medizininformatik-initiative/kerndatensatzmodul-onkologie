@@ -312,13 +312,17 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
+  <li><a href="#änderungen-seit-v202700-ballot1-noch-nicht-veröffentlicht" id="markdown-toc-änderungen-seit-v202700-ballot1-noch-nicht-veröffentlicht">Änderungen seit v2027.0.0-ballot.1 (noch nicht veröffentlicht)</a>    <ul>
+      <li><a href="#weitere-verbesserungen" id="markdown-toc-weitere-verbesserungen">Weitere Verbesserungen</a></li>
+    </ul>
+  </li>
   <li><a href="#änderungen-v202700-ballot1-ballot-dependency-patch" id="markdown-toc-änderungen-v202700-ballot1-ballot-dependency-patch">Änderungen v2027.0.0-ballot.1 (Ballot, Dependency-Patch)</a></li>
   <li><a href="#änderungen-v202700-ballot-ballot" id="markdown-toc-änderungen-v202700-ballot-ballot">Änderungen v2027.0.0-ballot (Ballot)</a></li>
   <li><a href="#änderungen-v202700-ballotrc2-ballot-kandidat" id="markdown-toc-änderungen-v202700-ballotrc2-ballot-kandidat">Änderungen v2027.0.0-ballot.rc2 (Ballot-Kandidat)</a>    <ul>
       <li><a href="#️-breaking-changes" id="markdown-toc-️-breaking-changes">⚠️ Breaking Changes</a></li>
       <li><a href="#neue-profile-und-funktionalität" id="markdown-toc-neue-profile-und-funktionalität">Neue Profile und Funktionalität</a></li>
       <li><a href="#refaktorierungen" id="markdown-toc-refaktorierungen">Refaktorierungen</a></li>
-      <li><a href="#weitere-verbesserungen" id="markdown-toc-weitere-verbesserungen">Weitere Verbesserungen</a></li>
+      <li><a href="#weitere-verbesserungen-1" id="markdown-toc-weitere-verbesserungen-1">Weitere Verbesserungen</a></li>
     </ul>
   </li>
   <li><a href="#änderungen-v202603-veröffentlicht-27032026" id="markdown-toc-änderungen-v202603-veröffentlicht-27032026">Änderungen v2026.0.3 (veröffentlicht 27.03.2026)</a>    <ul>
@@ -346,7 +350,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <li><a href="#atc-code-transitionen" id="markdown-toc-atc-code-transitionen">ATC-Code Transitionen</a></li>
       <li><a href="#therapieempfehlung-medikation-erweiterung" id="markdown-toc-therapieempfehlung-medikation-erweiterung">Therapieempfehlung Medikation Erweiterung</a></li>
       <li><a href="#technische-verbesserungen-3" id="markdown-toc-technische-verbesserungen-3">Technische Verbesserungen</a></li>
-      <li><a href="#weitere-verbesserungen-1" id="markdown-toc-weitere-verbesserungen-1">Weitere Verbesserungen</a></li>
+      <li><a href="#weitere-verbesserungen-2" id="markdown-toc-weitere-verbesserungen-2">Weitere Verbesserungen</a></li>
     </ul>
   </li>
   <li><a href="#änderungen-kommentierungs-version-2026-veröffentlicht-21082025" id="markdown-toc-änderungen-kommentierungs-version-2026-veröffentlicht-21082025">Änderungen Kommentierungs-Version 2026 (veröffentlicht 21.08.2025)</a>    <ul>
@@ -373,6 +377,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div>
 
 <p>Hier sind alle Änderungen aufgelistet.</p>
+
+<h2 id="änderungen-seit-v202700-ballot1-noch-nicht-veröffentlicht">Änderungen seit v2027.0.0-ballot.1 (noch nicht veröffentlicht)</h2>
+
+<h3 id="weitere-verbesserungen">Weitere Verbesserungen</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">documentation</code> <strong>ICD-O-4 auf der Seite <a href="icd-o-terminologie.html">ICD-O-Terminologie</a> beschrieben</strong>: Auswertung der IARC-Tabellen vom 16.07.2026 — fünfstellige, alphanumerische Morphologie-Codes (<code class="language-plaintext highlighter-rouge">XXXXY/B</code>, fünfte Stelle <code class="language-plaintext highlighter-rouge">0</code>–<code class="language-plaintext highlighter-rouge">9</code> und <code class="language-plaintext highlighter-rouge">A</code>–<code class="language-plaintext highlighter-rouge">K</code>), Änderungstabelle gegenüber ICD-O-3.2 (109 neue Stamm-Dignitäts-Kombinationen, 1.175 neue Subcodes, 29 gestrichene Codes, 19 Stammwechsel, 24 Dignitätswechsel, 935 Termänderungen), Überleitungsregel 3.2 → 4 mit den 38 nicht per angehängter <code class="language-plaintext highlighter-rouge">0</code> überleitbaren Codes, optionale vierstellige Topographie, Folgen für oBDS-XSD und FHIR-Artefakte. Keine ICD-O-4-Artefakte, da die deutsche BfArM-Ausgabe aussteht; Aufnahme in das oBDS voraussichtlich erst mit oBDS 4.0.</li>
+</ul>
 
 <h2 id="änderungen-v202700-ballot1-ballot-dependency-patch">Änderungen v2027.0.0-ballot.1 (Ballot, Dependency-Patch)</h2>
 
@@ -458,7 +469,7 @@ konkretem Migrationsweg:</p>
   <li><code class="language-plaintext highlighter-rouge">refactor</code> <strong>SearchParameter für das c/p/u-Präfix konsolidiert</strong>: Die drei defekten SearchParameter <code class="language-plaintext highlighter-rouge">tnm-t-cppraefix</code>, <code class="language-plaintext highlighter-rouge">tnm-n-cppraefix</code> und <code class="language-plaintext highlighter-rouge">tnm-m-cppraefix</code> wurden durch den gemeinsamen SearchParameter <code class="language-plaintext highlighter-rouge">mii-sp-onko-observation-tnm-cp-praefix</code> (Code <code class="language-plaintext highlighter-rouge">tnm-cp-praefix</code>) ersetzt. Die Extension existiert genau einmal auf <code class="language-plaintext highlighter-rouge">Observation.code</code>; die Unterscheidung zwischen T-, N- und M-Kategorie erfolgt über den Kategorie-Code der Observation (Kombination mit dem SearchParameter <code class="language-plaintext highlighter-rouge">code</code>).</li>
 </ul>
 
-<h3 id="weitere-verbesserungen">Weitere Verbesserungen</h3>
+<h3 id="weitere-verbesserungen-1">Weitere Verbesserungen</h3>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">note</code> <strong>Known Issue — ~4.100 ATC-QA-Meldungen sind ein Publisher-Bug, keine ungültigen Codes</strong>: Der IG Publisher validiert enumerierte ValueSet-Codes über einen <code class="language-plaintext highlighter-rouge">$batch-validate-code</code>-Dialekt ohne <code class="language-plaintext highlighter-rouge">url</code>-Parameter je Validierung; der MII-Terminologieserver lehnt jede Anfrage korrekt ab („must specify either valueSet or url"), was der Publisher als „code not valid in the value set 'null'" meldet. Die Codes sind serverseitig als gültig verifiziert (z. B. <code class="language-plaintext highlighter-rouge">L01XE01@2020</code> → Imatinib). Betrifft die Jahres-Substanzen-ValueSets und ATC-Übergangs-Maps; unverändert reproduziert mit Publisher 2.3.2 und 2.3.4, Upstream-Issue folgt.</li>
@@ -642,7 +653,7 @@ konkretem Migrationsweg:</p>
   <li><code class="language-plaintext highlighter-rouge">chore</code> Simplifier Build-Skript hinzugefügt und molgen Dependency aktualisiert</li>
 </ul>
 
-<h3 id="weitere-verbesserungen-1">Weitere Verbesserungen</h3>
+<h3 id="weitere-verbesserungen-2">Weitere Verbesserungen</h3>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">improve</code> Dinatriumfolinat/Natriumfolinat zu Systemische Therapie Substanzen ValueSets hinzugefügt: UNII-Code für Leucovorin Sodium (4MXU9LJS4Q) und ATC-Code V03AF06 (Natriumfolinat). Dokumentation auf Terminologie-Seite aktualisiert. [<a href="https://hl7germany.atlassian.net/browse/HDB-628">HDB-628</a>]</li>
@@ -975,7 +986,7 @@ konkretem Migrationsweg:</p>
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.onkologie#2027.0.0-ballot.1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Mon, Oct 19, 2026 22:30+0000">2026-10-19</span>
+          Erstellt <span title="Mon, Oct 19, 2026 23:12+0000">2026-10-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.
