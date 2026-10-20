@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-allgemeiner-leistungszustand-ecog-loinc | *Version*:2027.0.0-ballot.1 |
-| Active Stand: 2026-10-14 | *Maschinenlesbarer Name*:MII_VS_Onko_Allgemeiner_Leistungszustand_ECOG_LOINC |
+| Active Stand: 2026-10-20 | *Maschinenlesbarer Name*:MII_VS_Onko_Allgemeiner_Leistungszustand_ECOG_LOINC |
 
  
 LOINC-Answer-Codes für den ECOG Performance Status. Enumerierte Fassung der LOINC-Answer-List LL529-9. 
@@ -171,7 +171,7 @@ LOINC-Answer-Codes für den ECOG Performance Status. Enumerierte Fassung der LOI
   "title" : "MII VS Onkologie Allgemeiner Leistungszustand ECOG LOINC",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-10-14T10:24:16+00:00",
+  "date" : "2026-10-20T00:05:45+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

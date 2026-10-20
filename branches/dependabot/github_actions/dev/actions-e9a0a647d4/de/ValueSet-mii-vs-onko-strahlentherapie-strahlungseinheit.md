@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-strahlungseinheit | *Version*:2027.0.0-ballot.1 |
-| Active Stand: 2026-10-14 | *Maschinenlesbarer Name*:MII_VS_Onko_Strahlentherapie_Strahlungseinheit |
+| Active Stand: 2026-10-20 | *Maschinenlesbarer Name*:MII_VS_Onko_Strahlentherapie_Strahlungseinheit |
 
  
 oBDS-spezifisches ValueSet für Strahlungseinheit en für Strahlen- und Nuklearmedizinische Therapie 
@@ -174,7 +174,7 @@ No Expansion for this valueset (Unsupported Code System Version)
   "title" : "MII VS Onkologie Strahlentherapie Strahlungseinheit",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-10-14T10:24:16+00:00",
+  "date" : "2026-10-20T00:05:45+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

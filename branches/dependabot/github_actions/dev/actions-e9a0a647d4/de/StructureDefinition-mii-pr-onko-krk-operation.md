@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-operation | *Version*:2027.0.0-ballot.1 |
-| Active Stand: 2026-10-14 | *Maschinenlesbarer Name*:MII_PR_Onko_KRK_Operation |
+| Active Stand: 2026-10-20 | *Maschinenlesbarer Name*:MII_PR_Onko_KRK_Operation |
 
  
 Das vorliegende Profil beschreibt eine radiologisch durchgeführte Markierung von Tumorgewebe mittels der Brust. Dabei können verschiedene Methoden gewählt werden. Die 
@@ -293,7 +293,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "title" : "MII PR Onkologie Präoperative Drahtmarkierung Mamma",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-10-14T10:24:16+00:00",
+  "date" : "2026-10-20T00:05:45+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

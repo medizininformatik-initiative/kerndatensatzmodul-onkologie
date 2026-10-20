@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-praedispositionssyndrome-orpha | *Version*:2027.0.0-ballot.1 |
-| Active Stand: 2026-10-14 | *Maschinenlesbarer Name*:MII_VS_Onko_Praedispositionssyndrome_ORPHA |
+| Active Stand: 2026-10-20 | *Maschinenlesbarer Name*:MII_VS_Onko_Praedispositionssyndrome_ORPHA |
 
  
 Krebsprädispositionssyndrome der §65c-Liste (Manual Plus, Krebsprädispositionssyndrom und -gen) als Orphanet-Codes. Begleitartefakt ohne Profil-Binding (Andockung an die genetischen Profile folgt mit dem Konzept für genetische Marker); 15 genspezifische Prädispositionen der Quell-Liste haben kein Orphanet-Konzept und sind über das Gen-ValueSet mii-vs-onko-praedispositionsgene-hgnc adressierbar. Projektseitige Code-Auflösung ohne Gewähr; fachliche Prüfung vor Produktivnutzung erforderlich. 
@@ -171,7 +171,7 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
   "title" : "MII VS Onkologie Krebsprädispositionssyndrome ORPHA",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-10-14T10:24:16+00:00",
+  "date" : "2026-10-20T00:05:45+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

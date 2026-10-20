@@ -7,6 +7,12 @@
 
 Hier sind alle Änderungen aufgelistet.
 
+## Änderungen seit v2027.0.0-ballot.1 (noch nicht veröffentlicht)
+
+### Weitere Verbesserungen
+
+* `documentation` **ICD-O-4 auf der Seite [ICD-O-Terminologie](icd-o-terminologie.md) beschrieben**: Auswertung der IARC-Tabellen vom 16.07.2026 — fünfstellige, alphanumerische Morphologie-Codes (`XXXXY/B`, fünfte Stelle `0`–`9` und `A`–`K`), Änderungstabelle gegenüber ICD-O-3.2 (109 neue Stamm-Dignitäts-Kombinationen, 1.175 neue Subcodes, 29 gestrichene Codes, 19 Stammwechsel, 24 Dignitätswechsel, 935 Termänderungen), Überleitungsregel 3.2 → 4 mit den 38 nicht per angehängter `0` überleitbaren Codes, optionale vierstellige Topographie, Folgen für oBDS-XSD und FHIR-Artefakte. Keine ICD-O-4-Artefakte, da die deutsche BfArM-Ausgabe aussteht; Aufnahme in das oBDS voraussichtlich erst mit oBDS 4.0.
+
 ## Änderungen v2027.0.0-ballot.1 (Ballot, Dependency-Patch)
 
 * **`kerndatensatz.molgen` auf `2027.0.0-ballot.1` gehoben**: molgens eigener Dependency-Hygiene-Patch (dessen ballot zog transitiv noch meta rc3 / base rc1 / biobank rc2; keine strukturellen Änderungen — alle StructureDefinitions als identisch verifiziert). Der Abhängigkeitsbaum dieses Moduls liegt damit einheitlich auf der plain-Ballot-Linie. Keine inhaltlichen Änderungen in diesem Modul.

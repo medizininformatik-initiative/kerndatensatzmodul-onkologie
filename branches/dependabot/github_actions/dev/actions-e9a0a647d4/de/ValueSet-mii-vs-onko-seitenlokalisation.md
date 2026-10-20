@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-seitenlokalisation | *Version*:2027.0.0-ballot.1 |
-| Active Stand: 2026-10-14 | *Maschinenlesbarer Name*:MII_VS_Onko_Seitenlokalisation |
+| Active Stand: 2026-10-20 | *Maschinenlesbarer Name*:MII_VS_Onko_Seitenlokalisation |
 
  
 Codes für Seitenlokalisation, d.h. organspezifische Angabe der betroffenen Seite. 
@@ -173,7 +173,7 @@ Codes für Seitenlokalisation, d.h. organspezifische Angabe der betroffenen Seit
   "title" : "MII VS Onkologie Primärtumor Seitenlokalisation",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-10-14T10:24:16+00:00",
+  "date" : "2026-10-20T00:05:45+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention | *Version*:2027.0.0-ballot.1 |
-| Active as of 2026-10-14 | *Computable Name*:MII_CS_Onko_Intention |
+| Active as of 2026-10-20 | *Computable Name*:MII_CS_Onko_Intention |
 
  
 oBDS-spezifisches Codesystem für Klassifikation von Intention der OP, der Strahlentherapie und der Systemischen Therapie. 
@@ -162,7 +162,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "MII CS Onkologie Intention",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-10-14T10:24:16+00:00",
+  "date" : "2026-10-20T00:05:45+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

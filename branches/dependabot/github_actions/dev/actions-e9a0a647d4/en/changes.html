@@ -340,6 +340,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
+  <li><a href="#changes-since-v202700-ballot1-unreleased" id="markdown-toc-changes-since-v202700-ballot1-unreleased">Changes since v2027.0.0-ballot.1 (unreleased)</a></li>
   <li><a href="#changes-v202700-ballot1-ballot-dependency-patch" id="markdown-toc-changes-v202700-ballot1-ballot-dependency-patch">Changes v2027.0.0-ballot.1 (ballot, dependency patch)</a></li>
   <li><a href="#changes-v202700-ballot-ballot" id="markdown-toc-changes-v202700-ballot-ballot">Changes v2027.0.0-ballot (ballot)</a></li>
   <li><a href="#changes-v202700-ballotrc2-ballot-candidate" id="markdown-toc-changes-v202700-ballotrc2-ballot-candidate">Changes v2027.0.0-ballot.rc2 (ballot candidate)</a></li>
@@ -356,6 +357,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>All changes to this module are listed here. The complete, detailed release
 history is maintained in the German edition of this page; the current release
 cycle is translated in full below.</p>
+
+<h3 id="changes-since-v202700-ballot1-unreleased">Changes since v2027.0.0-ballot.1 (unreleased)</h3>
+
+<h4 id="further-improvements">Further Improvements</h4>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">documentation</code> <strong>ICD-O-4 described on the page <a href="icd-o-terminologie.html">ICD-O Terminology</a></strong>: analysis of the IARC tables of 16 July 2026 — five-character, alphanumeric morphology codes (<code class="language-plaintext highlighter-rouge">XXXXY/B</code>, fifth character <code class="language-plaintext highlighter-rouge">0</code>–<code class="language-plaintext highlighter-rouge">9</code> and <code class="language-plaintext highlighter-rouge">A</code>–<code class="language-plaintext highlighter-rouge">K</code>), change table against ICD-O-3.2 (109 new stem/behaviour combinations, 1,175 new sub-codes, 29 deleted codes, 19 stem changes, 24 behaviour changes, 935 term changes), transition rule 3.2 → 4 with the 38 codes that cannot be transitioned by appending <code class="language-plaintext highlighter-rouge">0</code>, optional four-digit topography, consequences for the oBDS XSD and the FHIR artefacts. No ICD-O-4 artefacts, since the German BfArM edition is still pending; adoption in the oBDS is expected only with oBDS 4.0.</li>
+</ul>
 
 <h3 id="changes-v202700-ballot1-ballot-dependency-patch">Changes v2027.0.0-ballot.1 (ballot, dependency patch)</h3>
 
@@ -441,7 +449,7 @@ migration path:</p>
   <li><code class="language-plaintext highlighter-rouge">refactor</code> <strong>SearchParameter for the c/p/u prefix consolidated</strong>: The three defective SearchParameters <code class="language-plaintext highlighter-rouge">tnm-t-cppraefix</code>, <code class="language-plaintext highlighter-rouge">tnm-n-cppraefix</code> and <code class="language-plaintext highlighter-rouge">tnm-m-cppraefix</code> were replaced by the shared SearchParameter <code class="language-plaintext highlighter-rouge">mii-sp-onko-observation-tnm-cp-praefix</code> (code <code class="language-plaintext highlighter-rouge">tnm-cp-praefix</code>). The extension exists exactly once on <code class="language-plaintext highlighter-rouge">Observation.code</code>; the distinction between T, N and M category is made via the observation's category code (combination with the <code class="language-plaintext highlighter-rouge">code</code> SearchParameter).</li>
 </ul>
 
-<h4 id="further-improvements">Further improvements</h4>
+<h4 id="further-improvements-1">Further improvements</h4>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">note</code> <strong>Known issue — ~4,100 ATC QA messages are a Publisher bug, not invalid codes</strong>: the IG Publisher validates enumerated value-set codes via a <code class="language-plaintext highlighter-rouge">$batch-validate-code</code> dialect that omits the <code class="language-plaintext highlighter-rouge">url</code> parameter per validation; the MII terminology server correctly rejects each request ("must specify either valueSet or url"), which the Publisher then reports as "code not valid in the value set 'null'". The codes are server-verified as valid (e.g. <code class="language-plaintext highlighter-rouge">L01XE01@2020</code> → Imatinib). Affects the annual substance value sets and ATC transition maps; reproduced unchanged with Publisher 2.3.2 and 2.3.4, upstream issue pending.</li>
@@ -517,7 +525,7 @@ page.</p>
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.onkologie#2027.0.0-ballot.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Wed, Oct 14, 2026 10:24+0000">2026-10-14</span>
+          Generated <span title="Tue, Oct 20, 2026 00:05+0000">2026-10-20</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

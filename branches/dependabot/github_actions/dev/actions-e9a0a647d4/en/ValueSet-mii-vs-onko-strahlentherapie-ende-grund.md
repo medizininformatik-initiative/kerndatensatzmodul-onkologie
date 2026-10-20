@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-ende-grund | *Version*:2027.0.0-ballot.1 |
-| Active as of 2026-10-14 | *Computable Name*:MII_VS_Onko_Strahlentherapie_Ende_Grund |
+| Active as of 2026-10-20 | *Computable Name*:MII_VS_Onko_Strahlentherapie_Ende_Grund |
 
  
 oBDS-spezifisches ValueSet für Klassifikation des Grundes der Beendigung der Strahlentherapie 
@@ -171,7 +171,7 @@ oBDS-spezifisches ValueSet für Klassifikation des Grundes der Beendigung der St
   "title" : "MII VS Onkologie Strahlentherapie Ende Grund",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-10-14T10:24:16+00:00",
+  "date" : "2026-10-20T00:05:45+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

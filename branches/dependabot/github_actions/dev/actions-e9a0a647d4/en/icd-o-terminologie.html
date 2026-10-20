@@ -345,7 +345,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#transition-of-legacy-data" id="markdown-toc-transition-of-legacy-data">Transition of Legacy Data</a></li>
   <li><a href="#validation-revisions-are-separate-codesystem-resources" id="markdown-toc-validation-revisions-are-separate-codesystem-resources">Validation: Revisions Are Separate CodeSystem Resources</a></li>
   <li><a href="#technical-artifacts" id="markdown-toc-technical-artifacts">Technical Artifacts</a></li>
-  <li><a href="#outlook-icd-o-4" id="markdown-toc-outlook-icd-o-4">Outlook: ICD-O-4</a></li>
+  <li><a href="#icd-o-4-new-structure-and-changes-compared-with-icd-o-32" id="markdown-toc-icd-o-4-new-structure-and-changes-compared-with-icd-o-32">ICD-O-4: New Structure and Changes Compared with ICD-O-3.2</a></li>
 </ul>
 
 </div>
@@ -493,16 +493,160 @@ quality, ETL) the per-year ValueSets are available.</p>
   </tbody>
 </table>
 
-<h3 id="outlook-icd-o-4">Outlook: ICD-O-4</h3>
+<h3 id="icd-o-4-new-structure-and-changes-compared-with-icd-o-32">ICD-O-4: New Structure and Changes Compared with ICD-O-3.2</h3>
 
-<p>IARC published the final tables of <strong>ICD-O-4</strong> in early 2026 (WHO Classification
-of Tumours Online): a new morphology structure with <strong>five-digit</strong> morphology
-codes based on the 5th edition of the WHO Blue Books, harmonised with ICD-11.
-The book is in preparation; a German edition by the BfArM as well as a migration
-roadmap of the cancer registries are still pending. As soon as a German ICD-O-4
-is published it will be integrated following the pattern established here:
-a revision-specific ValueSet plus a transition ConceptMap — whereby the move to
-five-digit codes will be a structurally larger step than the previous revisions.</p>
+<p>IARC presented <strong>ICD-O-4</strong> in early 2026 (Znaor et al., <em>Cancer Epidemiology</em>,
+online 22 January 2026) and released the final topography and morphology tables
+in July 2026 via <em>WHO Classification of Tumours Online</em>. ICD-O-4 is based on the
+5th edition of the WHO Blue Books (including the molecularly defined entities)
+and is harmonised with ICD-11. The book is in preparation at WHO; a <strong>German
+edition by the BfArM</strong> as well as a migration roadmap for the cancer registries
+and the oBDS are still pending. The description below is based on an analysis
+of the English IARC tables (<code class="language-plaintext highlighter-rouge">ICD-O-4.xlsx</code>, <code class="language-plaintext highlighter-rouge">Morphology_annexes.xlsx</code>,
+<code class="language-plaintext highlighter-rouge">Topography_annexes.xlsx</code>, as of 16 July 2026); the figures are derived from
+them and are not official IARC statements.</p>
+
+<h4 id="morphology-five-character-codes">Morphology: Five-Character Codes</h4>
+
+<p>The morphology code is extended from <code class="language-plaintext highlighter-rouge">XXXX/B</code> to <strong><code class="language-plaintext highlighter-rouge">XXXXY/B</code></strong>:</p>
+
+<ul>
+  <li>The first four characters correspond to the previous ICD-O-3 code; the
+behaviour digit <code class="language-plaintext highlighter-rouge">/B</code> is unchanged (<code class="language-plaintext highlighter-rouge">/0</code>, <code class="language-plaintext highlighter-rouge">/1</code>, <code class="language-plaintext highlighter-rouge">/2</code>, <code class="language-plaintext highlighter-rouge">/3</code>, <code class="language-plaintext highlighter-rouge">/6</code>, <code class="language-plaintext highlighter-rouge">/9</code>).</li>
+  <li>The <strong>fifth character <code class="language-plaintext highlighter-rouge">Y</code></strong> distinguishes entities that ICD-O-3 grouped under
+one code as <em>related terms</em>. <code class="language-plaintext highlighter-rouge">Y = 0</code> is the generic successor of the ICD-O-3
+code (<code class="language-plaintext highlighter-rouge">8140/3</code> → <code class="language-plaintext highlighter-rouge">81400/3</code>); <code class="language-plaintext highlighter-rouge">1</code>–<code class="language-plaintext highlighter-rouge">9</code> are sub-entities. Once the digits are
+exhausted, <strong>letters</strong> follow (<code class="language-plaintext highlighter-rouge">A</code>–<code class="language-plaintext highlighter-rouge">K</code>, without <code class="language-plaintext highlighter-rouge">I</code>), e.g. <code class="language-plaintext highlighter-rouge">8140A/3</code>…<code class="language-plaintext highlighter-rouge">8140G/3</code>,
+<code class="language-plaintext highlighter-rouge">9680A/3</code>…<code class="language-plaintext highlighter-rouge">9680K/3</code>. The code is therefore alphanumeric and no longer purely
+numeric.</li>
+  <li>Scope: about <strong>2,390 codes</strong> (ICD-O-3.2: 1,143) on 842 four-character stems;
+roughly half of the codes have a fifth character ≠ 0. The most strongly
+expanded stems are <code class="language-plaintext highlighter-rouge">8770</code> (Spitz tumours, 34 codes), <code class="language-plaintext highlighter-rouge">8140</code> (adenocarcinomas,
+24), <code class="language-plaintext highlighter-rouge">8720</code> (melanomas, 24), <code class="language-plaintext highlighter-rouge">9680</code> (DLBCL, 21), <code class="language-plaintext highlighter-rouge">9120</code>
+(haemangiomas/angiosarcomas, 19) and <code class="language-plaintext highlighter-rouge">9385</code> (diffuse gliomas, 16).</li>
+  <li>The table structure is unchanged from ICD-O-3.2: term levels <em>Preferred</em>,
+<em>Synonym</em>, <em>Related</em>, group headings (levels 1–3), a <em>Code reference</em> column
+with topography restriction (e.g. <code class="language-plaintext highlighter-rouge">(C73.9)</code>), and the <code class="language-plaintext highlighter-rouge">[obs]</code> marker for
+obsolete terms (455 terms).</li>
+</ul>
+
+<p>Changes on the morphology axis according to the IARC annexes:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type of change</th>
+      <th>Scope</th>
+      <th>Examples</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>New four-character combinations (stem + behaviour new)</td>
+      <td>109 codes</td>
+      <td><code class="language-plaintext highlighter-rouge">80040/1</code> spindle cell tumour of uncertain malignant potential, <code class="language-plaintext highlighter-rouge">80850/2</code> squamous cell carcinoma in situ, HPV-associated</td>
+    </tr>
+    <tr>
+      <td>New sub-codes (fifth character ≠ 0 under an existing stem)</td>
+      <td>1,175 codes</td>
+      <td><code class="language-plaintext highlighter-rouge">80202/3</code> anaplastic thyroid carcinoma, <code class="language-plaintext highlighter-rouge">88421/3</code> pulmonary myxoid sarcoma with EWSR1::CREB1</td>
+    </tr>
+    <tr>
+      <td>Deleted ICD-O-3.2 codes</td>
+      <td>29 codes</td>
+      <td>28 of them "terms moved" to another stem, <code class="language-plaintext highlighter-rouge">8150/0</code> without successor (no benign pancreatic NET any more)</td>
+    </tr>
+    <tr>
+      <td>Stem changes (terms under a new four-character stem)</td>
+      <td>19 → 17 codes</td>
+      <td><code class="language-plaintext highlighter-rouge">8042/3</code>, <code class="language-plaintext highlighter-rouge">8043/3</code>, <code class="language-plaintext highlighter-rouge">8044/3</code> → <code class="language-plaintext highlighter-rouge">80410/3</code> (small cell variants merged), <code class="language-plaintext highlighter-rouge">8081/2</code> Bowen disease → <code class="language-plaintext highlighter-rouge">80700/2</code>, <code class="language-plaintext highlighter-rouge">9440/3</code> diffuse midline glioma → <code class="language-plaintext highlighter-rouge">93850/3</code>, <code class="language-plaintext highlighter-rouge">9727/3</code> → <code class="language-plaintext highlighter-rouge">98350/3</code>, <code class="language-plaintext highlighter-rouge">9014</code>/<code class="language-plaintext highlighter-rouge">9015</code> adenofibromas → <code class="language-plaintext highlighter-rouge">8441</code>/<code class="language-plaintext highlighter-rouge">8442</code>/<code class="language-plaintext highlighter-rouge">8472</code></td>
+    </tr>
+    <tr>
+      <td>Behaviour changes</td>
+      <td>48 terms, 24 codes</td>
+      <td><code class="language-plaintext highlighter-rouge">0 → 3</code> (16): pituitary adenomas <code class="language-plaintext highlighter-rouge">8271/0</code>, <code class="language-plaintext highlighter-rouge">8272/0</code>, <code class="language-plaintext highlighter-rouge">8280/0</code>, <code class="language-plaintext highlighter-rouge">8281/0</code>, <code class="language-plaintext highlighter-rouge">8300/0</code> become PitNET <code class="language-plaintext highlighter-rouge">/3</code>; <code class="language-plaintext highlighter-rouge">1 → 3</code> (10): apudoma <code class="language-plaintext highlighter-rouge">8248/1</code>, chondrosarcoma grade 1 <code class="language-plaintext highlighter-rouge">9222/1</code>, melanotic schwannoma <code class="language-plaintext highlighter-rouge">9560/1</code> → <code class="language-plaintext highlighter-rouge">95401/3</code>; <code class="language-plaintext highlighter-rouge">3 → 1</code> (7): keratoacanthoma <code class="language-plaintext highlighter-rouge">8071/3</code> → <code class="language-plaintext highlighter-rouge">80710/1</code>, eosinophilic granuloma <code class="language-plaintext highlighter-rouge">9751/3</code> → <code class="language-plaintext highlighter-rouge">97510/1</code>; <code class="language-plaintext highlighter-rouge">0 → 1</code> (10): pancreatic microadenoma <code class="language-plaintext highlighter-rouge">8150/0</code> → <code class="language-plaintext highlighter-rouge">81500/1</code>; <code class="language-plaintext highlighter-rouge">3 → 0</code>: cylindroma <code class="language-plaintext highlighter-rouge">8200/3</code> → <code class="language-plaintext highlighter-rouge">82000/0</code>; <code class="language-plaintext highlighter-rouge">1 → 2</code>: <code class="language-plaintext highlighter-rouge">8480/1</code> → <code class="language-plaintext highlighter-rouge">84800/2</code></td>
+    </tr>
+    <tr>
+      <td>New terms</td>
+      <td>1,848 terms at 1,301 codes</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>Changed terms</td>
+      <td>935 terms</td>
+      <td>540× US → WHO spelling (<em>tumor</em> → <em>tumour</em>, <em>leukemia</em> → <em>leukaemia</em>), 130× WHO style, 120× addition of "NOS", 23× genomic nomenclature (fusions now <code class="language-plaintext highlighter-rouge">BCR::ABL1</code> instead of <code class="language-plaintext highlighter-rouge">BCR-ABL1</code>)</td>
+    </tr>
+    <tr>
+      <td>Deleted terms</td>
+      <td>23 terms</td>
+      <td>ambiguous or no longer recognised terms, e.g. <em>Bronchial adenoma, NOS</em>, <em>Diffuse astrocytoma, IDH-wildtype</em></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Transition ICD-O-3.2 → ICD-O-4.</strong> For 1,105 of the 1,143 codes of the Second
+Revision the successor is the code with an appended <code class="language-plaintext highlighter-rouge">0</code> and the same
+behaviour. 38 codes cannot be transitioned this way: 27 were deleted or moved
+to another stem (see table), 11 were <strong>renumbered within their stem</strong> because
+position <code class="language-plaintext highlighter-rouge">0</code> went to a different entity (<code class="language-plaintext highlighter-rouge">8121/1</code> → <code class="language-plaintext highlighter-rouge">81211/1</code>, <code class="language-plaintext highlighter-rouge">8163/2</code> →
+<code class="language-plaintext highlighter-rouge">81631/2</code>, <code class="language-plaintext highlighter-rouge">8261/2</code> → <code class="language-plaintext highlighter-rouge">82611/2</code>, <code class="language-plaintext highlighter-rouge">8263/2</code> → <code class="language-plaintext highlighter-rouge">82632/2</code>, <code class="language-plaintext highlighter-rouge">8453/2</code> → <code class="language-plaintext highlighter-rouge">84531/2</code>,
+<code class="language-plaintext highlighter-rouge">8453/3</code> → <code class="language-plaintext highlighter-rouge">84531/3</code>, <code class="language-plaintext highlighter-rouge">8631/0</code> → <code class="language-plaintext highlighter-rouge">86311/0</code>, <code class="language-plaintext highlighter-rouge">8631/3</code> → <code class="language-plaintext highlighter-rouge">86311/3</code>, <code class="language-plaintext highlighter-rouge">9538/3</code> →
+<code class="language-plaintext highlighter-rouge">95383/3</code>, <code class="language-plaintext highlighter-rouge">9591/1</code> → <code class="language-plaintext highlighter-rouge">95911/1</code>, <code class="language-plaintext highlighter-rouge">8210/2</code> → <code class="language-plaintext highlighter-rouge">82111/2</code>). In addition there are
+the behaviour changes, where the appended code exists but carries a different
+behaviour. Naively appending a <code class="language-plaintext highlighter-rouge">0</code> is therefore not sufficient as an ETL rule;
+the transition needs a ConceptMap following the pattern of
+<a href="ConceptMap-mii-cm-onko-icdo3-transitions-2019.html"><code class="language-plaintext highlighter-rouge">mii-cm-onko-icdo3-transitions-2019</code></a>.</p>
+
+<h4 id="topography-stem-codes-unchanged-optional-fourth-digit">Topography: Stem Codes Unchanged, Optional Fourth Digit</h4>
+
+<p>The three-character topography codes with one decimal (<code class="language-plaintext highlighter-rouge">C00.0</code>–<code class="language-plaintext highlighter-rouge">C80.9</code>, 337
+codes) are retained. New are:</p>
+
+<ul>
+  <li><strong>Optional four-digit codes</strong> <code class="language-plaintext highlighter-rouge">CXX.YZ</code> (381 codes) for selected sites; <code class="language-plaintext highlighter-rouge">Z = 0</code>
+is the default, 44 codes have <code class="language-plaintext highlighter-rouge">Z ≠ 0</code>: caecum/ileocaecal valve (<code class="language-plaintext highlighter-rouge">C18.01</code>,
+<code class="language-plaintext highlighter-rouge">C18.02</code>), soft tissues and peripheral nerves by trunk/limb/viscera
+(<code class="language-plaintext highlighter-rouge">C47.31</code>–<code class="language-plaintext highlighter-rouge">C47.53</code>, <code class="language-plaintext highlighter-rouge">C49.31</code>–<code class="language-plaintext highlighter-rouge">C49.52</code>), urethra (<code class="language-plaintext highlighter-rouge">C68.02</code> Littré gland,
+<code class="language-plaintext highlighter-rouge">C68.03</code> prostatic urethra), eye (<code class="language-plaintext highlighter-rouge">C69.4x</code>, <code class="language-plaintext highlighter-rouge">C69.5x</code>), brain stem (<code class="language-plaintext highlighter-rouge">C71.70</code>),
+thyroid/thyroglossal duct (<code class="language-plaintext highlighter-rouge">C73.90</code>), <code class="language-plaintext highlighter-rouge">C76.01</code> <em>Head and neck neoplasm,
+primary site unknown</em>.</li>
+  <li><strong>New codes</strong> by splitting: <code class="language-plaintext highlighter-rouge">C06.3</code> minor salivary gland (from <code class="language-plaintext highlighter-rouge">C06.9</code>),
+<code class="language-plaintext highlighter-rouge">C16.7</code> oesophagogastric junction (from <code class="language-plaintext highlighter-rouge">C16.0</code>), <code class="language-plaintext highlighter-rouge">C21.3</code> perianal skin (from
+<code class="language-plaintext highlighter-rouge">C44.5</code>), <code class="language-plaintext highlighter-rouge">C24.1</code> sphincter of Oddi, <code class="language-plaintext highlighter-rouge">C24.2</code> distal, <code class="language-plaintext highlighter-rouge">C24.3</code> perihilar
+(Klatskin) and <code class="language-plaintext highlighter-rouge">C24.4</code> cystic duct (all from <code class="language-plaintext highlighter-rouge">C24.0</code>), <code class="language-plaintext highlighter-rouge">C68.1</code> Skene gland;
+<code class="language-plaintext highlighter-rouge">C71.0</code> takes over the suprasellar region, corpus callosum and tapetum from
+<code class="language-plaintext highlighter-rouge">C71.8</code>/<code class="language-plaintext highlighter-rouge">C71.9</code>.</li>
+  <li><strong>Term changes</strong>: WHO spelling (<em>caecum</em>, <em>oesophagus</em>, <em>coeliac</em>), <code class="language-plaintext highlighter-rouge">C80.9</code> is
+now <em>Primary site unspecified</em>, alongside <code class="language-plaintext highlighter-rouge">C80.0</code>/<code class="language-plaintext highlighter-rouge">C80.00</code> <em>Primary site
+unknown, so stated</em>; <code class="language-plaintext highlighter-rouge">C72.4</code> gains <em>Vestibulocochlear nerve</em>.</li>
+  <li>New presentation levels <em>Related list</em>/<em>Bullet</em> for enumerations ("Skin of:
+cheek, chin, …").</li>
+</ul>
+
+<h4 id="consequences-for-the-obds-and-this-module">Consequences for the oBDS and This Module</h4>
+
+<ul>
+  <li><strong>oBDS</strong>: the XSD (v3.0.5) enforces the pattern <code class="language-plaintext highlighter-rouge">\d\d\d\d/\d</code> for
+<code class="language-plaintext highlighter-rouge">Morphologie_ICD_O/Code</code> and only knows <code class="language-plaintext highlighter-rouge">31</code>, <code class="language-plaintext highlighter-rouge">32</code>, <code class="language-plaintext highlighter-rouge">33</code> as <code class="language-plaintext highlighter-rouge">Version</code>;
+five-character, alphanumeric codes therefore cannot be reported. The
+topography pattern (<code class="language-plaintext highlighter-rouge">C\d\d\.\d(\d)?</code>) already admits the optional fourth
+digit.</li>
+  <li><strong>FHIR</strong>: the ICD-O-3 artefacts of this module (extension
+<code class="language-plaintext highlighter-rouge">mii-ex-onko-histology-morphology-behavior-icdo3</code>, ValueSets
+<code class="language-plaintext highlighter-rouge">mii-vs-onko-icdo3-*</code>, canonical <code class="language-plaintext highlighter-rouge">http://terminology.hl7.org/CodeSystem/icd-o-3</code>)
+are bound to the third edition by name and by <code class="language-plaintext highlighter-rouge">system</code>. ICD-O-4 will need its
+own CodeSystem (canonical not yet defined), its own revision-specific
+ValueSets and a transition ConceptMap <code class="language-plaintext highlighter-rouge">3.2 → 4</code> following the pattern
+established above; a union ValueSet across editions is not meaningful because
+of the different code syntax. Validation and ETL rules that check for four
+digits plus behaviour must be extended to the alphanumeric pattern
+<code class="language-plaintext highlighter-rouge">[0-9]{4}[0-9A-K]/[0-9]</code>.</li>
+  <li><strong>Timeline</strong>: open. Because of the changed code pattern, adopting ICD-O-4 in
+the oBDS is not possible as a patch of the 3.0.x line and is expected to come
+with an <strong>oBDS version 4.0</strong>; no date is known. Until the German edition and
+the oBDS adaptation, ICD-O-3 (Second Revision) remains binding; this module
+does not anticipate any ICD-O-4 artefacts.</li>
+</ul>
 
 
 
@@ -529,7 +673,7 @@ five-digit codes will be a structurally larger step than the previous revisions.
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.onkologie#2027.0.0-ballot.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Wed, Oct 14, 2026 10:24+0000">2026-10-14</span>
+          Generated <span title="Tue, Oct 20, 2026 00:05+0000">2026-10-20</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

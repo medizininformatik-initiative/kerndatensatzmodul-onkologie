@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-icdo3-morphologie | *Version*:2027.0.0-ballot.1 |
-| Active Stand: 2026-10-14 | *Maschinenlesbarer Name*:MII_VS_Onko_ICDO3_Morphologie |
+| Active Stand: 2026-10-20 | *Maschinenlesbarer Name*:MII_VS_Onko_ICDO3_Morphologie |
 
  
 Codes für histologische Morphologie und Verhalten einer neoplastischen Veränderung 
@@ -174,7 +174,7 @@ No Expansion for this valueset (Unsupported Code System Version)
   "title" : "MII VS Onkologie ICD-O-3 Morphologie",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-10-14T10:24:16+00:00",
+  "date" : "2026-10-20T00:05:45+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
