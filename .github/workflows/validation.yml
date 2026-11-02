@@ -184,6 +184,12 @@ jobs:
       #     lacks the 'package' code every CRMI-annotated resource carries
       #     (hl7.terminology.r4 7.3.0 has it). Remove once SU-TermServ carries a
       #     current THO.
+      #   - CODESYSTEM_CS_SUPP_INVALID_CODE@CodeSystem.concept
+      #     The MedDRA supplement (mii-cs-onko-nebenwirkung-meddra-de): SU-TermServ
+      #     only has a MedDRA stub (version 3.0.0, no content), so the validator
+      #     cannot find ANY supplement concept in the base system (789 errors on
+      #     6.10.4, every concept incl. [0]). The IG Publisher does not report
+      #     this. Remove once SU-TermServ serves MedDRA with content.
       #   - Validation_VAL_Profile_Minimum@^<conformance resource> (root only)
       #     The CRMI publishable/shareable profiles require date/version. The
       #     IG Publisher fills both in; this job validates the raw fsh-generated/
