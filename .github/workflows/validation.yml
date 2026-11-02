@@ -161,7 +161,32 @@ jobs:
       # itself writes validation.json + validation.html + txlog.html whenever
       # the caller passes no -output (a caller-supplied -output replaces all
       # three and loses the HTML report and the terminology log).
-      JAVA_VALIDATION_OPTIONS: "-advisor-file advisor.json"
+      # -allow-example-urls: the examples use example.org identifier systems
+      # (dizmusterstadt.example.org, example.org/fhir/sid/...). The IG Publisher
+      # accepts those in examples; the bare CLI reports them as errors
+      # (TYPE_SPECIFIC_CHECKS_DT_URL_EXAMPLE) and, as a follow-on, fails every
+      # reference to such an example (Reference_REF_CantMatchChoice).
+      #
+      # advisor.json entries that exist ONLY because of this CLI run (not the
+      # IG Publisher), first run on the template pin 2026-11-02 (run 41463380032):
+      #   - VALUESET_INCLUDE_INVALID_CONCEPT_CODE*@^ValueSet.compose.include[n].concept[>=1]
+      #     The validator sends the 2nd..nth concept of a compose.include as one
+      #     $batch-validate-code request WITHOUT valueSet/url; Ontoserver rejects
+      #     it ("Type-level request to $validate-code must specify either valueSet
+      #     or url parameter"), so every such code is reported as invalid (5439
+      #     false errors here). concept[0] is validated normally and stays
+      #     visible. Same finding as kerndatensatz-basis; remove once the
+      #     validator or Ontoserver fixes the batch request (kerndatensatz-meta#251).
+      #   - Unknown_Code_in_Version@^<conformance resource>.extension[n]...coding[n].code
+      #     SU-TermServ serves artifact-version-policy-codes at THO 5.2.0, which
+      #     lacks the 'package' code every CRMI-annotated resource carries
+      #     (hl7.terminology.r4 7.3.0 has it). Remove once SU-TermServ carries a
+      #     current THO.
+      #   - Validation_VAL_Profile_Minimum@^<conformance resource> (root only)
+      #     The CRMI publishable/shareable profiles require date/version. The
+      #     IG Publisher fills both in; this job validates the raw fsh-generated/
+      #     output, where they are absent by design.
+      JAVA_VALIDATION_OPTIONS: "-advisor-file advisor.json -allow-example-urls true"
       VALIDATION_REPORT_FILTERS: |
         filename | messageId | detailsWildcard | location
     # Secret-name reconciliation: the MII reusable workflow declares
