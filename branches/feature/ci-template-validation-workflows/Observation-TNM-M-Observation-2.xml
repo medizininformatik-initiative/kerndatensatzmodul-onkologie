@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="TNM-M-Observation-2"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-kategorie"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Observation TNM-M-Observation-2</b></p><a name="TNM-M-Observation-2"> </a><a name="hcTNM-M-Observation-2"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-tnm-m-kategorie.html">MII PR Onkologie TNM M-Kategorie</a></p></div><p><b>partOf</b>: <a href="Procedure-PatientKimMusterperson-Procedure-4.html">Procedure Laparotomy (procedure)</a></p><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 371497001}">pM category (observable entity)</span></p><p><b>subject</b>: <a href="Patient-PatientKimMusterperson.html">Kim Musterperson  (no stated gender), DoB: 1956-03-14</a></p><p><b>effective</b>: 2021-06-22</p><p><b>value</b>: <span title="Codes:{https://www.uicc.org/resources/tnm M1b}">M1b</span></p><p><b>method</b>: <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version 8}">8. Auflage</span></p></div><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Observation TNM-M-Observation-2</b></p><a name="de-TNM-M-Observation-2"> </a><a name="de-hcTNM-M-Observation-2"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-tnm-m-kategorie.html">MII PR Onkologie TNM M-Kategorie</a></p></div><p><b>partOf</b>: <a href="Procedure-PatientKimMusterperson-Procedure-4.html">Procedure Laparotomy (procedure)</a></p><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 371497001}">pM category (observable entity)</span></p><p><b>subject</b>: <a href="Patient-PatientKimMusterperson.html">Kim Musterperson  (no stated gender), DoB: 1956-03-14</a></p><p><b>effective</b>: 2021-06-22</p><p><b>value</b>: <span title="Codes:{https://www.uicc.org/resources/tnm M1b}">M1b</span></p><p><b>method</b>: <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version 8}">8. Auflage</span></p></div></div>
+  </text>
+  <partOf>
+    <reference value="Procedure/PatientKimMusterperson-Procedure-4"/>
+  </partOf>
+  <status value="final"/>
+  <code>
+    <extension url="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix">
+      <valueCodeableConcept>
+        <coding>
+          <system value="https://www.uicc.org/resources/tnm"/>
+          <code value="p"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="371497001"/>
+      <display value="pM category (observable entity)"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/PatientKimMusterperson"/>
+  </subject>
+  <effectiveDateTime value="2021-06-22"/>
+  <valueCodeableConcept>
+    <coding>
+      <system value="https://www.uicc.org/resources/tnm"/>
+      <code value="M1b"/>
+    </coding>
+  </valueCodeableConcept>
+  <method>
+    <coding>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version"/>
+      <code value="8"/>
+      <display value="8. Auflage"/>
+    </coding>
+  </method>
+</Observation>

@@ -1,0 +1,5 @@
+<!-- TODO:REVIEW machine translation of source page ConceptMap-mii-cm-onko-allgemeiner-leistungszustand-sct-intro.md (de) -->
+<!-- DERIVED:bridge source=MIIIGModulOnkologie/TechnischeImplementierung/oBDS-SNOMED-CT-Mapping/Allgemeiner-Leistungszustand.page.md gate=B -->
+<!-- TODO:REVIEW The source page consisted solely of an FQL block that generated the mapping table (oBDS coding, oBDS label, SNOMED CT id, SNOMED CT name, equivalence level, comment). The IG Publisher renders this table itself; the sentence below is newly formulated and needs to be confirmed. -->
+> This ConceptMap maps the oBDS coding of the general performance status to SNOMED CT. The rendering below lists, for each entry, the oBDS coding and its label, the SNOMED CT code and its name, as well as the equivalence level and a comment.
+{: .ig-highlight .ig-highlight-grey}
