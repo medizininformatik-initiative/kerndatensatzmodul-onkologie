@@ -32,13 +32,20 @@ In contrast to the profile "Diagnose Primärtumor" (MII_PR_Onko_Diagnose_Primaer
 * **Base profile**: based on FHIR Condition (not on MII Diagnose), in order to allow flexible free-text recording
 * **Level of detail**: reduced requirements for diagnostic certainty, topography and further details
 
+**Distinguishing criterion from the current diagnosis**: Not `Condition.category` — both profiles carry the same oncology marker (SNOMED CT 55342001 "Neoplastic disease"). The distinction is made by
+* the **profile** (`meta.profile`, search parameter `_profile`),
+* the **direction of reference**: the current diagnosis points to the previous one via `occurredFollowing`, never the other way round,
+* the **`clinicalStatus`**: a previous tumour disease is usually `resolved` or `remission`; `active` is permitted when the previous disease still exists at the time the new primary tumour is diagnosed (e.g. metachronous second tumour under ongoing therapy).
+
+A second category code "Medical oncology" (SNOMED CT 394593009), which this profile required up to v2027.0.0-ballot.1, has been dropped (HDB-1006): it described the specialty, not the temporal status, and therefore was not a distinguishing feature.
+
 ---
 
 ### Usage notes
 
 #### Mandatory data
 * **code.text**: textual description of the previous tumour disease (e.g. "skin cancer on the back, approx. 2010")
-* **category**: categorisation as an oncological diagnosis (SNOMED CT: 394593009 "Medical oncology")
+* **category[onkologie]**: oncology marker (SNOMED CT: 55342001 "Neoplastic disease"), identical to Diagnose Primärtumor
 * **subject**: reference to the patient
 
 #### Optional data

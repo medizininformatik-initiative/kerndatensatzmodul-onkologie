@@ -10,16 +10,6 @@ Description: "Dieses Profil beschreibt frühere Tumorerkrankungen, die in der An
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fruehere-tumorerkrankung"
 * insert Translation(^title, de-DE, Frühere Tumorerkrankung)
 
-// Category - oncology
-* category 1..* MS
-* category ^slicing.discriminator.type = #pattern
-* category ^slicing.discriminator.path = "$this"
-* category ^slicing.rules = #open
-* category contains oncology 1..1 MS
-* category[oncology] = $SCT#394593009 "Medical oncology (qualifier value)"
-* category[oncology] ^short = "Kategorisierung als onkologische Diagnose"
-* insert Translation(category[oncology] ^short, de-DE, Kategorisierung als onkologische Diagnose)
-
 // Basic elements
 * meta.profile 0..* MS
 * encounter 0..1 MS
@@ -30,6 +20,12 @@ Description: "Dieses Profil beschreibt frühere Tumorerkrankungen, die in der An
 // Diagnosen über Condition?category suchbar. Das extensible-Kern-Binding
 // (problem-list-item/encounter-diagnosis) bleibt gewahrt - weitere Categories
 // sind zulässig (rules #open), "Onkologie" ist dort nicht abgedeckt.
+// HDB-1006 (2027-Ballot): identisch mit Diagnose Primärtumor. Der frühere
+// zweite Slice "Medical oncology" (SCT 394593009) entfiel - er war kein
+// Unterscheidungsmerkmal, sondern nur ein zweiter Onkologie-Marker. Die
+// Abgrenzung zur aktuellen Diagnose läuft über das Profil (meta.profile),
+// die Verweisrichtung (occurredFollowing) und clinicalStatus.
+* category 1..* MS
 * category ^slicing.discriminator.type = #pattern
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
