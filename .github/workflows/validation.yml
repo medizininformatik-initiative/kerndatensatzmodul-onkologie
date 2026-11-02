@@ -169,7 +169,9 @@ jobs:
       #
       # advisor.json entries that exist ONLY because of this CLI run (not the
       # IG Publisher), first run on the template pin 2026-11-02 (run 41463380032):
-      #   - VALUESET_INCLUDE_INVALID_CONCEPT_CODE*@^ValueSet.compose.include[n].concept[>=1]
+      #   - VALUESET_INCLUDE_INVALID_CONCEPT_CODE and ..._VER @^ValueSet.compose.include[n].concept[>=1]
+      #     (two explicit ids: a wildcard id like "VALUESET_INCLUDE_*" crashes the
+      #     validator with a NullPointerException on messages that carry no id)
       #     The validator sends the 2nd..nth concept of a compose.include as one
       #     $batch-validate-code request WITHOUT valueSet/url; Ontoserver rejects
       #     it ("Type-level request to $validate-code must specify either valueSet

@@ -12,8 +12,9 @@
     "Terminology_TX_NoValid_16@ValueSet.*",
     "Terminology_TX_NoValid_16@CodeSystem.*",
     "Terminology_TX_Confirm_4a@AdverseEvent.event*",
-    "VALUESET_INCLUDE_INVALID_CONCEPT_CODE*@^ValueSet\\.compose\\.include\\[\\d+\\]\\.concept\\[[1-9]\\d*\\](\\..*)?",
     "Unknown_Code_in_Version@^(CapabilityStatement|CodeSystem|ConceptMap|ImplementationGuide|Library|SearchParameter|StructureDefinition|ValueSet)\\.extension\\[\\d+\\]\\.value\\.ofType\\(CodeableConcept\\)\\.coding\\[\\d+\\]\\.code",
-    "Validation_VAL_Profile_Minimum@^(CodeSystem|ConceptMap|Library|StructureDefinition|ValueSet)"
+    "Validation_VAL_Profile_Minimum@^(CodeSystem|ConceptMap|Library|StructureDefinition|ValueSet)",
+    "VALUESET_INCLUDE_INVALID_CONCEPT_CODE@^ValueSet\\.compose\\.include\\[\\d+\\]\\.concept\\[[1-9]\\d*\\](\\..*)?",
+    "VALUESET_INCLUDE_INVALID_CONCEPT_CODE_VER@^ValueSet\\.compose\\.include\\[\\d+\\]\\.concept\\[[1-9]\\d*\\](\\..*)?"
   ]
 }
