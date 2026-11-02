@@ -36,7 +36,8 @@
 # Fixed versions: the reusable workflows are pinned to a FIXED commit SHA
 #            of mii-kds-module-template (they moved there from kerndatensatz-meta,
 #            see kerndatensatz-meta#251; @master there stays frozen).
-#            SUSHI + Java-validator versions are pinned with a repo-var override.
+#            SUSHI is pinned with a repo-var override; the Java validator version
+#            is fixed by that template SHA (its default, no second pin here).
 #
 # Secrets (human prerequisites — CI cannot obtain them by itself):
 #            passed via `secrets: inherit` (the wiki's canonical pattern). A
@@ -141,12 +142,12 @@ jobs:
       ref: ${{ github.event.pull_request.head.ref || github.ref }}
       PATH_TO_CONFORMANCE_RESOURCES: fsh-generated/resources
       PATH_TO_EXAMPLES: fsh-generated/resources
-      JAVA_VALIDATION_ENABLED: true
-      # Pinned Java validator (fixed versions); mirrors the reusable workflow's
-      # own default at the pinned SHA (6.10.4 — the template passes a
-      # -fhir-settings file so that validators >= 6.10.4 accept the plain-HTTP
-      # SU-TermServ proxy). Overridable via the repo variable.
-      JAVA_VALIDATOR_VERSION: ${{ vars.JAVA_VALIDATOR_VERSION || '6.10.4' }}
+      # JAVA_VALIDATION_ENABLED and JAVA_VALIDATOR_VERSION are deliberately NOT
+      # set: since the template pin both are optional inputs whose defaults
+      # actually apply (true / 6.10.4). The validator version is still fixed —
+      # by the template SHA above, not by a second pin here. Bump the SHA to
+      # move the validator. (The template passes a -fhir-settings file so that
+      # validators >= 6.10.4 accept the plain-HTTP SU-TermServ proxy.)
       # SNAPSHOT_DEPENDENCIES (default true): the template installs the
       # dependencies and generates their snapshots with Gefyra/fhir-pkg-tool
       # before validating. SUSHI_VERSION is NOT set: this repo commits
