@@ -5,7 +5,7 @@
   "name": "MII_CS_Onko_Primaertumor_Diagnosesicherung",
   "id": "mii-cs-onko-primaertumor-diagnosesicherung",
   "title": "MII CS Onkologie Primärtumor Diagnosesicherung",
-  "description": "Codes für Primärtumor Diagnosesicherung, d.h. die höchste erreichte Diagnosesicherheit der Diagnose.",
+  "description": "Codes für Primärtumor Diagnosesicherung, d.h. die höchste erreichte Diagnosesicherheit der Diagnose. Die Codes 6 und 7 sind im oBDS-Schema als veraltet gekennzeichnet (Nachfolger 7.2 bzw. 7.1) und tragen die Konzept-Property status = deprecated sowie replaced-by; sie bleiben für Altdaten gültig und werden nicht umkodiert.",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung",
   "concept": [
     {
@@ -35,12 +35,40 @@
     {
       "code": "6",
       "display": "histologische Untersuchung einer Metastase",
-      "definition": "Histologische Untersuchung des Gewebes aus einer Metastase, inklusive der Untersuchung von Proben aus einer Autopsie."
+      "definition": "Histologische Untersuchung des Gewebes aus einer Metastase, inklusive der Untersuchung von Proben aus einer Autopsie. Veraltet: regulär in ADT/GEKID 2.x (oBDS 2014) sowie oBDS 3.0.0 und 3.0.1; seit oBDS 3.0.2 (17.10.2023) durch 7.2 abgelöst, seit oBDS 3.0.3 (04.09.2024) im Schema ausdrücklich als veraltet gekennzeichnet. Für Altdaten weiterhin gültig, keine Umkodierung.",
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "deprecated"
+        },
+        {
+          "code": "deprecationDate",
+          "valueDateTime": "2024-09-04"
+        },
+        {
+          "code": "replaced-by",
+          "valueCode": "7.2"
+        }
+      ]
     },
     {
       "code": "7",
       "display": "histologische Untersuchung eines Primärtumors",
-      "definition": "Histologische Untersuchung des Gewebes aus einem Primärtumor, gleich wie es gewonnen wurde; inklusive aller Schnitt-Techniken und Knochenmarksbiopsien; schließt auch die Untersuchung von Proben des Primärtumors aus einer Autopsie ein."
+      "definition": "Histologische Untersuchung des Gewebes aus einem Primärtumor, gleich wie es gewonnen wurde; inklusive aller Schnitt-Techniken und Knochenmarksbiopsien; schließt auch die Untersuchung von Proben des Primärtumors aus einer Autopsie ein. Veraltet: regulär in ADT/GEKID 2.x (oBDS 2014) sowie oBDS 3.0.0 und 3.0.1; seit oBDS 3.0.2 (17.10.2023) als veraltet gekennzeichnet (dort noch mit Verweis auf 7.1, 7.2 oder 7.3), seit oBDS 3.0.3 (04.09.2024) eindeutig durch 7.1 abgelöst. Für Altdaten weiterhin gültig, keine Umkodierung.",
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "deprecated"
+        },
+        {
+          "code": "deprecationDate",
+          "valueDateTime": "2023-10-17"
+        },
+        {
+          "code": "replaced-by",
+          "valueCode": "7.1"
+        }
+      ]
     },
     {
       "code": "7.1",
@@ -228,5 +256,25 @@
   ],
   "caseSensitive": true,
   "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-primaertumor-diagnosesicherung",
+  "property": [
+    {
+      "code": "status",
+      "uri": "http://hl7.org/fhir/concept-properties#status",
+      "description": "Status des Konzepts (active | deprecated | retired)",
+      "type": "code"
+    },
+    {
+      "code": "deprecationDate",
+      "uri": "http://hl7.org/fhir/concept-properties#deprecationDate",
+      "description": "Datum des oBDS-Schemastands, der den Code als veraltet kennzeichnet",
+      "type": "dateTime"
+    },
+    {
+      "code": "replaced-by",
+      "uri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/concept-properties#replaced-by",
+      "description": "Nachfolgecode gemäß oBDS",
+      "type": "code"
+    }
+  ],
   "count": 12
 }
