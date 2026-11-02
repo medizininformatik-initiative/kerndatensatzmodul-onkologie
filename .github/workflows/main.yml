@@ -16,7 +16,7 @@ on:
 
 jobs:
   DOTNET_FHIR_VALIDATION:
-    uses: medizininformatik-initiative/kerndatensatz-meta/.github/workflows/ci_dotnet_validation.yml@master
+    uses: medizininformatik-initiative/mii-kds-module-template/.github/workflows/ci_dotnet_validation.yml@9d464cddb17985b41df9ab6e0a5ff95870f902f2 # mii-kds-module-template dev @ 2026-11-02 (kerndatensatz-meta#251)
     with:
       ref: ${{ github.event.pull_request.head.ref }}
       SUSHI_VERSION: ${{ vars.SUSHI_VERSION }}

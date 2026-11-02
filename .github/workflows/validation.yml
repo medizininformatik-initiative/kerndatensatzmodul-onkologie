@@ -34,7 +34,8 @@
 #            bootstrap keeps it).
 #
 # Fixed versions: the reusable workflows are pinned to a FIXED commit SHA
-#            of kerndatensatz-meta (not the moving @master the wiki shows).
+#            of mii-kds-module-template (they moved there from kerndatensatz-meta,
+#            see kerndatensatz-meta#251; @master there stays frozen).
 #            SUSHI + Java-validator versions are pinned with a repo-var override.
 #
 # Secrets (human prerequisites — CI cannot obtain them by itself):
@@ -96,7 +97,7 @@ jobs:
     # ON by default, and only on created modules — the placeholder
     # template repo cannot produce clean SUSHI output for validation.
     if: ${{ vars.ENABLE_VALIDATION != 'false' && !endsWith(github.repository, '/mii-kds-module-template') && needs.dotnet-validation-guard.outputs.has_creds == 'true' }}
-    uses: medizininformatik-initiative/kerndatensatz-meta/.github/workflows/ci_dotnet_validation.yml@1db2e534704d92e5ee0cde663ce3e7ccd8825fa7 # kerndatensatz-meta master @ 2026-07-15
+    uses: medizininformatik-initiative/mii-kds-module-template/.github/workflows/ci_dotnet_validation.yml@9d464cddb17985b41df9ab6e0a5ff95870f902f2 # mii-kds-module-template dev @ 2026-11-02 (kerndatensatz-meta#251)
     with:
       ref: ${{ github.event.pull_request.head.ref || github.ref }}
       # Pinned SUSHI (fixed versions); overridable via the repo variable.
@@ -135,29 +136,31 @@ jobs:
     name: HL7 Java validator (SU-TermServ)
     needs: java-validation-guard
     if: ${{ vars.ENABLE_VALIDATION != 'false' && !endsWith(github.repository, '/mii-kds-module-template') && needs.java-validation-guard.outputs.has_cert == 'true' }}
-    uses: medizininformatik-initiative/kerndatensatz-meta/.github/workflows/ci_java_validation.yml@1db2e534704d92e5ee0cde663ce3e7ccd8825fa7 # kerndatensatz-meta master @ 2026-07-15
+    uses: medizininformatik-initiative/mii-kds-module-template/.github/workflows/ci_java_validation.yml@9d464cddb17985b41df9ab6e0a5ff95870f902f2 # mii-kds-module-template dev @ 2026-11-02 (kerndatensatz-meta#251)
     with:
       ref: ${{ github.event.pull_request.head.ref || github.ref }}
       PATH_TO_CONFORMANCE_RESOURCES: fsh-generated/resources
       PATH_TO_EXAMPLES: fsh-generated/resources
       JAVA_VALIDATION_ENABLED: true
       # Pinned Java validator (fixed versions); mirrors the reusable workflow's
-      # own default at the pinned SHA. Overridable via the repo variable.
-      JAVA_VALIDATOR_VERSION: ${{ vars.JAVA_VALIDATOR_VERSION || '6.5.7' }}
+      # own default at the pinned SHA (6.10.4 — the template passes a
+      # -fhir-settings file so that validators >= 6.10.4 accept the plain-HTTP
+      # SU-TermServ proxy). Overridable via the repo variable.
+      JAVA_VALIDATOR_VERSION: ${{ vars.JAVA_VALIDATOR_VERSION || '6.10.4' }}
+      # SNAPSHOT_DEPENDENCIES (default true): the template installs the
+      # dependencies and generates their snapshots with Gefyra/fhir-pkg-tool
+      # before validating. SUSHI_VERSION is NOT set: this repo commits
+      # fsh-generated/ (the dotnet job above recompiles and auto-commits it).
       # Wire the repo's advisor file into the validator CLI. The reusable
-      # workflow passes JAVA_VALIDATION_OPTIONS verbatim to validator_cli.jar
-      # (verified at the pinned SHA); without this the advisor.json shipped at
-      # the repo root would be read by NOTHING and the "suppressed via
-      # advisor.json" contract in this file's header would be false.
-      # -output validation.json: the pinned reusable NEVER writes the report
-      # file itself (no -output anywhere at SHA 1db2e534), but its own
-      # "Convert Validation Report" step and artifact upload expect it —
-      # without this flag every run dies with ENOENT ./validation.json even
-      # when validation is clean (found via kerndatensatzmodul-studie PR #69,
-      # where 0 real errors made the ENOENT the only failure; here it was
-      # masked by real validation errors). Options are passed verbatim; with a
-      # single conformance path the file is written exactly once.
-      JAVA_VALIDATION_OPTIONS: "-advisor-file advisor.json -output validation.json"
+      # workflow passes JAVA_VALIDATION_OPTIONS verbatim to validator_cli.jar;
+      # without this the advisor.json shipped at the repo root would be read by
+      # NOTHING and the "suppressed via advisor.json" contract in this file's
+      # header would be false.
+      # Do NOT pass -output here: since the template pin the reusable workflow
+      # itself writes validation.json + validation.html + txlog.html whenever
+      # the caller passes no -output (a caller-supplied -output replaces all
+      # three and loses the HTML report and the terminology log).
+      JAVA_VALIDATION_OPTIONS: "-advisor-file advisor.json"
       VALIDATION_REPORT_FILTERS: |
         filename | messageId | detailsWildcard | location
     # Secret-name reconciliation: the MII reusable workflow declares
