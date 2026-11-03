@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MedicationStatement xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-onko-folfox-oxaliplatin-statement"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie-medikation"/>
+  </meta>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: MedicationStatement mii-exa-onko-folfox-oxaliplatin-statement</b></p><a name="de-mii-exa-onko-folfox-oxaliplatin-statement"> </a><a name="de-hcmii-exa-onko-folfox-oxaliplatin-statement"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-systemische-therapie-medikation.html">MII PR Onkologie Systemische Therapie Medikation</a></p></div><p><b>basedOn</b>: <a href="CarePlan-mii-exa-onko-tumorkonferenz-folfox.html">CarePlan: identifier = Tumorkonferenz_FOLFOX_001; status = active; intent = plan; category = prätherapeutische Tumorkonferenz (Festlegung der Therapiestrategie); created = 2024-03-10</a></p><p><b>partOf</b>: <a href="Procedure-mii-exa-onko-folfox-procedure.html">Procedure Nicht komplexe Chemotherapie</a></p><p><b>status</b>: Completed</p><p><b>medication</b>: <span title="Codes:{http://fhir.de/CodeSystem/bfarm/atc L01XA03}">Oxaliplatin</span></p><p><b>subject</b>: <a href="Patient-mii-exa-onko-folfox-patient.html">Hans Schmidt  Male, DoB: 1959-03-15 ( https://www.medizininformatik-initiative.de/fhir/sid/patienten#FOLFOX-2024-001)</a></p><p><b>effective</b>: 2024-03-20 --&gt; 2024-09-15</p><p><b>note</b>: </p><blockquote><div><p>FOLFOX4</p>
+</div></blockquote></div>
+  </text>
+  <basedOn>
+    <reference value="CarePlan/mii-exa-onko-tumorkonferenz-folfox"/>
+  </basedOn>
+  <partOf>
+    <reference value="Procedure/mii-exa-onko-folfox-procedure"/>
+  </partOf>
+  <status value="completed"/>
+  <medicationCodeableConcept>
+    <coding>
+      <system value="http://fhir.de/CodeSystem/bfarm/atc"/>
+      <code value="L01XA03"/>
+      <display value="Oxaliplatin"/>
+    </coding>
+    <text value="Oxaliplatin"/>
+  </medicationCodeableConcept>
+  <subject>
+    <reference value="Patient/mii-exa-onko-folfox-patient"/>
+  </subject>
+  <effectivePeriod>
+    <start value="2024-03-20"/>
+    <end value="2024-09-15"/>
+  </effectivePeriod>
+  <note>
+    <text value="FOLFOX4"/>
+  </note>
+</MedicationStatement>

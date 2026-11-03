@@ -1,0 +1,516 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "mii-exa-onko-krk-bundle",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/StructureDefinition/Bundle"]
+  },
+  "language" : "de",
+  "identifier" : {
+    "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko",
+    "value" : "krk-example-bundle-2024-001"
+  },
+  "type" : "transaction",
+  "timestamp" : "2024-03-25T10:00:00+01:00",
+  "entry" : [{
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Patient/mii-exa-onko-krk-bundle-patient",
+    "resource" : {
+      "resourceType" : "Patient",
+      "id" : "mii-exa-onko-krk-bundle-patient",
+      "language" : "de",
+      "text" : {
+        "status" : "generated"
+      },
+      "name" : [{
+        "family" : "KolorektalCa",
+        "given" : ["Klaus"]
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Patient"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Condition/mii-exa-onko-krk-diagnose",
+    "resource" : {
+      "resourceType" : "Condition",
+      "id" : "mii-exa-onko-krk-diagnose",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"]
+      },
+      "language" : "de",
+      "text" : {
+        "status" : "extensions"
+      },
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
+        "valueDateTime" : "2020-03-07"
+      }],
+      "clinicalStatus" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code" : "active"
+        }]
+      },
+      "verificationStatus" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+          "code" : "confirmed"
+        }]
+      },
+      "category" : [{
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "55342001",
+          "display" : "Neoplastic disease"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+          "version" : "2024",
+          "code" : "C18",
+          "display" : "Bösartige Neubildung des Kolons"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-krk-bundle-patient"
+      },
+      "recordedDate" : "2024-01-02"
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Condition"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Encounter/mii-exa-onko-krk-bundle-encounter",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "mii-exa-onko-krk-bundle-encounter",
+      "language" : "de",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "finished",
+      "class" : {
+        "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code" : "IMP",
+        "display" : "inpatient encounter"
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-krk-bundle-patient"
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Encounter"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-krk-abstand-tumor-anokutanlinie",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "mii-exa-onko-krk-abstand-tumor-anokutanlinie",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-abstand-anokutan"]
+      },
+      "language" : "de",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "33748-5",
+          "display" : "Distance from anal verge"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-krk-bundle-patient"
+      },
+      "focus" : [{
+        "reference" : "Condition/mii-exa-onko-krk-diagnose"
+      }],
+      "encounter" : {
+        "reference" : "Encounter/mii-exa-onko-krk-bundle-encounter"
+      },
+      "effectiveDateTime" : "2024-03-10T14:30:00+01:00",
+      "valueQuantity" : {
+        "value" : 8.5,
+        "unit" : "cm",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "cm"
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-krk-abstand-circumferelle-resektionsebene",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "mii-exa-onko-krk-abstand-circumferelle-resektionsebene",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-abstand-circumferelle-resektionsebene"]
+      },
+      "language" : "de",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "81176-0",
+          "display" : "Distance of tumor from circumferential resection margin [Length] in Specimen by Macroscopy"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-krk-bundle-patient"
+      },
+      "focus" : [{
+        "reference" : "Condition/mii-exa-onko-krk-diagnose"
+      }],
+      "encounter" : {
+        "reference" : "Encounter/mii-exa-onko-krk-bundle-encounter"
+      },
+      "effectiveDateTime" : "2024-03-20T10:15:00+01:00",
+      "valueQuantity" : {
+        "value" : 2.5,
+        "unit" : "mm",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "mm"
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-krk-abstand-resektionsrand-aboral",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "mii-exa-onko-krk-abstand-resektionsrand-aboral",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-abstand-aboral"]
+      },
+      "language" : "de",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "81175-2",
+          "display" : "Distance of tumor from closest margin [Length] in Specimen by Macroscopy"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-krk-bundle-patient"
+      },
+      "focus" : [{
+        "reference" : "Condition/mii-exa-onko-krk-diagnose"
+      }],
+      "encounter" : {
+        "reference" : "Encounter/mii-exa-onko-krk-bundle-encounter"
+      },
+      "effectiveDateTime" : "2024-03-20T10:15:00+01:00",
+      "valueQuantity" : {
+        "value" : 15,
+        "unit" : "mm",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "mm"
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-krk-abstand-mesorektale-fascie",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "mii-exa-onko-krk-abstand-mesorektale-fascie",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-mrt-mesorektale-faszie"]
+      },
+      "language" : "de",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "https://radelement.org",
+          "code" : "RDE96",
+          "display" : "Distance to MRF"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-krk-bundle-patient"
+      },
+      "focus" : [{
+        "reference" : "Condition/mii-exa-onko-krk-diagnose"
+      }],
+      "encounter" : {
+        "reference" : "Encounter/mii-exa-onko-krk-bundle-encounter"
+      },
+      "effectiveDateTime" : "2024-03-12T16:00:00+01:00",
+      "valueQuantity" : {
+        "value" : 3.2,
+        "unit" : "mm",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "mm"
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-krk-anastomoseninsuffizienz",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "mii-exa-onko-krk-anastomoseninsuffizienz",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-anastomoseninsuffizienz"]
+      },
+      "language" : "de",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "236091002",
+          "display" : "Large intestine anastomotic leak (disorder)"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-krk-bundle-patient"
+      },
+      "focus" : [{
+        "reference" : "Procedure/mii-exa-onko-krk-operation"
+      }],
+      "encounter" : {
+        "reference" : "Encounter/mii-exa-onko-krk-bundle-encounter"
+      },
+      "effectiveDateTime" : "2024-03-25T08:00:00+01:00",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-anastomoseninsuffizienz",
+          "code" : "B",
+          "display" : "Anastomoseninsuffizienz Grad B"
+        }]
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Observation/mii-exa-onko-asa-klassifikation",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "mii-exa-onko-asa-klassifikation",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-asa-klassifikation"]
+      },
+      "language" : "de",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "97816-3",
+          "display" : "American society of anesthesiologists morbidity state"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-krk-bundle-patient"
+      },
+      "focus" : [{
+        "reference" : "Condition/mii-exa-onko-krk-diagnose"
+      }],
+      "effectiveDateTime" : "2024-03-15T08:30:00+01:00",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-asa-obds",
+          "code" : "2",
+          "display" : "ASA II"
+        }]
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-krk-stoma-markierung",
+    "resource" : {
+      "resourceType" : "Procedure",
+      "id" : "mii-exa-onko-krk-stoma-markierung",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-stoma-markierung"]
+      },
+      "language" : "de",
+      "text" : {
+        "status" : "generated"
+      },
+      "status" : "completed",
+      "statusReason" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "262008008",
+          "display" : "Not performed (qualifier value)"
+        }]
+      },
+      "category" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "387713003",
+          "display" : "Surgical procedure"
+        }]
+      },
+      "code" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "225134005",
+          "display" : "Marking position of planned stoma site (procedure)"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-krk-bundle-patient"
+      },
+      "encounter" : {
+        "reference" : "Encounter/mii-exa-onko-krk-bundle-encounter"
+      },
+      "performedDateTime" : "2024-03-15T09:30:00+01:00",
+      "reasonReference" : [{
+        "reference" : "Condition/mii-exa-onko-krk-diagnose"
+      }],
+      "note" : [{
+        "text" : "Präoperative Markierung der geplanten Stoma-Position im rechten Hemiabdomen nach Rücksprache mit dem Patienten"
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Procedure"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Procedure/mii-exa-onko-krk-operation",
+    "resource" : {
+      "resourceType" : "Procedure",
+      "id" : "mii-exa-onko-krk-operation",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-operation"]
+      },
+      "language" : "de",
+      "text" : {
+        "status" : "extensions"
+      },
+      "extension" : [{
+        "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-operation-intention",
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention",
+            "code" : "K",
+            "display" : "kurativ"
+          }]
+        }
+      }],
+      "status" : "completed",
+      "category" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "387713003",
+          "display" : "Surgical procedure"
+        }]
+      },
+      "code" : {
+        "coding" : [{
+          "system" : "http://fhir.de/CodeSystem/bfarm/ops",
+          "version" : "2024",
+          "code" : "5-484.55",
+          "display" : "Rektumresektion unter Sphinktererhaltung: Tiefe anteriore Resektion: Laparoskopisch mit Anastomose"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-krk-bundle-patient"
+      },
+      "encounter" : {
+        "reference" : "Encounter/mii-exa-onko-krk-bundle-encounter"
+      },
+      "performedDateTime" : "2024-03-22T08:00:00+01:00",
+      "reasonReference" : [{
+        "reference" : "Condition/mii-exa-onko-krk-diagnose"
+      }],
+      "note" : [{
+        "text" : "Laparoskopische Resektion beim kolorektalen Karzinom"
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Procedure"
+    }
+  },
+  {
+    "fullUrl" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Specimen/mii-exa-onko-krk-specimen",
+    "resource" : {
+      "resourceType" : "Specimen",
+      "id" : "mii-exa-onko-krk-specimen",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-specimen"]
+      },
+      "language" : "de",
+      "text" : {
+        "status" : "generated"
+      },
+      "accessionIdentifier" : {
+        "value" : "KRK-2024-001234"
+      },
+      "status" : "available",
+      "type" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "122652004",
+          "display" : "Specimen from colon obtained by rectal/rectosigmoid (low anterior) resection (specimen)"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/mii-exa-onko-krk-bundle-patient"
+      },
+      "collection" : {
+        "collectedDateTime" : "2024-03-22T08:30:00+01:00"
+      },
+      "condition" : [{
+        "coding" : [{
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-tme-qualitaet",
+          "code" : "1",
+          "display" : "Grad 1 (gut)"
+        }]
+      }],
+      "note" : [{
+        "text" : "Sigmaresekat mit Primärtumor und regionären Lymphknoten"
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Specimen"
+    }
+  }]
+}
