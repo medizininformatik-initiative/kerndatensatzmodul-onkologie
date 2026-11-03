@@ -9,37 +9,45 @@ Usage: #definition
 * status = #active
 * insert SNOMEDCopyrightForInstance
 * experimental = true
-* date = "2024-01-05"
-* description = "Mapping clincal TNM UICC Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich."
+* date = "2026-11-03"
+* description = "Mapping clincal TNM UICC Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Am 2026-11-03 überarbeitet (Ballot HDB-697): sourceCanonical/targetUri ergänzt (Ziel: UICC allowable value 1352503003 und Nachfahren), Präfixe c, p, y, r, a und Symbole m, sn auf die UICC-Präfix-/Suffixwerte von SNOMED CT International 20260701 umgestellt, Kategorie- und Stadiencodes gegen 20260701 als aktiv verifiziert. Ohne Gegenstück: u, i+, i-, mol+, mol- (nur präkoordiniert) und okk. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich."
+* sourceCanonical = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-uicc"
+* targetUri = "http://snomed.info/sct?fhir_vs=isa/1352503003"
 * group.source = "https://www.uicc.org/resources/tnm"
-* group.target = "http://snomed.info/sct/900000000000207008/version/20240401"
+* group.target = "http://snomed.info/sct"
+* group.targetVersion = "http://snomed.info/sct/900000000000207008/version/20260701"
 * group.element[+].code = #y
 * group.element[=].display = "y"
-* group.element[=].target.code = #421755005
-* group.element[=].target.display = "Tumor staging descriptor y (tumor staging)"
+* group.element[=].target.code = #1380184000
+* group.element[=].target.display = "y (UICC)"
 * group.element[=].target.equivalence = #equivalent
 * group.element[+].code = #r
 * group.element[=].display = "r"
-* group.element[=].target.code = #421188008
-* group.element[=].target.display = "Tumor staging descriptor r (tumor staging)"
+* group.element[=].target.code = #1380183006
+* group.element[=].target.display = "r (UICC)"
 * group.element[=].target.equivalence = #equivalent
 * group.element[+].code = #a
 * group.element[=].display = "a"
-* group.element[=].target.code = #421426001
-* group.element[=].target.display = "Tumor staging descriptor a (tumor staging)"
+* group.element[=].target.code = #1380182001
+* group.element[=].target.display = "a (UICC)"
 * group.element[=].target.equivalence = #equivalent
 
 * group.element[+].code = #c
 * group.element[=].display = "c"
-* group.element[=].target.equivalence = #unmatched
+* group.element[=].target.code = #1397043001
+* group.element[=].target.display = "c (UICC)"
+* group.element[=].target.equivalence = #equivalent
 
 * group.element[+].code = #p
 * group.element[=].display = "p"
-* group.element[=].target.equivalence = #unmatched
+* group.element[=].target.code = #1397044007
+* group.element[=].target.display = "p (UICC)"
+* group.element[=].target.equivalence = #equivalent
 
 * group.element[+].code = #u
 * group.element[=].display = "u"
 * group.element[=].target.equivalence = #unmatched
+* group.element[=].target.comment = "Präfix u (Feststellung mit Ultraschall) ist in den UICC-Werten von SNOMED CT nicht vorgesehen."
 
 * group.element[+].code = #TX
 * group.element[=].display = "TX"
@@ -290,7 +298,9 @@ Usage: #definition
 
 * group.element[+].code = #m
 * group.element[=].display = "m"
-* group.element[=].target.equivalence = #unmatched
+* group.element[=].target.code = #1380157001
+* group.element[=].target.display = "m (UICC)"
+* group.element[=].target.equivalence = #equivalent
 
 * group.element[+].code = #2
 * group.element[=].display = "2"
@@ -459,22 +469,28 @@ Usage: #definition
 * group.element[+].code = #i+
 * group.element[=].display = "i+"
 * group.element[=].target.equivalence = #unmatched
+* group.element[=].target.comment = "Nur präkoordiniert verfügbar (z. B. pN0(i+) 1352624001), kein Einzelwert für das Suffix."
 
 * group.element[+].code = #i-
 * group.element[=].display = "i-"
 * group.element[=].target.equivalence = #unmatched
+* group.element[=].target.comment = "Nur präkoordiniert verfügbar (z. B. pN0(i-) 1380147002), kein Einzelwert für das Suffix."
 
 * group.element[+].code = #mol+
 * group.element[=].display = "mol+"
 * group.element[=].target.equivalence = #unmatched
+* group.element[=].target.comment = "Nur präkoordiniert verfügbar (z. B. pN0(mol+) 1352609005), kein Einzelwert für das Suffix."
 
 * group.element[+].code = #mol-
 * group.element[=].display = "mol-"
 * group.element[=].target.equivalence = #unmatched
+* group.element[=].target.comment = "Nur präkoordiniert verfügbar (z. B. pN0(mol-) 1380146006), kein Einzelwert für das Suffix."
 
 * group.element[+].code = #sn
 * group.element[=].display = "sn"
-* group.element[=].target.equivalence = #unmatched
+* group.element[=].target.code = #1380160008
+* group.element[=].target.display = "sn (UICC)"
+* group.element[=].target.equivalence = #equivalent
 
 * group.element[+].code = #L0
 * group.element[=].display = "L0"
@@ -539,6 +555,7 @@ Usage: #definition
 * group.element[+].code = #okk
 * group.element[=].display = "Stadium X"
 * group.element[=].target.equivalence = #unmatched
+* group.element[=].target.comment = "oBDS-Wert seit 3.0.0 ohne Definition im XML-Schema (Dokumentation lautet nur okk); kein SNOMED-Gegenstück."
 
 * group.element[+].code = #0
 * group.element[=].display = "Stadium 0"

@@ -9,6 +9,7 @@ Hier sind alle Änderungen aufgelistet.
 ## Änderungen seit v2027.0.0-ballot.1 (noch nicht veröffentlicht)
 
 ### Weitere Verbesserungen
+- `fix` **TNM-ConceptMaps UICC → SNOMED CT überarbeitet** (Ballot HDB-697, Stand 2026-11-03): `sourceCanonical` = neues Gesamt-ValueSet `mii-vs-onko-tnm-uicc`, `targetUri` = implizites SNOMED-ValueSet unter UICC allowable value (1352503003). Präfixe c, p, y, r, a und Symbole m, sn zeigen jetzt auf die seit SNOMED International 2025-11 vorhandenen UICC-Präfix-/Suffixwerte (bisher y/r/a auf generische Tumor-staging-descriptor-Konzepte, c/p/m/sn ohne Ziel); Provenienz der Gruppen auf 20260701. Ohne Gegenstück und als `unmatched` mit Begründung: u, i+, i-, mol+, mol- (in SNOMED nur präkoordiniert) und okk.
 - `documentation` **ICD-O-4 auf der Seite [ICD-O-Terminologie](icd-o-terminologie.html) beschrieben**: Auswertung der IARC-Tabellen vom 16.07.2026 — fünfstellige, alphanumerische Morphologie-Codes (`XXXXY/B`, fünfte Stelle `0`–`9` und `A`–`K`), Änderungstabelle gegenüber ICD-O-3.2 (109 neue Stamm-Dignitäts-Kombinationen, 1.175 neue Subcodes, 29 gestrichene Codes, 19 Stammwechsel, 24 Dignitätswechsel, 935 Termänderungen), Überleitungsregel 3.2 → 4 mit den 38 nicht per angehängter `0` überleitbaren Codes, optionale vierstellige Topographie, Folgen für oBDS-XSD und FHIR-Artefakte. Keine ICD-O-4-Artefakte, da die deutsche BfArM-Ausgabe aussteht; Aufnahme in das oBDS voraussichtlich erst mit oBDS 4.0.
 
 ## Änderungen v2027.0.0-ballot.1 (Ballot, Dependency-Patch)

@@ -153,20 +153,23 @@
   "status": "active",
   "copyright": "This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license.",
   "experimental": true,
-  "date": "2024-01-05",
-  "description": "Mapping clincal TNM UICC Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich.",
+  "date": "2026-11-03",
+  "description": "Mapping clincal TNM UICC Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Am 2026-11-03 überarbeitet (Ballot HDB-697): sourceCanonical/targetUri ergänzt (Ziel: UICC allowable value 1352503003 und Nachfahren), Präfixe c, p, y, r, a und Symbole m, sn auf die UICC-Präfix-/Suffixwerte von SNOMED CT International 20260701 umgestellt, Kategorie- und Stadiencodes gegen 20260701 als aktiv verifiziert. Ohne Gegenstück: u, i+, i-, mol+, mol- (nur präkoordiniert) und okk. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich.",
+  "sourceCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-uicc",
+  "targetUri": "http://snomed.info/sct?fhir_vs=isa/1352503003",
   "group": [
     {
       "source": "https://www.uicc.org/resources/tnm",
-      "target": "http://snomed.info/sct/900000000000207008/version/20240401",
+      "target": "http://snomed.info/sct",
+      "targetVersion": "http://snomed.info/sct/900000000000207008/version/20260701",
       "element": [
         {
           "code": "y",
           "display": "y",
           "target": [
             {
-              "code": "421755005",
-              "display": "Tumor staging descriptor y (tumor staging)",
+              "code": "1380184000",
+              "display": "y (UICC)",
               "equivalence": "equivalent"
             }
           ]
@@ -176,8 +179,8 @@
           "display": "r",
           "target": [
             {
-              "code": "421188008",
-              "display": "Tumor staging descriptor r (tumor staging)",
+              "code": "1380183006",
+              "display": "r (UICC)",
               "equivalence": "equivalent"
             }
           ]
@@ -187,8 +190,8 @@
           "display": "a",
           "target": [
             {
-              "code": "421426001",
-              "display": "Tumor staging descriptor a (tumor staging)",
+              "code": "1380182001",
+              "display": "a (UICC)",
               "equivalence": "equivalent"
             }
           ]
@@ -198,7 +201,9 @@
           "display": "c",
           "target": [
             {
-              "equivalence": "unmatched"
+              "code": "1397043001",
+              "display": "c (UICC)",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -207,7 +212,9 @@
           "display": "p",
           "target": [
             {
-              "equivalence": "unmatched"
+              "code": "1397044007",
+              "display": "p (UICC)",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -216,7 +223,8 @@
           "display": "u",
           "target": [
             {
-              "equivalence": "unmatched"
+              "equivalence": "unmatched",
+              "comment": "Präfix u (Feststellung mit Ultraschall) ist in den UICC-Werten von SNOMED CT nicht vorgesehen."
             }
           ]
         },
@@ -683,7 +691,9 @@
           "display": "m",
           "target": [
             {
-              "equivalence": "unmatched"
+              "code": "1380157001",
+              "display": "m (UICC)",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -1011,7 +1021,8 @@
           "display": "i+",
           "target": [
             {
-              "equivalence": "unmatched"
+              "equivalence": "unmatched",
+              "comment": "Nur präkoordiniert verfügbar (z. B. pN0(i+) 1352624001), kein Einzelwert für das Suffix."
             }
           ]
         },
@@ -1020,7 +1031,8 @@
           "display": "i-",
           "target": [
             {
-              "equivalence": "unmatched"
+              "equivalence": "unmatched",
+              "comment": "Nur präkoordiniert verfügbar (z. B. pN0(i-) 1380147002), kein Einzelwert für das Suffix."
             }
           ]
         },
@@ -1029,7 +1041,8 @@
           "display": "mol+",
           "target": [
             {
-              "equivalence": "unmatched"
+              "equivalence": "unmatched",
+              "comment": "Nur präkoordiniert verfügbar (z. B. pN0(mol+) 1352609005), kein Einzelwert für das Suffix."
             }
           ]
         },
@@ -1038,7 +1051,8 @@
           "display": "mol-",
           "target": [
             {
-              "equivalence": "unmatched"
+              "equivalence": "unmatched",
+              "comment": "Nur präkoordiniert verfügbar (z. B. pN0(mol-) 1380146006), kein Einzelwert für das Suffix."
             }
           ]
         },
@@ -1047,7 +1061,9 @@
           "display": "sn",
           "target": [
             {
-              "equivalence": "unmatched"
+              "code": "1380160008",
+              "display": "sn (UICC)",
+              "equivalence": "equivalent"
             }
           ]
         },
@@ -1191,7 +1207,8 @@
           "display": "Stadium X",
           "target": [
             {
-              "equivalence": "unmatched"
+              "equivalence": "unmatched",
+              "comment": "oBDS-Wert seit 3.0.0 ohne Definition im XML-Schema (Dokumentation lautet nur okk); kein SNOMED-Gegenstück."
             }
           ]
         },
