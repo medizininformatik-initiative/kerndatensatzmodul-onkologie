@@ -8,6 +8,10 @@ Hier sind alle Änderungen aufgelistet.
 
 ## Änderungen seit v2027.0.0-ballot.1 (noch nicht veröffentlicht)
 
+### Neue Profile und Funktionalität
+
+- `feat` **Leistungszustand ECOG/Karnofsky: `dataAbsentReason` und ECOG 5** (Ballot HDB-1001, Modellvorhaben Genomsequenzierung): `value[x]` an beiden Profilen 0..1 (bisher faktisch 1..1), `dataAbsentReason` Must-Support, neue Invariante `onko-leistungszustand-wert-oder-grund` (genau eines von beiden). Am ECOG-Profil ist der oBDS-Slice jetzt 0..1; die Invariante `onko-ecog-obds-oder-verstorben` erlaubt sein Fehlen nur bei LOINC `LA9627-6` "Dead" (ECOG 5, im oBDS nicht vorgesehen). Festlegung auf der ECOG-Seite: unbekannt = oBDS `U` als Wert, nicht anwendbar = `dataAbsentReason=not-applicable` ohne Wert. Zwei neue Beispiele. Bestandsinstanzen bleiben gültig.
+
 ### Weitere Verbesserungen
 - `documentation` **ICD-O-4 auf der Seite [ICD-O-Terminologie](icd-o-terminologie.html) beschrieben**: Auswertung der IARC-Tabellen vom 16.07.2026 — fünfstellige, alphanumerische Morphologie-Codes (`XXXXY/B`, fünfte Stelle `0`–`9` und `A`–`K`), Änderungstabelle gegenüber ICD-O-3.2 (109 neue Stamm-Dignitäts-Kombinationen, 1.175 neue Subcodes, 29 gestrichene Codes, 19 Stammwechsel, 24 Dignitätswechsel, 935 Termänderungen), Überleitungsregel 3.2 → 4 mit den 38 nicht per angehängter `0` überleitbaren Codes, optionale vierstellige Topographie, Folgen für oBDS-XSD und FHIR-Artefakte. Keine ICD-O-4-Artefakte, da die deutsche BfArM-Ausgabe aussteht; Aufnahme in das oBDS voraussichtlich erst mit oBDS 4.0.
 

@@ -32,6 +32,19 @@ Compared with the clinical literature, the oBDS mappings are shifted downwards b
 
 Implementers should be aware of these differences, in particular when converting between ECOG and Karnofsky or when exchanging data with international systems that may use other conversion tables.
 
+### Missing values: ECOG 5 (dead) and "not applicable"
+
+The oBDS knows the ECOG grades 0–4 and `U` (unknown). Two cases from the Model Project Genome Sequencing (KDK oncology, enum `0 | 1 | 2 | 3 | 4 | 5 | unknown | notApplicable`) are not covered by that (ballot HDB-1001). Rule:
+
+| Case | Representation |
+|---|---|
+| ECOG 0–4 | `valueCodeableConcept.coding[obds]` (mandatory), optionally `coding[loinc]` in addition |
+| unknown (`U`, KDK `unknown`) | `valueCodeableConcept.coding[obds] = U` — a value, **no** `dataAbsentReason` |
+| ECOG 5, dead (KDK `5`) | only `valueCodeableConcept.coding[loinc] = LA9627-6 "Dead"`; the oBDS slice is omitted because the oBDS has no such value (invariant `onko-ecog-obds-oder-verstorben`). Death itself additionally belongs in the profile Tod (oBDS 20) |
+| scale not applicable (KDK `notApplicable`) | no `value`, `dataAbsentReason = not-applicable` (invariant `onko-leistungszustand-wert-oder-grund`: exactly one of the two) |
+
+`value[x]` is therefore 0..1 (up to v2027.0.0-ballot.1: 1..1) and `dataAbsentReason` is must-support. The mapping is unambiguous in both directions; the KDK schema (BfArM, as of 1.7.1) does not define `notApplicable` any further.
+
 ### LOINC support for international interoperability
 
 The profile supports optional LOINC coding in addition to the mandatory oBDS coding:

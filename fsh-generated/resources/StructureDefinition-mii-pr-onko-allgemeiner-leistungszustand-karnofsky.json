@@ -185,6 +185,15 @@
       {
         "id": "Observation",
         "path": "Observation",
+        "constraint": [
+          {
+            "key": "onko-leistungszustand-wert-oder-grund",
+            "severity": "error",
+            "human": "Entweder valueCodeableConcept oder dataAbsentReason muss angegeben sein (genau eines von beiden). Ein unbekannter Leistungszustand ist als Wert 'U' zu kodieren, dataAbsentReason=not-applicable ist für den Fall vorgesehen, dass die Skala nicht anwendbar ist.",
+            "expression": "value.exists() xor dataAbsentReason.exists()",
+            "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-karnofsky"
+          }
+        ],
         "mapping": [
           {
             "identity": "oBDS",
@@ -299,7 +308,6 @@
       {
         "id": "Observation.value[x]",
         "path": "Observation.value[x]",
-        "min": 1,
         "type": [
           {
             "code": "CodeableConcept"
@@ -415,6 +423,30 @@
         "id": "Observation.value[x].coding:loinc.code",
         "path": "Observation.value[x].coding.code",
         "min": 1
+      },
+      {
+        "id": "Observation.dataAbsentReason",
+        "path": "Observation.dataAbsentReason",
+        "short": "Grund für fehlenden Wert",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Grund für fehlenden Wert"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Nur wenn kein Wert angegeben ist. Code not-applicable bedeutet: die Karnofsky-Skala ist für diesen Patienten nicht anwendbar. Ein unbekannter Leistungszustand ist dagegen als oBDS-Wert U zu kodieren",
+        "mustSupport": true
       }
     ]
   }
