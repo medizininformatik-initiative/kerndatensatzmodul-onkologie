@@ -55,7 +55,7 @@ For complex tumor operations where the hierarchy is not clear:
 - **Intent**: The extension for the operation intent should be consistent across all linked procedures
 - **Complications**: Can be documented on the affected individual procedure or on the parent Procedure
 - **Residual status**: The local residual status is documented on the resecting procedure
-- **References**: All Procedures should reference the same primary diagnosis (`reasonReference`) and, if applicable, a tumor board recommendation (`basedOn`)
+- **References**: All Procedures should reference the same primary tumour diagnosis (`reasonReference`) and, if applicable, a tumor board recommendation (`basedOn`)
 
 #### Visualization using the example of Kim Musterperson
 
@@ -95,7 +95,7 @@ In addition to the residual status, there are further data points that can refer
 
 #### References to other profiles
 An operation captured and reported as part of the cancer registry is often based on a therapy recommendation from a tumor board. In this case, a link between the elements should be established via `Procedure.basedOn(Reference(CarePlan))`.
-Furthermore, the operation references the primary diagnosis via `Procedure.reasonReference`.
+Furthermore, the operation references the primary tumour diagnosis via `Procedure.reasonReference`.
 
 ---
 

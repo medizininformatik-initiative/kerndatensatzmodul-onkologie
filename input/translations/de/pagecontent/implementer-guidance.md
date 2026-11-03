@@ -4,7 +4,7 @@
 
 Das KDS-Modul Onkologie bedient sich umfassend der Basismodule des MII:
 
-- Die onkologische Primärdiagnose basiert auf dem MII-Modul
+- Die Diagnose Primärtumor basiert auf dem MII-Modul
   [Diagnose](https://simplifier.net/mii-basismodul-diagnose-2024).
 - Die Therapiedokumentation von Operationen, Strahlentherapien und allgemeine
   Angaben zu Systemischen Therapien basieren auf dem MII-Modul

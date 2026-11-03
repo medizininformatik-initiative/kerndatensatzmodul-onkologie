@@ -61,7 +61,7 @@ Description: "Ambulanter Kontakt, unter dem die FOLFOX-Chemotherapie appliziert 
 Instance: mii-exa-onko-colorectal-cancer-diagnosis
 InstanceOf: MII_PR_Onko_Diagnose_Primaertumor
 Usage: #example
-Title: "Kolonkarzinom Primärdiagnose"
+Title: "Kolonkarzinom Diagnose Primärtumor"
 Description: "Stage III sigmoid colon adenocarcinoma, diagnosed January 2024"
 * insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor)
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor"

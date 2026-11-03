@@ -13,7 +13,7 @@ The profile supports both breast-conserving therapies and mastectomies as well a
 ### Links to other resources
 
 The profile is closely linked to other oncological resources:
-- references the primary diagnosis (MII_PR_Onko_Diagnose_Primaertumor) via `Procedure.reasonReference`
+- references the primary tumour diagnosis (MII_PR_Onko_Diagnose_Primaertumor) via `Procedure.reasonReference`
 - references the patient (Patient resource) via `Procedure.subject`
 - can be linked to parent operations via `Procedure.partOf`
 - can be linked to a specific treatment case via `Procedure.encounter`

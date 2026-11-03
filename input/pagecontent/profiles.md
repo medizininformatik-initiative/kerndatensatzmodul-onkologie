@@ -149,7 +149,7 @@ corresponding FHIR elements.
 
 #### Diagnosis
 
-The diagnosis contains information on the primary diagnosis itself as well as
+The diagnosis contains information on the primary tumour diagnosis itself as well as
 on histology and localization of the primary tumor.
 
 ![Diagnosis — inheritance and oBDS mapping](MII_Onko_05_Diagnosis.svg)

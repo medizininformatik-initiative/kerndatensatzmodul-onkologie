@@ -47,7 +47,7 @@ The Molecular Tumor Board module offers more fine-grained profiles for represent
 ### Links to other resources
 
 The profile is closely linked to other oncology resources:
-- refers via `Observation.focus` to the primary diagnosis (MII_PR_Onko_Diagnose_Primaertumor)
+- refers via `Observation.focus` to the primary tumour diagnosis (MII_PR_Onko_Diagnose_Primaertumor)
 - refers via `Observation.subject` to the patient (Patient resource)
 - can be linked via `Observation.encounter` to a specific treatment case
 

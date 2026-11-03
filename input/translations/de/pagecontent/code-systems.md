@@ -18,7 +18,7 @@ den zentralen KDS-Terminologiedienst (SU-TermServ) bezogen:
 
 Die International Statistical Classification of Diseases and Related Health
 Problems, 10. Revision, German Modification (ICD-10-GM) wird für die
-Beschreibung der Primärdiagnose, für Vorerkrankungen und für die Kodierung der
+Beschreibung der Diagnose Primärtumor, für Vorerkrankungen und für die Kodierung der
 Todesursache verwendet. Das BfArM gibt die ICD-10-GM jährlich im Auftrag des
 Bundesministeriums für Gesundheit heraus; die aktuelle Version ist auf der
 [BfArM-Seite](https://www.bfarm.de/DE/Kodiersysteme/Klassifikationen/ICD/ICD-10-GM/_node.html)

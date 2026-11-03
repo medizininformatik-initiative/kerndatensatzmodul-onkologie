@@ -150,7 +150,7 @@ das Mapping der oBDS-Datenfelder auf die entsprechenden FHIR-Elemente.
 
 #### Diagnose
 
-Die Diagnose enthält sowohl Informationen zur Primärdiagnose selbst als auch
+Die Diagnose enthält sowohl Informationen zur Diagnose selbst als auch
 zur Histologie und Lokalisation des Primärtumors.
 
 ![Diagnose — Vererbung und oBDS-Mapping](MII_Onko_05_Diagnosis.svg)

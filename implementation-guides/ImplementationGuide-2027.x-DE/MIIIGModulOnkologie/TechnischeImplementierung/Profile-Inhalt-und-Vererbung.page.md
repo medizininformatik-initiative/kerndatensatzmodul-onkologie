@@ -8,7 +8,7 @@ Die Bildateien können [hier (Github)](https://github.com/medizininformatik-init
 
 ### Diagnose 
 
-Die Diagnose enthält sowohl Informationen zur Primärdiagnose selbst, als auch zur Histologie und Lokalisation des Primärtumors.
+Die Diagnose enthält sowohl Informationen zur Diagnose selbst, als auch zur Histologie und Lokalisation des Primärtumors.
 
 <div style="width: 100%; overflow-x: auto;">
 <img src="https://raw.githubusercontent.com/medizininformatik-initiative/kerndatensatzmodul-onkologie/refs/heads/dev/implementation-guides/ImplementationGuide-2026.x-DE/Images/MII_Onko_05_Diagnosis.svg" style="width: 100%; height: auto;" />

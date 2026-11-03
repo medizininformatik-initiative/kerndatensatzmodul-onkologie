@@ -7,7 +7,7 @@ Das Profil basiert auf einer FHIR Observation-Ressource und verwendet ein dedizi
 
 ### Verknüpfungen zu anderen Ressourcen
 Die circumferelle Resektionsrandmessung ist eine wichtige pathologische Beobachtung:
-- verweist über `Observation.focus` auf die Primärdiagnose (MII_PR_Onko_Diagnose_Primaertumor)
+- verweist über `Observation.focus` auf die Diagnose Primärtumor (MII_PR_Onko_Diagnose_Primaertumor)
 - verweist über `Observation.subject` auf den Patienten (Patient-Ressource)
 - kann über `Observation.encounter` mit einem spezifischen Behandlungsfall verknüpft werden
 

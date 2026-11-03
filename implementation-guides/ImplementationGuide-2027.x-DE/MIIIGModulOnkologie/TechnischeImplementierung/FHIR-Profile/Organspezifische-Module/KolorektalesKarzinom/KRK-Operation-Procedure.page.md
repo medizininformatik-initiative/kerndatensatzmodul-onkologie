@@ -19,7 +19,7 @@ Das Profil basiert auf einer FHIR Procedure-Ressource und verwendet mehrere spez
 Die KRK-Operation ist ein zentraler therapeutischer Eingriff:
 - verweist über `Procedure.subject` auf den Patienten (Patient-Ressource)
 - kann über `Procedure.encounter` mit einem spezifischen Behandlungsfall verknüpft werden
-- steht in Bezug zur Primärdiagnose über `Procedure.reasonReference`
+- steht in Bezug zur Diagnose Primärtumor über `Procedure.reasonReference`
 - kann mit Specimen-Ressourcen für die pathologische Aufarbeitung verknüpft werden
 
 ---

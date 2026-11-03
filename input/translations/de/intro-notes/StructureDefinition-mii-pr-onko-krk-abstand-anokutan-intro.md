@@ -10,7 +10,7 @@ Das Profil basiert auf einer FHIR Observation-Ressource und verwendet LOINC zur 
 
 Die Abstandsmessung zur Anokutanlinie ist eine wichtige diagnostische Beobachtung:
 
-- verweist über `Observation.focus` auf die Primärdiagnose ([MII PR Onkologie Diagnose Primärtumor](StructureDefinition-mii-pr-onko-diagnose-primaertumor.html))
+- verweist über `Observation.focus` auf die Diagnose Primärtumor ([MII PR Onkologie Diagnose Primärtumor](StructureDefinition-mii-pr-onko-diagnose-primaertumor.html))
 - verweist über `Observation.subject` auf den Patienten (Patient-Ressource)
 - kann über `Observation.encounter` mit einem spezifischen Behandlungsfall verknüpft werden
 

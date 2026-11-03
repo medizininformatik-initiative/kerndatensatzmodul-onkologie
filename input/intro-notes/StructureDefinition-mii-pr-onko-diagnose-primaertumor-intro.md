@@ -9,6 +9,20 @@ The oBDS requires the diagnosis to be coded via ICD-10, as well as the coding of
 
 Further histological examinations with deviating morphologies during the course of therapy SHOULD be recorded via the Histologie profile.
 
+### Terms
+
+The following terms are used consistently throughout the IG (ballot HDB-692):
+
+| Term | Meaning |
+|---|---|
+| **Primärtumor** (primary tumour) | The original tumour of an oncological disease from which metastases may arise. In the oBDS every primary tumour is documented as its own tumour disease with its own tumour ID; a second tumour is a primary tumour of its own. |
+| **Diagnose Primärtumor** | The profile `MII_PR_Onko_Diagnose_Primaertumor` or its Condition resource. It represents the oncological disease as a whole and is also used for haematological neoplasms without a solid tumour. All observations, procedures and tumour boards reference it. |
+| **Erstdiagnose** (initial diagnosis) | The point in time at which the disease was first established with sufficient certainty, clinically or histologically (oBDS 5.6, see section on the date of diagnosis). Not a profile of its own but a point in time in the course of the Diagnose Primärtumor. Observations from the diagnosis report are referenced via `evidence.detail`. |
+| **Frühere Tumorerkrankung** (previous tumour disease) | Tumour disease known from the patient history and not registered in the same system (oBDS 5.9), separate profile. |
+| **Verlaufshistologie** (follow-up histology) | Histological examination after the initial diagnosis from pathology or follow-up reports, modelled as an Observation attached to the course. The histology of the initial diagnosis is recorded directly in the Diagnose Primärtumor. |
+
+The term *Primärdiagnose* ("primary diagnosis") is no longer used: it derives from the mCODE term *primary diagnosis* (the diagnosis currently in focus) and was ambiguous.
+
 ### Relations to previous tumour diseases: two axes
 
 An oncological diagnosis can be related to a previous tumour disease in two
@@ -70,9 +84,9 @@ temporally "afterwards"); example: `mii-exa-onko-diagnose-aml-transformation`
 
 ### Links to other resources
 The oncological diagnosis is the central core element of the base data set. All case-related observations are linked to it directly or indirectly:
-- all observations reference the primary diagnosis via `Observation.focus`
-- the tumour board resource references the primary diagnosis via `CarePlan.addresses`
-- all procedures (surgery, radiotherapy, systemic therapy) reference the primary diagnosis via `reasonReference`
+- all observations reference the primary tumour diagnosis via `Observation.focus`
+- the tumour board resource references the primary tumour diagnosis via `CarePlan.addresses`
+- all procedures (surgery, radiotherapy, systemic therapy) reference the primary tumour diagnosis via `reasonReference`
 
 ---
 

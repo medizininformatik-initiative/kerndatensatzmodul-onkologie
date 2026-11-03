@@ -9,7 +9,7 @@ Der Progesteron-Rezeptorstatus ist ein wichtiger prognostischer und prädiktiver
 ### Verknüpfungen zu anderen Ressourcen
 
 Das Profil ist eng mit anderen onkologischen Ressourcen verknüpft:
-- verweist über `Observation.focus` auf die Primärdiagnose (MII_PR_Onko_Diagnose_Primaertumor)
+- verweist über `Observation.focus` auf die Diagnose Primärtumor (MII_PR_Onko_Diagnose_Primaertumor)
 - verweist über `Observation.subject` auf die Patientin (Patient-Ressource)
 - kann über `Observation.encounter` mit einem spezifischen Behandlungsfall verknüpft werden
 

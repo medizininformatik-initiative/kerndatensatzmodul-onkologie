@@ -9,7 +9,7 @@ The profile is based on a FHIR Observation resource and uses a dedicated ValueSe
 
 ### Links to other resources
 The circumferential resection margin measurement is an important pathological observation:
-- references the primary diagnosis (MII_PR_Onko_Diagnose_Primaertumor) via `Observation.focus`
+- references the primary tumour diagnosis (MII_PR_Onko_Diagnose_Primaertumor) via `Observation.focus`
 - references the patient (Patient resource) via `Observation.subject`
 - can be linked to a specific treatment case via `Observation.encounter`
 

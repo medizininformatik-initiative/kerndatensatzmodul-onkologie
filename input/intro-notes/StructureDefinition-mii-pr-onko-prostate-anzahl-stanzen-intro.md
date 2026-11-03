@@ -9,7 +9,7 @@ The profile is based on a FHIR Observation resource and uses LOINC for coding. T
 
 ### Links to other resources
 The number of biopsy cores is an important biopsy parameter:
-- references the primary diagnosis (MII_PR_Onko_Diagnose_Primaertumor) via `Observation.focus`
+- references the primary tumour diagnosis (MII_PR_Onko_Diagnose_Primaertumor) via `Observation.focus`
 - references the patient (Patient resource) via `Observation.subject`
 - can be linked to the corresponding biopsy Procedure via `Observation.partOf`
 

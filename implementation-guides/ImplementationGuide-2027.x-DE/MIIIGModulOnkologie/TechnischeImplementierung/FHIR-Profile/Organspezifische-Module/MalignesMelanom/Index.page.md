@@ -56,7 +56,7 @@ Diese Profile werden typischerweise in folgenden Szenarien verwendet:
 
 Alle Melanom-spezifischen Profile:
 - Basieren auf der FHIR Observation-Ressource
-- Referenzieren die Primärdiagnose über `focus`
+- Referenzieren die Diagnose Primärtumor über `focus`
 - Sind in Transaction-Bundles integrierbar
 - Unterstützen die oBDS-Dokumentationsanforderungen
 

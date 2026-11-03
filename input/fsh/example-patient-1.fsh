@@ -32,7 +32,7 @@ Description: "10.06.2021 CT Abdomen mit KM"
 Instance: PatientKimMusterperson-PrimaryDiagnosis-2
 InstanceOf: mii-pr-onko-diagnose-primaertumor
 Usage: #example
-Description: "bestätigte Primärdiagnose"
+Description: "bestätigte Diagnose Primärtumor"
 * category[onkologie] = $SCT#55342001 "Neoplastic disease"
 * extension[Feststellungsdatum].valueDateTime = 2021-06-10
 * recordedDate = 2021-06-10

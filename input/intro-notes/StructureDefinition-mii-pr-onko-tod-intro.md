@@ -13,7 +13,7 @@ It includes:
 * a coding of the cause of death according to ICD-10 GM
 * an interpretation of the relationship between the tumor disease and the cause of death
 
-In the oBDS, the death report is transmitted as a standalone entity. Since there should only be one death report per patient, the FHIR profiling therefore does not include a direct link to the primary diagnosis or the individual follow-up stagings, but exclusively to the patient.
+In the oBDS, the death report is transmitted as a standalone entity. Since there should only be one death report per patient, the FHIR profiling therefore does not include a direct link to the primary tumour diagnosis or the individual follow-up stagings, but exclusively to the patient.
 
 ---
 

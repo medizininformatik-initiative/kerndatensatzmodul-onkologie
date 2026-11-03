@@ -9,7 +9,7 @@ The profile is based on a FHIR Observation resource; `Observation.code` uses a m
 
 ### Links to other resources
 The Gleason patterns are important histopathological observations:
-- references the primary diagnosis (MII_PR_Onko_Diagnose_Primaertumor) via `Observation.focus`
+- references the primary tumour diagnosis (MII_PR_Onko_Diagnose_Primaertumor) via `Observation.focus`
 - references the patient (Patient resource) via `Observation.subject`
 - can be linked to a specific treatment case via `Observation.encounter`
 - can be linked to the corresponding biopsy Procedure via `Observation.partOf`

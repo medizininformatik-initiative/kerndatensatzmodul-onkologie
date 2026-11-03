@@ -17,7 +17,7 @@ Das Profil basiert auf einer FHIR Observation-Ressource und verwendet SNOMED CT 
 
 ### Verknüpfungen zu anderen Ressourcen
 Der Menopausenstatus ist eine wichtige tumorspezifische Beobachtung:
-- verweist über `Observation.focus` auf die Primärdiagnose (MII_PR_Onko_Diagnose_Primaertumor)
+- verweist über `Observation.focus` auf die Diagnose Primärtumor (MII_PR_Onko_Diagnose_Primaertumor)
 - verweist über `Observation.subject` auf die Patientin (Patient-Ressource)
 - kann über `Observation.encounter` mit einem spezifischen Behandlungsfall verknüpft werden
 

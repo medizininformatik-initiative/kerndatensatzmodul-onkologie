@@ -17,7 +17,7 @@ Das Profil basiert auf einer FHIR Observation-Ressource und verwendet LOINC zur 
 
 ### Verknüpfungen zu anderen Ressourcen
 Der Karzinom-Befall der Stanze ist eine wichtige histopathologische Beobachtung:
-- verweist über `Observation.focus` auf die Primärdiagnose (MII_PR_Onko_Diagnose_Primaertumor)
+- verweist über `Observation.focus` auf die Diagnose Primärtumor (MII_PR_Onko_Diagnose_Primaertumor)
 - verweist über `Observation.subject` auf den Patienten (Patient-Ressource)
 - kann über `Observation.encounter` mit einem spezifischen Behandlungsfall verknüpft werden
 - kann über `Observation.specimen` mit der entsprechenden Gewebeprobe verknüpft werden

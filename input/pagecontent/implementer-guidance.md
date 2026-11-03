@@ -5,7 +5,7 @@
 
 The CDS module Oncology makes extensive use of the MII base modules:
 
-- The oncological primary diagnosis is based on the MII module
+- The oncological primary tumour diagnosis is based on the MII module
   [Diagnosis](https://simplifier.net/mii-basismodul-diagnose-2024).
 - The therapy documentation of surgeries, radiotherapy and general information
   on systemic therapies is based on the MII module

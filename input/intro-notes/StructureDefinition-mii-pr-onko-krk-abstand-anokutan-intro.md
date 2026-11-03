@@ -12,7 +12,7 @@ The profile is based on a FHIR Observation resource and uses LOINC for the stand
 
 The distance measurement to the anal verge is an important diagnostic observation:
 
-- refers via `Observation.focus` to the primary diagnosis ([MII PR Onkologie Diagnose Primärtumor](StructureDefinition-mii-pr-onko-diagnose-primaertumor.html))
+- refers via `Observation.focus` to the primary tumour diagnosis ([MII PR Onkologie Diagnose Primärtumor](StructureDefinition-mii-pr-onko-diagnose-primaertumor.html))
 - refers via `Observation.subject` to the patient (Patient resource)
 - can be linked via `Observation.encounter` to a specific episode of care
 

@@ -23,7 +23,7 @@ For detailed molecular tumor boards with structured therapy protocols:
 
 Both slices share the common CarePlan elements:
 * **Patient reference**: `subject`
-* **Primary diagnosis reference**: `addresses`
+* **Primary tumour diagnosis reference**: `addresses`
 * **Tumor board category**: `category` according to oBDS 18.2
 * **Date**: `created` according to oBDS 18.1
 * **Additional information**: `supportingInfo` for relevant follow-up stagings
@@ -44,7 +44,7 @@ The CarePlan resource requires a mandatory specification of the `status` element
 #### For the extended slice (molecular tumor boards):
 Status tracking takes place in the referenced resources (RequestGroup, MedicationRequest, ServiceRequest). `activity.progress` can be used for narrative progress notes.
 
-Every tumor board with a therapy recommendation SHOULD be stored as a separate resource and reference the primary diagnosis via `CarePlan.addresses(Reference(Condition))`.
+Every tumor board with a therapy recommendation SHOULD be stored as a separate resource and reference the primary tumour diagnosis via `CarePlan.addresses(Reference(Condition))`.
 
 ### FHIR invariant management
 

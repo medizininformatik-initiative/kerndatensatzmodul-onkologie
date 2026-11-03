@@ -19,7 +19,7 @@ the central KDS terminology service (SU-TermServ):
 
 The International Statistical Classification of Diseases and Related Health
 Problems, 10th revision, German Modification (ICD-10-GM) is used to describe
-the primary diagnosis, pre-existing conditions and the cause of death. BfArM
+the primary tumour diagnosis, pre-existing conditions and the cause of death. BfArM
 publishes the ICD-10-GM annually on behalf of the Federal Ministry of Health;
 the current version is available on the
 [BfArM page](https://www.bfarm.de/DE/Kodiersysteme/Klassifikationen/ICD/ICD-10-GM/_node.html).

@@ -4,7 +4,7 @@ This profile describes whether and when a patient participated in a study.
 
 It includes:
 * a reference to Patient
-* a reference to the primary diagnosis
+* a reference to the primary tumour diagnosis
 * the Observation code "709491003 | Enrollment in clinical trial (procedure)" (SNOMED-CT)
 * the exact date of first enrollment in a study with ethics approval
 * the status of study participation (Yes, No, Unknown)
