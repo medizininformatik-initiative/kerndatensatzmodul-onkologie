@@ -9,6 +9,7 @@ Hier sind alle Änderungen aufgelistet.
 ## Änderungen seit v2027.0.0-ballot.1 (noch nicht veröffentlicht)
 
 ### Weitere Verbesserungen
+- `fix` **Technische IG-Mängel aus dem Ballot** (HDB-679, HDB-680): CapabilityStatement bereinigt - sieben SearchParameter-Referenzen auf die tatsächlichen Canonicals umgestellt, drei Referenzen auf entfernte Profile (ECOG-/Karnofsky-Quantity, Tumorkonferenz-detailed-recommendations) und ein nicht existierender Zielgebiet-SearchParameter gestrichen; fünf tote `pagelink`s (Release Notes, Terminologien) repariert; GitHub-Bildlinks auf den 2027er IG-Ordner; UNII-Canonical nicht mehr als Weblink. `CarePlan.supportingInfo` am Tumorkonferenz-Profil benennt jetzt die Zieltypen (Verlauf, TNM-Klassifikation, synthetisierte TNM, Befund, sonst Observation/DiagnosticReport). Die Binding-Ebenen- und Slicing-Angleichung aus HDB-679 folgt mit der profilübergreifenden Analyse (HDB-709).
 - `documentation` **ICD-O-4 auf der Seite [ICD-O-Terminologie](icd-o-terminologie.html) beschrieben**: Auswertung der IARC-Tabellen vom 16.07.2026 — fünfstellige, alphanumerische Morphologie-Codes (`XXXXY/B`, fünfte Stelle `0`–`9` und `A`–`K`), Änderungstabelle gegenüber ICD-O-3.2 (109 neue Stamm-Dignitäts-Kombinationen, 1.175 neue Subcodes, 29 gestrichene Codes, 19 Stammwechsel, 24 Dignitätswechsel, 935 Termänderungen), Überleitungsregel 3.2 → 4 mit den 38 nicht per angehängter `0` überleitbaren Codes, optionale vierstellige Topographie, Folgen für oBDS-XSD und FHIR-Artefakte. Keine ICD-O-4-Artefakte, da die deutsche BfArM-Ausgabe aussteht; Aufnahme in das oBDS voraussichtlich erst mit oBDS 4.0.
 
 ## Änderungen v2027.0.0-ballot.1 (Ballot, Dependency-Patch)
@@ -309,7 +310,7 @@ Diese Änderungen erfordern möglicherweise Anpassungen in bestehenden Implement
   - **Integration**: Extension in allgemeines {{pagelink:OperationProcedure}} Profil integriert für breite Anwendbarkeit
 
 ### Verlauf-Profil Anpassungen
-- **Component-Kardinalität**: Änderung von `component 1..*` zu `component 0..*` im {{pagelink:AllgemeinerObservation}}
+- **Component-Kardinalität**: Änderung von `component 1..*` zu `component 0..*` im {{pagelink:VerlaufObservation}}
   - **Grund**: GitHub Issue #202 - Unterstützung für "K - keine Änderung" Fälle und hämatologische Krebsarten ohne TNM-Anwendbarkeit
   - **Betroffene Felder**: Tumor_Verlauf, Lymphknoten_Verlauf, Fernmetastasen_Verlauf bleiben 0..1
 
@@ -343,7 +344,7 @@ Diese Änderungen erfordern möglicherweise Anpassungen in bestehenden Implement
   - **Circumferelle Resektionsebene**: {{pagelink:KRKAbstandCircumferelleResektionsebene}} (oBDS KR3)
   - **Aboraler Resektionsrand**: {{pagelink:KRKAbstandResektionsrandAboral}} (oBDS KR2)
   - **MRT Mesorektale Faszie**: {{pagelink:KRKMRTMesorektale}} mit Abstandsmessung (oBDS KR2)
-  - **ASA-Klassifikation**: {{pagelink:KRKASAKlassifikation}} (oBDS KR9, LOINC 97816-3)
+  - **ASA-Klassifikation**: {{pagelink:ASAKlassifikation}} (oBDS KR9, LOINC 97816-3)
   - **Anastomoseninsuffizienz**: {{pagelink:KRKAnastomoseninsuffizienz}} (oBDS KR8, SNOMED CT 235919008)
   - **KRK-Operation**: {{pagelink:KRKOperation}} mit TME-Qualitätsbewertung (oBDS KR4)
   - **KRK-Specimen**: {{pagelink:KRKSpecimen}} mit pathologischer TME-Qualität
@@ -354,10 +355,10 @@ Diese Änderungen erfordern möglicherweise Anpassungen in bestehenden Implement
   - **Ulzeration**: {{pagelink:MelanomUlzeration}} (oBDS MM4) 
   - **Sicherheitsabstand**: {{pagelink:MelanomSicherheitsabstand}} (oBDS MM1)
   - **LDH**: {{pagelink:MelanomLDH}} Laktatdehydrogenase als prognostischer Marker
-  - **Melanom-Exzision**: {{pagelink:MelanomExzision}} mit SNOMED CT Codes für Hautexzisionen
+  - **Melanom-Exzision**: {{pagelink:MalignesMelanomModule}} mit SNOMED CT Codes für Hautexzisionen
   - **Bundle-Beispiel**: {{pagelink:MelanomBundle}} demonstriert vollständigen Melanom-Workflow
 
-- **Bundle-Beispiele**: Für alle organspezifischen Module ({{pagelink:MammaBundle}}, {{pagelink:ProstataBundle}}, {{pagelink:KRKBundle}}, {{pagelink:MelanomBundle}}) stehen vollständige Transaktions-Bundles zur Verfügung, die alle zugehörigen Profile in einem server-konsumierbaren Format demonstrieren
+- **Bundle-Beispiele**: Für alle organspezifischen Module ({{pagelink:MammaBundle}}, {{pagelink:ProstataModule}}, {{pagelink:KRKBundle}}, {{pagelink:MelanomBundle}}) stehen vollständige Transaktions-Bundles zur Verfügung, die alle zugehörigen Profile in einem server-konsumierbaren Format demonstrieren
 
 ---
 

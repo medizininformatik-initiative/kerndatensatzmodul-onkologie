@@ -36,8 +36,15 @@ Description: "Dieses Profil beschreibt die Tumorkonferenz und die Therapieempfeh
 // die Referenz zu Tumorerkrankung
 * addresses MS
 * addresses only Reference(MII_PR_Onko_Diagnose_Primaertumor)
-// Referenz zu relevanten Verlaufs-Stagings oder anderen Observationen
+// Referenz zu relevanten Verlaufs-Stagings oder anderen Observationen.
+// HDB-680: Zielprofile benannt - primär die Verlauf-Observation (zuletzt
+// strukturiert dokumentierter Zustand zum Zeitpunkt der Konferenz), darunter
+// hängende TNM-Klassifikationen (auch synthetisiert) und Befunde; weitere
+// Observations/DiagnosticReports bleiben zulässig.
 * supportingInfo MS
+* supportingInfo only Reference(MII_PR_Onko_Verlauf or MII_PR_Onko_TNM_Klassifikation or MII_PR_Onko_TNM_Klassifikation_Synthetisiert or MII_PR_Onko_Befund or Observation or DiagnosticReport)
+* insert Label(supportingInfo, Besprochener Zustand, Grundlage der Konferenz: vorzugsweise die Verlauf-Observation mit dem zuletzt strukturiert dokumentierten Zustand; außerdem TNM-Klassifikationen - auch synthetisiert - und Befunde. Weitere Observations und DiagnosticReports sind zulässig)
+* insert Translation(supportingInfo ^short, de-DE, Besprochener Zustand)
 
 * activity 0..* MS
 

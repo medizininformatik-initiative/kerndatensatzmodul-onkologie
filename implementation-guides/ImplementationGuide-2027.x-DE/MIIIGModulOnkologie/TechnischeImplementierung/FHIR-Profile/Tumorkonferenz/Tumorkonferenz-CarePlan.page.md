@@ -36,7 +36,7 @@ Beide Slices teilen die gemeinsamen CarePlan-Elemente:
 * **Primärdiagnose-Referenz**: `addresses`
 * **Tumorboard-Kategorie**: `category` nach oBDS 18.2
 * **Datum**: `created` gemäß oBDS 18.1
-* **Zusätzliche Informationen**: `supportingInfo` für relevante Verlaufs-Stagings
+* **Zusätzliche Informationen**: `supportingInfo` für den besprochenen Zustand - vorzugsweise die Verlauf-Observation (zuletzt strukturiert dokumentierter Zustand zum Zeitpunkt der Konferenz), außerdem TNM-Klassifikationen (auch synthetisiert) und Befunde; weitere Observations und DiagnosticReports sind zulässig (Zieltypen seit Ballot HDB-680 im Profil benannt)
 
 ### Status-Management
 
