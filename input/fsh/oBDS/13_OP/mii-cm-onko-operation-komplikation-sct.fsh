@@ -12,8 +12,8 @@ Usage: #definition
 * date = "2024-04-10"
 * description = "Mapping Operation Komplikation Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich."
 * purpose = "Technical mapping to transform oBDS-Data into SNOMED"
-* sourceUri = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/"
-* targetUri[+] = "http://snomed.info/sct/900000000000207008/version/20240401"
+* sourceCanonical = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-operation-komplikation"
+* targetUri = "http://snomed.info/sct?fhir_vs"
 * group[+].source = $mii-cs-onko-operation-komplikation
 * group[=].target = "http://snomed.info/sct/900000000000207008/version/20240401"
 

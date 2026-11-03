@@ -2685,6 +2685,14 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/mii-vs-onko-intention"
+        },
+        "name": "MII VS Onkologie Intention (modulübergreifend)",
+        "description": "Alle Intentions-Codes des oBDS (OP 13.2, Strahlentherapie 14.2, Systemische Therapie 16.2). Modulübergreifendes Gesamt-ValueSet, u. a. als Quelle der ConceptMap mii-cm-onko-intention-sct; die Profile binden die therapiespezifischen Teilmengen.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/mii-vs-onko-kdl-dokumentklassen"
         },
         "name": "MII VS Onkologie KDL Dokumentklassen",
@@ -3225,6 +3233,30 @@
         },
         "name": "MII VS Onkologie Systemische Therapie Substanzen ATC 2026",
         "description": "ATC-Codes für Substanzen der systemischen Therapie, validiert gegen ATC-DE Version 2026. Für historische Datenvalidierung.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-therapie-ende-grund"
+        },
+        "name": "MII VS Onkologie Therapie Ende Grund (modulübergreifend)",
+        "description": "Alle Codes für den Grund des Therapieendes des oBDS (Strahlentherapie 14.13, Systemische Therapie 16.9). Modulübergreifendes Gesamt-ValueSet, u. a. als Quelle der ConceptMap mii-cm-onko-therapie-ende-sct; die Profile binden die therapiespezifischen Teilmengen.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-therapie-stellungzurop"
+        },
+        "name": "MII VS Onkologie Therapie Stellung zur OP (modulübergreifend)",
+        "description": "Alle Codes für die Stellung der Therapie zur Operation (oBDS 14.3, 16.3). Modulübergreifendes Gesamt-ValueSet, u. a. als Quelle der ConceptMap mii-cm-onko-therapie-stellung-sct.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-therapie-typ"
+        },
+        "name": "MII VS Onkologie Therapie Typ (modulübergreifend)",
+        "description": "Alle Therapie-Typ-Codes des oBDS (Systemische Therapie 16.1, Tumorkonferenz-Empfehlung 18). Modulübergreifendes Gesamt-ValueSet, u. a. als Quelle der ConceptMap mii-cm-onko-therapie-typ-sct.",
         "exampleBoolean": false
       },
       {
