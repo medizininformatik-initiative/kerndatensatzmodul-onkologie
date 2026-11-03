@@ -10,6 +10,7 @@ Description: "Mapping der oBDS-Codes für präoperative Stoma-Anzeichnung zu SNO
 * insert Version
 
 * sourceCanonical = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-krk-stoma-anzeichnung"
+* targetUri = "http://snomed.info/sct?fhir_vs"
 
 * group[+].source = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-krk-stoma-anzeichnung"
 * group[=].target = "http://snomed.info/sct"
