@@ -184,7 +184,10 @@ jobs:
       #     lacks the 'package' code every CRMI-annotated resource carries
       #     (hl7.terminology.r4 7.3.0 has it). Remove once SU-TermServ carries a
       #     current THO.
-      #   - CONCEPTMAP_VS_INVALID_CONCEPT_CODE and ..._VER @ConceptMap.group.element
+      #   - CONCEPTMAP_VS_INVALID_CONCEPT_CODE and ..._VER @ConceptMap.group.element.*
+#     (trailing .* is required: without it the advisor only matches paths of
+#     exactly that depth, and these messages sit on element[n].code and
+#     element[n].target[n].code)
       #     Same root cause: ConceptMapValidator sends all element/target codes
       #     of a map as one validateCodeBatch(..., null) without a ValueSet;
       #     Ontoserver rejects it, so every code is reported as "not valid in
