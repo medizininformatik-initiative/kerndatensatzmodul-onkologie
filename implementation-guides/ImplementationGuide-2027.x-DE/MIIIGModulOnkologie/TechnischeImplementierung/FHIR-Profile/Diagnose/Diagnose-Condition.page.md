@@ -85,6 +85,15 @@ Die onkologische Diagnose ist das zentrale Kernelement des Basisdatensatzes. All
 
 ---
 
+### Diagnosedatum (Feststellungsdatum)
+
+`extension[Feststellungsdatum]` (HL7-Standard-Extension `condition-assertedDate`, vererbt aus dem MII-Basisprofil Diagnose) trägt das **Datum der Erstdiagnose nach oBDS 5.6**. Das Manual der Tumordokumentation ([Plattform §65c, Tumorzuordnung](https://plattform65c.atlassian.net/wiki/spaces/Dokumentat/pages/75366552/Tumorzuordnung)) definiert es als den Zeitpunkt, an dem der Tumor **erstmals hinreichend sicher klinisch oder histologisch** festgestellt wurde. Daraus folgt (Ballot HDB-694):
+
+* Es ist **nicht zwingend das Datum der histologischen Sicherung**. Eine klinisch hinreichend gesicherte Diagnose trägt das klinische Datum; ab wann sie als gesichert gilt, liegt im Ermessen der Behandelnden. Die Art der Sicherung steht unabhängig davon in `verificationStatus.coding[Diagnosesicherung]`.
+* Es ist nicht das Untersuchungsdatum im Verlauf und nicht das Diagnosedatum eines Rezidivs; Verdachtsdiagnosen werden nicht gemeldet.
+* Ist das Datum nicht exakt dokumentiert, wird es näherungsweise nach der [ENCR-Empfehlung zur Festlegung des Inzidenzdatums (2022)](https://encr.eu/sites/default/files/Recommendations/ENCR%20Recommendation%20DOI_Mar2022_DE_2022-11-29.pdf) bestimmt.
+* Da Krebsregister Meldungen verschiedener Melder zu demselben Tumor zusammenführen, können Meldungen unterschiedliche Diagnosedaten tragen. Das Profil bildet den diagnostischen Prozess nicht als Kette von Conditions ab; maßgeblich ist das vom Register konsolidierte Datum.
+
 ### Zeitliche Zuordnung im Verlauf
 Im oBDS ist eine Zuordung der Beobachtungen als wichtig für die Erstdiagnosestellung dadurch gegeben, dass diese Teil der Diagnosemeldung sind. Spätere Meldungen können dann bsw. als Verlaufs-, Pathologie- oder Todesmeldung gemacht werden. 
 

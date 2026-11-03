@@ -246,6 +246,38 @@
         "id": "Condition.extension:Feststellungsdatum",
         "path": "Condition.extension",
         "sliceName": "Feststellungsdatum",
+        "short": "Diagnosedatum",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Diagnosedatum"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Asserted date"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "Datum der Erstdiagnose gemäß oBDS 5.6: der Zeitpunkt, an dem der Tumor erstmals hinreichend sicher klinisch oder histologisch festgestellt wurde. Nicht das Untersuchungsdatum im Verlauf und nicht das Diagnosedatum eines Rezidivs. Ab wann eine Diagnose hinreichend klinisch gesichert ist, liegt im Ermessen der Behandelnden; das Datum fällt daher nicht zwingend mit der histologischen Sicherung zusammen. Verdachtsdiagnosen werden nicht gemeldet. Ist das Datum nicht exakt dokumentiert, wird es näherungsweise nach der ENCR-Empfehlung zum Inzidenzdatum von 2022 bestimmt (Manual der Tumordokumentation, Plattform §65c, Tumorzuordnung).",
         "min": 1,
         "mapping": [
           {
