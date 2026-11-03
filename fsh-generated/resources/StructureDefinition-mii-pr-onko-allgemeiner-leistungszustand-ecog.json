@@ -185,6 +185,22 @@
       {
         "id": "Observation",
         "path": "Observation",
+        "constraint": [
+          {
+            "key": "onko-leistungszustand-wert-oder-grund",
+            "severity": "error",
+            "human": "Entweder valueCodeableConcept oder dataAbsentReason muss angegeben sein (genau eines von beiden). Ein unbekannter Leistungszustand ist als Wert 'U' zu kodieren, dataAbsentReason=not-applicable ist für den Fall vorgesehen, dass die Skala nicht anwendbar ist.",
+            "expression": "value.exists() xor dataAbsentReason.exists()",
+            "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-ecog"
+          },
+          {
+            "key": "onko-ecog-obds-oder-verstorben",
+            "severity": "error",
+            "human": "Der oBDS-ECOG-Code (0-4, U) ist Pflicht; er darf nur fehlen, wenn der LOINC-Wert LA9627-6 'Dead' (ECOG 5, verstorben) angegeben ist, den das oBDS nicht kennt.",
+            "expression": "valueCodeableConcept.exists() implies (valueCodeableConcept.coding.where(system = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-allgemeiner-leistungszustand-ecog').exists() or valueCodeableConcept.coding.where(system = 'http://loinc.org' and code = 'LA9627-6').exists())",
+            "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-ecog"
+          }
+        ],
         "mapping": [
           {
             "identity": "oBDS",
@@ -299,7 +315,6 @@
       {
         "id": "Observation.value[x]",
         "path": "Observation.value[x]",
-        "min": 1,
         "type": [
           {
             "code": "CodeableConcept"
@@ -337,7 +352,7 @@
             }
           ]
         },
-        "definition": "Leistungszustand nach ECOG Stufen 0-4 gemäß 12.1 oBDS 2021",
+        "definition": "Leistungszustand nach ECOG Stufen 0-4 und U gemäß 12.1 oBDS; ECOG 5 verstorben nur als LOINC LA9627-6",
         "_definition": {
           "extension": [
             {
@@ -349,13 +364,12 @@
                 },
                 {
                   "url": "content",
-                  "valueString": "Leistungszustand nach ECOG Stufen 0-4 gemäß 12.1 oBDS 2021"
+                  "valueString": "Leistungszustand nach ECOG Stufen 0-4 und U gemäß 12.1 oBDS; ECOG 5 verstorben nur als LOINC LA9627-6"
                 }
               ]
             }
           ]
         },
-        "min": 1,
         "mustSupport": true
       },
       {
@@ -373,7 +387,7 @@
         "id": "Observation.value[x].coding:obds",
         "path": "Observation.value[x].coding",
         "sliceName": "obds",
-        "min": 1,
+        "min": 0,
         "max": "1",
         "mustSupport": true,
         "binding": {
@@ -416,6 +430,30 @@
         "id": "Observation.value[x].coding:loinc.code",
         "path": "Observation.value[x].coding.code",
         "min": 1
+      },
+      {
+        "id": "Observation.dataAbsentReason",
+        "path": "Observation.dataAbsentReason",
+        "short": "Grund für fehlenden Wert",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Grund für fehlenden Wert"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Nur wenn kein Wert angegeben ist. Code not-applicable bedeutet: die ECOG-Skala ist für diesen Patienten nicht anwendbar; entspricht KDK notApplicable im Modellvorhaben Genomsequenzierung. Ein unbekannter Leistungszustand ist dagegen als oBDS-Wert U zu kodieren",
+        "mustSupport": true
       }
     ]
   }

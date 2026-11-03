@@ -31,9 +31,15 @@ Description: "OBDS Beschreibung des allgemeines Leistungszustandes nach Karnofsk
 * code.coding[loinc].system 1..
 * code.coding[loinc].code 1..
 
+// HDB-1001: value 0..1 + dataAbsentReason, damit "nicht anwendbar"
+// ausdrückbar ist; genau eines von beiden (Invariante).
+* obeys onko-leistungszustand-wert-oder-grund
 * value[x] 0..1 MS
 * value[x] only CodeableConcept
-* valueCodeableConcept 1..1 MS
+* valueCodeableConcept 0..1 MS
+* dataAbsentReason MS
+* insert Label(dataAbsentReason, Grund für fehlenden Wert, Nur wenn kein Wert angegeben ist. Code not-applicable bedeutet: die Karnofsky-Skala ist für diesen Patienten nicht anwendbar. Ein unbekannter Leistungszustand ist dagegen als oBDS-Wert U zu kodieren)
+* insert Translation(dataAbsentReason ^short, de-DE, Grund für fehlenden Wert)
 * valueCodeableConcept.coding MS
 * valueCodeableConcept.coding ^slicing.discriminator.type = #pattern
 * valueCodeableConcept.coding ^slicing.discriminator.path = "system"
