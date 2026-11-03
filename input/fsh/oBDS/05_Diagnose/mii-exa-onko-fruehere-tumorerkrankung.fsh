@@ -5,7 +5,7 @@ Usage: #example
 Title: "Frühere Tumorerkrankung Cervix in situ"
 Description: "Beispiel einer früheren Tumorerkrankung (Carcinoma in situ der Cervix uteri) aus dem Jahr 2013"
 * insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fruehere-tumorerkrankung)
-* category[oncology] = $SCT#394593009 "Medical oncology (qualifier value)"
+* category[onkologie] = $SCT#55342001 "Neoplastic disease"
 * code.coding[icd10-gm].system = "http://fhir.de/CodeSystem/bfarm/icd-10-gm"
 * code.coding[icd10-gm].version = "2013"
 * code.coding[icd10-gm].code = #D06.9
@@ -24,7 +24,7 @@ Usage: #example
 Title: "Frühere Tumorerkrankung Mamma"
 Description: "Beispiel einer früheren Tumorerkrankung (Mammakarzinom links) aus dem Jahr 2013"
 * insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fruehere-tumorerkrankung)
-* category[oncology] = $SCT#394593009 "Medical oncology (qualifier value)"
+* category[onkologie] = $SCT#55342001 "Neoplastic disease"
 * code.coding[icd10-gm].system = "http://fhir.de/CodeSystem/bfarm/icd-10-gm"
 * code.coding[icd10-gm].version = "2013"
 * code.coding[icd10-gm].code = #C50.9
@@ -47,7 +47,7 @@ Usage: #example
 Title: "Frühere Tumorerkrankung Prostata"
 Description: "Beispiel einer früheren Tumorerkrankung (Prostatakarzinom) aus dem Jahr 2018"
 * insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fruehere-tumorerkrankung)
-* category[oncology] = $SCT#394593009 "Medical oncology (qualifier value)"
+* category[onkologie] = $SCT#55342001 "Neoplastic disease"
 * code.coding[icd10-gm].system = "http://fhir.de/CodeSystem/bfarm/icd-10-gm"
 * code.coding[icd10-gm].version = "2021"
 * code.coding[icd10-gm].code = #C61
@@ -70,7 +70,7 @@ Usage: #example
 Title: "Frühere Tumorerkrankung nur Freitext"
 Description: "Beispiel einer früheren Tumorerkrankung mit nur Freitextangabe, ohne ICD-10-GM Kodierung (typisch bei anamnestischen Angaben)"
 * insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fruehere-tumorerkrankung)
-* category[oncology] = $SCT#394593009 "Medical oncology (qualifier value)"
+* category[onkologie] = $SCT#55342001 "Neoplastic disease"
 * code.text = "Hautkrebs am Rücken, ca. 2010"
 * subject = Reference(Patient/example)
 * extension[assertedDate].valueDateTime = "2010"

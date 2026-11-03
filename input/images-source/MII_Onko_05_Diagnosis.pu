@@ -26,7 +26,7 @@ object Fruehere_Tumorerkrankung #FFFF66 {
     + extension[morphology-behavior-icdo3] [0..1]
     + extension[assertedDate] [0..1]
     + clinicalStatus [0..1]
-    + category[oncology] [1..1] = SCT#394593009
+    + category[onkologie] [1..1] = SCT#55342001
 }
 R4_Condition <|---- Fruehere_Tumorerkrankung
 05_Diagnose --> "0..*" Fruehere_Tumorerkrankung : extension[occurredFollowing]

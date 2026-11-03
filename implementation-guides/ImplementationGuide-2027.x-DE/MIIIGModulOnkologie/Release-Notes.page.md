@@ -8,7 +8,12 @@ Hier sind alle Änderungen aufgelistet.
 
 ## Änderungen seit v2027.0.0-ballot.1 (noch nicht veröffentlicht)
 
+### ⚠️ Breaking Changes
+
+- **`BREAKING`** **Frühere Tumorerkrankung: zweiter Kategorie-Slice "Medical oncology" entfernt** (Ballot HDB-1006): `Condition.category` trägt am Profil `mii-pr-onko-fruehere-tumorerkrankung` nur noch den mit Diagnose Primärtumor identischen Pflicht-Slice `onkologie` (SNOMED CT `55342001` "Neoplastic disease"). Der bisherige zusätzliche Slice `oncology` (SNOMED CT `394593009` "Medical oncology") beschrieb das Fachgebiet, nicht den zeitlichen Status, und war damit kein Unterscheidungsmerkmal zur aktuellen Diagnose. Instanzen dürfen den Code weiterhin führen (`rules #open`), er wird aber nicht mehr verlangt oder ausgewertet. Die Abgrenzung früher/aktuell läuft über Profil, Verweisrichtung (`occurredFollowing`) und `clinicalStatus` und ist auf der Profilseite dokumentiert.
+
 ### Weitere Verbesserungen
+- `documentation` **Diagnosesicherung 6 und 7 als veraltet gekennzeichnet** (Ballot HDB-951, GH #326): Concept-Properties `status=deprecated`, `deprecationDate` und `replaced-by` (7.2 bzw. 7.1) auf den beiden Codes des CodeSystems `mii-cs-onko-primaertumor-diagnosesicherung`; Displays unverändert, Definitionen um den oBDS-Verlauf (3.0.2 vom 17.10.2023, 3.0.3 vom 04.09.2024) ergänzt. Codes bleiben für Altdaten gültig, der Validator warnt nur.
 - `documentation` **ICD-O-4 auf der Seite [ICD-O-Terminologie](icd-o-terminologie.html) beschrieben**: Auswertung der IARC-Tabellen vom 16.07.2026 — fünfstellige, alphanumerische Morphologie-Codes (`XXXXY/B`, fünfte Stelle `0`–`9` und `A`–`K`), Änderungstabelle gegenüber ICD-O-3.2 (109 neue Stamm-Dignitäts-Kombinationen, 1.175 neue Subcodes, 29 gestrichene Codes, 19 Stammwechsel, 24 Dignitätswechsel, 935 Termänderungen), Überleitungsregel 3.2 → 4 mit den 38 nicht per angehängter `0` überleitbaren Codes, optionale vierstellige Topographie, Folgen für oBDS-XSD und FHIR-Artefakte. Keine ICD-O-4-Artefakte, da die deutsche BfArM-Ausgabe aussteht; Aufnahme in das oBDS voraussichtlich erst mit oBDS 4.0.
 
 ## Änderungen v2027.0.0-ballot.1 (Ballot, Dependency-Patch)
