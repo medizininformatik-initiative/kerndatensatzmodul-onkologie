@@ -76,6 +76,15 @@ The oncological diagnosis is the central core element of the base data set. All 
 
 ---
 
+### Date of diagnosis (Feststellungsdatum)
+
+`extension[Feststellungsdatum]` (HL7 standard extension `condition-assertedDate`, inherited from the MII base profile Diagnose) carries the **date of initial diagnosis according to oBDS 5.6**. The tumour documentation manual ([Plattform §65c, Tumorzuordnung](https://plattform65c.atlassian.net/wiki/spaces/Dokumentat/pages/75366552/Tumorzuordnung)) defines it as the point in time at which the tumour was **first established with sufficient certainty, clinically or histologically**. Consequently (ballot HDB-694):
+
+* It is **not necessarily the date of histological confirmation**. A diagnosis that is sufficiently certain on clinical grounds carries the clinical date; when it counts as sufficiently certain is at the discretion of the treating physician. The kind of confirmation is recorded independently in `verificationStatus.coding[Diagnosesicherung]`.
+* It is neither the examination date during follow-up nor the date of diagnosis of a recurrence; suspected diagnoses are not reported.
+* If the date is not documented exactly, it is approximated according to the [ENCR recommendation on the date of incidence (2022)](https://encr.eu/sites/default/files/Recommendations/ENCR%20Recommendation%20DOI_Mar2022_DE_2022-11-29.pdf).
+* Because cancer registries merge reports from different reporters for the same tumour, reports may carry different dates of diagnosis. The profile does not model the diagnostic process as a chain of Conditions; the date consolidated by the registry is authoritative.
+
 ### Temporal assignment over the course of disease
 In the oBDS, the assignment of observations as relevant for establishing the initial diagnosis is given by the fact that they are part of the diagnosis report. Later reports can then be made, for example, as follow-up, pathology or death reports.
 

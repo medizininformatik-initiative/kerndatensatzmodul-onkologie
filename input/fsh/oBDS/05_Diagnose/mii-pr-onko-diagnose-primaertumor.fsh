@@ -126,7 +126,12 @@ Description: "Dieses Profil beschreibt die Diagnose des Primärtumors (bzw. der 
 * extension[transformationVon] ^definition = "Kennzeichnet diese Diagnose als Transformation aus einem bereits registrierten Primärtumor derselben Tumor-Linie — für Konstellationen, in denen das Krebsregister-Regelwerk eine neue Tumor-Entität führt (z. B. MDS → sekundäre AML, ZNS-Tumor /0 → /3). Die CUP-Auflösung nach der Best-Of-Regel (Manual Kap. 6.2) ist davon abzugrenzen: Dort wird dieselbe Entität aktualisiert (Tumor-ID und Diagnosedatum bleiben erhalten), es entsteht keine zweite Diagnose-Ressource."
 * insert Translation(extension[transformationVon] ^short, de-DE, Transformation aus registriertem Primärtumor)
 
+// HDB-694: Definition gemäß Manual der Tumordokumentation (Plattform §65c,
+// Tumorzuordnung). Das Datum ist nicht an die Histologie gebunden.
 * extension[Feststellungsdatum] 1..1 MS
+* extension[Feststellungsdatum] ^short = "Diagnosedatum"
+* extension[Feststellungsdatum] ^definition = "Datum der Erstdiagnose gemäß oBDS 5.6: der Zeitpunkt, an dem der Tumor erstmals hinreichend sicher klinisch oder histologisch festgestellt wurde. Nicht das Untersuchungsdatum im Verlauf und nicht das Diagnosedatum eines Rezidivs. Ab wann eine Diagnose hinreichend klinisch gesichert ist, liegt im Ermessen der Behandelnden; das Datum fällt daher nicht zwingend mit der histologischen Sicherung zusammen. Verdachtsdiagnosen werden nicht gemeldet. Ist das Datum nicht exakt dokumentiert, wird es näherungsweise nach der ENCR-Empfehlung zum Inzidenzdatum von 2022 bestimmt (Manual der Tumordokumentation, Plattform §65c, Tumorzuordnung)."
+* insert Translation(extension[Feststellungsdatum] ^short, de-DE, Diagnosedatum)
 
 
 Mapping: FHIR-oBDS-Diagnose
