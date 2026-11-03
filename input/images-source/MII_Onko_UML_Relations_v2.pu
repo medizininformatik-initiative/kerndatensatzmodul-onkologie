@@ -15,8 +15,6 @@ rectangle "Modul Medikation" {
 Onko_SystemischeTherapie <--- MedicationStatement : partOf 
 Therapieplanung_Tumorkonferenz <--- MedicationStatement: basedOn
 object Diagnose_Primaertumor [[StructureDefinition-mii-pr-onko-diagnose-primaertumor.html]] #FFFF66
-object Evidenz_Erstdiagnose [[StructureDefinition-mii-pr-onko-liste-evidenz-erstdiagnose.html]] #EEEEEE
-Diagnose_Primaertumor ---> Evidenz_Erstdiagnose : evidence.detail
 
 
 rectangle "Onkologie Observations"{
@@ -132,4 +130,5 @@ legend right
 endlegend
 
 
+Diagnose_Primaertumor ---> Onko_Befund : evidence.detail 0..*
 @enduml

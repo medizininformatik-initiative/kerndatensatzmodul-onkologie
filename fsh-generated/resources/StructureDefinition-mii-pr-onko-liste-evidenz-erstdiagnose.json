@@ -154,7 +154,7 @@
   "version": "2027.0.0-ballot.1",
   "name": "MII_PR_Onko_Liste_Evidenz_Erstdiagnose",
   "title": "MII PR Onkologie Evidenz Diagnose Primärtumor",
-  "status": "active",
+  "status": "retired",
   "experimental": false,
   "publisher": "Medizininformatik Initiative",
   "contact": [
@@ -167,7 +167,7 @@
       ]
     }
   ],
-  "description": "Dieses Profil beschreibt eine Liste, die alle Observationen und Berichte enthält, die für eine Erstdiagnostik relevant waren.  (synchrone Observationen im Sinne der Krebsregister)",
+  "description": "RETIRED seit v2027.0.0 (Ballot HDB-678): Die Beobachtungen und Befunde der Erstdiagnose werden direkt in Condition.evidence.detail der Diagnose Primärtumor referenziert; eine zusätzliche List-Ressource entfällt. Das Profil bleibt für Bestandsdaten lesbar. - Dieses Profil beschreibt eine Liste, die alle Observationen und Berichte enthält, die für eine Erstdiagnostik relevant waren.  (synchrone Observationen im Sinne der Krebsregister)",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,

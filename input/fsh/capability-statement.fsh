@@ -204,7 +204,8 @@ Usage: #definition
 // List requirements
 * insert SupportResource(List, #SHALL)
 * insert Profile(http://hl7.org/fhir/StructureDefinition/List)
-* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-liste-evidenz-erstdiagnose, #SHALL)
+// HDB-678: Profil retired, nur noch für Bestandsdaten
+* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-liste-evidenz-erstdiagnose, #MAY)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
 * insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)

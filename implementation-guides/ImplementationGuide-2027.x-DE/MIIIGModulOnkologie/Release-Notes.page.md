@@ -8,6 +8,10 @@ Hier sind alle Änderungen aufgelistet.
 
 ## Änderungen seit v2027.0.0-ballot.1 (noch nicht veröffentlicht)
 
+### ⚠️ Breaking Changes
+
+- **`BREAKING`** **Evidenz-Liste der Erstdiagnose retired, direkte Referenzen in `Condition.evidence.detail`** (Ballot HDB-678): Am Profil Diagnose Primärtumor ist `evidence` jetzt 0..* und `evidence.detail` zielt direkt auf Observation oder DiagnosticReport der oBDS-Diagnosemeldung. Die Zwischen-Ressource List (`mii-pr-onko-liste-evidenz-erstdiagnose`) steht auf `retired`, bleibt als Referenzziel für Bestandsdaten zulässig und im CapabilityStatement auf MAY. Bestandsinstanzen bleiben gültig; Neuimplementierungen referenzieren direkt.
+
 ### Weitere Verbesserungen
 - `documentation` **ICD-O-4 auf der Seite [ICD-O-Terminologie](icd-o-terminologie.html) beschrieben**: Auswertung der IARC-Tabellen vom 16.07.2026 — fünfstellige, alphanumerische Morphologie-Codes (`XXXXY/B`, fünfte Stelle `0`–`9` und `A`–`K`), Änderungstabelle gegenüber ICD-O-3.2 (109 neue Stamm-Dignitäts-Kombinationen, 1.175 neue Subcodes, 29 gestrichene Codes, 19 Stammwechsel, 24 Dignitätswechsel, 935 Termänderungen), Überleitungsregel 3.2 → 4 mit den 38 nicht per angehängter `0` überleitbaren Codes, optionale vierstellige Topographie, Folgen für oBDS-XSD und FHIR-Artefakte. Keine ICD-O-4-Artefakte, da die deutsche BfArM-Ausgabe aussteht; Aufnahme in das oBDS voraussichtlich erst mit oBDS 4.0.
 
