@@ -788,7 +788,7 @@
           "reference": "ConceptMap/mii-cm-onko-tnm-uicc-sct-clinical"
         },
         "name": "MII CM Onko Clincal TNM UICC SNOMED",
-        "description": "Mapping clincal TNM UICC Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich.",
+        "description": "Mapping clincal TNM UICC Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Am 2026-11-03 überarbeitet (Ballot HDB-697): sourceCanonical/targetUri ergänzt (Ziel: UICC allowable value 1352503003 und Nachfahren), Präfixe c, p, y, r, a und Symbole m, sn auf die UICC-Präfix-/Suffixwerte von SNOMED CT International 20260701 umgestellt, Kategorie- und Stadiencodes gegen 20260701 als aktiv verifiziert. Ohne Gegenstück: u, i+, i-, mol+, mol- (nur präkoordiniert) und okk. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich.",
         "exampleBoolean": false
       },
       {
@@ -860,7 +860,7 @@
           "reference": "ConceptMap/mii-cm-onko-tnm-uicc-sct-pathological"
         },
         "name": "MII CM Onko Pathological TNM UICC SNOMED",
-        "description": "Mapping pathological TNM UICC Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich.",
+        "description": "Mapping pathological TNM UICC Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Am 2026-11-03 überarbeitet (Ballot HDB-697): sourceCanonical/targetUri ergänzt (Ziel: UICC allowable value 1352503003 und Nachfahren), Präfixe c, p, y, r, a und Symbole m, sn auf die UICC-Präfix-/Suffixwerte von SNOMED CT International 20260701 umgestellt, Kategorie- und Stadiencodes gegen 20260701 als aktiv verifiziert. Ohne Gegenstück: u, i+, i-, mol+, mol- (nur präkoordiniert) und okk. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich.",
         "exampleBoolean": false
       },
       {
@@ -3385,6 +3385,14 @@
         },
         "name": "MII VS Onkologie TNM T Kategorie Werte SNOMED CT",
         "description": "SNOMED CT Codes für die TNM T-Kategorie (alle Präfix-Kombinationen: cT, pT, ycT, ypT, rcT, rpT).",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-onko-tnm-uicc"
+        },
+        "name": "MII VS Onkologie TNM UICC (gesamt)",
+        "description": "Alle TNM-Werte des Moduls nach UICC (Kategorien T/N/M, Stadien, Präfixe c/p/u/y/r/a, Symbole m, sn, i+/i-, mol+/mol-, L, V, Pn, S) als Gesamt-ValueSet, u. a. als Quelle der ConceptMaps mii-cm-onko-tnm-uicc-sct-clinical und -pathological. Die Profile binden die kategoriespezifischen Teilmengen.",
         "exampleBoolean": false
       },
       {
