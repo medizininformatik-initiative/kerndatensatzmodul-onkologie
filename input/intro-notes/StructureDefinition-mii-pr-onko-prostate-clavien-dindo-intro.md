@@ -9,7 +9,7 @@ The profile is based on a FHIR Observation resource and uses SNOMED CT to code t
 
 ### Links to other resources
 The Clavien-Dindo score is an important postoperative observation:
-- refers via `Observation.focus[Diagnose]` to the primary diagnosis (MII_PR_Onko_Diagnose_Primaertumor)
+- refers via `Observation.focus[Diagnose]` to the primary tumour diagnosis (MII_PR_Onko_Diagnose_Primaertumor)
 - refers via `Observation.focus[Operation]` to the procedure performed (MII_PR_Onko_Operation)
 - refers via `Observation.subject` to the patient (Patient resource)
 - can be linked via `Observation.encounter` to a specific treatment case

@@ -7,7 +7,7 @@ Das Profil basiert auf einer FHIR Observation-Ressource und verwendet LOINC zur 
 
 ### Verknüpfungen zu anderen Ressourcen
 Die Anzahl positiver Stanzen ist ein wichtiger Biopsie-Parameter:
-- verweist über `Observation.focus` auf die Primärdiagnose (MII_PR_Onko_Diagnose_Primaertumor)
+- verweist über `Observation.focus` auf die Diagnose Primärtumor (MII_PR_Onko_Diagnose_Primaertumor)
 - verweist über `Observation.subject` auf den Patienten (Patient-Ressource)
 - kann über `Observation.partOf` mit der entsprechenden Biopsie-Procedure verknüpft werden
 - steht in Relation zur Gesamtanzahl der Stanzen (separate Observation)

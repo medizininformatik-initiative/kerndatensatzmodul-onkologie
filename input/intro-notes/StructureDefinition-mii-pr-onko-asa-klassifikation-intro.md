@@ -10,7 +10,7 @@ The profile is based on a FHIR Observation resource and uses LOINC for the stand
 
 ### Links to other resources
 The ASA classification is an important preoperative assessment:
-- references the primary diagnosis via `Observation.focus` (MII_PR_Onko_Diagnose_Primaertumor)
+- references the primary tumour diagnosis via `Observation.focus` (MII_PR_Onko_Diagnose_Primaertumor)
 - references the patient via `Observation.subject` (Patient resource)
 - can be linked to a specific encounter via `Observation.encounter`
 

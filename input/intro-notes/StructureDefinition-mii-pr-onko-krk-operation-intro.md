@@ -11,7 +11,7 @@ The profile is based on a FHIR Procedure resource and uses several specialized V
 The KRK operation is a central therapeutic procedure:
 - refers via `Procedure.subject` to the patient (Patient resource)
 - can be linked via `Procedure.encounter` to a specific treatment case
-- relates to the primary diagnosis via `Procedure.reasonReference`
+- relates to the primary tumour diagnosis via `Procedure.reasonReference`
 - can be linked to Specimen resources for pathological workup
 
 ---

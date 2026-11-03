@@ -14,7 +14,7 @@ angegeben und bezieht sich auf die am stärksten befallene Stanze der Biopsie.
 Der Karzinom-Befall der Stanze ist eine wichtige histopathologische
 Beobachtung:
 
-- verweist über `Observation.focus` auf die Primärdiagnose
+- verweist über `Observation.focus` auf die Diagnose Primärtumor
   ([MII_PR_Onko_Diagnose_Primaertumor](StructureDefinition-mii-pr-onko-diagnose-primaertumor.html))
 - verweist über `Observation.subject` auf den Patienten (Patient-Ressource)
 - kann über `Observation.encounter` mit einem spezifischen Behandlungsfall

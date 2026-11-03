@@ -11,7 +11,7 @@ Es beinhaltet:
 * eine Kodierung der Todesursache nach ICD-10 GM
 * eine Interpretation des Zusammenhanges zwischen Tumorerkrankung und Todesursache
 
-Im oBDS wird die Todesmeldung als eigenständige Entität übermittelt. Da es nur eine Todesmeldung für jeden Patient geben sollte, ist in der FHIR-Profilierung daher keine direkte Verknüpfung zur Primärdiagnose oder den einzelnen Verlaufs-Stagings hinterlegt, sondern ausschließlich zum Patienten.
+Im oBDS wird die Todesmeldung als eigenständige Entität übermittelt. Da es nur eine Todesmeldung für jeden Patient geben sollte, ist in der FHIR-Profilierung daher keine direkte Verknüpfung zur Diagnose Primärtumor oder den einzelnen Verlaufs-Stagings hinterlegt, sondern ausschließlich zum Patienten.
 
 ---
 

@@ -17,7 +17,7 @@ Das Profil basiert auf einer FHIR Observation-Ressource mit Kategorie "laborator
 
 ### Verknüpfungen zu anderen Ressourcen
 Die LDH-Bestimmung ist eine wichtige laborchemische Beobachtung beim Melanom:
-- verweist über `Observation.focus` auf die Primärdiagnose (MII_PR_Onko_Diagnose_Primaertumor)
+- verweist über `Observation.focus` auf die Diagnose Primärtumor (MII_PR_Onko_Diagnose_Primaertumor)
 - verweist über `Observation.subject` auf den Patienten (Patient-Ressource)
 - kann über `Observation.encounter` mit einem spezifischen Behandlungsfall verknüpft werden
 - dient als prognostischer Marker für die Therapieplanung

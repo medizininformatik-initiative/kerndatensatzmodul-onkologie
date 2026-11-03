@@ -18,6 +18,20 @@ Der oBDS erwartet die Kodierung der Diagnose via ICD-10 sowie die Kodierung der 
 
 Weitere histologische Untersuchungen mit abweichenden Morphologien im Therapieverlauf SOLLEN über das Histologie-Profil erfasst werden. 
 
+### Begriffe
+
+Die Begriffe werden im gesamten IG einheitlich so verwendet (Ballot HDB-692):
+
+| Begriff | Bedeutung |
+|---|---|
+| **Primärtumor** | Der ursprüngliche Tumor einer onkologischen Erkrankung, von dem Metastasen ausgehen können. Im oBDS wird jeder Primärtumor als eigene Tumorerkrankung mit eigener Tumor-ID dokumentiert; ein Zweittumor ist ein eigener Primärtumor. |
+| **Diagnose Primärtumor** | Das Profil `MII_PR_Onko_Diagnose_Primaertumor` bzw. die Condition-Ressource dazu. Sie steht für die onkologische Erkrankung insgesamt und wird auch für hämatologische Neoplasien ohne soliden Tumor verwendet. Alle Beobachtungen, Prozeduren und Tumorkonferenzen verweisen auf sie. |
+| **Erstdiagnose** | Der Zeitpunkt, an dem die Erkrankung erstmals hinreichend sicher klinisch oder histologisch festgestellt wurde (oBDS 5.6, siehe Abschnitt Diagnosedatum). Kein eigenes Profil, sondern ein Zeitpunkt im Verlauf der Diagnose Primärtumor. Beobachtungen aus der Diagnosemeldung werden über `evidence.detail` referenziert. |
+| **Frühere Tumorerkrankung** | Anamnestisch bekannte, nicht im selben System registrierte Tumorerkrankung (oBDS 5.9), eigenes Profil. |
+| **Verlaufshistologie** | Histologische Untersuchung nach der Erstdiagnose aus Pathologie- oder Verlaufsmeldungen, als Observation am Verlauf modelliert. Die Histologie der Erstdiagnose steht direkt in der Diagnose Primärtumor. |
+
+Der Begriff *Primärdiagnose* wird nicht mehr verwendet: Er stammt aus dem mCODE-Begriff *primary diagnosis* (die gerade im Fokus stehende Diagnose) und war mehrdeutig.
+
 ### Bezüge zu früheren Tumorerkrankungen: zwei Achsen
 
 Eine onkologische Diagnose kann auf zweierlei Weise mit einer früheren
@@ -79,9 +93,9 @@ Beide Extensions sind kombinierbar (eine Transformation trat immer auch zeitlich
 
 ### Verknüpfungen zu anderen Ressourcen
 Die onkologische Diagnose ist das zentrale Kernelement des Basisdatensatzes. Alle fallbezogenen Beobachtungen sind direkt oder indirekt damit verknüpft: 
-- alle Beobachtungen verweisen über `Observation.focus` auf die Primärdiagnose
-- die Tumorkonferenz-Ressource verweist über `CarePlan.addresses` auf die Primärdiagnose
-- alle Prozeduren (OP, Strahlentherapie, Systemische Therapie) verweisen über `reasonReference` auf die Primärdiagnose
+- alle Beobachtungen verweisen über `Observation.focus` auf die Diagnose Primärtumor
+- die Tumorkonferenz-Ressource verweist über `CarePlan.addresses` auf die Diagnose Primärtumor
+- alle Prozeduren (OP, Strahlentherapie, Systemische Therapie) verweisen über `reasonReference` auf die Diagnose Primärtumor
 
 ---
 

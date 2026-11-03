@@ -2,7 +2,7 @@ Dieses Profil beschreibt ob und wann ein Patient an einer Studie teilgenommen ha
 
 Es beinhaltet:
 * eine Referenz auf Patient
-* eine Referenz auf die Primärdiagnose
+* eine Referenz auf die Diagnose Primärtumor
 * den Observation-Code "709491003 | Enrollment in clinical trial (procedure)" (SNOMED-CT)
 * das genaue Ersteinschlusssdatum zu einer Studie mit Ethikvotum
 * den Status zur Studienteilnahme (Ja, Nein, Unbekannt)

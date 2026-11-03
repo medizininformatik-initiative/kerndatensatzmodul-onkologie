@@ -53,7 +53,7 @@ Bei komplexen Tumoroperationen, wo die Hierarchie nicht eindeutig ist:
 - **Intention**: Die Extension für die OP-Intention sollte bei allen verknüpften Prozeduren konsistent sein
 - **Komplikationen**: Können bei der betroffenen Einzelprozedur oder bei der übergeordneten Procedure dokumentiert werden
 - **Residualstatus**: Der lokale Residualstatus wird bei der resezierenden Prozedur dokumentiert
-- **Referenzen**: Alle Procedures sollten auf dieselbe Primärdiagnose (`reasonReference`) und ggf. Tumorboard-Empfehlung (`basedOn`) verweisen
+- **Referenzen**: Alle Procedures sollten auf dieselbe Diagnose Primärtumor (`reasonReference`) und ggf. Tumorboard-Empfehlung (`basedOn`) verweisen
 
 #### Visualisierung am Beispiel Kim Musterperson
 
@@ -93,7 +93,7 @@ Es gibt nebem dem Residualstatus  weitere Datenpunkte, die auf eine Operation ve
 
 #### Verweise auf andere Profile
 Eine im Rahmen der Krebsregister erfasste und gemeldete Operation basiert häufig auf einer Therapieempfehlung eines Tumorboards. In diesem Fall sollte eine Verknüpfung der Elemente über `Procedure.basedOn(Reference(CarePlan))` hergestellt werden.
-Weiterhin verweist die Operation über `Procedure.reasonReference` auf die Primärdiagnose.
+Weiterhin verweist die Operation über `Procedure.reasonReference` auf die Diagnose Primärtumor.
 
 ---
 

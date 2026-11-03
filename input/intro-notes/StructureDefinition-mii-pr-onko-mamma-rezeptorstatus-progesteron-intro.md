@@ -11,7 +11,7 @@ Progesterone receptor status is an important prognostic and predictive biomarker
 ### Links to other resources
 
 The profile is closely linked to other oncological resources:
-- refers via `Observation.focus` to the primary diagnosis (MII_PR_Onko_Diagnose_Primaertumor)
+- refers via `Observation.focus` to the primary tumour diagnosis (MII_PR_Onko_Diagnose_Primaertumor)
 - refers via `Observation.subject` to the patient (Patient resource)
 - can be linked via `Observation.encounter` to a specific treatment case
 

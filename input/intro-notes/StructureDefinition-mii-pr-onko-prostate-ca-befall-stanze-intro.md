@@ -15,7 +15,7 @@ most affected biopsy core.
 The carcinoma involvement of the core is an important histopathological
 observation:
 
-- refers via `Observation.focus` to the primary diagnosis
+- refers via `Observation.focus` to the primary tumour diagnosis
   ([MII_PR_Onko_Diagnose_Primaertumor](StructureDefinition-mii-pr-onko-diagnose-primaertumor.html))
 - refers via `Observation.subject` to the patient (Patient resource)
 - can be linked via `Observation.encounter` to a specific encounter

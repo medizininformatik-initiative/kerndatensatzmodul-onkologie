@@ -9,7 +9,7 @@ The profile is based on a FHIR Observation resource and uses LOINC for standardi
 
 ### Links to other resources
 The ulceration assessment is an important histopathological observation in melanoma:
-- refers via `Observation.focus` to the primary diagnosis (MII_PR_Onko_Diagnose_Primaertumor)
+- refers via `Observation.focus` to the primary tumour diagnosis (MII_PR_Onko_Diagnose_Primaertumor)
 - refers via `Observation.subject` to the patient (Patient resource)
 - can be linked via `Observation.encounter` to a specific treatment case
 

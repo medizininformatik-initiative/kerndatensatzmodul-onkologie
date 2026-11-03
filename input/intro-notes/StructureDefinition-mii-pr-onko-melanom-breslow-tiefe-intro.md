@@ -9,7 +9,7 @@ The profile is based on a FHIR Observation resource and uses SNOMED CT for the s
 
 ### Links to other resources
 Breslow depth is a central histopathological observation in melanoma:
-- references the primary diagnosis (MII_PR_Onko_Diagnose_Primaertumor) via `Observation.focus`
+- references the primary tumour diagnosis (MII_PR_Onko_Diagnose_Primaertumor) via `Observation.focus`
 - references the patient (Patient resource) via `Observation.subject`
 - can be linked to a specific treatment case via `Observation.encounter`
 

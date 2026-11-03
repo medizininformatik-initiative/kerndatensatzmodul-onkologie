@@ -21,7 +21,7 @@ Für detaillierte molekulare Tumorboards mit strukturierten Therapieprotokollen:
 
 Beide Slices teilen die gemeinsamen CarePlan-Elemente:
 * **Patient-Referenz**: `subject`
-* **Primärdiagnose-Referenz**: `addresses`
+* **Diagnose Primärtumor-Referenz**: `addresses`
 * **Tumorboard-Kategorie**: `category` nach oBDS 18.2
 * **Datum**: `created` gemäß oBDS 18.1
 * **Zusätzliche Informationen**: `supportingInfo` für relevante Verlaufs-Stagings
@@ -42,7 +42,7 @@ Die CarePlan-Ressource sieht eine verpflichtende Angabe des `status`-Elements ei
 #### Für extended Slice (molekulare Tumorboards):
 Status-Tracking erfolgt in den referenzierten Ressourcen (RequestGroup, MedicationRequest, ServiceRequest). `activity.progress` kann für narrative Fortschrittsnotizen verwendet werden.
 
-Jede Tumorkonferenz mit Therapieempfehlung SOLL als einzelne Ressource gespeichert und über `CarePlan.addresses(Reference(Condition))` auf die Primärdiagnose referenzieren.
+Jede Tumorkonferenz mit Therapieempfehlung SOLL als einzelne Ressource gespeichert und über `CarePlan.addresses(Reference(Condition))` auf die Diagnose Primärtumor referenzieren.
 
 ### FHIR Invariant Management
 

@@ -9,7 +9,7 @@ The profile is based on a FHIR Observation resource. `Observation.code` is coded
 
 ### Links to other resources
 The Gleason Score is a central histopathological assessment:
-- refers via `Observation.focus` to the primary diagnosis (MII_PR_Onko_Diagnose_Primaertumor)
+- refers via `Observation.focus` to the primary tumour diagnosis (MII_PR_Onko_Diagnose_Primaertumor)
 - refers via `Observation.subject` to the patient (Patient resource)
 - can be linked via `Observation.encounter` to a specific treatment case
 - can be linked via `Observation.partOf` to the corresponding biopsy procedure

@@ -9,7 +9,7 @@ The profile is based on a FHIR Observation resource with category "laboratory" a
 
 ### Links to other resources
 The LDH determination is an important laboratory-chemical observation in melanoma:
-- references the primary diagnosis via `Observation.focus` (MII_PR_Onko_Diagnose_Primaertumor)
+- references the primary tumour diagnosis via `Observation.focus` (MII_PR_Onko_Diagnose_Primaertumor)
 - references the patient via `Observation.subject` (Patient resource)
 - can be linked to a specific treatment case via `Observation.encounter`
 - serves as a prognostic marker for therapy planning

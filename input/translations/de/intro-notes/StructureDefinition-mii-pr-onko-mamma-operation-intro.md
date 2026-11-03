@@ -11,7 +11,7 @@ Das Profil unterstützt sowohl brusterhaltende Therapien als auch Mastektomien s
 ### Verknüpfungen zu anderen Ressourcen
 
 Das Profil ist eng mit anderen onkologischen Ressourcen verknüpft:
-- verweist über `Procedure.reasonReference` auf die Primärdiagnose (MII_PR_Onko_Diagnose_Primaertumor)
+- verweist über `Procedure.reasonReference` auf die Diagnose Primärtumor (MII_PR_Onko_Diagnose_Primaertumor)
 - verweist über `Procedure.subject` auf die Patientin (Patient-Ressource)
 - kann über `Procedure.partOf` mit übergeordneten Operationen verknüpft werden
 - kann über `Procedure.encounter` mit einem spezifischen Behandlungsfall verknüpft werden

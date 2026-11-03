@@ -7,7 +7,7 @@ Das Profil basiert auf einer FHIR Observation-Ressource und verwendet SNOMED CT 
 
 ### Verknüpfungen zu anderen Ressourcen
 Der Clavien-Dindo-Score ist eine wichtige postoperative Beobachtung:
-- verweist über `Observation.focus[Diagnose]` auf die Primärdiagnose (MII_PR_Onko_Diagnose_Primaertumor)
+- verweist über `Observation.focus[Diagnose]` auf die Diagnose Primärtumor (MII_PR_Onko_Diagnose_Primaertumor)
 - verweist über `Observation.focus[Operation]` auf die durchgeführte Operation (MII_PR_Onko_Operation)
 - verweist über `Observation.subject` auf den Patienten (Patient-Ressource)
 - kann über `Observation.encounter` mit einem spezifischen Behandlungsfall verknüpft werden
