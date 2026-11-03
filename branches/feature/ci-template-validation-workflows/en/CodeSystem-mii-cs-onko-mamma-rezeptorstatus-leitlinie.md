@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-mamma-rezeptorstatus-leitlinie | *Version*:2027.0.0-ballot.1 |
-| Active as of 2026-11-02 | *Computable Name*:MII_CS_Onko_Mamma_Rezeptorstatus_Leitlinie |
+| Active as of 2026-11-03 | *Computable Name*:MII_CS_Onko_Mamma_Rezeptorstatus_Leitlinie |
 
  
 oBDS-spezifisches Codesystem Mamma-Rezeptorstatus, basierend auf der S3-Leitlinie Mammakarzinom v5.02 Abschnitt 4.5.4 
@@ -160,7 +160,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "MII CS Onkologie Mamma Rezeptorstatus",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-11-02T15:39:15+00:00",
+  "date" : "2026-11-03T11:15:04+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

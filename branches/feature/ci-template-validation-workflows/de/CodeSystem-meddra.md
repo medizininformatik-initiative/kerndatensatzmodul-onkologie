@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.meddra.org | *Version*:2027.0.0-ballot.1 |
-| Active Stand: 2026-11-02 | *Maschinenlesbarer Name*:MedDRAFragment |
+| Active Stand: 2026-11-03 | *Maschinenlesbarer Name*:MedDRAFragment |
 | **Copyright/Rechtliches**: MedDRA® trademark is registered by ICH. Dieses Fragment enthaelt keine MedDRA-Terms, nur die im Modul verwendeten numerischen Code-IDs. | |
 
  
@@ -37,7 +37,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "title" : "MedDRA (Fragment, nur Codes)",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-11-02T15:39:15+00:00",
+  "date" : "2026-11-03T11:15:04+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

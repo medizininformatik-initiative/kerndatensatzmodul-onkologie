@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/Library/mii-lib-onko-synthesize-tnm | *Version*:2027.0.0-ballot.1 |
-| Active as of 2026-11-02 | *Computable Name*:MIIOnkoSynthesizeTNM |
+| Active as of 2026-11-03 | *Computable Name*:MIIOnkoSynthesizeTNM |
 
  
 Deterministischer Algorithmus zur Synthese einer TNM-Klassifikation aus mehreren Meldungs-bezogenen Quell-Klassifikationen. Implementiert UICC General Rules nach Manual der Krebsregistrierung Kap. 6 (Stegmaier 2019). Drei Phasen: primary (kein y/r), post-neoadjuvant (y), recurrence (r). Symbol-Lesen aus hasMember (mii-pr-onko-tnm-{y,r,a,m}-symbol). Pre-therapeutic intentional NICHT Phase: nicht aus TNM-Daten ableitbar (Biopsien können pTNM ergeben), gehört in Workflow-Kontext (Tumorkonferenz.category=praeth). 
@@ -20,7 +20,7 @@ Deterministischer Algorithmus zur Synthese einer TNM-Klassifikation aus mehreren
 
 -------
 
-**Exception parsing generated Narrative (see /tmp/liquid-bc7e0ef6-b4f5-4e90-9f32-bd0b553069f0.html): unexpected non-end of element null::a at line 134 column 50**
+**Exception parsing generated Narrative (see /tmp/liquid-5cc4ed85-3fac-4311-aa71-9135dca5285a.html): unexpected non-end of element null::a at line 134 column 50**
 
 
 
@@ -91,7 +91,7 @@ Deterministischer Algorithmus zur Synthese einer TNM-Klassifikation aus mehreren
       "code" : "logic-library"
     }]
   },
-  "date" : "2026-11-02T15:39:15+00:00",
+  "date" : "2026-11-03T11:15:04+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

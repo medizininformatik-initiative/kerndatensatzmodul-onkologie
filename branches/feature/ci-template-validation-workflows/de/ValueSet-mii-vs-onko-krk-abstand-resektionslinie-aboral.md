@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-krk-abstand-resektionslinie-aboral | *Version*:2027.0.0-ballot.1 |
-| Active Stand: 2026-11-02 | *Maschinenlesbarer Name*:MII_VS_Onko_KRK_Abstand_Resektionslinie_Aboral |
+| Active Stand: 2026-11-03 | *Maschinenlesbarer Name*:MII_VS_Onko_KRK_Abstand_Resektionslinie_Aboral |
 
  
 Value Set für semantische Kodierung des oBDS-Abstand des Tumorrandes zur aboralen Resektionslinie im Kolorektalen Karzinom 
@@ -171,7 +171,7 @@ Value Set für semantische Kodierung des oBDS-Abstand des Tumorrandes zur aboral
   "title" : "MII VS Onkologie KRK Abstand Resektionslinie Aboral",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-11-02T15:39:15+00:00",
+  "date" : "2026-11-03T11:15:04+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

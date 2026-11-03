@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation | *Version*:2027.0.0-ballot.1 |
-| Active as of 2026-11-02 | *Computable Name*:MII_PR_Onko_TNM_Klassifikation |
+| Active as of 2026-11-03 | *Computable Name*:MII_PR_Onko_TNM_Klassifikation |
 
  
 TNM-Klassifikation: Grouper-Profil für Komponenten der TNM-Klassifikation. 
@@ -227,7 +227,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-tnm-k
   "title" : "MII PR Onkologie TNM-Klassifikation",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-11-02T15:39:15+00:00",
+  "date" : "2026-11-03T11:15:04+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

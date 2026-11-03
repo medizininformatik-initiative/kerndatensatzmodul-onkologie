@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-art | *Version*:2027.0.0-ballot.1 |
-| Active as of 2026-11-02 | *Computable Name*:MII_VS_Onko_Systemische_Therapie_Art |
+| Active as of 2026-11-03 | *Computable Name*:MII_VS_Onko_Systemische_Therapie_Art |
 
  
 oBDS-spezifisches ValueSet für Klassifikation der Art der systemischen oder abwartenden Therapie 
@@ -171,7 +171,7 @@ oBDS-spezifisches ValueSet für Klassifikation der Art der systemischen oder abw
   "title" : "MII VS Onkologie Systemische Therapie Art",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-11-02T15:39:15+00:00",
+  "date" : "2026-11-03T11:15:04+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

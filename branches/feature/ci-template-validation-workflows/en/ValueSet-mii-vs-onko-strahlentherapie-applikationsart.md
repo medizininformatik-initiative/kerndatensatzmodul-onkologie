@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-strahlentherapie-applikationsart | *Version*:2027.0.0-ballot.1 |
-| Active as of 2026-11-02 | *Computable Name*:MII_VS_Onko_Strahlentherapie_Applikationsart |
+| Active as of 2026-11-03 | *Computable Name*:MII_VS_Onko_Strahlentherapie_Applikationsart |
 
  
 oBDS-spezifisches Codesystem für Klassifikation von Applikationsart der Strahlentherapie 
@@ -172,7 +172,7 @@ oBDS-spezifisches Codesystem für Klassifikation von Applikationsart der Strahle
   "title" : "MII VS Onkologie Strahlentherapie Applikationsart",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-11-02T15:39:15+00:00",
+  "date" : "2026-11-03T11:15:04+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

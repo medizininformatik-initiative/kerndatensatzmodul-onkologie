@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-ish-ergebnis | *Version*:2027.0.0-ballot.1 |
-| Active as of 2026-11-02 | *Computable Name*:MII_VS_Onko_Mamma_ISH_Ergebnis |
+| Active as of 2026-11-03 | *Computable Name*:MII_VS_Onko_Mamma_ISH_Ergebnis |
 
  
 Ergebnis der In-situ-Hybridisierung (ISH/FISH): Positive, Negative, Equivocal (LOINC-Answer-Codes). 
@@ -171,7 +171,7 @@ Ergebnis der In-situ-Hybridisierung (ISH/FISH): Positive, Negative, Equivocal (L
   "title" : "MII VS Onkologie Mamma ISH Ergebnis",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-11-02T15:39:15+00:00",
+  "date" : "2026-11-03T11:15:04+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

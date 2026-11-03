@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-studienteilnahme | *Version*:2027.0.0-ballot.1 |
-| Active Stand: 2026-11-02 | *Maschinenlesbarer Name*:Studienteilnahme |
+| Active Stand: 2026-11-03 | *Maschinenlesbarer Name*:Studienteilnahme |
 
  
 oBDS-spezifisches Codesystem den Status der Studienteilnahme 
@@ -160,7 +160,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "title" : "MII CS Onkologie Studienteilnahme",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-11-02T15:39:15+00:00",
+  "date" : "2026-11-03T11:15:04+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

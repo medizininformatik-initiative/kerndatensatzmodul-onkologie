@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-karnofsky | *Version*:2027.0.0-ballot.1 |
-| Active as of 2026-11-02 | *Computable Name*:MII_PR_Onko_Allgemeiner_Leistungszustand_Karnofsky |
+| Active as of 2026-11-03 | *Computable Name*:MII_PR_Onko_Allgemeiner_Leistungszustand_Karnofsky |
 
  
 OBDS Beschreibung des allgemeines Leistungszustandes nach Karnofsky 
@@ -222,7 +222,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-allge
   "title" : "MII PR Onkologie Allgemeiner Leistungszustand nach Karnofsky",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-11-02T15:39:15+00:00",
+  "date" : "2026-11-03T11:15:04+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

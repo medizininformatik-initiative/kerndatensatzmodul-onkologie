@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-pn-kategorie-werte | *Version*:2027.0.0-ballot.1 |
-| Active as of 2026-11-02 | *Computable Name*:MII_VS_Onko_TNM_Pn_Kategorie_Werte |
+| Active as of 2026-11-03 | *Computable Name*:MII_VS_Onko_TNM_Pn_Kategorie_Werte |
 
  
 Das ValueSet enthält die TNM Codes für den Grad der perineuralen Invasion aus der UICC TNM - Klassifikation maligner Tumoren Achte Auflage. 
@@ -171,7 +171,7 @@ Das ValueSet enthält die TNM Codes für den Grad der perineuralen Invasion aus 
   "title" : "MII VS Onkologie TNM Pn Kategorie Werte",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-11-02T15:39:15+00:00",
+  "date" : "2026-11-03T11:15:04+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
