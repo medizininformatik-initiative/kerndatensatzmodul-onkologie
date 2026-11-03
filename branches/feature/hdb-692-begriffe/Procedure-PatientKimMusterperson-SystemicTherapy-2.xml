@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Procedure xmlns="http://hl7.org/fhir">
+  <id value="PatientKimMusterperson-SystemicTherapy-2"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Procedure PatientKimMusterperson-SystemicTherapy-2</b></p><a name="PatientKimMusterperson-SystemicTherapy-2"> </a><a name="hcPatientKimMusterperson-SystemicTherapy-2"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-systemische-therapie.html">MII PR Onkologie Systemische Therapie</a></p></div><p><b>MII EX Onko Systemische Therapie Intention</b>: <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention K}">kurativ</span></p><p><b>MII EX Onko Systemische Therapie Stellung zur OP</b>: <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-stellungzurop A}">adjuvant</span></p><p><b>status</b>: Completed</p><p><b>category</b>: <span title="Codes:{http://snomed.info/sct 18629005}">Administration of medication</span></p><p><b>code</b>: <span title="Codes:{http://fhir.de/CodeSystem/bfarm/ops 8-54}">Zytostatische Chemotherapie, Immuntherapie und antiretrovirale Therapie</span></p><p><b>subject</b>: <a href="Patient-PatientKimMusterperson.html">Kim Musterperson  (no stated gender), DoB: 1956-03-14</a></p><p><b>performed</b>: 2021-11-08 --&gt; 2022-01-09</p></div><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Procedure PatientKimMusterperson-SystemicTherapy-2</b></p><a name="de-PatientKimMusterperson-SystemicTherapy-2"> </a><a name="de-hcPatientKimMusterperson-SystemicTherapy-2"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-onko-systemische-therapie.html">MII PR Onkologie Systemische Therapie</a></p></div><p><b>MII EX Onko Systemische Therapie Intention</b>: <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention K}">kurativ</span></p><p><b>MII EX Onko Systemische Therapie Stellung zur OP</b>: <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-stellungzurop A}">adjuvant</span></p><p><b>status</b>: Completed</p><p><b>category</b>: <span title="Codes:{http://snomed.info/sct 18629005}">Administration of medication</span></p><p><b>code</b>: <span title="Codes:{http://fhir.de/CodeSystem/bfarm/ops 8-54}">Zytostatische Chemotherapie, Immuntherapie und antiretrovirale Therapie</span></p><p><b>subject</b>: <a href="Patient-PatientKimMusterperson.html">Kim Musterperson  (no stated gender), DoB: 1956-03-14</a></p><p><b>performed</b>: 2021-11-08 --&gt; 2022-01-09</p></div></div>
+  </text>
+  <extension url="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-intention">
+    <valueCodeableConcept>
+      <coding>
+        <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-intention"/>
+        <code value="K"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-systemische-therapie-stellungzurop">
+    <valueCodeableConcept>
+      <coding>
+        <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-stellungzurop"/>
+        <code value="A"/>
+        <display value="adjuvant"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <status value="completed"/>
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="18629005"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://fhir.de/CodeSystem/bfarm/ops"/>
+      <version value="2021"/>
+      <code value="8-54"/>
+      <display value="Zytostatische Chemotherapie, Immuntherapie und antiretrovirale Therapie"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/PatientKimMusterperson"/>
+  </subject>
+  <performedPeriod>
+    <start value="2021-11-08"/>
+    <end value="2022-01-09"/>
+  </performedPeriod>
+</Procedure>
