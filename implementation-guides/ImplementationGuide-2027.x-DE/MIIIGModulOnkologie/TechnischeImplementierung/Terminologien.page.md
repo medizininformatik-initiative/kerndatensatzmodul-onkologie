@@ -20,7 +20,7 @@ https://www.bfarm.de/DE/Kodiersysteme/Klassifikationen/ICD/ICD-O-3/_node.html
 Zu den Revisionsständen (Erste Revision 2014 / Zweite Revision 2019), deren
 Auswirkungen auf die Validierung, der Überleitung von Bestandsdaten sowie zu
 der Struktur und den Änderungen der ICD-O-4 siehe die eigene Seite
-{{pagelink:ICD-O-Terminologie}}.
+{{pagelink:ICDOTerminologie}}.
 
 ---
 
@@ -46,7 +46,7 @@ Zur Unterstützung experimenteller und neuartiger Substanzen, die noch keine eta
 Das SystemischeTherapie-MedicationStatement-Profil unterstützt daher eine duale Kodierung mit sowohl ATC als auch UNII-Codes, um eine vollständige Abdeckung aller onkologischen Therapiesubstanzen zu gewährleisten.
 
 UNII-Datenbank: https://precision.fda.gov/uniisearch
-UNII-CodeSystem in FHIR: http://fdasis.nlm.nih.gov
+UNII-CodeSystem in FHIR (Canonical, kein Weblink): `http://fdasis.nlm.nih.gov`
 
 ---
 
