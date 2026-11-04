@@ -24,12 +24,12 @@ Every individual ConceptMap also renders as its own page under [Artifacts](artif
 | oBDS-CS strahlentherapie-zielgebiet | `96` | `88` | `6` | `2` |
 | oBDS-CS verlauf-primaertumor | `8` | `8` | `0` | `0` |
 | oBDS-CS verlauf-lymphknoten | `8` | `8` | `0` | `0` |
+| oBDS-CS https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-grund-ende | `8` | `4` | `4` | `0` |
+| oBDS-CS operation-komplikation | `82` | `65` | `8` | `9` |
 | oBDS-CS nebenwirkung-ctcae-grad | `7` | `7` | `0` | `0` |
 | oBDS-CS intention | `7` | `6` | `1` | `0` |
-| oBDS-CS operation-komplikation | `77` | `66` | `4` | `7` |
 | MedDRA (CTCAE v4.03) | `708` | `638` | `42` | `28` |
 | oBDS-CS seitenlokalisation | `6` | `6` | `0` | `0` |
-| oBDS-CS https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-grund-ende | `6` | `4` | `2` | `0` |
 | oBDS-CS genetische-variante-auspraegung | `6` | `6` | `0` | `0` |
 | oBDS-CS asa-obds | `6` | `6` | `0` | `0` |
 | oBDS-CS therapie-stellungzurop | `5` | `5` | `0` | `0` |
@@ -44,12 +44,12 @@ Every individual ConceptMap also renders as its own page under [Artifacts](artif
 | oBDS-CS therapieabweichung | `3` | `3` | `0` | `0` |
 | oBDS-CS studienteilnahme | `3` | `3` | `0` | `0` |
 | [https://www.medizininformatik-initiative.de/fhir/ext/modul-diagnose/StructureDefinition/Diagnose](https://www.medizininformatik-initiative.de/fhir/ext/modul-diagnose/StructureDefinition/Diagnose) | `2` | `0` | `0` | `2` |
+| oBDS-CS strahlentherapie-applikationsart | `24` | `8` | `13` | `3` |
+| UICC TNM | `224` | `224` | `0` | `0` |
 | [MII PR Onkologie Grading](https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-grading) | `1` | `1` | `0` | `0` |
 | [MII PR Onkologie Allgemeiner Leistungszustand ECOG](https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-allgemeiner-leistungszustand-ecog) | `1` | `1` | `0` | `0` |
 | oBDS-CS strahlentherapie-strahlenart | `19` | `17` | `0` | `2` |
 | oBDS-CS therapie-typ | `18` | `14` | `0` | `4` |
-| UICC TNM | `189` | `189` | `0` | `0` |
-| oBDS-CS strahlentherapie-applikationsart | `15` | `8` | `7` | `0` |
 | oBDS-CS primaertumor-diagnosesicherung | `15` | `10` | `0` | `5` |
 | oBDS-CS grading | `12` | `12` | `0` | `0` |
 | oBDS-CS fernmetastasen | `12` | `12` | `0` | `0` |
@@ -122,12 +122,14 @@ The semantic annotation of the oBDS value lists. Source codes are the module's o
 | oBDS-CS grading | #2 | equivalent | SNOMED CT | #373377004 |
 | oBDS-CS grading | #3 | equivalent | SNOMED CT | #373373000 |
 | oBDS-CS grading | #4 | equivalent | SNOMED CT | #373374006 |
+| oBDS-CS https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-grund-ende | #A | source-is-narrower-than-target | SNOMED CT | #274512008 |
 | oBDS-CS https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-grund-ende | #E | equivalent | SNOMED CT | #385656004 |
 | oBDS-CS https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-grund-ende | #P | source-is-narrower-than-target | SNOMED CT | #419835002 |
 | oBDS-CS https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-grund-ende | #S | source-is-narrower-than-target | SNOMED CT | #74964007 |
 | oBDS-CS https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-grund-ende | #T | equivalent | SNOMED CT | #419099009 |
 | oBDS-CS https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-grund-ende | #U | equivalent | SNOMED CT | #261665006 |
 | oBDS-CS https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-grund-ende | #V | equivalent | SNOMED CT | #183948000 |
+| oBDS-CS https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-grund-ende | #W | source-is-narrower-than-target | SNOMED CT | #182838006 |
 | oBDS-CS intention | #D | equivalent | SNOMED CT | #261004008 |
 | oBDS-CS intention | #K | equivalent | SNOMED CT | #373808002 |
 | oBDS-CS intention | #O | source-is-narrower-than-target | SNOMED CT | #373808002 |
@@ -152,6 +154,7 @@ The semantic annotation of the oBDS value lists. Source codes are the module's o
 | oBDS-CS operation-komplikation |  | source-is-broader-than-target | SNOMED CT | #60168000 |
 | oBDS-CS operation-komplikation | #ABD | source-is-narrower-than-target | SNOMED CT | #128477000 |
 | oBDS-CS operation-komplikation | #ABS | source-is-broader-than-target | SNOMED CT | #75100008 |
+| oBDS-CS operation-komplikation | #AEE | source-is-narrower-than-target | SNOMED CT | #446953001 |
 | oBDS-CS operation-komplikation | #AEP | equivalent | SNOMED CT | #8635005 |
 | oBDS-CS operation-komplikation | #ALR | equivalent | SNOMED CT | #419076005 |
 | oBDS-CS operation-komplikation | #ANI | equivalent | SNOMED CT | #723189000 |
@@ -160,6 +163,7 @@ The semantic annotation of the oBDS value lists. Source codes are the module's o
 | oBDS-CS operation-komplikation | #ASF | source-is-narrower-than-target | SNOMED CT | #128477000 |
 | oBDS-CS operation-komplikation | #BIF | equivalent | SNOMED CT | #53206008 |
 | oBDS-CS operation-komplikation | #BOG | equivalent | SNOMED CT | #37372002 |
+| oBDS-CS operation-komplikation | #BSI | source-is-broader-than-target | SNOMED CT | #1366730005 |
 | oBDS-CS operation-komplikation | #CHI | equivalent | SNOMED CT | #82403002 |
 | oBDS-CS operation-komplikation | #DAI | source-is-broader-than-target | SNOMED CT | #236091002 |
 | oBDS-CS operation-komplikation | #DEP | equivalent | SNOMED CT | #772133000 |
@@ -183,7 +187,8 @@ The semantic annotation of the oBDS value lists. Source codes are the module's o
 | oBDS-CS operation-komplikation | #IFV | equivalent | SNOMED CT | #234044007 |
 | oBDS-CS operation-komplikation | #KAS | equivalent | SNOMED CT | #89138009 |
 | oBDS-CS operation-komplikation | #KDS | equivalent | SNOMED CT | #26629001 |
-| oBDS-CS operation-komplikation | #KIM | equivalent | SNOMED CT | #19220005 |
+| oBDS-CS operation-komplikation | #KES | source-is-narrower-than-target | SNOMED CT | #302918009 |
+| oBDS-CS operation-komplikation | #KIM | equivalent | SNOMED CT | #1354666001 |
 | oBDS-CS operation-komplikation | #KRA | equivalent | SNOMED CT | #91175000 |
 | oBDS-CS operation-komplikation | #LEV | equivalent | SNOMED CT | #59927004 |
 | oBDS-CS operation-komplikation | #LOE | equivalent | SNOMED CT | #19242006 |
@@ -196,13 +201,14 @@ The semantic annotation of the oBDS value lists. Source codes are the module's o
 | oBDS-CS operation-komplikation | #MYI | equivalent | SNOMED CT | #22298006 |
 | oBDS-CS operation-komplikation | #N | equivalent | SNOMED CT | #373067005 |
 | oBDS-CS operation-komplikation | #NAB | equivalent | SNOMED CT | #110265006 |
+| oBDS-CS operation-komplikation | #NIN | source-is-broader-than-target | SNOMED CT | #446953001 |
 | oBDS-CS operation-komplikation | #OES | equivalent | SNOMED CT | #16761005 |
 | oBDS-CS operation-komplikation | #OSM | source-is-broader-than-target | SNOMED CT | #274144001 |
 | oBDS-CS operation-komplikation | #PAB | equivalent | SNOMED CT | #6072007 |
 | oBDS-CS operation-komplikation | #PAE | equivalent | SNOMED CT | #59282003 |
 | oBDS-CS operation-komplikation | #PAF | equivalent | SNOMED CT | #25803005 |
 | oBDS-CS operation-komplikation | #PAV | equivalent | SNOMED CT | #399957001 |
-| oBDS-CS operation-komplikation | #PDA | equivalent | SNOMED CT | #1162567000 |
+| oBDS-CS operation-komplikation | #PDA | source-is-narrower-than-target | SNOMED CT | #235833007 |
 | oBDS-CS operation-komplikation | #PER | equivalent | SNOMED CT | #48661000 |
 | oBDS-CS operation-komplikation | #PEY | equivalent | SNOMED CT | #58554001 |
 | oBDS-CS operation-komplikation | #PIT | equivalent | SNOMED CT | #75694006 |
@@ -210,12 +216,13 @@ The semantic annotation of the oBDS value lists. Source codes are the module's o
 | oBDS-CS operation-komplikation | #PLE | equivalent | SNOMED CT | #60046008 |
 | oBDS-CS operation-komplikation | #PMN | equivalent | SNOMED CT | #233604007 |
 | oBDS-CS operation-komplikation | #PNT | equivalent | SNOMED CT | #36118008 |
+| oBDS-CS operation-komplikation | #PPA | source-is-narrower-than-target | SNOMED CT | #44695005 |
 | oBDS-CS operation-komplikation | #RIN | equivalent | SNOMED CT | #409623005 |
 | oBDS-CS operation-komplikation | #RNB | equivalent | SNOMED CT | #308896002 |
 | oBDS-CS operation-komplikation | #RPA | source-is-broader-than-target | SNOMED CT | #1052240009 |
 | oBDS-CS operation-komplikation | #SES | equivalent | SNOMED CT | #76571007 |
 | oBDS-CS operation-komplikation | #SFH | equivalent | SNOMED CT | #76314005 |
-| oBDS-CS operation-komplikation | #SKI | source-is-narrower-than-target | SNOMED CT | #19220005 |
+| oBDS-CS operation-komplikation | #SKI | source-is-narrower-than-target | SNOMED CT | #1354666001 |
 | oBDS-CS operation-komplikation | #STK | equivalent | SNOMED CT | #302918009 |
 | oBDS-CS operation-komplikation | #TIA | equivalent | SNOMED CT | #266257000 |
 | oBDS-CS operation-komplikation | #TRZ | equivalent | SNOMED CT | #82545002 |
@@ -253,11 +260,20 @@ The semantic annotation of the oBDS value lists. Source codes are the module's o
 | oBDS-CS strahlentherapie-applikationsart | #KLDR | source-is-narrower-than-target | SNOMED CT | #384692006 |
 | oBDS-CS strahlentherapie-applikationsart | #KPDR | source-is-narrower-than-target | SNOMED CT | #384692006 |
 | oBDS-CS strahlentherapie-applikationsart | #M | source-is-narrower-than-target | SNOMED CT | #399315003 |
+| oBDS-CS strahlentherapie-applikationsart | #MPRRT | source-is-broader-than-target | SNOMED CT | #1103661000000108 |
+| oBDS-CS strahlentherapie-applikationsart | #MPSMA | source-is-broader-than-target | SNOMED CT | #1263784000 |
 | oBDS-CS strahlentherapie-applikationsart | #MRIT | equivalent | SNOMED CT | #118640001 |
 | oBDS-CS strahlentherapie-applikationsart | #MRJT | equivalent | SNOMED CT | #64291000052106 |
+| oBDS-CS strahlentherapie-applikationsart | #MSIRT | source-is-broader-than-target | SNOMED CT | #722183007 |
 | oBDS-CS strahlentherapie-applikationsart | #P | equivalent | SNOMED CT | #33195004 |
 | oBDS-CS strahlentherapie-applikationsart | #P-4D | equivalent | SNOMED CT | #721061000124106 |
 | oBDS-CS strahlentherapie-applikationsart | #P-ST | equivalent | SNOMED CT | #395096001 |
+| oBDS-CS strahlentherapie-applikationsart | #P-ST4D | source-is-narrower-than-target | SNOMED CT | #721061000124106 |
+| oBDS-CS strahlentherapie-applikationsart | #PRCJ | source-is-narrower-than-target | SNOMED CT | #703423002 |
+| oBDS-CS strahlentherapie-applikationsart | #PRCJ-4D | source-is-narrower-than-target | SNOMED CT | #703423002 |
+| oBDS-CS strahlentherapie-applikationsart | #PRCN-4D | source-is-narrower-than-target | SNOMED CT | #721061000124106 |
+| oBDS-CS strahlentherapie-applikationsart | #PRCN-ST | source-is-narrower-than-target | SNOMED CT | #395096001 |
+| oBDS-CS strahlentherapie-applikationsart | #PRCN-ST4D | source-is-narrower-than-target | SNOMED CT | #721061000124106 |
 | oBDS-CS strahlentherapie-applikationsart | #S | equivalent | SNOMED CT | #74964007 |
 | oBDS-CS strahlentherapie-boost | #J | equivalent | SNOMED CT | #445232009 |
 | oBDS-CS strahlentherapie-boost | #KON | source-is-narrower-than-target | SNOMED CT | #445232009 |
@@ -1232,6 +1248,12 @@ Clinical and pathological TNM categories as pre-coordinated SNOMED CT qualifier 
 | #IVB | equivalent | #1352836005 |
 | #IVC | equivalent | #1352921006 |
 | #IVC | equivalent | #1352921006 |
+| #L0 | equivalent | #1380127005 |
+| #L0 | equivalent | #1380127005 |
+| #L1 | equivalent | #1380125002 |
+| #L1 | equivalent | #1380125002 |
+| #LX | equivalent | #1380126001 |
+| #LX | equivalent | #1380126001 |
 | #M0 | equivalent | #1352512001 |
 | #M1 | equivalent | #1352513006 |
 | #M1 | equivalent | #1352583000 |
@@ -1253,6 +1275,7 @@ Clinical and pathological TNM categories as pre-coordinated SNOMED CT qualifier 
 | #N1b | equivalent | #1352616006 |
 | #N1c | equivalent | #1353044001 |
 | #N1c | equivalent | #1352617002 |
+| #N1mi | equivalent | #1353045000 |
 | #N1mi | equivalent | #1352620005 |
 | #N2 | equivalent | #1353047008 |
 | #N2 | equivalent | #1352610000 |
@@ -1272,10 +1295,26 @@ Clinical and pathological TNM categories as pre-coordinated SNOMED CT qualifier 
 | #N3c | equivalent | #1352606003 |
 | #NX | equivalent | #1353039008 |
 | #NX | equivalent | #1352605004 |
+| #Pn0 | equivalent | #1386331003 |
+| #Pn0 | equivalent | #1386331003 |
+| #Pn1 | equivalent | #1386332005 |
+| #Pn1 | equivalent | #1386332005 |
+| #PnX | equivalent | #1386316007 |
+| #PnX | equivalent | #1386316007 |
 | #R0 | equivalent | #1352526005 |
 | #R1 | equivalent | #1352529003 |
 | #R2 | equivalent | #1352528006 |
 | #RX | equivalent | #1352527001 |
+| #S0 | equivalent | #313139000 |
+| #S0 | equivalent | #313139000 |
+| #S1 | equivalent | #313140003 |
+| #S1 | equivalent | #313140003 |
+| #S2 | equivalent | #313141004 |
+| #S2 | equivalent | #313141004 |
+| #S3 | equivalent | #313142006 |
+| #S3 | equivalent | #313142006 |
+| #SX | equivalent | #313138008 |
+| #SX | equivalent | #313138008 |
 | #T0 | equivalent | #1352986003 |
 | #T0 | equivalent | #1352552004 |
 | #T1 | equivalent | #1352996007 |
@@ -1355,8 +1394,20 @@ Clinical and pathological TNM categories as pre-coordinated SNOMED CT qualifier 
 | #Tis(LCIS) | equivalent | #1351847000 |
 | #Tis(Paget) | equivalent | #1352987007 |
 | #Tis(Paget) | equivalent | #1352563001 |
+| #V0 | equivalent | #1380138005 |
+| #V0 | equivalent | #1380138005 |
+| #V1 | equivalent | #1380137000 |
+| #V1 | equivalent | #1380137000 |
+| #V2 | equivalent | #1380139002 |
+| #V2 | equivalent | #1380139002 |
+| #VX | equivalent | #1380136009 |
+| #VX | equivalent | #1380136009 |
 | #a | equivalent | #421426001 |
 | #a | equivalent | #421426001 |
+| #c | equivalent | #1397043001 |
+| #c | equivalent | #1397043001 |
+| #p | equivalent | #1397044007 |
+| #p | equivalent | #1397044007 |
 | #r | equivalent | #421188008 |
 | #r | equivalent | #421188008 |
 | #y | equivalent | #421755005 |

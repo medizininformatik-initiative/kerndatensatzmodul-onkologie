@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-krk-stoma-markierung | *Version*:2027.0.0-ballot.1 |
-| Active as of 2026-10-19 | *Computable Name*:MII_PR_Onko_KRK_Stoma_Markierung |
+| Active as of 2026-11-04 | *Computable Name*:MII_PR_Onko_KRK_Stoma_Markierung |
 
  
 Dieses Profil beschreibt die präoperative Markierung der geplanten Stoma-Position beim Kolorektalen Karzinom 
@@ -220,7 +220,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-krk-s
   "title" : "MII PR Onkologie KRK Stoma-Markierung",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-10-19T23:12:44+00:00",
+  "date" : "2026-11-04T08:17:56+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

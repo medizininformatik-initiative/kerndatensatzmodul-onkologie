@@ -9,11 +9,11 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-operation-komplikation-sct | *Version*:2027.0.0-ballot.1 |
-| Active as of 2024-04-10 | *Computable Name*:MII CM Onko Operation Komplikation SCT Mapping |
+| Active as of 2026-11-04 | *Computable Name*:MII CM Onko Operation Komplikation SCT Mapping |
 | **Copyright/Legal**: This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. | |
 
  
-Mapping Operation Komplikation Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich. 
+Mapping Operation Komplikation Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt gegen SNOMED CT International 20240401; am 2026-11-04 gegen International 20261001 nachkuratiert (alle Zielkonzepte auf Aktivitaet geprueft, inaktivierte Ziele ersetzt, seit 2024 neu veroeffentlichte Konzepte fuer bisher unbesetzte Werte ergaenzt, Ober-/Unterkonzepte mit equivalence wider/narrower nachgetragen). Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich. 
 
 The complications are assigned directly at the time of surgery. If a code cannot be represented with this list, the complication should be coded using ICD-10.
 
@@ -156,7 +156,7 @@ The complications are assigned directly at the time of surgery. If a code cannot
   "title" : "MII CM Onko Operation Komplikation SNOMED Mapping",
   "status" : "active",
   "experimental" : true,
-  "date" : "2024-04-10",
+  "date" : "2026-11-04",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -165,7 +165,7 @@ The complications are assigned directly at the time of surgery. If a code cannot
       "value" : "https://www.medizininformatik-initiative.de/"
     }]
   }],
-  "description" : "Mapping Operation Komplikation Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich.",
+  "description" : "Mapping Operation Komplikation Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt gegen SNOMED CT International 20240401; am 2026-11-04 gegen International 20261001 nachkuratiert (alle Zielkonzepte auf Aktivitaet geprueft, inaktivierte Ziele ersetzt, seit 2024 neu veroeffentlichte Konzepte fuer bisher unbesetzte Werte ergaenzt, Ober-/Unterkonzepte mit equivalence wider/narrower nachgetragen). Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -176,10 +176,11 @@ The complications are assigned directly at the time of surgery. If a code cannot
   "purpose" : "Technical mapping to transform oBDS-Data into SNOMED",
   "copyright" : "This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license.",
   "sourceUri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/",
-  "targetUri" : "http://snomed.info/sct/900000000000207008/version/20240401",
+  "targetUri" : "http://snomed.info/sct/900000000000207008/version/20261001",
   "group" : [{
     "source" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-operation-komplikation",
-    "target" : "http://snomed.info/sct/900000000000207008/version/20240401",
+    "target" : "http://snomed.info/sct",
+    "targetVersion" : "http://snomed.info/sct/900000000000207008/version/20261001",
     "element" : [{
       "code" : "N",
       "display" : "nein",
@@ -285,8 +286,10 @@ The complications are assigned directly at the time of surgery. If a code cannot
       "code" : "AEE",
       "display" : "Anastomoseninsuffizienz einer Enterostomie",
       "target" : [{
-        "equivalence" : "unmatched",
-        "comment" : "kein äquivalenter SNOMED-Term, ggfs. über Postkoordination möglich"
+        "code" : "446953001",
+        "display" : "Dehiscence of anastomosis (disorder)",
+        "equivalence" : "wider",
+        "comment" : "ergaenzt 2026-11-04: Lokalisation Enterostomie nicht enthalten"
       }]
     },
     {
@@ -328,8 +331,10 @@ The complications are assigned directly at the time of surgery. If a code cannot
       "code" : "BSI",
       "display" : "Bronchusstumpfinsuffizienz",
       "target" : [{
-        "equivalence" : "unmatched",
-        "comment" : "kein äquivalenter SNOMED-Term, ggfs. über Postkoordination möglich"
+        "code" : "1366730005",
+        "display" : "Fistula of bronchial stump (disorder)",
+        "equivalence" : "narrower",
+        "comment" : "ergaenzt 2026-11-04: Konzept seit SNOMED CT International 20250601; Fistel ist die engere Manifestation der Stumpfinsuffizienz"
       }]
     },
     {
@@ -544,17 +549,20 @@ The complications are assigned directly at the time of surgery. If a code cannot
       "code" : "KES",
       "display" : "Komplikationen einer Stomaanlage",
       "target" : [{
-        "equivalence" : "unmatched",
-        "comment" : "kein äquivalenter SNOMED-Term, ggfs. über Postkoordination möglich"
+        "code" : "302918009",
+        "display" : "Disorder of stoma (disorder)",
+        "equivalence" : "wider",
+        "comment" : "ergaenzt 2026-11-04: Oberkonzept; keine spezifische Stomaanlage-Komplikation in SNOMED CT"
       }]
     },
     {
       "code" : "KIM",
       "display" : "Komplikation eines Implantates (Gefäßprothese, Totalendoprothese, Katheter), z. B. Dislokation",
       "target" : [{
-        "code" : "19220005",
-        "display" : "Complication of implant (disorder)",
-        "equivalence" : "equivalent"
+        "code" : "1354666001",
+        "display" : "Disorder associated with implant (disorder)",
+        "equivalence" : "equivalent",
+        "comment" : "2026-11-04: 19220005 Complication of implant inaktiviert (Juli 2025), ersetzt durch SAME AS-Nachfolger 1354666001"
       }]
     },
     {
@@ -652,8 +660,10 @@ The complications are assigned directly at the time of surgery. If a code cannot
       "code" : "NIN",
       "display" : "Nahtinsuffizienz, anderweitig nicht erwähnt",
       "target" : [{
-        "equivalence" : "unmatched",
-        "comment" : "kein äquivalenter SNOMED-Term, ggfs. über Postkoordination möglich"
+        "code" : "446953001",
+        "display" : "Dehiscence of anastomosis (disorder)",
+        "equivalence" : "narrower",
+        "comment" : "ergaenzt 2026-11-04: nur Anastomosen, nicht jede Nahtinsuffizienz"
       }]
     },
     {
@@ -696,8 +706,10 @@ The complications are assigned directly at the time of surgery. If a code cannot
       "code" : "PPA",
       "display" : "Periphere Parese",
       "target" : [{
-        "equivalence" : "unmatched",
-        "comment" : "kein äquivalenter SNOMED-Term, ggfs. über Postkoordination möglich"
+        "code" : "44695005",
+        "display" : "Paralysis (finding)",
+        "equivalence" : "wider",
+        "comment" : "ergaenzt 2026-11-04: Oberkonzept (umfasst Paresen); kein Konzept fuer periphere Parese"
       }]
     },
     {
@@ -812,9 +824,10 @@ The complications are assigned directly at the time of surgery. If a code cannot
       "code" : "PDA",
       "display" : "Protrahierte Darmatonie (paralytischer Ileus)",
       "target" : [{
-        "code" : "1162567000",
-        "display" : "Postoperative paralytic ileus (disorder)",
-        "equivalence" : "equivalent"
+        "code" : "235833007",
+        "display" : "Postoperative ileus (disorder)",
+        "equivalence" : "wider",
+        "comment" : "2026-11-04: 1162567000 Postoperative paralytic ileus inaktiviert (Juli 2025), ersetzt durch REPLACED BY-Nachfolger 235833007 (weiter gefasst)"
       }]
     },
     {
@@ -849,10 +862,10 @@ The complications are assigned directly at the time of surgery. If a code cannot
       "code" : "SKI",
       "display" : "Septische Komplikation eines Implantates",
       "target" : [{
-        "code" : "19220005",
-        "display" : "Complication of implant (disorder)",
+        "code" : "1354666001",
+        "display" : "Disorder associated with implant (disorder)",
         "equivalence" : "wider",
-        "comment" : "Komplikation hat keine spezifischen Sepsis-Unterkonzepte, ggfs. über Postkoordination"
+        "comment" : "2026-11-04: 19220005 Complication of implant inaktiviert (Juli 2025), ersetzt durch SAME AS-Nachfolger 1354666001"
       }]
     },
     {

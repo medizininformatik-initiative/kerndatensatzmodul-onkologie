@@ -9,11 +9,11 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-tnm-uicc-sct-pathological | *Version*:2027.0.0-ballot.1 |
-| Active as of 2024-01-05 | *Computable Name*:MII CM Onko Pathological TNM UICC SCT Mapping |
+| Active as of 2026-11-04 | *Computable Name*:MII CM Onko Pathological TNM UICC SCT Mapping |
 | **Copyright/Legal**: This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. | |
 
  
-Mapping pathological TNM UICC Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich. 
+Mapping pathological TNM UICC Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt gegen SNOMED CT International 20240401; am 2026-11-04 gegen International 20261001 nachkuratiert (alle Zielkonzepte auf Aktivitaet geprueft, inaktivierte Ziele ersetzt, seit 2024 neu veroeffentlichte Konzepte fuer bisher unbesetzte Werte ergaenzt, Ober-/Unterkonzepte mit equivalence wider/narrower nachgetragen). Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich. 
 
 The codings for the UICC TNM symbols are presented here. The UICC concepts have been part of the international SNOMED distribution since the beginning of 2025.
 
@@ -158,7 +158,7 @@ The table below represents one possible mapping to the pathological TNMs (cTNMs)
   "title" : "MII CM Onko Pathological TNM UICC SNOMED",
   "status" : "active",
   "experimental" : true,
-  "date" : "2024-01-05",
+  "date" : "2026-11-04",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -167,7 +167,7 @@ The table below represents one possible mapping to the pathological TNMs (cTNMs)
       "value" : "https://www.medizininformatik-initiative.de/"
     }]
   }],
-  "description" : "Mapping pathological TNM UICC Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich.",
+  "description" : "Mapping pathological TNM UICC Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt gegen SNOMED CT International 20240401; am 2026-11-04 gegen International 20261001 nachkuratiert (alle Zielkonzepte auf Aktivitaet geprueft, inaktivierte Ziele ersetzt, seit 2024 neu veroeffentlichte Konzepte fuer bisher unbesetzte Werte ergaenzt, Ober-/Unterkonzepte mit equivalence wider/narrower nachgetragen). Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -178,7 +178,8 @@ The table below represents one possible mapping to the pathological TNMs (cTNMs)
   "copyright" : "This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license.",
   "group" : [{
     "source" : "https://www.uicc.org/resources/tnm",
-    "target" : "http://snomed.info/sct/900000000000207008/version/20240401",
+    "target" : "http://snomed.info/sct",
+    "targetVersion" : "http://snomed.info/sct/900000000000207008/version/20261001",
     "element" : [{
       "code" : "y",
       "display" : "y",
@@ -210,21 +211,28 @@ The table below represents one possible mapping to the pathological TNMs (cTNMs)
       "code" : "c",
       "display" : "c",
       "target" : [{
-        "equivalence" : "unmatched"
+        "code" : "1397043001",
+        "display" : "Union for International Cancer Control c prefix (qualifier value)",
+        "equivalence" : "equivalent",
+        "comment" : "ergaenzt 2026-11-04: Konzept seit SNOMED CT International 20260601"
       }]
     },
     {
       "code" : "p",
       "display" : "p",
       "target" : [{
-        "equivalence" : "unmatched"
+        "code" : "1397044007",
+        "display" : "Union for International Cancer Control p prefix (qualifier value)",
+        "equivalence" : "equivalent",
+        "comment" : "ergaenzt 2026-11-04: Konzept seit SNOMED CT International 20260601"
       }]
     },
     {
       "code" : "u",
       "display" : "u",
       "target" : [{
-        "equivalence" : "unmatched"
+        "equivalence" : "unmatched",
+        "comment" : "in der UICC-Hierarchie von SNOMED CT International 20261001 (<<1352503003) nicht enthalten"
       }]
     },
     {
@@ -303,14 +311,16 @@ The table below represents one possible mapping to the pathological TNMs (cTNMs)
       "code" : "Tis(pu)",
       "display" : "Tis(pu)",
       "target" : [{
-        "equivalence" : "unmatched"
+        "equivalence" : "unmatched",
+        "comment" : "in der UICC-Hierarchie von SNOMED CT International 20261001 (<<1352503003) nicht enthalten"
       }]
     },
     {
       "code" : "Tis(pd)",
       "display" : "Tis(pd)",
       "target" : [{
-        "equivalence" : "unmatched"
+        "equivalence" : "unmatched",
+        "comment" : "in der UICC-Hierarchie von SNOMED CT International 20261001 (<<1352503003) nicht enthalten"
       }]
     },
     {
@@ -542,7 +552,8 @@ The table below represents one possible mapping to the pathological TNMs (cTNMs)
       "code" : "T3e",
       "display" : "T3e",
       "target" : [{
-        "equivalence" : "unmatched"
+        "equivalence" : "unmatched",
+        "comment" : "in der UICC-Hierarchie von SNOMED CT International 20261001 (<<1352503003) nicht enthalten (cT3e, ycT3e, aT3e vorhanden, pT3e nicht)"
       }]
     },
     {
@@ -603,70 +614,80 @@ The table below represents one possible mapping to the pathological TNMs (cTNMs)
       "code" : "m",
       "display" : "m",
       "target" : [{
-        "equivalence" : "unmatched"
+        "equivalence" : "unmatched",
+        "comment" : "in der UICC-Hierarchie von SNOMED CT International 20261001 (<<1352503003) nicht enthalten"
       }]
     },
     {
       "code" : "2",
       "display" : "2",
       "target" : [{
-        "equivalence" : "unmatched"
+        "equivalence" : "unmatched",
+        "comment" : "Zaehlwert (Anzahl multipler Primaertumoren zum Suffix m), kein terminologisches Konzept; gehoert in ein numerisches Element, nicht nach SNOMED CT"
       }]
     },
     {
       "code" : "3",
       "display" : "3",
       "target" : [{
-        "equivalence" : "unmatched"
+        "equivalence" : "unmatched",
+        "comment" : "Zaehlwert (Anzahl multipler Primaertumoren zum Suffix m), kein terminologisches Konzept; gehoert in ein numerisches Element, nicht nach SNOMED CT"
       }]
     },
     {
       "code" : "4",
       "display" : "4",
       "target" : [{
-        "equivalence" : "unmatched"
+        "equivalence" : "unmatched",
+        "comment" : "Zaehlwert (Anzahl multipler Primaertumoren zum Suffix m), kein terminologisches Konzept; gehoert in ein numerisches Element, nicht nach SNOMED CT"
       }]
     },
     {
       "code" : "5",
       "display" : "5",
       "target" : [{
-        "equivalence" : "unmatched"
+        "equivalence" : "unmatched",
+        "comment" : "Zaehlwert (Anzahl multipler Primaertumoren zum Suffix m), kein terminologisches Konzept; gehoert in ein numerisches Element, nicht nach SNOMED CT"
       }]
     },
     {
       "code" : "6",
       "display" : "6",
       "target" : [{
-        "equivalence" : "unmatched"
+        "equivalence" : "unmatched",
+        "comment" : "Zaehlwert (Anzahl multipler Primaertumoren zum Suffix m), kein terminologisches Konzept; gehoert in ein numerisches Element, nicht nach SNOMED CT"
       }]
     },
     {
       "code" : "7",
       "display" : "7",
       "target" : [{
-        "equivalence" : "unmatched"
+        "equivalence" : "unmatched",
+        "comment" : "Zaehlwert (Anzahl multipler Primaertumoren zum Suffix m), kein terminologisches Konzept; gehoert in ein numerisches Element, nicht nach SNOMED CT"
       }]
     },
     {
       "code" : "8",
       "display" : "8",
       "target" : [{
-        "equivalence" : "unmatched"
+        "equivalence" : "unmatched",
+        "comment" : "Zaehlwert (Anzahl multipler Primaertumoren zum Suffix m), kein terminologisches Konzept; gehoert in ein numerisches Element, nicht nach SNOMED CT"
       }]
     },
     {
       "code" : "9",
       "display" : "9",
       "target" : [{
-        "equivalence" : "unmatched"
+        "equivalence" : "unmatched",
+        "comment" : "Zaehlwert (Anzahl multipler Primaertumoren zum Suffix m), kein terminologisches Konzept; gehoert in ein numerisches Element, nicht nach SNOMED CT"
       }]
     },
     {
       "code" : "10",
       "display" : "10",
       "target" : [{
-        "equivalence" : "unmatched"
+        "equivalence" : "unmatched",
+        "comment" : "Zaehlwert (Anzahl multipler Primaertumoren zum Suffix m), kein terminologisches Konzept; gehoert in ein numerisches Element, nicht nach SNOMED CT"
       }]
     },
     {
@@ -808,7 +829,8 @@ The table below represents one possible mapping to the pathological TNMs (cTNMs)
       "code" : "M0",
       "display" : "M0",
       "target" : [{
-        "equivalence" : "unmatched"
+        "equivalence" : "unmatched",
+        "comment" : "pM0 ist nach UICC nicht zulaessig; in der UICC-Hierarchie von SNOMED CT International 20261001 (<<1352503003) nicht enthalten"
       }]
     },
     {
@@ -860,154 +882,206 @@ The table below represents one possible mapping to the pathological TNMs (cTNMs)
       "code" : "MX",
       "display" : "MX",
       "target" : [{
-        "equivalence" : "unmatched"
+        "equivalence" : "unmatched",
+        "comment" : "in der UICC-Hierarchie von SNOMED CT International 20261001 (<<1352503003) nicht enthalten"
       }]
     },
     {
       "code" : "i+",
       "display" : "i+",
       "target" : [{
-        "equivalence" : "unmatched"
+        "equivalence" : "unmatched",
+        "comment" : "kein eigenstaendiges Suffix-Konzept; SNOMED CT praekoordiniert die Marker als UICC-Kategoriewerte (z. B. pN0(i+) 1352624001, pN0(mol+) 1352609005, pN1mi(sn)); Abbildung nur auf Kategorieebene moeglich (Stand Intl 20261001)"
       }]
     },
     {
       "code" : "i-",
       "display" : "i-",
       "target" : [{
-        "equivalence" : "unmatched"
+        "equivalence" : "unmatched",
+        "comment" : "kein eigenstaendiges Suffix-Konzept; SNOMED CT praekoordiniert die Marker als UICC-Kategoriewerte (z. B. pN0(i+) 1352624001, pN0(mol+) 1352609005, pN1mi(sn)); Abbildung nur auf Kategorieebene moeglich (Stand Intl 20261001)"
       }]
     },
     {
       "code" : "mol+",
       "display" : "mol+",
       "target" : [{
-        "equivalence" : "unmatched"
+        "equivalence" : "unmatched",
+        "comment" : "kein eigenstaendiges Suffix-Konzept; SNOMED CT praekoordiniert die Marker als UICC-Kategoriewerte (z. B. pN0(i+) 1352624001, pN0(mol+) 1352609005, pN1mi(sn)); Abbildung nur auf Kategorieebene moeglich (Stand Intl 20261001)"
       }]
     },
     {
       "code" : "mol-",
       "display" : "mol-",
       "target" : [{
-        "equivalence" : "unmatched"
+        "equivalence" : "unmatched",
+        "comment" : "kein eigenstaendiges Suffix-Konzept; SNOMED CT praekoordiniert die Marker als UICC-Kategoriewerte (z. B. pN0(i+) 1352624001, pN0(mol+) 1352609005, pN1mi(sn)); Abbildung nur auf Kategorieebene moeglich (Stand Intl 20261001)"
       }]
     },
     {
       "code" : "sn",
       "display" : "sn",
       "target" : [{
-        "equivalence" : "unmatched"
+        "equivalence" : "unmatched",
+        "comment" : "kein eigenstaendiges Suffix-Konzept; SNOMED CT praekoordiniert die Marker als UICC-Kategoriewerte (z. B. pN0(i+) 1352624001, pN0(mol+) 1352609005, pN1mi(sn)); Abbildung nur auf Kategorieebene moeglich (Stand Intl 20261001)"
       }]
     },
     {
       "code" : "L0",
       "display" : "L0",
       "target" : [{
-        "equivalence" : "unmatched"
+        "code" : "1380127005",
+        "display" : "Union for International Cancer Control L0 (qualifier value)",
+        "equivalence" : "equivalent",
+        "comment" : "ergaenzt 2026-11-04: Konzept seit SNOMED CT International 20251101"
       }]
     },
     {
       "code" : "L1",
       "display" : "L1",
       "target" : [{
-        "equivalence" : "unmatched"
+        "code" : "1380125002",
+        "display" : "Union for International Cancer Control L1 (qualifier value)",
+        "equivalence" : "equivalent",
+        "comment" : "ergaenzt 2026-11-04: Konzept seit SNOMED CT International 20251101"
       }]
     },
     {
       "code" : "LX",
       "display" : "LX",
       "target" : [{
-        "equivalence" : "unmatched"
+        "code" : "1380126001",
+        "display" : "Union for International Cancer Control LX (qualifier value)",
+        "equivalence" : "equivalent",
+        "comment" : "ergaenzt 2026-11-04: Konzept seit SNOMED CT International 20251101"
       }]
     },
     {
       "code" : "V0",
       "display" : "V0",
       "target" : [{
-        "equivalence" : "unmatched"
+        "code" : "1380138005",
+        "display" : "Union for International Cancer Control V0 (qualifier value)",
+        "equivalence" : "equivalent",
+        "comment" : "ergaenzt 2026-11-04: Konzept seit SNOMED CT International 20251101"
       }]
     },
     {
       "code" : "V1",
       "display" : "V1",
       "target" : [{
-        "equivalence" : "unmatched"
+        "code" : "1380137000",
+        "display" : "Union for International Cancer Control V1 (qualifier value)",
+        "equivalence" : "equivalent",
+        "comment" : "ergaenzt 2026-11-04: Konzept seit SNOMED CT International 20251101"
       }]
     },
     {
       "code" : "V2",
       "display" : "V2",
       "target" : [{
-        "equivalence" : "unmatched"
+        "code" : "1380139002",
+        "display" : "Union for International Cancer Control V2 (qualifier value)",
+        "equivalence" : "equivalent",
+        "comment" : "ergaenzt 2026-11-04: Konzept seit SNOMED CT International 20251101"
       }]
     },
     {
       "code" : "VX",
       "display" : "VX",
       "target" : [{
-        "equivalence" : "unmatched"
+        "code" : "1380136009",
+        "display" : "Union for International Cancer Control VX (qualifier value)",
+        "equivalence" : "equivalent",
+        "comment" : "ergaenzt 2026-11-04: Konzept seit SNOMED CT International 20251101"
       }]
     },
     {
       "code" : "Pn0",
       "display" : "Pn0",
       "target" : [{
-        "equivalence" : "unmatched"
+        "code" : "1386331003",
+        "display" : "Union for International Cancer Control Pn0 (qualifier value)",
+        "equivalence" : "equivalent",
+        "comment" : "ergaenzt 2026-11-04: Konzept seit SNOMED CT International 20260201"
       }]
     },
     {
       "code" : "Pn1",
       "display" : "Pn1",
       "target" : [{
-        "equivalence" : "unmatched"
+        "code" : "1386332005",
+        "display" : "Union for International Cancer Control Pn1 (qualifier value)",
+        "equivalence" : "equivalent",
+        "comment" : "ergaenzt 2026-11-04: Konzept seit SNOMED CT International 20260201"
       }]
     },
     {
       "code" : "PnX",
       "display" : "PnX",
       "target" : [{
-        "equivalence" : "unmatched"
+        "code" : "1386316007",
+        "display" : "Union for International Cancer Control PnX (qualifier value)",
+        "equivalence" : "equivalent",
+        "comment" : "ergaenzt 2026-11-04: Konzept seit SNOMED CT International 20260201"
       }]
     },
     {
       "code" : "S0",
       "display" : "S0",
       "target" : [{
-        "equivalence" : "unmatched"
+        "code" : "313139000",
+        "display" : "Serum tumor marker stage S0 (finding)",
+        "equivalence" : "equivalent",
+        "comment" : "Finding-Konzept (seit 2002), kein UICC Qualifier Value; semantisch gleich, fuer Bindings an Qualifier-Wertemengen aber ungeeignet (Stand Intl 20261001)"
       }]
     },
     {
       "code" : "S1",
       "display" : "S1",
       "target" : [{
-        "equivalence" : "unmatched"
+        "code" : "313140003",
+        "display" : "Serum tumor marker stage S1 (finding)",
+        "equivalence" : "equivalent",
+        "comment" : "Finding-Konzept (seit 2002), kein UICC Qualifier Value; semantisch gleich, fuer Bindings an Qualifier-Wertemengen aber ungeeignet (Stand Intl 20261001)"
       }]
     },
     {
       "code" : "S2",
       "display" : "S2",
       "target" : [{
-        "equivalence" : "unmatched"
+        "code" : "313141004",
+        "display" : "Serum tumor marker stage S2 (finding)",
+        "equivalence" : "equivalent",
+        "comment" : "Finding-Konzept (seit 2002), kein UICC Qualifier Value; semantisch gleich, fuer Bindings an Qualifier-Wertemengen aber ungeeignet (Stand Intl 20261001)"
       }]
     },
     {
       "code" : "S3",
       "display" : "S3",
       "target" : [{
-        "equivalence" : "unmatched"
+        "code" : "313142006",
+        "display" : "Serum tumor marker stage S3 (finding)",
+        "equivalence" : "equivalent",
+        "comment" : "Finding-Konzept (seit 2002), kein UICC Qualifier Value; semantisch gleich, fuer Bindings an Qualifier-Wertemengen aber ungeeignet (Stand Intl 20261001)"
       }]
     },
     {
       "code" : "SX",
       "display" : "SX",
       "target" : [{
-        "equivalence" : "unmatched"
+        "code" : "313138008",
+        "display" : "Serum tumor marker stage SX (finding)",
+        "equivalence" : "equivalent",
+        "comment" : "Finding-Konzept (seit 2002), kein UICC Qualifier Value; semantisch gleich, fuer Bindings an Qualifier-Wertemengen aber ungeeignet (Stand Intl 20261001)"
       }]
     },
     {
       "code" : "okk",
       "display" : "Stadium X",
       "target" : [{
-        "equivalence" : "unmatched"
+        "equivalence" : "unmatched",
+        "comment" : "in der UICC-Hierarchie von SNOMED CT International 20261001 (<<1352503003) nicht enthalten"
       }]
     },
     {

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-asa-obds-loinc | *Version*:2027.0.0-ballot.1 |
-| Active Stand: 2026-10-19 | *Maschinenlesbarer Name*:MII_CM_Onko_ASA_oBDS_LOINC |
+| Active Stand: 2026-11-04 | *Maschinenlesbarer Name*:MII_CM_Onko_ASA_oBDS_LOINC |
 
  
 Mapping von oBDS ASA-Klassifikation (ursprünglich KR9, generalisiert für alle onkologischen Indikationen) zu LOINC ASA Physical Status 
@@ -151,7 +151,7 @@ Mapping von oBDS ASA-Klassifikation (ursprünglich KR9, generalisiert für alle 
   "title" : "MII CM Onkologie ASA oBDS zu LOINC",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-10-19T23:12:44+00:00",
+  "date" : "2026-11-04T08:17:56+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

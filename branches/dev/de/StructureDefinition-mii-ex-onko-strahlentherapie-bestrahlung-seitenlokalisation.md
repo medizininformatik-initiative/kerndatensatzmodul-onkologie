@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-strahlentherapie-bestrahlung-seitenlokalisation | *Version*:2027.0.0-ballot.1 |
-| Active Stand: 2026-10-19 | *Maschinenlesbarer Name*:MII_EX_Onko_Strahlentherapie_Bestrahlung_Seitenlokalisation |
+| Active Stand: 2026-11-04 | *Maschinenlesbarer Name*:MII_EX_Onko_Strahlentherapie_Bestrahlung_Seitenlokalisation |
 
 Strahlentherapie: Seitenlokalisation einer Bestrahlung
 
@@ -210,7 +210,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-ex-onko-
   "title" : "MII EX Onko Strahlentherapie Bestrahlung Seitenlokalisation",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-10-19T23:12:44+00:00",
+  "date" : "2026-11-04T08:17:56+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

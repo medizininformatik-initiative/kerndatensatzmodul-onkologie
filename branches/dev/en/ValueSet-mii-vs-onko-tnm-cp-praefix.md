@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-cp-praefix | *Version*:2027.0.0-ballot.1 |
-| Active as of 2026-10-19 | *Computable Name*:MII_VS_Onko_TNM_cp_Praefix |
+| Active as of 2026-11-04 | *Computable Name*:MII_VS_Onko_TNM_cp_Praefix |
 
  
 Codes für TNM c/p/u-Präfix. Gibt an, ob die Klassifikation klinisch (c), pathologisch (p) oder mittels Ultraschall (u) erfolgte. 
@@ -171,7 +171,7 @@ Codes für TNM c/p/u-Präfix. Gibt an, ob die Klassifikation klinisch (c), patho
   "title" : "MII VS Onkologie TNM c/p/u Praefix",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-10-19T23:12:44+00:00",
+  "date" : "2026-11-04T08:17:56+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

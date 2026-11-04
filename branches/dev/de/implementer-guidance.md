@@ -57,9 +57,9 @@ Die folgenden Tabellen werden beim Build per SQL direkt aus den ConceptMap-Resso
 | | |
 | :--- | :--- |
 | Beziehung | Anzahl |
-| source-is-narrower-than-target | `80` |
-| source-is-broader-than-target | `60` |
-| equivalent | `1318` |
+| source-is-narrower-than-target | `92` |
+| source-is-broader-than-target | `65` |
+| equivalent | `1352` |
 
 **Alle Mappings der oBDS-Antwortlisten** (modul-eigene CodeSysteme → SNOMED CT/LOINC; die jahresversionierten ATC-/ICD-O-Überleitungen sind auf [ATC](atc-terminologie.md) bzw. [ICD-O](icd-o-terminologie.md) beschrieben):
 
@@ -124,12 +124,14 @@ Die folgenden Tabellen werden beim Build per SQL direkt aus den ConceptMap-Resso
 | oBDS-CS grading | #T | equivalent | SNOMED CT | #385432009 |
 | oBDS-CS grading | #U | equivalent | SNOMED CT | #261665006 |
 | oBDS-CS grading | #X | equivalent | SNOMED CT | #1155705000 |
+| oBDS-CS https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-grund-ende | #A | source-is-narrower-than-target | SNOMED CT | #274512008 |
 | oBDS-CS https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-grund-ende | #E | equivalent | SNOMED CT | #385656004 |
 | oBDS-CS https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-grund-ende | #P | source-is-narrower-than-target | SNOMED CT | #419835002 |
 | oBDS-CS https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-grund-ende | #S | source-is-narrower-than-target | SNOMED CT | #74964007 |
 | oBDS-CS https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-grund-ende | #T | equivalent | SNOMED CT | #419099009 |
 | oBDS-CS https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-grund-ende | #U | equivalent | SNOMED CT | #261665006 |
 | oBDS-CS https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-grund-ende | #V | equivalent | SNOMED CT | #183948000 |
+| oBDS-CS https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-grund-ende | #W | source-is-narrower-than-target | SNOMED CT | #182838006 |
 | oBDS-CS intention | #D | equivalent | SNOMED CT | #261004008 |
 | oBDS-CS intention | #K | equivalent | SNOMED CT | #373808002 |
 | oBDS-CS intention | #O | source-is-narrower-than-target | SNOMED CT | #373808002 |
@@ -154,6 +156,7 @@ Die folgenden Tabellen werden beim Build per SQL direkt aus den ConceptMap-Resso
 | oBDS-CS operation-komplikation |  | source-is-broader-than-target | SNOMED CT | #60168000 |
 | oBDS-CS operation-komplikation | #ABD | source-is-narrower-than-target | SNOMED CT | #128477000 |
 | oBDS-CS operation-komplikation | #ABS | source-is-broader-than-target | SNOMED CT | #75100008 |
+| oBDS-CS operation-komplikation | #AEE | source-is-narrower-than-target | SNOMED CT | #446953001 |
 | oBDS-CS operation-komplikation | #AEP | equivalent | SNOMED CT | #8635005 |
 | oBDS-CS operation-komplikation | #ALR | equivalent | SNOMED CT | #419076005 |
 | oBDS-CS operation-komplikation | #ANI | equivalent | SNOMED CT | #723189000 |
@@ -162,6 +165,7 @@ Die folgenden Tabellen werden beim Build per SQL direkt aus den ConceptMap-Resso
 | oBDS-CS operation-komplikation | #ASF | source-is-narrower-than-target | SNOMED CT | #128477000 |
 | oBDS-CS operation-komplikation | #BIF | equivalent | SNOMED CT | #53206008 |
 | oBDS-CS operation-komplikation | #BOG | equivalent | SNOMED CT | #37372002 |
+| oBDS-CS operation-komplikation | #BSI | source-is-broader-than-target | SNOMED CT | #1366730005 |
 | oBDS-CS operation-komplikation | #CHI | equivalent | SNOMED CT | #82403002 |
 | oBDS-CS operation-komplikation | #DAI | source-is-broader-than-target | SNOMED CT | #236091002 |
 | oBDS-CS operation-komplikation | #DEP | equivalent | SNOMED CT | #772133000 |
@@ -185,7 +189,8 @@ Die folgenden Tabellen werden beim Build per SQL direkt aus den ConceptMap-Resso
 | oBDS-CS operation-komplikation | #IFV | equivalent | SNOMED CT | #234044007 |
 | oBDS-CS operation-komplikation | #KAS | equivalent | SNOMED CT | #89138009 |
 | oBDS-CS operation-komplikation | #KDS | equivalent | SNOMED CT | #26629001 |
-| oBDS-CS operation-komplikation | #KIM | equivalent | SNOMED CT | #19220005 |
+| oBDS-CS operation-komplikation | #KES | source-is-narrower-than-target | SNOMED CT | #302918009 |
+| oBDS-CS operation-komplikation | #KIM | equivalent | SNOMED CT | #1354666001 |
 | oBDS-CS operation-komplikation | #KRA | equivalent | SNOMED CT | #91175000 |
 | oBDS-CS operation-komplikation | #LEV | equivalent | SNOMED CT | #59927004 |
 | oBDS-CS operation-komplikation | #LOE | equivalent | SNOMED CT | #19242006 |
@@ -198,13 +203,14 @@ Die folgenden Tabellen werden beim Build per SQL direkt aus den ConceptMap-Resso
 | oBDS-CS operation-komplikation | #MYI | equivalent | SNOMED CT | #22298006 |
 | oBDS-CS operation-komplikation | #N | equivalent | SNOMED CT | #373067005 |
 | oBDS-CS operation-komplikation | #NAB | equivalent | SNOMED CT | #110265006 |
+| oBDS-CS operation-komplikation | #NIN | source-is-broader-than-target | SNOMED CT | #446953001 |
 | oBDS-CS operation-komplikation | #OES | equivalent | SNOMED CT | #16761005 |
 | oBDS-CS operation-komplikation | #OSM | source-is-broader-than-target | SNOMED CT | #274144001 |
 | oBDS-CS operation-komplikation | #PAB | equivalent | SNOMED CT | #6072007 |
 | oBDS-CS operation-komplikation | #PAE | equivalent | SNOMED CT | #59282003 |
 | oBDS-CS operation-komplikation | #PAF | equivalent | SNOMED CT | #25803005 |
 | oBDS-CS operation-komplikation | #PAV | equivalent | SNOMED CT | #399957001 |
-| oBDS-CS operation-komplikation | #PDA | equivalent | SNOMED CT | #1162567000 |
+| oBDS-CS operation-komplikation | #PDA | source-is-narrower-than-target | SNOMED CT | #235833007 |
 | oBDS-CS operation-komplikation | #PER | equivalent | SNOMED CT | #48661000 |
 | oBDS-CS operation-komplikation | #PEY | equivalent | SNOMED CT | #58554001 |
 | oBDS-CS operation-komplikation | #PIT | equivalent | SNOMED CT | #75694006 |
@@ -212,12 +218,13 @@ Die folgenden Tabellen werden beim Build per SQL direkt aus den ConceptMap-Resso
 | oBDS-CS operation-komplikation | #PLE | equivalent | SNOMED CT | #60046008 |
 | oBDS-CS operation-komplikation | #PMN | equivalent | SNOMED CT | #233604007 |
 | oBDS-CS operation-komplikation | #PNT | equivalent | SNOMED CT | #36118008 |
+| oBDS-CS operation-komplikation | #PPA | source-is-narrower-than-target | SNOMED CT | #44695005 |
 | oBDS-CS operation-komplikation | #RIN | equivalent | SNOMED CT | #409623005 |
 | oBDS-CS operation-komplikation | #RNB | equivalent | SNOMED CT | #308896002 |
 | oBDS-CS operation-komplikation | #RPA | source-is-broader-than-target | SNOMED CT | #1052240009 |
 | oBDS-CS operation-komplikation | #SES | equivalent | SNOMED CT | #76571007 |
 | oBDS-CS operation-komplikation | #SFH | equivalent | SNOMED CT | #76314005 |
-| oBDS-CS operation-komplikation | #SKI | source-is-narrower-than-target | SNOMED CT | #19220005 |
+| oBDS-CS operation-komplikation | #SKI | source-is-narrower-than-target | SNOMED CT | #1354666001 |
 | oBDS-CS operation-komplikation | #STK | equivalent | SNOMED CT | #302918009 |
 | oBDS-CS operation-komplikation | #TIA | equivalent | SNOMED CT | #266257000 |
 | oBDS-CS operation-komplikation | #TRZ | equivalent | SNOMED CT | #82545002 |
@@ -255,11 +262,20 @@ Die folgenden Tabellen werden beim Build per SQL direkt aus den ConceptMap-Resso
 | oBDS-CS strahlentherapie-applikationsart | #KLDR | source-is-narrower-than-target | SNOMED CT | #384692006 |
 | oBDS-CS strahlentherapie-applikationsart | #KPDR | source-is-narrower-than-target | SNOMED CT | #384692006 |
 | oBDS-CS strahlentherapie-applikationsart | #M | source-is-narrower-than-target | SNOMED CT | #399315003 |
+| oBDS-CS strahlentherapie-applikationsart | #MPRRT | source-is-broader-than-target | SNOMED CT | #1103661000000108 |
+| oBDS-CS strahlentherapie-applikationsart | #MPSMA | source-is-broader-than-target | SNOMED CT | #1263784000 |
 | oBDS-CS strahlentherapie-applikationsart | #MRIT | equivalent | SNOMED CT | #118640001 |
 | oBDS-CS strahlentherapie-applikationsart | #MRJT | equivalent | SNOMED CT | #64291000052106 |
+| oBDS-CS strahlentherapie-applikationsart | #MSIRT | source-is-broader-than-target | SNOMED CT | #722183007 |
 | oBDS-CS strahlentherapie-applikationsart | #P | equivalent | SNOMED CT | #33195004 |
 | oBDS-CS strahlentherapie-applikationsart | #P-4D | equivalent | SNOMED CT | #721061000124106 |
 | oBDS-CS strahlentherapie-applikationsart | #P-ST | equivalent | SNOMED CT | #395096001 |
+| oBDS-CS strahlentherapie-applikationsart | #P-ST4D | source-is-narrower-than-target | SNOMED CT | #721061000124106 |
+| oBDS-CS strahlentherapie-applikationsart | #PRCJ | source-is-narrower-than-target | SNOMED CT | #703423002 |
+| oBDS-CS strahlentherapie-applikationsart | #PRCJ-4D | source-is-narrower-than-target | SNOMED CT | #703423002 |
+| oBDS-CS strahlentherapie-applikationsart | #PRCN-4D | source-is-narrower-than-target | SNOMED CT | #721061000124106 |
+| oBDS-CS strahlentherapie-applikationsart | #PRCN-ST | source-is-narrower-than-target | SNOMED CT | #395096001 |
+| oBDS-CS strahlentherapie-applikationsart | #PRCN-ST4D | source-is-narrower-than-target | SNOMED CT | #721061000124106 |
 | oBDS-CS strahlentherapie-applikationsart | #S | equivalent | SNOMED CT | #74964007 |
 | oBDS-CS strahlentherapie-boost | #J | equivalent | SNOMED CT | #445232009 |
 | oBDS-CS strahlentherapie-boost | #KON | source-is-narrower-than-target | SNOMED CT | #445232009 |

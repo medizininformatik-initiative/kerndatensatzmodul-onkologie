@@ -9,11 +9,11 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-therapie-ende-sct | *Version*:2027.0.0-ballot.1 |
-| Active as of 2024-04-11 | *Computable Name*:MII CM Onko Therapie Ende SNOMED Mapping |
+| Active as of 2026-11-04 | *Computable Name*:MII CM Onko Therapie Ende SNOMED Mapping |
 | **Copyright/Legal**: This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. | |
 
  
-Mapping Therapie Ende Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich. 
+Mapping Therapie Ende Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt gegen SNOMED CT International 20240401; am 2026-11-04 gegen International 20261001 nachkuratiert (alle Zielkonzepte auf Aktivitaet geprueft, inaktivierte Ziele ersetzt, seit 2024 neu veroeffentlichte Konzepte fuer bisher unbesetzte Werte ergaenzt, Ober-/Unterkonzepte mit equivalence wider/narrower nachgetragen). Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich. 
 
 The field "reason for end of therapy" is recorded both by radiotherapy and by systemic therapy.
 
@@ -158,7 +158,7 @@ The main difficulty in mapping was the interplay of outcome and reason/modifier,
   "title" : "MII CM Onko Therapie Ende SNOMED Mapping",
   "status" : "active",
   "experimental" : true,
-  "date" : "2024-04-11",
+  "date" : "2026-11-04",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -167,7 +167,7 @@ The main difficulty in mapping was the interplay of outcome and reason/modifier,
       "value" : "https://www.medizininformatik-initiative.de/"
     }]
   }],
-  "description" : "Mapping Therapie Ende Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich.",
+  "description" : "Mapping Therapie Ende Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt gegen SNOMED CT International 20240401; am 2026-11-04 gegen International 20261001 nachkuratiert (alle Zielkonzepte auf Aktivitaet geprueft, inaktivierte Ziele ersetzt, seit 2024 neu veroeffentlichte Konzepte fuer bisher unbesetzte Werte ergaenzt, Ober-/Unterkonzepte mit equivalence wider/narrower nachgetragen). Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -178,10 +178,11 @@ The main difficulty in mapping was the interplay of outcome and reason/modifier,
   "purpose" : "Technical mapping to transform oBDS-Data into SNOMED",
   "copyright" : "This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license.",
   "sourceUri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/",
-  "targetUri" : "http://snomed.info/sct/900000000000207008/version/20240401",
+  "targetUri" : "http://snomed.info/sct/900000000000207008/version/20261001",
   "group" : [{
     "source" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-grund-ende",
-    "target" : "http://snomed.info/sct/900000000000207008/version/20240401",
+    "target" : "http://snomed.info/sct",
+    "targetVersion" : "http://snomed.info/sct/900000000000207008/version/20261001",
     "element" : [{
       "code" : "E",
       "display" : "reguläres Ende",
@@ -204,16 +205,20 @@ The main difficulty in mapping was the interplay of outcome and reason/modifier,
       "code" : "W",
       "display" : "reguläres Ende mit Substanzwechsel",
       "target" : [{
-        "equivalence" : "unmatched",
-        "comment" : "ggfs. Postkoordination von Substanzwechsel, aber keine Postkoordination mit 'qualifier value' möglich."
+        "code" : "182838006",
+        "display" : "Change of medication (procedure)",
+        "equivalence" : "wider",
+        "comment" : "ergaenzt 2026-11-04: regulaeres Therapieende nicht enthalten"
       }]
     },
     {
       "code" : "A",
       "display" : "Abbruch wegen Nebenwirkungen",
       "target" : [{
-        "equivalence" : "unmatched",
-        "comment" : "ggfs. Postkoordination von Nebnwirkungen, aber keine Postkoordination mit 'qualifier value' möglich."
+        "code" : "274512008",
+        "display" : "Drug therapy discontinued (situation)",
+        "equivalence" : "wider",
+        "comment" : "ergaenzt 2026-11-04: Grund Nebenwirkungen nicht enthalten"
       }]
     },
     {

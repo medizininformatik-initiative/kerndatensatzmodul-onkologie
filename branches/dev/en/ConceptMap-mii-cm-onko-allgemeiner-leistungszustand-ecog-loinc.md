@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-allgemeiner-leistungszustand-ecog-loinc | *Version*:2027.0.0-ballot.1 |
-| Active as of 2026-10-19 | *Computable Name*: |
+| Active as of 2026-11-04 | *Computable Name*: |
 
  
 Mapping der oBDS-Codes für ECOG Performance Status zu LOINC Answer List LL529-9 
@@ -150,7 +150,7 @@ Mapping der oBDS-Codes für ECOG Performance Status zu LOINC Answer List LL529-9
   "title" : "Mapping oBDS ECOG zu LOINC",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-10-19T23:12:44+00:00",
+  "date" : "2026-11-04T08:17:56+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
