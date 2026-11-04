@@ -16,8 +16,6 @@ Onko_SystemischeTherapie <--- MedicationStatement : partOf
 Therapieplanung_Tumorkonferenz <--- MedicationStatement: basedOn
 object Diagnose_Primaertumor [[StructureDefinition-mii-pr-onko-diagnose-primaertumor.html]] #FFFF66
 object Fruehere_Tumorerkrankung [[StructureDefinition-mii-pr-onko-fruehere-tumorerkrankung.html]] #FFFF66
-object Evidenz_Erstdiagnose [[StructureDefinition-mii-pr-onko-liste-evidenz-erstdiagnose.html]] #EEEEEE
-Diagnose_Primaertumor --left--> Evidenz_Erstdiagnose : evidence.detail
 Diagnose_Primaertumor <-- Diagnose_Primaertumor : extension[transformationVon] 0..*
 Fruehere_Tumorerkrankung <.. Diagnose_Primaertumor : extension[occurredFollowing] 0..*
 
@@ -75,8 +73,8 @@ rectangle "Modul Medizinisches Forschungsvorhaben" {
 MII_Studie_Studie <--- Studienteilnahme : focus[studie]
 
 Therapieplanung_Tumorkonferenz <-right-- Onko_Befund  : basedOn
-Evidenz_Erstdiagnose ---> Onko_Befund : entry.item
-note on link : + Observations
+Diagnose_Primaertumor ---> Onko_Befund : evidence.detail 0..*
+note on link : + Observations der Diagnosemeldung
 
 rectangle "Therapieempfehlung (Tumorkonferenz)" {
     object Therapieempfehlung_Kombi [[StructureDefinition-mii-pr-onko-therapieempfehlung-kombinationstherapie.html]] #CCCCFF

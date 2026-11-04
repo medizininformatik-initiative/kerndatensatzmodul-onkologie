@@ -871,7 +871,6 @@
       {
         "id": "Condition.evidence",
         "path": "Condition.evidence",
-        "max": "1",
         "mustSupport": true
       },
       {
@@ -895,7 +894,7 @@
             }
           ]
         },
-        "definition": "Liste aller für die Erstdiagnose ausschlaggebenden Beobachtungen",
+        "definition": "Beobachtungen und Befunde aus der oBDS-Diagnosemeldung - die zum Zeitpunkt der Erstdiagnose bekannten Datenpunkte - direkt referenziert. Eine List nach dem retired-Profil Evidenz Erstdiagnose ist nur noch für Bestandsdaten zulässig",
         "_definition": {
           "extension": [
             {
@@ -907,7 +906,7 @@
                 },
                 {
                   "url": "content",
-                  "valueString": "Liste aller für die Erstdiagnose ausschlaggebenden Beobachtungen"
+                  "valueString": "Beobachtungen und Befunde aus der oBDS-Diagnosemeldung - die zum Zeitpunkt der Erstdiagnose bekannten Datenpunkte - direkt referenziert. Eine List nach dem retired-Profil Evidenz Erstdiagnose ist nur noch für Bestandsdaten zulässig"
                 }
               ]
             }
@@ -917,6 +916,8 @@
           {
             "code": "Reference",
             "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Observation",
+              "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",
               "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-liste-evidenz-erstdiagnose"
             ]
           }

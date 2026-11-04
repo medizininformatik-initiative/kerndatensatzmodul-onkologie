@@ -1,3 +1,5 @@
+> **Retired seit v2027.0.0 (Ballot HDB-678).** Die Beobachtungen und Befunde der Erstdiagnose werden direkt in `Condition.evidence.detail` der [Diagnose Primärtumor](StructureDefinition-mii-pr-onko-diagnose-primaertumor.html) referenziert; eine zusätzliche List-Ressource ist nicht mehr vorgesehen. Dieses Profil bleibt für Bestandsdaten lesbar und als Referenzziel zulässig.
+
 Die List-Ressource ist eine flache Sammlung von Ressourcen und bietet Funktionen für die Verwaltung der Sammlung. In diesem Fall dient die Ressource als Sammlung der Observationen und Befundberichte, die zum Zeitpunkt der onkologischen Erstdiagnose bekannt sind. Dazu gehören beispielsweise eine TNM-Klassifikation sowie weitere diagnostisch relevante Klassifikationen, Fernmetastasen, Histologien etc.
 
 Die Evidenz-Liste selbst ist nicht Teil des oBDS, sondern soll den Stand zum Zeitpunkt der Erstdiagnose dauerhaft festhalten.

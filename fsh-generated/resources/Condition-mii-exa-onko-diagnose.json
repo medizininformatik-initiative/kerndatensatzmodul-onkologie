@@ -96,5 +96,28 @@
   "subject": {
     "reference": "Patient/example"
   },
-  "recordedDate": "2020-02-16"
+  "recordedDate": "2020-02-16",
+  "evidence": [
+    {
+      "detail": [
+        {
+          "reference": "Observation/mii-exa-onko-tnm-klassifikation-TisN0M0"
+        }
+      ]
+    },
+    {
+      "detail": [
+        {
+          "reference": "Observation/mii-exa-onko-allgemeiner-leistungszustand-ecog"
+        }
+      ]
+    },
+    {
+      "detail": [
+        {
+          "reference": "DiagnosticReport/mii-exa-onko-befund-1"
+        }
+      ]
+    }
+  ]
 }

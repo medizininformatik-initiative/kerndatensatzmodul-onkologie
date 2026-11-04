@@ -89,7 +89,7 @@ Die onkologische Diagnose ist das zentrale Kernelement des Basisdatensatzes. All
 Im oBDS ist eine Zuordung der Beobachtungen als wichtig für die Erstdiagnosestellung dadurch gegeben, dass diese Teil der Diagnosemeldung sind. Spätere Meldungen können dann bsw. als Verlaufs-, Pathologie- oder Todesmeldung gemacht werden. 
 
 Beobachtungen, die nach Stellung der Erstdiagnose  gemacht werden, verweisen in der vorliegenden Profilierung auf eine "Verlauf"-Observation-Ressource mit einem eigenen Datum. 
-Die Beobachtungen, die zum Zeitpunkt der Erstdiagnosestellung bekannt sind, sind von besonderem Interesse für prognostische Forschungsfragen. Um diese Datenpunkte leichter zu identifizieren, **SOLLEN** alle Beobachtungen aus der oBDS-Diagnosemeldung in einer FHIR-Liste mit dem Profil "Evidenz Erstdiagnose" über `evidence.detail` referenziert werden. 
+Die Beobachtungen, die zum Zeitpunkt der Erstdiagnosestellung bekannt sind, sind von besonderem Interesse für prognostische Forschungsfragen. Um diese Datenpunkte leichter zu identifizieren, **SOLLEN** alle Beobachtungen und Befunde aus der oBDS-Diagnosemeldung direkt über `evidence.detail` referenziert werden (Observation oder DiagnosticReport, 0..*). Die bis v2027.0.0-ballot.1 vorgesehene Zwischen-Ressource List (Profil „Evidenz Erstdiagnose") ist seit Ballot-Kommentar HDB-678 retired: Sie brachte gegenüber den direkten Referenzen keinen Mehrwert und wurde nicht genutzt. Für Bestandsdaten bleibt eine List als Ziel von `evidence.detail` zulässig. Die Suche läuft weiterhin über den Suchparameter `evidence-detail`.
 
 ---
 

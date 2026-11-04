@@ -80,12 +80,16 @@ Description: "Dieses Profil beschreibt die Diagnose des Primärtumors (bzw. der 
 * insert Translation(bodySite.coding[icd-o-3] ^short, de-DE, ICD-O-Topographie )
 * insert Translation(bodySite.coding[icd-o-3] ^definition, de-DE, Topographie des Primärtumors nach ICD-O-3 nach 5.4 oBDS 2021 )
 
-* evidence 0..1 MS
-* evidence.detail MS
-* evidence.detail only Reference(MII_PR_Onko_Liste_Evidenz_Erstdiagnose)
-* insert Label (evidence.detail, Evidenz für Erstdiagnose, Liste aller für die Erstdiagnose ausschlaggebenden Beobachtungen)
+// HDB-678 (Ballot 2027): Die für die Erstdiagnose ausschlaggebenden Beobachtungen
+// und Befunde werden direkt in evidence.detail referenziert. Die bisherige
+// Zwischen-Ressource List (Profil Evidenz Erstdiagnose) ist retired, als Ziel
+// für Bestandsdaten aber weiter zulässig.
+* evidence 0..* MS
+* evidence.detail 0..* MS
+* evidence.detail only Reference(Observation or DiagnosticReport or MII_PR_Onko_Liste_Evidenz_Erstdiagnose)
+* insert Label (evidence.detail, Evidenz für Erstdiagnose, Beobachtungen und Befunde aus der oBDS-Diagnosemeldung - die zum Zeitpunkt der Erstdiagnose bekannten Datenpunkte - direkt referenziert. Eine List nach dem retired-Profil Evidenz Erstdiagnose ist nur noch für Bestandsdaten zulässig)
 * insert Translation(evidence.detail ^short, de-DE, Evidenz für Erstdiagnose  )
-* insert Translation(evidence.detail ^definition, de-DE, Liste aller für die Erstdiagnose ausschlaggebenden Beobachtungen)
+* insert Translation(evidence.detail ^definition, de-DE, Beobachtungen und Befunde aus der oBDS-Diagnosemeldung - die zum Zeitpunkt der Erstdiagnose bekannten Datenpunkte - direkt referenziert. Eine List nach dem retired-Profil Evidenz Erstdiagnose ist nur noch für Bestandsdaten zulässig)
 
 * extension MS
 * extension ^slicing.discriminator.type = #value

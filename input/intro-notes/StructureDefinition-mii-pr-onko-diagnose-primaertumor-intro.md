@@ -80,7 +80,7 @@ The oncological diagnosis is the central core element of the base data set. All 
 In the oBDS, the assignment of observations as relevant for establishing the initial diagnosis is given by the fact that they are part of the diagnosis report. Later reports can then be made, for example, as follow-up, pathology or death reports.
 
 Observations made after the initial diagnosis has been established reference, in the present profiling, a "Verlauf" (course) Observation resource with a date of its own.
-The observations that are known at the time the initial diagnosis is established are of particular interest for prognostic research questions. In order to identify these data points more easily, all observations from the oBDS diagnosis report **SHOULD** be referenced via `evidence.detail` in a FHIR list using the profile "[Evidenz Erstdiagnose](StructureDefinition-mii-pr-onko-liste-evidenz-erstdiagnose.html)".
+The observations that are known at the time the initial diagnosis is established are of particular interest for prognostic research questions. In order to identify these data points more easily, all observations and reports from the oBDS diagnosis report **SHOULD** be referenced directly via `evidence.detail` (Observation or DiagnosticReport, 0..*). The intermediate List resource (profile "Evidenz Erstdiagnose") foreseen up to v2027.0.0-ballot.1 has been retired following ballot comment HDB-678: it added nothing over the direct references and was not used. For legacy data a List remains a permitted target of `evidence.detail`. Searching continues to work via the search parameter `evidence-detail`.
 
 ---
 

@@ -13,6 +13,10 @@ Usage: #example
 * extension[morphology-behavior-icdo3].valueCodeableConcept.text = "Invasives duktales Karzinom o.n.A."
 * subject = Reference(Patient/example)
 * recordedDate = "2020-02-16"
+// Evidenz der Erstdiagnose: direkte Referenzen (HDB-678), keine List mehr
+* evidence[+].detail = Reference(mii-exa-onko-tnm-klassifikation-TisN0M0)
+* evidence[+].detail = Reference(mii-exa-onko-allgemeiner-leistungszustand-ecog)
+* evidence[+].detail = Reference(mii-exa-onko-befund-1)
 * bodySite.coding[snomed-ct] = $SCT#76365002 "Structure of upper outer quadrant of breast (body structure)"
 * bodySite.coding[icd-o-3] = $ICDO3#C50.4 "Oberer äußerer Quadrant der Brust"
 * extension[Feststellungsdatum].valueDateTime = 2021-05-09 

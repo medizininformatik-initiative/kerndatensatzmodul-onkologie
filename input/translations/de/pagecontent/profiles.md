@@ -31,7 +31,7 @@ Jede Box führt direkt zur Profilseite; Farben nach FHIR-Ressourcentyp, Gruppier
 <div class="grp"><h5>Diagnose (oBDS 5)</h5>
 <a class="chip" style="background:#FFF3A3" href="StructureDefinition-mii-pr-onko-diagnose-primaertumor.html" title="Condition">Diagnose Primärtumor</a>
 <a class="chip" style="background:#FFF3A3" href="StructureDefinition-mii-pr-onko-fruehere-tumorerkrankung.html" title="Condition">Frühere Tumorerkrankung</a>
-<a class="chip" style="background:#EDEDED" href="StructureDefinition-mii-pr-onko-liste-evidenz-erstdiagnose.html" title="List">Evidenz Erstdiagnose</a>
+<a class="chip" style="background:#EDEDED" href="StructureDefinition-mii-pr-onko-liste-evidenz-erstdiagnose.html" title="List (retired)">Evidenz Erstdiagnose (retired)</a>
 </div>
 <div class="grp"><h5>Histologie &amp; Pathologie (oBDS 6)</h5>
 <a class="chip" style="background:#CDEFC0" href="StructureDefinition-mii-pr-onko-histologie-icdo3.html" title="Observation">Histologie ICD-O-3</a>
