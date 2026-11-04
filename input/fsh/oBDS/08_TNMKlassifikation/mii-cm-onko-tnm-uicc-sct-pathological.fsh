@@ -9,10 +9,11 @@ Usage: #definition
 * status = #active
 * insert SNOMEDCopyrightForInstance
 * experimental = true
-* date = "2024-01-05"
-* description = "Mapping pathological TNM UICC Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich."
+* date = "2026-11-04"
+* description = "Mapping pathological TNM UICC Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt gegen SNOMED CT International 20240401; am 2026-11-04 gegen International 20261001 nachkuratiert (alle Zielkonzepte auf Aktivitaet geprueft, inaktivierte Ziele ersetzt, seit 2024 neu veroeffentlichte Konzepte fuer bisher unbesetzte Werte ergaenzt, Ober-/Unterkonzepte mit equivalence wider/narrower nachgetragen). Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich."
 * group.source = "https://www.uicc.org/resources/tnm"
-* group.target = "http://snomed.info/sct/900000000000207008/version/20240401"
+* group.target = "http://snomed.info/sct"
+* group.targetVersion = "http://snomed.info/sct/900000000000207008/version/20261001"
 * group.element[+].code = #y
 * group.element[=].display = "y"
 * group.element[=].target.code = #421755005
@@ -31,15 +32,22 @@ Usage: #definition
 
 * group.element[+].code = #c
 * group.element[=].display = "c"
-* group.element[=].target.equivalence = #unmatched
+* group.element[=].target.code = #1397043001
+* group.element[=].target.display = "Union for International Cancer Control c prefix (qualifier value)"
+* group.element[=].target.equivalence = #equivalent
+* group.element[=].target.comment = "ergaenzt 2026-11-04: Konzept seit SNOMED CT International 20260601"
 
 * group.element[+].code = #p
 * group.element[=].display = "p"
-* group.element[=].target.equivalence = #unmatched
+* group.element[=].target.code = #1397044007
+* group.element[=].target.display = "Union for International Cancer Control p prefix (qualifier value)"
+* group.element[=].target.equivalence = #equivalent
+* group.element[=].target.comment = "ergaenzt 2026-11-04: Konzept seit SNOMED CT International 20260601"
 
 * group.element[+].code = #u
 * group.element[=].display = "u"
 * group.element[=].target.equivalence = #unmatched
+* group.element[=].target.comment = "in der UICC-Hierarchie von SNOMED CT International 20261001 (<<1352503003) nicht enthalten"
 
 * group.element[+].code = #TX
 * group.element[=].display = "TX"
@@ -92,10 +100,12 @@ Usage: #definition
 * group.element[+].code = #Tis(pu)
 * group.element[=].display = "Tis(pu)"
 * group.element[=].target.equivalence = #unmatched
+* group.element[=].target.comment = "in der UICC-Hierarchie von SNOMED CT International 20261001 (<<1352503003) nicht enthalten"
 
 * group.element[+].code = #Tis(pd)
 * group.element[=].display = "Tis(pd)"
 * group.element[=].target.equivalence = #unmatched
+* group.element[=].target.comment = "in der UICC-Hierarchie von SNOMED CT International 20261001 (<<1352503003) nicht enthalten"
 
 * group.element[+].code = #T1
 * group.element[=].display = "T1"
@@ -249,6 +259,7 @@ Usage: #definition
 * group.element[+].code = #T3e
 * group.element[=].display = "T3e"
 * group.element[=].target.equivalence = #unmatched
+* group.element[=].target.comment = "in der UICC-Hierarchie von SNOMED CT International 20261001 (<<1352503003) nicht enthalten (cT3e, ycT3e, aT3e vorhanden, pT3e nicht)"
 
 * group.element[+].code = #T4
 * group.element[=].display = "T4"
@@ -289,42 +300,52 @@ Usage: #definition
 * group.element[+].code = #m
 * group.element[=].display = "m"
 * group.element[=].target.equivalence = #unmatched
+* group.element[=].target.comment = "in der UICC-Hierarchie von SNOMED CT International 20261001 (<<1352503003) nicht enthalten"
 
 * group.element[+].code = #2
 * group.element[=].display = "2"
 * group.element[=].target.equivalence = #unmatched
+* group.element[=].target.comment = "Zaehlwert (Anzahl multipler Primaertumoren zum Suffix m), kein terminologisches Konzept; gehoert in ein numerisches Element, nicht nach SNOMED CT"
 
 * group.element[+].code = #3
 * group.element[=].display = "3"
 * group.element[=].target.equivalence = #unmatched
+* group.element[=].target.comment = "Zaehlwert (Anzahl multipler Primaertumoren zum Suffix m), kein terminologisches Konzept; gehoert in ein numerisches Element, nicht nach SNOMED CT"
 
 * group.element[+].code = #4
 * group.element[=].display = "4"
 * group.element[=].target.equivalence = #unmatched
+* group.element[=].target.comment = "Zaehlwert (Anzahl multipler Primaertumoren zum Suffix m), kein terminologisches Konzept; gehoert in ein numerisches Element, nicht nach SNOMED CT"
 
 * group.element[+].code = #5
 * group.element[=].display = "5"
 * group.element[=].target.equivalence = #unmatched
+* group.element[=].target.comment = "Zaehlwert (Anzahl multipler Primaertumoren zum Suffix m), kein terminologisches Konzept; gehoert in ein numerisches Element, nicht nach SNOMED CT"
 
 * group.element[+].code = #6
 * group.element[=].display = "6"
 * group.element[=].target.equivalence = #unmatched
+* group.element[=].target.comment = "Zaehlwert (Anzahl multipler Primaertumoren zum Suffix m), kein terminologisches Konzept; gehoert in ein numerisches Element, nicht nach SNOMED CT"
 
 * group.element[+].code = #7
 * group.element[=].display = "7"
 * group.element[=].target.equivalence = #unmatched
+* group.element[=].target.comment = "Zaehlwert (Anzahl multipler Primaertumoren zum Suffix m), kein terminologisches Konzept; gehoert in ein numerisches Element, nicht nach SNOMED CT"
 
 * group.element[+].code = #8
 * group.element[=].display = "8"
 * group.element[=].target.equivalence = #unmatched
+* group.element[=].target.comment = "Zaehlwert (Anzahl multipler Primaertumoren zum Suffix m), kein terminologisches Konzept; gehoert in ein numerisches Element, nicht nach SNOMED CT"
 
 * group.element[+].code = #9
 * group.element[=].display = "9"
 * group.element[=].target.equivalence = #unmatched
+* group.element[=].target.comment = "Zaehlwert (Anzahl multipler Primaertumoren zum Suffix m), kein terminologisches Konzept; gehoert in ein numerisches Element, nicht nach SNOMED CT"
 
 * group.element[+].code = #10
 * group.element[=].display = "10"
 * group.element[=].target.equivalence = #unmatched
+* group.element[=].target.comment = "Zaehlwert (Anzahl multipler Primaertumoren zum Suffix m), kein terminologisches Konzept; gehoert in ein numerisches Element, nicht nach SNOMED CT"
 
 * group.element[+].code = #NX
 * group.element[=].display = "Nx"
@@ -419,6 +440,7 @@ Usage: #definition
 * group.element[+].code = #M0
 * group.element[=].display = "M0"
 * group.element[=].target.equivalence = #unmatched
+* group.element[=].target.comment = "pM0 ist nach UICC nicht zulaessig; in der UICC-Hierarchie von SNOMED CT International 20261001 (<<1352503003) nicht enthalten"
 
 * group.element[+].code = #M1
 * group.element[=].display = "M1"
@@ -453,90 +475,142 @@ Usage: #definition
 * group.element[+].code = #MX
 * group.element[=].display = "MX"
 * group.element[=].target.equivalence = #unmatched
+* group.element[=].target.comment = "in der UICC-Hierarchie von SNOMED CT International 20261001 (<<1352503003) nicht enthalten"
 
 * group.element[+].code = #i+
 * group.element[=].display = "i+"
 * group.element[=].target.equivalence = #unmatched
+* group.element[=].target.comment = "kein eigenstaendiges Suffix-Konzept; SNOMED CT praekoordiniert die Marker als UICC-Kategoriewerte (z. B. pN0(i+) 1352624001, pN0(mol+) 1352609005, pN1mi(sn)); Abbildung nur auf Kategorieebene moeglich (Stand Intl 20261001)"
 
 * group.element[+].code = #i-
 * group.element[=].display = "i-"
 * group.element[=].target.equivalence = #unmatched
+* group.element[=].target.comment = "kein eigenstaendiges Suffix-Konzept; SNOMED CT praekoordiniert die Marker als UICC-Kategoriewerte (z. B. pN0(i+) 1352624001, pN0(mol+) 1352609005, pN1mi(sn)); Abbildung nur auf Kategorieebene moeglich (Stand Intl 20261001)"
 
 * group.element[+].code = #mol+
 * group.element[=].display = "mol+"
 * group.element[=].target.equivalence = #unmatched
+* group.element[=].target.comment = "kein eigenstaendiges Suffix-Konzept; SNOMED CT praekoordiniert die Marker als UICC-Kategoriewerte (z. B. pN0(i+) 1352624001, pN0(mol+) 1352609005, pN1mi(sn)); Abbildung nur auf Kategorieebene moeglich (Stand Intl 20261001)"
 
 * group.element[+].code = #mol-
 * group.element[=].display = "mol-"
 * group.element[=].target.equivalence = #unmatched
+* group.element[=].target.comment = "kein eigenstaendiges Suffix-Konzept; SNOMED CT praekoordiniert die Marker als UICC-Kategoriewerte (z. B. pN0(i+) 1352624001, pN0(mol+) 1352609005, pN1mi(sn)); Abbildung nur auf Kategorieebene moeglich (Stand Intl 20261001)"
 
 * group.element[+].code = #sn
 * group.element[=].display = "sn"
 * group.element[=].target.equivalence = #unmatched
+* group.element[=].target.comment = "kein eigenstaendiges Suffix-Konzept; SNOMED CT praekoordiniert die Marker als UICC-Kategoriewerte (z. B. pN0(i+) 1352624001, pN0(mol+) 1352609005, pN1mi(sn)); Abbildung nur auf Kategorieebene moeglich (Stand Intl 20261001)"
 
 * group.element[+].code = #L0
 * group.element[=].display = "L0"
-* group.element[=].target.equivalence = #unmatched
+* group.element[=].target.code = #1380127005
+* group.element[=].target.display = "Union for International Cancer Control L0 (qualifier value)"
+* group.element[=].target.equivalence = #equivalent
+* group.element[=].target.comment = "ergaenzt 2026-11-04: Konzept seit SNOMED CT International 20251101"
 
 * group.element[+].code = #L1
 * group.element[=].display = "L1"
-* group.element[=].target.equivalence = #unmatched
+* group.element[=].target.code = #1380125002
+* group.element[=].target.display = "Union for International Cancer Control L1 (qualifier value)"
+* group.element[=].target.equivalence = #equivalent
+* group.element[=].target.comment = "ergaenzt 2026-11-04: Konzept seit SNOMED CT International 20251101"
 
 * group.element[+].code = #LX
 * group.element[=].display = "LX"
-* group.element[=].target.equivalence = #unmatched
+* group.element[=].target.code = #1380126001
+* group.element[=].target.display = "Union for International Cancer Control LX (qualifier value)"
+* group.element[=].target.equivalence = #equivalent
+* group.element[=].target.comment = "ergaenzt 2026-11-04: Konzept seit SNOMED CT International 20251101"
 
 * group.element[+].code = #V0
 * group.element[=].display = "V0"
-* group.element[=].target.equivalence = #unmatched
+* group.element[=].target.code = #1380138005
+* group.element[=].target.display = "Union for International Cancer Control V0 (qualifier value)"
+* group.element[=].target.equivalence = #equivalent
+* group.element[=].target.comment = "ergaenzt 2026-11-04: Konzept seit SNOMED CT International 20251101"
 
 * group.element[+].code = #V1
 * group.element[=].display = "V1"
-* group.element[=].target.equivalence = #unmatched
+* group.element[=].target.code = #1380137000
+* group.element[=].target.display = "Union for International Cancer Control V1 (qualifier value)"
+* group.element[=].target.equivalence = #equivalent
+* group.element[=].target.comment = "ergaenzt 2026-11-04: Konzept seit SNOMED CT International 20251101"
 
 * group.element[+].code = #V2
 * group.element[=].display = "V2"
-* group.element[=].target.equivalence = #unmatched
+* group.element[=].target.code = #1380139002
+* group.element[=].target.display = "Union for International Cancer Control V2 (qualifier value)"
+* group.element[=].target.equivalence = #equivalent
+* group.element[=].target.comment = "ergaenzt 2026-11-04: Konzept seit SNOMED CT International 20251101"
 
 * group.element[+].code = #VX
 * group.element[=].display = "VX"
-* group.element[=].target.equivalence = #unmatched
+* group.element[=].target.code = #1380136009
+* group.element[=].target.display = "Union for International Cancer Control VX (qualifier value)"
+* group.element[=].target.equivalence = #equivalent
+* group.element[=].target.comment = "ergaenzt 2026-11-04: Konzept seit SNOMED CT International 20251101"
 
 * group.element[+].code = #Pn0
 * group.element[=].display = "Pn0"
-* group.element[=].target.equivalence = #unmatched
+* group.element[=].target.code = #1386331003
+* group.element[=].target.display = "Union for International Cancer Control Pn0 (qualifier value)"
+* group.element[=].target.equivalence = #equivalent
+* group.element[=].target.comment = "ergaenzt 2026-11-04: Konzept seit SNOMED CT International 20260201"
 
 * group.element[+].code = #Pn1
 * group.element[=].display = "Pn1"
-* group.element[=].target.equivalence = #unmatched
+* group.element[=].target.code = #1386332005
+* group.element[=].target.display = "Union for International Cancer Control Pn1 (qualifier value)"
+* group.element[=].target.equivalence = #equivalent
+* group.element[=].target.comment = "ergaenzt 2026-11-04: Konzept seit SNOMED CT International 20260201"
 
 * group.element[+].code = #PnX
 * group.element[=].display = "PnX"
-* group.element[=].target.equivalence = #unmatched
+* group.element[=].target.code = #1386316007
+* group.element[=].target.display = "Union for International Cancer Control PnX (qualifier value)"
+* group.element[=].target.equivalence = #equivalent
+* group.element[=].target.comment = "ergaenzt 2026-11-04: Konzept seit SNOMED CT International 20260201"
 
 * group.element[+].code = #S0
 * group.element[=].display = "S0"
-* group.element[=].target.equivalence = #unmatched
+* group.element[=].target.code = #313139000
+* group.element[=].target.display = "Serum tumor marker stage S0 (finding)"
+* group.element[=].target.equivalence = #equivalent
+* group.element[=].target.comment = "Finding-Konzept (seit 2002), kein UICC Qualifier Value; semantisch gleich, fuer Bindings an Qualifier-Wertemengen aber ungeeignet (Stand Intl 20261001)"
 
 * group.element[+].code = #S1
 * group.element[=].display = "S1"
-* group.element[=].target.equivalence = #unmatched
+* group.element[=].target.code = #313140003
+* group.element[=].target.display = "Serum tumor marker stage S1 (finding)"
+* group.element[=].target.equivalence = #equivalent
+* group.element[=].target.comment = "Finding-Konzept (seit 2002), kein UICC Qualifier Value; semantisch gleich, fuer Bindings an Qualifier-Wertemengen aber ungeeignet (Stand Intl 20261001)"
 
 * group.element[+].code = #S2
 * group.element[=].display = "S2"
-* group.element[=].target.equivalence = #unmatched
+* group.element[=].target.code = #313141004
+* group.element[=].target.display = "Serum tumor marker stage S2 (finding)"
+* group.element[=].target.equivalence = #equivalent
+* group.element[=].target.comment = "Finding-Konzept (seit 2002), kein UICC Qualifier Value; semantisch gleich, fuer Bindings an Qualifier-Wertemengen aber ungeeignet (Stand Intl 20261001)"
 
 * group.element[+].code = #S3
 * group.element[=].display = "S3"
-* group.element[=].target.equivalence = #unmatched
+* group.element[=].target.code = #313142006
+* group.element[=].target.display = "Serum tumor marker stage S3 (finding)"
+* group.element[=].target.equivalence = #equivalent
+* group.element[=].target.comment = "Finding-Konzept (seit 2002), kein UICC Qualifier Value; semantisch gleich, fuer Bindings an Qualifier-Wertemengen aber ungeeignet (Stand Intl 20261001)"
 
 * group.element[+].code = #SX
 * group.element[=].display = "SX"
-* group.element[=].target.equivalence = #unmatched
+* group.element[=].target.code = #313138008
+* group.element[=].target.display = "Serum tumor marker stage SX (finding)"
+* group.element[=].target.equivalence = #equivalent
+* group.element[=].target.comment = "Finding-Konzept (seit 2002), kein UICC Qualifier Value; semantisch gleich, fuer Bindings an Qualifier-Wertemengen aber ungeeignet (Stand Intl 20261001)"
 
 * group.element[+].code = #okk
 * group.element[=].display = "Stadium X"
 * group.element[=].target.equivalence = #unmatched
+* group.element[=].target.comment = "in der UICC-Hierarchie von SNOMED CT International 20261001 (<<1352503003) nicht enthalten"
 
 * group.element[+].code = #0
 * group.element[=].display = "Stadium 0"

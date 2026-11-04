@@ -9,13 +9,14 @@ Usage: #definition
 * status = #active
 * insert SNOMEDCopyrightForInstance
 * experimental = true
-* date = "2024-04-10"
-* description = "Mapping Operation Komplikation Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich."
+* date = "2026-11-04"
+* description = "Mapping Operation Komplikation Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt gegen SNOMED CT International 20240401; am 2026-11-04 gegen International 20261001 nachkuratiert (alle Zielkonzepte auf Aktivitaet geprueft, inaktivierte Ziele ersetzt, seit 2024 neu veroeffentlichte Konzepte fuer bisher unbesetzte Werte ergaenzt, Ober-/Unterkonzepte mit equivalence wider/narrower nachgetragen). Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich."
 * purpose = "Technical mapping to transform oBDS-Data into SNOMED"
 * sourceUri = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/"
-* targetUri[+] = "http://snomed.info/sct/900000000000207008/version/20240401"
+* targetUri[+] = "http://snomed.info/sct/900000000000207008/version/20261001"
 * group[+].source = $mii-cs-onko-operation-komplikation
-* group[=].target = "http://snomed.info/sct/900000000000207008/version/20240401"
+* group[=].target = "http://snomed.info/sct"
+* group[=].targetVersion = "http://snomed.info/sct/900000000000207008/version/20261001"
 
 * group[=].element[+].code = #N
 * group[=].element[=].display = "nein"
@@ -85,8 +86,10 @@ Usage: #definition
 
 * group[=].element[+].code = #AEE
 * group[=].element[=].display = "Anastomoseninsuffizienz einer Enterostomie"
-* group[=].element[=].target.equivalence = #unmatched
-* group[=].element[=].target.comment = "kein äquivalenter SNOMED-Term, ggfs. über Postkoordination möglich"
+* group[=].element[=].target.code = #446953001
+* group[=].element[=].target.display = "Dehiscence of anastomosis (disorder)"
+* group[=].element[=].target.equivalence = #wider
+* group[=].element[=].target.comment = "ergaenzt 2026-11-04: Lokalisation Enterostomie nicht enthalten"
 
 * group[=].element[+].code = #API
 * group[=].element[=].display = "Apoplektischer Insult"
@@ -113,8 +116,10 @@ Usage: #definition
 
 * group[=].element[+].code = #BSI
 * group[=].element[=].display = "Bronchusstumpfinsuffizienz"
-* group[=].element[=].target.equivalence = #unmatched
-* group[=].element[=].target.comment = "kein äquivalenter SNOMED-Term, ggfs. über Postkoordination möglich"
+* group[=].element[=].target.code = #1366730005
+* group[=].element[=].target.display = "Fistula of bronchial stump (disorder)"
+* group[=].element[=].target.equivalence = #narrower
+* group[=].element[=].target.comment = "ergaenzt 2026-11-04: Konzept seit SNOMED CT International 20250601; Fistel ist die engere Manifestation der Stumpfinsuffizienz"
 
 * group[=].element[+].code = #CHI
 * group[=].element[=].display = "Cholangitis"
@@ -256,14 +261,17 @@ Usage: #definition
 
 * group[=].element[+].code = #KES
 * group[=].element[=].display = "Komplikationen einer Stomaanlage"
-* group[=].element[=].target.equivalence = #unmatched
-* group[=].element[=].target.comment = "kein äquivalenter SNOMED-Term, ggfs. über Postkoordination möglich"
+* group[=].element[=].target.code = #302918009
+* group[=].element[=].target.display = "Disorder of stoma (disorder)"
+* group[=].element[=].target.equivalence = #wider
+* group[=].element[=].target.comment = "ergaenzt 2026-11-04: Oberkonzept; keine spezifische Stomaanlage-Komplikation in SNOMED CT"
 
 * group[=].element[+].code = #KIM
 * group[=].element[=].display = "Komplikation eines Implantates (Gefäßprothese, Totalendoprothese, Katheter), z. B. Dislokation"
-* group[=].element[=].target.code = #19220005
-* group[=].element[=].target.display = "Complication of implant (disorder)"
+* group[=].element[=].target.code = #1354666001
+* group[=].element[=].target.display = "Disorder associated with implant (disorder)"
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "2026-11-04: 19220005 Complication of implant inaktiviert (Juli 2025), ersetzt durch SAME AS-Nachfolger 1354666001"
 
 * group[=].element[+].code = #KRA
 * group[=].element[=].display = "Krampfanfall"
@@ -328,8 +336,10 @@ Usage: #definition
 
 * group[=].element[+].code = #NIN
 * group[=].element[=].display = "Nahtinsuffizienz, anderweitig nicht erwähnt"
-* group[=].element[=].target.equivalence = #unmatched
-* group[=].element[=].target.comment = "kein äquivalenter SNOMED-Term, ggfs. über Postkoordination möglich"
+* group[=].element[=].target.code = #446953001
+* group[=].element[=].target.display = "Dehiscence of anastomosis (disorder)"
+* group[=].element[=].target.equivalence = #narrower
+* group[=].element[=].target.comment = "ergaenzt 2026-11-04: nur Anastomosen, nicht jede Nahtinsuffizienz"
 
 * group[=].element[+].code = #MYI
 * group[=].element[=].display = "Myokardinfarkt"
@@ -357,10 +367,11 @@ Usage: #definition
 
 * group[=].element[+].code = #PPA
 * group[=].element[=].display = "Periphere Parese"
-* group[=].element[=].target.equivalence = #unmatched
-* group[=].element[=].target.comment = "kein äquivalenter SNOMED-Term, ggfs. über Postkoordination möglich"
+* group[=].element[=].target.code = #44695005
+* group[=].element[=].target.display = "Paralysis (finding)"
+* group[=].element[=].target.equivalence = #wider
+* group[=].element[=].target.comment = "ergaenzt 2026-11-04: Oberkonzept (umfasst Paresen); kein Konzept fuer periphere Parese"
 
-// Wert von equivalence muss noch überprüft werden
 * group[=].element[+].code = #OSM
 * group[=].element[=].display = "Osteitis, Osteomyelitis"
 * group[=].element[=].target.code = #274144001
@@ -434,9 +445,10 @@ Usage: #definition
 
 * group[=].element[+].code = #PDA
 * group[=].element[=].display = "Protrahierte Darmatonie (paralytischer Ileus)"
-* group[=].element[=].target.code = #1162567000
-* group[=].element[=].target.display = "Postoperative paralytic ileus (disorder)"
-* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.code = #235833007
+* group[=].element[=].target.display = "Postoperative ileus (disorder)"
+* group[=].element[=].target.equivalence = #wider
+* group[=].element[=].target.comment = "2026-11-04: 1162567000 Postoperative paralytic ileus inaktiviert (Juli 2025), ersetzt durch REPLACED BY-Nachfolger 235833007 (weiter gefasst)"
 
 * group[=].element[+].code = #PAE
 * group[=].element[=].display = "Pulmonalarterienembolie"
@@ -463,10 +475,10 @@ Usage: #definition
 
 * group[=].element[+].code = #SKI
 * group[=].element[=].display = "Septische Komplikation eines Implantates"
-* group[=].element[=].target.code = #19220005
-* group[=].element[=].target.display = "Complication of implant (disorder)"
+* group[=].element[=].target.code = #1354666001
+* group[=].element[=].target.display = "Disorder associated with implant (disorder)"
 * group[=].element[=].target.equivalence = #wider
-* group[=].element[=].target.comment = "Komplikation hat keine spezifischen Sepsis-Unterkonzepte, ggfs. über Postkoordination"
+* group[=].element[=].target.comment = "2026-11-04: 19220005 Complication of implant inaktiviert (Juli 2025), ersetzt durch SAME AS-Nachfolger 1354666001"
 
 * group[=].element[+].code = #SES
 * group[=].element[=].display = "Septischer Schock"
