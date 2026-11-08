@@ -282,7 +282,7 @@ Description: "First phase: Full FOLFOX4 protocol for 6 cycles before dose modifi
 * extension[StellungZurOp].valueCodeableConcept.coding.code = #A
 * extension[StellungZurOp].valueCodeableConcept.coding.display = "Adjuvant"
 * category = $SCT#18629005	// Administration of drug or medicament
-* code.coding[systemische_therapie_art].system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-art"
+* code.coding[systemische_therapie_art].system = $mii-cs-onko-therapie-typ
 * code.coding[systemische_therapie_art].code = #CH
 * code.coding[systemische_therapie_art].display = "Chemotherapie"
 * code.coding[ops].system = "http://fhir.de/CodeSystem/bfarm/ops"
@@ -415,7 +415,7 @@ Description: "Second phase: Modified protocol with 5-FU + Leucovorin only (no Ox
 * extension[StellungZurOp].valueCodeableConcept.coding.code = #A
 * extension[StellungZurOp].valueCodeableConcept.coding.display = "Adjuvant"
 * category = $SCT#18629005	// Administration of drug or medicament
-* code.coding[systemische_therapie_art].system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-art"
+* code.coding[systemische_therapie_art].system = $mii-cs-onko-therapie-typ
 * code.coding[systemische_therapie_art].code = #CH
 * code.coding[systemische_therapie_art].display = "Chemotherapie"
 * code.coding[ops].system = "http://fhir.de/CodeSystem/bfarm/ops"

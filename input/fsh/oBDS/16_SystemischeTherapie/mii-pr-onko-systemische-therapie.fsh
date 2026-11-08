@@ -36,6 +36,7 @@ Description: "Systemische Therapie. Dieses Profil beschreibt eine Systemische Th
 * code.coding[systemische_therapie_art] from mii-vs-onko-systemische-therapie-art
 * code.coding[systemische_therapie_art].code 1..1
 * code.coding[systemische_therapie_art].system 1..1
+* code.coding[systemische_therapie_art] ^patternCoding.system = $mii-cs-onko-therapie-typ
 * insert Label(code.coding[systemische_therapie_art], Art der systemischen oder abwartenden Therapie, Art der systemischen oder abwartenden Therapie gemäß 16.3 oBDS 2021.)
 * insert Translation(code.coding[systemische_therapie_art] ^short, de-DE, Art der systemischen oder abwartenden Therapie )
 * insert Translation(code.coding[systemische_therapie_art] ^definition, de-DE, Art der systemischen oder abwartenden Therapie gemäß 16.3 oBDS 2021. )

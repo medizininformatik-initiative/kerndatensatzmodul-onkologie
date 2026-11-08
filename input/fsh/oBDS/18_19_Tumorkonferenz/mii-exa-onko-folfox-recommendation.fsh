@@ -436,7 +436,7 @@ Description: "Actual FOLFOX chemotherapy given, linked back to tumor board recom
 * category = $SCT#277132007	"Therapeutic procedure"
 
 // Art der systemischen Therapie - Chemotherapie
-* code.coding[systemische_therapie_art].system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-art"
+* code.coding[systemische_therapie_art].system = $mii-cs-onko-therapie-typ
 * code.coding[systemische_therapie_art].code = #CH
 * code.coding[systemische_therapie_art].display = "Chemotherapie"
 
