@@ -41,7 +41,7 @@ InstanceOf: mii-pr-onko-systemische-therapie
 Usage: #example
 * insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie)
 * status = #preparation
-* code.coding[systemische_therapie_art].system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-art"
+* code.coding[systemische_therapie_art].system = $mii-cs-onko-therapie-typ
 * code.coding[systemische_therapie_art].code = #ZS
 * category = $SCT#18629005	//"Administration of drug or medicament"
 * code.coding[ops] = $OPS|2024#6-001.k "Applikation von Medikamenten, Liste 1: Trastuzumab, intravenös"
@@ -60,7 +60,7 @@ Usage: #example
 * insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie)
 * status = #preparation
 * category = $SCT#18629005	// Administration of drug or medicament
-* code.coding[systemische_therapie_art].system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-art"
+* code.coding[systemische_therapie_art].system = $mii-cs-onko-therapie-typ
 * code.coding[systemische_therapie_art].code = #ZS
 * code.coding[ops] = $OPS#8-543 "Mittelgradig komplexe und intensive Blockchemotherapie"
 * code.coding[ops].version = "2024"
@@ -78,7 +78,7 @@ Usage: #example
 * insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie)
 * status = #preparation
 * category = $SCT#18629005	// Administration of drug or medicament
-* code.coding[systemische_therapie_art].system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-art"
+* code.coding[systemische_therapie_art].system = $mii-cs-onko-therapie-typ
 * code.coding[systemische_therapie_art].code = #ZS
 * code.coding[ops] = $OPS#8-54 "Zytostatische Chemotherapie, Immuntherapie und antiretrovirale Therapie"
 * code.coding[ops].version = "2024"
