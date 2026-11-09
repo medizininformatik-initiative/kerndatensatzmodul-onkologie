@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-protokolle | *Version*:2027.0.0-ballot.1 |
-| Active as of 2026-11-03 | *Computable Name*:MII_CS_Onko_Systemische_Therapie_Protokolle |
+| Active as of 2026-11-09 | *Computable Name*:MII_CS_Onko_Systemische_Therapie_Protokolle |
 
  
 oBDS-spezifisches Codesystem für Protokolle systemischer Therapien 
@@ -160,7 +160,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "MII CS Onkologie Systemische Therapie Protokolle",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-11-03T11:15:04+00:00",
+  "date" : "2026-11-09T09:50:56+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

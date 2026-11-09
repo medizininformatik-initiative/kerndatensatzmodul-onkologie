@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-sn-suffix | *Version*:2027.0.0-ballot.1 |
-| Active as of 2026-11-03 | *Computable Name*:MII_EX_Onko_TNM_SN_Suffix |
+| Active as of 2026-11-09 | *Computable Name*:MII_EX_Onko_TNM_SN_Suffix |
 
 Die Extension verleiht der TNM N-Kategorie das Schildwächterlymphknoten (Sentinel Lymph Node) Suffix.
 
@@ -173,7 +173,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-ex-onko-tnm-s
   "title" : "MII EX Onkologie TNM SN Suffix",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-11-03T11:15:04+00:00",
+  "date" : "2026-11-09T09:50:56+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

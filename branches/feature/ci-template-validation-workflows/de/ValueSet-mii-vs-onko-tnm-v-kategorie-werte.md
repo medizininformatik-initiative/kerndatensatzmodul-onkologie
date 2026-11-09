@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-v-kategorie-werte | *Version*:2027.0.0-ballot.1 |
-| Active Stand: 2026-11-03 | *Maschinenlesbarer Name*:MII_VS_Onko_TNM_V_Kategorie_Werte |
+| Active Stand: 2026-11-09 | *Maschinenlesbarer Name*:MII_VS_Onko_TNM_V_Kategorie_Werte |
 
  
 Das ValueSet enthält die TNM Codes für die Beurteilung der Veneninvasion aus der UICC TNM - Klassifikation maligner Tumoren Achte Auflage. 
@@ -171,7 +171,7 @@ Das ValueSet enthält die TNM Codes für die Beurteilung der Veneninvasion aus d
   "title" : "MII VS Onkologie TNM V Kategorie Werte",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-11-03T11:15:04+00:00",
+  "date" : "2026-11-09T09:50:56+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
