@@ -45,7 +45,7 @@ Title: "MII EXA Onkologie Diagnose radiogenes Angiosarkom nach Strahlentherapie 
 * extension[morphology-behavior-icdo3].valueCodeableConcept.coding.version = "2019"
 * subject = Reference(Patient/example)
 * recordedDate = "2026-07-01"
-* bodySite.coding[icd-o-3] = $ICDO3#C49.3 "Bindegewebe des Thorax"
+* bodySite.coding[icd-o-3] = $ICDO3#C49.3 "Bindegewebe, Subkutangewebe und sonstige Weichteile des Thorax"
 * bodySite.coding[icd-o-3].version = "2019"
 * extension[Feststellungsdatum].valueDateTime = 2026-07-01
 // Verursachung: Strahlentherapie im früheren Bestrahlungsfeld

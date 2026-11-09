@@ -12,9 +12,9 @@ Title: "MII EXA Onkologie Diagnose MDS (Ursprungsdiagnose)"
 * verificationStatus.coding[condition-ver-status] = $condition-ver-status#confirmed
 * verificationStatus.coding[primaertumorDiagnosesicherung].code = #7
 * verificationStatus.coding[primaertumorDiagnosesicherung].display = "histologische Untersuchung eines Primärtumors"
-* code.coding[icd10-gm] = $ICD10GM#D46.2 "Myelodysplastisches Syndrom: Refraktäre Anämie mit Ringsideroblasten"
+* code.coding[icd10-gm] = $ICD10GM#D46.2 "Refraktäre Anämie mit Blastenüberschuss [RAEB]"
 * code.coding[icd10-gm].version = "2023"
-* extension[morphology-behavior-icdo3].valueCodeableConcept.coding = $ICDO3#9983/3 "Refraktäre Anämie mit Ringsideroblasten"
+* extension[morphology-behavior-icdo3].valueCodeableConcept.coding = $ICDO3#9983/3 "Myelodysplastisches Syndrom mit Blastenüberschuss"
 * extension[morphology-behavior-icdo3].valueCodeableConcept.coding.version = "2019"
 * subject = Reference(Patient/example)
 * recordedDate = "2023-03-10"
