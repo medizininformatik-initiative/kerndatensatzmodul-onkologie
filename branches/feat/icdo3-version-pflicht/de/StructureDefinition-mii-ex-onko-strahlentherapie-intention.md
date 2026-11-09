@@ -212,7 +212,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-ex-onko-
   "title" : "MII EX Onko Strahlentherapie Intention",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-11-09T10:36:52+00:00",
+  "date" : "2026-11-09T13:03:30+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

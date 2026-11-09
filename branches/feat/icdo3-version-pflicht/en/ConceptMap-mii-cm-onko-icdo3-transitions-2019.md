@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-icdo3-transitions-2019 | *Version*:2027.0.0-ballot.1 |
-| Active as of 2026-08-26 | *Computable Name*:MII_CM_Onko_ICDO3_Transitions_2019 |
+| Active as of 2026-11-09 | *Computable Name*:MII_CM_Onko_ICDO3_Transitions_2019 |
 
  
 Diese ConceptMap dokumentiert die Morphologie-Code-Änderungen der ICD-O-3 von der Ersten Revision (deutsche Ausgabe 2014, ICD-O-3.1) zur Zweiten Revision (2019, ICD-O-3.2): Dignitäts-Neubewertungen (z. B. GIST, Phäochromozytom, Thymome, Paragangliome), Entitäts-Zusammenlegungen (z. B. Ewing-Sarkom, Hämangioperizytom in solitärer fibröser Tumor) und entfallene Konzepte. Werkzeug für die Migration von Krebsregister-Bestandsdaten. 
@@ -151,7 +151,7 @@ Diese ConceptMap dokumentiert die Morphologie-Code-Änderungen der ICD-O-3 von d
   "title" : "MII CM Onko ICD-O-3 Code Changes 2014 to 2019",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-26",
+  "date" : "2026-11-09",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -201,7 +201,7 @@ Diese ConceptMap dokumentiert die Morphologie-Code-Änderungen der ICD-O-3 von d
       "display" : "Gastrinom o.n.A.",
       "target" : [{
         "code" : "8153/3",
-        "display" : "Malignes Gastrinom",
+        "display" : "Gastrinom",
         "equivalence" : "equivalent",
         "comment" : "Streichung in der Zweiten Revision (Aktualisierungsliste 29.01.2021): Zusammenlegung in das bereits bestehende Konzept 8153/3. Achtung: Die amtliche BfArM-ClaML-Fassung (und damit der MII-Terminologieserver, der sie exakt spiegelt) enthaelt 8153/1 in der 2019er-Version weiterhin - im Widerspruch zu Aktualisierungsliste und amtlicher Online-Fassung, die den Code streichen (BfArM-Meldung, beads dq9)."
       }]
@@ -394,6 +394,16 @@ Diese ConceptMap dokumentiert die Morphologie-Code-Änderungen der ICD-O-3 von d
         "display" : "Phäochromozytom o.n.A.",
         "equivalence" : "equivalent",
         "comment" : "Umklassifizierung in der Zweiten Revision (ICD-O-3.2)."
+      }]
+    },
+    {
+      "code" : "8832/3",
+      "display" : "Dermatofibrosarkom o.n.A.",
+      "target" : [{
+        "code" : "8832/1",
+        "display" : "Dermatofibrosarcoma protuberans o.n.A.",
+        "equivalence" : "equivalent",
+        "comment" : "Umklassifizierung in der Zweiten Revision (ICD-O-3.2) auf /1 — ACHTUNG Code-Wiederverwendung: 8832/3 existiert in 2019 weiter, bezeichnet dort aber das fibrosarkomatöse Dermatofibrosarcoma protuberans. Ein 2014er 8832/3 darf daher nicht unverändert als 2019er 8832/3 gelesen werden."
       }]
     },
     {

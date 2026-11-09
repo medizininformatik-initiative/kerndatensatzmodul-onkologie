@@ -59,7 +59,7 @@ The following tables are generated at build time via SQL directly from this IG's
 | Relationship | Count |
 | source-is-narrower-than-target | `92` |
 | source-is-broader-than-target | `65` |
-| equivalent | `1352` |
+| equivalent | `1353` |
 
 **All mappings of the oBDS answer lists** (module-own code systems → SNOMED CT/LOINC; the year-versioned ATC/ICD-O transitions are described on [ATC](atc-terminologie.md) and [ICD-O](icd-o-terminologie.md)):
 

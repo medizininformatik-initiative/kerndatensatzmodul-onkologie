@@ -21,7 +21,7 @@ For ICD-O-3 there are two German revisions that occur side by side in legacy dat
 | First revision | 2014 | ICD-O-3.1 | widespread in cancer registry legacy data |
 | Second revision | 2019 | ICD-O-3.2 | current edition (publication completed 12/2020) |
 
-The second revision differs substantially (morphology axis: **124 new** and **56 removed** codes alongside approximately 1,080 unchanged ones; 55 verified against the server, plus 8153/1 per the official BfArM update list of 2021-01-29):
+The second revision differs substantially (morphology axis: **124 new** and **56 removed** codes alongside approximately 1,080 unchanged ones; 55 verified against the server, plus `8153/1` per the official BfArM update list of 2021-01-29, see the note below):
 
 * **New codes** mainly concern molecularly defined entities (e.g. `8023/3` NUT carcinoma, `8085/3`/`8086/3` HPV-positive/-negative squamous cell carcinoma).
 * **Re-assessed behaviour**: entities that the WHO uniformly classifies as malignant lost their `/0` and `/1` variants — among them GIST (`8936/1` → `8936/3`), phaeochromocytoma (`8700/0` → `8700/3`), thymomas type A–B3 (`/1` → `/3`) and the paragangliomas (`868x`/`869x`).
@@ -30,23 +30,32 @@ The second revision differs substantially (morphology axis: **124 new** and **56
 
 ### Transition of Legacy Data
 
-The ConceptMap **`mii-cm-onko-icdo3-transitions-2019`** documents all 55 morphology-axis transitions with their degree of equivalence (analogous to the ATC transition ConceptMaps of systemic therapy):
+The ConceptMap **`mii-cm-onko-icdo3-transitions-2019`** documents all 57 morphology-axis transitions (56 removals plus the code reuse of `8832/3`) with their degree of equivalence (analogous to the ATC transition ConceptMaps of systemic therapy):
 
 * `equivalent` — behaviour re-classifications and 1:1 merges,
 * `wider` — absorbed into a broader concept (e.g. refractory neutropenia/ thrombocytopenia → MDS with single lineage dysplasia `9980/3`),
 * `narrower` — uncertain `/1` concepts with several behaviour-specific successors (behaviour must be assigned case by case based on the findings),
 * `unmatched` — discontinued concepts with a coding hint in the comment.
+* **Code reuse**: `8832/3` survives as a code but no longer denotes dermatofibrosarcoma NOS (now `8832/1`); in 3.2 it means fibrosarcomatous dermatofibrosarcoma protuberans. A pure set difference misses such cases; the ConceptMap lists it explicitly.
 
 It is intended as a tool for ETL pipelines and the migration of cancer registry legacy data; the transition does not replace a case-by-case clinical review.
 
 ### Validation: Revisions Are Separate CodeSystem Resources
 
-On the MII terminology server, ICD-O-3 — like ICD-10-GM, OPS and ATC — is held as **separate CodeSystem resources per revision** under one canonical URL (`http://terminology.hl7.org/CodeSystem/icd-o-3`, versions `2014` and `2019`). Two rules follow from this:
+On the MII terminology server, ICD-O-3 — like ICD-10-GM, OPS and ATC — is held as **separate CodeSystem resources per revision** under one canonical URL (`http://terminology.hl7.org/CodeSystem/icd-o-3`, versions `2003`, `2014` and `2019`). Two rules follow from this:
 
 1. **ValueSet filters must be version-pinned.**With several revisions loaded, unpinned`descendent-of`filters fail because of version ambiguity —`$validate-code`with`systemVersion=2014`then incorrectly returned**not-in-valueset**even though the code exists in both revisions. All ICD-O ValueSets of this module therefore pin their includes.
 1. **Instances MUST state `coding.version`**(`"2003"`,`"2014"`or`"2019"`— the terminology server version string, not the oBDS key 31/32/33 nor BfArM`3.2`). The profiles constrain`coding.version`to`1..1 MS`on all ICD-O slices (topography, morphology extension, histology), mirroring the ICD-10-GM version in the base module: with three editions under one URL a code without version is ambiguous (e.g.`8153/1`exists only up to 2014), oBDS carries the version as a mandatory field anyway, and version-less`$validate-code`calls proved fragile on the terminology server. This is so that validation and analysis know the revision.
 
 The binding of the profiles points to the **union ValueSets** of both revisions: legacy data of the first revision (including the codes removed in 3.2) and current data therefore validate equally. For revision-specific checks (data quality, ETL) the per-year ValueSets are available.
+
+#### Known Discrepancy: 8153/1 Gastrinoma NOS
+
+The official BfArM update list (as of 2021-01-29) removes `8153/1` in the second revision (merged into `8153/3`). The ClaML file of the same date, the BfArM FHIR package derived from it (`bfarm.terminologien.icdo3` 2019.0.0) and consequently version `2019` on the MII terminology server still carry the code as an active concept. It is the only discrepancy between the update list and the ClaML (all 180 changes cross-checked on 2026-11-09). The transition ConceptMap follows the update list; a clarification has been requested from BfArM. Until then `8153/1` with `coding.version = "2019"` validates on the terminology server without complaint.
+
+#### The BfArM FHIR Package
+
+BfArM also publishes the second revision as the FHIR package `bfarm.terminologien.icdo3` (2019.0.0, dated 2025-07-30). It uses the same canonical URL but version **`3.2`** instead of `2019`. The base CodeSystem carries codes and hierarchy only, without displays; the German terms are designations in the supplement `https://terminologien.bfarm.de/fhir/CodeSystem/icdo-translation`. Its ValueSets filter with `descendent-of M` / `T` plus `classKind = category`, i.e. they exclude the blocks. Anyone using this package instead of the MII terminology server must map `coding.version = "3.2"` to `"2019"` (table above) and load the supplement, otherwise displays are missing.
 
 ### Technical Artifacts
 
@@ -56,7 +65,7 @@ The binding of the profiles points to the **union ValueSets** of both revisions:
 | [`mii-vs-onko-icdo3-topographie`](ValueSet-mii-vs-onko-icdo3-topographie.md) | Topography, union 2014 + 2019 | Profile binding |
 | [`mii-vs-onko-icdo3-morphologie-2014`](ValueSet-mii-vs-onko-icdo3-morphologie-2014.md)/[`-2019`](ValueSet-mii-vs-onko-icdo3-morphologie-2019.md) | Morphology, revision-specific | DQ checks, ETL, analysis per data stock |
 | [`mii-vs-onko-icdo3-topographie-2014`](ValueSet-mii-vs-onko-icdo3-topographie-2014.md)/[`-2019`](ValueSet-mii-vs-onko-icdo3-topographie-2019.md) | Topography, revision-specific | DQ checks, ETL |
-| [`mii-cm-onko-icdo3-transitions-2019`](ConceptMap-mii-cm-onko-icdo3-transitions-2019.md) | 56 morphology transitions 3.1 → 3.2 | Migration of legacy data |
+| [`mii-cm-onko-icdo3-transitions-2019`](ConceptMap-mii-cm-onko-icdo3-transitions-2019.md) | 57 morphology transitions 3.1 → 3.2 | Migration of legacy data |
 
 ### ICD-O-4: New Structure and Changes Compared with ICD-O-3.2
 

@@ -397,7 +397,7 @@ data:</p>
 </table>
 
 <p>The second revision differs substantially (morphology axis: <strong>124 new</strong> and
-<strong>56 removed</strong> codes alongside approximately 1,080 unchanged ones; 55 verified against the server, plus 8153/1 per the official BfArM update list of 2021-01-29):</p>
+<strong>56 removed</strong> codes alongside approximately 1,080 unchanged ones; 55 verified against the server, plus <code class="language-plaintext highlighter-rouge">8153/1</code> per the official BfArM update list of 2021-01-29, see the note below):</p>
 
 <ul>
   <li><strong>New codes</strong> mainly concern molecularly defined entities (e.g. <code class="language-plaintext highlighter-rouge">8023/3</code>
@@ -416,8 +416,8 @@ coded.</li>
 
 <h3 id="transition-of-legacy-data">Transition of Legacy Data</h3>
 
-<p>The ConceptMap <strong><code class="language-plaintext highlighter-rouge">mii-cm-onko-icdo3-transitions-2019</code></strong> documents all 55
-morphology-axis transitions with their degree of equivalence (analogous to the
+<p>The ConceptMap <strong><code class="language-plaintext highlighter-rouge">mii-cm-onko-icdo3-transitions-2019</code></strong> documents all 57
+morphology-axis transitions (56 removals plus the code reuse of <code class="language-plaintext highlighter-rouge">8832/3</code>) with their degree of equivalence (analogous to the
 ATC transition ConceptMaps of systemic therapy):</p>
 
 <ul>
@@ -427,6 +427,7 @@ thrombocytopenia → MDS with single lineage dysplasia <code class="language-pla
   <li><code class="language-plaintext highlighter-rouge">narrower</code> — uncertain <code class="language-plaintext highlighter-rouge">/1</code> concepts with several behaviour-specific
 successors (behaviour must be assigned case by case based on the findings),</li>
   <li><code class="language-plaintext highlighter-rouge">unmatched</code> — discontinued concepts with a coding hint in the comment.</li>
+  <li><strong>Code reuse</strong>: <code class="language-plaintext highlighter-rouge">8832/3</code> survives as a code but no longer denotes dermatofibrosarcoma NOS (now <code class="language-plaintext highlighter-rouge">8832/1</code>); in 3.2 it means fibrosarcomatous dermatofibrosarcoma protuberans. A pure set difference misses such cases; the ConceptMap lists it explicitly.</li>
 </ul>
 
 <p>It is intended as a tool for ETL pipelines and the migration of cancer registry
@@ -436,7 +437,7 @@ legacy data; the transition does not replace a case-by-case clinical review.</p>
 
 <p>On the MII terminology server, ICD-O-3 — like ICD-10-GM, OPS and ATC — is held
 as <strong>separate CodeSystem resources per revision</strong> under one canonical URL
-(<code class="language-plaintext highlighter-rouge">http://terminology.hl7.org/CodeSystem/icd-o-3</code>, versions <code class="language-plaintext highlighter-rouge">2014</code> and <code class="language-plaintext highlighter-rouge">2019</code>).
+(<code class="language-plaintext highlighter-rouge">http://terminology.hl7.org/CodeSystem/icd-o-3</code>, versions <code class="language-plaintext highlighter-rouge">2003</code>, <code class="language-plaintext highlighter-rouge">2014</code> and <code class="language-plaintext highlighter-rouge">2019</code>).
 Two rules follow from this:</p>
 
 <ol>
@@ -453,6 +454,14 @@ validation and analysis know the revision.</li>
 legacy data of the first revision (including the codes removed in 3.2) and
 current data therefore validate equally. For revision-specific checks (data
 quality, ETL) the per-year ValueSets are available.</p>
+
+<h4 id="known-discrepancy-81531-gastrinoma-nos">Known Discrepancy: <code class="language-plaintext highlighter-rouge">8153/1</code> Gastrinoma NOS</h4>
+
+<p>The official BfArM update list (as of 2021-01-29) removes <code class="language-plaintext highlighter-rouge">8153/1</code> in the second revision (merged into <code class="language-plaintext highlighter-rouge">8153/3</code>). The ClaML file of the same date, the BfArM FHIR package derived from it (<code class="language-plaintext highlighter-rouge">bfarm.terminologien.icdo3</code> 2019.0.0) and consequently version <code class="language-plaintext highlighter-rouge">2019</code> on the MII terminology server still carry the code as an active concept. It is the only discrepancy between the update list and the ClaML (all 180 changes cross-checked on 2026-11-09). The transition ConceptMap follows the update list; a clarification has been requested from BfArM. Until then <code class="language-plaintext highlighter-rouge">8153/1</code> with <code class="language-plaintext highlighter-rouge">coding.version = "2019"</code> validates on the terminology server without complaint.</p>
+
+<h4 id="the-bfarm-fhir-package">The BfArM FHIR Package</h4>
+
+<p>BfArM also publishes the second revision as the FHIR package <code class="language-plaintext highlighter-rouge">bfarm.terminologien.icdo3</code> (2019.0.0, dated 2025-07-30). It uses the same canonical URL but version <strong><code class="language-plaintext highlighter-rouge">3.2</code></strong> instead of <code class="language-plaintext highlighter-rouge">2019</code>. The base CodeSystem carries codes and hierarchy only, without displays; the German terms are designations in the supplement <code class="language-plaintext highlighter-rouge">https://terminologien.bfarm.de/fhir/CodeSystem/icdo-translation</code>. Its ValueSets filter with <code class="language-plaintext highlighter-rouge">descendent-of M</code> / <code class="language-plaintext highlighter-rouge">T</code> plus <code class="language-plaintext highlighter-rouge">classKind = category</code>, i.e. they exclude the blocks. Anyone using this package instead of the MII terminology server must map <code class="language-plaintext highlighter-rouge">coding.version = "3.2"</code> to <code class="language-plaintext highlighter-rouge">"2019"</code> (table above) and load the supplement, otherwise displays are missing.</p>
 
 <h3 id="technical-artifacts">Technical Artifacts</h3>
 
@@ -487,7 +496,7 @@ quality, ETL) the per-year ValueSets are available.</p>
     </tr>
     <tr>
       <td><a href="ConceptMap-mii-cm-onko-icdo3-transitions-2019.html"><code class="language-plaintext highlighter-rouge">mii-cm-onko-icdo3-transitions-2019</code></a></td>
-      <td>56 morphology transitions 3.1 → 3.2</td>
+      <td>57 morphology transitions 3.1 → 3.2</td>
       <td>Migration of legacy data</td>
     </tr>
   </tbody>
@@ -673,7 +682,7 @@ does not anticipate any ICD-O-4 artefacts.</li>
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.onkologie#2027.0.0-ballot.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Mon, Nov 9, 2026 10:36+0000">2026-11-09</span>
+          Generated <span title="Mon, Nov 9, 2026 13:03+0000">2026-11-09</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

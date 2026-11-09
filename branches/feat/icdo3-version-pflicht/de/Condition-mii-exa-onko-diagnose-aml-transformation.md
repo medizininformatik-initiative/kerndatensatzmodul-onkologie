@@ -18,9 +18,9 @@ Profile: [MII PR Onkologie Diagnose Primärtumor](StructureDefinition-mii-pr-onk
 
 **MII EX Onko Histology Morphology Behavior ICDO3**: Akute myeloische Leukämie mit myelodysplasieassoziierten Veränderungen
 
-**MII EX Onkologie Transformation von**: [Condition Myelodysplastisches Syndrom: Refraktäre Anämie mit Ringsideroblasten](Condition-mii-exa-onko-diagnose-mds.md)
+**MII EX Onkologie Transformation von**: [Condition Refraktäre Anämie mit Blastenüberschuss [RAEB]](Condition-mii-exa-onko-diagnose-mds.md)
 
-**Condition Occurred Following**: [Condition Myelodysplastisches Syndrom: Refraktäre Anämie mit Ringsideroblasten](Condition-mii-exa-onko-diagnose-mds.md)
+**Condition Occurred Following**: [Condition Refraktäre Anämie mit Blastenüberschuss [RAEB]](Condition-mii-exa-onko-diagnose-mds.md)
 
 **clinicalStatus**: Active
 

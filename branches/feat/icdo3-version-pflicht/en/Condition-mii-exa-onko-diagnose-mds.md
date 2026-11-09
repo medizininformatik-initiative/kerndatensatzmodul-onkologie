@@ -16,7 +16,7 @@ Profile: [MII PR Onkologie Diagnose Primärtumor](StructureDefinition-mii-pr-onk
 
 **Condition Asserted Date**: 2023-03-10
 
-**MII EX Onko Histology Morphology Behavior ICDO3**: Refraktäre Anämie mit Ringsideroblasten
+**MII EX Onko Histology Morphology Behavior ICDO3**: Myelodysplastisches Syndrom mit Blastenüberschuss
 
 **clinicalStatus**: Active
 
@@ -24,7 +24,7 @@ Profile: [MII PR Onkologie Diagnose Primärtumor](StructureDefinition-mii-pr-onk
 
 **category**: Neoplastic disease
 
-**code**: Myelodysplastisches Syndrom: Refraktäre Anämie mit Ringsideroblasten
+**code**: Refraktäre Anämie mit Blastenüberschuss [RAEB]
 
 **bodySite**: Knochenmark
 
@@ -54,7 +54,7 @@ Profile: [MII PR Onkologie Diagnose Primärtumor](StructureDefinition-mii-pr-onk
         "system" : "http://terminology.hl7.org/CodeSystem/icd-o-3",
         "version" : "2019",
         "code" : "9983/3",
-        "display" : "Refraktäre Anämie mit Ringsideroblasten"
+        "display" : "Myelodysplastisches Syndrom mit Blastenüberschuss"
       }]
     }
   }],
@@ -87,7 +87,7 @@ Profile: [MII PR Onkologie Diagnose Primärtumor](StructureDefinition-mii-pr-onk
       "system" : "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
       "version" : "2023",
       "code" : "D46.2",
-      "display" : "Myelodysplastisches Syndrom: Refraktäre Anämie mit Ringsideroblasten"
+      "display" : "Refraktäre Anämie mit Blastenüberschuss [RAEB]"
     }]
   },
   "bodySite" : [{

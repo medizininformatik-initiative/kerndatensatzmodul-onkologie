@@ -35,7 +35,7 @@ Every individual ConceptMap also renders as its own page under [Artifacts](artif
 | oBDS-CS therapie-stellungzurop | `5` | `5` | `0` | `0` |
 | oBDS-CS strahlentherapie-boost | `5` | `2` | `3` | `0` |
 | [MII PR Onkologie Diagnose Primärtumor](https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor) | `5` | `5` | `0` | `0` |
-| ICD-O-3 | `57` | `41` | `8` | `8` |
+| ICD-O-3 | `58` | `42` | `8` | `8` |
 | oBDS-CS krk-stoma-anzeichnung | `4` | `4` | `0` | `0` |
 | [MII PR Onkologie TNM-Klassifikation](https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-klassifikation) | `4` | `4` | `0` | `0` |
 | [Unified Code for Units of Measure (UCUM)](http://unitsofmeasure.org) | `4` | `4` | `0` | `0` |
@@ -1559,6 +1559,7 @@ Transition maps between annual/revision states — the tool for migrating legacy
 | ICD-O-3 | #8692/1 | equivalent | #8692/3 |
 | ICD-O-3 | #8693/1 | equivalent | #8693/3 |
 | ICD-O-3 | #8700/0 | equivalent | #8700/3 |
+| ICD-O-3 | #8832/3 | equivalent | #8832/1 |
 | ICD-O-3 | #8833/3 | equivalent | #8833/1 |
 | ICD-O-3 | #8841/1 | equivalent | #8841/0 |
 | ICD-O-3 | #8936/0 | equivalent | #8936/3 |
