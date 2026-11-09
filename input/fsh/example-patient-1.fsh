@@ -43,6 +43,7 @@ Description: "bestätigte Primärdiagnose"
 * code.coding  = $ICD10GM|2020#C48.2 "Bösartige Neubildung: Peritoneum, nicht näher bezeichnet"
 // 389026000 | Ascites (disorder) | 
 * bodySite.coding[icd-o-3] = $ICDO3#C56.9 "Ovar" // mögliche Lokalisation des Haupttumors? 
+* bodySite.coding[icd-o-3].version = "2019"
 * bodySite.coding[snomed-ct] = $SCT#15497006 "Ovary" 
 
 
@@ -62,6 +63,7 @@ Description: "Diagnose Primärtumor"
 * code.coding  = $ICD10GM|2020#C48.2 "Bösartige Neubildung: Peritoneum, nicht näher bezeichnet"
 // 389026000 | Ascites (disorder) | 
 * bodySite.coding[icd-o-3] = $ICDO3#C56.9 "Ovar" // mögliche Lokalisation des Haupttumors?
+* bodySite.coding[icd-o-3].version = "2019"
 * extension[Feststellungsdatum].valueDateTime = 2021-05-09 
 * bodySite.coding[snomed-ct] = $SCT#15497006 "Ovary" 
 

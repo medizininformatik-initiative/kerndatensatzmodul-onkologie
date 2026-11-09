@@ -20,6 +20,7 @@ Title: "MII EXA Onkologie Diagnose benignes Meningeom (Ursprungsdiagnose)"
 * subject = Reference(Patient/example)
 * recordedDate = "2022-09-05"
 * bodySite.coding[icd-o-3] = $ICDO3#C70.0 "Hirnhäute"
+* bodySite.coding[icd-o-3].version = "2019"
 * extension[Feststellungsdatum].valueDateTime = 2022-09-05
 
 Instance: mii-exa-onko-diagnose-meningeom-maligne-transformation
@@ -39,6 +40,7 @@ Title: "MII EXA Onkologie Diagnose malignes Meningeom (Transformation /0 → /3)
 * subject = Reference(Patient/example)
 * recordedDate = "2026-04-14"
 * bodySite.coding[icd-o-3] = $ICDO3#C70.0 "Hirnhäute"
+* bodySite.coding[icd-o-3].version = "2019"
 * extension[Feststellungsdatum].valueDateTime = 2026-04-14
 // Kausale Achse: Transformation aus dem registrierten benignen Meningeom
 * extension[transformationVon].valueReference = Reference(mii-exa-onko-diagnose-meningeom-benigne)

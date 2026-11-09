@@ -57,6 +57,7 @@ Description: "OBDS Beschreibung von Fernmetastasen (Lokalisation und Datum)"
     icd-o-3 0..1 MS and
     snomed 0..1 MS
 * bodySite.coding[icd-o-3].system = $ICDO3
+* bodySite.coding[icd-o-3].version 1.. MS
 * bodySite.coding[icd-o-3] from mii-vs-onko-icdo3-topographie (extensible)
 * bodySite.coding[snomed].system = $SCT
 * bodySite.coding[snomed] from mii-vs-onko-koerperstruktur-sct (extensible)

@@ -69,7 +69,7 @@ Two rules follow from this:
    `$validate-code` with `systemVersion=2014` then incorrectly returned
    *not-in-valueset* even though the code exists in both revisions. All ICD-O
    ValueSets of this module therefore pin their includes.
-2. **Instances SHOULD state `coding.version`** (`"2014"` or `"2019"`) so that
+2. **Instances MUST state `coding.version`** (`"2003"`, `"2014"` or `"2019"` — the terminology server version string, not the oBDS key 31/32/33 nor BfArM `3.2`). The profiles constrain `coding.version` to `1..1 MS` on all ICD-O slices (topography, morphology extension, histology), mirroring the ICD-10-GM version in the base module: with three editions under one URL a code without version is ambiguous (e.g. `8153/1` exists only up to 2014), oBDS carries the version as a mandatory field anyway, and version-less `$validate-code` calls proved fragile on the terminology server. This is so that
    validation and analysis know the revision.
 
 The binding of the profiles points to the **union ValueSets** of both revisions:

@@ -21,10 +21,11 @@ Primärtumor) und die Morphologie über die Histologie-Profile bzw. die Extensio
 Für die ICD-O-3 existieren zwei deutsche Revisionsstände, die in Bestandsdaten
 nebeneinander vorkommen:
 
-| Revision | Deutsche Ausgabe | Entspricht | Status |
-|---|---|---|---|
-| Erste Revision | 2014 | ICD-O-3.1 | in Krebsregister-Bestandsdaten weit verbreitet |
-| Zweite Revision | 2019 | ICD-O-3.2 | aktuelle Ausgabe (Publikation abgeschlossen 12/2020) |
+| Revision | Deutsche Ausgabe | Entspricht | oBDS `ICD_O_Version` | Status |
+|---|---|---|---|---|
+| Erstausgabe | 2003 | ICD-O-3 (2000) | `31` | Altdaten vor 2014 (seit 11/2026 auf dem MII-Terminologieserver, Ballot-Kommentar HDB-1005) |
+| Erste Revision | 2014 | ICD-O-3.1 | `32` | in Krebsregister-Bestandsdaten weit verbreitet |
+| Zweite Revision | 2019 | ICD-O-3.2 | `33` | aktuelle Ausgabe (Publikation abgeschlossen 12/2020) |
 
 Die Zweite Revision unterscheidet sich substanziell (Morphologie-Achse:
 **124 neue** und **55 gestrichene** Codes bei ~1.080 unveränderten):
@@ -62,15 +63,22 @@ fachliche Einzelfallprüfung.
 Auf dem MII-Terminologieserver liegt die ICD-O-3 — wie ICD-10-GM, OPS und ATC —
 als **getrennte CodeSystem-Ressourcen je Revisionsstand** unter einer
 kanonischen URL (`http://terminology.hl7.org/CodeSystem/icd-o-3`, Versionen
-`2014` und `2019`). Daraus folgen zwei Regeln:
+`2003`, `2014` und `2019`). Daraus folgen zwei Regeln:
 
 1. **ValueSet-Filter müssen versions-gepinnt sein.** Ungepinnte
    `descendent-of`-Filter scheitern bei mehreren geladenen Revisionsständen an
    der Versions-Ambiguität — `$validate-code` mit `systemVersion=2014` lieferte
    dann fälschlich *not-in-valueset*, obwohl der Code in beiden Revisionen
    existiert. Alle ICD-O-ValueSets dieses Moduls pinnen daher ihre Includes.
-2. **Instanzen SOLLEN `coding.version` angeben** (`"2014"` bzw. `"2019"`),
-   damit Validierung und Auswertung den Revisionsstand kennen.
+2. **Instanzen MÜSSEN `coding.version` angeben** (`"2003"`, `"2014"` oder
+   `"2019"`, der Versionsstring des Terminologieservers, nicht der
+   oBDS-Schlüssel 31/32/33 und nicht das BfArM-`3.2`). Die Profile setzen
+   `coding.version` an allen ICD-O-Slices (Topographie, Morphologie-Extension,
+   Histologie) auf `1..1 MS`, analog zur ICD-10-GM-Version im Basismodul.
+   Grund: Mit drei Editionen unter einer URL ist ein Code ohne Version nicht
+   eindeutig (z. B. `8153/1` nur bis 2014), oBDS liefert die Version ohnehin als
+   Pflichtfeld, und versionslose `$validate-code`-Aufrufe haben sich auf dem
+   Terminologieserver als fragil erwiesen.
 
 Das Binding der Profile zeigt auf die **Union-ValueSets** beider Revisionen:
 Bestandsdaten der Ersten Revision (einschließlich der in 3.2 gestrichenen

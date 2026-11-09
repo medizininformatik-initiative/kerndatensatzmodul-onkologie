@@ -15,4 +15,5 @@ Description: "Extension zur Erfassung von ICDO3 da Morphology nicht als Conditio
 * valueCodeableConcept.coding.system 1..1
 * valueCodeableConcept.coding.system = $ICDO3 (exactly)
 * valueCodeableConcept.coding.code 1..1
+* valueCodeableConcept.coding.version 1..1 MS
 * valueCodeableConcept.text MS

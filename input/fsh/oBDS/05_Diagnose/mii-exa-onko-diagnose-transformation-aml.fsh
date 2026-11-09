@@ -19,6 +19,7 @@ Title: "MII EXA Onkologie Diagnose MDS (Ursprungsdiagnose)"
 * subject = Reference(Patient/example)
 * recordedDate = "2023-03-10"
 * bodySite.coding[icd-o-3] = $ICDO3#C42.1 "Knochenmark"
+* bodySite.coding[icd-o-3].version = "2019"
 * extension[Feststellungsdatum].valueDateTime = 2023-03-10
 
 Instance: mii-exa-onko-diagnose-aml-transformation
@@ -38,6 +39,7 @@ Title: "MII EXA Onkologie Diagnose sekundäre AML (Transformation aus MDS)"
 * subject = Reference(Patient/example)
 * recordedDate = "2025-06-02"
 * bodySite.coding[icd-o-3] = $ICDO3#C42.1 "Knochenmark"
+* bodySite.coding[icd-o-3].version = "2019"
 * extension[Feststellungsdatum].valueDateTime = 2025-06-02
 // Kausale Achse: Transformation aus der registrierten MDS-Diagnose
 * extension[transformationVon].valueReference = Reference(mii-exa-onko-diagnose-mds)

@@ -22,6 +22,7 @@ Title: "MII EXA Onkologie Diagnose t-AML nach Chemotherapie (dueTo)"
 * subject = Reference(Patient/example)
 * recordedDate = "2026-03-18"
 * bodySite.coding[icd-o-3] = $ICDO3#C42.1 "Knochenmark"
+* bodySite.coding[icd-o-3].version = "2019"
 * extension[Feststellungsdatum].valueDateTime = 2026-03-18
 // Verursachung: alkylanzhaltige Chemotherapie (Cyclophosphamid)
 * extension[dueTo].valueReference = Reference(mii-exa-onko-systemische-therapie-medikation1)
@@ -45,6 +46,7 @@ Title: "MII EXA Onkologie Diagnose radiogenes Angiosarkom nach Strahlentherapie 
 * subject = Reference(Patient/example)
 * recordedDate = "2026-07-01"
 * bodySite.coding[icd-o-3] = $ICDO3#C49.3 "Bindegewebe des Thorax"
+* bodySite.coding[icd-o-3].version = "2019"
 * extension[Feststellungsdatum].valueDateTime = 2026-07-01
 // Verursachung: Strahlentherapie im früheren Bestrahlungsfeld
 * extension[dueTo].valueReference = Reference(mii-exa-onko-strahlentherapie-strahlentherapie-1)

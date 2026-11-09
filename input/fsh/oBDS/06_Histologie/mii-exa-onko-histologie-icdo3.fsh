@@ -5,7 +5,9 @@ Usage: #example
 * status = #final
 * code.coding = $LNC#59847-4
 * valueCodeableConcept.coding = $ICDO3#8500/3 "Infiltrating duct carcinoma, NOS"
+* valueCodeableConcept.coding.version = "2019"
 * valueCodeableConcept.text = "Invasives duktales Karzinom o.n.A."
 * subject = Reference(Patient/example)
 * specimen = Reference(mii-exa-onko-specimen-1)
 * bodySite.coding = $ICDO3#C50.4 "Oberer äußerer Quadrant der Brust"
+* bodySite.coding.version = "2019"
