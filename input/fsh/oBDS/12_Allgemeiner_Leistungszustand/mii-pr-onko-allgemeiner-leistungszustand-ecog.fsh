@@ -31,15 +31,24 @@ Description: "OBDS Beschreibung des allgemeines Leistungszustandes nach ECOG"
 * code.coding[loinc].system 1..
 * code.coding[loinc].code 1..
 
-* value[x] 1..1 MS
+// HDB-1001: value 0..1 + dataAbsentReason, damit "nicht anwendbar" (z. B.
+// KDK notApplicable) ausdrückbar ist; genau eines von beiden (Invariante).
+* obeys onko-leistungszustand-wert-oder-grund and onko-ecog-obds-oder-verstorben
+* value[x] 0..1 MS
 * value[x] only CodeableConcept
+* dataAbsentReason MS
+* insert Label(dataAbsentReason, Grund für fehlenden Wert, Nur wenn kein Wert angegeben ist. Code not-applicable bedeutet: die ECOG-Skala ist für diesen Patienten nicht anwendbar; entspricht KDK notApplicable im Modellvorhaben Genomsequenzierung. Ein unbekannter Leistungszustand ist dagegen als oBDS-Wert U zu kodieren)
+* insert Translation(dataAbsentReason ^short, de-DE, Grund für fehlenden Wert)
 * valueCodeableConcept.coding MS
 * valueCodeableConcept.coding ^slicing.discriminator.type = #pattern
 * valueCodeableConcept.coding ^slicing.discriminator.path = "system"
 * valueCodeableConcept.coding ^slicing.rules = #open
 * valueCodeableConcept.coding contains
-    obds 1..1 MS and
+    obds 0..1 MS and
     loinc 0..* MS
+// obds 0..1 statt 1..1: ECOG 5 (verstorben) existiert nur im LOINC-Answer-Set
+// (LA9627-6); die Invariante onko-ecog-obds-oder-verstorben erzwingt den
+// oBDS-Code in allen anderen Fällen.
 * valueCodeableConcept.coding[obds] from https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-allgemeiner-leistungszustand-ecog
 * valueCodeableConcept.coding[obds].system 1.. MS
 * valueCodeableConcept.coding[obds].system = $mii-cs-onko-allgemeiner-leistungszustand-ecog (exactly)
@@ -48,9 +57,9 @@ Description: "OBDS Beschreibung des allgemeines Leistungszustandes nach ECOG"
 * valueCodeableConcept.coding[loinc].system 1..
 * valueCodeableConcept.coding[loinc].system = $LNC (exactly)
 * valueCodeableConcept.coding[loinc].code 1..
-* insert Label(valueCodeableConcept.coding, Leistungszustand nach ECOG, Leistungszustand nach ECOG Stufen 0-4 gemäß 12.1 oBDS 2021 )
+* insert Label(valueCodeableConcept.coding, Leistungszustand nach ECOG, Leistungszustand nach ECOG Stufen 0-4 und U gemäß 12.1 oBDS; ECOG 5 verstorben nur als LOINC LA9627-6 )
 * insert Translation(valueCodeableConcept.coding ^short, de-DE, Leistungszustand nach ECOG )
-* insert Translation(valueCodeableConcept.coding ^definition, de-DE, Leistungszustand nach ECOG Stufen 0-4 gemäß 12.1 oBDS 2021)
+* insert Translation(valueCodeableConcept.coding ^definition, de-DE, Leistungszustand nach ECOG Stufen 0-4 und U gemäß 12.1 oBDS; ECOG 5 verstorben nur als LOINC LA9627-6)
 
 
 

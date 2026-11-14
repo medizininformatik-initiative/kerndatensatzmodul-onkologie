@@ -32,6 +32,10 @@ Die oBDS-Mappings sind gegenüber der klinischen Literatur um ca. 10-20% nach un
 
 Implementierer sollten sich dieser Unterschiede bewusst sein, insbesondere bei der Konversion zwischen Karnofsky und ECOG oder beim Austausch mit internationalen Systemen, die möglicherweise andere Konversionstabellen verwenden.
 
+### Fehlende Werte
+
+Analog zum ECOG-Profil (Ballot HDB-1001): `value[x]` ist 0..1, `dataAbsentReason` Must-Support, genau eines von beiden muss vorhanden sein (Invariante `onko-leistungszustand-wert-oder-grund`). Ein unbekannter Leistungszustand ist als oBDS-Wert `U` zu kodieren; `dataAbsentReason = not-applicable` ist für den Fall vorgesehen, dass die Karnofsky-Skala nicht anwendbar ist.
+
 ### LOINC-Unterstützung für internationale Interoperabilität
 
 Das Profil unterstützt optionale LOINC-Kodierung zusätzlich zur verpflichtenden oBDS-Kodierung:

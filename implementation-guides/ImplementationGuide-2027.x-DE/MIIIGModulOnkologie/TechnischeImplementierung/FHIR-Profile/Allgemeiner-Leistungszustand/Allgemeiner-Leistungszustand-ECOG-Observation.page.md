@@ -40,12 +40,25 @@ Die oBDS-Mappings sind gegenüber der klinischen Literatur um ca. 10-20% nach un
 
 Implementierer sollten sich dieser Unterschiede bewusst sein, insbesondere bei der Konversion zwischen ECOG und Karnofsky oder beim Austausch mit internationalen Systemen, die möglicherweise andere Konversionstabellen verwenden.
 
+### Fehlende Werte: ECOG 5 (verstorben) und „nicht anwendbar"
+
+Das oBDS kennt die ECOG-Stufen 0–4 und `U` (Unbekannt). Zwei Fälle aus dem Modellvorhaben Genomsequenzierung (KDK Onkologie, Enum `0 | 1 | 2 | 3 | 4 | 5 | unknown | notApplicable`) sind damit nicht abgedeckt (Ballot HDB-1001). Festlegung:
+
+| Fall | Abbildung |
+|---|---|
+| ECOG 0–4 | `valueCodeableConcept.coding[obds]` (Pflicht), optional zusätzlich `coding[loinc]` |
+| unbekannt (`U`, KDK `unknown`) | `valueCodeableConcept.coding[obds] = U` — ein Wert, **kein** `dataAbsentReason` |
+| ECOG 5, verstorben (KDK `5`) | nur `valueCodeableConcept.coding[loinc] = LA9627-6 "Dead"`; der oBDS-Slice entfällt, weil das oBDS den Wert nicht kennt (Invariante `onko-ecog-obds-oder-verstorben`). Der Tod selbst gehört zusätzlich in das Profil Tod (oBDS 20) |
+| Skala nicht anwendbar (KDK `notApplicable`) | kein `value`, `dataAbsentReason = not-applicable` (Invariante `onko-leistungszustand-wert-oder-grund`: genau eines von beiden) |
+
+`value[x]` ist deshalb 0..1 (bis v2027.0.0-ballot.1: 1..1), `dataAbsentReason` ist Must-Support. Die Zuordnung ist in beide Richtungen eindeutig; das KDK-Schema (BfArM, Stand 1.7.1) definiert `notApplicable` nicht näher.
+
 ### LOINC-Unterstützung für internationale Interoperabilität
 
 Das Profil unterstützt optionale LOINC-Kodierung zusätzlich zur verpflichtenden oBDS-Kodierung:
 
 - **`code.coding`**: Neben dem verpflichtenden SNOMED CT Code (423740007) kann optional der LOINC Code 89262-0 angegeben werden
-- **`valueCodeableConcept.coding`**: Neben der verpflichtenden oBDS-Kodierung können optional LOINC Answer List Codes angegeben werden
+- **`valueCodeableConcept.coding`**: Neben der oBDS-Kodierung (Pflicht außer bei ECOG 5, siehe oben) können optional LOINC Answer List Codes angegeben werden
 
 Zur Übersetzung zwischen oBDS- und LOINC-Codes steht folgende ConceptMap zur Verfügung:
 
@@ -190,5 +203,17 @@ Folgende Suchparameter sind für das Modul Onkologie relevant, auch in Kombinati
 **Beispiele**
 
 {{json:mii-exa-onko-allgemeiner-leistungszustand-ecog-1}}
+
+---
+
+Beispiel: ECOG 5 (verstorben), nur LOINC
+
+{{json:mii-exa-onko-allgemeiner-leistungszustand-ecog-verstorben}}
+
+---
+
+Beispiel: Skala nicht anwendbar, dataAbsentReason
+
+{{json:mii-exa-onko-allgemeiner-leistungszustand-ecog-nicht-anwendbar}}
 
 ---
