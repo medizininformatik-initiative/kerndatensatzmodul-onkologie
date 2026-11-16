@@ -1,84 +1,85 @@
-# Agent Instructions
+<!-- agents-md: schema 1 | updated 2026-11-16 | checker: ~/.claude/skills/agent-instructions-check -->
+# AGENTS.md — kerndatensatzmodul-onkologie
 
-This project uses **bd** (beads) for issue tracking. Run `bd prime` for full workflow context.
+FHIR R4 Implementation Guide of the MII Kerndatensatz module Onkologie: profiles for oBDS
+(Onkologischer Basisdatensatz) data, built with SUSHI and the HL7 IG Publisher on the MII KDS
+module template, and additionally baked into a Simplifier package. Before touching profiles,
+understand that every artifact is traced to an oBDS chapter and to the logical model, and that
+naming, versions and CRMI metadata are enforced by CI regexes, not by convention alone.
 
-## Quick Reference
-
-```bash
-bd ready              # Find available work
-bd show <id>          # View issue details
-bd update <id> --claim  # Claim work atomically
-bd close <id>         # Complete work
-bd dolt push          # Push beads data to remote
-```
-
-## Non-Interactive Shell Commands
-
-**ALWAYS use non-interactive flags** with file operations to avoid hanging on confirmation prompts.
-
-Shell commands like `cp`, `mv`, and `rm` may be aliased to include `-i` (interactive) mode on some systems, causing the agent to hang indefinitely waiting for y/n input.
-
-**Use these forms instead:**
-```bash
-# Force overwrite without prompting
-cp -f source dest           # NOT: cp source dest
-mv -f source dest           # NOT: mv source dest
-rm -f file                  # NOT: rm file
-
-# For recursive operations
-rm -rf directory            # NOT: rm -r directory
-cp -rf source dest          # NOT: cp -r source dest
-```
-
-**Other commands that may prompt:**
-- `scp` - use `-o BatchMode=yes` for non-interactive
-- `ssh` - use `-o BatchMode=yes` to fail instead of prompting
-- `apt-get` - use `-y` flag
-- `brew` - use `HOMEBREW_NO_AUTO_UPDATE=1` env var
-
-<!-- BEGIN BEADS INTEGRATION v:1 profile:minimal hash:ca08a54f -->
-## Beads Issue Tracker
-
-This project uses **bd (beads)** for issue tracking. Run `bd prime` to see full workflow context and commands.
-
-### Quick Reference
+## Build, test, validate
 
 ```bash
-bd ready              # Find available work
-bd show <id>          # View issue details
-bd update <id> --claim  # Claim work
-bd close <id>         # Complete work
+sushi .                                   # compile FSH -> fsh-generated/ (SUSHI 3.20.1 = CI pin)
+./_updatePublisher.sh && ./_genonce.sh    # full IG build -> output/qa.html (publisher.jar into input-cache/)
+node --test scripts/*.test.mjs            # script unit tests (what convention-check.yml runs)
+node scripts/convention-check.mjs         # MII metadata contract; M6 currently fails on the -ballot.1 version
+bash scripts/language-model-check.sh      # EN-default / DE-translation language guard
+python3 .claude/scripts/analyze_validation.py validation.json   # categorise a downloaded CI validation.json
+bash .claude/scripts/qa_filter.sh         # dev-preview QA errors minus the known SU-TermServ noise
+gh run list --workflow="CI (FHIR Validation & Release)" --limit 5   # main.yml; artifact name: validation-output
 ```
 
-### Rules
+CI in `.github/workflows/`: main.yml runs the MII .NET QC plus an inlined Java validator over
+`fsh-generated/resources/` with the dependencies from `package.json`; validation.yml calls the
+MII reusable workflows; ig-publisher.yml deploys branch previews; module-release.yml reacts to
+tags; go-publish.yml is the manual formal publication. Terminology comes from SU-TermServ
+(mTLS client certificate) and falls back to tx.fhir.org without one.
 
-- Use `bd` for ALL task tracking — do NOT use TodoWrite, TaskCreate, or markdown TODO lists
-- Run `bd prime` for detailed command reference and session close protocol
-- Use `bd remember` for persistent knowledge — do NOT use MEMORY.md files
+## Conventions
 
-## Session Completion
+- Names `MII_PR_Onko_<Concept>`, ids `mii-pr-onko-<concept>`, titles `MII PR Onkologie <Name>`;
+  type prefixes pr|ex|lm|vs|cs|cm|sm|ns|sp|cps|od|ig|exa|lib. The regexes live in `qc/custom.rules.yaml`.
+- Canonical URLs: `https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/<Type>/<id>`.
+- Files are lowercase `mii-<type>-onko-<concept>.fsh`, grouped by oBDS chapter under
+  `input/fsh/oBDS/` (05_Diagnose, 08_TNMKlassifikation, ...); organ-specific modules and
+  cross-cutting terminologies have their own folders there. The template layout described in
+  `input/fsh/README.md` (profiles/, extensions/, ...) is not what this repo uses.
+- Every conformance resource inserts `PR_CS_VS_Version`, `Publisher`, the `OnkoCRMI<Type>` ruleset
+  and `Translation(...)` for de-DE; the rulesets are in `input/fsh/rulesets/`.
+- Logical model and profiles must agree: `input/fsh/mii-lm-onko.fsh` (MII_LM_Onko) and the PlantUML
+  models in `input/images-source/` are the domain view; each backbone or object maps to one profile,
+  each attribute to an element or extension, each relationship to a `Reference()` constraint.
+- Data types: oBDS Code -> coded slice with ValueSet binding; Datum -> date/dateTime; required oBDS
+  fields -> 1..1 or 1..*. Core oBDS elements and slicing discriminators are Must Support.
+- A new profile needs an example instance, an intro page in `input/intro-notes/`, and a mention on
+  the EN page in `input/pagecontent/` plus its DE mirror in `input/translations/de/pagecontent/`.
+- Versions are MII CalVer (2027.0.0, -ballot.1, -rc.1); one bump touches `sushi-config.yaml`
+  (version, package-source, date, approvalDate), `package.json`, `publication-request.json`,
+  `input/fsh/rulesets/version.fsh` and the allowed version list in `qc/custom.rules.yaml`.
+- Domain vocabulary (Tumor, Rezidiv, Morphologiebestimmung, Präfix, ...) is fixed in `CONTEXT.md`;
+  use those terms in descriptions and pages.
+- Git: Conventional Commits; feature, change and fix branches off `dev`, squash-merged into `dev`,
+  `dev` to `main` as a merge commit; release branches are named release/v<version>.
 
-**When ending a work session**, you MUST complete ALL steps below. Work is NOT complete until `git push` succeeds.
+## Guardrails
 
-**MANDATORY WORKFLOW:**
+- `advisor.json` takes only `MessageID@path` suppressions. A free-text rule crashes validator_cli
+  with a NullPointerException and silently killed every CI run from March to August 2026.
+- `validation.json` and `validation.html` are committed QA files. When the validator crashes, CI
+  uploads them unchanged; before trusting a run compare the artifact MD5 and require txlog.html.
+- Never float a version (#current, #latest, #dev) in `ig.ini` or a dependency; the convention
+  check fails, and a rebuild years later must reproduce the same site.
+- Do not edit the vendored `ig-template/` or the catalog skills in `skills/`; CI fails on drift.
+  Fix upstream and bump the pin with the sync script in `scripts/`.
+- Published packages are permanent. Never publish to Simplifier or the registry unless asked.
+- Example instances contain synthetic data only; never real or realistic patient data.
+- Do not rename IG folders such as MIIIGModulOnkologie; it creates unreviewable diffs.
+- `fsh-generated/`, `output/`, `.validation-history/` and `CLAUDE.md` are gitignored; do not force-add.
 
-1. **File issues for remaining work** - Create issues for anything that needs follow-up
-2. **Run quality gates** (if code changed) - Tests, linters, builds
-3. **Update issue status** - Close finished work, update in-progress items
-4. **PUSH TO REMOTE** - This is MANDATORY:
-   ```bash
-   git pull --rebase
-   bd dolt push
-   git push
-   git status  # MUST show "up to date with origin"
-   ```
-5. **Clean up** - Clear stashes, prune remote branches
-6. **Verify** - All changes committed AND pushed
-7. **Hand off** - Provide context for next session
+## Issue tracking
 
-**CRITICAL RULES:**
-- Work is NOT complete until `git push` succeeds
-- NEVER stop before pushing - that leaves work stranded locally
-- NEVER say "ready to push when you are" - YOU must push
-- If push fails, resolve and retry until it succeeds
-<!-- END BEADS INTEGRATION -->
+Issue tracking: **beads** (`.beads/` present; the session hook runs `bd prime`; follow the `beads-workflow` skill).
+
+## Where to look
+
+- Profiles, extensions, examples by oBDS chapter: `input/fsh/oBDS/`; invariants: `input/fsh/invariants/`.
+- Logical model: `input/fsh/mii-lm-onko.fsh`; UML sources: `input/images-source/`.
+- IG pages: `input/pagecontent/` (EN), `input/translations/de/pagecontent/` (DE); legacy Simplifier
+  guide with the maintained release notes: `implementation-guides/ImplementationGuide-2027.x-DE/`.
+- Template documentation: `docs/README.md`, `docs/release.md`, `docs/workflows.md`, `docs/recipes/`.
+- Agent notes (parked detail): `docs/agent-notes/` holds naming tables, model-to-profile mapping
+  rules, the validation workflow, and release and publishing history.
+- Validation configuration: `advisor.json`, `qc/custom.rules.yaml`, profile test cases in `tests/`.
+- Project skills: `.claude/skills/`; slash commands: `.claude/commands/`; Firely Bake pipeline:
+  `package.bake.yaml`.
