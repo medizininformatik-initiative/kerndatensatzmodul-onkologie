@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-systemische-therapie | *Version*:2027.0.0-ballot.1 |
-| Active as of 2026-11-04 | *Computable Name*:MII_PR_Onko_Systemische_Therapie |
+| Active as of 2026-11-16 | *Computable Name*:MII_PR_Onko_Systemische_Therapie |
 
  
 Systemische Therapie. Dieses Profil beschreibt eine Systemische Therapie für den oBDS. Da die Granularität der Anforderungen des oBDS nicht deckungsgleich mit den FHIR-Profilen für Medikation sind, wurde die Systemische Therapie als Prozedur umgesetzt 
@@ -264,7 +264,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-syste
   "title" : "MII PR Onkologie Systemische Therapie",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-11-04T08:17:56+00:00",
+  "date" : "2026-11-16T17:02:30+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -513,6 +513,9 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-syste
       },
       "min" : 0,
       "max" : "1",
+      "patternCoding" : {
+        "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ"
+      },
       "binding" : {
         "strength" : "required",
         "valueSet" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-art"

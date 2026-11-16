@@ -94,7 +94,7 @@ Patient received 6 cycles of FOLFOX4. Treatment modified after cycle 6 due to se
       "display" : "Nicht komplexe Chemotherapie"
     },
     {
-      "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-art",
+      "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ",
       "code" : "CH",
       "display" : "Chemotherapie"
     }]

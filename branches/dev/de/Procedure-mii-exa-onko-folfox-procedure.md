@@ -95,7 +95,7 @@ Patient received 12 cycles of adjuvant FOLFOX4 chemotherapy for stage III colon 
       "display" : "Nicht komplexe Chemotherapie"
     },
     {
-      "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-art",
+      "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ",
       "code" : "CH",
       "display" : "Chemotherapie"
     }]

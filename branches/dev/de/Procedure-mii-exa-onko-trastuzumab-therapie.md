@@ -66,7 +66,7 @@ Profile: [MII PR Onkologie Systemische Therapie](StructureDefinition-mii-pr-onko
       "display" : "Applikation von Medikamenten, Liste 1: Trastuzumab, intravenös"
     },
     {
-      "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-art",
+      "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ",
       "code" : "ZS"
     }],
     "text" : "Trastuzumab"
