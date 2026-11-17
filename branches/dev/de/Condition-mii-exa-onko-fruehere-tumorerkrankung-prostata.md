@@ -90,6 +90,7 @@ Z.n. radikaler Prostatektomie 2018, PSA aktuell <0.1 ng/ml
   "bodySite" : [{
     "coding" : [{
       "system" : "http://terminology.hl7.org/CodeSystem/icd-o-3",
+      "version" : "2019",
       "code" : "C61.9",
       "display" : "Prostata"
     }]

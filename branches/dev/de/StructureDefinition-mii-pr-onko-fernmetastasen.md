@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fernmetastasen | *Version*:2027.0.0-ballot.1 |
-| Active Stand: 2026-11-16 | *Maschinenlesbarer Name*:MII_PR_Onko_Fernmetastasen |
+| Active Stand: 2026-11-17 | *Maschinenlesbarer Name*:MII_PR_Onko_Fernmetastasen |
 
  
 OBDS Beschreibung von Fernmetastasen (Lokalisation und Datum) 
@@ -63,8 +63,8 @@ Diese Struktur ist abgeleitet von [Observation](http://hl7.org/fhir/R4/observati
 
 ** Summary **
 
-Mandatory: 3 elements(2 nested mandatory elements)
- Must-Support: 13 elements
+Mandatory: 3 elements(3 nested mandatory elements)
+ Must-Support: 14 elements
 
 **Structures**
 
@@ -100,8 +100,8 @@ Diese Struktur ist abgeleitet von [Observation](http://hl7.org/fhir/R4/observati
 
 ** Summary **
 
-Mandatory: 3 elements(2 nested mandatory elements)
- Must-Support: 13 elements
+Mandatory: 3 elements(3 nested mandatory elements)
+ Must-Support: 14 elements
 
 **Structures**
 
@@ -260,7 +260,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   "title" : "MII PR Onkologie Fernmetastasen",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-11-16T17:02:30+00:00",
+  "date" : "2026-11-17T12:46:30+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -504,6 +504,12 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
       "path" : "Observation.bodySite.coding.system",
       "min" : 1,
       "patternUri" : "http://terminology.hl7.org/CodeSystem/icd-o-3"
+    },
+    {
+      "id" : "Observation.bodySite.coding:icd-o-3.version",
+      "path" : "Observation.bodySite.coding.version",
+      "min" : 1,
+      "mustSupport" : true
     },
     {
       "id" : "Observation.bodySite.coding:snomed",

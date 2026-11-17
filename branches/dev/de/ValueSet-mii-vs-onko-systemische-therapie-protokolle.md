@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-systemische-therapie-protokolle | *Version*:2027.0.0-ballot.1 |
-| Active Stand: 2026-11-16 | *Maschinenlesbarer Name*:MII_VS_Onko_Systemische_Therapie_Protokolle |
+| Active Stand: 2026-11-17 | *Maschinenlesbarer Name*:MII_VS_Onko_Systemische_Therapie_Protokolle |
 
  
 oBDS-spezifisches ValueSet für Protokolle systemischer Therapien 
@@ -172,7 +172,7 @@ oBDS-spezifisches ValueSet für Protokolle systemischer Therapien
   "title" : "MII VS Onkologie Systemische Therapie Protokolle",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-11-16T17:02:30+00:00",
+  "date" : "2026-11-17T12:46:30+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

@@ -62,6 +62,12 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
+    <sch:title>f:Condition/f:bodySite/f:coding</sch:title>
+    <sch:rule context="f:Condition/f:bodySite/f:coding">
+      <sch:assert test="count(f:version) &gt;= 1">version: minimum cardinality of 'version' is 1</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
     <sch:title>f:Condition/f:onset[x]/f:extension 1</sch:title>
     <sch:rule context="f:Condition/f:onset[x]/f:extension">
       <sch:assert test="count(f:url) &gt;= 1">url: minimum cardinality of 'url' is 1</sch:assert>

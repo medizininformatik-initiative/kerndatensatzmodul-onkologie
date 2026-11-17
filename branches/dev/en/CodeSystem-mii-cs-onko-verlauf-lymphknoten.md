@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-verlauf-lymphknoten | *Version*:2027.0.0-ballot.1 |
-| Active as of 2026-11-16 | *Computable Name*:MII_CS_Onko_Verlauf_Lymphknoten |
+| Active as of 2026-11-17 | *Computable Name*:MII_CS_Onko_Verlauf_Lymphknoten |
 
  
 oBDS-spezifisches Codesystem für die Beurteilung von Lymphknoten im Behandlungsverlauf 
@@ -160,7 +160,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "MII CS Onkologie Verlauf Lymphknoten",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-11-16T17:02:30+00:00",
+  "date" : "2026-11-17T12:46:30+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

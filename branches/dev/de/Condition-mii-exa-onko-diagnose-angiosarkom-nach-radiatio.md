@@ -28,7 +28,7 @@ Profile: [MII PR Onkologie Diagnose Primärtumor](StructureDefinition-mii-pr-onk
 
 **code**: Bösartige Neubildung: Bindegewebe und andere Weichteilgewebe des Thorax
 
-**bodySite**: Bindegewebe des Thorax
+**bodySite**: Bindegewebe, Subkutangewebe und sonstige Weichteile des Thorax
 
 **subject**: [Erika Beispiel Female, DoB: 1965-04-12](Patient-example.md)
 
@@ -101,8 +101,9 @@ Profile: [MII PR Onkologie Diagnose Primärtumor](StructureDefinition-mii-pr-onk
   "bodySite" : [{
     "coding" : [{
       "system" : "http://terminology.hl7.org/CodeSystem/icd-o-3",
+      "version" : "2019",
       "code" : "C49.3",
-      "display" : "Bindegewebe des Thorax"
+      "display" : "Bindegewebe, Subkutangewebe und sonstige Weichteile des Thorax"
     }]
   }],
   "subject" : {

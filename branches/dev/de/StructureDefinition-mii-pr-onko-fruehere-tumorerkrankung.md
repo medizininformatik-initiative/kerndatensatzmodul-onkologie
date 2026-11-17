@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-fruehere-tumorerkrankung | *Version*:2027.0.0-ballot.1 |
-| Active Stand: 2026-11-16 | *Maschinenlesbarer Name*:MII_PR_Onko_Fruehere_Tumorerkrankung |
+| Active Stand: 2026-11-17 | *Maschinenlesbarer Name*:MII_PR_Onko_Fruehere_Tumorerkrankung |
 
  
 Dieses Profil beschreibt frühere Tumorerkrankungen, die in der Anamnese zu einem früheren Zeitpunkt diagnostiziert/behandelt wurden. Basiert auf FHIR Condition, da historische Daten oft nur als Freitext vorliegen. 
@@ -157,8 +157,8 @@ Diese Struktur ist abgeleitet von [Condition](http://hl7.org/fhir/R4/condition.h
 
 ** Summary **
 
-Mandatory: 4 elements(5 nested mandatory elements)
- Must-Support: 23 elements
+Mandatory: 4 elements(6 nested mandatory elements)
+ Must-Support: 24 elements
 
 **Extensions**
 
@@ -197,8 +197,8 @@ Diese Struktur ist abgeleitet von [Condition](http://hl7.org/fhir/R4/condition.h
 
 ** Summary **
 
-Mandatory: 4 elements(5 nested mandatory elements)
- Must-Support: 23 elements
+Mandatory: 4 elements(6 nested mandatory elements)
+ Must-Support: 24 elements
 
 **Extensions**
 
@@ -373,7 +373,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   },
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-11-16T17:02:30+00:00",
+  "date" : "2026-11-17T12:46:30+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -684,6 +684,12 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
       "path" : "Condition.bodySite.coding.system",
       "min" : 1,
       "patternUri" : "http://terminology.hl7.org/CodeSystem/icd-o-3",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Condition.bodySite.coding:icd-o-3.version",
+      "path" : "Condition.bodySite.coding.version",
+      "min" : 1,
       "mustSupport" : true
     },
     {

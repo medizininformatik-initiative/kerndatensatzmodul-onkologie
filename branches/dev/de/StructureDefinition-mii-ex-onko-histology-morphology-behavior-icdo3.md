@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-histology-morphology-behavior-icdo3 | *Version*:2027.0.0-ballot.1 |
-| Active Stand: 2026-11-16 | *Maschinenlesbarer Name*:MII_EX_Onko_Histology_Morphology_Behavior_ICDO3 |
+| Active Stand: 2026-11-17 | *Maschinenlesbarer Name*:MII_EX_Onko_Histology_Morphology_Behavior_ICDO3 |
 
 Extension zur Erfassung von ICDO3 da Morphology nicht als Condition.code. Orientiert sich an mcode-stu3.0.
 
@@ -215,7 +215,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-ex-onko-
   "title" : "MII EX Onko Histology Morphology Behavior ICDO3",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-11-16T17:02:30+00:00",
+  "date" : "2026-11-17T12:46:30+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -276,6 +276,12 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-ex-onko-
       "path" : "Extension.value[x].coding.system",
       "min" : 1,
       "fixedUri" : "http://terminology.hl7.org/CodeSystem/icd-o-3"
+    },
+    {
+      "id" : "Extension.value[x].coding.version",
+      "path" : "Extension.value[x].coding.version",
+      "min" : 1,
+      "mustSupport" : true
     },
     {
       "id" : "Extension.value[x].coding.code",
