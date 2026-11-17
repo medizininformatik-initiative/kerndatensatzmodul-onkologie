@@ -171,7 +171,7 @@ Value Set der LOINC-Codes für Primär-, Sekundär- und Tertiär-Gleason-Pattern
   "title" : "MII VS Onkologie Prostata Gleason Pattern LOINC",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-11-17T12:46:30+00:00",
+  "date" : "2026-11-17T13:37:18+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

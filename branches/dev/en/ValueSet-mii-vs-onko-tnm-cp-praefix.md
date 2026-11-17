@@ -171,7 +171,7 @@ Codes für TNM c/p/u-Präfix. Gibt an, ob die Klassifikation klinisch (c), patho
   "title" : "MII VS Onkologie TNM c/p/u Praefix",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-11-17T12:46:30+00:00",
+  "date" : "2026-11-17T13:37:18+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

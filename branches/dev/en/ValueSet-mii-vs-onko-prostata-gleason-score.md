@@ -172,7 +172,7 @@ Value Set für den Gleason Score in Kombination mit der ISUP Grade Group. Da ISU
   "title" : "MII VS Onkologie Prostata Gleason Score",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-11-17T12:46:30+00:00",
+  "date" : "2026-11-17T13:37:18+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
