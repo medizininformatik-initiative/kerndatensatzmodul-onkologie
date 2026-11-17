@@ -73,6 +73,7 @@ Description: "Dieses Profil beschreibt die Diagnose des Primärtumors (bzw. der 
 * bodySite.coding[icd-o-3].system 1.. MS
 * bodySite.coding[icd-o-3].system = $ICDO3
 * bodySite.coding[icd-o-3].code 1.. MS
+* bodySite.coding[icd-o-3].version 1.. MS
 // Binding auf coding-Ebene (nicht .code): Bei nacktem code kann der Validator das
 // System nicht bestimmen, sobald das VS mehrere Versions-Kanten hat (Union 2014+2019).
 * bodySite.coding[icd-o-3] from MII_VS_Onko_ICDO3_Topographie (required)

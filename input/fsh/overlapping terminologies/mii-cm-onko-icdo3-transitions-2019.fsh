@@ -1,10 +1,13 @@
 // ConceptMap der ICD-O-3-Morphologie-Umsteiger von der Ersten (2014) zur Zweiten
 // Revision (2019) — analog zum ATC-Transitions-Muster (mii-cm-onko-atc-transitions-*).
-// Kuratierung: 56 in 2019 gestrichene Codes - 55 server-verifiziert gegen beide
+// Kuratierung: 57 Umsteiger = 56 in 2019 gestrichene Codes (55 server-verifiziert gegen beide
 // CS-Versionen auf dem MII-Ontoserver (Diff-Basis: examples-source/icdo/) plus
 // 8153/1 (Gastrinom o.n.A.), das Aktualisierungsliste und Online-Fassung
 // streichen, die amtliche ClaML aber weiterhin fuehrt; der Server spiegelt
-// die ClaML exakt (1622 Klassen) -> BfArM-Meldung, beads dq9.
+// die ClaML exakt (1622 Klassen) -> BfArM-Meldung, beads dq9) plus 8832/3,
+// das in 2019 WEITER EXISTIERT, aber umgewidmet ist (2014: Dermatofibrosarkom o.n.A.
+// -> 2019: 8832/1; 8832/3 bezeichnet in 2019 das fibrosarkomatoese DFSP). Solche
+// Code-Wiederverwendungen sind im reinen Mengen-Diff unsichtbar (2026-11-09).
 // Muster: Dignitäts-Neubewertungen (equivalent), Entitäts-Zusammenlegungen
 // (equivalent/wider), unsichere /1-Konzepte mit mehreren Nachfolgern (narrower),
 // Syndrom-Konzepte ohne Nachfolger (unmatched, mit Guidance).
@@ -22,7 +25,7 @@ Usage: #definition
 * title = "MII CM Onko ICD-O-3 Code Changes 2014 to 2019"
 * status = #active
 * experimental = false
-* date = "2026-08-26"
+* date = "2026-11-09"
 * insert Version
 * insert SP_Publisher
 * description = "Diese ConceptMap dokumentiert die Morphologie-Code-Änderungen der ICD-O-3 von der Ersten Revision (deutsche Ausgabe 2014, ICD-O-3.1) zur Zweiten Revision (2019, ICD-O-3.2): Dignitäts-Neubewertungen (z. B. GIST, Phäochromozytom, Thymome, Paragangliome), Entitäts-Zusammenlegungen (z. B. Ewing-Sarkom, Hämangioperizytom in solitärer fibröser Tumor) und entfallene Konzepte. Werkzeug für die Migration von Krebsregister-Bestandsdaten."
@@ -54,7 +57,7 @@ Usage: #definition
 * group[=].element[+].code = #8153/1
 * group[=].element[=].display = "Gastrinom o.n.A."
 * group[=].element[=].target[+].code = #8153/3
-* group[=].element[=].target[=].display = "Malignes Gastrinom"
+* group[=].element[=].target[=].display = "Gastrinom"
 * group[=].element[=].target[=].equivalence = #equivalent
 * group[=].element[=].target[=].comment = "Streichung in der Zweiten Revision (Aktualisierungsliste 29.01.2021): Zusammenlegung in das bereits bestehende Konzept 8153/3. Achtung: Die amtliche BfArM-ClaML-Fassung (und damit der MII-Terminologieserver, der sie exakt spiegelt) enthaelt 8153/1 in der 2019er-Version weiterhin - im Widerspruch zu Aktualisierungsliste und amtlicher Online-Fassung, die den Code streichen (BfArM-Meldung, beads dq9)."
 
@@ -190,6 +193,13 @@ Usage: #definition
 * group[=].element[=].target[=].display = "Phäochromozytom o.n.A."
 * group[=].element[=].target[=].equivalence = #equivalent
 * group[=].element[=].target[=].comment = "Umklassifizierung in der Zweiten Revision (ICD-O-3.2)."
+
+* group[=].element[+].code = #8832/3
+* group[=].element[=].display = "Dermatofibrosarkom o.n.A."
+* group[=].element[=].target[+].code = #8832/1
+* group[=].element[=].target[=].display = "Dermatofibrosarcoma protuberans o.n.A."
+* group[=].element[=].target[=].equivalence = #equivalent
+* group[=].element[=].target[=].comment = "Umklassifizierung in der Zweiten Revision (ICD-O-3.2) auf /1 — ACHTUNG Code-Wiederverwendung: 8832/3 existiert in 2019 weiter, bezeichnet dort aber das fibrosarkomatöse Dermatofibrosarcoma protuberans. Ein 2014er 8832/3 darf daher nicht unverändert als 2019er 8832/3 gelesen werden."
 
 * group[=].element[+].code = #8833/3
 * group[=].element[=].display = "Pigmentiertes Dermatofibrosarcoma protuberans"

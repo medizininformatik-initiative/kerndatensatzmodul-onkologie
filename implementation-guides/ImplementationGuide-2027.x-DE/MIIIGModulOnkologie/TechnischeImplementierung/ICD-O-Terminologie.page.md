@@ -21,13 +21,15 @@ Primärtumor) und die Morphologie über die Histologie-Profile bzw. die Extensio
 Für die ICD-O-3 existieren zwei deutsche Revisionsstände, die in Bestandsdaten
 nebeneinander vorkommen:
 
-| Revision | Deutsche Ausgabe | Entspricht | Status |
-|---|---|---|---|
-| Erste Revision | 2014 | ICD-O-3.1 | in Krebsregister-Bestandsdaten weit verbreitet |
-| Zweite Revision | 2019 | ICD-O-3.2 | aktuelle Ausgabe (Publikation abgeschlossen 12/2020) |
+| Revision | Deutsche Ausgabe | Entspricht | oBDS `ICD_O_Version` | Status |
+|---|---|---|---|---|
+| Erstausgabe | 2003 | ICD-O-3 (2000) | `31` | Altdaten vor 2014 (seit 11/2026 auf dem MII-Terminologieserver, Ballot-Kommentar HDB-1005) |
+| Erste Revision | 2014 | ICD-O-3.1 | `32` | in Krebsregister-Bestandsdaten weit verbreitet |
+| Zweite Revision | 2019 | ICD-O-3.2 | `33` | aktuelle Ausgabe (Publikation abgeschlossen 12/2020) |
 
 Die Zweite Revision unterscheidet sich substanziell (Morphologie-Achse:
-**124 neue** und **55 gestrichene** Codes bei ~1.080 unveränderten):
+**124 neue** und **56 gestrichene** Codes bei ~1.080 unveränderten; 55 davon
+im Server-Diff, dazu `8153/1`, siehe Hinweis unten):
 
 - **Neue Codes** betreffen v. a. molekular definierte Entitäten (z. B. `8023/3`
   NUT-Karzinom, `8085/3`/`8086/3` HPV-positives/-negatives Plattenepithelkarzinom).
@@ -40,11 +42,15 @@ Die Zweite Revision unterscheidet sich substanziell (Morphologie-Achse:
   kleinzelliges lymphozytisches Lymphom `9670/3` → CLL/SLL `9823/3`.
 - **Entfallene Syndrom-Konzepte** ohne Nachfolger (Meningeomatose `9530/1`,
   Neurofibromatose `9540/1`): hier sind die Einzeltumoren zu codieren.
+- **Code-Wiederverwendung**: `8832/3` bleibt als Code bestehen, bezeichnet aber
+  in 3.2 nicht mehr das Dermatofibrosarkom o.n.A. (jetzt `8832/1`), sondern
+  das fibrosarkomatöse Dermatofibrosarcoma protuberans. Ein reiner Mengen-Diff
+  übersieht solche Fälle; die Transitions-ConceptMap führt ihn explizit.
 
 ### Überleitung von Bestandsdaten
 
-Die ConceptMap **`mii-cm-onko-icdo3-transitions-2019`** dokumentiert alle 55
-Umsteiger der Morphologie-Achse mit Äquivalenzgrad (analog zu den
+Die ConceptMap **`mii-cm-onko-icdo3-transitions-2019`** dokumentiert alle 57
+Umsteiger der Morphologie-Achse (56 Streichungen und die Wiederverwendung `8832/3`) mit Äquivalenzgrad (analog zu den
 ATC-Transitions-ConceptMaps der Systemischen Therapie):
 
 - `equivalent` — Dignitäts-Umstufungen und 1:1-Zusammenlegungen,
@@ -62,20 +68,53 @@ fachliche Einzelfallprüfung.
 Auf dem MII-Terminologieserver liegt die ICD-O-3 — wie ICD-10-GM, OPS und ATC —
 als **getrennte CodeSystem-Ressourcen je Revisionsstand** unter einer
 kanonischen URL (`http://terminology.hl7.org/CodeSystem/icd-o-3`, Versionen
-`2014` und `2019`). Daraus folgen zwei Regeln:
+`2003`, `2014` und `2019`). Daraus folgen zwei Regeln:
 
 1. **ValueSet-Filter müssen versions-gepinnt sein.** Ungepinnte
    `descendent-of`-Filter scheitern bei mehreren geladenen Revisionsständen an
    der Versions-Ambiguität — `$validate-code` mit `systemVersion=2014` lieferte
    dann fälschlich *not-in-valueset*, obwohl der Code in beiden Revisionen
    existiert. Alle ICD-O-ValueSets dieses Moduls pinnen daher ihre Includes.
-2. **Instanzen SOLLEN `coding.version` angeben** (`"2014"` bzw. `"2019"`),
-   damit Validierung und Auswertung den Revisionsstand kennen.
+2. **Instanzen MÜSSEN `coding.version` angeben** (`"2003"`, `"2014"` oder
+   `"2019"`, der Versionsstring des Terminologieservers, nicht der
+   oBDS-Schlüssel 31/32/33 und nicht das BfArM-`3.2`). Die Profile setzen
+   `coding.version` an allen ICD-O-Slices (Topographie, Morphologie-Extension,
+   Histologie) auf `1..1 MS`, analog zur ICD-10-GM-Version im Basismodul.
+   Grund: Mit drei Editionen unter einer URL ist ein Code ohne Version nicht
+   eindeutig (z. B. `8153/1` nur bis 2014), oBDS liefert die Version ohnehin als
+   Pflichtfeld, und versionslose `$validate-code`-Aufrufe haben sich auf dem
+   Terminologieserver als fragil erwiesen.
 
 Das Binding der Profile zeigt auf die **Union-ValueSets** beider Revisionen:
 Bestandsdaten der Ersten Revision (einschließlich der in 3.2 gestrichenen
 Codes) und aktuelle Daten validieren damit gleichermaßen. Für revisionsscharfe
 Prüfungen (Data Quality, ETL) stehen die Jahres-ValueSets bereit.
+
+#### Bekannte Abweichung: `8153/1` Gastrinom o.n.A.
+
+Die amtliche Aktualisierungsliste des BfArM (Stand 29.01.2021) streicht
+`8153/1` in der Zweiten Revision (Aufgehen in `8153/3`). Die ClaML-Datei
+desselben Stands, das daraus erzeugte FHIR-Package des BfArM
+(`bfarm.terminologien.icdo3` 2019.0.0) und folglich auch die Version `2019`
+auf dem MII-Terminologieserver führen den Code jedoch weiterhin als aktives
+Konzept. Es ist die einzige Abweichung zwischen Aktualisierungsliste und
+ClaML (Abgleich aller 180 Änderungen am 09.11.2026). Die Transitions-ConceptMap
+folgt der Aktualisierungsliste; eine Klärung beim BfArM ist angefragt. Bis
+dahin validiert `8153/1` mit `coding.version = "2019"` auf dem
+Terminologieserver ohne Beanstandung.
+
+#### Das FHIR-Package des BfArM
+
+Das BfArM veröffentlicht die Zweite Revision auch als FHIR-Package
+`bfarm.terminologien.icdo3` (2019.0.0, Stand 30.07.2025). Es verwendet dieselbe
+kanonische URL, aber die Version **`3.2`** statt `2019`. Das Basis-CodeSystem
+enthält nur Codes und Hierarchie ohne Displays; die deutschen Bezeichnungen
+liegen als Designations im Supplement
+`https://terminologien.bfarm.de/fhir/CodeSystem/icdo-translation`. Die
+mitgelieferten ValueSets filtern mit `descendent-of M` bzw. `T` und zusätzlich
+`classKind = category`, schließen also die Blöcke aus. Wer dieses Package statt
+des MII-Terminologieservers nutzt, muss `coding.version = "3.2"` auf `"2019"`
+abbilden (Tabelle oben) und das Supplement mitladen, sonst fehlen die Displays.
 
 ### Technische Artefakte
 
@@ -85,7 +124,7 @@ Prüfungen (Data Quality, ETL) stehen die Jahres-ValueSets bereit.
 | `mii-vs-onko-icdo3-topographie` | Topographie, Union 2014 + 2019 | Profil-Binding |
 | `mii-vs-onko-icdo3-morphologie-2014` / `-2019` | Morphologie, revisionsscharf | DQ-Prüfung, ETL, Auswertung je Datenbestand |
 | `mii-vs-onko-icdo3-topographie-2014` / `-2019` | Topographie, revisionsscharf | DQ-Prüfung, ETL |
-| `mii-cm-onko-icdo3-transitions-2019` | 55 Morphologie-Umsteiger 3.1 → 3.2 | Migration von Bestandsdaten |
+| `mii-cm-onko-icdo3-transitions-2019` | 57 Morphologie-Umsteiger 3.1 → 3.2 | Migration von Bestandsdaten |
 
 ### ICD-O-4: neue Struktur und Änderungen gegenüber ICD-O-3.2
 

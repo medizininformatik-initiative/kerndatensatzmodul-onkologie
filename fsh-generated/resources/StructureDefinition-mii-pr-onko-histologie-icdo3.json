@@ -347,6 +347,8 @@
             }
           ]
         },
+        "min": 1,
+        "mustSupport": true,
         "mapping": [
           {
             "identity": "oBDS",
@@ -545,6 +547,12 @@
       {
         "id": "Observation.bodySite.coding:icd-o-3.system",
         "path": "Observation.bodySite.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.bodySite.coding:icd-o-3.version",
+        "path": "Observation.bodySite.coding.version",
         "min": 1,
         "mustSupport": true
       },
