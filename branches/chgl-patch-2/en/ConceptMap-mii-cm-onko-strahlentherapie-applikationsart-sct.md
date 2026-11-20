@@ -9,11 +9,11 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ConceptMap/mii-cm-onko-strahlentherapie-applikationsart-sct | *Version*:2027.0.0-ballot.1 |
-| Active as of 2024-04-11 | *Computable Name*:MII CM Onko Strahlentherapie Applikationsart SCT Mapping |
+| Active as of 2026-11-04 | *Computable Name*:MII CM Onko Strahlentherapie Applikationsart SCT Mapping |
 | **Copyright/Legal**: This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. | |
 
  
-Mapping Strahlentherapie Applikationsart Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich. 
+Mapping Strahlentherapie Applikationsart Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt gegen SNOMED CT International 20240401; am 2026-11-04 gegen International 20261001 nachkuratiert (alle Zielkonzepte auf Aktivitaet geprueft, inaktivierte Ziele ersetzt, seit 2024 neu veroeffentlichte Konzepte fuer bisher unbesetzte Werte ergaenzt, Ober-/Unterkonzepte mit equivalence wider/narrower nachgetragen). Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich. 
 
 The various application types are in some cases listed in combination and, in this form, are difficult to represent in SNOMED. It also becomes apparent that some specialised methods (such as PSMA therapy) are not represented in SNOMED CT.
 
@@ -156,7 +156,7 @@ The various application types are in some cases listed in combination and, in th
   "title" : "MII CM Onko Strahlentherapie Applikationsart SNOMED Mapping",
   "status" : "active",
   "experimental" : true,
-  "date" : "2024-04-11",
+  "date" : "2026-11-04",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -165,7 +165,7 @@ The various application types are in some cases listed in combination and, in th
       "value" : "https://www.medizininformatik-initiative.de/"
     }]
   }],
-  "description" : "Mapping Strahlentherapie Applikationsart Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich.",
+  "description" : "Mapping Strahlentherapie Applikationsart Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt gegen SNOMED CT International 20240401; am 2026-11-04 gegen International 20261001 nachkuratiert (alle Zielkonzepte auf Aktivitaet geprueft, inaktivierte Ziele ersetzt, seit 2024 neu veroeffentlichte Konzepte fuer bisher unbesetzte Werte ergaenzt, Ober-/Unterkonzepte mit equivalence wider/narrower nachgetragen). Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -176,10 +176,11 @@ The various application types are in some cases listed in combination and, in th
   "purpose" : "Technical mapping to transform oBDS-Data into SNOMED",
   "copyright" : "This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license.",
   "sourceUri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/",
-  "targetUri" : "http://snomed.info/sct/900000000000207008/version/20240401",
+  "targetUri" : "http://snomed.info/sct/900000000000207008/version/20261001",
   "group" : [{
     "source" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-strahlentherapie-applikationsart",
-    "target" : "http://snomed.info/sct/900000000000207008/version/20240401",
+    "target" : "http://snomed.info/sct",
+    "targetVersion" : "http://snomed.info/sct/900000000000207008/version/20261001",
     "element" : [{
       "code" : "P",
       "display" : "perkutan (Teletherapie)",
@@ -211,43 +212,60 @@ The various application types are in some cases listed in combination and, in th
       "code" : "P-ST4D",
       "display" : "perkutan, stereotaktisch, atemgetriggert",
       "target" : [{
-        "equivalence" : "unmatched",
-        "comment" : "Einzelkonzepte über SNOMED abbildbar"
+        "code" : "721061000124106",
+        "display" : "External beam radiotherapy with respiratory gating (procedure)",
+        "equivalence" : "wider",
+        "comment" : "ergaenzt 2026-11-04: stereotaktische Komponente (395096001) nicht abbildbar, nur Atemtriggerung"
       }]
     },
     {
       "code" : "PRCN-ST",
       "display" : "perkutan, stereotaktisch ohne Chemotherapie/Sensitizer",
       "target" : [{
-        "equivalence" : "unmatched"
+        "code" : "395096001",
+        "display" : "Stereotactic radiotherapy (procedure)",
+        "equivalence" : "wider",
+        "comment" : "ergaenzt 2026-11-04: Qualifikation ohne Chemotherapie/Sensitizer nicht abbildbar"
       }]
     },
     {
       "code" : "PRCN-4D",
       "display" : "perkutan, atemgetriggert, ohne Chemotherapie/Sensitizer",
       "target" : [{
-        "equivalence" : "unmatched"
+        "code" : "721061000124106",
+        "display" : "External beam radiotherapy with respiratory gating (procedure)",
+        "equivalence" : "wider",
+        "comment" : "ergaenzt 2026-11-04: Qualifikation ohne Chemotherapie/Sensitizer nicht abbildbar"
       }]
     },
     {
       "code" : "PRCN-ST4D",
       "display" : "perkutan, stereotaktisch, atemgetriggert, ohne Chemotherapie/Sensitizer",
       "target" : [{
-        "equivalence" : "unmatched"
+        "code" : "721061000124106",
+        "display" : "External beam radiotherapy with respiratory gating (procedure)",
+        "equivalence" : "wider",
+        "comment" : "ergaenzt 2026-11-04: stereotaktische Komponente (395096001) und Qualifikation ohne Chemotherapie/Sensitizer nicht abbildbar"
       }]
     },
     {
       "code" : "PRCJ",
       "display" : "perkutan mit Chemotherapie/Sensitizer",
       "target" : [{
-        "equivalence" : "unmatched"
+        "code" : "703423002",
+        "display" : "Combined chemotherapy and radiation therapy (procedure)",
+        "equivalence" : "wider",
+        "comment" : "ergaenzt 2026-11-04: Applikationsart perkutan (33195004) nicht enthalten"
       }]
     },
     {
       "code" : "PRCJ-4D",
       "display" : "perkutan, atemgetriggert, mit Chemotherapie/Sensitizer",
       "target" : [{
-        "equivalence" : "unmatched"
+        "code" : "703423002",
+        "display" : "Combined chemotherapy and radiation therapy (procedure)",
+        "equivalence" : "wider",
+        "comment" : "ergaenzt 2026-11-04: Applikationsart perkutan und Atemtriggerung (721061000124106) nicht enthalten"
       }]
     },
     {
@@ -291,7 +309,7 @@ The various application types are in some cases listed in combination and, in th
       "display" : "intersitielle Kontakttherapie",
       "target" : [{
         "code" : "113120007",
-        "display" : "Intracavitary brachytherapy (procedure)",
+        "display" : "Interstitial brachytherapy (procedure)",
         "equivalence" : "equivalent"
       }]
     },
@@ -300,7 +318,7 @@ The various application types are in some cases listed in combination and, in th
       "display" : "intersitielle Kontakttherapie, high dose rate therapy",
       "target" : [{
         "code" : "113120007",
-        "display" : "Intracavitary brachytherapy (procedure)",
+        "display" : "Interstitial brachytherapy (procedure)",
         "equivalence" : "wider"
       }]
     },
@@ -309,7 +327,7 @@ The various application types are in some cases listed in combination and, in th
       "display" : "intersitielle Kontakttherapie, low dose rate therapy",
       "target" : [{
         "code" : "113120007",
-        "display" : "Intracavitary brachytherapy (procedure)",
+        "display" : "Interstitial brachytherapy (procedure)",
         "equivalence" : "wider"
       }]
     },
@@ -318,7 +336,7 @@ The various application types are in some cases listed in combination and, in th
       "display" : "intersitielle Kontakttherapie, pulsed dose rate therapy",
       "target" : [{
         "code" : "113120007",
-        "display" : "Intracavitary brachytherapy (procedure)",
+        "display" : "Interstitial brachytherapy (procedure)",
         "equivalence" : "wider"
       }]
     },
@@ -326,21 +344,30 @@ The various application types are in some cases listed in combination and, in th
       "code" : "MSIRT",
       "display" : "selektive interne Radio-Therapie",
       "target" : [{
-        "equivalence" : "unmatched"
+        "code" : "722183007",
+        "display" : "Embolization of hepatic artery using selective internal radiation therapy (procedure)",
+        "equivalence" : "narrower",
+        "comment" : "ergaenzt 2026-11-04: nur hepatische SIRT; allgemeines SIRT-Konzept fehlt"
       }]
     },
     {
       "code" : "MPRRT",
       "display" : "Peptid-Radio-Rezeptor-Therapie",
       "target" : [{
-        "equivalence" : "unmatched"
+        "code" : "1103661000000108",
+        "display" : "Radioligand therapy using lutetium (177-Lu) labeled somatostatin analog (procedure)",
+        "equivalence" : "narrower",
+        "comment" : "ergaenzt 2026-11-04: Konzept seit SNOMED CT International 20241001; Lu-177-spezifisch, PRRT mit Y-90 nicht erfasst; alternativ 1356887006 (NET, Lu-177-Dotatate, 20250201)"
       }]
     },
     {
       "code" : "MPSMA",
       "display" : "PSMA-Therapie",
       "target" : [{
-        "equivalence" : "unmatched"
+        "code" : "1263784000",
+        "display" : "Radioligand therapy using lutetium (177-Lu) vipivotide tetraxetan (procedure)",
+        "equivalence" : "narrower",
+        "comment" : "ergaenzt 2026-11-04: Konzept seit SNOMED CT International 20241001; Lu-177-spezifisch, Ac-225-PSMA nicht erfasst"
       }]
     },
     {

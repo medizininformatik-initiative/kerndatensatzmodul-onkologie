@@ -90,6 +90,7 @@ Z.n. brusterhaltender Therapie und Radiatio, derzeit tumorfrei
   "bodySite" : [{
     "coding" : [{
       "system" : "http://terminology.hl7.org/CodeSystem/icd-o-3",
+      "version" : "2019",
       "code" : "C50.9",
       "display" : "Brust o.n.A."
     }]

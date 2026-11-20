@@ -99,7 +99,7 @@ Modified protocol: LV5FU2 (5-FU/Leucovorin) for cycles 7-12. Oxaliplatin omitted
       "display" : "Nicht komplexe Chemotherapie"
     },
     {
-      "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-systemische-therapie-art",
+      "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-therapie-typ",
       "code" : "CH",
       "display" : "Chemotherapie"
     }]

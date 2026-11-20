@@ -50,6 +50,7 @@ Profile: [MII PR Onkologie Histologie ICD-O-3](StructureDefinition-mii-pr-onko-h
   "valueCodeableConcept" : {
     "coding" : [{
       "system" : "http://terminology.hl7.org/CodeSystem/icd-o-3",
+      "version" : "2019",
       "code" : "8500/3",
       "display" : "Infiltrating duct carcinoma, NOS"
     }],
@@ -58,6 +59,7 @@ Profile: [MII PR Onkologie Histologie ICD-O-3](StructureDefinition-mii-pr-onko-h
   "bodySite" : {
     "coding" : [{
       "system" : "http://terminology.hl7.org/CodeSystem/icd-o-3",
+      "version" : "2019",
       "code" : "C50.4",
       "display" : "Oberer äußerer Quadrant der Brust"
     }]

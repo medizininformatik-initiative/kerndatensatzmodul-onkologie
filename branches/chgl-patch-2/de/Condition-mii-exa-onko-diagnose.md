@@ -52,6 +52,7 @@ Profile: [MII PR Onkologie Diagnose Primärtumor](StructureDefinition-mii-pr-onk
     "valueCodeableConcept" : {
       "coding" : [{
         "system" : "http://terminology.hl7.org/CodeSystem/icd-o-3",
+        "version" : "2019",
         "code" : "8500/3",
         "display" : "Infiltrating duct carcinoma, NOS"
       }],
@@ -106,6 +107,7 @@ Profile: [MII PR Onkologie Diagnose Primärtumor](StructureDefinition-mii-pr-onk
     },
     {
       "system" : "http://terminology.hl7.org/CodeSystem/icd-o-3",
+      "version" : "2019",
       "code" : "C50.4",
       "display" : "Oberer äußerer Quadrant der Brust"
     }]

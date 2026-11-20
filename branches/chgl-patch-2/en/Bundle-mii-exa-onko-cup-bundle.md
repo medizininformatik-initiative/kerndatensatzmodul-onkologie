@@ -102,6 +102,7 @@
       "bodySite" : [{
         "coding" : [{
           "system" : "http://terminology.hl7.org/CodeSystem/icd-o-3",
+          "version" : "2019",
           "code" : "C80.9",
           "display" : "Unbekannte Primärlokalisation"
         }]

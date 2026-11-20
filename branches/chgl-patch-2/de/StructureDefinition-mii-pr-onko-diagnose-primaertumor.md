@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-diagnose-primaertumor | *Version*:2027.0.0-ballot.1 |
-| Active Stand: 2026-10-17 | *Maschinenlesbarer Name*:MII_PR_Onko_Diagnose_Primaertumor |
+| Active Stand: 2026-11-20 | *Maschinenlesbarer Name*:MII_PR_Onko_Diagnose_Primaertumor |
 
  
 Diagnose des Primärtumors bzw. der primären hämatologisch-myeloneoplastischen Erkrankung im Rahmen einer onkologischen Erkrankung, basierend auf dem MII KDS Modul Diagnose 
@@ -115,8 +115,8 @@ Diese Struktur ist abgeleitet von [MII_PR_Diagnose_Condition](https://medizininf
 
 ** Summary **
 
-Mandatory: 4 elements(6 nested mandatory elements)
- Must-Support: 19 elements
+Mandatory: 4 elements(7 nested mandatory elements)
+ Must-Support: 20 elements
 
 **Structures**
 
@@ -170,8 +170,8 @@ Diese Struktur ist abgeleitet von [MII_PR_Diagnose_Condition](https://medizininf
 
 ** Summary **
 
-Mandatory: 4 elements(6 nested mandatory elements)
- Must-Support: 19 elements
+Mandatory: 4 elements(7 nested mandatory elements)
+ Must-Support: 20 elements
 
 **Structures**
 
@@ -360,7 +360,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
   },
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-10-17T20:05:14+00:00",
+  "date" : "2026-11-20T10:28:08+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -946,6 +946,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-onko-
     {
       "id" : "Condition.bodySite.coding:icd-o-3.version",
       "path" : "Condition.bodySite.coding.version",
+      "min" : 1,
+      "mustSupport" : true,
       "mapping" : [{
         "identity" : "oBDS",
         "map" : "5.5",

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-histologie-icdo3 | *Version*:2027.0.0-ballot.1 |
-| Active as of 2026-10-17 | *Computable Name*:MII_PR_Onko_Histologie_ICDO3 |
+| Active as of 2026-11-20 | *Computable Name*:MII_PR_Onko_Histologie_ICDO3 |
 
  
 Histologie-Kodierung nach ICD-0 für die Verwendung von Folgediagnostik. Bei der histologischen Beurteilung des Primärtumors sind die histologischen Informationen direkt über die Condition-Ressource abzubilden. 
@@ -181,7 +181,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-histo
   "title" : "MII PR Onkologie Histologie ICD-O-3",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-10-17T20:05:14+00:00",
+  "date" : "2026-11-20T10:28:08+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -373,6 +373,8 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-histo
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
       },
+      "min" : 1,
+      "mustSupport" : true,
       "mapping" : [{
         "identity" : "oBDS",
         "map" : "6.4",
@@ -539,6 +541,12 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-onko-histo
     {
       "id" : "Observation.bodySite.coding:icd-o-3.system",
       "path" : "Observation.bodySite.coding.system",
+      "min" : 1,
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.bodySite.coding:icd-o-3.version",
+      "path" : "Observation.bodySite.coding.version",
       "min" : 1,
       "mustSupport" : true
     },
