@@ -9,13 +9,14 @@ Usage: #definition
 * status = #active
 * insert SNOMEDCopyrightForInstance
 * experimental = true
-* date = "2024-04-11"
-* description = "Mapping Therapie Ende Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt, gegen SNOMED CT International 20240401. Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Die Zielcodes sind gegen neuere SNOMED-Releases nicht nachverifiziert; einzelne Konzepte koennen inzwischen inaktiviert oder ersetzt sein. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich."
+* date = "2026-11-04"
+* description = "Mapping Therapie Ende Codes zu SNOMED-CT STATUS DIESER ZUORDNUNG: 2024 erstellt gegen SNOMED CT International 20240401; am 2026-11-04 gegen International 20261001 nachkuratiert (alle Zielkonzepte auf Aktivitaet geprueft, inaktivierte Ziele ersetzt, seit 2024 neu veroeffentlichte Konzepte fuer bisher unbesetzte Werte ergaenzt, Ober-/Unterkonzepte mit equivalence wider/narrower nachgetragen). Sie ist WEDER OFFIZIELL ENDORSED NOCH FINAL QUALITAETSGESICHERT - es handelt sich um einen projektseitigen Arbeitsstand, nicht um eine abgestimmte Referenz. Vor einer Nutzung in Produktivsystemen sind fachliche Pruefung und ein Abgleich gegen die eingesetzte SNOMED-Version erforderlich."
 * purpose = "Technical mapping to transform oBDS-Data into SNOMED"
 * sourceUri = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/"
-* targetUri[+] = "http://snomed.info/sct/900000000000207008/version/20240401"
+* targetUri[+] = "http://snomed.info/sct/900000000000207008/version/20261001"
 * group[+].source = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-grund-ende"
-* group[=].target = "http://snomed.info/sct/900000000000207008/version/20240401"
+* group[=].target = "http://snomed.info/sct"
+* group[=].targetVersion = "http://snomed.info/sct/900000000000207008/version/20261001"
 
 * group[=].element[+].code = #E
 * group[=].element[=].display = "reguläres Ende"
@@ -31,13 +32,17 @@ Usage: #definition
 
 * group[=].element[+].code = #W
 * group[=].element[=].display = "reguläres Ende mit Substanzwechsel"
-* group[=].element[=].target.equivalence = #unmatched
-* group[=].element[=].target.comment = "ggfs. Postkoordination von Substanzwechsel, aber keine Postkoordination mit 'qualifier value' möglich." 
+* group[=].element[=].target.code = #182838006
+* group[=].element[=].target.display = "Change of medication (procedure)"
+* group[=].element[=].target.equivalence = #wider
+* group[=].element[=].target.comment = "ergaenzt 2026-11-04: regulaeres Therapieende nicht enthalten"
 
 * group[=].element[+].code = #A
 * group[=].element[=].display = "Abbruch wegen Nebenwirkungen"
-* group[=].element[=].target.equivalence = #unmatched
-* group[=].element[=].target.comment = "ggfs. Postkoordination von Nebnwirkungen, aber keine Postkoordination mit 'qualifier value' möglich." 
+* group[=].element[=].target.code = #274512008
+* group[=].element[=].target.display = "Drug therapy discontinued (situation)"
+* group[=].element[=].target.equivalence = #wider
+* group[=].element[=].target.comment = "ergaenzt 2026-11-04: Grund Nebenwirkungen nicht enthalten"
 
 * group[=].element[+].code = #P
 * group[=].element[=].display = "Abbruch wegen Progress"

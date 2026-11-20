@@ -411,6 +411,12 @@
         "patternUri": "http://terminology.hl7.org/CodeSystem/icd-o-3"
       },
       {
+        "id": "Observation.bodySite.coding:icd-o-3.version",
+        "path": "Observation.bodySite.coding.version",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
         "id": "Observation.bodySite.coding:snomed",
         "path": "Observation.bodySite.coding",
         "sliceName": "snomed",

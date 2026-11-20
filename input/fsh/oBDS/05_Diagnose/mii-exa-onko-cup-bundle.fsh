@@ -42,6 +42,7 @@ Title: "MII EXA Onkologie Diagnose CUP (C80.0)"
 * recordedDate = "2026-02-11"
 // ICD-O-Topographie C80.9 — bewusst ≠ ICD-10-Code C80.0 (Asymmetrie korrekt, s.o.)
 * bodySite.coding[icd-o-3] = $ICDO3#C80.9 "Unbekannte Primärlokalisation"
+* bodySite.coding[icd-o-3].version = "2019"
 * extension[Feststellungsdatum].valueDateTime = 2026-02-11
 
 // ── TNM: cTX cNX cM1 ─────────────────────────────────────────────────────────
@@ -204,4 +205,5 @@ Title: "MII EXA Onkologie Diagnose CUP aufgelöst → Pankreaskarzinom (Zustand 
 * recordedDate = "2026-02-11"
 // GEÄNDERT: Topographie auf den identifizierten Primärtumor
 * bodySite.coding[icd-o-3] = $ICDO3#C25.9 "Pankreas o.n.A."
+* bodySite.coding[icd-o-3].version = "2019"
 * extension[Feststellungsdatum].valueDateTime = 2026-02-11
